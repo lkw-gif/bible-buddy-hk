@@ -58,10 +58,10 @@ test('A full 40-question General round produces correct score, title, mistake li
   let app = await boot();
   await app.click('[data-mode="general"][data-count="40"]');
   assert.match(app.$('.quiz-label').textContent,/曠野長征/);
-  assert.match(app.$('.quiz-label').textContent,/進階挑戰/);
-  assert.equal(app.savedProgress().current.distribution,'challenge-v4');
+  assert(!app.$('.quiz-label').textContent.includes('進階挑戰'));
+  assert.equal(app.savedProgress().current.distribution,'general-v5');
   const selected=app.savedProgress().current.items.map(i=>QUESTION_MAP.get(i.id));
-  assert.deepEqual([1,2,3].map(d=>selected.filter(q=>q.difficulty===d).length),[0,8,32]);
+  assert.deepEqual([1,2,3].map(d=>selected.filter(q=>q.difficulty===d).length),[20,16,4]);
 
   let bookmarked;
   for (let i=0; i<40; i++) {
@@ -69,7 +69,7 @@ test('A full 40-question General round produces correct score, title, mistake li
     const q=QUESTION_MAP.get(r.items[r.index].id);
     if (i===0) { bookmarked=q.id; await app.click('.question-meta [data-action="bookmark"]'); await app.click('[data-action="skip"]'); }
     else await app.click(`[data-action="answer"][data-choice="${i===1?1:q.answer}"]`);
-    if(i===0){const snapshot=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(snapshot,'#/quiz');assert.equal(app.savedProgress().current.distribution,'challenge-v4');assert.match(app.$('.quiz-label').textContent,/進階挑戰/);}
+    if(i===0){const snapshot=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(snapshot,'#/quiz');assert.equal(app.savedProgress().current.distribution,'general-v5');}
     assert.equal(app.w.document.querySelectorAll('.choice:disabled').length,4);
     assert.equal(app.w.document.querySelectorAll('.choice.correct').length,1);
     assert.match(app.$('.feedback').textContent,new RegExp(q.explanation.slice(0,8).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
@@ -183,6 +183,7 @@ test('All three trial entries start directly, finish without General titles, and
     const r=app.savedProgress().current;
     assert.equal(r.items.length,16); assert.equal(r.difficulty,difficulty);
     assert(r.items.every(i=>QUESTION_MAP.get(i.id).difficulty===Number(difficulty)));
+    assert(r.items.every(i=>i.id.startsWith('challenge-')===(difficulty==='3')));
     for(let i=0;i<16;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
     assert.match(app.$('.score-ring').textContent,/100/);
     assert.match(app.$('#result-title').textContent,/試探/);
@@ -222,6 +223,31 @@ test('Corrupted persisted data cannot crash a quiz or inject a fabricated histor
   assert.equal(app.w.document.querySelectorAll('.history-row').length,0);
   assert.deepEqual(app.errors,[]);
   app.dom.window.close();
+});
+
+test('Previous-question controls survive reload and preserve chosen answers, skips, question order and final score', async () => {
+  let app=await boot();await app.click('[data-mode="general"][data-count="20"]');
+  assert(app.$('[data-action="previous"]').disabled);
+  const items=app.savedProgress().current.items;
+  await app.click('[data-action="answer"][data-choice="1"]');await app.click('[data-action="next"]');
+  await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');
+  await app.click('[data-action="skip"]');await app.click('[data-action="next"]');
+  const answers=app.savedProgress().current.answers;
+  assert.equal(app.savedProgress().current.index,3);
+  await app.click('[data-action="previous"]');
+  assert.equal(app.savedProgress().current.index,2);assert.equal(app.w.document.querySelectorAll('.choice:disabled').length,4);
+  await app.click('[data-action="previous"]');
+  const saved=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(saved,'#/quiz');
+  assert.equal(app.savedProgress().current.index,1);assert.deepEqual(app.savedProgress().current.answers,answers);
+  await app.click('[data-action="previous"]');
+  assert(app.$('[data-action="previous"]').disabled);assert(app.$('.choice.wrong[data-choice="1"]'));
+  assert.equal(app.w.document.querySelectorAll('.choice:disabled').length,4);
+  for(let i=0;i<3;i++)await app.click('[data-action="next"]');
+  assert.equal(app.savedProgress().current.index,3);assert.equal(app.w.document.querySelectorAll('.choice:disabled').length,0);
+  assert.deepEqual(app.savedProgress().current.items,items);assert.deepEqual(app.savedProgress().current.answers,answers);
+  for(let i=3;i<20;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+  assert.match(app.$('.score-ring').textContent,/18 \/ 20/);assert.equal(app.savedProgress().history[0].answers.length,20);
+  assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
 
 test('Church-history lessons resume, save bookmarks and mistakes, and update progress through revision', async () => {

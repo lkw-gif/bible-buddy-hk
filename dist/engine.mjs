@@ -2,11 +2,12 @@ import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, LEGACY_QUESTION_MAP, TOPICS }
 import { HISTORY_QUESTIONS, HISTORY_QUESTION_MAP, HISTORY_TOPIC, COURSE_UNITS } from './history-course.mjs?v=20261101-7';
 import { CHALLENGE_QUESTIONS } from './challenge-data.mjs?v=20261101-10';
 const CHALLENGE_MAP = new Map(CHALLENGE_QUESTIONS.map(q => [q.id,q]));
+const BASE_QUESTION_IDS = new Set(QUESTIONS.map(q => q.id));
 
 export const TRIAL_LEVELS = {
   1: { degree:'低', name:'少少試探', description:'主日學基本功，唔好輕敵就得。' },
   2: { degree:'中', name:'開始有啲 feel', description:'答案個個似啱，考你識唔識分辨。' },
-  3: { degree:'高', name:'就嚟頂唔住', description:'今次要諗深一層，睇你對經文同背景有幾熟。' }
+  3: { degree:'高', name:'就嚟頂唔住', description:'進階題目，經文背景同細節都要識分辨。' }
 };
 export const DIFFICULTIES = Object.fromEntries(Object.entries(TRIAL_LEVELS).map(([key,value]) => [key,value.name]));
 export const GENERAL_QUOTAS = Object.fromEntries(TOPICS.map(t => [t.id, 5]));
@@ -58,18 +59,17 @@ export function createRound({ mode = 'general', topic = 'overview', count, diffi
   if (mode === 'general') {
     const size = count === undefined ? 40 : Number(count);
     if (![20,40].includes(size)) throw new Error('曠野快閃20題，定曠野長征40題？揀好就入場。');
-    const extra = new Set(shuffle(TOPICS, random).slice(0,4).map(t => t.id));
+    const rotated=shuffle(TOPICS,random);
+    const extra = new Set(rotated.slice(0,4).map(t => t.id));
+    const harder = new Set(rotated.slice(0,size === 40 ? 4 : 2).map(t => t.id));
     selected = TOPICS.flatMap(t => {
-      if (size === 40) return [
-        ...shuffle(questionPool(t.id,2),random).slice(0,1),
-        ...shuffle(CHALLENGE_QUESTIONS.filter(q => q.topic === t.id),random).slice(0,4)
-      ];
-      const split = [1,1,extra.has(t.id) ? 1 : 0];
+      const split = size === 40 ? [harder.has(t.id) ? 2 : 3,2,harder.has(t.id) ? 1 : 0] :
+        [extra.has(t.id) && !harder.has(t.id) ? 2 : 1,1,harder.has(t.id) ? 1 : 0];
       return split.flatMap((n, i) => shuffle(questionPool(t.id, i + 1), random).slice(0, n));
     });
   } else if (mode === 'trial') {
     if (!['1','2','3'].includes(String(difficulty))) throw new Error('先揀低、中、高，先知今次試探去到邊。');
-    selected = TOPICS.flatMap(t => shuffle(questionPool(t.id,difficulty),random).slice(0,2));
+    selected = TOPICS.flatMap(t => shuffle(String(difficulty) === '3' ? CHALLENGE_QUESTIONS.filter(q => q.topic === t.id) : questionPool(t.id,difficulty),random).slice(0,2));
   } else if (mode === 'church') {
     if (!COURSE_UNITS.some(u => u.id === unit)) throw new Error('揀一課教會歷史，慢慢開始操練。');
     selected = HISTORY_QUESTIONS.filter(q => q.unit === unit);
@@ -80,7 +80,7 @@ export function createRound({ mode = 'general', topic = 'overview', count, diffi
   } else { throw new Error('未知測驗模式'); }
   if (!selected.length) throw new Error('暫時冇呢類題目，可以揀其他主題。');
   const items = (mode === 'church' ? selected : shuffle(selected, random)).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], random) }));
-  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 3, distribution: mode === 'general' && items.length === 40 ? 'challenge-v4' : 'balanced-v3', mode, topic: mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:mode === 'church' ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
+  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 3, distribution: mode === 'general' ? 'general-v5' : mode === 'trial' && String(difficulty) === '3' ? 'trial-advanced-v5' : 'balanced-v3', mode, topic: mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:mode === 'church' ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
 }
 
 export function answerRound(round, selected) {
@@ -89,9 +89,14 @@ export function answerRound(round, selected) {
 }
 
 export function advanceRound(round) {
-  if (round.finishedAt || round.answers.length !== round.index + 1) return round;
+  if (round.finishedAt || round.answers.length <= round.index) return round;
   if (round.index + 1 === round.items.length) return { ...round, finishedAt: new Date().toISOString() };
   return { ...round, index: round.index + 1 };
+}
+
+export function retreatRound(round) {
+  if (round.finishedAt || round.index === 0) return round;
+  return {...round,index:round.index-1};
 }
 
 export function levelFor(percent) {
@@ -120,9 +125,20 @@ export function validRound(round, completed = false) {
   if (!Array.isArray(round.items) || !round.items.length || round.items.length > 40 || new Set(round.items.map(i => i?.id)).size !== round.items.length) return false;
   if (!round.items.every(i => QUESTION_MAP.has(i?.id) && Array.isArray(i.order) && [...i.order].sort().join('') === '0123')) return false;
   if (!Array.isArray(round.answers) || round.answers.length > round.items.length || !round.answers.every((a, i) => a?.id === round.items[i].id && (a.selected === null || [0, 1, 2, 3].includes(a.selected)))) return false;
-  if (!Number.isInteger(round.index) || round.index < 0 || round.index >= round.items.length || ![round.index, round.index + 1].includes(round.answers.length)) return false;
+  if (!Number.isInteger(round.index) || round.index < 0 || round.index >= round.items.length || round.index > round.answers.length) return false;
   if (round.mode === 'general') {
-    if (round.distribution === 'challenge-v4') {
+    if (round.distribution === 'general-v5') {
+      const size=round.items.length;
+      if (![20,40].includes(size)) return false;
+      const questions=round.items.map(i => QUESTION_MAP.get(i.id));
+      if (!questions.every(q => BASE_QUESTION_IDS.has(q.id))) return false;
+      if (![1,2,3].every((d,i) => questions.filter(q => q.difficulty === d).length === (size === 20 ? [10,8,2] : [20,16,4])[i])) return false;
+      if (!TOPICS.every(t => {
+        const group=questions.filter(q => q.topic === t.id);
+        const counts=[1,2,3].map(d => group.filter(q => q.difficulty === d).length).join(',');
+        return (size === 40 ? ['3,2,0','2,2,1'] : ['1,1,0','2,1,0','1,1,1']).includes(counts);
+      })) return false;
+    } else if (round.distribution === 'challenge-v4') {
       if (round.items.length !== 40) return false;
       const questions=round.items.map(i => QUESTION_MAP.get(i.id));
       if (!TOPICS.every(t => {
@@ -151,8 +167,10 @@ export function validRound(round, completed = false) {
   if (round.mode === 'trial' && (round.items.length !== 16 || !['1','2','3'].includes(String(round.difficulty)) ||
     !round.items.every(i => QUESTION_MAP.get(i.id).difficulty === Number(round.difficulty)) ||
     !TOPICS.every(t => round.items.filter(i => QUESTION_MAP.get(i.id).topic === t.id).length === 2))) return false;
+  if (round.mode === 'trial' && round.distribution === 'trial-advanced-v5' &&
+    (String(round.difficulty) !== '3' || !round.items.every(i => CHALLENGE_MAP.has(i.id)))) return false;
   if (round.mode === 'daily' && (round.items.length !== 5 || !/^\d{4}-\d{2}-\d{2}$/.test(round.day))) return false;
-  if (completed) return round.answers.length === round.items.length && Number.isFinite(Date.parse(round.finishedAt));
+  if (completed) return round.index === round.items.length-1 && round.answers.length === round.items.length && Number.isFinite(Date.parse(round.finishedAt));
   return round.finishedAt === null;
 }
 

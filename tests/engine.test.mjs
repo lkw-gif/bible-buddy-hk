@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, TOPICS, LEGACY_QUESTION_MAP } from '../dist/questions.mjs';
-import { createRound, answerRound, advanceRound, summarizeRound, levelFor, LEVELS, validRound, seededRandom, hongKongDay, integrateResult, questionForRound } from '../dist/engine.mjs';
+import { createRound, answerRound, advanceRound, retreatRound, summarizeRound, levelFor, LEVELS, validRound, seededRandom, hongKongDay, integrateResult, questionForRound } from '../dist/engine.mjs';
 import { COURSE_UNITS, HISTORY_QUESTIONS, HISTORY_TOPIC, cleanCourseAnswers, courseStatus } from '../dist/history-course.mjs';
 import { CHALLENGE_QUESTIONS } from '../dist/challenge-data.mjs';
 
@@ -10,39 +10,37 @@ function finish(round, decide = q => q.answer) {
   return round;
 }
 
-test('The advanced forty-question quiz draws thirty-two dedicated hard questions and eight medium questions evenly', () => {
-  const seen=new Set();
+test('General forty-question rounds favour foundational knowledge and evenly cover eight topics', () => {
   for (let seed = 0; seed < 100; seed++) {
     const r = createRound({ random: seededRandom(seed) });
     assert(validRound(r));
     assert.equal(new Set(r.items.map(i => i.id)).size, 40);
     const qs = r.items.map(i => QUESTION_MAP.get(i.id));
-    assert.equal(r.distribution,'challenge-v4');
-    for (const t of TOPICS) { const subset=qs.filter(q=>q.topic===t.id); assert.equal(subset.length,5); assert.deepEqual([1,2,3].map(d=>subset.filter(q=>q.difficulty===d).length),[0,1,4]); }
-    assert.deepEqual([1, 2, 3].map(d => qs.filter(q => q.difficulty === d).length), [0, 8, 32]);
-    for(const q of qs.filter(q=>q.difficulty===3)){assert(CHALLENGE_QUESTIONS.some(c=>c.id===q.id));seen.add(q.id);}
+    assert.equal(r.distribution,'general-v5');
+    for (const t of TOPICS) { const subset=qs.filter(q=>q.topic===t.id); assert.equal(subset.length,5); assert.equal(subset.filter(q=>q.difficulty===2).length,2); }
+    assert.deepEqual([1, 2, 3].map(d => qs.filter(q => q.difficulty === d).length), [20, 16, 4]);
+    assert(qs.every(q=>!q.id.startsWith('challenge-')));
     assert(r.items.every(i => [...i.order].sort().join('') === '0123'));
   }
-  assert.equal(seen.size,40);
   const corrupt=createRound();const index=corrupt.items.findIndex(i=>QUESTION_MAP.get(i.id).difficulty===3);
   const topic=QUESTION_MAP.get(corrupt.items[index].id).topic;
-  corrupt.items[index]={id:QUESTIONS.find(q=>q.topic===topic&&q.difficulty===3).id,order:[0,1,2,3]};
-  assert(!validRound(corrupt),'Ordinary questions cannot replace dedicated advanced questions');
+  corrupt.items[index]={id:CHALLENGE_QUESTIONS.find(q=>q.topic===topic).id,order:[0,1,2,3]};
+  assert(!validRound(corrupt),'Dedicated advanced questions stay outside General');
 });
 
-test('Twenty-question General evenly covers topics and rotates its four extra hard questions', () => {
+test('Twenty-question General keeps ten basic, eight medium and two deeper questions with balanced topics', () => {
   const extraCounts=Object.fromEntries(TOPICS.map(t=>[t.id,0]));
   for(let seed=0;seed<200;seed++) {
     const r=createRound({count:20,random:seededRandom(seed)});
     assert(validRound(r)); assert.equal(new Set(r.items.map(i=>i.id)).size,20);
     const qs=r.items.map(i=>QUESTION_MAP.get(i.id));
     assert(qs.every(q=>!q.id.startsWith('challenge-')));
-    assert.deepEqual([1,2,3].map(d=>qs.filter(q=>q.difficulty===d).length),[8,8,4]);
+    assert.deepEqual([1,2,3].map(d=>qs.filter(q=>q.difficulty===d).length),[10,8,2]);
     let extras=0;
     for(const t of TOPICS) {
       const subset=qs.filter(q=>q.topic===t.id);
       assert([2,3].includes(subset.length));
-      assert.equal(subset.filter(q=>q.difficulty===1).length,1);
+      assert([1,2].includes(subset.filter(q=>q.difficulty===1).length));
       assert.equal(subset.filter(q=>q.difficulty===2).length,1);
       if(subset.length===3){extras++;extraCounts[t.id]++;}
     }
@@ -71,12 +69,16 @@ test('Trial levels select sixteen unique questions of one difficulty, two per to
     assert(validRound(r)); assert.equal(r.items.length,16);
     assert.equal(new Set(r.items.map(i=>i.id)).size,16);
     assert(r.items.every(i=>QUESTION_MAP.get(i.id).difficulty===difficulty));
+    assert(r.items.every(i=>i.id.startsWith('challenge-')===(difficulty===3)));
+    if(difficulty===3)assert.equal(r.distribution,'trial-advanced-v5');
     for(const t of TOPICS) assert.equal(r.items.filter(i=>QUESTION_MAP.get(i.id).topic===t.id).length,2);
     assert.equal(summarizeRound(finish(r)).level,null);
   }
   for(const difficulty of ['all','0','4','bogus','01',true,[]]) assert.throws(()=>createRound({mode:'trial',difficulty}));
   assert.throws(()=>createRound({mode:'daily'}));
   const wrong=createRound({mode:'trial',difficulty:3}); wrong.difficulty='1'; assert(!validRound(wrong));
+  const easyReplacement=createRound({mode:'trial',difficulty:3});const topic=QUESTION_MAP.get(easyReplacement.items[0].id).topic;
+  easyReplacement.items[0]={id:QUESTIONS.find(q=>q.topic===topic&&q.difficulty===3).id,order:[0,1,2,3]};assert(!validRound(easyReplacement));
 });
 
 test('Retired daily results stay readable but daily rounds can no longer start or resume', () => {
@@ -94,6 +96,29 @@ test('Double clicks cannot change or duplicate an answer; unanswered rounds cann
   assert.equal(a.answers.length, 1);
   assert(validRound(a));
   assert(validRound(advanceRound(a)));
+});
+
+test('Previous and next navigation preserve answers, permit saved review cursors and keep scoring unchanged', () => {
+  let r=createRound({count:20});assert.equal(retreatRound(r),r);
+  for(const choice of [1,0,null])r=advanceRound(answerRound(r,choice));
+  assert.equal(r.index,3);assert.equal(r.answers.length,3);
+  r=retreatRound(retreatRound(retreatRound(r)));assert.equal(r.index,0);assert(validRound(r));
+  assert.equal(answerRound(r,0),r);assert.equal(retreatRound(r),r);
+  r=JSON.parse(JSON.stringify(r));assert(validRound(r));
+  for(let i=0;i<3;i++)r=advanceRound(r);
+  assert.equal(r.index,3);assert.equal(advanceRound(r),r);
+  assert(!validRound({...r,index:4}));
+  const done=finish(r);assert(validRound(done,true));assert.equal(retreatRound(done),done);
+  const score=summarizeRound(done);assert.equal(score.correct,18);assert.equal(score.skipped,1);assert.equal(score.percent,90);
+});
+
+test('Existing advanced General and earlier high-trial progress remain readable', () => {
+  const old=createRound();old.distribution='challenge-v4';
+  old.items=TOPICS.flatMap(t=>[QUESTIONS.find(q=>q.topic===t.id&&q.difficulty===2),...CHALLENGE_QUESTIONS.filter(q=>q.topic===t.id).slice(0,4)].map(q=>({id:q.id,order:[0,1,2,3]})));
+  assert(validRound(old));assert.equal(summarizeRound(finish(old)).percent,100);
+  const trial=createRound({mode:'trial',difficulty:3});trial.distribution='balanced-v3';
+  trial.items=TOPICS.flatMap(t=>QUESTIONS.filter(q=>q.topic===t.id&&q.difficulty===3).slice(0,2).map(q=>({id:q.id,order:[0,1,2,3]})));
+  assert(validRound(trial));assert(validRound(finish(trial),true));
 });
 
 test('Scoring is correct across every reachable 20/40-question General score and level boundary', () => {
