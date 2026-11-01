@@ -1,5 +1,5 @@
-import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261101-2';
-import { questionForRound, DIFFICULTIES, createRound, answerRound, advanceRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261101-2';
+import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261101-3';
+import { questionForRound, DIFFICULTIES, createRound, answerRound, advanceRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261101-3';
 
 const $ = (s, root = document) => root.querySelector(s);
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -39,21 +39,19 @@ function readProgress() {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
     if (!saved || saved.schema !== 1) return blank;
-    return { ...blank, tone: saved.tone === 'gentle' ? 'gentle' : 'cheeky', current: validRound(saved.current) ? saved.current : null,
-      history: Array.isArray(saved.history) ? saved.history.filter(r => validRound(r, true)).slice(0, 60) : [],
+    return { ...blank, tone: 'cheeky', current: validRound(saved.current) ? { ...saved.current, tone:'cheeky' } : null,
+      history: Array.isArray(saved.history) ? saved.history.filter(r => validRound(r, true)).map(r => ({ ...r, tone:'cheeky' })).slice(0, 60) : [],
       bookmarks: cleanIds(saved.bookmarks), mistakes: cleanIds(saved.mistakes) };
   } catch { storageUnavailable = true; return blank; }
 }
 function cleanIds(value) { return Array.isArray(value) ? [...new Set(value.filter(id => QUESTION_MAP.has(id)))] : []; }
 let progress = readProgress();
-let setup = null;
 let reviewTab = 'mistakes';
 let reviewSearch = '';
 let resultFilter = 'wrong';
 let resultSearch = '';
 let toastTimeout;
 const main = $('#main');
-const setupDialog = $('#setup-dialog');
 const shareDialog = $('#share-dialog');
 
 function persist() {
@@ -95,30 +93,19 @@ function homeView() {
   const current = progress.current;
   const day = hongKongDay();
   const daily = progress.history.find(r => r.mode === 'daily' && r.day === day);
-  return `<section class="hero" aria-labelledby="home-title"><div class="hero-copy"><div class="hero-label"><span>✦</span> 港式聖經小測 · 邊玩邊學</div><h1 id="home-title">返咗咁耐教會，<br><em>聖經有幾熟？</em></h1><p>挪亞定摩西起方舟？唔使舉手，呢度冇人望住你。<br>由聖經常識到神學冷知識，同小羊一齊測吓、學吓。</p><div class="actions"><button class="button primary" data-action="setup" data-mode="general">開始綜合測試 ${icon('arrow')}</button><button class="button secondary" data-action="topics">自己揀主題</button></div><div class="hero-stats"><div><strong>${QUESTIONS.length}</strong> 原創題目</div><div><strong>${TOPICS.length}</strong> 探索方向</div><div><strong>0</strong> 壓力，慢慢學</div></div></div><div class="hero-art"><img src="assets/hero.png" alt="戴圓眼鏡嘅小羊同白鴿坐喺舊式課桌前讀聖經，後面有淡淡嘅香港舊樓" width="1536" height="1024" fetchpriority="high"><span class="art-note">每日讀一啲，記得多一啲。</span><div class="art-badge"><span aria-hidden="true">✧</span> 答錯都唔怕，小羊陪你溫。</div></div></section>
+  return `<section class="hero" aria-labelledby="home-title"><div class="hero-copy"><div class="hero-label"><span>✦</span> 港式聖經小測 · 邊玩邊學</div><h1 id="home-title">返咗咁耐教會，<br><em>聖經有幾熟？</em></h1><p>挪亞定摩西起方舟？唔使舉手，呢度冇人望住你。<br>由聖經常識到神學冷知識，同小羊一齊測吓、學吓。</p><div class="actions"><button class="button primary" data-action="start" data-mode="general">開始綜合測試 ${icon('arrow')}</button><button class="button secondary" data-action="topics">自己揀主題</button></div><div class="hero-stats"><div><strong>${QUESTIONS.length}</strong> 原創題目</div><div><strong>${TOPICS.length}</strong> 探索方向</div><div><strong>0</strong> 壓力，慢慢學</div></div></div><div class="hero-art"><img src="assets/hero.png" alt="戴圓眼鏡嘅小羊同白鴿坐喺舊式課桌前讀聖經，後面有淡淡嘅香港舊樓" width="1536" height="1024" fetchpriority="high"><span class="art-note">每日讀一啲，記得多一啲。</span><div class="art-badge"><span aria-hidden="true">✧</span> 答錯都唔怕，小羊陪你溫。</div></div></section>
     ${storageUnavailable ? '<p class="privacy-notice">呢個瀏覽器暫時儲存唔到進度。仍然可以測驗，完成後可下載成績。</p>' : ''}
     ${current ? `<aside class="resume-banner"><div><strong>上次嗰局，等緊你返嚟。</strong><p>${escape(roundTitle(current))} · 已答 ${current.answers.length} / ${current.items.length} 題</p></div><a href="#/quiz" class="button primary small">繼續測驗 ${icon('arrow')}</a></aside>` : ''}
-    <section class="mode-grid" aria-label="揀一種玩法"><article class="general-card"><div><div class="eyebrow">THE GENERAL CHALLENGE</div><h2>你嘅聖經實力報告<span class="pill">人氣之選</span></h2><p>40 題跨主題挑戰，八個方向各佔 5 題。<br>由初信探索級到神學家彩蛋級，你去到邊？</p><button class="button light" data-action="setup" data-mode="general">測吓我嘅 Level ${icon('arrow')}</button></div><div class="general-decoration" aria-hidden="true">${icon('cap')}</div></article><article class="daily-card"><div class="eyebrow">A LITTLE EVERY DAY</div>${icon('sun','daily-stamp')}<h2>每日五題，小步進前。</h2><p>${daily ? `今日已完成！答啱 ${summarizeRound(daily).correct} / 5 題。返去睇吓解說，鞏固記憶。` : '搭車、等人、飲杯茶，夠時間溫返幾個聖經小知識。'}</p><button class="text-button" data-action="daily">${daily ? '睇返今日成績' : '今日都學少少'} ${icon('arrow')}</button><span class="daily-date">${day.replaceAll('-', '.')}</span></article></section>
-    <section class="topics-section" id="topics" aria-labelledby="topics-title"><div class="section-heading"><div><div class="eyebrow">PICK YOUR NEXT ADVENTURE</div><h2 class="section-title" id="topics-title">今日想挑戰咩？</h2><p>先揀最有興趣嗰瓣。每個方向都有暖身、進階同挑戰題。</p></div><span class="pill sand">八大主題 · 任你探索</span></div><div class="topic-grid">${TOPICS.map(t => `<button class="topic-card" data-action="setup" data-mode="topic" data-topic="${t.id}"><span class="topic-top"><span class="topic-icon ${t.color}">${icon(t.icon)}</span><span class="topic-count">${questionPool(t.id).length} 題</span></span><h3>${t.name}</h3><p>${t.description}</p><span class="topic-bottom"><span class="eyebrow">${t.en}</span>${icon('arrow')}</span></button>`).join('')}</div></section>
+    <section class="mode-grid" aria-label="揀一種玩法"><article class="general-card"><div><div class="eyebrow">THE GENERAL CHALLENGE</div><h2>你嘅聖經實力報告<span class="pill">人氣之選</span></h2><p>40 題跨主題挑戰，八個方向各佔 5 題。<br>由初信探索級到神學家彩蛋級，你去到邊？</p><button class="button light" data-action="start" data-mode="general">測吓我嘅 Level ${icon('arrow')}</button></div><div class="general-decoration" aria-hidden="true">${icon('cap')}</div></article><article class="daily-card"><div class="eyebrow">A LITTLE EVERY DAY</div>${icon('sun','daily-stamp')}<h2>每日五題，小步進前。</h2><p>${daily ? `今日已完成！答啱 ${summarizeRound(daily).correct} / 5 題。返去睇吓解說，鞏固記憶。` : '搭車、等人、飲杯茶，夠時間溫返幾個聖經小知識。'}</p><button class="text-button" data-action="daily">${daily ? '睇返今日成績' : '今日都學少少'} ${icon('arrow')}</button><span class="daily-date">${day.replaceAll('-', '.')}</span></article></section>
+    <section class="topics-section" id="topics" aria-labelledby="topics-title"><div class="section-heading"><div><div class="eyebrow">PICK YOUR NEXT ADVENTURE</div><h2 class="section-title" id="topics-title">今日想挑戰咩？</h2><p>先揀最有興趣嗰瓣。每個方向都有暖身、進階同挑戰題。</p></div><span class="pill sand">八大主題 · 任你探索</span></div><div class="topic-grid">${TOPICS.map(t => `<button class="topic-card" data-action="start" data-mode="topic" data-topic="${t.id}"><span class="topic-top"><span class="topic-icon ${t.color}">${icon(t.icon)}</span><span class="topic-count">${questionPool(t.id).length} 題</span></span><h3>${t.name}</h3><p>${t.description}</p><span class="topic-bottom"><span class="eyebrow">${t.en}</span>${icon('arrow')}</span></button>`).join('')}</div></section>
     `;
 }
 
-function openSetup(mode, topic = 'overview', ids = []) {
-  setup = { mode, topic, ids };
-  const title = mode === 'general' ? '綜合實力測試' : mode === 'daily' ? '今日嘅五題小挑戰' : mode === 'review' ? '讀完，再試一次。' : topicById(topic).name;
-  const summary = mode === 'general' ? '40 題 · 八大方向 · 約 12–18 分鐘<br>每個方向 5 題：2 題暖身、2 題進階、1 題挑戰' : mode === 'daily' ? '5 題 · 聖經基本功 · 約 2–3 分鐘<br>以香港日期更新，同日題目固定。' : mode === 'review' ? `${Math.min(ids.length, 30)} 題 · 從你嘅${reviewTab === 'bookmarks' ? '收藏' : '錯題'}抽取 · 不設綜合評級` : `${topicById(topic).description}<br>題序同答案位置每局重新洗牌。`;
-  setupDialog.innerHTML = `<form id="setup-form"><div class="dialog-top"><div><div class="eyebrow">READY WHEN YOU ARE</div><h2 id="setup-title">${title}</h2></div><button class="close-button" type="button" data-action="close-dialog" aria-label="關閉設定">${icon('close')}</button></div><div class="setup-summary">${summary}</div>
-    ${mode === 'topic' ? '<div class="setup-fields"><label for="difficulty">題目難度<select id="difficulty" name="difficulty"><option value="all">混合難度</option><option value="1">暖身 · 基本功</option><option value="2">進階 · 深入少少</option><option value="3">挑戰 · 認真考你</option></select></label><label for="count">今次答幾題？<select id="count" name="count"><option value="10">10 題 · 約 3–5 分鐘</option><option value="20">20 題 · 約 6–10 分鐘</option><option value="30">30 題 · 約 10–15 分鐘</option></select></label></div><p id="pool-info" class="note" style="margin-bottom:20px">本主題有 30 題可抽取。</p>' : ''}
-    <fieldset style="border:0;padding:0;margin:0"><legend style="font-size:14px;font-weight:700">結果評語</legend><div class="tone-options"><label class="tone-option"><input type="radio" name="tone" value="cheeky" ${progress.tone === 'cheeky' ? 'checked' : ''}>幽默啲</label><label class="tone-option"><input type="radio" name="tone" value="gentle" ${progress.tone === 'gentle' ? 'checked' : ''}>認真啲</label></div></fieldset><p class="setup-explain">每題答完有解說同出處，亦可以收藏。冇限時；離開頁面之後，可用同一個瀏覽器繼續。</p>${progress.current ? '<p class="existing-notice">你仲有一局未完成。開始新一局會取代嗰局嘅未完成進度。</p>' : ''}<div class="setup-footer"><button type="submit" class="button primary">${progress.current ? '開始新一局' : '準備好，開始啦！'} ${icon('arrow')}</button><p class="note">唔使填姓名或教會資料，準備好就開始。</p></div></form>`;
-  setupDialog.showModal();
-}
-
-function startRound(form) {
-  const values = new FormData(form);
+function startQuiz(mode, topic = 'overview', ids = []) {
   try {
-    progress.tone = values.get('tone') === 'gentle' ? 'gentle' : 'cheeky';
-    progress.current = createRound({ ...setup, count: Number(values.get('count') || 10), difficulty: values.get('difficulty') || 'all', tone: progress.tone });
-    persist(); setupDialog.close(); resultFilter = 'wrong'; resultSearch = ''; go('/quiz');
+    progress.tone = 'cheeky';
+    progress.current = createRound({ mode, topic, ids, count:10, difficulty:'all', tone:'cheeky' });
+    persist(); resultFilter = 'wrong'; resultSearch = ''; go('/quiz');
   } catch (error) { toast(error.message); }
 }
 
@@ -167,7 +154,7 @@ function resultView(id) {
   const recommendation = s.correct === s.total ? topicById('context') : weak;
   const title = s.level ? `${s.level.symbol} ${s.level.name}` : s.percent >= 80 ? '做得好，繼續探索！' : '完成啦，又學多一啲。';
   const remark = s.level ? s.level[r.tone] : r.tone === 'gentle' ? '每次練習都會多認識一啲。溫返今次唔熟嗰幾題，就係好好嘅下一步。' : s.percent >= 80 ? '呢瓣幾熟手喎！記住讀埋出處，下次同小組分享唔使淨係靠記憶。' : '啲答案好似個個都識你，你又未必認得晒佢哋。溫返錯題，下次就唔使靠撞！';
-  return `<div class="page-head"><div class="eyebrow">A LITTLE WISER THAN BEFORE</div><p class="stored-result">${escape(roundTitle(r))} · ${formatDate(r.finishedAt)}${r.mode === 'topic' ? ' · ' + (DIFFICULTIES[r.difficulty] || '混合難度') : ''}</p></div><section class="result-hero" aria-labelledby="result-title"><div><div class="result-topline">${icon('check')} 今局完成 · 答啱 ${s.correct} 題${s.skipped ? ` · ${s.skipped} 題先學答案` : ''}</div><div class="eyebrow">${s.level ? 'YOUR GENERAL KNOWLEDGE LEVEL' : 'PRACTICE MAKES PROGRESS'}</div><h1 id="result-title">${title}</h1><p>${remark}</p><div class="actions"><button class="button primary" data-action="retry" data-id="${r.id}">${icon('repeat')} 再挑戰一局</button><button class="button secondary" data-action="share" data-id="${r.id}">分享／下載成績</button></div><p class="result-explainer"><button class="text-button" data-action="result-tone" data-id="${r.id}" style="font-size:11px;min-height:30px">${r.tone === 'cheeky' ? '轉做認真版' : '轉做幽默版'}</button></p></div><div><div class="score-ring" style="--value:${s.percent}" role="img" aria-label="${number(s.percent)}分，答啱${s.correct}題，共${s.total}題"><div><strong>${number(s.percent)}<small style="font-size:19px">分</small></strong><span>${s.correct} / ${s.total} 題答啱</span></div></div><p class="score-note">${s.total} 題等分 · 答錯／跳過不扣額外分</p></div></section>
+  return `<div class="page-head"><div class="eyebrow">A LITTLE WISER THAN BEFORE</div><p class="stored-result">${escape(roundTitle(r))} · ${formatDate(r.finishedAt)}${r.mode === 'topic' ? ' · ' + (DIFFICULTIES[r.difficulty] || '混合難度') : ''}</p></div><section class="result-hero" aria-labelledby="result-title"><div><div class="result-topline">${icon('check')} 今局完成 · 答啱 ${s.correct} 題${s.skipped ? ` · ${s.skipped} 題先學答案` : ''}</div><div class="eyebrow">${s.level ? 'YOUR GENERAL KNOWLEDGE LEVEL' : 'PRACTICE MAKES PROGRESS'}</div><h1 id="result-title">${title}</h1><p>${remark}</p><div class="actions"><button class="button primary" data-action="retry" data-id="${r.id}">${icon('repeat')} 再挑戰一局</button><button class="button secondary" data-action="share" data-id="${r.id}">分享／下載成績</button></div></div><div><div class="score-ring" style="--value:${s.percent}" role="img" aria-label="${number(s.percent)}分，答啱${s.correct}題，共${s.total}題"><div><strong>${number(s.percent)}<small style="font-size:19px">分</small></strong><span>${s.correct} / ${s.total} 題答啱</span></div></div><p class="score-note">${s.total} 題等分 · 答錯／跳過不扣額外分</p></div></section>
     <section class="result-grid" aria-label="分項表現與溫習方向"><div class="panel"><h2>今局嘅知識地圖</h2>${s.breakdown.filter(t => t.total).map(t => `<div class="breakdown-row"><span class="label">${t.name}</span><span class="bar" aria-hidden="true"><span style="width:${t.percent}%"></span></span><span class="value">${t.correct}/${t.total}</span></div>`).join('')}<p class="note" style="margin-top:17px">分項只反映今局抽到嘅題目，供揀溫習方向用。</p></div><div class="panel growth-note"><div class="tip-symbol" aria-hidden="true">🌱</div><h2>下一步，讀返一小段。</h2><h3>${s.correct === s.total ? '識得答，更值得讀深啲。' : `${recommendation.name}可以再熟啲。`}</h3><p>${recommendation.tip}</p><span class="reading">建議閱讀：${recommendation.reading}</span>${external(scriptureUrl(recommendation.reading),'打開經文讀吓','text-button')}<p class="note">唔使一晚追晒。每日少少，都比停喺原地好。</p></div></section>
     <section aria-labelledby="result-review-title"><div class="section-heading"><div><h2 class="section-title" id="result-review-title">睇返啲題，學返啲嘢。</h2><p>答錯題目已經自動加入「我的溫習」。答啱重溫題，會移出錯題集。</p></div></div><div class="review-toolbar"><div class="tabs" aria-label="篩選今局題目"><button data-action="result-filter" data-filter="wrong" aria-pressed="${resultFilter === 'wrong'}">答錯／跳過 ${s.total-s.correct}</button><button data-action="result-filter" data-filter="all" aria-pressed="${resultFilter === 'all'}">全部 ${s.total}</button></div><label class="search-wrap">${icon('search')}<span class="sr-only">搜尋今局題目</span><input id="result-search" type="search" placeholder="搵返某一題…" value="${escape(resultSearch)}"></label></div><div id="result-rows">${resultRows(r)}</div></section>`;
 }
@@ -226,15 +213,6 @@ function shareResult(id) {
   shareDialog.showModal();
 }
 
-document.addEventListener('submit', event => { if (event.target.id === 'setup-form') { event.preventDefault(); startRound(event.target); } });
-document.addEventListener('change', event => {
-  if (event.target.id === 'difficulty') {
-    const available = questionPool(setup.topic, event.target.value).length;
-    for (const option of $('#count').options) option.disabled = Number(option.value) > available;
-    if (Number($('#count').value) > available) $('#count').value = '10';
-    $('#pool-info').textContent = `呢個難度有 ${available} 題可抽取。`;
-  }
-});
 document.addEventListener('input', event => {
   if (event.target.id === 'review-search') { reviewSearch = event.target.value; $('#review-rows').innerHTML = reviewRows(); }
   if (event.target.id === 'result-search') { resultSearch = event.target.value; const r = progress.history.find(x => x.id === route().id); if (r) $('#result-rows').innerHTML = resultRows(r); }
@@ -242,14 +220,14 @@ document.addEventListener('input', event => {
 document.addEventListener('click', async event => {
   const button = event.target.closest('[data-action]'); if (!button || button.disabled) return;
   const action = button.dataset.action;
-  if (action === 'setup') openSetup(button.dataset.mode, button.dataset.topic);
+  if (action === 'start') startQuiz(button.dataset.mode, button.dataset.topic);
   if (action === 'close-dialog') button.closest('dialog').close();
   if (action === 'topics') $('#topics').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   if (action === 'daily') {
     const saved = progress.history.find(r => r.mode === 'daily' && r.day === hongKongDay());
     if (saved) go('/result/' + saved.id);
     else if (progress.current?.mode === 'daily' && progress.current.day === hongKongDay()) go('/quiz');
-    else openSetup('daily');
+    else startQuiz('daily');
   }
   if (action === 'answer') handleAnswer(Number(button.dataset.choice));
   if (action === 'skip') handleAnswer(null);
@@ -265,10 +243,9 @@ document.addEventListener('click', async event => {
     if (route().name === 'review' && reviewTab === 'bookmarks') { const hadFocus = document.activeElement === button; main.innerHTML = reviewView(); if (hadFocus) $('[data-tab="bookmarks"]')?.focus({ preventScroll: true }); }
   }
   if (action === 'review-tab') { reviewTab = button.dataset.tab; reviewSearch = ''; main.innerHTML = reviewView(); $(`[data-tab="${reviewTab}"]`)?.focus({ preventScroll: true }); }
-  if (action === 'practice') openSetup('review', 'overview', progress[reviewTab]);
+  if (action === 'practice') startQuiz('review', 'overview', progress[reviewTab]);
   if (action === 'result-filter') { resultFilter = button.dataset.filter; const r = progress.history.find(x => x.id === route().id); if (r) { for (const b of document.querySelectorAll('[data-action="result-filter"]')) b.setAttribute('aria-pressed', String(b.dataset.filter === resultFilter)); $('#result-rows').innerHTML = resultRows(r); } }
-  if (action === 'retry') { const r = progress.history.find(x => x.id === button.dataset.id); if (r) { if (r.mode === 'daily') toast('每日挑戰同日題目固定；想再玩，可以揀主題練習。'); else openSetup(r.mode, r.topic || 'overview', r.mode === 'review' ? r.items.map(i => i.id) : []); } }
-  if (action === 'result-tone') { const r = progress.history.find(x => x.id === button.dataset.id); if (r) { r.tone = r.tone === 'gentle' ? 'cheeky' : 'gentle'; progress.tone = r.tone; persist(); const y = window.scrollY; main.innerHTML = resultView(r.id); window.scrollTo({ top:y, behavior:'instant' }); $('[data-action="result-tone"]')?.focus({ preventScroll: true }); } }
+  if (action === 'retry') { const r = progress.history.find(x => x.id === button.dataset.id); if (r) { if (r.mode === 'daily') toast('每日挑戰同日題目固定；想再玩，可以揀主題練習。'); else startQuiz(r.mode, r.topic || 'overview', r.mode === 'review' ? r.items.map(i => i.id) : []); } }
   if (action === 'share') shareResult(button.dataset.id);
   if (action === 'copy-result') {
     try { await navigator.clipboard.writeText($('#share-text').value); toast('複製好啦，可以貼畀朋友。'); }
@@ -282,10 +259,10 @@ document.addEventListener('click', async event => {
   if (action === 'clear-confirm') { progress = { schema:1, tone:'cheeky', current:null, history:[], bookmarks:[], mistakes:[] }; persist(); shareDialog.close(); render(); toast('紀錄已清除，新一頁由你開始。'); }
 });
 document.addEventListener('keydown', event => {
-  if (route().name !== 'quiz' || setupDialog.open || shareDialog.open || event.ctrlKey || event.altKey || event.metaKey || event.repeat || ['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName)) return;
+  if (route().name !== 'quiz' || shareDialog.open || event.ctrlKey || event.altKey || event.metaKey || event.repeat || ['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName)) return;
   const index = ['1','2','3','4'].includes(event.key) ? Number(event.key)-1 : ['a','b','c','d'].indexOf(event.key.toLowerCase());
   if (index >= 0) { const choice = document.querySelectorAll('.choice')[index]; if (choice && !choice.disabled) { event.preventDefault(); choice.click(); } }
 });
-for (const dialog of [setupDialog,shareDialog]) dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
+for (const dialog of [shareDialog]) dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
 window.addEventListener('hashchange', () => render());
 render({ focus:false });

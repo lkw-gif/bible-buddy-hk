@@ -29,26 +29,22 @@ async function boot(saved = null, hash = '#/') {
   const $ = selector => w.document.querySelector(selector);
   const tick = async () => { await new Promise(resolve => setTimeout(resolve, 5)); };
   const click = async selector => { const element = $(selector); assert(element, `Missing control ${selector}`); assert(!element.disabled, `Disabled control ${selector}`); element.click(); await tick(); };
-  const submit = async () => { $('#setup-form').dispatchEvent(new w.Event('submit',{ bubbles:true, cancelable:true })); await tick(); };
   const savedProgress = () => JSON.parse(w.localStorage.getItem(key));
   const input = (selector,value) => { $(selector).value=value; $(selector).dispatchEvent(new w.Event('input',{bubbles:true})); };
   const select = (selector,value) => { $(selector).value=value; $(selector).dispatchEvent(new w.Event('change',{bubbles:true})); };
   const navigate = async path => { w.location.hash = path; await tick(); };
-  return { dom,w,$,click,submit,savedProgress,tick,input,select,navigate,errors,copies,downloads };
+  return { dom,w,$,click,savedProgress,tick,input,select,navigate,errors,copies,downloads };
 }
 
-test('Home presents eight real topics, imagery and working General setup', async () => {
+test('Home presents eight real topics, imagery and direct General start', async () => {
   const app = await boot();
   assert.match(app.$('h1').textContent,/聖經有幾熟/);
   assert.equal(app.w.document.querySelectorAll('.topic-card').length,8);
   assert.match(app.$('.hero-art img').alt,/小羊.*白鴿/);
   assert.match(app.$('.hero-art img').src,/assets\/hero.png$/);
   assert.equal(app.$('[data-nav="home"]').getAttribute('aria-current'),'page');
-  await app.click('[data-action="setup"][data-mode="general"]');
-  assert(app.$('#setup-dialog').open);
-  assert.match(app.$('.setup-summary').textContent,/40 題/);
-  assert.equal(app.$('#difficulty'),null);
-  await app.submit();
+  await app.click('[data-action="start"][data-mode="general"]');
+
   assert.equal(app.w.location.hash,'#/quiz');
   assert.equal(app.savedProgress().current.items.length,40);
   assert.equal(app.w.document.querySelectorAll('.choice').length,4);
@@ -59,8 +55,7 @@ test('Home presents eight real topics, imagery and working General setup', async
 test('A full 40-question General round produces correct score, title, mistake list, sharing and history', async () => {
   const app = await boot();
   await app.click('[data-mode="general"]');
-  app.$('input[name="tone"][value="gentle"]').checked=true;
-  await app.submit();
+
   let bookmarked;
   for (let i=0; i<40; i++) {
     const r=app.savedProgress().current;
@@ -97,7 +92,7 @@ test('A full 40-question General round produces correct score, title, mistake li
   await app.navigate('/review');
   assert.equal(app.w.document.querySelectorAll('.review-card').length,2);
   await app.click('[data-action="practice"]');
-  await app.submit();
+
   for (let i=0;i<2;i++) { await app.click('[data-action="answer"][data-choice="0"]'); await app.click('[data-action="next"]'); }
   assert.equal(app.savedProgress().mistakes.length,0);
   assert.equal(app.savedProgress().bookmarks.length,1);
@@ -106,15 +101,13 @@ test('A full 40-question General round produces correct score, title, mistake li
   app.dom.window.close();
 });
 
-test('Topic difficulty caps question count; in-progress answer survives a fresh application load', async () => {
+test('Topic starts immediately with ten mixed questions and resumes after reload', async () => {
   let app=await boot();
   await app.click('[data-mode="topic"][data-topic="old"]');
-  app.select('#count','30');
-  app.select('#difficulty','3');
-  assert.equal(app.$('#count').value,'10');
-  assert(app.$('#count option[value="30"]').disabled);
-  await app.submit();
-  assert(app.savedProgress().current.items.every(i=>QUESTION_MAP.get(i.id).difficulty===3));
+  assert.equal(app.w.location.hash,'#/quiz');
+  assert.equal(app.savedProgress().current.items.length,10);
+  assert.equal(app.savedProgress().current.tone,'cheeky');
+  assert(app.savedProgress().current.items.every(i=>QUESTION_MAP.get(i.id).topic==='old'));
   await app.click('[data-action="answer"][data-choice="0"]');
   const saved=app.w.localStorage.getItem(key);
   const id=app.savedProgress().current.items[0].id;
@@ -133,7 +126,7 @@ test('Topic difficulty caps question count; in-progress answer survives a fresh 
 
 test('Daily round awards no global title and today button reopens its existing result', async () => {
   const app=await boot();
-  await app.click('[data-action="daily"]'); await app.submit();
+  await app.click('[data-action="daily"]');
   assert.equal(app.savedProgress().current.items.length,5);
   for (let i=0;i<5;i++) { await app.click('[data-action="answer"][data-choice="0"]'); await app.click('[data-action="next"]'); }
   const id=app.savedProgress().history[0].id;
@@ -149,7 +142,7 @@ test('Daily round awards no global title and today button reopens its existing r
   app.dom.window.close();
 });
 
-test('Simplified interface hides the handbook and screenshot copy, with natural tone labels', async () => {
+test('Simplified interface hides the handbook and screenshot copy, without any tone selection', async () => {
   const app=await boot(null,'#/guide');
   assert(app.$('.hero'));
   assert.equal(app.$('[href="#/guide"]'),null);
@@ -158,10 +151,10 @@ test('Simplified interface hides the handbook and screenshot copy, with natural 
   assert.equal(app.$('.site-footer'),null);
   assert(!app.$('#main').textContent.includes('75%'));
   await app.click('[data-mode="general"]');
-  const dialog=app.$('#setup-dialog').textContent;
-  assert.match(dialog,/幽默啲/); assert.match(dialog,/認真啲/);
-  assert(!/港式輕寸|溫柔打氣|題庫手冊/.test(dialog));
-  assert.match(dialog,/每個方向 5 題/);
+  assert.equal(app.w.location.hash,'#/quiz');
+  assert.equal(app.$('#setup-dialog'),null);
+  assert.equal(app.$('input[name="tone"]'),null);
+  assert.equal(app.savedProgress().current.tone,'cheeky');
   assert.deepEqual(app.errors,[]); app.dom.window.close();
 });
 

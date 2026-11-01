@@ -1,4 +1,4 @@
-import { QUESTIONS, QUESTION_MAP, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261101-2';
+import { QUESTIONS, QUESTION_MAP, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261101-3';
 
 export const DIFFICULTIES = { 1: '暖身', 2: '進階', 3: '挑戰' };
 export const GENERAL_QUOTAS = Object.fromEntries(TOPICS.map(t => [t.id, 5]));
