@@ -1,3 +1,4 @@
+import { CHOICES, STEMS } from './choices.mjs?v=20261101-2';
 // Original Cantonese question wording. Each row: difficulty, question, correct answer,
 // three distractors, reference, explanation, optional source URL.
 export const TOPICS = [
@@ -270,11 +271,18 @@ const bank = {
   ]
 };
 
-export const QUESTIONS = Object.entries(bank).flatMap(([topic, rows]) => rows.map((r, i) => ({
+const legacyQuestions = Object.entries(bank).flatMap(([topic, rows]) => rows.map((r, i) => ({
   id: `${topic}-${String(i + 1).padStart(2, '0')}`,
   topic, difficulty: r[0], question: r[1], options: r.slice(2, 6), answer: 0,
   reference: r[6], explanation: r[7],
   source: r[8] || `https://www.biblegateway.com/passage/?search=${encodeURIComponent(r[6].replaceAll('；', ';'))}&version=CUV`,
   sourceLabel: r[8] ? '查閱參考資料' : '打開經文'
 })));
+export const LEGACY_QUESTION_MAP = new Map(legacyQuestions.map(q => [q.id, q]));
+export const QUESTIONS = legacyQuestions.map(q => {
+  const index = Number(q.id.split('-')[1]) - 1;
+  const options = CHOICES[q.topic]?.[index];
+  if (!options || options.length !== 4) throw new Error('Missing revised options: ' + q.id);
+  return { ...q, question: STEMS[q.id] || q.question, options };
+});
 export const QUESTION_MAP = new Map(QUESTIONS.map(q => [q.id, q]));

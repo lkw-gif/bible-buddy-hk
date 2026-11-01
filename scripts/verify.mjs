@@ -18,7 +18,7 @@ for (const q of QUESTIONS) {
   assert(Number.isInteger(q.answer) && q.answer >= 0 && q.answer < 4, q.id);
   assert.equal(new URL(q.source).protocol, 'https:', q.id);
 }
-for (const f of ['index.html', 'app.mjs', 'styles.css', 'engine.mjs', 'assets/hero.png', 'assets/favicon.svg']) await access(new URL('../dist/' + f, import.meta.url));
+for (const f of ['index.html', 'app.mjs', 'styles.css', 'engine.mjs', 'choices.mjs', 'assets/hero.png', 'assets/favicon.svg']) await access(new URL('../dist/' + f, import.meta.url));
 const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
 assert(html.includes('lang="zh-HK"'));
 assert(!html.includes('codex-preview'));

@@ -139,7 +139,7 @@ test('Daily round awards no global title and today button reopens its existing r
   const id=app.savedProgress().history[0].id;
   assert.match(app.$('.score-ring').textContent,/100/);
   assert(!app.$('#result-title').textContent.includes('神學家'));
-  assert.match(app.$('.result-explainer').textContent,/不頒發綜合稱號/);
+  assert(!app.$('#result-title').textContent.includes('挑戰級'));
   await app.navigate('/');
   assert.match(app.$('.daily-card').textContent,/今日已完成/);
   await app.click('[data-action="daily"]');
@@ -149,31 +149,20 @@ test('Daily round awards no global title and today button reopens its existing r
   app.dom.window.close();
 });
 
-test('Question library filters all 240 questions and search remains usable while results update', async () => {
+test('Simplified interface hides the handbook and screenshot copy, with natural tone labels', async () => {
   const app=await boot(null,'#/guide');
-  assert.match(app.$('.bank-count').textContent,/240/);
-  assert.equal(app.w.document.querySelectorAll('#bank-rows .review-card').length,16);
-  app.select('#bank-topic','language');
-  assert.match(app.$('.bank-count').textContent,/30 題/);
-  app.select('#bank-difficulty','3');
-  assert.equal(app.w.document.querySelectorAll('#bank-rows .review-card').length,10);
-  app.input('#bank-search','nephesh');
-  assert.equal(app.w.document.querySelectorAll('#bank-rows .review-card').length,1);
-  await app.click('#bank-rows [data-action="bookmark"]');
-  assert.equal(app.savedProgress().bookmarks.length,1);
-  app.input('#bank-search','完全冇呢個字123');
-  assert.match(app.$('.bank-count').textContent,/0 題/);
-  assert.equal(app.$('#bank-search').value,'完全冇呢個字123');
-  await app.click('[data-action="download-bank"]');
-  assert.match(app.downloads[0].name,/240題題庫.json$/);
-  await app.navigate('/review');
-  await app.click('[data-tab="bookmarks"]');
-  assert.equal(app.w.document.querySelectorAll('.review-card').length,1);
-  await app.click('.review-card [data-action="bookmark"]');
-  assert.equal(app.savedProgress().bookmarks.length,0);
-  assert.match(app.$('.empty-state').textContent,/留低一題/);
-  assert.deepEqual(app.errors,[]);
-  app.dom.window.close();
+  assert(app.$('.hero'));
+  assert.equal(app.$('[href="#/guide"]'),null);
+  assert.equal(app.$('.how-section'),null);
+  assert.equal(app.$('.home-footnote'),null);
+  assert.equal(app.$('.site-footer'),null);
+  assert(!app.$('#main').textContent.includes('75%'));
+  await app.click('[data-mode="general"]');
+  const dialog=app.$('#setup-dialog').textContent;
+  assert.match(dialog,/幽默啲/); assert.match(dialog,/認真啲/);
+  assert(!/港式輕寸|溫柔打氣|題庫手冊/.test(dialog));
+  assert.match(dialog,/每個方向 5 題/);
+  assert.deepEqual(app.errors,[]); app.dom.window.close();
 });
 
 test('Corrupted persisted data cannot crash a quiz or inject a fabricated history item', async () => {

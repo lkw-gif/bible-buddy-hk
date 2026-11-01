@@ -1,21 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { QUESTION_MAP } from '../dist/questions.mjs';
-import { createRound, answerRound, advanceRound, summarizeRound, levelFor, LEVELS, validRound, seededRandom, hongKongDay, integrateResult } from '../dist/engine.mjs';
+import { QUESTION_MAP, TOPICS, LEGACY_QUESTION_MAP } from '../dist/questions.mjs';
+import { createRound, answerRound, advanceRound, summarizeRound, levelFor, LEVELS, validRound, seededRandom, hongKongDay, integrateResult, questionForRound } from '../dist/engine.mjs';
 
 function finish(round, decide = q => q.answer) {
   while (!round.finishedAt) { const q = QUESTION_MAP.get(round.items[round.index].id); round = advanceRound(answerRound(round, decide(q, round.index))); }
   return round;
 }
 
-test('General always covers eight topics, 75% Bible, and all three difficulties without repeats', () => {
+test('General always covers eight topics, equal topic quotas, and all three difficulties without repeats', () => {
   for (let seed = 0; seed < 100; seed++) {
     const r = createRound({ random: seededRandom(seed) });
     assert(validRound(r));
     assert.equal(new Set(r.items.map(i => i.id)).size, 40);
     const qs = r.items.map(i => QUESTION_MAP.get(i.id));
-    assert.equal(qs.filter(q => ['overview', 'old', 'new', 'people', 'context'].includes(q.topic)).length, 30);
-    assert.deepEqual([1, 2, 3].map(d => qs.filter(q => q.difficulty === d).length), [18, 13, 9]);
+    for (const t of TOPICS) { const subset=qs.filter(q=>q.topic===t.id); assert.equal(subset.length,5); assert.deepEqual([1,2,3].map(d=>subset.filter(q=>q.difficulty===d).length),[2,2,1]); }
+    assert.deepEqual([1, 2, 3].map(d => qs.filter(q => q.difficulty === d).length), [16, 16, 8]);
     assert(r.items.every(i => [...i.order].sort().join('') === '0123'));
   }
 });
@@ -91,4 +91,24 @@ test('Malformed persisted rounds are rejected', () => {
   assert(!validRound({ ...r, items: r.items.map((x, i) => i === 0 ? { ...x, order: [0, 0, 0, 0] } : x) }));
   assert(!validRound({ ...r, answers: [{ id: r.items[0].id, selected: 20 }] }));
   assert(!validRound({ ...r, tone: 'injected' }));
+});
+
+test('Existing General progress retains its original allocation and options', () => {
+  const quotas={overview:6,old:6,new:6,people:6,context:6,theology:4,history:3,language:3};
+  const r=createRound(); delete r.bankRevision; delete r.distribution;
+  r.items=TOPICS.flatMap(t=>[...LEGACY_QUESTION_MAP.values()].filter(q=>q.topic===t.id).slice(0,quotas[t.id]).map(q=>({id:q.id,order:[0,1,2,3]})));
+  assert(validRound(r));
+  const old=questionForRound(r,'language-15');
+  assert.deepEqual(old.options,LEGACY_QUESTION_MAP.get('language-15').options);
+  assert.notDeepEqual(old.options,QUESTION_MAP.get('language-15').options);
+  const completed=finish(r); assert(validRound(completed,true));
+  assert.equal(summarizeRound(completed).percent,100);
+  assert.deepEqual(summarizeRound(completed).breakdown.map(t=>t.total),Object.values(quotas));
+});
+
+test('Current vocabulary questions use related terms as distractors', () => {
+  assert.deepEqual(QUESTION_MAP.get('language-15').options,['靈、風或氣息','魂、生命或個體','話語、信息或道理','心思、理解或意念']);
+  assert.deepEqual(QUESTION_MAP.get('history-02').options,['325年','313年','381年','431年']);
+  assert(QUESTION_MAP.get('old-05').question.includes('細小圓物'));
+  assert(QUESTION_MAP.get('theology-07').question.startsWith('保羅'));
 });

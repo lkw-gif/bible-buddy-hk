@@ -1,7 +1,11 @@
-import { QUESTIONS, QUESTION_MAP, TOPICS } from './questions.mjs';
+import { QUESTIONS, QUESTION_MAP, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261101-2';
 
 export const DIFFICULTIES = { 1: '暖身', 2: '進階', 3: '挑戰' };
-export const GENERAL_QUOTAS = { overview: 6, old: 6, new: 6, people: 6, context: 6, theology: 4, history: 3, language: 3 };
+export const GENERAL_QUOTAS = Object.fromEntries(TOPICS.map(t => [t.id, 5]));
+const LEGACY_GENERAL_QUOTAS = { overview: 6, old: 6, new: 6, people: 6, context: 6, theology: 4, history: 3, language: 3 };
+export function questionForRound(round, id) {
+  return (round.bankRevision === 2 ? QUESTION_MAP : LEGACY_QUESTION_MAP).get(id);
+}
 export const LEVELS = [
   { min: 0, name: '初信探索級', symbol: '🌱', gentle: '肯開始就值得鼓勵。由一章福音書開始，慢慢建立基本功。', cheeky: '本聖經可能同你未係好熟。今晚主動啲，揭開佢打個招呼啦！' },
   { min: 20, name: '讀經起步級', symbol: '🌿', gentle: '你已經認到一啲路標。保持每日讀一小段，進步會慢慢累積。', cheeky: '聽落個個名都識，答落就有少少迷路。聖經唔係擺設，今晚開一章啦。' },
@@ -43,8 +47,7 @@ export function createRound({ mode = 'general', topic = 'overview', count = 10, 
   let selected;
   if (mode === 'general') {
     selected = TOPICS.flatMap(t => {
-      const quota = GENERAL_QUOTAS[t.id];
-      const split = quota === 6 ? [3, 2, 1] : quota === 4 ? [1, 1, 2] : [1, 1, 1];
+      const split = [2, 2, 1];
       return split.flatMap((n, i) => shuffle(questionPool(t.id, i + 1), random).slice(0, n));
     });
   } else if (mode === 'daily') {
@@ -57,7 +60,7 @@ export function createRound({ mode = 'general', topic = 'overview', count = 10, 
   } else { throw new Error('未知測驗模式'); }
   if (!selected.length) throw new Error('暫時冇呢類題目，可以揀其他主題。');
   const items = shuffle(selected, random).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], random) }));
-  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, mode, topic: mode === 'topic' ? topic : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: mode === 'daily' ? day : null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
+  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 2, distribution: 'balanced-v2', mode, topic: mode === 'topic' ? topic : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: mode === 'daily' ? day : null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
 }
 
 export function answerRound(round, selected) {
@@ -77,7 +80,7 @@ export function levelFor(percent) {
 
 export function summarizeRound(round) {
   const rows = round.items.map((item, i) => {
-    const question = QUESTION_MAP.get(item.id);
+    const question = questionForRound(round, item.id);
     const response = round.answers[i];
     return { question, selected: response?.selected ?? null, answered: Boolean(response), correct: Boolean(response && response.selected === question.answer), order: item.order };
   });
@@ -98,7 +101,8 @@ export function validRound(round, completed = false) {
   if (!round.items.every(i => QUESTION_MAP.has(i?.id) && Array.isArray(i.order) && [...i.order].sort().join('') === '0123')) return false;
   if (!Array.isArray(round.answers) || round.answers.length > round.items.length || !round.answers.every((a, i) => a?.id === round.items[i].id && (a.selected === null || [0, 1, 2, 3].includes(a.selected)))) return false;
   if (!Number.isInteger(round.index) || round.index < 0 || round.index >= round.items.length || ![round.index, round.index + 1].includes(round.answers.length)) return false;
-  if (round.mode === 'general' && (round.items.length !== 40 || !TOPICS.every(t => round.items.filter(i => QUESTION_MAP.get(i.id).topic === t.id).length === GENERAL_QUOTAS[t.id]))) return false;
+  const quotas = round.distribution === 'balanced-v2' ? GENERAL_QUOTAS : LEGACY_GENERAL_QUOTAS;
+  if (round.mode === 'general' && (round.items.length !== 40 || !TOPICS.every(t => round.items.filter(i => QUESTION_MAP.get(i.id).topic === t.id).length === quotas[t.id]))) return false;
   if (round.mode === 'topic' && (!TOPICS.some(t => t.id === round.topic) || !round.items.every(i => QUESTION_MAP.get(i.id).topic === round.topic))) return false;
   if (round.mode === 'daily' && (round.items.length !== 5 || !/^\d{4}-\d{2}-\d{2}$/.test(round.day))) return false;
   if (completed) return round.answers.length === round.items.length && Number.isFinite(Date.parse(round.finishedAt));
