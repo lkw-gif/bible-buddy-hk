@@ -1,4 +1,4 @@
-import { QUESTIONS, QUESTION_MAP, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261101-4';
+import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261101-5';
 
 export const TRIAL_LEVELS = {
   1: { degree:'低', name:'少少試探', description:'主日學基本功，唔好輕敵就得。' },
@@ -9,7 +9,7 @@ export const DIFFICULTIES = Object.fromEntries(Object.entries(TRIAL_LEVELS).map(
 export const GENERAL_QUOTAS = Object.fromEntries(TOPICS.map(t => [t.id, 5]));
 const LEGACY_GENERAL_QUOTAS = { overview: 6, old: 6, new: 6, people: 6, context: 6, theology: 4, history: 3, language: 3 };
 export function questionForRound(round, id) {
-  return (round.bankRevision === 2 ? QUESTION_MAP : LEGACY_QUESTION_MAP).get(id);
+  return (round.bankRevision === 3 ? QUESTION_MAP : round.bankRevision === 2 ? QUESTION_MAP_V2 : LEGACY_QUESTION_MAP).get(id);
 }
 export const LEVELS = [
   { min: 0, name: '初信探索級', symbol: '🌱', gentle: '肯開始就值得鼓勵。由一章福音書開始，慢慢建立基本功。', cheeky: '靈奶都未飲完就想食乾糧？由一章福音書補起，唔使急住講阿們。' },
@@ -48,11 +48,14 @@ export function questionPool(topic, difficulty = 'all') {
   return QUESTIONS.filter(q => q.topic === topic && (difficulty === 'all' || q.difficulty === Number(difficulty)));
 }
 
-export function createRound({ mode = 'general', topic = 'overview', count = 10, difficulty = 'all', tone = 'cheeky', ids = [], random = Math.random } = {}) {
+export function createRound({ mode = 'general', topic = 'overview', count, difficulty = 'all', tone = 'cheeky', ids = [], random = Math.random } = {}) {
   let selected;
   if (mode === 'general') {
+    const size = count === undefined ? 40 : Number(count);
+    if (![20,40].includes(size)) throw new Error('曠野快閃20題，定曠野長征40題？揀好就入場。');
+    const extra = new Set(shuffle(TOPICS, random).slice(0,4).map(t => t.id));
     selected = TOPICS.flatMap(t => {
-      const split = [2, 2, 1];
+      const split = size === 40 ? [2,2,1] : [1,1,extra.has(t.id) ? 1 : 0];
       return split.flatMap((n, i) => shuffle(questionPool(t.id, i + 1), random).slice(0, n));
     });
   } else if (mode === 'trial') {
@@ -65,7 +68,7 @@ export function createRound({ mode = 'general', topic = 'overview', count = 10, 
   } else { throw new Error('未知測驗模式'); }
   if (!selected.length) throw new Error('暫時冇呢類題目，可以揀其他主題。');
   const items = shuffle(selected, random).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], random) }));
-  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 2, distribution: 'balanced-v2', mode, topic: mode === 'topic' ? topic : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
+  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 3, distribution: 'balanced-v3', mode, topic: mode === 'topic' ? topic : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
 }
 
 export function answerRound(round, selected) {
@@ -106,8 +109,22 @@ export function validRound(round, completed = false) {
   if (!round.items.every(i => QUESTION_MAP.has(i?.id) && Array.isArray(i.order) && [...i.order].sort().join('') === '0123')) return false;
   if (!Array.isArray(round.answers) || round.answers.length > round.items.length || !round.answers.every((a, i) => a?.id === round.items[i].id && (a.selected === null || [0, 1, 2, 3].includes(a.selected)))) return false;
   if (!Number.isInteger(round.index) || round.index < 0 || round.index >= round.items.length || ![round.index, round.index + 1].includes(round.answers.length)) return false;
-  const quotas = round.distribution === 'balanced-v2' ? GENERAL_QUOTAS : LEGACY_GENERAL_QUOTAS;
-  if (round.mode === 'general' && (round.items.length !== 40 || !TOPICS.every(t => round.items.filter(i => QUESTION_MAP.get(i.id).topic === t.id).length === quotas[t.id]))) return false;
+  if (round.mode === 'general') {
+    if (round.distribution === 'balanced-v3') {
+      const size = round.items.length;
+      if (![20,40].includes(size)) return false;
+      const questions = round.items.map(i => QUESTION_MAP.get(i.id));
+      if (![1,2,3].every((d,i) => questions.filter(q => q.difficulty === d).length === (size === 20 ? [8,8,4] : [16,16,8])[i])) return false;
+      if (!TOPICS.every(t => {
+        const topicQuestions = questions.filter(q => q.topic === t.id);
+        const counts = [1,2,3].map(d => topicQuestions.filter(q => q.difficulty === d).length);
+        return size === 40 ? counts.join(',') === '2,2,1' : counts[0] === 1 && counts[1] === 1 && counts[2] <= 1;
+      })) return false;
+    } else {
+      const quotas = round.distribution === 'balanced-v2' ? GENERAL_QUOTAS : LEGACY_GENERAL_QUOTAS;
+      if (round.items.length !== 40 || !TOPICS.every(t => round.items.filter(i => QUESTION_MAP.get(i.id).topic === t.id).length === quotas[t.id])) return false;
+    }
+  }
   if (round.mode === 'topic' && (!TOPICS.some(t => t.id === round.topic) || !round.items.every(i => QUESTION_MAP.get(i.id).topic === round.topic))) return false;
   if (round.mode === 'trial' && (round.items.length !== 16 || !['1','2','3'].includes(String(round.difficulty)) ||
     !round.items.every(i => QUESTION_MAP.get(i.id).difficulty === Number(round.difficulty)) ||

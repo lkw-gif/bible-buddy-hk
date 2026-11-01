@@ -1,5 +1,5 @@
-import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261101-4';
-import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261101-4';
+import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261101-5';
+import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261101-5';
 
 const $ = (s, root = document) => root.querySelector(s);
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -79,7 +79,7 @@ function updateNavigation() {
   const badge = $('#review-count'); badge.hidden = !progress.mistakes.length; badge.textContent = progress.mistakes.length;
 }
 function roundTitle(r) {
-  return r.mode === 'general' ? '全方位大試煉' : r.mode === 'trial' ? '曠野試探場 · ' + TRIAL_LEVELS[r.difficulty].name : r.mode === 'daily' ? '往日操練（舊紀錄）' : r.mode === 'review' ? '返去補經' : topicById(r.topic)?.name || '經文操練';
+  return r.mode === 'general' ? (r.items.length === 20 ? '曠野快閃 · 20題' : '曠野長征 · 40題') : r.mode === 'trial' ? '曠野試探場 · ' + TRIAL_LEVELS[r.difficulty].name : r.mode === 'daily' ? '往日操練（舊紀錄）' : r.mode === 'review' ? '返去補經' : topicById(r.topic)?.name || '經文操練';
 }
 function render({ focus = true } = {}) {
   const page = route();
@@ -95,18 +95,18 @@ function trialCard() {
 
 function homeView() {
   const current = progress.current;
-  return `<section class="hero" aria-labelledby="home-title"><div class="hero-copy"><div class="hero-label"><span>✦</span> 主日學唔好走堂 · 一齊操練</div><h1 id="home-title">返咗咁耐教會，<br><em>聖經有幾熟？</em></h1><p>唔好以為逢題答「耶穌」就過關。<br>由靈奶到乾糧，睇吓你本聖經有冇封塵。</p><div class="actions"><button class="button primary" data-action="start" data-mode="general">入曠野試吓 ${icon('arrow')}</button><button class="button secondary" data-action="topics">揀瓣嚟操練</button></div><div class="hero-stats"><div><strong>${QUESTIONS.length}</strong> 道考驗</div><div><strong>${TOPICS.length}</strong> 路操練</div><div><strong>0</strong> 限時，唔使急</div></div></div><div class="hero-art"><img src="assets/hero.png" alt="戴圓眼鏡嘅小羊同白鴿坐喺舊式課桌前讀聖經，後面有淡淡嘅香港舊樓" width="1536" height="1024" fetchpriority="high"><span class="art-note">靈糧要食，經文要讀。</span><div class="art-badge"><span aria-hidden="true">✧</span> 一時軟弱唔緊要，小羊陪你補經。</div></div></section>
+  return `<section class="hero" aria-labelledby="home-title"><div class="hero-copy"><div class="hero-label"><span>✦</span> 主日學唔好走堂 · 一齊操練</div><h1 id="home-title">返咗咁耐教會，<br><em>聖經有幾熟？</em></h1><p>唔好以為逢題答「耶穌」就過關。<br>由靈奶到乾糧，睇吓你本聖經有冇封塵。</p><div class="actions"><button class="button primary" data-action="start" data-mode="general" data-count="20">曠野快閃 · 20題 ${icon('arrow')}</button><button class="button secondary" data-action="topics">揀瓣嚟操練</button></div><div class="hero-stats"><div><strong>${QUESTIONS.length}</strong> 道考驗</div><div><strong>${TOPICS.length}</strong> 路操練</div><div><strong>0</strong> 限時，唔使急</div></div></div><div class="hero-art"><img src="assets/hero.png" alt="戴圓眼鏡嘅小羊同白鴿坐喺舊式課桌前讀聖經，後面有淡淡嘅香港舊樓" width="1536" height="1024" fetchpriority="high"><span class="art-note">靈糧要食，經文要讀。</span><div class="art-badge"><span aria-hidden="true">✧</span> 一時軟弱唔緊要，小羊陪你補經。</div></div></section>
     ${storageUnavailable ? '<p class="privacy-notice">呢個瀏覽器暫時儲存唔到進度。仍然可以測驗，完成後可下載成績。</p>' : ''}
     ${current ? `<aside class="resume-banner"><div><strong>上次行到半路，今次繼續行。</strong><p>${escape(roundTitle(current))} · 已答 ${current.answers.length} / ${current.items.length} 題</p></div><a href="#/quiz" class="button primary small">繼續操練 ${icon('arrow')}</a></aside>` : ''}
-    <section class="mode-grid" aria-label="揀一種玩法"><article class="general-card"><div><div class="eyebrow">八路齊考，唔好偏食</div><h2>全方位大試煉<span class="pill">全堂一齊嚟</span></h2><p>40 題跨主題挑戰，八個方向各佔 5 題。<br>由初信探索級到神學家彩蛋級，你去到邊？</p><button class="button light" data-action="start" data-mode="general">操練40題 ${icon('arrow')}</button></div><div class="general-decoration" aria-hidden="true">${icon('cap')}</div></article>${trialCard()}</section>
+    <section class="mode-grid" aria-label="揀一種玩法"><article class="general-card"><div><div class="eyebrow">八路齊考，唔好偏食</div><h2>全方位大試煉<span class="pill">全堂一齊嚟</span></h2><p>時間唔多就快閃，想試耐啲就長征。八路靈糧都有，唔會淨係考某幾瓣。</p><div class="general-versions"><button class="button light" data-action="start" data-mode="general" data-count="20"><strong>曠野快閃 · 20題</strong><small>各方向2–3題 · 低8／中8／高4</small>${icon('arrow')}</button><button class="button light" data-action="start" data-mode="general" data-count="40"><strong>曠野長征 · 40題</strong><small>各方向5題 · 低16／中16／高8</small>${icon('arrow')}</button></div><p class="general-note">兩款都係40%低、40%中、20%高試探。快閃加題嘅四個方向，每場隨機輪換。</p></div><div class="general-decoration" aria-hidden="true">${icon('cap')}</div></article>${trialCard()}</section>
     <section class="topics-section" id="topics" aria-labelledby="topics-title"><div class="section-heading"><div><div class="eyebrow">各有恩賜，各有要補嘅經</div><h2 class="section-title" id="topics-title">今日邊瓣要扎根？</h2><p>揀瓣嚟補經。靈奶有，乾糧都有，唔好淨係食自己熟嗰幾味。</p></div><span class="pill sand">八路操練 · 各有功課</span></div><div class="topic-grid">${TOPICS.map(t => `<button class="topic-card" data-action="start" data-mode="topic" data-topic="${t.id}"><span class="topic-top"><span class="topic-icon ${t.color}">${icon(t.icon)}</span><span class="topic-count">${questionPool(t.id).length} 題</span></span><h3>${t.name}</h3><p>${t.description}</p><span class="topic-bottom"><span class="eyebrow">${t.en}</span>${icon('arrow')}</span></button>`).join('')}</div></section>
     `;
 }
 
-function startQuiz(mode, topic = 'overview', ids = [], difficulty = 'all') {
+function startQuiz(mode, topic = 'overview', ids = [], difficulty = 'all', count) {
   try {
     progress.tone = 'cheeky';
-    progress.current = createRound({ mode, topic, ids, count:10, difficulty, tone:'cheeky' });
+    progress.current = createRound({ mode, topic, ids, count, difficulty, tone:'cheeky' });
     persist(); resultFilter = 'wrong'; resultSearch = ''; go('/quiz');
   } catch (error) { toast(error.message); }
 }
@@ -223,7 +223,7 @@ document.addEventListener('input', event => {
 document.addEventListener('click', async event => {
   const button = event.target.closest('[data-action]'); if (!button || button.disabled) return;
   const action = button.dataset.action;
-  if (action === 'start') startQuiz(button.dataset.mode, button.dataset.topic, [], button.dataset.difficulty || 'all');
+  if (action === 'start') startQuiz(button.dataset.mode, button.dataset.topic, [], button.dataset.difficulty || 'all', button.dataset.count);
   if (action === 'close-dialog') button.closest('dialog').close();
   if (action === 'topics') $('#topics').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
   if (action === 'answer') handleAnswer(Number(button.dataset.choice));
@@ -242,7 +242,7 @@ document.addEventListener('click', async event => {
   if (action === 'review-tab') { reviewTab = button.dataset.tab; reviewSearch = ''; main.innerHTML = reviewView(); $(`[data-tab="${reviewTab}"]`)?.focus({ preventScroll: true }); }
   if (action === 'practice') startQuiz('review', 'overview', progress[reviewTab]);
   if (action === 'result-filter') { resultFilter = button.dataset.filter; const r = progress.history.find(x => x.id === route().id); if (r) { for (const b of document.querySelectorAll('[data-action="result-filter"]')) b.setAttribute('aria-pressed', String(b.dataset.filter === resultFilter)); $('#result-rows').innerHTML = resultRows(r); } }
-  if (action === 'retry') { const r = progress.history.find(x => x.id === button.dataset.id); if (r) startQuiz(r.mode === 'daily' ? 'general' : r.mode, r.topic || 'overview', r.mode === 'review' ? r.items.map(i => i.id) : [], r.difficulty); }
+  if (action === 'retry') { const r = progress.history.find(x => x.id === button.dataset.id); if (r) startQuiz(r.mode === 'daily' ? 'general' : r.mode, r.topic || 'overview', r.mode === 'review' ? r.items.map(i => i.id) : [], r.difficulty, r.mode === 'daily' ? 20 : r.items.length); }
   if (action === 'share') shareResult(button.dataset.id);
   if (action === 'copy-result') {
     try { await navigator.clipboard.writeText($('#share-text').value); toast('複製好啦，可以貼畀朋友。'); }

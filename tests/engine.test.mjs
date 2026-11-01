@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { QUESTION_MAP, TOPICS, LEGACY_QUESTION_MAP } from '../dist/questions.mjs';
+import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, TOPICS, LEGACY_QUESTION_MAP } from '../dist/questions.mjs';
 import { createRound, answerRound, advanceRound, summarizeRound, levelFor, LEVELS, validRound, seededRandom, hongKongDay, integrateResult, questionForRound } from '../dist/engine.mjs';
 
 function finish(round, decide = q => q.answer) {
@@ -18,6 +18,30 @@ test('General always covers eight topics, equal topic quotas, and all three diff
     assert.deepEqual([1, 2, 3].map(d => qs.filter(q => q.difficulty === d).length), [16, 16, 8]);
     assert(r.items.every(i => [...i.order].sort().join('') === '0123'));
   }
+});
+
+test('Twenty-question General evenly covers topics and rotates its four extra hard questions', () => {
+  const extraCounts=Object.fromEntries(TOPICS.map(t=>[t.id,0]));
+  for(let seed=0;seed<200;seed++) {
+    const r=createRound({count:20,random:seededRandom(seed)});
+    assert(validRound(r)); assert.equal(new Set(r.items.map(i=>i.id)).size,20);
+    const qs=r.items.map(i=>QUESTION_MAP.get(i.id));
+    assert.deepEqual([1,2,3].map(d=>qs.filter(q=>q.difficulty===d).length),[8,8,4]);
+    let extras=0;
+    for(const t of TOPICS) {
+      const subset=qs.filter(q=>q.topic===t.id);
+      assert([2,3].includes(subset.length));
+      assert.equal(subset.filter(q=>q.difficulty===1).length,1);
+      assert.equal(subset.filter(q=>q.difficulty===2).length,1);
+      if(subset.length===3){extras++;extraCounts[t.id]++;}
+    }
+    assert.equal(extras,4);
+  }
+  for(const count of Object.values(extraCounts)) assert(count>60&&count<140);
+  for(const count of [0,10,21,30,41,'bad']) assert.throws(()=>createRound({count}));
+  // A valid total alone must not admit a topic/difficulty allocation that has been corrupted.
+  const broken=createRound({count:20});broken.items=QUESTIONS.slice(0,20).map(q=>({id:q.id,order:[0,1,2,3]}));
+  assert(!validRound(broken));
 });
 
 test('Topic selection honours difficulty and available pool size', () => {
@@ -61,17 +85,35 @@ test('Double clicks cannot change or duplicate an answer; unanswered rounds cann
   assert(validRound(advanceRound(a)));
 });
 
-test('Scoring is correct across every reachable General score and level boundary', () => {
-  for (let correct = 0; correct <= 40; correct++) {
-    const r = finish(createRound(), (q, i) => i < correct ? q.answer : (q.answer + 1) % 4);
+test('Scoring is correct across every reachable 20/40-question General score and level boundary', () => {
+  for (const count of [20,40]) for (let correct = 0; correct <= count; correct++) {
+    const r = finish(createRound({count}), (q, i) => i < correct ? q.answer : (q.answer + 1) % 4);
     const s = summarizeRound(r);
     assert.equal(s.correct, correct);
-    assert.equal(s.percent, correct * 2.5);
-    assert.equal(s.level, levelFor(correct * 2.5));
+    assert.equal(s.percent, correct * 100 / count);
+    assert.equal(s.level, levelFor(correct * 100 / count));
     assert(validRound(r, true));
     assert(!validRound(r));
   }
   for (const l of LEVELS) assert.equal(levelFor(l.min), l);
+});
+
+test('Revision 2 saved rounds retain their original answers and General allocation', () => {
+  const r=createRound();r.bankRevision=2;r.distribution='balanced-v2';
+  assert(validRound(r));
+  assert.deepEqual(questionForRound(r,'theology-24'),QUESTION_MAP_V2.get('theology-24'));
+  assert.notDeepEqual(questionForRound(r,'theology-24').options,QUESTION_MAP.get('theology-24').options);
+  assert(validRound(finish(r),true));
+});
+
+test('Reviewed stems avoid answer giveaways and the reported formal wording', () => {
+  assert.equal(QUESTION_MAP.get('new-03').question,'耶穌揀選幾多位門徒作使徒？');
+  const banned={ 'overview-04':/五經|五卷/, 'new-03':/十二/, 'new-06':/撒馬利亞/, 'history-25':/日內瓦/, 'people-23':/亞何利亞伯/ };
+  for(const [id,pattern] of Object.entries(banned)) assert(!pattern.test(QUESTION_MAP.get(id).question),id);
+  for(const q of QUESTIONS) {
+    assert(!/唔宜|不宜|近文|語義範圍|職分圖像|較合宜|離體靈魂/.test([q.question,...q.options,q.explanation].join(' ')),q.id);
+    if(/幾多位|幾卷/.test(q.question)) assert(!q.question.includes(q.options[q.answer]),q.id);
+  }
 });
 
 test('Skips count toward denominator; topic, trial and revision do not award a General title', () => {

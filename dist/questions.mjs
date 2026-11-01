@@ -1,4 +1,5 @@
-import { CHOICES, STEMS } from './choices.mjs?v=20261101-4';
+import { CHOICES, STEMS } from './choices.mjs?v=20261101-5';
+import { reviseCopy } from './copy-edits.mjs?v=20261101-5';
 // Original Cantonese question wording. Each row: difficulty, question, correct answer,
 // three distractors, reference, explanation, optional source URL.
 export const TOPICS = [
@@ -279,10 +280,12 @@ const legacyQuestions = Object.entries(bank).flatMap(([topic, rows]) => rows.map
   sourceLabel: r[8] ? '查閱參考資料' : '打開經文'
 })));
 export const LEGACY_QUESTION_MAP = new Map(legacyQuestions.map(q => [q.id, q]));
-export const QUESTIONS = legacyQuestions.map(q => {
+export const QUESTIONS_V2 = legacyQuestions.map(q => {
   const index = Number(q.id.split('-')[1]) - 1;
   const options = CHOICES[q.topic]?.[index];
   if (!options || options.length !== 4) throw new Error('Missing revised options: ' + q.id);
   return { ...q, question: STEMS[q.id] || q.question, options };
 });
+export const QUESTION_MAP_V2 = new Map(QUESTIONS_V2.map(q => [q.id, q]));
+export const QUESTIONS = QUESTIONS_V2.map(reviseCopy);
 export const QUESTION_MAP = new Map(QUESTIONS.map(q => [q.id, q]));

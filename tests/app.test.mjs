@@ -36,7 +36,7 @@ async function boot(saved = null, hash = '#/') {
   return { dom,w,$,click,savedProgress,tick,input,select,navigate,errors,copies,downloads };
 }
 
-test('Home presents eight real topics, imagery and direct General start', async () => {
+test('Home presents eight topics and both named General versions, with a short default', async () => {
   const app = await boot();
   assert.match(app.$('h1').textContent,/聖經有幾熟/);
   assert.equal(app.w.document.querySelectorAll('.topic-card').length,8);
@@ -46,7 +46,8 @@ test('Home presents eight real topics, imagery and direct General start', async 
   await app.click('[data-action="start"][data-mode="general"]');
 
   assert.equal(app.w.location.hash,'#/quiz');
-  assert.equal(app.savedProgress().current.items.length,40);
+  assert.equal(app.savedProgress().current.items.length,20);
+  assert.match(app.$('.quiz-label').textContent,/曠野快閃/);
   assert.equal(app.w.document.querySelectorAll('.choice').length,4);
   assert.deepEqual(app.errors,[]);
   app.dom.window.close();
@@ -54,7 +55,8 @@ test('Home presents eight real topics, imagery and direct General start', async 
 
 test('A full 40-question General round produces correct score, title, mistake list, sharing and history', async () => {
   const app = await boot();
-  await app.click('[data-mode="general"]');
+  await app.click('[data-mode="general"][data-count="40"]');
+  assert.match(app.$('.quiz-label').textContent,/曠野長征/);
 
   let bookmarked;
   for (let i=0; i<40; i++) {
@@ -99,6 +101,26 @@ test('A full 40-question General round produces correct score, title, mistake li
   assert(app.$('#review-count').hasAttribute('hidden'));
   assert.deepEqual(app.errors,[]);
   app.dom.window.close();
+});
+
+test('The short General round resumes, scores twenty questions, and retries the same version', async () => {
+  let app=await boot();
+  assert.match(app.$('.general-versions').textContent,/曠野快閃.*曠野長征/);
+  await app.click('.general-versions [data-count="20"]');
+  await app.click('[data-action="answer"][data-choice="0"]');
+  const saved=app.w.localStorage.getItem(key); app.dom.window.close();
+  app=await boot(saved,'#/quiz');
+  assert.equal(app.savedProgress().current.items.length,20);
+  assert.equal(app.savedProgress().current.answers.length,1);
+  assert.match(app.$('.quiz-label').textContent,/曠野快閃 · 20題/);
+  await app.click('[data-action="next"]');
+  for(let i=1;i<20;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+  assert.match(app.$('.score-ring').textContent,/20 \/ 20/);
+  assert.match(app.$('#result-title').textContent,/神學家彩蛋級/);
+  assert.match(app.$('.stored-result').textContent,/曠野快閃/);
+  await app.click('[data-action="retry"]');
+  assert.equal(app.savedProgress().current.items.length,20);
+  assert.deepEqual(app.errors,[]); app.dom.window.close();
 });
 
 test('Topic starts immediately with ten mixed questions and resumes after reload', async () => {
