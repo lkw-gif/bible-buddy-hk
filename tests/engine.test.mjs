@@ -30,14 +30,25 @@ test('Topic selection honours difficulty and available pool size', () => {
   assert.throws(() => createRound({ mode: 'topic', topic: 'missing' }));
 });
 
-test('Daily questions and options are deterministic per Hong Kong day', () => {
-  const a = createRound({ mode: 'daily', day: '2026-11-01' });
-  const b = createRound({ mode: 'daily', day: '2026-11-01' });
-  const c = createRound({ mode: 'daily', day: '2026-11-02' });
-  assert.deepEqual(a.items, b.items);
-  assert.notDeepEqual(a.items, c.items);
-  assert.equal(new Set(a.items.map(i => QUESTION_MAP.get(i.id).topic)).size, 5);
-  assert.equal(hongKongDay(new Date('2026-11-01T16:01:00Z')), '2026-11-02');
+test('Trial levels select sixteen unique questions of one difficulty, two per topic', () => {
+  for (const difficulty of [1,2,3]) for(let seed=0;seed<40;seed++) {
+    const r=createRound({mode:'trial',difficulty,random:seededRandom(seed)});
+    assert(validRound(r)); assert.equal(r.items.length,16);
+    assert.equal(new Set(r.items.map(i=>i.id)).size,16);
+    assert(r.items.every(i=>QUESTION_MAP.get(i.id).difficulty===difficulty));
+    for(const t of TOPICS) assert.equal(r.items.filter(i=>QUESTION_MAP.get(i.id).topic===t.id).length,2);
+    assert.equal(summarizeRound(finish(r)).level,null);
+  }
+  for(const difficulty of ['all','0','4','bogus','01',true,[]]) assert.throws(()=>createRound({mode:'trial',difficulty}));
+  assert.throws(()=>createRound({mode:'daily'}));
+  const wrong=createRound({mode:'trial',difficulty:3}); wrong.difficulty='1'; assert(!validRound(wrong));
+});
+
+test('Retired daily results stay readable but daily rounds can no longer start or resume', () => {
+  const r=createRound({mode:'topic',topic:'overview',count:5}); r.mode='daily'; r.day='2026-11-01';
+  assert(!validRound(r)); const done=finish(r); assert(validRound(done,true));
+  assert.equal(summarizeRound(done).total,5); assert.equal(summarizeRound(done).level,null);
+  assert.equal(hongKongDay(new Date('2026-11-01T16:01:00Z')),'2026-11-02');
 });
 
 test('Double clicks cannot change or duplicate an answer; unanswered rounds cannot advance', () => {
@@ -63,9 +74,9 @@ test('Scoring is correct across every reachable General score and level boundary
   for (const l of LEVELS) assert.equal(levelFor(l.min), l);
 });
 
-test('Skips count toward denominator; topic, daily and revision do not award a General title', () => {
-  for (const mode of ['topic', 'daily', 'review']) {
-    const r = finish(createRound({ mode, ids: ['old-01', 'new-01'] }), () => null);
+test('Skips count toward denominator; topic, trial and revision do not award a General title', () => {
+  for (const mode of ['topic', 'trial', 'review']) {
+    const r = finish(createRound({ mode, difficulty:'2', ids: ['old-01', 'new-01'] }), () => null);
     const s = summarizeRound(r);
     assert.equal(s.percent, 0);
     assert.equal(s.skipped, s.total);

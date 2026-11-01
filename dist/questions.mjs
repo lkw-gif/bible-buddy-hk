@@ -1,15 +1,15 @@
-import { CHOICES, STEMS } from './choices.mjs?v=20261101-3';
+import { CHOICES, STEMS } from './choices.mjs?v=20261101-4';
 // Original Cantonese question wording. Each row: difficulty, question, correct answer,
 // three distractors, reference, explanation, optional source URL.
 export const TOPICS = [
-  { id: 'overview', name: '聖經基本功', en: 'BIBLE BASICS', icon: 'book', color: 'sage', description: '書卷、文體、全本聖經嘅大地圖。', reading: '路加福音24:27,44-49', tip: '由馬可福音開始，每日一章，先捉住耶穌嘅故事。' },
-  { id: 'old', name: '舊約探險隊', en: 'OLD TESTAMENT', icon: 'mountain', color: 'sand', description: '由創造到被擄，重溫神同人嘅故事。', reading: '創世記12:1-9；出埃及記3:1-15', tip: '讀創世記12-22章，留意應許點樣一路發展。' },
-  { id: 'new', name: '新約尋寶記', en: 'NEW TESTAMENT', icon: 'fish', color: 'blue', description: '耶穌生平、比喻、使徒與初期教會。', reading: '馬可福音1:1-20；使徒行傳2:1-47', tip: '讀馬可福音1-3章，記低耶穌做過嘅事同人嘅反應。' },
-  { id: 'people', name: '聖經人物誌', en: 'PEOPLE & STORIES', icon: 'people', color: 'peach', description: '人名唔只用嚟背，仲有生命故事。', reading: '路得記1-4；路加福音19:1-10', tip: '用四日讀完路得記，睇人物點樣作選擇。' },
-  { id: 'context', name: '經文唔斷章', en: 'READ IN CONTEXT', icon: 'search', color: 'lavender', description: '金句識背，前文後理又識唔識？', reading: '腓立比書4:10-20；哥林多前書13:1-13', tip: '揀一節熟悉金句，連前後各一段一齊讀。' },
-  { id: 'theology', name: '神學腦筋動', en: 'FAITH & THEOLOGY', icon: 'spark', color: 'sage', description: '恩典、三一、救恩：逐個概念拆開。', reading: '以弗所書2:1-10；馬太福音28:16-20', tip: '讀以弗所書2章，分清楚恩典、信心同善行嘅關係。' },
-  { id: 'history', name: '教會時光機', en: 'CHURCH HISTORY', icon: 'church', color: 'sand', description: '大公會議、宗教改革到中文聖經。', reading: '使徒行傳15:1-35', tip: '先讀使徒行傳15章，再了解尼西亞會議同宗教改革。' },
-  { id: 'language', name: '原文小教室', en: 'BIBLICAL LANGUAGES', icon: 'language', color: 'blue', description: '希伯來文、希臘文，唔使識都玩得。', reading: '約翰福音1:1-18；申命記6:4-9', tip: '查一個原文字，睇埋佢喺唔同經文嘅用法，唔好只背一個譯法。' }
+  { id: 'overview', name: '聖經打地基', en: '地基唔好起喺沙土上', icon: 'book', color: 'sage', description: '書卷同文體先分清，地基先至起得穩。', reading: '路加福音24:27,44-49', tip: '由馬可福音開始，每日一章，先捉住耶穌嘅故事。' },
+  { id: 'old', name: '舊約行曠野', en: '出埃及，行曠野', icon: 'mountain', color: 'sand', description: '出埃及、行曠野，睇吓你有冇跟甩隊。', reading: '創世記12:1-9；出埃及記3:1-15', tip: '讀創世記12-22章，留意應許點樣一路發展。' },
+  { id: 'new', name: '新約跟主行', en: '跟返主嘅腳蹤', icon: 'fish', color: 'blue', description: '跟住耶穌同使徒行，唔好淨係識五餅二魚。', reading: '馬可福音1:1-20；使徒行傳2:1-47', tip: '讀馬可福音1-3章，記低耶穌做過嘅事同人嘅反應。' },
+  { id: 'people', name: '信心人物簿', en: '認返班信仰前輩', icon: 'people', color: 'peach', description: '人名唔好撈亂，睇埋佢哋點樣行過嚟。', reading: '路得記1-4；路加福音19:1-10', tip: '用四日讀完路得記，睇人物點樣作選擇。' },
+  { id: 'context', name: '金句唔亂拎', en: '金句唔好亂拎', icon: 'search', color: 'lavender', description: '金句唔好拎嚟就用，前文後理要對清。', reading: '腓立比書4:10-20；哥林多前書13:1-13', tip: '揀一節熟悉金句，連前後各一段一齊讀。' },
+  { id: 'theology', name: '神學食乾糧', en: '由靈奶到乾糧', icon: 'spark', color: 'sage', description: '由飲奶到食乾糧，信仰概念逐啖嚼。', reading: '以弗所書2:1-10；馬太福音28:16-20', tip: '讀以弗所書2章，分清楚恩典、信心同善行嘅關係。' },
+  { id: 'history', name: '教會雲彩集', en: '前面有雲彩咁多見證人', icon: 'church', color: 'sand', description: '由初期教會到宗教改革，認返班信仰前輩。', reading: '使徒行傳15:1-35', tip: '先讀使徒行傳15章，再了解尼西亞會議同宗教改革。' },
+  { id: 'language', name: '原文嚼乾糧', en: '慢慢嚼，唔好囫圇吞棗', icon: 'language', color: 'blue', description: '希伯來文同希臘文，唔好望字就亂解。', reading: '約翰福音1:1-18；申命記6:4-9', tip: '查一個原文字，睇埋佢喺唔同經文嘅用法，唔好只背一個譯法。' }
 ];
 
 const bank = {

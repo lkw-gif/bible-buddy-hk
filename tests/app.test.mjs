@@ -124,22 +124,32 @@ test('Topic starts immediately with ten mixed questions and resumes after reload
   app.dom.window.close();
 });
 
-test('Daily round awards no global title and today button reopens its existing result', async () => {
-  const app=await boot();
-  await app.click('[data-action="daily"]');
-  assert.equal(app.savedProgress().current.items.length,5);
-  for (let i=0;i<5;i++) { await app.click('[data-action="answer"][data-choice="0"]'); await app.click('[data-action="next"]'); }
-  const id=app.savedProgress().history[0].id;
-  assert.match(app.$('.score-ring').textContent,/100/);
-  assert(!app.$('#result-title').textContent.includes('神學家'));
-  assert(!app.$('#result-title').textContent.includes('挑戰級'));
-  await app.navigate('/');
-  assert.match(app.$('.daily-card').textContent,/今日已完成/);
-  await app.click('[data-action="daily"]');
-  assert.equal(app.w.location.hash,'#/result/'+id);
-  assert.equal(app.savedProgress().history.length,1);
-  assert.deepEqual(app.errors,[]);
-  app.dom.window.close();
+test('All three trial entries start directly, finish without General titles, and retry the same level', async () => {
+  for(const difficulty of ['1','2','3']) {
+    const app=await boot();
+    assert.equal(app.$('[data-action="daily"]'),null);
+    assert.equal(app.w.document.querySelectorAll('[data-mode="trial"]').length,3);
+    assert(!/每日五題|每日5題/.test(app.$('#main').textContent));
+    assert.match(app.$('[data-nav="review"]').textContent,/補返啲經/);
+    await app.click('[data-mode="trial"][data-difficulty="'+difficulty+'"]');
+    assert.equal(app.w.location.hash,'#/quiz');
+    const r=app.savedProgress().current;
+    assert.equal(r.items.length,16); assert.equal(r.difficulty,difficulty);
+    assert(r.items.every(i=>QUESTION_MAP.get(i.id).difficulty===Number(difficulty)));
+    for(let i=0;i<16;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+    assert.match(app.$('.score-ring').textContent,/100/);
+    assert.match(app.$('#result-title').textContent,/試探/);
+    assert.equal(app.w.document.querySelectorAll('.breakdown-row').length,8);
+    assert(app.savedProgress().history[0].mode==='trial');
+    await app.click('[data-action="retry"]');
+    assert.equal(app.savedProgress().current.difficulty,difficulty);
+    assert.equal(app.savedProgress().current.items.length,16);
+    const saved=app.w.localStorage.getItem(key);app.dom.window.close();
+    const resumed=await boot(saved,'#/quiz');
+    assert.equal(resumed.savedProgress().current.difficulty,difficulty);
+    assert.equal(resumed.w.document.querySelectorAll('.choice').length,4);
+    assert.deepEqual(app.errors,[]);assert.deepEqual(resumed.errors,[]);resumed.dom.window.close();
+  }
 });
 
 test('Simplified interface hides the handbook and screenshot copy, without any tone selection', async () => {
@@ -160,7 +170,7 @@ test('Simplified interface hides the handbook and screenshot copy, without any t
 
 test('Corrupted persisted data cannot crash a quiz or inject a fabricated history item', async () => {
   const app=await boot(JSON.stringify({schema:1,history:[{id:'bad'}],current:{mode:'general'},bookmarks:['missing'],mistakes:null}),'#/quiz');
-  assert.match(app.$('#main').textContent,/未開始測驗/);
+  assert.match(app.$('#main').textContent,/未入場操練/);
   await app.navigate('/history');
   assert.equal(app.w.document.querySelectorAll('.history-row').length,0);
   assert.deepEqual(app.errors,[]);
