@@ -4,6 +4,7 @@ import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, TOPICS, LEGACY_QUESTION_MAP }
 import { createRound, answerRound, advanceRound, retreatRound, summarizeRound, levelFor, LEVELS, validRound, seededRandom, hongKongDay, integrateResult, questionForRound } from '../dist/engine.mjs';
 import { COURSE_UNITS, HISTORY_QUESTIONS, HISTORY_TOPIC, cleanCourseAnswers, courseStatus } from '../dist/history-course.mjs';
 import { CHALLENGE_QUESTIONS } from '../dist/challenge-data.mjs';
+import { BIBLE_UNITS, BIBLE_QUESTIONS, BIBLE_TOPIC, cleanBibleAnswers, bibleStatus } from '../dist/bible-course.mjs';
 
 function finish(round, decide = q => q.answer) {
   while (!round.finishedAt) { const q = QUESTION_MAP.get(round.items[round.index].id); round = advanceRound(answerRound(round, decide(q, round.index))); }
@@ -231,4 +232,21 @@ test('History-study progress tolerates old data, tracks skipped answers, and wor
   assert.equal(r.items.length,2);assert(validRound(r));
   const summary=summarizeRound(finish(r,q=>q.id==='church-001'?null:0));
   assert.equal(summary.correct,1);assert.equal(summary.skipped,1);assert.equal(summary.level,null);
+});
+
+test('Bible knowledge exposes one hundred basic questions across ten independent lessons', () => {
+  const seen=new Set();
+  for(const unit of BIBLE_UNITS){
+    const r=createRound({mode:'bible',unit:unit.id});assert(validRound(r));assert.equal(r.items.length,10);
+    for(const item of r.items){const q=questionForRound(r,item.id);assert.equal(q.unit,unit.id);assert.equal(q.topic,BIBLE_TOPIC.id);assert.equal(q.difficulty,1);assert(q.explanation.length>=35);seen.add(q.id);}
+    const done=finish(r);assert(validRound(done,true));assert.equal(summarizeRound(done).level,null);assert.equal(summarizeRound(done).correct,10);
+  }
+  assert.equal(seen.size,100);assert.equal(BIBLE_QUESTIONS.length,100);
+  assert.throws(()=>createRound({mode:'bible',unit:'missing'}));
+  const malformed=createRound({mode:'bible',unit:'overview'});malformed.items[0]={id:'overview-01',order:[0,1,2,3]};assert(!validRound(malformed));
+  const answers=cleanBibleAnswers({'bible-001':true,'bible-002':false,'church-001':true,'old-01':true,'bible-003':'true'});
+  assert.deepEqual(answers,{'bible-001':true,'bible-002':false});assert.deepEqual(cleanBibleAnswers(null),{});
+  assert.deepEqual(bibleStatus(answers),{total:100,answered:2,correct:1});
+  const mixed=finish(createRound({mode:'review',ids:['bible-001','church-001','old-01']}));
+  assert.equal(summarizeRound(mixed).correct,3);assert.equal(summarizeRound(mixed).breakdown.filter(t=>t.total).length,3);
 });

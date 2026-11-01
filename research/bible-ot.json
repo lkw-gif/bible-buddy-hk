@@ -1,0 +1,722 @@
+[
+  {
+    "id": "bible-011",
+    "unit": "law",
+    "difficulty": 1,
+    "question": "按本課用嘅舊約分類，律法書一共有幾卷？",
+    "options": [
+      "5卷",
+      "4卷",
+      "6卷",
+      "7卷"
+    ],
+    "answer": 0,
+    "explanation": "本課將創世記至申命記歸為律法書，一共五卷。呢一組又叫摩西五經，內容包括以色列人嘅起源、出埃及同上帝嘅律法。",
+    "reference": "舊約書卷目錄；創世記至申命記",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-012",
+    "unit": "law",
+    "difficulty": 1,
+    "question": "以下邊組書卷全部都屬於律法書？",
+    "options": [
+      "創世記、利未記、申命記",
+      "創世記、約書亞記、申命記",
+      "出埃及記、士師記、民數記",
+      "利未記、路得記、申命記"
+    ],
+    "answer": 0,
+    "explanation": "創世記、利未記同申命記都喺舊約最前面五卷之內。約書亞記、士師記同路得記就屬於本課所講嘅歷史書。",
+    "reference": "舊約書卷目錄；創世記至申命記",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-013",
+    "unit": "law",
+    "difficulty": 1,
+    "question": "按和合本嘅排列，律法書由邊卷開始？",
+    "options": [
+      "創世記",
+      "出埃及記",
+      "利未記",
+      "申命記"
+    ],
+    "answer": 0,
+    "explanation": "創世記係和合本聖經嘅第一卷，亦係律法書嘅開始。書卷由天地受造講起，再講到亞伯拉罕一家同以色列人嘅起源。",
+    "reference": "舊約書卷目錄；創世記1章",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-014",
+    "unit": "law",
+    "difficulty": 1,
+    "question": "按和合本嘅排列，律法書以邊卷結束？",
+    "options": [
+      "申命記",
+      "民數記",
+      "約書亞記",
+      "利未記"
+    ],
+    "answer": 0,
+    "explanation": "申命記係律法書最後一卷，之後就到約書亞記。書中摩西喺百姓準備進入應許之地之前，再次提醒佢哋記住上帝嘅吩咐。",
+    "reference": "舊約書卷目錄；申命記1章",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-015",
+    "unit": "law",
+    "difficulty": 1,
+    "question": "按本課用嘅分類，出埃及記屬於邊一組？",
+    "options": [
+      "律法書",
+      "歷史書",
+      "詩歌與智慧書",
+      "先知書"
+    ],
+    "answer": 0,
+    "explanation": "出埃及記雖然講咗好多歷史事件，但喺本課嘅書卷分類入面，佢係律法書。內容包括上帝救百姓離開埃及，同埋西奈山立約。",
+    "reference": "舊約書卷目錄；出埃及記",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-016",
+    "unit": "law",
+    "difficulty": 1,
+    "question": "按和合本目錄，利未記同申命記中間係邊卷？",
+    "options": [
+      "民數記",
+      "出埃及記",
+      "約書亞記",
+      "士師記"
+    ],
+    "answer": 0,
+    "explanation": "律法書嘅次序係創世記、出埃及記、利未記、民數記、申命記。民數記記載人口點算，亦講到以色列人喺曠野嘅經歷。",
+    "reference": "舊約書卷目錄；民數記",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-017",
+    "unit": "law",
+    "difficulty": 1,
+    "question": "按和合本目錄，出埃及記之後緊接住邊卷？",
+    "options": [
+      "利未記",
+      "民數記",
+      "申命記",
+      "約書亞記"
+    ],
+    "answer": 0,
+    "explanation": "出埃及記之後係利未記，再之後先到民數記。利未記講獻祭、敬拜同生活規範，幫助百姓明白點樣作屬於上帝嘅子民。",
+    "reference": "舊約書卷目錄；利未記",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-018",
+    "unit": "law",
+    "difficulty": 1,
+    "question": "創世記一開始，首先講邊件事？",
+    "options": [
+      "上帝創造天地",
+      "上帝呼召亞伯拉罕",
+      "以色列人離開埃及",
+      "以色列人進入迦南"
+    ],
+    "answer": 0,
+    "explanation": "創世記一開始就講上帝創造天地，之後先講人類同各個家族嘅故事。亞伯拉罕嘅蒙召要到第十二章先開始詳細記載。",
+    "reference": "創世記1:1–31；12:1–3",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/1/",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/GEN/12/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-019",
+    "unit": "law",
+    "difficulty": 1,
+    "question": "上帝差派摩西，帶領以色列人離開邊個奴役佢哋嘅地方？",
+    "options": [
+      "埃及",
+      "巴比倫",
+      "亞述",
+      "波斯"
+    ],
+    "answer": 0,
+    "explanation": "上帝聽見以色列人受欺壓嘅呼求，就差派摩西帶領佢哋離開埃及。出埃及嘅故事亦成為百姓記念上帝拯救嘅重要經歷。",
+    "reference": "出埃及記3:7–10",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/3/",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/EXO/12/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-020",
+    "unit": "law",
+    "difficulty": 1,
+    "question": "以下邊項最能概括利未記嘅主要內容？",
+    "options": [
+      "獻祭、潔淨同聖潔生活",
+      "以色列歷代君王嘅事蹟",
+      "亡國之後重建耶路撒冷",
+      "先知向尼尼微傳講信息"
+    ],
+    "answer": 0,
+    "explanation": "利未記有好多獻祭同潔淨嘅吩咐，亦講點樣喺日常生活中活得聖潔。重點係百姓屬於聖潔嘅上帝，敬拜同生活都要回應佢。",
+    "reference": "利未記1–7章；19:1–2",
+    "source": "https://bible.usccb.org/bible/leviticus/0",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/LEV/19/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-021",
+    "unit": "ot-history",
+    "difficulty": 1,
+    "question": "按本課用嘅舊約分類，由約書亞記到以斯帖記嘅歷史書共有幾卷？",
+    "options": [
+      "12卷",
+      "10卷",
+      "11卷",
+      "13卷"
+    ],
+    "answer": 0,
+    "explanation": "本課按和合本常用分類，將約書亞記至以斯帖記歸為十二卷歷史書。撒母耳記、列王紀同歷代志各有上、下卷，要分開計。",
+    "reference": "舊約書卷目錄；約書亞記至以斯帖記",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-022",
+    "unit": "ot-history",
+    "difficulty": 1,
+    "question": "按和合本目錄，舊約歷史書由邊卷開始？",
+    "options": [
+      "約書亞記",
+      "士師記",
+      "路得記",
+      "撒母耳記上"
+    ],
+    "answer": 0,
+    "explanation": "約書亞記接喺申命記後面，係本課歷史書嘅第一卷。書中講到摩西之後，約書亞帶領以色列人過約旦河、進入迦南地。",
+    "reference": "舊約書卷目錄；約書亞記3章",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-023",
+    "unit": "ot-history",
+    "difficulty": 1,
+    "question": "按本課用嘅分類，舊約歷史書最後一卷係邊卷？",
+    "options": [
+      "以斯帖記",
+      "尼希米記",
+      "以斯拉記",
+      "歷代志下"
+    ],
+    "answer": 0,
+    "explanation": "按和合本嘅書卷次序，以斯帖記係本課歷史書最後一卷，之後就到約伯記。呢個係目錄排列，唔代表書中事件全部按年代順排。",
+    "reference": "舊約書卷目錄；以斯帖記",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-024",
+    "unit": "ot-history",
+    "difficulty": 1,
+    "question": "喺和合本嘅書卷目錄，撒母耳記上同撒母耳記下點樣計？",
+    "options": [
+      "分開計，總共兩卷",
+      "合埋計，總共一卷",
+      "撒母耳記上計入律法書",
+      "撒母耳記下計入先知書"
+    ],
+    "answer": 0,
+    "explanation": "和合本將撒母耳記上、下列為兩卷，兩卷都屬於本課嘅歷史書。計算舊約卷數時，要跟返目錄，將上、下卷分開計。",
+    "reference": "和合本書卷目錄；撒母耳記上、下",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-025",
+    "unit": "ot-history",
+    "difficulty": 1,
+    "question": "按本課用嘅分類，路得記屬於邊一組？",
+    "options": [
+      "歷史書",
+      "律法書",
+      "詩歌與智慧書",
+      "小先知書"
+    ],
+    "answer": 0,
+    "explanation": "路得記雖然以一位女性嘅名字命名，但本課將佢歸入歷史書。故事發生喺士師時代，講路得、拿俄米同波阿斯嘅經歷。",
+    "reference": "路得記1:1；舊約書卷目錄",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-026",
+    "unit": "ot-history",
+    "difficulty": 1,
+    "question": "以下邊個次序符合和合本嘅書卷目錄？",
+    "options": [
+      "以斯拉記 → 尼希米記 → 以斯帖記",
+      "尼希米記 → 以斯拉記 → 以斯帖記",
+      "以斯帖記 → 以斯拉記 → 尼希米記",
+      "以斯拉記 → 以斯帖記 → 尼希米記"
+    ],
+    "answer": 0,
+    "explanation": "喺和合本目錄入面，歷代志下之後順序係以斯拉記、尼希米記、以斯帖記。記住呢三卷，可以幫你搵到歷史書最後嗰一組。",
+    "reference": "舊約書卷目錄；以斯拉記至以斯帖記",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-027",
+    "unit": "ot-history",
+    "difficulty": 1,
+    "question": "按和合本目錄，列王紀下之後緊接住邊卷？",
+    "options": [
+      "歷代志上",
+      "歷代志下",
+      "以斯拉記",
+      "尼希米記"
+    ],
+    "answer": 0,
+    "explanation": "列王紀下之後係歷代志上，再之後先到歷代志下。列王紀同歷代志都有講君王時代，部分事件會重疊，但書卷並唔相同。",
+    "reference": "舊約書卷目錄；列王紀下、歷代志上",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-028",
+    "unit": "ot-history",
+    "difficulty": 1,
+    "question": "約書亞記記載，百姓進入迦南之前，渡過咗邊條河？",
+    "options": [
+      "約旦河",
+      "尼羅河",
+      "幼發拉底河",
+      "底格里斯河"
+    ],
+    "answer": 0,
+    "explanation": "約書亞記講到，祭司抬住約櫃走入約旦河，上帝使河水停住，百姓就從乾地走過。呢次過河係佢哋進入迦南嘅重要一步。",
+    "reference": "約書亞記3:14–17",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/JOS/3/",
+    "verification": "https://bible.usccb.org/bible/joshua/3",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-029",
+    "unit": "ot-history",
+    "difficulty": 1,
+    "question": "路得記記載，路得陪拿俄米去到邊個地方？",
+    "options": [
+      "伯利恆",
+      "拿撒勒",
+      "撒馬利亞",
+      "耶利哥"
+    ],
+    "answer": 0,
+    "explanation": "路得選擇陪拿俄米離開摩押，兩個人一齊去到伯利恆。當時正值大麥收割，之後路得就喺田裏拾穗，供應自己同拿俄米。",
+    "reference": "路得記1:16–22；2:2–3",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/RUT/1/",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/RUT/2/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-030",
+    "unit": "ot-history",
+    "difficulty": 1,
+    "question": "尼希米記特別記載咗邊項重建工作？",
+    "options": [
+      "重建耶路撒冷城牆",
+      "重建耶利哥城牆",
+      "重建撒馬利亞王宮",
+      "重建示羅嘅會幕"
+    ],
+    "answer": 0,
+    "explanation": "尼希米帶領百姓重建耶路撒冷城牆，期間面對反對同威嚇。書中亦講到百姓聽上帝嘅話、認罪，重新整理群體嘅信仰生活。",
+    "reference": "尼希米記2:17–18；6:15–16",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NEH/6/",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/NEH/2/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-031",
+    "unit": "wisdom",
+    "difficulty": 1,
+    "question": "按本課用嘅分類，「詩歌與智慧書」一共有幾卷？",
+    "options": [
+      "5卷",
+      "3卷",
+      "4卷",
+      "6卷"
+    ],
+    "answer": 0,
+    "explanation": "本課將約伯記、詩篇、箴言、傳道書同雅歌合稱詩歌與智慧書，共五卷。呢個係方便學習嘅分組，各卷嘅內容同寫法仍然各有特色。",
+    "reference": "舊約書卷目錄；約伯記至雅歌",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-032",
+    "unit": "wisdom",
+    "difficulty": 1,
+    "question": "以下邊組全部都屬於本課嘅「詩歌與智慧書」？",
+    "options": [
+      "約伯記、箴言、傳道書",
+      "約伯記、路得記、傳道書",
+      "詩篇、以賽亞書、雅歌",
+      "箴言、以斯帖記、雅歌"
+    ],
+    "answer": 0,
+    "explanation": "約伯記、箴言同傳道書都喺本課嘅詩歌與智慧書之內。路得記同以斯帖記屬歷史書，以賽亞書就屬本課嘅大先知書。",
+    "reference": "舊約書卷目錄；約伯記至雅歌",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-033",
+    "unit": "wisdom",
+    "difficulty": 1,
+    "question": "按本課用嘅分類，約伯記屬於邊一組？",
+    "options": [
+      "詩歌與智慧書",
+      "歷史書",
+      "大先知書",
+      "律法書"
+    ],
+    "answer": 0,
+    "explanation": "約伯記有故事開頭同結尾，但中間好多篇幅係詩體對話。本課將佢放喺詩歌與智慧書，一齊思想苦難、智慧同人對上帝嘅認識。",
+    "reference": "約伯記；舊約書卷目錄",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-034",
+    "unit": "wisdom",
+    "difficulty": 1,
+    "question": "按本課用嘅分類，詩篇屬於邊一組？",
+    "options": [
+      "詩歌與智慧書",
+      "律法書",
+      "歷史書",
+      "小先知書"
+    ],
+    "answer": 0,
+    "explanation": "詩篇屬於本課嘅詩歌與智慧書。當中有讚美、感恩、哀求等唔同內容，讓人睇見信徒可以帶住各種心情向上帝禱告。",
+    "reference": "詩篇書卷簡介",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/PSA/0/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-035",
+    "unit": "wisdom",
+    "difficulty": 1,
+    "question": "按和合本目錄，詩篇之後緊接住邊卷？",
+    "options": [
+      "箴言",
+      "約伯記",
+      "傳道書",
+      "雅歌"
+    ],
+    "answer": 0,
+    "explanation": "喺和合本目錄入面，詩篇之後係箴言，再之後係傳道書同雅歌。箴言有好多簡短教導，幫助讀者喺日常選擇中學習智慧。",
+    "reference": "舊約書卷目錄；詩篇至雅歌",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-036",
+    "unit": "wisdom",
+    "difficulty": 1,
+    "question": "按本課用嘅分類，詩歌與智慧書最後一卷係邊卷？",
+    "options": [
+      "雅歌",
+      "傳道書",
+      "箴言",
+      "詩篇"
+    ],
+    "answer": 0,
+    "explanation": "雅歌係本課詩歌與智慧書最後一卷，喺和合本目錄中接住傳道書。雅歌之後係以賽亞書，亦就開始本課嘅大先知書部分。",
+    "reference": "舊約書卷目錄；傳道書至以賽亞書",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-037",
+    "unit": "wisdom",
+    "difficulty": 1,
+    "question": "按和合本目錄，箴言同雅歌中間係邊卷？",
+    "options": [
+      "傳道書",
+      "詩篇",
+      "約伯記",
+      "耶利米哀歌"
+    ],
+    "answer": 0,
+    "explanation": "箴言之後係傳道書，再之後先到雅歌。傳道書會思想人生、工作同人嘅限制，提醒讀者喺有限嘅生命中記念同敬畏上帝。",
+    "reference": "舊約書卷目錄；傳道書12:1、13",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-038",
+    "unit": "wisdom",
+    "difficulty": 1,
+    "question": "以下邊項最能概括詩篇嘅內容？",
+    "options": [
+      "向上帝唱出嘅詩歌同禱告",
+      "以色列君王嘅連續歷史",
+      "祭司獻祭嘅詳細程序",
+      "耶穌同門徒嘅旅程記錄"
+    ],
+    "answer": 0,
+    "explanation": "詩篇收集咗唔同處境中嘅詩歌同禱告，唔係只有開心嘅讚美。傷心、疑惑、感恩同盼望，都可以帶到上帝面前。",
+    "reference": "詩篇書卷簡介；詩篇150篇",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/PSA/0/",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/PSA/150/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-039",
+    "unit": "wisdom",
+    "difficulty": 1,
+    "question": "箴言主要幫助讀者學習邊樣嘢？",
+    "options": [
+      "敬畏上帝，喺日常生活作明智選擇",
+      "按次序記住以色列每位君王",
+      "計算以色列各支派嘅人口",
+      "照住指定尺寸建造聖殿"
+    ],
+    "answer": 0,
+    "explanation": "箴言將智慧連到日常生活，好似講說話、交朋友、工作同管教。佢提醒人，敬畏上帝係知識嘅開端，智慧唔只係記得多。",
+    "reference": "箴言1:1–7",
+    "source": "https://bible.usccb.org/bible/proverbs/0",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/PRO/1/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-040",
+    "unit": "wisdom",
+    "difficulty": 1,
+    "question": "約伯記主要圍繞邊個問題展開？",
+    "options": [
+      "人面對苦難時，點樣認識同回應上帝",
+      "以色列人點樣揀第一位君王",
+      "被擄嘅百姓點樣重建城牆",
+      "祭司點樣安排一年嘅節期"
+    ],
+    "answer": 0,
+    "explanation": "約伯記講一位敬畏上帝嘅人遭遇苦難，同朋友展開好多討論。全書提醒讀者，唔可以見人受苦，就斷定一定係佢做錯事。",
+    "reference": "約伯記1–2章；42:7–8",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/JOB/2/",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/JOB/42/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-041",
+    "unit": "major",
+    "difficulty": 1,
+    "question": "本課將耶利米哀歌都放入大先知書，呢一組合共有幾卷？",
+    "options": [
+      "5卷",
+      "4卷",
+      "6卷",
+      "7卷"
+    ],
+    "answer": 0,
+    "explanation": "本課嘅大先知書包括以賽亞書、耶利米書、耶利米哀歌、以西結書同但以理書，共五卷。其他分類方式有時會將哀歌另外分組。",
+    "reference": "本課採用嘅舊約分類；以賽亞書至但以理書",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-042",
+    "unit": "major",
+    "difficulty": 1,
+    "question": "按本課用嘅分類，以下邊卷唔屬於大先知書？",
+    "options": [
+      "哈該書",
+      "以賽亞書",
+      "耶利米書",
+      "以西結書"
+    ],
+    "answer": 0,
+    "explanation": "哈該書屬於小先知書，另外三卷都屬於本課嘅大先知書。大、小係傳統書卷分組嘅名稱，唔係話邊位先知更值得聽。",
+    "reference": "舊約書卷目錄；先知書分類",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-043",
+    "unit": "major",
+    "difficulty": 1,
+    "question": "以下邊卷屬於本課嘅大先知書？",
+    "options": [
+      "以西結書",
+      "何西阿書",
+      "阿摩司書",
+      "撒迦利亞書"
+    ],
+    "answer": 0,
+    "explanation": "以西結書屬於本課嘅大先知書。何西阿書、阿摩司書同撒迦利亞書，就喺舊約末尾嗰十二卷小先知書入面。",
+    "reference": "舊約書卷目錄；先知書分類",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-044",
+    "unit": "major",
+    "difficulty": 1,
+    "question": "按和合本目錄，耶利米書同以西結書中間係邊卷？",
+    "options": [
+      "耶利米哀歌",
+      "但以理書",
+      "以賽亞書",
+      "何西阿書"
+    ],
+    "answer": 0,
+    "explanation": "和合本嘅次序係耶利米書、耶利米哀歌、以西結書。哀歌篇幅比較短，本課仍跟常見嘅基督教分組，將佢放入大先知書。",
+    "reference": "舊約書卷目錄；耶利米書至以西結書",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-045",
+    "unit": "major",
+    "difficulty": 1,
+    "question": "按和合本目錄，本課嘅大先知書由邊卷開始？",
+    "options": [
+      "以賽亞書",
+      "耶利米書",
+      "以西結書",
+      "但以理書"
+    ],
+    "answer": 0,
+    "explanation": "以賽亞書喺和合本目錄中接住雅歌，係本課大先知書嘅第一卷。書中既有對罪嘅提醒，亦有安慰、拯救同將來盼望嘅信息。",
+    "reference": "舊約書卷目錄；以賽亞書簡介",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV1/ISA/0/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-046",
+    "unit": "major",
+    "difficulty": 1,
+    "question": "按本課用嘅分類，大先知書最後一卷係邊卷？",
+    "options": [
+      "但以理書",
+      "以西結書",
+      "耶利米書",
+      "以賽亞書"
+    ],
+    "answer": 0,
+    "explanation": "但以理書係本課大先知書最後一卷，喺和合本目錄中排喺以西結書之後。下一卷係何西阿書，就進入小先知書嘅部分。",
+    "reference": "舊約書卷目錄；以西結書至何西阿書",
+    "source": "https://www.biblegateway.com/learn/bible-101/choosing-a-bible/books-of-the-bible-in-order/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Old-Testament",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-047",
+    "unit": "major",
+    "difficulty": 1,
+    "question": "傳統上叫「大先知書」同「小先知書」，主要係按咩分組？",
+    "options": [
+      "書卷篇幅大致上嘅長短",
+      "先知喺上帝眼中嘅地位高低",
+      "先知開始傳道時嘅年紀",
+      "先知所住城市嘅人口多少"
+    ],
+    "answer": 0,
+    "explanation": "呢個傳統分法主要同書卷篇幅有關，唔係按先知嘅地位或者年紀。哀歌係分組慣例嘅例子：篇幅短，本課仍將佢放入大先知書。",
+    "reference": "大先知書與小先知書嘅常用分類",
+    "source": "https://bible.usccb.org/bible/propheticbooks/0",
+    "verification": "https://bible.org/seriespage/major-prophets",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-048",
+    "unit": "major",
+    "difficulty": 1,
+    "question": "以賽亞書53章特別描寫咗點樣嘅僕人？",
+    "options": [
+      "為別人承擔痛苦同罪過嘅僕人",
+      "只求自己安穩富足嘅僕人",
+      "帶軍隊佔領尼尼微嘅僕人",
+      "奉命重建耶路撒冷城牆嘅僕人"
+    ],
+    "answer": 0,
+    "explanation": "以賽亞書五十三章描寫僕人承受痛苦，擔當別人嘅罪。基督徒讀呢段經文時，會將佢連到耶穌為人受苦同捨命嘅救恩。",
+    "reference": "以賽亞書53:4–6；使徒行傳8:32–35",
+    "source": "https://rcuv.hkbs.org.hk/RCUV1/ISA/0/",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/ISA/53/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-049",
+    "unit": "major",
+    "difficulty": 1,
+    "question": "耶利米哀歌主要為邊件事表達哀傷？",
+    "options": [
+      "耶路撒冷被毀、百姓受苦",
+      "以色列人喺紅海邊被追趕",
+      "約瑟被哥哥賣到埃及",
+      "掃羅戰死、大衛失去朋友"
+    ],
+    "answer": 0,
+    "explanation": "耶利米哀歌用詩歌表達耶路撒冷被毀後嘅悲痛，亦有認罪同向上帝呼求。佢讓人睇見，信仰生活入面同樣可以真誠表達哀傷。",
+    "reference": "耶利米哀歌1:1–5；3:19–26",
+    "source": "https://bible.usccb.org/bible/lamentations/0",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/LAM/1/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-050",
+    "unit": "major",
+    "difficulty": 1,
+    "question": "但以理書記載，但以理因為繼續向上帝禱告，被掟入邊度？",
+    "options": [
+      "獅子坑",
+      "火窰",
+      "乾涸嘅井",
+      "城外嘅地牢"
+    ],
+    "answer": 0,
+    "explanation": "但以理唔肯因禁令而停止禱告，結果被掟入獅子坑，上帝卻保護咗佢。火窰就係同卷另一個故事，主角係佢三位朋友。",
+    "reference": "但以理書6:10–23；3章",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DAN/6/",
+    "verification": "https://rcuv.hkbs.org.hk/RCUV2/DAN/3/",
+    "sourceLabel": "查閱資料"
+  }
+]

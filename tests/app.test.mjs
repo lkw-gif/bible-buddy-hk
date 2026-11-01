@@ -304,3 +304,40 @@ test('All one hundred history questions are reachable through ten lessons and co
   await app.navigate('/church');assert.match(app.$('.course-progress').textContent,/已操練 0／100 題/);
   assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
+
+test('Bible knowledge sits beside history and retains answers, previous navigation, bookmarks and review progress', async () => {
+  let app=await boot();
+  const nav=[...app.w.document.querySelectorAll('[data-nav]')].map(a=>a.dataset.nav);assert.equal(nav[nav.indexOf('church')+1],'bible');
+  assert(app.$('.church-course-entry'));assert(app.$('.bible-course-entry'));
+  await app.click('.bible-course-entry a');assert.equal(app.w.location.hash,'#/bible');
+  assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);assert.match(app.$('.page-head').textContent,/66卷/);
+  await app.click('[data-mode="bible"][data-unit="overview"]');
+  assert.equal(app.savedProgress().current.mode,'bible');assert.match(app.$('.quiz-label').textContent,/聖經知識.*第1課/);
+  await app.click('.question-meta [data-action="bookmark"]');await app.click('[data-action="answer"][data-choice="1"]');await app.click('[data-action="next"]');
+  await app.click('[data-action="previous"]');const saved=app.w.localStorage.getItem(key);app.dom.window.close();
+  app=await boot(saved,'#/quiz');assert.equal(app.savedProgress().current.index,0);assert.equal(app.w.document.querySelectorAll('.choice:disabled').length,4);
+  assert.equal(Object.keys(app.savedProgress().bibleAnswers).length,1);assert.deepEqual(app.savedProgress().courseAnswers,{});
+  assert.equal(app.$('.feedback a'),null);await app.click('[data-action="next"]');
+  for(let i=1;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+  assert.match(app.$('.score-ring').textContent,/9 \/ 10/);assert(!/挑戰級|彩蛋級/.test(app.$('#result-title').textContent));
+  assert.equal(Object.keys(app.savedProgress().bibleAnswers).length,10);assert.equal(app.savedProgress().mistakes.length,1);
+  await app.navigate('/review');await app.click('[data-action="practice"]');await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');
+  assert.equal(app.savedProgress().mistakes.length,0);assert.equal(app.savedProgress().bookmarks.length,1);
+  await app.navigate('/bible');assert.match(app.$('.course-progress').textContent,/最近答啱 10 題/);
+  await app.navigate('/church');assert.match(app.$('.course-progress').textContent,/已操練 0／100 題/);
+  assert.deepEqual(app.errors,[]);app.dom.window.close();
+});
+
+test('All one hundred Bible questions are playable and both course progress stores clear together', async () => {
+  const app=await boot();await app.navigate('/bible');await app.click('[data-mode="bible"][data-unit="overview"]');
+  for(let lesson=0;lesson<10;lesson++){
+    for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+    assert.match(app.$('.score-ring').textContent,/10 \/ 10/);assert.equal(Object.keys(app.savedProgress().bibleAnswers).length,(lesson+1)*10);
+    if(lesson<9)await app.click('.growth-note [data-mode="bible"]');
+  }
+  await app.navigate('/bible');assert.match(app.$('.course-progress').textContent,/已操練 100／100 題/);assert.match(app.$('.course-progress').textContent,/最近答啱 100 題/);
+  assert.equal(app.savedProgress().history.length,10);assert.deepEqual(app.savedProgress().courseAnswers,{});
+  await app.navigate('/history');await app.click('[data-action="clear-dialog"]');await app.click('[data-action="clear-confirm"]');
+  assert.deepEqual(app.savedProgress().bibleAnswers,{});assert.deepEqual(app.savedProgress().courseAnswers,{});
+  assert.deepEqual(app.errors,[]);app.dom.window.close();
+});

@@ -1,0 +1,362 @@
+[
+  {
+    "id": "bible-051", "unit": "minor", "difficulty": 1,
+    "question": "按新教聖經常用分類，小先知書共有幾卷？",
+    "options": ["十二卷", "五卷", "七卷", "十七卷"], "answer": 0,
+    "explanation": "小先知書由何西阿書排到瑪拉基書，共十二卷。記住呢組書名，睇舊約目錄時就容易分清楚。",
+    "reference": "舊約書卷目錄：何西阿書至瑪拉基書",
+    "source": "https://bible.usccb.org/bible/propheticbooks/0",
+    "verification": "https://www.kccathedral.org/wp-content/uploads/Minor-Prophets-Order.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-052", "unit": "minor", "difficulty": 1,
+    "question": "以下邊卷屬於小先知書，而唔係歷史書？",
+    "options": ["哈該書", "以斯拉記", "尼希米記", "路得記"], "answer": 0,
+    "explanation": "哈該書屬於小先知書，信息包括鼓勵百姓重建聖殿。以斯拉記、尼希米記同路得記，就屬於常用分類嘅歷史書。",
+    "reference": "舊約書卷分類；哈該書1:7–8",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/HAG/1/",
+    "verification": "https://www.kccathedral.org/wp-content/uploads/Minor-Prophets-Order.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-053", "unit": "minor", "difficulty": 1,
+    "question": "按和合本常見嘅舊約目錄，小先知書由邊卷開始？",
+    "options": ["何西阿書", "約珥書", "阿摩司書", "約拿書"], "answer": 0,
+    "explanation": "小先知書喺目錄由何西阿書開始，之後係約珥書同阿摩司書。呢個係書卷次序，唔等於寫作先後。",
+    "reference": "舊約目錄；何西阿書1章",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/HOS/1/",
+    "verification": "https://www.biblegateway.com/resources/encyclopedia-of-the-bible/Hosea", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-054", "unit": "minor", "difficulty": 1,
+    "question": "按和合本常見嘅舊約目錄，小先知書最後一卷係邊卷？",
+    "options": ["瑪拉基書", "撒迦利亞書", "哈該書", "西番雅書"], "answer": 0,
+    "explanation": "瑪拉基書係小先知書最後一卷，亦排喺和合本舊約末尾。翻過舊約之後，新約就由馬太福音開始。",
+    "reference": "舊約目錄：哈該書、撒迦利亞書、瑪拉基書",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAL/1/",
+    "verification": "https://www.kccathedral.org/wp-content/uploads/Minor-Prophets-Order.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-055", "unit": "minor", "difficulty": 1,
+    "question": "以下邊一組，兩卷都係小先知書？",
+    "options": ["約珥書、阿摩司書", "以賽亞書、阿摩司書", "以西結書、約珥書", "但以理書、何西阿書"], "answer": 0,
+    "explanation": "約珥書同阿摩司書都屬於小先知書。以賽亞書、以西結書同但以理書，喺新教常用分類就屬大先知書。",
+    "reference": "舊約先知書分類",
+    "source": "https://bible.usccb.org/bible/propheticbooks/0",
+    "verification": "https://troychapel.org/wp-content/uploads/2017/11/Basic-Bible.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-056", "unit": "minor", "difficulty": 1,
+    "question": "以下邊一組，三卷全部都係小先知書？",
+    "options": ["俄巴底亞書、約拿書、彌迦書", "俄巴底亞書、約書亞記、彌迦書", "耶利米書、約拿書、彌迦書", "俄巴底亞書、約拿書、尼希米記"], "answer": 0,
+    "explanation": "俄巴底亞書、約拿書同彌迦書都喺小先知書入面。約書亞記同尼希米記係歷史書，耶利米書就係大先知書。",
+    "reference": "舊約書卷目錄與先知書分類",
+    "source": "https://www.kccathedral.org/wp-content/uploads/Minor-Prophets-Order.pdf",
+    "verification": "https://troychapel.org/wp-content/uploads/2017/11/Basic-Bible.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-057", "unit": "minor", "difficulty": 1,
+    "question": "按新教常用分類，以下邊卷唔屬於小先知書？",
+    "options": ["但以理書", "那鴻書", "哈巴谷書", "西番雅書"], "answer": 0,
+    "explanation": "但以理書喺新教常用分類屬大先知書，其餘三卷都係小先知書。分組係幫我哋認識目錄，唔係比較重要性。",
+    "reference": "新教舊約先知書常用分類",
+    "source": "https://troychapel.org/wp-content/uploads/2017/11/Basic-Bible.pdf",
+    "verification": "https://www.kccathedral.org/wp-content/uploads/Minor-Prophets-Order.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-058", "unit": "minor", "difficulty": 1,
+    "question": "按和合本常見嘅目錄，哈巴谷書之後緊接住邊卷？",
+    "options": ["西番雅書", "哈該書", "撒迦利亞書", "那鴻書"], "answer": 0,
+    "explanation": "呢段目錄次序係那鴻書、哈巴谷書、西番雅書，之後先到哈該書。可以幾卷一組咁記，慢慢就熟。",
+    "reference": "舊約目錄：那鴻書至哈該書",
+    "source": "https://www.kccathedral.org/wp-content/uploads/Minor-Prophets-Order.pdf",
+    "verification": "https://www.biblegateway.com/passage/?search=Habakkuk%203%3BZephaniah%201&version=CUV", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-059", "unit": "minor", "difficulty": 1,
+    "question": "按和合本常見嘅目錄，小先知書最後三卷依次係邊組？",
+    "options": ["哈該書、撒迦利亞書、瑪拉基書", "西番雅書、哈該書、瑪拉基書", "哈巴谷書、撒迦利亞書、瑪拉基書", "哈該書、瑪拉基書、撒迦利亞書"], "answer": 0,
+    "explanation": "小先知書最後三卷依次係哈該書、撒迦利亞書、瑪拉基書。記得呢個次序，就搵到舊約最後幾卷。",
+    "reference": "舊約目錄：哈該書至瑪拉基書",
+    "source": "https://www.kccathedral.org/wp-content/uploads/Minor-Prophets-Order.pdf",
+    "verification": "https://www.biblegateway.com/passage/?search=Haggai%201%3BZechariah%201%3BMalachi%201&version=CUV", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-060", "unit": "minor", "difficulty": 1,
+    "question": "約拿書入面，上帝差約拿去邊座城傳話？",
+    "options": ["尼尼微", "巴比倫", "耶路撒冷", "撒馬利亞"], "answer": 0,
+    "explanation": "上帝差約拿去尼尼微傳話，當地人後來悔改。約拿書屬小先知書，但內容主要用故事講出上帝嘅憐憫。",
+    "reference": "約拿書1:1–2；3:1–10",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/JON/3/",
+    "verification": "https://bible.usccb.org/bible/jonah/3", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-061", "unit": "gospels", "difficulty": 1,
+    "question": "新約入面，福音書共有幾卷？",
+    "options": ["四卷", "三卷", "五卷", "六卷"], "answer": 0,
+    "explanation": "新約有馬太、馬可、路加同約翰四卷福音書，記載耶穌嘅事工、教導、受死同復活，各有敘述重點。",
+    "reference": "新約目錄：馬太福音至約翰福音",
+    "source": "https://troychapel.org/wp-content/uploads/2017/11/Basic-Bible.pdf",
+    "verification": "https://bible.usccb.org/bible/gospelsintroduction/0", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-062", "unit": "gospels", "difficulty": 1,
+    "question": "以下邊一組，全部都係新約福音書？",
+    "options": ["馬太、馬可、路加、約翰", "馬太、馬可、路加、使徒行傳", "馬太、馬可、羅馬書、約翰", "馬太、使徒行傳、路加、啟示錄"], "answer": 0,
+    "explanation": "四卷福音書係馬太、馬可、路加同約翰。使徒行傳接住講早期教會，羅馬書係書信，啟示錄就以異象為主。",
+    "reference": "新約書卷目錄與分類",
+    "source": "https://bible.usccb.org/bible/gospelsintroduction/0",
+    "verification": "https://troychapel.org/wp-content/uploads/2017/11/Basic-Bible.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-063", "unit": "gospels", "difficulty": 1,
+    "question": "翻開新約目錄，排喺第一卷嘅係邊卷？",
+    "options": ["馬太福音", "馬可福音", "路加福音", "約翰福音"], "answer": 0,
+    "explanation": "新約目錄由馬太福音開始，再到馬可、路加同約翰。排第一係目錄位置，唔代表一定係最早寫成嗰卷。",
+    "reference": "新約目錄：四卷福音書次序",
+    "source": "https://bible.usccb.org/bible/gospelsintroduction/0",
+    "verification": "https://www.biblegateway.com/passage/?search=Matthew%201&version=CUV", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-064", "unit": "gospels", "difficulty": 1,
+    "question": "按新約目錄，四卷福音書之後緊接住邊卷？",
+    "options": ["使徒行傳", "羅馬書", "希伯來書", "雅各書"], "answer": 0,
+    "explanation": "約翰福音之後係使徒行傳，再之後先到羅馬書。使徒行傳記載福音點樣由耶路撒冷傳到更遠地方。",
+    "reference": "新約目錄；使徒行傳1:8",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/ACT/1/",
+    "verification": "https://bible.usccb.org/bible/gospelsintroduction/0", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-065", "unit": "gospels", "difficulty": 1,
+    "question": "按新約常用分類，使徒行傳屬於邊一類？",
+    "options": ["講早期教會發展嘅歷史敘事", "記載耶穌生平嘅福音書", "寫畀一間教會嘅保羅書信", "用異象傳達信息嘅啟示文學"], "answer": 0,
+    "explanation": "使徒行傳通常列為新約歷史書，講聖靈帶領門徒傳福音同教會發展。佢用敘事記載事件，唔係一封教會書信。",
+    "reference": "使徒行傳1:1–8；新約書卷分類",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/ACT/1/",
+    "verification": "https://troychapel.org/wp-content/uploads/2017/11/Basic-Bible.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-066", "unit": "gospels", "difficulty": 1,
+    "question": "以下邊兩卷，開首都提到係寫畀提阿非羅？",
+    "options": ["路加福音、使徒行傳", "馬太福音、羅馬書", "馬可福音、希伯來書", "約翰福音、雅各書"], "answer": 0,
+    "explanation": "路加福音同使徒行傳開首都提到提阿非羅；使徒行傳亦提起前一卷。兩卷可以連住讀，睇耶穌事工同教會起步。",
+    "reference": "路加福音1:1–4；使徒行傳1:1–2",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/LUK/1/",
+    "verification": "https://bible.usccb.org/bible/acts/1", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-067", "unit": "gospels", "difficulty": 1,
+    "question": "邊卷福音書一開頭就講『太初有道』？",
+    "options": ["約翰福音", "馬太福音", "馬可福音", "路加福音"], "answer": 0,
+    "explanation": "約翰福音由『太初有道』開始，之後講道成肉身。呢個開場幫讀者由一開始就認識耶穌嘅身份。",
+    "reference": "約翰福音1:1、14",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/JHN/1/",
+    "verification": "https://bible.usccb.org/bible/john/1", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-068", "unit": "gospels", "difficulty": 1,
+    "question": "按新約目錄，馬可福音喺四卷福音書入面排第幾？",
+    "options": ["第二", "第一", "第三", "第四"], "answer": 0,
+    "explanation": "四卷福音書嘅目錄次序係馬太、馬可、路加、約翰，馬可排第二。呢個係聖經目錄次序，唔等於寫作先後。",
+    "reference": "新約目錄：馬太福音、馬可福音、路加福音、約翰福音",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+    "verification": "https://bible.usccb.org/bible/gospelsintroduction/0", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-069", "unit": "gospels", "difficulty": 1,
+    "question": "按馬太福音同路加福音記載，耶穌喺邊度出世？",
+    "options": ["伯利恆", "拿撒勒", "耶路撒冷", "迦百農"], "answer": 0,
+    "explanation": "兩卷都記載耶穌喺伯利恆出世。拿撒勒係佢成長嘅地方，迦百農就係佢後來傳道期間常到嘅地方。",
+    "reference": "馬太福音2:1、23；路加福音2:4–7、39–40",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/2/",
+    "verification": "https://bible.usccb.org/bible/luke/2", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-070", "unit": "gospels", "difficulty": 1,
+    "question": "想讀五旬節聖靈降臨、門徒開始公開作見證嘅記載，應該搵邊卷？",
+    "options": ["使徒行傳", "馬可福音", "羅馬書", "啟示錄"], "answer": 0,
+    "explanation": "使徒行傳第二章記載五旬節聖靈降臨，同彼得向眾人講道。呢段亦講到多人信主，早期教會一齊生活。",
+    "reference": "使徒行傳2章",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/ACT/2/",
+    "verification": "https://bible.usccb.org/bible/acts/2", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-071", "unit": "paul", "difficulty": 1,
+    "question": "按新教常用書卷分類，保羅書信呢一組共有幾卷？",
+    "options": ["十三卷", "十二卷", "十四卷", "十五卷"], "answer": 0,
+    "explanation": "常用分類由羅馬書數到腓利門書，共十三卷。希伯來書冇清楚署名作者，呢度唔將佢計入保羅書信。",
+    "reference": "新約書信分類：羅馬書至腓利門書",
+    "source": "https://bible.usccb.org/bible/newtestamentletters/0",
+    "verification": "https://troychapel.org/wp-content/uploads/2017/11/Basic-Bible.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-072", "unit": "paul", "difficulty": 1,
+    "question": "以下邊封保羅書信，書名係按一地嘅信徒命名，而唔係一個人？",
+    "options": ["羅馬書", "提摩太前書", "提多書", "腓利門書"], "answer": 0,
+    "explanation": "羅馬書係寫畀羅馬嘅信徒；提摩太、提多同腓利門都係人名。認清收信對象，可以幫我哋讀明書信背景。",
+    "reference": "羅馬書1:7；提摩太前書1:2；提多書1:4；腓利門書1",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/ROM/1/",
+    "verification": "https://bible.usccb.org/bible/romans/1", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-073", "unit": "paul", "difficulty": 1,
+    "question": "以下邊封保羅書信，書名係收信人嘅個人名字？",
+    "options": ["提多書", "腓立比書", "加拉太書", "歌羅西書"], "answer": 0,
+    "explanation": "提多係人名，書信開首直接稱呼佢。腓立比、加拉太同歌羅西就係地方名，相關書信係寫畀當地信徒。",
+    "reference": "提多書1:1–4；腓立比書1:1；加拉太書1:2；歌羅西書1:2",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/TIT/1/",
+    "verification": "https://bible.usccb.org/bible/titus/1", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-074", "unit": "paul", "difficulty": 1,
+    "question": "通常所講嘅『教牧書信』，係指邊三卷？",
+    "options": ["提摩太前書、提摩太後書、提多書", "提摩太前書、提多書、腓利門書", "羅馬書、哥林多前書、哥林多後書", "腓立比書、歌羅西書、腓利門書"], "answer": 0,
+    "explanation": "教牧書信通常指提摩太前後書同提多書，內容包括教導、教會生活同領袖責任。腓利門書唔喺呢個分組入面。",
+    "reference": "教牧書信常用分類；提摩太前書3:14–15；提多書1:5",
+    "source": "https://bible.usccb.org/bible/1timothy/0",
+    "verification": "https://www.biblegateway.com/passage/?search=1%20Timothy%203%3A14-15%3BTitus%201%3A5&version=CUV", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-075", "unit": "paul", "difficulty": 1,
+    "question": "按常用分類，『監獄書信』嗰四卷係邊一組？",
+    "options": ["以弗所書、腓立比書、歌羅西書、腓利門書", "以弗所書、腓立比書、歌羅西書、提多書", "以弗所書、腓立比書、羅馬書、腓利門書", "以弗所書、加拉太書、歌羅西書、腓利門書"], "answer": 0,
+    "explanation": "常用嘅四卷分組係以弗所、腓立比、歌羅西同腓利門書，書中提到保羅被囚。呢個係研讀書信時常見嘅分類。",
+    "reference": "以弗所書3:1；腓立比書1:13；歌羅西書4:18；腓利門書9",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EPH/3/",
+    "verification": "https://bible.org/seriespage/pauline-epistles", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-076", "unit": "paul", "difficulty": 1,
+    "question": "按新約目錄，保羅書信呢組排頭嗰卷係邊卷？",
+    "options": ["羅馬書", "哥林多前書", "加拉太書", "以弗所書"], "answer": 0,
+    "explanation": "保羅書信喺目錄由羅馬書開始，之後先係哥林多前後書。目錄排序唔等於寄出次序，讀嘅時候要分清楚。",
+    "reference": "新約目錄：使徒行傳之後嘅書信次序",
+    "source": "https://bible.usccb.org/bible/newtestamentletters/0",
+    "verification": "https://troychapel.org/wp-content/uploads/2017/11/Basic-Bible.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-077", "unit": "paul", "difficulty": 1,
+    "question": "按新約目錄，通常分類為保羅書信嗰組最後一卷係邊卷？",
+    "options": ["腓利門書", "提多書", "提摩太後書", "希伯來書"], "answer": 0,
+    "explanation": "保羅書信呢組由羅馬書排到腓利門書。腓利門書之後係希伯來書，但呢度冇將希伯來書歸入保羅書信。",
+    "reference": "新約目錄：提多書、腓利門書、希伯來書",
+    "source": "https://bible.usccb.org/bible/newtestamentletters/0",
+    "verification": "https://troychapel.org/wp-content/uploads/2017/11/Basic-Bible.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-078", "unit": "paul", "difficulty": 1,
+    "question": "以下邊一組，兩卷都屬於保羅書信？",
+    "options": ["加拉太書、以弗所書", "雅各書、彼得前書", "希伯來書、猶大書", "馬可福音、使徒行傳"], "answer": 0,
+    "explanation": "加拉太書同以弗所書都喺保羅書信呢組入面。認識呢個分組，可以幫你分清新約嘅福音書、歷史書同其他書信。",
+    "reference": "加拉太書1:1–2；以弗所書1:1；新約書信分類",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GAL/1/",
+    "verification": "https://bible.usccb.org/bible/newtestamentletters/0", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-079", "unit": "paul", "difficulty": 1,
+    "question": "按常用嘅十三卷分組，以下邊卷唔計入保羅書信？",
+    "options": ["希伯來書", "羅馬書", "加拉太書", "腓利門書"], "answer": 0,
+    "explanation": "希伯來書正文冇清楚署名作者，所以呢個常用分組唔將佢計入保羅書信。唔好單憑佢排喺書信附近就認定作者。",
+    "reference": "希伯來書1:1–4、13:22–25；新約書信分類",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/HEB/1/",
+    "verification": "https://bible.usccb.org/bible/newtestamentletters/0", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-080", "unit": "paul", "difficulty": 1,
+    "question": "哥林多前書13章話，以下邊樣係最大嘅？",
+    "options": ["愛", "信心", "盼望", "知識"], "answer": 0,
+    "explanation": "經文講到常存嘅有信、望、愛，其中最大係愛。呢章亦提醒人，就算有唔同恩賜，如果冇愛，仍然失去重點。",
+    "reference": "哥林多前書13:1–3、13",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/1CO/13/",
+    "verification": "https://bible.usccb.org/bible/1corinthians/13", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-081", "unit": "other", "difficulty": 1,
+    "question": "以下邊卷係新約書信，唔係福音書？",
+    "options": ["希伯來書", "馬太福音", "馬可福音", "路加福音"], "answer": 0,
+    "explanation": "希伯來書屬新約書信，集中講耶穌基督同佢嘅工作。佢唔係福音書，亦冇好似保羅書信咁喺開首署名。",
+    "reference": "希伯來書1:1–4、13:22–25；新約書卷分類",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/HEB/1/",
+    "verification": "https://bible.usccb.org/bible/newtestamentletters/0", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-082", "unit": "other", "difficulty": 1,
+    "question": "『普通書信』呢個常用分組，由雅各書數到猶大書，共有幾卷？",
+    "options": ["七卷", "八卷", "六卷", "九卷"], "answer": 0,
+    "explanation": "普通書信通常指雅各、彼得前後、約翰一二三同猶大書，共七卷。希伯來書可以一齊學，但唔計入呢七卷。",
+    "reference": "普通書信常用分類：雅各書至猶大書",
+    "source": "https://bible.usccb.org/bible/newtestamentletters/0",
+    "verification": "https://nazarene.org/ndi-journey/the-discipleship-place-releases-more-new-bible-studies/", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-083", "unit": "other", "difficulty": 1,
+    "question": "以下邊一組，三卷都屬於通常所講嘅普通書信？",
+    "options": ["雅各書、彼得前書、猶大書", "羅馬書、彼得前書、猶大書", "雅各書、希伯來書、猶大書", "雅各書、彼得前書、路加福音"], "answer": 0,
+    "explanation": "雅各書、彼得前書同猶大書都屬普通書信。希伯來書常同呢組一齊研讀，但唔喺通常所講嘅七卷名單入面。",
+    "reference": "普通書信七卷分類",
+    "source": "https://bible.usccb.org/bible/newtestamentletters/0",
+    "verification": "https://nazarene.org/ndi-journey/the-discipleship-place-releases-more-new-bible-studies/", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-084", "unit": "other", "difficulty": 1,
+    "question": "讀希伯來書時，對作者身份最穩妥嘅講法係邊句？",
+    "options": ["正文冇清楚寫出作者姓名", "開首清楚寫明係保羅", "結尾清楚寫明係彼得", "開首清楚寫明係雅各"], "answer": 0,
+    "explanation": "希伯來書冇喺正文清楚署名作者。歷來有人提出唔同人選，但讀書卷介紹時，要分清經文明講同後人推測。",
+    "reference": "希伯來書1:1–4、13:22–25",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/HEB/1/",
+    "verification": "https://bible.usccb.org/bible/hebrews/0", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-085", "unit": "other", "difficulty": 1,
+    "question": "新約目錄入面，以『彼得』命名嘅書信共有幾卷？",
+    "options": ["兩卷", "一卷", "三卷", "四卷"], "answer": 0,
+    "explanation": "以彼得命名嘅書信有彼得前書同彼得後書兩卷。佢哋喺目錄排喺雅各書之後、約翰一書之前。",
+    "reference": "新約目錄：雅各書至約翰一書",
+    "source": "https://bible.usccb.org/bible/newtestamentletters/0",
+    "verification": "https://www.biblegateway.com/passage/?search=1%20Peter%201%3A1%3B2%20Peter%201%3A1&version=CUV", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-086", "unit": "other", "difficulty": 1,
+    "question": "只計新約書信，以『約翰』命名嘅共有幾卷？",
+    "options": ["三卷", "一卷", "兩卷", "四卷"], "answer": 0,
+    "explanation": "約翰一書、二書同三書合共三卷。約翰福音係福音書，唔包括喺呢條只數書信嘅題目入面。",
+    "reference": "新約目錄：約翰一書、約翰二書、約翰三書",
+    "source": "https://bible.usccb.org/bible/newtestamentletters/0",
+    "verification": "https://www.biblegateway.com/passage/?search=1%20John%201%3A1%3B2%20John%201%3A1%3B3%20John%201%3A1&version=CUV", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-087", "unit": "other", "difficulty": 1,
+    "question": "按新教聖經常見嘅目錄，全本聖經最後一卷係邊卷？",
+    "options": ["啟示錄", "猶大書", "約翰三書", "希伯來書"], "answer": 0,
+    "explanation": "啟示錄排喺新約最後，亦係全本聖經最後一卷。佢之前係猶大書，再前面就係約翰三書。",
+    "reference": "新約目錄末尾：約翰三書、猶大書、啟示錄",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/REV/1/",
+    "verification": "https://troychapel.org/wp-content/uploads/2017/11/Basic-Bible.pdf", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-088", "unit": "other", "difficulty": 1,
+    "question": "認識啟示錄嘅內容同寫法，以下邊個描述最合適？",
+    "options": ["用異象同象徵傳達信息嘅預言書", "按耶穌地上生活記述嘅福音書", "專門教教會領袖牧養嘅教牧書信", "記錄以色列獻祭規例嘅律法書"], "answer": 0,
+    "explanation": "啟示錄以異象同象徵傳達預言信息，亦有寫畀七間教會嘅信。讀嘅時候要留意文體，唔好每個畫面都照字面理解。",
+    "reference": "啟示錄1:1–4、11；2–3章",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/REV/1/",
+    "verification": "https://www.esv.org/resources/esv-global-study-bible/introduction-to-revelation/", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-089", "unit": "other", "difficulty": 1,
+    "question": "想讀『信心要喺行動上表現出嚟』呢個教導，邊卷書信有直接討論？",
+    "options": ["雅各書", "腓利門書", "約翰二書", "猶大書"], "answer": 0,
+    "explanation": "雅各書第二章直接討論信心同行為，提醒信徒唔好只係口講相信，卻唔幫有需要嘅人。真信心會喺生活中表現出嚟。",
+    "reference": "雅各書2:14–18",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/JAS/2/",
+    "verification": "https://bible.usccb.org/bible/james/2", "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "bible-090", "unit": "other", "difficulty": 1,
+    "question": "啟示錄開首，約翰寫信畀亞細亞幾多間教會？",
+    "options": ["七間", "四間", "六間", "十間"], "answer": 0,
+    "explanation": "啟示錄開首寫畀亞細亞七間教會，第二、三章再逐間傳達信息。呢卷唔只講將來，亦提醒當時信徒點樣持守信仰。",
+    "reference": "啟示錄1:4、11；2–3章",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/REV/1/",
+    "verification": "https://bible.usccb.org/bible/revelation/1", "sourceLabel": "查閱資料"
+  }
+]

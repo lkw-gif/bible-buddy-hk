@@ -1,6 +1,7 @@
-import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261101-10';
+import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261101-13';
 import { HISTORY_QUESTIONS, HISTORY_QUESTION_MAP, HISTORY_TOPIC, COURSE_UNITS } from './history-course.mjs?v=20261101-7';
 import { CHALLENGE_QUESTIONS } from './challenge-data.mjs?v=20261101-10';
+import { BIBLE_QUESTIONS, BIBLE_QUESTION_MAP, BIBLE_TOPIC, BIBLE_UNITS } from './bible-course.mjs?v=20261101-13';
 const CHALLENGE_MAP = new Map(CHALLENGE_QUESTIONS.map(q => [q.id,q]));
 const BASE_QUESTION_IDS = new Set(QUESTIONS.map(q => q.id));
 
@@ -13,6 +14,7 @@ export const DIFFICULTIES = Object.fromEntries(Object.entries(TRIAL_LEVELS).map(
 export const GENERAL_QUOTAS = Object.fromEntries(TOPICS.map(t => [t.id, 5]));
 const LEGACY_GENERAL_QUOTAS = { overview: 6, old: 6, new: 6, people: 6, context: 6, theology: 4, history: 3, language: 3 };
 export function questionForRound(round, id) {
+  if (BIBLE_QUESTION_MAP.has(id)) return BIBLE_QUESTION_MAP.get(id);
   if (CHALLENGE_MAP.has(id)) return CHALLENGE_MAP.get(id);
   if (HISTORY_QUESTION_MAP.has(id)) return HISTORY_QUESTION_MAP.get(id);
   return (round.bankRevision === 3 ? QUESTION_MAP : round.bankRevision === 2 ? QUESTION_MAP_V2 : LEGACY_QUESTION_MAP).get(id);
@@ -70,6 +72,9 @@ export function createRound({ mode = 'general', topic = 'overview', count, diffi
   } else if (mode === 'trial') {
     if (!['1','2','3'].includes(String(difficulty))) throw new Error('先揀低、中、高，先知今次試探去到邊。');
     selected = TOPICS.flatMap(t => shuffle(String(difficulty) === '3' ? CHALLENGE_QUESTIONS.filter(q => q.topic === t.id) : questionPool(t.id,difficulty),random).slice(0,2));
+  } else if (mode === 'bible') {
+    if (!BIBLE_UNITS.some(u=>u.id===unit)) throw new Error('揀一課聖經知識，慢慢開始操練。');
+    selected=BIBLE_QUESTIONS.filter(q=>q.unit===unit);
   } else if (mode === 'church') {
     if (!COURSE_UNITS.some(u => u.id === unit)) throw new Error('揀一課教會歷史，慢慢開始操練。');
     selected = HISTORY_QUESTIONS.filter(q => q.unit === unit);
@@ -79,8 +84,8 @@ export function createRound({ mode = 'general', topic = 'overview', count, diffi
     selected = shuffle(questionPool(topic, difficulty), random).slice(0, Math.max(1, Math.min(30, Number(count) || 10)));
   } else { throw new Error('未知測驗模式'); }
   if (!selected.length) throw new Error('暫時冇呢類題目，可以揀其他主題。');
-  const items = (mode === 'church' ? selected : shuffle(selected, random)).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], random) }));
-  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 3, distribution: mode === 'general' ? 'general-v5' : mode === 'trial' && String(difficulty) === '3' ? 'trial-advanced-v5' : 'balanced-v3', mode, topic: mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:mode === 'church' ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
+  const items = (['church','bible'].includes(mode) ? selected : shuffle(selected, random)).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], random) }));
+  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 3, distribution: mode === 'general' ? 'general-v5' : mode === 'trial' && String(difficulty) === '3' ? 'trial-advanced-v5' : 'balanced-v3', mode, topic: mode === 'bible' ? BIBLE_TOPIC.id : mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:['church','bible'].includes(mode) ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
 }
 
 export function answerRound(round, selected) {
@@ -112,7 +117,7 @@ export function summarizeRound(round) {
   const correct = rows.filter(r => r.correct).length;
   const skipped = rows.filter(r => r.answered && r.selected === null).length;
   const percent = correct * 100 / rows.length;
-  const breakdown = [...TOPICS,...(rows.some(r => r.question.topic === HISTORY_TOPIC.id) ? [HISTORY_TOPIC] : [])].map(t => {
+  const breakdown = [...TOPICS,...(rows.some(r => r.question.topic === HISTORY_TOPIC.id) ? [HISTORY_TOPIC] : []),...(rows.some(r=>r.question.topic===BIBLE_TOPIC.id) ? [BIBLE_TOPIC] : [])].map(t => {
     const entries = rows.filter(r => r.question.topic === t.id);
     return { ...t, total: entries.length, correct: entries.filter(r => r.correct).length, percent: entries.length ? entries.filter(r => r.correct).length / entries.length * 100 : null };
   });
@@ -120,7 +125,7 @@ export function summarizeRound(round) {
 }
 
 export function validRound(round, completed = false) {
-  if (!round || !['general', 'topic', 'trial', 'church', 'review', ...(completed ? ['daily'] : [])].includes(round.mode) || typeof round.id !== 'string' || !/^\d+-\d+$/.test(round.id)) return false;
+  if (!round || !['general', 'topic', 'trial', 'church', 'bible', 'review', ...(completed ? ['daily'] : [])].includes(round.mode) || typeof round.id !== 'string' || !/^\d+-\d+$/.test(round.id)) return false;
   if (!['cheeky', 'gentle'].includes(round.tone) || !Number.isFinite(Date.parse(round.startedAt))) return false;
   if (!Array.isArray(round.items) || !round.items.length || round.items.length > 40 || new Set(round.items.map(i => i?.id)).size !== round.items.length) return false;
   if (!round.items.every(i => QUESTION_MAP.has(i?.id) && Array.isArray(i.order) && [...i.order].sort().join('') === '0123')) return false;
@@ -164,6 +169,8 @@ export function validRound(round, completed = false) {
   if (round.mode === 'topic' && (!TOPICS.some(t => t.id === round.topic) || !round.items.every(i => QUESTION_MAP.get(i.id).topic === round.topic))) return false;
   if (round.mode === 'church' && (round.items.length !== 10 || round.topic !== HISTORY_TOPIC.id ||
     !COURSE_UNITS.some(u => u.id === round.unit) || !round.items.every(i => HISTORY_QUESTION_MAP.get(i.id)?.unit === round.unit))) return false;
+  if (round.mode === 'bible' && (round.items.length !== 10 || round.topic !== BIBLE_TOPIC.id ||
+    !BIBLE_UNITS.some(u=>u.id===round.unit) || !round.items.every(i=>BIBLE_QUESTION_MAP.get(i.id)?.unit===round.unit))) return false;
   if (round.mode === 'trial' && (round.items.length !== 16 || !['1','2','3'].includes(String(round.difficulty)) ||
     !round.items.every(i => QUESTION_MAP.get(i.id).difficulty === Number(round.difficulty)) ||
     !TOPICS.every(t => round.items.filter(i => QUESTION_MAP.get(i.id).topic === t.id).length === 2))) return false;

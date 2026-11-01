@@ -3,11 +3,16 @@ import { readFile, access } from 'node:fs/promises';
 import { QUESTIONS, TOPICS } from '../dist/questions.mjs';
 import { HISTORY_QUESTIONS, COURSE_UNITS } from '../dist/history-course.mjs';
 import { CHALLENGE_QUESTIONS } from '../dist/challenge-data.mjs';
+import { BIBLE_QUESTIONS, BIBLE_UNITS } from '../dist/bible-course.mjs';
 const ids = new Set(), prompts = new Set();
 assert.equal(QUESTIONS.length, 240);
 assert.equal(HISTORY_QUESTIONS.length,100);
 assert.equal(COURSE_UNITS.length,10);
 assert.equal(CHALLENGE_QUESTIONS.length,40);
+assert.equal(BIBLE_QUESTIONS.length,100);assert.equal(BIBLE_UNITS.length,10);
+const bibleResearch=(await Promise.all(['basics','ot','nt'].map(async group=>JSON.parse(await readFile(new URL(`../research/bible-${group}.json`,import.meta.url),'utf8'))))).flat().sort((a,b)=>a.id.localeCompare(b.id));
+assert.deepEqual(BIBLE_QUESTIONS.map(({topic,...question})=>question),bibleResearch,'Rebuild bible-data.mjs after editing Bible research');
+for(const unit of BIBLE_UNITS)assert.equal(BIBLE_QUESTIONS.filter(q=>q.unit===unit.id).length,10,unit.id);
 const challengeResearch=(await Promise.all(['scripture','concepts'].map(async group=>JSON.parse(await readFile(new URL(`../research/challenge-${group}.json`,import.meta.url),'utf8'))))).flat().sort((a,b)=>a.id.localeCompare(b.id));
 assert.deepEqual(CHALLENGE_QUESTIONS,challengeResearch,'Rebuild challenge-data.mjs after editing challenge research');
 const research=(await Promise.all(['early','reformation','chinese'].map(async group => JSON.parse(await readFile(new URL(`../research/history-${group}.json`,import.meta.url),'utf8'))))).flat().sort((a,b)=>a.id.localeCompare(b.id));
@@ -19,7 +24,7 @@ for (const t of TOPICS) {
   assert.equal(CHALLENGE_QUESTIONS.filter(q=>q.topic===t.id&&q.difficulty===3).length,5,t.id+' advanced');
   for (const d of [1, 2, 3]) assert.equal(items.filter(q => q.difficulty === d).length, 10, `${t.id} difficulty ${d}`);
 }
-for (const q of [...QUESTIONS,...HISTORY_QUESTIONS,...CHALLENGE_QUESTIONS]) {
+for (const q of [...QUESTIONS,...HISTORY_QUESTIONS,...CHALLENGE_QUESTIONS,...BIBLE_QUESTIONS]) {
   assert(!ids.has(q.id), `Duplicate id ${q.id}`); ids.add(q.id);
   assert(!prompts.has(q.question), `Duplicate question ${q.id}`); prompts.add(q.question);
   assert(q.question && q.explanation.length > 10 && q.reference, q.id);
@@ -32,12 +37,12 @@ for (const q of [...QUESTIONS,...HISTORY_QUESTIONS,...CHALLENGE_QUESTIONS]) {
   if (q.unit) {
     assert.equal(new URL(q.verification).protocol,'https:',q.id+' verification');
     assert(q.explanation.length >= 35,q.id+' learning explanation');
-    assert(COURSE_UNITS.some(u => u.id === q.unit),q.id+' unit');
+    assert((q.id.startsWith('bible-') ? BIBLE_UNITS : COURSE_UNITS).some(u => u.id === q.unit),q.id+' unit');
     assert([1,2,3].includes(q.difficulty),q.id+' difficulty');
   }
 }
-for (const f of ['index.html', 'app.mjs', 'styles.css', 'engine.mjs', 'choices.mjs', 'copy-edits.mjs', 'history-course.mjs', 'history-data.mjs', 'challenge-data.mjs', 'assets/hero.png', 'assets/favicon.svg']) await access(new URL('../dist/' + f, import.meta.url));
+for (const f of ['index.html', 'app.mjs', 'styles.css', 'engine.mjs', 'choices.mjs', 'copy-edits.mjs', 'history-course.mjs', 'history-data.mjs', 'challenge-data.mjs', 'bible-course.mjs', 'bible-data.mjs', 'assets/hero.png', 'assets/favicon.svg']) await access(new URL('../dist/' + f, import.meta.url));
 const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
 assert(html.includes('lang="zh-HK"'));
 assert(!html.includes('codex-preview'));
-console.log(`Question bank verified: ${QUESTIONS.length} base, ${CHALLENGE_QUESTIONS.length} advanced and ${HISTORY_QUESTIONS.length} church-history questions; required assets and sources present.`);
+console.log(`Question bank verified: ${QUESTIONS.length} base, ${CHALLENGE_QUESTIONS.length} advanced, ${HISTORY_QUESTIONS.length} church-history and ${BIBLE_QUESTIONS.length} Bible-knowledge questions; assets and sources present.`);
