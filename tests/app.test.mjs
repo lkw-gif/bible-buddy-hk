@@ -152,7 +152,7 @@ test('All three trial entries start directly, finish without General titles, and
     assert.equal(app.$('[data-action="daily"]'),null);
     assert.equal(app.w.document.querySelectorAll('[data-mode="trial"]').length,3);
     assert(!/每日五題|每日5題/.test(app.$('#main').textContent));
-    assert.match(app.$('[data-nav="review"]').textContent,/補返啲經/);
+    assert.match(app.$('[data-nav="review"]').textContent,/溫習角落/);
     await app.click('[data-mode="trial"][data-difficulty="'+difficulty+'"]');
     assert.equal(app.w.location.hash,'#/quiz');
     const r=app.savedProgress().current;
@@ -197,4 +197,58 @@ test('Corrupted persisted data cannot crash a quiz or inject a fabricated histor
   assert.equal(app.w.document.querySelectorAll('.history-row').length,0);
   assert.deepEqual(app.errors,[]);
   app.dom.window.close();
+});
+
+test('Church-history lessons resume, save bookmarks and mistakes, and update progress through revision', async () => {
+  let app=await boot();
+  await app.click('.course-feature a');
+  assert.equal(app.w.location.hash,'#/church');
+  assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);
+  assert.equal(app.$('[data-nav="church"]').getAttribute('aria-current'),'page');
+  await app.click('[data-mode="church"][data-unit="early"]');
+  assert.equal(app.savedProgress().current.items.length,10);
+  assert.match(app.$('.quiz-label').textContent,/教會歷史篇.*第1課/);
+  await app.click('.question-meta [data-action="bookmark"]');
+  await app.click('[data-action="skip"]');
+  assert(app.$('.feedback').textContent.includes('另一份參考資料'));
+  const saved=app.w.localStorage.getItem(key);app.dom.window.close();
+  app=await boot(saved,'#/quiz');
+  assert.equal(app.savedProgress().current.answers.length,1);
+  assert.equal(Object.keys(app.savedProgress().courseAnswers).length,1);
+  await app.click('[data-action="next"]');
+  for(let i=1;i<10;i++){await app.click('[data-action="answer"][data-choice="'+(i===1?1:0)+'"]');await app.click('[data-action="next"]');}
+  assert.match(app.$('.score-ring').textContent,/8 \/ 10/);
+  assert(!/挑戰級|彩蛋級/.test(app.$('#result-title').textContent));
+  assert.equal(app.savedProgress().mistakes.length,2);
+  assert.equal(Object.keys(app.savedProgress().courseAnswers).length,10);
+  await app.click('[data-action="retry"]');
+  assert.equal(app.savedProgress().current.unit,'early');
+  await app.navigate('/review');
+  assert.equal(app.w.document.querySelectorAll('.review-card').length,2);
+  await app.click('[data-action="practice"]');
+  for(let i=0;i<2;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+  assert.equal(app.savedProgress().mistakes.length,0);
+  assert.equal(app.savedProgress().bookmarks.length,1);
+  await app.navigate('/church');
+  assert.match(app.$('.course-progress').textContent,/最近答啱 10 題/);
+  assert.deepEqual(app.errors,[]);app.dom.window.close();
+});
+
+test('All one hundred history questions are reachable through ten lessons and course progress can be cleared', async () => {
+  const app=await boot();await app.navigate('/church');
+  await app.click('[data-mode="church"][data-unit="early"]');
+  for(let lesson=0;lesson<10;lesson++) {
+    for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+    assert.match(app.$('.score-ring').textContent,/10 \/ 10/);
+    assert.equal(Object.keys(app.savedProgress().courseAnswers).length,(lesson+1)*10);
+    if(lesson<9)await app.click('.growth-note [data-mode="church"]');
+  }
+  await app.navigate('/church');
+  assert.match(app.$('.course-progress').textContent,/已操練 100／100 題/);
+  assert.match(app.$('.course-progress').textContent,/最近答啱 100 題/);
+  assert.equal([...app.w.document.querySelectorAll('.course-unit .pill')].filter(e=>e.textContent==='已完成操練').length,10);
+  await app.navigate('/history');await app.click('[data-action="clear-dialog"]');await app.click('[data-action="clear-confirm"]');
+  assert.deepEqual(app.savedProgress().courseAnswers,{});
+  await app.navigate('/church');assert.match(app.$('.course-progress').textContent,/已操練 0／100 題/);
+  assert.deepEqual(app.errors,[]);app.dom.window.close();
 });

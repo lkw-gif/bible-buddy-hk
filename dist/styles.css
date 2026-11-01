@@ -36,6 +36,12 @@
   .trial-level strong{font-size:14px;line-height:1.5}.trial-level>.icon{width:17px;height:17px}.trial-level small{grid-column:1/-1;font-size:10px;line-height:1.6;color:#66705d}
   .topic-bottom .eyebrow{font-family:inherit;letter-spacing:0;font-size:10px}
   #main{padding-bottom:35px}
+  .course-feature{margin:28px 0 34px;padding:28px 30px;border:1px solid #cfd9c6;border-radius:20px;background:#e9efdf;display:flex;align-items:center;gap:28px;justify-content:space-between}
+  .course-feature h2{font-size:28px;margin:7px 0}.course-feature p{max-width:620px;font-size:14px}.course-feature>.button{flex-shrink:0}.course-summary{display:block;margin-top:12px;font-size:12px;color:#4c6651}
+  .course-progress{padding:23px 26px;background:#edf1e5;border:1px solid #d4ddca;border-radius:16px;margin-bottom:25px}.course-progress>div:first-child{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px}.course-progress strong{font-size:18px}.course-progress span{font-size:13px}.course-progress .progress-track{height:9px}.course-progress p{font-size:12px;margin-top:12px}
+  .course-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:30px}.course-unit{padding:25px;border:1px solid var(--line);border-radius:18px;background:var(--white);display:flex;flex-direction:column;min-width:0}.course-unit-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.course-number{font:500 32px/1.2 Georgia,serif;color:#829472}.course-period{font-size:11px;margin-top:18px}.course-unit h2{font-size:23px;margin:5px 0 10px}.course-unit>p:not(.course-period){font-size:14px}.course-unit-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:24px}.course-unit-bottom small{font-size:12px;color:var(--muted)}
+  .course-sources{border-top:1px solid var(--line);padding:20px 0}.course-sources p,.course-sources li{font-size:13px;line-height:1.9}.course-sources ul{padding-left:20px;margin:12px 0}.course-sources a{overflow-wrap:anywhere}.course-sources .icon{width:15px;height:15px;vertical-align:middle}
+  .feedback>a+a{margin-left:20px}.growth-note .button{margin:12px 0 18px;white-space:normal;text-align:left}.growth-note>a.text-button{display:flex}
   .general-card>div:first-child{position:relative;z-index:1;min-width:0}
   .general-versions{display:grid;gap:12px;margin-top:22px;max-width:390px}
   .general-versions .button{display:grid;grid-template-columns:1fr 24px;text-align:left;justify-content:stretch;padding:15px 18px;white-space:normal}
@@ -45,4 +51,6 @@
 @layer responsive {
   @media(max-width:850px){.mode-grid{grid-template-columns:1.2fr 1fr}.trial-card{padding:22px}.trial-level{padding:10px;gap:5px 7px}.trial-level strong{font-size:12px}.trial-degree{font-size:9px}}
   @media(max-width:600px){.mode-grid{grid-template-columns:1fr}.trial-card{padding:24px}.trial-card h2{font-size:24px}.trial-level{padding:13px 11px}.trial-level strong{font-size:14px}.trial-degree{font-size:10px}.trial-level small{font-size:11px}.topic-bottom .eyebrow{font-size:9px}}
+  @media(max-width:850px){.course-feature{align-items:flex-start;flex-direction:column;gap:18px}.course-unit{padding:22px}.course-unit h2{font-size:21px}}
+  @media(max-width:600px){.header-inner{flex-wrap:wrap;gap:12px;padding-top:14px;padding-bottom:10px}.header-inner nav{width:100%;justify-content:space-between;gap:8px}.course-feature{padding:24px}.course-feature h2{font-size:25px}.course-feature p{font-size:13px}.course-feature>.button{width:100%;font-size:13px}.course-grid{grid-template-columns:1fr;gap:14px}.course-progress{padding:20px}.course-progress>div:first-child{flex-direction:column}.course-unit h2{font-size:23px}.course-unit>p:not(.course-period){font-size:13px}.feedback>a+a{margin-left:0;display:block;margin-top:10px}}
 }

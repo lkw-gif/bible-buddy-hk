@@ -1,0 +1,542 @@
+[
+  {
+    "id": "church-001",
+    "unit": "early",
+    "difficulty": 1,
+    "question": "按使徒行傳記載，門徒最早喺邊個城市被人叫做「基督徒」？",
+    "options": [
+      "安提阿",
+      "耶路撒冷",
+      "以弗所",
+      "哥林多"
+    ],
+    "answer": 0,
+    "explanation": "使徒行傳11:26記低，門徒喺安提阿開始被叫做基督徒。呢間教會有不同背景嘅信徒，亦成為向外宣教嘅重要基地，幫我哋睇到教會點樣越過文化界線。",
+    "reference": "使徒行傳11:19–26",
+    "source": "https://bible.usccb.org/bible/acts/11",
+    "verification": "https://www.biblegateway.com/verse/en/Acts_11%3A26",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-002",
+    "unit": "early",
+    "difficulty": 1,
+    "question": "使徒行傳15章嘅耶路撒冷會議，主要處理咩問題？",
+    "options": [
+      "非猶太信徒需唔需要受割禮同遵守摩西律法",
+      "復活節應該按邊種曆法守節",
+      "所有外地教會領袖需唔需要由耶路撒冷直接任命",
+      "各地教會可唔可以用當地語言敬拜"
+    ],
+    "answer": 0,
+    "explanation": "當時有人要求非猶太信徒受割禮，先可以得救。使徒同長老一齊商議，唔將呢個要求加喺佢哋身上；呢段歷史幫信徒分清福音同文化習慣。",
+    "reference": "使徒行傳15:1–29",
+    "source": "https://bible.usccb.org/bible/acts/15",
+    "verification": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-003",
+    "unit": "early",
+    "difficulty": 2,
+    "question": "按羅馬史家塔西佗嘅記載，公元64年羅馬大火之後，邊位皇帝懲罰當地基督徒？",
+    "options": [
+      "尼祿",
+      "圖拉真（他雅努）",
+      "戴克里先",
+      "君士坦丁"
+    ],
+    "answer": 0,
+    "explanation": "塔西佗記述尼祿將大火嘅嫌疑轉向基督徒，施以殘酷懲罰。要留意呢次事件主要講羅馬城，唔應將佢講成全帝國同時展開嘅一次統一迫害。",
+    "reference": "塔西佗《編年史》15.44",
+    "source": "https://penelope.uchicago.edu/Thayer/e/roman/texts/tacitus/annals/15b%2A.html",
+    "verification": "https://www.cuhk.edu.hk/crs/tobias/primary_docs_ch02.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-004",
+    "unit": "early",
+    "difficulty": 2,
+    "question": "小普林尼寫畀皇帝嘅信，記低當時基督徒會喺天光前聚集做咩？",
+    "options": [
+      "向基督唱詩，好似向神一樣",
+      "向皇帝唱詩，承認皇帝係唯一嘅神",
+      "向眾神獻祭，再聽基督教講道",
+      "只宣讀羅馬法例，唔涉及敬拜"
+    ],
+    "answer": 0,
+    "explanation": "小普林尼唔係基督徒，佢嘅書信仍然記低信徒向基督唱詩，同埋承諾唔作惡。呢類教會以外嘅記錄，幫我哋了解第二世紀信徒嘅敬拜同生活。",
+    "reference": "小普林尼《書信》10.96–97",
+    "source": "https://sourcebooks.web.fordham.edu/ancient/pliny-trajan1.asp",
+    "verification": "https://www.cuhk.edu.hk/crs/tobias/primary_docs_ch02.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-005",
+    "unit": "early",
+    "difficulty": 1,
+    "question": "《坡旅甲殉道記》記述嘅坡旅甲，係邊間教會嘅主教？",
+    "options": [
+      "士每拿",
+      "安提阿",
+      "里昂",
+      "亞歷山太"
+    ],
+    "answer": 0,
+    "explanation": "坡旅甲係士每拿教會嘅主教。記述佢殉道嘅書信，保留咗早期信徒面對威嚇仍然承認基督嘅見證；讀呢類材料亦要分清歷史記錄同作者嘅信仰表達。",
+    "reference": "《坡旅甲殉道記》；美國聖經公會人物介紹",
+    "source": "https://www.newadvent.org/fathers/0102.htm",
+    "verification": "https://www.americanbible.org/engage/bible-resources/articles/polycarp-of-smyrna/",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-006",
+    "unit": "early",
+    "difficulty": 1,
+    "question": "早期教會文獻《十二使徒遺訓》，主要畀我哋睇到啲咩？",
+    "options": [
+      "信徒生活、洗禮、禱告同教會聚會嘅教導",
+      "一次早期地方教會會議嘅完整紀錄",
+      "一部記述使徒旅程同傳道經歷嘅歷史書",
+      "一份列出新約書卷同作者嘅清單"
+    ],
+    "answer": 0,
+    "explanation": "《十二使徒遺訓》有生活倫理、洗禮、禁食、禱告同接待同工等指引。佢唔係新約書卷，但可以幫我哋認識早期教會點樣將信仰實踐喺日常生活。",
+    "reference": "《十二使徒遺訓》第1–15章",
+    "source": "https://www.newadvent.org/fathers/0714.htm",
+    "verification": "https://www.earlychristianwritings.com/info/didache-cathen.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-007",
+    "unit": "early",
+    "difficulty": 2,
+    "question": "游斯丁《第一護教辭》嘅開首，主要向邊班人解釋信仰同回應指控？",
+    "options": [
+      "羅馬皇帝、元老院同羅馬人民",
+      "耶路撒冷會議嘅使徒同長老",
+      "埃及沙漠修道院嘅院長",
+      "尼西亞會議嘅與會主教"
+    ],
+    "answer": 0,
+    "explanation": "游斯丁向皇帝等人解釋基督徒相信咩，亦反對只因「基督徒」呢個身份就定罪。護教唔單止係辯論取勝，亦係用對方聽得明嘅方式，回應誤解同指控。",
+    "reference": "游斯丁《第一護教辭》第1–4章",
+    "source": "https://www.newadvent.org/fathers/0126.htm",
+    "verification": "https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070321.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-008",
+    "unit": "early",
+    "difficulty": 2,
+    "question": "第二世紀嘅愛任紐寫《反異端》，重要目的之一係回應邊類教導？",
+    "options": [
+      "諾斯底派聲稱靠隱藏知識先能得救嘅教導",
+      "亞流派認為聖子係最高受造物嘅教導",
+      "聶斯多留爭論中對基督同馬利亞稱號嘅理解",
+      "多納徒派對失節教牧所施聖禮嘅爭論"
+    ],
+    "answer": 0,
+    "explanation": "愛任紐回應不同諾斯底派別，強調創造同救贖出於同一位神，亦重視使徒傳落嚟嘅信仰。佢嘅著作幫我哋認識早期教會點樣分辨互相衝突嘅教導。",
+    "reference": "愛任紐《反異端》；梵蒂岡人物介紹",
+    "source": "https://www.newadvent.org/fathers/0103.htm",
+    "verification": "https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070328.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-009",
+    "unit": "early",
+    "difficulty": 2,
+    "question": "伊格那丟嘅書信經常一齊提到，教會應該尊重同配搭邊三類領袖？",
+    "options": [
+      "主教、長老、執事",
+      "使徒、先知、教師",
+      "祭司、利未人、文士",
+      "牧師、傳道人、宣教士"
+    ],
+    "answer": 0,
+    "explanation": "伊格那丟用樂器和聲等比喻，勸信徒喺基督裏合一，同教會領袖配搭。呢啲書信係了解第二世紀教會生活同領導方式嘅材料，唔代表今日各宗派制度完全一樣。",
+    "reference": "伊格那丟《致以弗所人書》第2–4、20章",
+    "source": "https://www.newadvent.org/fathers/0104.htm",
+    "verification": "https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070314.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-010",
+    "unit": "early",
+    "difficulty": 1,
+    "question": "羅馬早期基督徒嘅地下墓穴，主要用途係咩？",
+    "options": [
+      "安葬死者，保存對離世信徒嘅記念",
+      "主要作為所有信徒每週守主餐嘅聚會場所",
+      "主要作為準備受洗者上課嘅學校",
+      "主要作為教會領袖長期居住嘅避難住所"
+    ],
+    "answer": 0,
+    "explanation": "地下墓穴首先係墓地，留低墓碑、圖畫同信仰記號，見證信徒對死亡同復活嘅盼望。雖然有紀念殉道者等活動，唔好將所有地下墓穴都想像成秘密避難城市。",
+    "reference": "梵蒂岡宗教考古委員會：基督徒地下墓穴",
+    "source": "https://www.vatican.va/content/dam/wss/roman_curia/pontifical_commissions/archeo/inglese/documents/rc_com_archeo_doc_20011010_cataccrist_en.html",
+    "verification": "https://www.catacombsociety.org/christian-catacombs/",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-011",
+    "unit": "creeds",
+    "difficulty": 1,
+    "question": "313年通常稱為「米蘭詔令」嘅安排，對基督徒有咩重要影響？",
+    "options": [
+      "容許基督徒自由敬拜，並安排歸還被充公財產",
+      "即時規定全帝國所有人只可以信基督教",
+      "首次訂出今日新約27卷嘅書目",
+      "下令禁止基督徒參與公共生活"
+    ],
+    "answer": 0,
+    "explanation": "君士坦丁同李錫尼嘅安排畀基督徒同其他人選擇信仰嘅自由，亦要求歸還教會財產。佢係宗教政策嘅重要轉變，但唔等於當年已將基督教定為唯一國教。",
+    "reference": "拉克坦提烏斯《迫害者之死》第48章；優西比烏《教會史》10.5",
+    "source": "https://sourcebooks.web.fordham.edu/source/edict-milan.asp",
+    "verification": "https://www.newadvent.org/fathers/250110.htm",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-012",
+    "unit": "creeds",
+    "difficulty": 2,
+    "question": "325年尼西亞會議對聖子，清楚表明咗邊個信仰？",
+    "options": [
+      "聖子唔係受造物，與父同有神嘅本質",
+      "聖子係最高嘅受造物，但唔係真正嘅神",
+      "聖子只係一個人，受洗後先被神收納",
+      "聖子係父神暫時用嘅另一個名稱"
+    ],
+    "answer": 0,
+    "explanation": "會議回應亞流爭論，清楚表明聖子係真神，同父同本質。呢個決議係對當時爭議作出清楚表達，唔係話直到325年，教會先開始相信耶穌有神性。",
+    "reference": "325年尼西亞會議及信經",
+    "source": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/the-first-ecumenical-council",
+    "verification": "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf#page=399",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-013",
+    "unit": "creeds",
+    "difficulty": 2,
+    "question": "381年君士坦丁堡會議，特別肯定咗關於聖靈嘅邊個信仰？",
+    "options": [
+      "聖靈係主，與父同子一同受敬拜",
+      "聖靈只係一種力量，唔可以受敬拜",
+      "聖靈係父最先創造出嚟嘅天使",
+      "聖靈只係耶穌肉身嘅另一個名稱"
+    ],
+    "answer": 0,
+    "explanation": "呢次會議延續尼西亞信仰，肯定聖靈嘅神性。今日好多教會誦讀嘅尼西亞—君士坦丁堡信經，仍然保留對父、子、聖靈嘅共同信仰。",
+    "reference": "381年君士坦丁堡會議；尼西亞—君士坦丁堡信經",
+    "source": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils",
+    "verification": "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf#page=399",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-014",
+    "unit": "creeds",
+    "difficulty": 3,
+    "question": "431年以弗所會議肯定馬利亞可以稱為 Theotokos，主要想保障邊個信仰重點？",
+    "options": [
+      "馬利亞所生嘅耶穌，就係成為人嘅神子",
+      "馬利亞本身同父神同有神嘅本質",
+      "耶穌嘅神性係由馬利亞創造出嚟",
+      "耶穌出生之前，神子從來冇存在"
+    ],
+    "answer": 0,
+    "explanation": "Theotokos常譯「上帝之母」或「誕神女」。會議用呢個稱呼強調耶穌係同一位道成肉身嘅神子，唔係將馬利亞講成神性嘅來源，亦唔係將耶穌分成兩位。",
+    "reference": "431年以弗所會議：基督位格與 Theotokos",
+    "source": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/incarnation",
+    "verification": "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf#page=399",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-015",
+    "unit": "creeds",
+    "difficulty": 3,
+    "question": "按451年迦克墩會議嘅定義，應該點樣描述基督？",
+    "options": [
+      "同一位基督，完全係神、亦完全係人",
+      "神嘅基督同人嘅耶穌係兩位獨立個體",
+      "神性同人性混合成第三種本性",
+      "基督只有神性，做人只係外表似人"
+    ],
+    "answer": 0,
+    "explanation": "迦克墩定義用「一個位格、兩種本性」表達基督完全係神亦完全係人。呢題講緊該會議嘅定義；部分東方教會冇接受佢嘅用語，相關分歧亦有漫長歷史。",
+    "reference": "451年迦克墩信仰定義",
+    "source": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
+    "verification": "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf#page=399",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-016",
+    "unit": "creeds",
+    "difficulty": 2,
+    "question": "邊位主教喺367年復活節書信中，列出與今日相同嘅新約27卷？",
+    "options": [
+      "亞他那修",
+      "愛任紐",
+      "耶柔米",
+      "奧古斯丁"
+    ],
+    "answer": 0,
+    "explanation": "亞他那修第39封節期書信列出四福音、使徒行傳、書信同啟示錄等27卷。呢份書目係認識新約正典形成嘅重要見證，唔係話一位主教當年先創造咗聖經。",
+    "reference": "亞他那修第39封節期書信第5段（367年）",
+    "source": "https://www.newadvent.org/fathers/2806039.htm",
+    "verification": "https://www.sophiascriptura.com/fathers/athanasius-epistula-festalis-39/",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-017",
+    "unit": "creeds",
+    "difficulty": 1,
+    "question": "耶柔米嘅聖經翻譯工作，同後來稱為「武加大譯本」嘅邊種語言聖經特別有關？",
+    "options": [
+      "拉丁文",
+      "希臘文",
+      "敘利亞文",
+      "古斯拉夫文"
+    ],
+    "answer": 0,
+    "explanation": "耶柔米參考希伯來文、希臘文同已有譯本，參與翻譯同修訂拉丁文聖經。後來嘅武加大譯本對西方教會影響深遠，亦提醒我哋聖經翻譯有長遠嘅教會服侍價值。",
+    "reference": "耶柔米與拉丁文武加大譯本",
+    "source": "https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20071107.html",
+    "verification": "https://wwws.loc.gov/exhibits/bibles/the-gutenberg-bible.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-018",
+    "unit": "creeds",
+    "difficulty": 1,
+    "question": "奧古斯丁嘅《懺悔錄》，主要係一部點樣嘅著作？",
+    "options": [
+      "透過禱告同回顧人生，思想自己點樣歸向神",
+      "按年代記錄所有羅馬皇帝政策嘅史書",
+      "為所有修道院編訂每日作息嘅規則",
+      "專門收集大公會議投票紀錄嘅文件"
+    ],
+    "answer": 0,
+    "explanation": "《懺悔錄》回顧奧古斯丁嘅尋求、掙扎同歸信，亦向神發出禱告同讚美。佢唔單止羅列做錯嘅事，仲思想記憶、時間同恩典，影響咗好多世代嘅信徒。",
+    "reference": "奧古斯丁《懺悔錄》",
+    "source": "https://www.newadvent.org/fathers/1101.htm",
+    "verification": "https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080109.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-019",
+    "unit": "creeds",
+    "difficulty": 1,
+    "question": "記述埃及沙漠修道人安東尼生平嘅《安東尼傳》，由邊位教會領袖撰寫？",
+    "options": [
+      "亞他那修",
+      "奧古斯丁",
+      "耶柔米",
+      "優西比烏"
+    ],
+    "answer": 0,
+    "explanation": "亞他那修寫《安東尼傳》，記述佢重視禱告、節制同屬靈分辨嘅生活。呢本書影響咗修道運動，畀我哋認識一種屬靈傳統，唔等於所有信徒都要離開家庭去沙漠生活。",
+    "reference": "亞他那修《安東尼傳》；早期修道運動",
+    "source": "https://www.newadvent.org/fathers/2811.htm",
+    "verification": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/monasticism1",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-020",
+    "unit": "creeds",
+    "difficulty": 2,
+    "question": "帕科米烏（Pachomius）對早期修道生活有咩重要貢獻？",
+    "options": [
+      "推動有共同規則、共同生活嘅修道團體",
+      "各自住小屋、定期聚埋禱告嘅隱修群體",
+      "獨自在沙漠生活、由訪客提供所需嘅隱修方式",
+      "靠施捨生活、在城市巡迴講道嘅修會"
+    ],
+    "answer": 0,
+    "explanation": "帕科米烏喺埃及建立有規則嘅共同修道生活，修士一齊禱告、工作同生活。佢唔係第一個尋求安靜嘅基督徒，而係將團體修道生活組織起嚟嘅重要人物。",
+    "reference": "帕科米烏與共同修道生活",
+    "source": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/monasticism1",
+    "verification": "https://apostoliki-diakonia.gr/en/eortologio/may-en/15-may-en/",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-021",
+    "unit": "medieval",
+    "difficulty": 1,
+    "question": "《本篤會規》點樣安排修士嘅日常生活？",
+    "options": [
+      "將共同禱告、閱讀同勞動放入有規律嘅生活",
+      "修士分散獨居，各自祈禱禁食，再定期聚集",
+      "按城市宣教需要巡迴講道，靠施捨生活",
+      "以照顧朝聖者同守衛聖地為主要共同使命"
+    ],
+    "answer": 0,
+    "explanation": "本篤會規畀修道團體有共同生活嘅秩序，兼顧禱告、閱讀同勞動，亦講接待客人。佢對西方修道生活影響深遠，幫我哋明白屬靈操練點樣同日常責任相連。",
+    "reference": "《本篤會規》，尤其第43、48、53章",
+    "source": "https://www.solesmes.com/sites/default/files/upload/pdf/rule_of_st_benedict.pdf",
+    "verification": "https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080409.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-022",
+    "unit": "medieval",
+    "difficulty": 2,
+    "question": "597年，教宗貴格利一世差派邊位修士帶領宣教團到英格蘭肯特？",
+    "options": [
+      "坎特伯里嘅奧古斯丁",
+      "希坡嘅奧古斯丁",
+      "愛爾蘭嘅聖派翠克",
+      "里昂嘅愛任紐"
+    ],
+    "answer": 0,
+    "explanation": "坎特伯里嘅奧古斯丁受教宗貴格利一世差派到肯特，唔係寫《懺悔錄》嗰位希坡主教。英倫更早已有基督徒，呢次使命係當地教會歷史嘅重要一步，唔係英國首次有人信主。",
+    "reference": "597年貴格利使命；坎特伯里教會歷史",
+    "source": "https://www.churchofengland.org/about/history-church-england",
+    "verification": "https://www.english-heritage.org.uk/visit/places/st-augustines-abbey/history-and-stories/who-was-st-augustine/",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-023",
+    "unit": "medieval",
+    "difficulty": 2,
+    "question": "九世紀嘅西里爾同美多迪，主要幫邊班人用自己嘅語言認識信仰？",
+    "options": [
+      "斯拉夫人",
+      "盎格魯撒克遜人",
+      "阿拉伯人",
+      "北歐人"
+    ],
+    "answer": 0,
+    "explanation": "西里爾、美多迪同學生翻譯聖經及敬拜文本，幫斯拉夫人用自己嘅語言認識信仰。呢段歷史提醒教會：跨文化宣教要認真理解對方語言，唔好將自己文化當成福音本身。",
+    "reference": "九世紀西里爾、美多迪與斯拉夫宣教",
+    "source": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saints-cyril-and-methodiusevangelizers-of-the-slavs-and-equal-to-the-apostl",
+    "verification": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_19850602_slavorum-apostoli.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-024",
+    "unit": "medieval",
+    "difficulty": 2,
+    "question": "910年建立嘅克呂尼修道院，後來帶動咗邊方面嘅更新？",
+    "options": [
+      "重整本篤修道生活，重視禱告同減少地方貴族、政治權力干預",
+      "將修道院完全交畀地方貴族直接管理",
+      "建立靠施捨生活、喺城市巡迴傳道嘅修會",
+      "首次為教會編訂新約27卷嘅書目"
+    ],
+    "answer": 0,
+    "explanation": "克呂尼修道院喺法國建立，帶動修道生活更新，重視敬拜同較少受地方貴族同政治權力干預。佢嘅影響透過修道院網絡傳開，顯示中世紀教會內部一直有人嘗試改革同更新。",
+    "reference": "克呂尼修道院創立與克呂尼改革",
+    "source": "https://www.cluny-abbaye.fr/en/discover/history-of-the-abbey-of-cluny",
+    "verification": "https://www.vatican.va/content/benedict-xvi/en/audiences/2009/documents/hf_ben-xvi_aud_20091111.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-025",
+    "unit": "medieval",
+    "difficulty": 1,
+    "question": "教會歷史常用1054年，作為邊段分裂嘅重要標記？",
+    "options": [
+      "東方教會同西方教會逐步分裂",
+      "路德宗同改革宗分開",
+      "循道宗同浸信會分開",
+      "英格蘭教會同羅馬分開"
+    ],
+    "answer": 0,
+    "explanation": "1054年，教宗使節同君士坦丁堡牧首一方互相作出教會處分，常被用作東西方分裂嘅標記。不過分裂有語言、政治同神學等長期因素，唔係當日就將所有東西方信徒完全分開。",
+    "reference": "1054年事件與東西方教會分裂",
+    "source": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/eleventh-century/the-great-schism",
+    "verification": "https://www.oikoumene.org/resources/documents/dictionary-of-the-ecumenical-movement-orthodoxy",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-026",
+    "unit": "medieval",
+    "difficulty": 2,
+    "question": "1095年，烏爾班二世喺克勒芒會議嘅呼籲，帶動咗邊場遠征？",
+    "options": [
+      "第一次十字軍東征",
+      "第三次十字軍東征",
+      "第四次十字軍東征",
+      "後來稱為「兒童十字軍」嘅運動"
+    ],
+    "answer": 0,
+    "explanation": "烏爾班二世呼籲支援東方基督徒，並收復聖地，促成第一次十字軍東征。閱讀呢段歷史，要同時認識當時動機同戰爭造成嘅傷害，唔將宗教口號當成暴力嘅保證。",
+    "reference": "1095年克勒芒會議；第一次十字軍東征",
+    "source": "https://sourcebooks.web.fordham.edu/source/urban2-5vers.asp",
+    "verification": "https://oer.minotstateu.edu/projects/105SourceReader/pope-urban-ii-speech-at-the-council-of-clermont.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-027",
+    "unit": "medieval",
+    "difficulty": 1,
+    "question": "亞西西嘅方濟同早期方濟會生活，特別強調咩？",
+    "options": [
+      "效法基督，過簡樸生活，與窮人同行",
+      "以長期獨居同禁言作為唯一嘅生活方式",
+      "以擁有大量土地支持固定院舍作為核心",
+      "只喺大學研究神學，唔參與城鎮日常生活"
+    ],
+    "answer": 0,
+    "explanation": "方濟同弟兄重視按福音生活、放下財產依靠，同窮人同行。佢哋嘅運動幫我哋睇到，中世紀教會唔單止有權力結構，亦有反省財富同重新實踐福音嘅聲音。",
+    "reference": "方濟《第二會規》第1–2、6章",
+    "source": "https://www.ofmcap.org/en/second-rule-of-the-friars-minor/",
+    "verification": "https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20100127.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-028",
+    "unit": "medieval",
+    "difficulty": 2,
+    "question": "阿奎那喺神學研究上，點樣看待信仰同理性嘅關係？",
+    "options": [
+      "兩者可以互相配合，但理性唔能夠盡知啟示嘅奧祕",
+      "一有信仰就必須停止一切理性思考",
+      "所有啟示內容都只靠理性就必定能證明",
+      "理性同信仰各有一套真理，互相矛盾都冇問題"
+    ],
+    "answer": 0,
+    "explanation": "阿奎那認為信仰同理性都指向真理，可以互相幫助，亦各有範圍。佢用提問同論證研究神學，提醒信徒認真思考，唔使將信仰同理性簡單講成對立。",
+    "reference": "阿奎那《神學大全》第一部，第1問題",
+    "source": "https://www.newadvent.org/summa/1001.htm",
+    "verification": "https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20100602.html",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-029",
+    "unit": "medieval",
+    "difficulty": 3,
+    "question": "1378年開始嘅「西方大分裂」，主要出現咗咩局面？",
+    "options": [
+      "同時有互相競爭嘅教宗人選，各有支持者",
+      "教宗長期住喺亞維儂，但一直冇競爭人選",
+      "羅馬教宗使節同君士坦丁堡牧首互相絕罰",
+      "歐洲新教同羅馬因稱義教義爭論而分開"
+    ],
+    "answer": 0,
+    "explanation": "西方大分裂期間，羅馬、亞維儂等地有互相競爭嘅教宗人選，教會同政治勢力各自支持不同人。佢同通常以1054年作標記嘅東西方分裂，係兩段唔同歷史。",
+    "reference": "西方大分裂（1378–1417）",
+    "source": "https://www.historia.va/content/dam/scienzestoriche/documenti/sezionestoriadellachiesa/Great%20Western%20Schism.Lessico.pdf",
+    "verification": "https://www.cambridge.org/core/journals/journal-of-ecclesiastical-history/article/abs/schism-within-the-curia-the-twin-papal-elections-of-1378/2C24B6A444EFDFFFEFC3B4A0692BB772",
+    "sourceLabel": "查閱歷史資料"
+  },
+  {
+    "id": "church-030",
+    "unit": "medieval",
+    "difficulty": 1,
+    "question": "十五世紀古騰堡聖經嘅出版，點解係傳播歷史嘅重要一步？",
+    "options": [
+      "用歐洲金屬活字印刷製作大型聖經，推動書籍印製",
+      "以整頁雕刻木版方式，印製第一批拉丁文聖經",
+      "推出德文新約，配合路德推動宗教改革",
+      "用重新修訂嘅希臘文新約，取代當時嘅拉丁文聖經"
+    ],
+    "answer": 0,
+    "explanation": "古騰堡聖經喺十五世紀中葉於美因茨印製，採用金屬活字，推動歐洲印刷發展。佢唔係世界上第一種印刷技術，亦唔代表人人即時有書，但為日後文字傳播開咗重要新路。",
+    "reference": "古騰堡聖經，約1455年，美因茨",
+    "source": "https://wwws.loc.gov/exhibits/bibles/the-gutenberg-bible.html",
+    "verification": "https://specialcollections-blog.lib.cam.ac.uk/?p=13354",
+    "sourceLabel": "查閱歷史資料"
+  }
+]

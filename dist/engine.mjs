@@ -1,25 +1,27 @@
-import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261101-5';
+import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261101-7';
+import { HISTORY_QUESTIONS, HISTORY_QUESTION_MAP, HISTORY_TOPIC, COURSE_UNITS } from './history-course.mjs?v=20261101-7';
 
 export const TRIAL_LEVELS = {
   1: { degree:'低', name:'少少試探', description:'主日學基本功，唔好輕敵就得。' },
   2: { degree:'中', name:'開始有啲 feel', description:'答案個個似啱，考你識唔識分辨。' },
-  3: { degree:'高', name:'就嚟頂唔住', description:'乾糧上枱，今次真係要有根有基。' }
+  3: { degree:'高', name:'就嚟頂唔住', description:'今次要諗深一層，睇你對經文同背景有幾熟。' }
 };
 export const DIFFICULTIES = Object.fromEntries(Object.entries(TRIAL_LEVELS).map(([key,value]) => [key,value.name]));
 export const GENERAL_QUOTAS = Object.fromEntries(TOPICS.map(t => [t.id, 5]));
 const LEGACY_GENERAL_QUOTAS = { overview: 6, old: 6, new: 6, people: 6, context: 6, theology: 4, history: 3, language: 3 };
 export function questionForRound(round, id) {
+  if (HISTORY_QUESTION_MAP.has(id)) return HISTORY_QUESTION_MAP.get(id);
   return (round.bankRevision === 3 ? QUESTION_MAP : round.bankRevision === 2 ? QUESTION_MAP_V2 : LEGACY_QUESTION_MAP).get(id);
 }
 export const LEVELS = [
-  { min: 0, name: '初信探索級', symbol: '🌱', gentle: '肯開始就值得鼓勵。由一章福音書開始，慢慢建立基本功。', cheeky: '靈奶都未飲完就想食乾糧？由一章福音書補起，唔使急住講阿們。' },
+  { min: 0, name: '初信探索級', symbol: '🌱', gentle: '肯開始就值得鼓勵。由一章福音書開始，慢慢建立基本功。', cheeky: '基本題仲要再溫吓，唔使急住講阿們。由一章福音書讀起啦。' },
   { min: 20, name: '讀經起步級', symbol: '🌿', gentle: '你已經認到一啲路標。保持每日讀一小段，進步會慢慢累積。', cheeky: '主日學好似有聽過，答案又好似走失咗。唔好齋返崇拜，今晚開返本聖經啦。' },
-  { min: 40, name: '信咗一排級', symbol: '📖', gentle: '已經有一定基礎！試吓連前後文一齊讀，熟悉嘅經文會更立體。', cheeky: '有啲根，但仲有幾個伏位會吹到你郁。返去補經，下次企穩啲。' },
-  { min: 55, name: '神學生挑戰級', symbol: '🎒', gentle: '基本功漸漸穩固。試吓整理書卷主線，再向較弱嘅範圍探索。', cheeky: '開始食到乾糧喎！小組查經可以開聲，不過唔好開口就斷章取義。' },
-  { min: 70, name: '牧會研究級', symbol: '🕊️', gentle: '跨主題表現紮實。把知識化成關懷同分享，學習就更有意思。', cheeky: '八路靈糧都食過，唔錯！記得同弟兄姊妹一齊扎根，唔好自己一個收埋晒。' },
+  { min: 40, name: '信咗一排級', symbol: '📖', gentle: '已經有一定基礎！試吓連前後文一齊讀，熟悉嘅經文會更立體。', cheeky: '有啲基礎，但仲有幾個地方未熟。睇返解說，下次企穩啲。' },
+  { min: 55, name: '神學生挑戰級', symbol: '🎒', gentle: '基本功漸漸穩固。試吓整理書卷主線，再向較弱嘅範圍探索。', cheeky: '開始熟路喎！小組查經可以開聲，不過唔好開口就斷章取義。' },
+  { min: 70, name: '牧會研究級', symbol: '🕊️', gentle: '跨主題表現紮實。把知識化成關懷同分享，學習就更有意思。', cheeky: '八個主題都有認識，唔錯！記得同弟兄姊妹一齊扎根，唔好自己一個收埋晒。' },
   { min: 80, name: '牧師挑戰級', symbol: '⛪', gentle: '你對多個範圍都有好掌握。帶住謙卑繼續查考，亦陪其他人一齊學。', cheeky: '經文裝備幾齊喎！有知識之餘，愛心同謙卑都記得帶埋出門口。' },
   { min: 90, name: '神學老師挑戰級', symbol: '🎓', gentle: '表現出色！繼續比較資料、留意處境，讓學問同生命一齊成長。', cheeky: '查經筆記可以借小羊抄吓。滿有知識都要繼續受教，唔好將謙卑當選修。' },
-  { min: 97, name: '神學家彩蛋級', symbol: '✨', gentle: '非常精彩嘅一局！保持好奇心，聖經仍然值得你一生細讀。', cheeky: '乾糧嚼得幾開喎！小羊遞上螢光筆，繼續查考，唔好以為已經得著晒。' }
+  { min: 97, name: '神學家彩蛋級', symbol: '✨', gentle: '非常精彩嘅一局！保持好奇心，聖經仍然值得你一生細讀。', cheeky: '經文同背景都記得幾清楚喎！小羊遞上螢光筆，繼續查考，唔好以為已經得著晒。' }
 ];
 
 export function seededRandom(seed) {
@@ -48,7 +50,7 @@ export function questionPool(topic, difficulty = 'all') {
   return QUESTIONS.filter(q => q.topic === topic && (difficulty === 'all' || q.difficulty === Number(difficulty)));
 }
 
-export function createRound({ mode = 'general', topic = 'overview', count, difficulty = 'all', tone = 'cheeky', ids = [], random = Math.random } = {}) {
+export function createRound({ mode = 'general', topic = 'overview', count, difficulty = 'all', tone = 'cheeky', ids = [], unit, random = Math.random } = {}) {
   let selected;
   if (mode === 'general') {
     const size = count === undefined ? 40 : Number(count);
@@ -61,14 +63,17 @@ export function createRound({ mode = 'general', topic = 'overview', count, diffi
   } else if (mode === 'trial') {
     if (!['1','2','3'].includes(String(difficulty))) throw new Error('先揀低、中、高，先知今次試探去到邊。');
     selected = TOPICS.flatMap(t => shuffle(questionPool(t.id,difficulty),random).slice(0,2));
+  } else if (mode === 'church') {
+    if (!COURSE_UNITS.some(u => u.id === unit)) throw new Error('揀一課教會歷史，慢慢開始操練。');
+    selected = HISTORY_QUESTIONS.filter(q => q.unit === unit);
   } else if (mode === 'review') {
     selected = shuffle([...new Set(ids)].map(id => QUESTION_MAP.get(id)).filter(Boolean), random).slice(0, 30);
   } else if (mode === 'topic') {
     selected = shuffle(questionPool(topic, difficulty), random).slice(0, Math.max(1, Math.min(30, Number(count) || 10)));
   } else { throw new Error('未知測驗模式'); }
   if (!selected.length) throw new Error('暫時冇呢類題目，可以揀其他主題。');
-  const items = shuffle(selected, random).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], random) }));
-  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 3, distribution: 'balanced-v3', mode, topic: mode === 'topic' ? topic : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
+  const items = (mode === 'church' ? selected : shuffle(selected, random)).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], random) }));
+  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 3, distribution: 'balanced-v3', mode, topic: mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:mode === 'church' ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
 }
 
 export function answerRound(round, selected) {
@@ -95,7 +100,7 @@ export function summarizeRound(round) {
   const correct = rows.filter(r => r.correct).length;
   const skipped = rows.filter(r => r.answered && r.selected === null).length;
   const percent = correct * 100 / rows.length;
-  const breakdown = TOPICS.map(t => {
+  const breakdown = [...TOPICS,...(rows.some(r => r.question.topic === HISTORY_TOPIC.id) ? [HISTORY_TOPIC] : [])].map(t => {
     const entries = rows.filter(r => r.question.topic === t.id);
     return { ...t, total: entries.length, correct: entries.filter(r => r.correct).length, percent: entries.length ? entries.filter(r => r.correct).length / entries.length * 100 : null };
   });
@@ -103,7 +108,7 @@ export function summarizeRound(round) {
 }
 
 export function validRound(round, completed = false) {
-  if (!round || !['general', 'topic', 'trial', 'review', ...(completed ? ['daily'] : [])].includes(round.mode) || typeof round.id !== 'string' || !/^\d+-\d+$/.test(round.id)) return false;
+  if (!round || !['general', 'topic', 'trial', 'church', 'review', ...(completed ? ['daily'] : [])].includes(round.mode) || typeof round.id !== 'string' || !/^\d+-\d+$/.test(round.id)) return false;
   if (!['cheeky', 'gentle'].includes(round.tone) || !Number.isFinite(Date.parse(round.startedAt))) return false;
   if (!Array.isArray(round.items) || !round.items.length || round.items.length > 40 || new Set(round.items.map(i => i?.id)).size !== round.items.length) return false;
   if (!round.items.every(i => QUESTION_MAP.has(i?.id) && Array.isArray(i.order) && [...i.order].sort().join('') === '0123')) return false;
@@ -126,6 +131,8 @@ export function validRound(round, completed = false) {
     }
   }
   if (round.mode === 'topic' && (!TOPICS.some(t => t.id === round.topic) || !round.items.every(i => QUESTION_MAP.get(i.id).topic === round.topic))) return false;
+  if (round.mode === 'church' && (round.items.length !== 10 || round.topic !== HISTORY_TOPIC.id ||
+    !COURSE_UNITS.some(u => u.id === round.unit) || !round.items.every(i => HISTORY_QUESTION_MAP.get(i.id)?.unit === round.unit))) return false;
   if (round.mode === 'trial' && (round.items.length !== 16 || !['1','2','3'].includes(String(round.difficulty)) ||
     !round.items.every(i => QUESTION_MAP.get(i.id).difficulty === Number(round.difficulty)) ||
     !TOPICS.every(t => round.items.filter(i => QUESTION_MAP.get(i.id).topic === t.id).length === 2))) return false;

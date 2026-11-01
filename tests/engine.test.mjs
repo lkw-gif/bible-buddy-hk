@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, TOPICS, LEGACY_QUESTION_MAP } from '../dist/questions.mjs';
 import { createRound, answerRound, advanceRound, summarizeRound, levelFor, LEVELS, validRound, seededRandom, hongKongDay, integrateResult, questionForRound } from '../dist/engine.mjs';
+import { COURSE_UNITS, HISTORY_QUESTIONS, HISTORY_TOPIC, cleanCourseAnswers, courseStatus } from '../dist/history-course.mjs';
 
 function finish(round, decide = q => q.answer) {
   while (!round.finishedAt) { const q = QUESTION_MAP.get(round.items[round.index].id); round = advanceRound(answerRound(round, decide(q, round.index))); }
@@ -164,4 +165,32 @@ test('Current vocabulary questions use related terms as distractors', () => {
   assert.deepEqual(QUESTION_MAP.get('history-02').options,['325年','313年','381年','431年']);
   assert(QUESTION_MAP.get('old-05').question.includes('細小圓物'));
   assert(QUESTION_MAP.get('theology-07').question.startsWith('保羅'));
+});
+
+test('Ten church-history lessons each expose ten questions with explanations and source checks', () => {
+  const covered=new Set();
+  for(const unit of COURSE_UNITS) {
+    const r=createRound({mode:'church',unit:unit.id,random:seededRandom(unit.id)});
+    assert(validRound(r));assert.equal(r.items.length,10);
+    for(const item of r.items){const q=questionForRound(r,item.id);assert.equal(q.unit,unit.id);assert.equal(q.topic,HISTORY_TOPIC.id);assert(q.explanation.length>=35);assert(q.source.startsWith('https://'));assert(q.verification.startsWith('https://'));covered.add(q.id);}
+    const result=finish(r);assert(validRound(result,true));const summary=summarizeRound(result);
+    assert.equal(summary.percent,100);assert.equal(summary.level,null);
+    assert.equal(summary.breakdown.find(t=>t.id===HISTORY_TOPIC.id).correct,10);
+  }
+  assert.equal(covered.size,100);assert.equal(HISTORY_QUESTIONS.length,100);
+  assert.throws(()=>createRound({mode:'church',unit:'missing'}));
+  const r=createRound({mode:'church',unit:'early'});assert(!validRound({...r,unit:'china'}));
+  r.items[0]={id:'old-01',order:[0,1,2,3]};assert(!validRound(r));
+});
+
+test('History-study progress tolerates old data, tracks skipped answers, and works in mixed revision', () => {
+  const answers=cleanCourseAnswers({'church-001':true,'church-002':false,'old-01':true,'missing':true,'church-003':'true'});
+  assert.deepEqual(answers,{'church-001':true,'church-002':false});
+  assert.deepEqual(cleanCourseAnswers(null),{});assert.deepEqual(cleanCourseAnswers([]),{});
+  assert.deepEqual(courseStatus(answers,'early'),{total:10,answered:2,correct:1});
+  assert.deepEqual(courseStatus(answers),{total:100,answered:2,correct:1});
+  const r=createRound({mode:'review',ids:['church-001','old-01','church-001']});
+  assert.equal(r.items.length,2);assert(validRound(r));
+  const summary=summarizeRound(finish(r,q=>q.id==='church-001'?null:0));
+  assert.equal(summary.correct,1);assert.equal(summary.skipped,1);assert.equal(summary.level,null);
 });
