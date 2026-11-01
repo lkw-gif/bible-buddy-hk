@@ -1,0 +1,362 @@
+[
+  {
+    "id": "challenge-context-01",
+    "topic": "context",
+    "difficulty": 3,
+    "question": "哥林多前書8章講「知識叫人自高自大，愛心能造就人」，當時保羅正處理邊個問題？",
+    "options": [
+      "食祭過偶像嘅肉，同較軟弱信徒嘅良心",
+      "信徒彼此打官司，同教外法庭嘅權柄",
+      "守主餐時貧富分開，同餅杯嘅意義",
+      "教會有人否認復活，同身體將來嘅改變"
+    ],
+    "answer": 0,
+    "reference": "哥林多前書8:1–13",
+    "explanation": "呢句唔係叫人唔好學知識，而係回應食祭偶像之物嘅爭論。保羅提醒自認明白嘅信徒，唔好只講自己有自由，仲要顧及較軟弱弟兄姊妹嘅良心，唔好令佢哋跌倒。",
+    "source": "https://bible.usccb.org/bible/1corinthians/8",
+    "verification": "https://www.biblegateway.com/passage/?search=1%20Corinthians%208&version=CUV",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-context-02",
+    "topic": "context",
+    "difficulty": 3,
+    "question": "哥林多後書3章話「字句係叫人死，聖靈係叫人活」，前後文主要將邊兩樣作比較？",
+    "options": [
+      "摩西之約中刻喺石版嘅律法，同聖靈帶來嘅新約",
+      "逐字理解經文嘅方法，同用象徵理解經文嘅方法",
+      "寫低嘅使徒書信，同未寫低嘅教會口頭傳統",
+      "用希臘文嘅教會，同用希伯來文嘅教會"
+    ],
+    "answer": 0,
+    "reference": "哥林多後書3:3–11",
+    "explanation": "保羅前面講刻喺石版上嘅律法，後面再比較定人有罪嘅舊約，同聖靈帶來生命嘅新約。呢句唔係教人放棄認真讀字句，改為任意搵一個神秘解釋；重點係兩種約帶來嘅不同結果。",
+    "source": "https://bible.usccb.org/bible/2corinthians/3",
+    "verification": "https://www.biblegateway.com/passage/?search=2%20Corinthians%203&version=CUV",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-context-03",
+    "topic": "context",
+    "difficulty": 3,
+    "question": "約翰福音開始記述耶穌講「羊圈」同「好牧人」之前，緊接住記述咗邊件事？",
+    "options": [
+      "生來瞎眼嘅人得醫治，之後被趕出會堂",
+      "拉撒路從死裏復活，之後祭司商議殺耶穌",
+      "畢士大池邊嘅病人得醫治，之後被人質問",
+      "撒馬利亞婦人喺井邊同耶穌談論敬拜"
+    ],
+    "answer": 0,
+    "reference": "約翰福音9:1–10:21",
+    "explanation": "第9章記述生來瞎眼嘅人得醫治，受到盤問，最後被趕出去。第10章接住講牧人同羊，讀埋前段，就更容易留意耶穌點樣對比真正關心羊嘅牧人同當時領袖嘅表現。",
+    "source": "https://bible.usccb.org/bible/john/9",
+    "verification": "https://www.biblegateway.com/passage/?search=John%209%3A35-10%3A21&version=CUV",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-context-04",
+    "topic": "context",
+    "difficulty": 3,
+    "question": "路加福音15章連講失羊、失錢同兩個兒子嘅比喻，開首係回應邊個批評？",
+    "options": [
+      "耶穌接待罪人，仲同佢哋一齊食飯",
+      "耶穌嘅門徒冇按長老傳統洗手先食飯",
+      "耶穌同門徒喺安息日掐麥穗嚟食",
+      "耶穌接受婦人膏抹，冇將香膏變賣賙濟"
+    ],
+    "answer": 0,
+    "reference": "路加福音15:1–3、11–32",
+    "explanation": "法利賽人同文士埋怨耶穌接待罪人，耶穌先講呢幾個比喻。連住個開場去讀，唔單止會留意失而復得嘅喜樂，亦會睇到大兒子唔肯入席，同埋父親出去勸佢嘅用意。",
+    "source": "https://bible.usccb.org/bible/luke/15",
+    "verification": "https://www.biblegateway.com/passage/?search=Luke%2015&version=CUV",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-context-05",
+    "topic": "context",
+    "difficulty": 3,
+    "question": "加拉太書3:13引述「凡掛在木頭上都是被咒詛的」，出自舊約邊一章？",
+    "options": [
+      "申命記21章",
+      "民數記21章",
+      "利未記16章",
+      "出埃及記12章"
+    ],
+    "answer": 0,
+    "reference": "加拉太書3:13；申命記21:22–23",
+    "explanation": "保羅引用申命記關於被處決後掛喺木上嘅人、當日要安葬嘅法例，講基督為人承受咒詛。民數記21章嘅銅蛇亦有被舉起嘅圖像，但唔係呢句引文嘅出處，兩段唔好撈亂。",
+    "source": "https://bible.usccb.org/bible/galatians/3",
+    "verification": "https://www.biblegateway.com/passage/?search=Deuteronomy%2021%3A22-23&version=CUV",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-theology-01",
+    "topic": "theology",
+    "difficulty": 3,
+    "question": "按《奧斯堡信條》第7條，教會真正合一所需要嘅共同基礎係咩？",
+    "options": [
+      "福音教導同聖禮施行一致，唔要求各地人定禮儀一樣",
+      "禮儀用語同節期安排一致，容許福音教導各有不同",
+      "同屬一個地區主教管轄，容許聖禮理解各有不同",
+      "採用同一套教會管治，容許福音同聖禮各自處理"
+    ],
+    "answer": 0,
+    "reference": "《奧斯堡信條》第7條：論教會",
+    "explanation": "呢條信義宗信條將合一嘅基礎放喺福音教導同聖禮，並講明人所訂嘅傳統禮儀唔需要處處一樣。佢唔係話教導無所謂，亦唔係將合一簡單等同崇拜形式或者管理架構一致。",
+    "source": "https://bookofconcord.org/augsburg-confession/of-the-church/",
+    "verification": "https://www.ekd.de/en/The-Confession-of-Faith-of-Augsburg-129.htm",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-theology-02",
+    "topic": "theology",
+    "difficulty": 3,
+    "question": "按《西敏小要理問答》33同35問，「稱義」同「成聖」應該點樣分清？",
+    "options": [
+      "稱義講神赦罪並接納人為義；成聖講整個人逐步更新",
+      "稱義講整個人逐步更新；成聖講神赦罪並接納人為義",
+      "稱義講被收納為神兒女；成聖講領受教會事奉職分",
+      "稱義講領受教會事奉職分；成聖講被收納為神兒女"
+    ],
+    "answer": 0,
+    "reference": "《西敏小要理問答》33–35問",
+    "explanation": "問答將稱義講成神白白赦罪、因基督而接納人為義；成聖就係神更新整個人，叫人越嚟越離罪行義。兩樣都出於恩典，但所講嘅重點唔同；被收納為兒女則另用「得兒子名分」說明。",
+    "source": "https://www.opc.org/sc.html",
+    "verification": "https://www.opc.org/wcf.html",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-theology-03",
+    "topic": "theology",
+    "difficulty": 3,
+    "question": "按680至681年第三次君士坦丁堡會議嘅定義，基督嘅意志應該點樣理解？",
+    "options": [
+      "有神性同人性嘅意志，人性意志唔同神性意志對抗",
+      "神性同人性共用一個意志，聯合後唔再有分別",
+      "神性同人性各屬一位行動者，兩者協商先作決定",
+      "神性意志逐步取代人性意志，復活後只餘神性"
+    ],
+    "answer": 0,
+    "reference": "第三次君士坦丁堡會議信仰定義（680–681）",
+    "explanation": "會議認為，基督既完全係神亦完全係人，就有神性同人性嘅意志，並強調兩者唔互相對抗。呢個講法既唔將耶穌拆成兩位，亦唔用神性抹走祂真實嘅人性，係對當時爭論嘅回應。",
+    "source": "https://www.newadvent.org/fathers/3813.htm",
+    "verification": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/incarnation",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-theology-04",
+    "topic": "theology",
+    "difficulty": 3,
+    "question": "古典三一教義所反對嘅「形態論」（modalism），主要係邊個講法？",
+    "options": [
+      "父、子、聖靈係同一位格，按唔同方式向人出現",
+      "父、子、聖靈係三位格，同有一個神嘅本質",
+      "聖子係最高嘅受造物，喺創造世界之前先存在",
+      "基督嘅神性同人性分屬兩個獨立行動嘅位格"
+    ],
+    "answer": 0,
+    "reference": "特土良《反普拉克西亞》；早期三一教義爭論",
+    "explanation": "形態論將父、子、聖靈嘅分別理解成同一位嘅不同表現，冇保留三個位格嘅真實分別。佢同將聖子視為受造物、或者將基督拆成兩位嘅主張唔一樣，讀早期教義要分清爭論焦點。",
+    "source": "https://www.newadvent.org/fathers/0317.htm",
+    "verification": "https://www.methodist.org.sg/methodist-message/modalistic-monarchianism/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-theology-05",
+    "topic": "theology",
+    "difficulty": 3,
+    "question": "381年尼西亞—君士坦丁堡信經嘅希臘文表述，講聖靈「由邊位而出」？",
+    "options": [
+      "由父而出",
+      "由父及子而出",
+      "由子而出",
+      "由父藉教會而出"
+    ],
+    "answer": 0,
+    "reference": "381年尼西亞—君士坦丁堡信經：聖靈條文",
+    "explanation": "呢題問信經原來嘅希臘文表述，係「由父而出」。後來部分西方教會加入「及子」嘅字句，成為東西方教會爭論之一；要分清原文同後來版本，唔係直接判定今日某個傳統嘅全部神學。",
+    "source": "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/holy-spirit",
+    "verification": "https://www.oca.org/wonder/what-do-i-belive/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-history-01",
+    "topic": "history",
+    "difficulty": 3,
+    "question": "1417年選出馬丁五世、推動結束西方大分裂嘅，係邊個會議？",
+    "options": [
+      "康士坦斯會議",
+      "比薩會議",
+      "佛羅倫斯會議",
+      "特倫多會議"
+    ],
+    "answer": 0,
+    "reference": "康士坦斯會議（1414–1418）；馬丁五世於1417年當選",
+    "explanation": "康士坦斯會議處理多位教宗互相競爭嘅局面，1417年選出馬丁五世，成為結束西方大分裂嘅關鍵。較早嘅比薩會議反而令競爭人選增加；呢段歷史唔係1054年東西方分裂嗰一段。",
+    "source": "https://www.catholicculture.org/culture/library/view.cfm?recnum=5346",
+    "verification": "https://www.newadvent.org/cathen/04288a.htm",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-history-02",
+    "topic": "history",
+    "difficulty": 3,
+    "question": "1555年《奧斯堡宗教和約》最初主要承認邊兩個教會傳統共存？",
+    "options": [
+      "天主教同路德宗",
+      "天主教同改革宗",
+      "路德宗同信洗派",
+      "改革宗同聖公宗"
+    ],
+    "answer": 0,
+    "reference": "1555年《奧斯堡宗教和約》",
+    "explanation": "和約承認天主教同《奧斯堡信條》追隨者即路德宗嘅地位，多按地區統治者選擇所屬信仰。佢唔係今日人人自行選教嘅完整宗教自由，改革宗亦唔喺最初保障範圍，唔好將1555同後來安排混淆。",
+    "source": "https://germanhistorydocs.org/de/von-den-reformationen-bis-zum-dreissigjaehrigen-krieg-1500-1648/der-augsburger-religionsfriede-25-september-1555",
+    "verification": "https://www.augsburg.de/kultur/friedensstadt-augsburg/geschichte-der-friedensstadt",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-history-03",
+    "topic": "history",
+    "difficulty": 3,
+    "question": "1598年《南特敕令》主要畀邊個群體有限度嘅宗教保障？",
+    "options": [
+      "法國胡格諾派，即當地改革宗信徒",
+      "德意志路德宗，即奧斯堡信條信徒",
+      "尼德蘭信洗派，即先信後洗嘅信徒",
+      "英格蘭清教徒，即主張改革國教嘅信徒"
+    ],
+    "answer": 0,
+    "reference": "1598年《南特敕令》；法國宗教戰爭",
+    "explanation": "亨利四世頒布《南特敕令》，畀法國胡格諾派一定宗教同公民保障，回應長期宗教戰爭。呢啲保障有地區同條件限制，唔等於各宗教已經完全平等，亦唔係德意志或者英格蘭嘅宗教和約。",
+    "source": "https://www.assemblee-nationale.fr/histoire/eglise-etat/edit-nantes.asp",
+    "verification": "https://museeprotestant.org/en/notice/ledit-de-nantes/",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-history-04",
+    "topic": "history",
+    "difficulty": 3,
+    "question": "1530年提交奧斯堡會議嘅信仰聲明，主要由邊位改革者執筆？",
+    "options": [
+      "腓力．墨蘭頓",
+      "馬丁．路德",
+      "約翰．加爾文",
+      "慈運理"
+    ],
+    "answer": 0,
+    "reference": "1530年《奧斯堡信條》；墨蘭頓執筆",
+    "explanation": "墨蘭頓係《奧斯堡信條》嘅主要執筆者，文件表達咗路德改革陣營嘅信仰，亦有路德同其他同工嘅影響。要分清一份文件屬於邊個運動，同邊個實際整理文字，唔好見到信義宗就全部答路德。",
+    "source": "https://www.ekd.de/en/The-Confession-of-Faith-of-Augsburg-129.htm",
+    "verification": "https://www.1580boc.org/ac",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-history-05",
+    "topic": "history",
+    "difficulty": 3,
+    "question": "1947年成立嘅南印度教會，主要結合咗邊幾個教會傳統？",
+    "options": [
+      "聖公、循道、長老同公理宗",
+      "聖公、浸信、路德同門諾宗",
+      "循道、浸信、東正同天主教",
+      "長老、公理、五旬節同東方正統教會"
+    ],
+    "answer": 0,
+    "reference": "南印度教會1947年聯合；WCC及聖公宗官方介紹",
+    "explanation": "南印度教會由當地聖公會、循道會，同長老及公理宗合成嘅南印度聯合教會一齊組成。呢次係實際教會聯合，唔只係成立合作委員會；認識合一運動，要分清合作同組織聯合嘅不同例子。",
+    "source": "https://www.oikoumene.org/member-churches/church-of-south-india",
+    "verification": "https://www.anglicancommunion.org/province/south-india/?Idind=499&view=alpha",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-language-01",
+    "topic": "language",
+    "difficulty": 3,
+    "question": "羅馬書3:25用嘅 hilastērion（ἱλαστήριον），喺希伯來書9:5用嚟指邊樣聖所物件？",
+    "options": [
+      "約櫃上嘅施恩座／贖罪蓋",
+      "聖所入面燒香嘅金香壇",
+      "祭司擺放陳設餅嘅桌子",
+      "院子入面獻祭用嘅銅壇"
+    ],
+    "answer": 0,
+    "reference": "希臘文ἱλαστήριον；羅馬書3:25；希伯來書9:5",
+    "explanation": "希伯來書9:5用呢個字講約櫃上嘅施恩座，亦即贖罪蓋，唔係香壇或者祭壇。對照同一個字喺不同經文嘅用法，有助認識羅馬書嘅贖罪背景，但唔應假設每個句子都只有同一個翻譯方法。",
+    "source": "https://biblehub.com/text/hebrews/9-5.htm",
+    "verification": "https://biblehub.com/greek/2435.htm",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-language-02",
+    "topic": "language",
+    "difficulty": 3,
+    "question": "加拉太書3:24用 paidagōgos（παιδαγωγός）形容律法，古代呢個角色最接近邊一種人？",
+    "options": [
+      "負責看管、管教同帶小朋友返學嘅家僕",
+      "喺學院專門教授哲學同修辭嘅老師",
+      "替未成年繼承人保管地契嘅公證人",
+      "主持男孩成年禮並記錄家譜嘅祭司"
+    ],
+    "answer": 0,
+    "reference": "加拉太書3:23–25；希臘文παιδαγωγός",
+    "explanation": "呢個字唔單止係今日課室教書嘅老師，古代常指看管同管教孩子、帶佢返學嘅家僕。保羅用佢形容律法喺基督來到前嘅看管作用；要連住前後講信心同兒子身份嘅經文一齊讀。",
+    "source": "https://biblehub.com/greek/3807.htm",
+    "verification": "https://bible.usccb.org/bible/galatians/3",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-language-03",
+    "topic": "language",
+    "difficulty": 3,
+    "question": "約翰福音3:35同5:20都講天父愛子，兩節原文用「愛」嘅字有咩分別？",
+    "options": [
+      "3:35用 agapaō，5:20用 phileō",
+      "兩節都用 agapaō",
+      "兩節都用 phileō",
+      "3:35用 phileō，5:20用 agapaō"
+    ],
+    "answer": 0,
+    "reference": "約翰福音3:35；5:20；希臘文ἀγαπάω、φιλέω",
+    "explanation": "兩節講緊同一個天父愛子嘅關係，卻分別用agapaō同phileō。呢個對照提醒我哋，唔可以硬話一個字永遠只係神聖高級嘅愛，另一個永遠只係較低級嘅友情；字義要睇作者實際點用。",
+    "source": "https://biblehub.com/text/john/3-35.htm",
+    "verification": "https://biblehub.com/text/john/5-20.htm",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-language-04",
+    "topic": "language",
+    "difficulty": 3,
+    "question": "約翰福音1:14嘅 monogenēs，同歌羅西書1:15嘅 prōtotokos，邊個意思配對較準確？",
+    "options": [
+      "獨一／獨生；首生",
+      "首生；獨一／獨生",
+      "初熟果子；獨一／獨生",
+      "獨一／獨生；初熟果子"
+    ],
+    "answer": 0,
+    "reference": "希臘文μονογενής、πρωτότοκος；約翰福音1:14；歌羅西書1:15",
+    "explanation": "Monogenēs常譯獨生，亦帶獨一、獨特嘅意思；prōtotokos係首生，唔係講初熟果子嗰個字。兩個詞唔可以互換，亦要連住歌羅西書所講萬有藉基督而造嘅前後文理解，唔好淨係拆字。",
+    "source": "https://biblehub.com/greek/3439.htm",
+    "verification": "https://biblehub.com/greek/4416.htm",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "challenge-language-05",
+    "topic": "language",
+    "difficulty": 3,
+    "question": "按常用《七十士譯本》印本，申命記6:4用邊個希臘字對應四字神名YHWH？",
+    "options": [
+      "Kyrios（κύριος，主）",
+      "Theos（θεός，神）",
+      "Christos（χριστός，受膏者）",
+      "Despotēs（δεσπότης，主人）"
+    ],
+    "answer": 0,
+    "reference": "《七十士譯本》申命記6:4–5；希臘文κύριος",
+    "explanation": "好多希臘文舊約文本以Kyrios即「主」來表達四字神名，例如申命記6章嘅認信。Theos係「神」，Christos係「受膏者」，唔好因為都用嚟稱呼神或基督，就以為佢哋係同一個詞嘅翻譯。",
+    "source": "https://biblehub.com/sepd/deuteronomy/6.htm",
+    "verification": "https://biblehub.com/greek/2962.htm",
+    "sourceLabel": "查閱資料"
+  }
+]

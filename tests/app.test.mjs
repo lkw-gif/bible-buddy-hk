@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { JSDOM, VirtualConsole } from 'jsdom';
-import { QUESTION_MAP } from '../dist/questions.mjs';
+import { QUESTION_MAP, QUESTIONS, TOPICS } from '../dist/questions.mjs';
+import { createRound } from '../dist/engine.mjs';
 
 // DOM integration tests exercise the actual application module and user events.
 // jsdom does not provide visual layout; dialogs/scroll/clipboard are emulated here.
@@ -28,11 +29,11 @@ async function boot(saved = null, hash = '#/') {
   await import(`../dist/app.mjs?domtest=${++bootCount}`);
   const $ = selector => w.document.querySelector(selector);
   const tick = async () => { await new Promise(resolve => setTimeout(resolve, 5)); };
-  const click = async selector => { const element = $(selector); assert(element, `Missing control ${selector}`); assert(!element.disabled, `Disabled control ${selector}`); element.click(); await tick(); };
+  const click = async selector => { const element = $(selector); assert(element, `Missing control ${selector}`); assert(!element.disabled, `Disabled control ${selector}`); const previousHash=w.location.hash; element.click(); if(w.location.hash!==previousHash) await new Promise(resolve=>w.addEventListener('hashchange',resolve,{once:true})); await tick(); };
   const savedProgress = () => JSON.parse(w.localStorage.getItem(key));
   const input = (selector,value) => { $(selector).value=value; $(selector).dispatchEvent(new w.Event('input',{bubbles:true})); };
   const select = (selector,value) => { $(selector).value=value; $(selector).dispatchEvent(new w.Event('change',{bubbles:true})); };
-  const navigate = async path => { w.location.hash = path; await tick(); };
+  const navigate = async path => { const previousHash=w.location.hash; w.location.hash = path; if(w.location.hash!==previousHash) await new Promise(resolve=>w.addEventListener('hashchange',resolve,{once:true})); await tick(); };
   return { dom,w,$,click,savedProgress,tick,input,select,navigate,errors,copies,downloads };
 }
 
@@ -54,9 +55,13 @@ test('Home presents eight topics and both named General versions, with a short d
 });
 
 test('A full 40-question General round produces correct score, title, mistake list, sharing and history', async () => {
-  const app = await boot();
+  let app = await boot();
   await app.click('[data-mode="general"][data-count="40"]');
   assert.match(app.$('.quiz-label').textContent,/曠野長征/);
+  assert.match(app.$('.quiz-label').textContent,/進階挑戰/);
+  assert.equal(app.savedProgress().current.distribution,'challenge-v4');
+  const selected=app.savedProgress().current.items.map(i=>QUESTION_MAP.get(i.id));
+  assert.deepEqual([1,2,3].map(d=>selected.filter(q=>q.difficulty===d).length),[0,8,32]);
 
   let bookmarked;
   for (let i=0; i<40; i++) {
@@ -64,6 +69,7 @@ test('A full 40-question General round produces correct score, title, mistake li
     const q=QUESTION_MAP.get(r.items[r.index].id);
     if (i===0) { bookmarked=q.id; await app.click('.question-meta [data-action="bookmark"]'); await app.click('[data-action="skip"]'); }
     else await app.click(`[data-action="answer"][data-choice="${i===1?1:q.answer}"]`);
+    if(i===0){const snapshot=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(snapshot,'#/quiz');assert.equal(app.savedProgress().current.distribution,'challenge-v4');assert.match(app.$('.quiz-label').textContent,/進階挑戰/);}
     assert.equal(app.w.document.querySelectorAll('.choice:disabled').length,4);
     assert.equal(app.w.document.querySelectorAll('.choice.correct').length,1);
     assert.match(app.$('.feedback').textContent,new RegExp(q.explanation.slice(0,8).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
@@ -103,6 +109,24 @@ test('A full 40-question General round produces correct score, title, mistake li
   app.dom.window.close();
 });
 
+test('Previously saved balanced General progress and completed scores survive the advanced release', async () => {
+  const old=createRound({count:20});old.distribution='balanced-v3';
+  old.items=TOPICS.flatMap(t=>[1,2,3].flatMap((d,i)=>QUESTIONS.filter(q=>q.topic===t.id&&q.difficulty===d).slice(0,[2,2,1][i]).map(q=>({id:q.id,order:[0,1,2,3]}))));
+  old.answers=[{id:old.items[0].id,selected:0}];
+  const completed={...old,id:`${Date.now()}-1`,answers:old.items.map(item=>({id:item.id,selected:0})),index:39,finishedAt:new Date().toISOString()};
+  const app=await boot(JSON.stringify({schema:1,current:old,history:[completed]}),'#/quiz');
+  assert.equal(app.savedProgress().current.items.length,40);
+  assert.equal(app.savedProgress().current.distribution,'balanced-v3');
+  assert(!app.$('.quiz-label').textContent.includes('進階挑戰'));
+  await app.click('[data-action="next"]');
+  assert.equal(app.savedProgress().current.index,1);
+  assert(app.savedProgress().current.items.every(i=>!i.id.startsWith('challenge-')));
+  await app.navigate('/result/'+completed.id);
+  assert.match(app.$('.score-ring').textContent,/40 \/ 40/);
+  assert.match(app.$('#result-title').textContent,/神學家彩蛋級/);
+  assert.deepEqual(app.errors,[]);app.dom.window.close();
+});
+
 test('The short General round resumes, scores twenty questions, and retries the same version', async () => {
   let app=await boot();
   assert.match(app.$('.general-versions').textContent,/曠野快閃.*曠野長征/);
@@ -111,6 +135,7 @@ test('The short General round resumes, scores twenty questions, and retries the 
   const saved=app.w.localStorage.getItem(key); app.dom.window.close();
   app=await boot(saved,'#/quiz');
   assert.equal(app.savedProgress().current.items.length,20);
+  assert(app.savedProgress().current.items.every(i=>!i.id.startsWith('challenge-')));
   assert.equal(app.savedProgress().current.answers.length,1);
   assert.match(app.$('.quiz-label').textContent,/曠野快閃 · 20題/);
   await app.click('[data-action="next"]');

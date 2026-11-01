@@ -3,22 +3,31 @@ import assert from 'node:assert/strict';
 import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, TOPICS, LEGACY_QUESTION_MAP } from '../dist/questions.mjs';
 import { createRound, answerRound, advanceRound, summarizeRound, levelFor, LEVELS, validRound, seededRandom, hongKongDay, integrateResult, questionForRound } from '../dist/engine.mjs';
 import { COURSE_UNITS, HISTORY_QUESTIONS, HISTORY_TOPIC, cleanCourseAnswers, courseStatus } from '../dist/history-course.mjs';
+import { CHALLENGE_QUESTIONS } from '../dist/challenge-data.mjs';
 
 function finish(round, decide = q => q.answer) {
   while (!round.finishedAt) { const q = QUESTION_MAP.get(round.items[round.index].id); round = advanceRound(answerRound(round, decide(q, round.index))); }
   return round;
 }
 
-test('General always covers eight topics, equal topic quotas, and all three difficulties without repeats', () => {
+test('The advanced forty-question quiz draws thirty-two dedicated hard questions and eight medium questions evenly', () => {
+  const seen=new Set();
   for (let seed = 0; seed < 100; seed++) {
     const r = createRound({ random: seededRandom(seed) });
     assert(validRound(r));
     assert.equal(new Set(r.items.map(i => i.id)).size, 40);
     const qs = r.items.map(i => QUESTION_MAP.get(i.id));
-    for (const t of TOPICS) { const subset=qs.filter(q=>q.topic===t.id); assert.equal(subset.length,5); assert.deepEqual([1,2,3].map(d=>subset.filter(q=>q.difficulty===d).length),[2,2,1]); }
-    assert.deepEqual([1, 2, 3].map(d => qs.filter(q => q.difficulty === d).length), [16, 16, 8]);
+    assert.equal(r.distribution,'challenge-v4');
+    for (const t of TOPICS) { const subset=qs.filter(q=>q.topic===t.id); assert.equal(subset.length,5); assert.deepEqual([1,2,3].map(d=>subset.filter(q=>q.difficulty===d).length),[0,1,4]); }
+    assert.deepEqual([1, 2, 3].map(d => qs.filter(q => q.difficulty === d).length), [0, 8, 32]);
+    for(const q of qs.filter(q=>q.difficulty===3)){assert(CHALLENGE_QUESTIONS.some(c=>c.id===q.id));seen.add(q.id);}
     assert(r.items.every(i => [...i.order].sort().join('') === '0123'));
   }
+  assert.equal(seen.size,40);
+  const corrupt=createRound();const index=corrupt.items.findIndex(i=>QUESTION_MAP.get(i.id).difficulty===3);
+  const topic=QUESTION_MAP.get(corrupt.items[index].id).topic;
+  corrupt.items[index]={id:QUESTIONS.find(q=>q.topic===topic&&q.difficulty===3).id,order:[0,1,2,3]};
+  assert(!validRound(corrupt),'Ordinary questions cannot replace dedicated advanced questions');
 });
 
 test('Twenty-question General evenly covers topics and rotates its four extra hard questions', () => {
@@ -27,6 +36,7 @@ test('Twenty-question General evenly covers topics and rotates its four extra ha
     const r=createRound({count:20,random:seededRandom(seed)});
     assert(validRound(r)); assert.equal(new Set(r.items.map(i=>i.id)).size,20);
     const qs=r.items.map(i=>QUESTION_MAP.get(i.id));
+    assert(qs.every(q=>!q.id.startsWith('challenge-')));
     assert.deepEqual([1,2,3].map(d=>qs.filter(q=>q.difficulty===d).length),[8,8,4]);
     let extras=0;
     for(const t of TOPICS) {
@@ -99,8 +109,11 @@ test('Scoring is correct across every reachable 20/40-question General score and
   for (const l of LEVELS) assert.equal(levelFor(l.min), l);
 });
 
-test('Revision 2 saved rounds retain their original answers and General allocation', () => {
-  const r=createRound();r.bankRevision=2;r.distribution='balanced-v2';
+test('Existing balanced 40-question rounds and revision 2 answers remain valid', () => {
+  const r=createRound();r.distribution='balanced-v3';
+  r.items=TOPICS.flatMap(t=>[1,2,3].flatMap((difficulty,index)=>QUESTIONS.filter(q=>q.topic===t.id&&q.difficulty===difficulty).slice(0,[2,2,1][index]).map(q=>({id:q.id,order:[0,1,2,3]}))));
+  assert(validRound(r));assert(validRound(finish(r),true));
+  r.bankRevision=2;r.distribution='balanced-v2';
   assert(validRound(r));
   assert.deepEqual(questionForRound(r,'theology-24'),QUESTION_MAP_V2.get('theology-24'));
   assert.notDeepEqual(questionForRound(r,'theology-24').options,QUESTION_MAP.get('theology-24').options);
