@@ -1,0 +1,8 @@
+Asset: dist/assets/hero.png
+Generation: built-in image_gen.imagegen; edit of the original project-bound sheep-and-dove illustration.
+No CLI/API fallback used.
+
+Final prompt:
+Use case: style-transfer. Edit target: the reference hero illustration of a lamb and dove reading a Bible. Transform this illustration to a Hong Kong McDull picture-book visual style, while featuring absolutely NO pigs or pig characters anywhere. Keep the subjects as an ORIGINAL little cream woolly SHEEP with visible fluffy wool, tiny dark oval sheep nose, long sheep ears, tiny hooves; and a small white DOVE. Keep the open Bible with a simple gold cross and a few books. Change the rendering from elaborate fantasy anime to an understated flat, hand-painted Hong Kong children's picture book: simple rounded shapes, tiny dot eyes, charmingly blank deadpan expression, soft rosy cheeks, slightly wobbly fine pencil outlines, pale watercolor washes on cream paper, quiet everyday humor, wide whitespace, minimal visual detail. The sheep wears small round spectacles and a sage neckerchief, sitting at an ordinary old Hong Kong school desk, reading the Bible with the dove. In a very pale almost invisible background, one small Hong Kong residential block and an olive plant. Muted chalky sage green, pale peach, butter yellow, dusty blue, off-white cream #faf8ef. Remove elaborate fantasy lantern and dense garden. Landscape 3:2, entire little scene centered, plenty of empty pale cream space, gentle edge fade. No text or letters, no logos, no UI, no border. Strict: no pigs, no pig snouts, no pig ears, no McDull character, no pink animal; only a distinct fluffy sheep and dove.
+
+The selected generated image was visually inspected and copied unchanged into the project.

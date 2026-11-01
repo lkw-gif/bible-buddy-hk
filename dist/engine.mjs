@@ -1,0 +1,114 @@
+import { QUESTIONS, QUESTION_MAP, TOPICS } from './questions.mjs';
+
+export const DIFFICULTIES = { 1: '暖身', 2: '進階', 3: '挑戰' };
+export const GENERAL_QUOTAS = { overview: 6, old: 6, new: 6, people: 6, context: 6, theology: 4, history: 3, language: 3 };
+export const LEVELS = [
+  { min: 0, name: '初信探索級', symbol: '🌱', gentle: '肯開始就值得鼓勵。由一章福音書開始，慢慢建立基本功。', cheeky: '本聖經可能同你未係好熟。今晚主動啲，揭開佢打個招呼啦！' },
+  { min: 20, name: '讀經起步級', symbol: '🌿', gentle: '你已經認到一啲路標。保持每日讀一小段，進步會慢慢累積。', cheeky: '聽落個個名都識，答落就有少少迷路。聖經唔係擺設，今晚開一章啦。' },
+  { min: 40, name: '信咗一排級', symbol: '📖', gentle: '已經有一定基礎！試吓連前後文一齊讀，熟悉嘅經文會更立體。', cheeky: '主日學記憶成功載入一半！另一半唔好靠估，快啲補返讀經進度。' },
+  { min: 55, name: '神學生挑戰級', symbol: '🎒', gentle: '基本功漸漸穩固。試吓整理書卷主線，再向較弱嘅範圍探索。', cheeky: '已經唔係淨係識答「耶穌」！再讀深少少，下次連冷知識都唔使撞。' },
+  { min: 70, name: '牧會研究級', symbol: '🕊️', gentle: '跨主題表現紮實。把知識化成關懷同分享，學習就更有意思。', cheeky: '小組查經開始可以問你攞料。不過查經筆記都要繼續做，唔好封印本聖經！' },
+  { min: 80, name: '牧師挑戰級', symbol: '⛪', gentle: '你對多個範圍都有好掌握。帶住謙卑繼續查考，亦陪其他人一齊學。', cheeky: '你個聖經搜尋器幾快喎！繼續讀，最叻唔係拎高分，係識得陪人一齊學。' },
+  { min: 90, name: '神學老師挑戰級', symbol: '🎓', gentle: '表現出色！繼續比較資料、留意處境，讓學問同生命一齊成長。', cheeky: '小羊要借你份筆記。記住叻都可以問問題，唔好連謙卑都變成選修科。' },
+  { min: 97, name: '神學家彩蛋級', symbol: '✨', gentle: '非常精彩嘅一局！保持好奇心，聖經仍然值得你一生細讀。', cheeky: '小羊已經默默遞上螢光筆。識咁多，更加要繼續讀，聖經仲有排你發現！' }
+];
+
+export function seededRandom(seed) {
+  let a = 2166136261;
+  for (const c of String(seed)) { a ^= c.charCodeAt(0); a = Math.imul(a, 16777619); }
+  return () => {
+    a += 0x6D2B79F5;
+    let t = a;
+    t = Math.imul(t ^ t >>> 15, t | 1);
+    t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+export function shuffle(array, random = Math.random) {
+  const copy = [...array];
+  for (let i = copy.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [copy[i], copy[j]] = [copy[j], copy[i]]; }
+  return copy;
+}
+
+export function hongKongDay(date = new Date()) {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Hong_Kong', year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
+}
+
+export function questionPool(topic, difficulty = 'all') {
+  return QUESTIONS.filter(q => q.topic === topic && (difficulty === 'all' || q.difficulty === Number(difficulty)));
+}
+
+export function createRound({ mode = 'general', topic = 'overview', count = 10, difficulty = 'all', tone = 'cheeky', ids = [], day = hongKongDay(), random = Math.random } = {}) {
+  let selected;
+  if (mode === 'general') {
+    selected = TOPICS.flatMap(t => {
+      const quota = GENERAL_QUOTAS[t.id];
+      const split = quota === 6 ? [3, 2, 1] : quota === 4 ? [1, 1, 2] : [1, 1, 1];
+      return split.flatMap((n, i) => shuffle(questionPool(t.id, i + 1), random).slice(0, n));
+    });
+  } else if (mode === 'daily') {
+    random = seededRandom('bible-buddy-v1-' + day);
+    selected = TOPICS.slice(0, 5).map(t => shuffle(questionPool(t.id).filter(q => q.difficulty <= 2), random)[0]);
+  } else if (mode === 'review') {
+    selected = shuffle([...new Set(ids)].map(id => QUESTION_MAP.get(id)).filter(Boolean), random).slice(0, 30);
+  } else if (mode === 'topic') {
+    selected = shuffle(questionPool(topic, difficulty), random).slice(0, Math.max(1, Math.min(30, Number(count) || 10)));
+  } else { throw new Error('未知測驗模式'); }
+  if (!selected.length) throw new Error('暫時冇呢類題目，可以揀其他主題。');
+  const items = shuffle(selected, random).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], random) }));
+  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, mode, topic: mode === 'topic' ? topic : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: mode === 'daily' ? day : null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
+}
+
+export function answerRound(round, selected) {
+  if (round.finishedAt || round.answers.length !== round.index || !(selected === null || [0, 1, 2, 3].includes(selected))) return round;
+  return { ...round, answers: [...round.answers, { id: round.items[round.index].id, selected }] };
+}
+
+export function advanceRound(round) {
+  if (round.finishedAt || round.answers.length !== round.index + 1) return round;
+  if (round.index + 1 === round.items.length) return { ...round, finishedAt: new Date().toISOString() };
+  return { ...round, index: round.index + 1 };
+}
+
+export function levelFor(percent) {
+  return [...LEVELS].reverse().find(l => percent >= l.min) || LEVELS[0];
+}
+
+export function summarizeRound(round) {
+  const rows = round.items.map((item, i) => {
+    const question = QUESTION_MAP.get(item.id);
+    const response = round.answers[i];
+    return { question, selected: response?.selected ?? null, answered: Boolean(response), correct: Boolean(response && response.selected === question.answer), order: item.order };
+  });
+  const correct = rows.filter(r => r.correct).length;
+  const skipped = rows.filter(r => r.answered && r.selected === null).length;
+  const percent = correct * 100 / rows.length;
+  const breakdown = TOPICS.map(t => {
+    const entries = rows.filter(r => r.question.topic === t.id);
+    return { ...t, total: entries.length, correct: entries.filter(r => r.correct).length, percent: entries.length ? entries.filter(r => r.correct).length / entries.length * 100 : null };
+  });
+  return { rows, correct, skipped, total: rows.length, percent, level: round.mode === 'general' ? levelFor(percent) : null, breakdown };
+}
+
+export function validRound(round, completed = false) {
+  if (!round || !['general', 'topic', 'daily', 'review'].includes(round.mode) || typeof round.id !== 'string' || !/^\d+-\d+$/.test(round.id)) return false;
+  if (!['cheeky', 'gentle'].includes(round.tone) || !Number.isFinite(Date.parse(round.startedAt))) return false;
+  if (!Array.isArray(round.items) || !round.items.length || round.items.length > 40 || new Set(round.items.map(i => i?.id)).size !== round.items.length) return false;
+  if (!round.items.every(i => QUESTION_MAP.has(i?.id) && Array.isArray(i.order) && [...i.order].sort().join('') === '0123')) return false;
+  if (!Array.isArray(round.answers) || round.answers.length > round.items.length || !round.answers.every((a, i) => a?.id === round.items[i].id && (a.selected === null || [0, 1, 2, 3].includes(a.selected)))) return false;
+  if (!Number.isInteger(round.index) || round.index < 0 || round.index >= round.items.length || ![round.index, round.index + 1].includes(round.answers.length)) return false;
+  if (round.mode === 'general' && (round.items.length !== 40 || !TOPICS.every(t => round.items.filter(i => QUESTION_MAP.get(i.id).topic === t.id).length === GENERAL_QUOTAS[t.id]))) return false;
+  if (round.mode === 'topic' && (!TOPICS.some(t => t.id === round.topic) || !round.items.every(i => QUESTION_MAP.get(i.id).topic === round.topic))) return false;
+  if (round.mode === 'daily' && (round.items.length !== 5 || !/^\d{4}-\d{2}-\d{2}$/.test(round.day))) return false;
+  if (completed) return round.answers.length === round.items.length && Number.isFinite(Date.parse(round.finishedAt));
+  return round.finishedAt === null;
+}
+
+export function integrateResult(progress, round) {
+  if (progress.history.some(r => r.id === round.id)) return { ...progress, current: null };
+  const summary = summarizeRound(round);
+  const mistakes = new Set(progress.mistakes);
+  for (const row of summary.rows) { if (row.correct) mistakes.delete(row.question.id); else mistakes.add(row.question.id); }
+  return { ...progress, current: null, history: [round, ...progress.history].slice(0, 60), mistakes: [...mistakes] };
+}

@@ -1,0 +1,7 @@
+node_modules/
+.sites-runtime/
+output/
+*.log
+.openai/
+.env
+.env.*
