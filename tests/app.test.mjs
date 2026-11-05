@@ -29,7 +29,7 @@ async function boot(saved = null, hash = '#/') {
   await import(`../dist/app.mjs?domtest=${++bootCount}`);
   const $ = selector => w.document.querySelector(selector);
   const tick = async () => { await new Promise(resolve => setTimeout(resolve, 5)); };
-  const click = async selector => { const element = $(selector); assert(element, `Missing control ${selector}`); assert(!element.disabled, `Disabled control ${selector}`); const previousHash=w.location.hash; element.click(); if(w.location.hash!==previousHash) await new Promise(resolve=>w.addEventListener('hashchange',resolve,{once:true})); await tick(); };
+  const click = async selector => { const element = $(selector); assert(element, `Missing control ${selector}`); assert(!element.disabled, `Disabled control ${selector}`); const previousHash=w.location.hash; const href=element.getAttribute('href'); const changesHash=href?.startsWith('#/') && href!==previousHash; const hashChanged=changesHash ? new Promise(resolve=>w.addEventListener('hashchange',resolve,{once:true})) : null; element.click(); if(hashChanged) await hashChanged; else if(w.location.hash!==previousHash) await new Promise(resolve=>w.addEventListener('hashchange',resolve,{once:true})); await tick(); };
   const savedProgress = () => JSON.parse(w.localStorage.getItem(key));
   const input = (selector,value) => { $(selector).value=value; $(selector).dispatchEvent(new w.Event('input',{bubbles:true})); };
   const select = (selector,value) => { $(selector).value=value; $(selector).dispatchEvent(new w.Event('change',{bubbles:true})); };
@@ -355,4 +355,3 @@ test('Next question scrolls to the new question card and Old Testament is reacha
  let scroll;app.w.scrollTo=options=>{scroll=options};app.w.HTMLElement.prototype.getBoundingClientRect=function(){return {top:300}};
  await app.click('[data-action="next"]');assert.equal(scroll.top,228);assert.equal(app.w.document.activeElement.id,'question-title');assert.equal(app.savedProgress().current.index,1);app.dom.window.close();
 });
-
