@@ -2,7 +2,7 @@ import { CHOICES, STEMS } from './choices.mjs?v=20261101-7';
 import { reviseCopy } from './copy-edits.mjs?v=20261101-7';
 import { HISTORY_QUESTIONS } from './history-course.mjs?v=20261101-7';
 import { CHALLENGE_QUESTIONS } from './challenge-data.mjs?v=20261101-10';
-import { GENESIS_QUESTIONS } from './genesis-course.mjs?v=20261105-1';
+import { GENESIS_QUESTIONS } from './genesis-course.mjs?v=20261105-2';
 import { BIBLE_QUESTIONS } from './bible-course.mjs?v=20261101-13';
 // Original Cantonese question wording. Each row: difficulty, question, correct answer,
 // three distractors, reference, explanation, optional source URL.
