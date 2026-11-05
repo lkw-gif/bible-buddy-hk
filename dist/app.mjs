@@ -178,7 +178,9 @@ function handleAnswer(selected) {
   if (GENESIS_QUESTION_MAP.has(q.id) && updated.mode !== 'genesis-test') progress.genesisAnswers[q.id] = selected === q.answer;
   persist(); main.innerHTML = quizView();
   announce(`${selected === q.answer ? '答啱啦。' : '正確答案係' + q.options[q.answer] + '。'} ${q.explanation}`);
-  $('#feedback-title')?.focus();
+  $('#feedback-title')?.focus({ preventScroll: true });
+  const pager = $('.quiz-pager');
+  if (pager) window.scrollTo({ top: Math.max(0, window.scrollY + pager.getBoundingClientRect().bottom - window.innerHeight + 100), behavior: 'instant' });
 }
 function handleNext() {
   if (!progress.current) return;
