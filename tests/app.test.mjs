@@ -341,3 +341,10 @@ test('All one hundred Bible questions are playable and both course progress stor
   assert.deepEqual(app.savedProgress().bibleAnswers,{});assert.deepEqual(app.savedProgress().courseAnswers,{});
   assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
+
+test('Genesis course and random quiz preserve their own progress and navigation', async () => {
+ let app=await boot();await app.click('a[href="#/old-testament"]');await app.click('.genesis-course-entry a');assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);
+ await app.click('[data-mode="genesis"][data-unit="g1"]');await app.click('[data-action="bookmark"]');await app.click('[data-action="answer"][data-choice="1"]');await app.click('[data-action="next"]');await app.click('[data-action="previous"]');
+ let saved=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(saved,'#/quiz');assert.equal(app.savedProgress().current.index,0);assert.equal(Object.keys(app.savedProgress().genesisAnswers).length,1);assert.equal(app.$('.feedback a'),null);
+ await app.navigate('/genesis');await app.click('[data-mode="genesis-test"]');assert.equal(app.savedProgress().current.items.length,10);for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}assert.match(app.$('.score-ring').textContent,/10 \/ 10/);assert.equal(Object.keys(app.savedProgress().genesisAnswers).length,1);assert.equal(app.savedProgress().bookmarks.length,1);assert.deepEqual(app.errors,[]);app.dom.window.close();
+});
