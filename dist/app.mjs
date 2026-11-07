@@ -1,5 +1,5 @@
 import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261107-3';
-import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, retreatRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261107-3';
+import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, retreatRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261107-4';
 import { HISTORY_TOPIC, HISTORY_QUESTIONS, HISTORY_QUESTION_MAP, COURSE_UNITS, cleanCourseAnswers, courseStatus } from './history-course.mjs?v=20261101-7';
 import { CHALLENGE_QUESTIONS } from './challenge-data.mjs?v=20261101-10';
 import { GENESIS_TOPIC, GENESIS_UNITS, GENESIS_QUESTION_MAP, cleanGenesisAnswers, genesisStatus } from './genesis-course.mjs?v=20261107-2';
@@ -40,16 +40,29 @@ const STORAGE_KEY = 'bible-buddy-hk:v1';
 let storageUnavailable = false;
 let storageNoticeShown = false;
 function readProgress() {
-  const blank = { schema: 1, tone: 'cheeky', current: null, history: [], bookmarks: [], mistakes: [], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{} };
+  const blank = { schema: 1, tone: 'cheeky', current: null, history: [], bookmarks: [], mistakes: [], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, genesisSeen:[], exodusSeen:[] };
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
     if (!saved || saved.schema !== 1) return blank;
+    const history = Array.isArray(saved.history) ? saved.history.filter(r => validRound(r, true)).map(r => ({ ...r, tone:'cheeky' })).slice(0, 60) : [];
+    const genesisAnswers = cleanGenesisAnswers(saved.genesisAnswers);
+    const exodusAnswers = cleanExodusAnswers(saved.exodusAnswers);
     return { ...blank, tone: 'cheeky', current: validRound(saved.current) ? { ...saved.current, tone:'cheeky' } : null,
-      history: Array.isArray(saved.history) ? saved.history.filter(r => validRound(r, true)).map(r => ({ ...r, tone:'cheeky' })).slice(0, 60) : [],
-      bookmarks: cleanIds(saved.bookmarks), mistakes: cleanIds(saved.mistakes), courseAnswers:cleanCourseAnswers(saved.courseAnswers), bibleAnswers:cleanBibleAnswers(saved.bibleAnswers), genesisAnswers:cleanGenesisAnswers(saved.genesisAnswers), exodusAnswers:cleanExodusAnswers(saved.exodusAnswers) };
+      history, bookmarks: cleanIds(saved.bookmarks), mistakes: cleanIds(saved.mistakes), courseAnswers:cleanCourseAnswers(saved.courseAnswers), bibleAnswers:cleanBibleAnswers(saved.bibleAnswers), genesisAnswers, exodusAnswers,
+      genesisSeen: cleanSeenIds(saved.genesisSeen, genesisAnswers, history, 'genesis'),
+      exodusSeen: cleanSeenIds(saved.exodusSeen, exodusAnswers, history, 'exodus') };
   } catch { storageUnavailable = true; return blank; }
 }
 function cleanIds(value) { return Array.isArray(value) ? [...new Set(value.filter(id => QUESTION_MAP.has(id)))] : []; }
+function cleanSeenIds(value, answers, history, topic) {
+  const ids = new Set([...(Array.isArray(value) ? value : []), ...Object.keys(answers)]);
+  for (const round of history) {
+    if (round.topic === topic || round.mode === topic || round.mode.startsWith(`${topic}-`)) {
+      for (const item of round.items || []) if (QUESTION_MAP.get(item.id)?.topic === topic) ids.add(item.id);
+    }
+  }
+  return [...ids].filter(id => QUESTION_MAP.get(id)?.topic === topic);
+}
 let progress = readProgress();
 let reviewTab = 'mistakes';
 let reviewSearch = '';
@@ -107,8 +120,8 @@ function trialCard() {
 }
 
 function courseSettings(mode='church') {
-  if (mode==='genesis') return {mode,topic:GENESIS_TOPIC,units:GENESIS_UNITS,answers:progress.genesisAnswers,status:genesisStatus,eyebrow:'舊約書卷操練',subject:'創世記',teaser:'100題，分10課，由創造到約瑟逐步重溫。',intro:'100題，分10課，每題答完都有解說。亦可以隨機抽10題，睇吓自己記得幾多。'};
-  if (mode==='exodus') return {mode,topic:EXODUS_TOPIC,units:EXODUS_UNITS,answers:progress.exodusAnswers,status:exodusStatus,eyebrow:'舊約書卷操練',subject:'出埃及記',teaser:'100題，分10課，由以色列人在埃及到會幕立起，按經文次序逐步認識。',intro:'100題，分10課，每題答完都有解說。亦可以隨機抽10題，或者揀低、中、高「試探程度」再操練。'};
+  if (mode==='genesis') return {mode,topic:GENESIS_TOPIC,units:GENESIS_UNITS,answers:progress.genesisAnswers,status:genesisStatus,eyebrow:'舊約書卷操練',subject:'創世記',teaser:'100題，分10課，由創造到約瑟逐步重溫。',intro:'100題，分10課，每題答完都有解說。隨機同分級測驗會先抽未做過嘅題目，做晒一輪先會重複。'};
+  if (mode==='exodus') return {mode,topic:EXODUS_TOPIC,units:EXODUS_UNITS,answers:progress.exodusAnswers,status:exodusStatus,eyebrow:'舊約書卷操練',subject:'出埃及記',teaser:'100題，分10課，由以色列人在埃及到會幕立起，按經文次序逐步認識。',intro:'100題，分10課，每題答完都有解說。隨機同分級測驗會先抽未做過嘅題目，做晒一輪先會重複。'};
   const bible=mode==='bible';
   return {mode,topic:bible ? BIBLE_TOPIC : HISTORY_TOPIC,units:bible ? BIBLE_UNITS : COURSE_UNITS,answers:bible ? progress.bibleAnswers : progress.courseAnswers,status:bible ? bibleStatus : courseStatus,
     eyebrow:bible ? '認熟書卷，一齊扎根' : '認識前人，一齊扎根',subject:bible ? '聖經' : '教會歷史',
@@ -148,7 +161,8 @@ function homeView() {
 function startQuiz(mode, topic = 'overview', ids = [], difficulty = 'all', count, unit) {
   try {
     progress.tone = 'cheeky';
-    progress.current = createRound({ mode, topic, ids, count, difficulty, unit, tone:'cheeky' });
+    const seenIds = mode.startsWith('genesis') ? progress.genesisSeen : mode.startsWith('exodus') ? progress.exodusSeen : [];
+    progress.current = createRound({ mode, topic, ids, count, difficulty, unit, seenIds, tone:'cheeky' });
     persist(); resultFilter = 'wrong'; resultSearch = ''; go('/quiz');
   } catch (error) { toast(error.message); }
 }
@@ -184,6 +198,8 @@ function handleAnswer(selected) {
   const q = questionForRound(updated, updated.items[updated.index].id);
   if (HISTORY_QUESTION_MAP.has(q.id)) progress.courseAnswers[q.id] = selected === q.answer;
   if (BIBLE_QUESTION_MAP.has(q.id)) progress.bibleAnswers[q.id] = selected === q.answer;
+  if (q.topic === GENESIS_TOPIC.id) progress.genesisSeen = [...new Set([...progress.genesisSeen, q.id])];
+  if (q.topic === EXODUS_TOPIC.id) progress.exodusSeen = [...new Set([...progress.exodusSeen, q.id])];
   if (GENESIS_QUESTION_MAP.has(q.id) && !['genesis-test','genesis-level'].includes(updated.mode)) progress.genesisAnswers[q.id] = selected === q.answer;
   if (EXODUS_QUESTION_MAP.has(q.id) && !['exodus-test','exodus-level'].includes(updated.mode)) progress.exodusAnswers[q.id] = selected === q.answer;
   persist(); main.innerHTML = quizView();
@@ -314,7 +330,7 @@ document.addEventListener('click', async event => {
   if (action === 'clear-dialog') {
     shareDialog.innerHTML = `<div class="dialog-top"><div><div class="eyebrow">重新起步，都要睇清楚</div><h2 id="share-title">重新起步：清除紀錄？</h2></div><button class="close-button" data-action="close-dialog" aria-label="取消清除">${icon('close')}</button></div><p style="font-size:14px;margin-bottom:24px">會清除呢個瀏覽器嘅未完成操練、成績、錯題、溫習書籤同教會歷史、聖經知識、創世記同出埃及記進度。清除後無法還原；你可以先取消，下載成績紀錄留底。</p><div class="actions"><button class="button secondary" data-action="close-dialog">保留紀錄</button><button class="button primary" data-action="clear-confirm">確定清除</button></div>`; shareDialog.showModal();
   }
-  if (action === 'clear-confirm') { progress = { schema:1, tone:'cheeky', current:null, history:[], bookmarks:[], mistakes:[], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{} }; persist(); shareDialog.close(); render(); toast('紀錄已清除，新一輪操練由你起步。'); }
+  if (action === 'clear-confirm') { progress = { schema:1, tone:'cheeky', current:null, history:[], bookmarks:[], mistakes:[], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, genesisSeen:[], exodusSeen:[] }; persist(); shareDialog.close(); render(); toast('紀錄已清除，新一輪操練由你起步。'); }
 });
 document.addEventListener('keydown', event => {
   if (route().name !== 'quiz' || shareDialog.open || event.ctrlKey || event.altKey || event.metaKey || event.repeat || ['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName)) return;

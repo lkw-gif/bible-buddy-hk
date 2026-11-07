@@ -45,6 +45,20 @@ test('Exodus random and trial quizzes use unique ten-question samples from the r
   assert(EXODUS_HARD_QUESTIONS.every(q => q.difficulty === 3));
 });
 
+test('Exodus tests prioritize unseen questions and cycle only after the selected pool is exhausted', () => {
+  const first = createRound({ mode: 'exodus-test', random: seededRandom('unseen first') });
+  const seen = first.items.map(item => item.id);
+  const second = createRound({ mode: 'exodus-test', seenIds: seen, random: seededRandom('unseen second') });
+  assert(second.items.every(item => !seen.includes(item.id)));
+  const hardFirst = createRound({ mode: 'exodus-level', difficulty: '3', random: seededRandom('hard first') });
+  const hardSeen = hardFirst.items.map(item => item.id);
+  const hardSecond = createRound({ mode: 'exodus-level', difficulty: '3', seenIds: hardSeen, random: seededRandom('hard second') });
+  assert(hardSecond.items.every(item => !hardSeen.includes(item.id)));
+  const hardThird = createRound({ mode: 'exodus-level', difficulty: '3', seenIds: [...hardSeen, ...hardSecond.items.map(item => item.id)], random: seededRandom('hard third') });
+  assert.equal(new Set(hardThird.items.map(item => item.id)).size, 10);
+  assert(hardThird.items.every(item => EXODUS_LEVEL_POOLS[3].some(q => q.id === item.id)));
+});
+
 test('Exodus lesson feedback and progress remain separate from random and trial results', () => {
   const lesson = createRound({ mode: 'exodus', unit: 'x1' });
   let completed = lesson;

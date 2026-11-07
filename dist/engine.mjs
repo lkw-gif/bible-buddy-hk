@@ -56,6 +56,14 @@ export function shuffle(array, random = Math.random) {
   return copy;
 }
 
+function unseenFirst(pool, count, seenIds, random) {
+  const seen = new Set(seenIds);
+  const fresh = shuffle(pool.filter(q => !seen.has(q.id)), random).slice(0, count);
+  if (fresh.length === count) return fresh;
+  const used = shuffle(pool.filter(q => seen.has(q.id)), random).slice(0, count - fresh.length);
+  return [...fresh, ...used];
+}
+
 export function hongKongDay(date = new Date()) {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Hong_Kong', year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
 }
@@ -64,7 +72,7 @@ export function questionPool(topic, difficulty = 'all') {
   return QUESTIONS.filter(q => q.topic === topic && (difficulty === 'all' || q.difficulty === Number(difficulty)));
 }
 
-export function createRound({ mode = 'general', topic = 'overview', count, difficulty = 'all', tone = 'cheeky', ids = [], unit, random = Math.random } = {}) {
+export function createRound({ mode = 'general', topic = 'overview', count, difficulty = 'all', tone = 'cheeky', ids = [], unit, seenIds = [], random = Math.random } = {}) {
   let selected;
   if (mode === 'general') {
     const size = count === undefined ? 40 : Number(count);
@@ -82,18 +90,18 @@ export function createRound({ mode = 'general', topic = 'overview', count, diffi
     selected = TOPICS.flatMap(t => shuffle(String(difficulty) === '3' ? CHALLENGE_QUESTIONS.filter(q => q.topic === t.id) : questionPool(t.id,difficulty),random).slice(0,2));
   } else if (mode === 'genesis-level') {
     if (!['1','2','3'].includes(String(difficulty))) throw new Error('請先揀試探程度。');
-    selected=shuffle(GENESIS_LEVEL_POOLS[Number(difficulty)],random).slice(0,10);
+    selected=unseenFirst(GENESIS_LEVEL_POOLS[Number(difficulty)],10,seenIds,random);
     if(selected.length!==10) throw new Error('題目準備中，請稍後再試。');
   } else if (mode === 'genesis' || mode === 'genesis-test') {
     if (mode === 'genesis' && !GENESIS_UNITS.some(u=>u.id===unit)) throw new Error('揀一課創世記先開始。');
-    selected=mode === 'genesis' ? GENESIS_QUESTIONS.filter(q=>q.unit===unit) : shuffle(GENESIS_QUESTIONS,random).slice(0,10);
+    selected=mode === 'genesis' ? GENESIS_QUESTIONS.filter(q=>q.unit===unit) : unseenFirst(GENESIS_QUESTIONS,10,seenIds,random);
   } else if (mode === 'exodus-level') {
     if (!['1','2','3'].includes(String(difficulty))) throw new Error('請先揀試探程度。');
-    selected = shuffle(EXODUS_LEVEL_POOLS[Number(difficulty)] || [], random).slice(0, 10);
+    selected = unseenFirst(EXODUS_LEVEL_POOLS[Number(difficulty)] || [], 10, seenIds, random);
     if (selected.length !== 10) throw new Error('出埃及記高程度題目準備中，請稍後再試。');
   } else if (mode === 'exodus' || mode === 'exodus-test') {
     if (mode === 'exodus' && !EXODUS_UNITS.some(u => u.id === unit)) throw new Error('揀一課出埃及記先開始。');
-    selected = mode === 'exodus' ? EXODUS_QUESTIONS.filter(q => q.unit === unit) : shuffle(EXODUS_QUESTIONS, random).slice(0, 10);
+    selected = mode === 'exodus' ? EXODUS_QUESTIONS.filter(q => q.unit === unit) : unseenFirst(EXODUS_QUESTIONS, 10, seenIds, random);
   } else if (mode === 'bible') {
     if (!BIBLE_UNITS.some(u=>u.id===unit)) throw new Error('揀一課聖經知識，慢慢開始操練。');
     selected=BIBLE_QUESTIONS.filter(q=>q.unit===unit);

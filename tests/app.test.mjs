@@ -405,6 +405,7 @@ test('Exodus high trial samples the deep question pool and supports review and r
  const app=await boot();await app.navigate('/exodus');
  await app.click('[data-mode="exodus-level"][data-difficulty="3"]');
  assert.match(app.$('.question-meta').textContent,/就嚟頂唔住/);
+ const firstRound=app.savedProgress().current.items.map(item=>item.id);
  assert.match(app.savedProgress().current.items[0].id,/^exodus-hard-/);
  await app.click('.question-meta [data-action="bookmark"]');
  await app.click('[data-action="answer"][data-choice="1"]');
@@ -418,5 +419,20 @@ test('Exodus high trial samples the deep question pool and supports review and r
  await app.click('[data-action="retry"]');
  assert.equal(app.savedProgress().current.mode,'exodus-level');
  assert.equal(app.savedProgress().current.difficulty,'3');
+ assert(app.savedProgress().current.items.every(item=>!firstRound.includes(item.id)));
+ assert.equal(app.savedProgress().exodusSeen.length,10);
  assert.deepEqual(app.errors,[]);app.dom.window.close();
+});
+
+test('Retaking a Genesis or Exodus random test starts with unseen course questions', async()=>{
+ for(const book of ['genesis','exodus']){
+  const app=await boot();await app.navigate('/'+book);await app.click(`[data-mode="${book}-test"]`);
+  const first=app.savedProgress().current.items.map(item=>item.id);
+  for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+  assert.equal(app.savedProgress()[book+'Seen'].length,10);
+  await app.click('[data-action="retry"]');
+  const next=app.savedProgress().current.items.map(item=>item.id);
+  assert.equal(next.length,10);assert(next.every(id=>!first.includes(id)));
+  assert.deepEqual(app.errors,[]);app.dom.window.close();
+ }
 });
