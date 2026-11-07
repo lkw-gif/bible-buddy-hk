@@ -345,11 +345,11 @@ test('All one hundred Bible questions are playable and both course progress stor
   assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
 
-test('Genesis course and random quiz preserve their own progress and navigation', async () => {
+test('Genesis course preserves its own progress and the book page omits random quiz', async () => {
  let app=await boot();await app.click('a[href="#/old-testament"]');await app.click('.genesis-course-entry a');assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);
  await app.click('[data-mode="genesis"][data-unit="g1"]');await app.click('[data-action="bookmark"]');await app.click('[data-action="answer"][data-choice="1"]');await app.click('[data-action="next"]');await app.click('[data-action="previous"]');
  let saved=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(saved,'#/quiz');assert.equal(app.savedProgress().current.index,0);assert.equal(Object.keys(app.savedProgress().genesisAnswers).length,1);assert.equal(app.$('.feedback a'),null);
- await app.navigate('/genesis');await app.click('[data-mode="genesis-test"]');assert.equal(app.savedProgress().current.items.length,10);for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}assert.match(app.$('.score-ring').textContent,/10 \/ 10/);assert.equal(Object.keys(app.savedProgress().genesisAnswers).length,1);assert.equal(app.savedProgress().bookmarks.length,1);assert.deepEqual(app.errors,[]);app.dom.window.close();
+ await app.navigate('/genesis');assert.equal(app.$('[data-mode="genesis-test"]'),null);assert.equal(Object.keys(app.savedProgress().genesisAnswers).length,1);assert.equal(app.savedProgress().bookmarks.length,1);assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
 
 test('Next question scrolls to the new question card and Old Testament is omitted from the hero', async () => {
@@ -372,7 +372,7 @@ test('Genesis levels show chosen difficulty and advanced questions support bookm
  await app.navigate('/review');assert.match(app.$('.review-card').textContent,/創世記/);await app.click('[data-action="practice"]');await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');assert(!app.savedProgress().mistakes.includes(id));assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
 
-test('Exodus sits beside Genesis and keeps lesson, random-test, difficulty and bookmark progress separate', async () => {
+test('Exodus sits beside Genesis and keeps lesson, difficulty and bookmark progress separate', async () => {
   let app=await boot();
   await app.navigate('/old-testament');
   assert(app.$('.genesis-course-entry'));
@@ -392,15 +392,9 @@ test('Exodus sits beside Genesis and keeps lesson, random-test, difficulty and b
   app=await boot(saved,'#/quiz');
   assert.equal(app.savedProgress().current.index,0);
   assert.equal(Object.keys(app.savedProgress().exodusAnswers).length,1);
-  await app.navigate('/exodus');await app.click('[data-mode="exodus-test"]');
-  assert.equal(app.savedProgress().current.items.length,10);
-  assert.equal(app.savedProgress().current.mode,'exodus-test');
-  for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
-  assert.match(app.$('.score-ring').textContent,/10 \/ 10/);
+  await app.navigate('/exodus');assert.equal(app.$('[data-mode="exodus-test"]'),null);
   assert.equal(Object.keys(app.savedProgress().exodusAnswers).length,1);
   assert.equal(app.savedProgress().bookmarks.length,1);
-  await app.click('[data-action="retry"]');
-  assert.equal(app.savedProgress().current.mode,'exodus-test');
   assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
 
@@ -427,20 +421,7 @@ test('Exodus high trial samples the deep question pool and supports review and r
  assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
 
-test('Retaking a Genesis or Exodus random test starts with unseen course questions', async()=>{
- for(const book of ['genesis','exodus']){
-  const app=await boot();await app.navigate('/'+book);await app.click(`[data-mode="${book}-test"]`);
-  const first=app.savedProgress().current.items.map(item=>item.id);
-  for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
-  assert.equal(app.savedProgress()[book+'Seen'].length,10);
-  await app.click('[data-action="retry"]');
-  const next=app.savedProgress().current.items.map(item=>item.id);
-  assert.equal(next.length,10);assert(next.every(id=>!first.includes(id)));
-  assert.deepEqual(app.errors,[]);app.dom.window.close();
- }
-});
-
-test('Numbers course adds ten lessons and unseen-first random and high-level practice', async()=>{
+test('Numbers course adds ten lessons, high-level practice, and omits random quiz', async()=>{
  const app=await boot();await app.navigate('/old-testament');
  assert(app.$('.numbers-course-entry'));
  await app.click('.numbers-course-entry a');assert.equal(app.w.location.hash,'#/numbers');
@@ -452,17 +433,7 @@ test('Numbers course adds ten lessons and unseen-first random and high-level pra
  assert.match(app.$('.feedback .reference').textContent,/民數記/);
  await app.click('[data-action="next"]');assert.equal(Object.keys(app.savedProgress().numbersAnswers).length,1);
  await app.navigate('/numbers');
- await app.click('[data-mode="numbers-test"]');
- const first=app.savedProgress().current.items.map(item=>item.id);
- assert.equal(first.length,10);assert(first.every(id=>id.startsWith('numbers-0')));
- for(let i=0;i<10;i++){
-   const round=app.savedProgress().current;
-   const q=QUESTION_MAP.get(round.items[round.index].id);
-   await app.click(`[data-action="answer"][data-choice="${q.answer}"]`);
-   await app.click('[data-action="next"]');
- }
- assert.equal(app.savedProgress().numbersSeen.length,11);
- await app.click('[data-action="retry"]');
+ assert.equal(app.$('[data-mode="numbers-test"]'),null);
  assert(app.savedProgress().current.items.every(item=>!first.includes(item.id)));
  await app.navigate('/numbers');await app.click('[data-mode="numbers-level"][data-difficulty="3"]');
  assert(app.savedProgress().current.items.every(item=>item.id.startsWith('numbers-hard-')));
