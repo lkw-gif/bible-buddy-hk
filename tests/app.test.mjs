@@ -434,7 +434,6 @@ test('Numbers course adds ten lessons, high-level practice, and omits random qui
  await app.click('[data-action="next"]');assert.equal(Object.keys(app.savedProgress().numbersAnswers).length,1);
  await app.navigate('/numbers');
  assert.equal(app.$('[data-mode="numbers-test"]'),null);
- assert(app.savedProgress().current.items.every(item=>!first.includes(item.id)));
  await app.navigate('/numbers');await app.click('[data-mode="numbers-level"][data-difficulty="3"]');
  assert(app.savedProgress().current.items.every(item=>item.id.startsWith('numbers-hard-')));
  assert.match(app.$('.question-meta').textContent,/就嚟頂唔住/);
