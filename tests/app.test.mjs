@@ -436,3 +436,33 @@ test('Retaking a Genesis or Exodus random test starts with unseen course questio
   assert.deepEqual(app.errors,[]);app.dom.window.close();
  }
 });
+
+test('Numbers course adds ten lessons and unseen-first random and high-level practice', async()=>{
+ const app=await boot();await app.navigate('/old-testament');
+ assert(app.$('.numbers-course-entry'));
+ await app.click('.numbers-course-entry a');assert.equal(app.w.location.hash,'#/numbers');
+ assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);
+ for(const d of ['1','2','3'])assert(app.$(`[data-mode="numbers-level"][data-difficulty="${d}"]`));
+ await app.click('[data-mode="numbers"][data-unit="n1"]');
+ const lesson=app.savedProgress().current;const lessonQuestion=QUESTION_MAP.get(lesson.items[0].id);
+ await app.click(`[data-action="answer"][data-choice="${lessonQuestion.answer}"]`);
+ assert.match(app.$('.feedback .reference').textContent,/民數記/);
+ await app.click('[data-action="next"]');assert.equal(Object.keys(app.savedProgress().numbersAnswers).length,1);
+ await app.navigate('/numbers');
+ await app.click('[data-mode="numbers-test"]');
+ const first=app.savedProgress().current.items.map(item=>item.id);
+ assert.equal(first.length,10);assert(first.every(id=>id.startsWith('numbers-0')));
+ for(let i=0;i<10;i++){
+   const round=app.savedProgress().current;
+   const q=QUESTION_MAP.get(round.items[round.index].id);
+   await app.click(`[data-action="answer"][data-choice="${q.answer}"]`);
+   await app.click('[data-action="next"]');
+ }
+ assert.equal(app.savedProgress().numbersSeen.length,11);
+ await app.click('[data-action="retry"]');
+ assert(app.savedProgress().current.items.every(item=>!first.includes(item.id)));
+ await app.navigate('/numbers');await app.click('[data-mode="numbers-level"][data-difficulty="3"]');
+ assert(app.savedProgress().current.items.every(item=>item.id.startsWith('numbers-hard-')));
+ assert.match(app.$('.question-meta').textContent,/就嚟頂唔住/);
+ assert.deepEqual(app.errors,[]);app.dom.window.close();
+});

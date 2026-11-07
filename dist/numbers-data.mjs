@@ -1,0 +1,1802 @@
+export const NUMBERS_DATA = [
+  {
+    "unit": "n1",
+    "difficulty": 1,
+    "question": "民數記開始時，以色列人離開埃及幾耐後，上帝吩咐摩西點算百姓？",
+    "options": [
+      "第二年第二個月第一日",
+      "第一年第一個月第一日",
+      "第二年第一個月第十四日",
+      "第四十年第一個月第一日"
+    ],
+    "answer": 0,
+    "explanation": "民數記1章記載，出埃及後第二年第二個月第一日，上帝吩咐摩西按宗族點算以色列男子。",
+    "reference": "民數記1:1–3",
+    "id": "numbers-001",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/1/",
+    "verification": "https://bible.usccb.org/bible/numbers/1"
+  },
+  {
+    "unit": "n1",
+    "difficulty": 1,
+    "question": "第一次點算時，邊類男子要列入軍隊名冊？",
+    "options": [
+      "二十歲或以上、可以出戰的男子",
+      "十二歲或以上的所有男孩",
+      "三十歲或以上的祭司",
+      "所有利未支派男子"
+    ],
+    "answer": 0,
+    "explanation": "點算對象係二十歲或以上、能夠出戰的男子；利未人另有會幕職責，唔列入同一份軍隊統計。",
+    "reference": "民數記1:2–3、47–49",
+    "id": "numbers-002",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/1/",
+    "verification": "https://bible.usccb.org/bible/numbers/1"
+  },
+  {
+    "unit": "n1",
+    "difficulty": 1,
+    "question": "點算軍隊人數時，邊個支派獲吩咐唔好同其他支派一齊點算？",
+    "options": [
+      "利未支派",
+      "猶大支派",
+      "便雅憫支派",
+      "以法蓮支派"
+    ],
+    "answer": 0,
+    "explanation": "利未人負責照料會幕，唔列入一般支派的軍隊點算。",
+    "reference": "民數記1:47–50",
+    "id": "numbers-003",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/1/",
+    "verification": "https://bible.usccb.org/bible/numbers/1"
+  },
+  {
+    "unit": "n1",
+    "difficulty": 1,
+    "question": "以色列人安營時，會幕放喺邊度？",
+    "options": [
+      "營中央",
+      "營地東面外圍",
+      "摩西帳幕旁邊",
+      "營地最北面"
+    ],
+    "answer": 0,
+    "explanation": "會幕設喺營中央，各支派按指定位置圍住安營；利未人則守住會幕四周。",
+    "reference": "民數記2:1–2、17",
+    "id": "numbers-004",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/2/",
+    "verification": "https://bible.usccb.org/bible/numbers/2"
+  },
+  {
+    "unit": "n1",
+    "difficulty": 1,
+    "question": "以色列人起行時，前面首先出發嘅係邊一組支派？",
+    "options": [
+      "猶大營旗下嘅支派",
+      "流便營旗下嘅支派",
+      "以法蓮營旗下嘅支派",
+      "但營旗下嘅支派"
+    ],
+    "answer": 0,
+    "explanation": "起行次序由東面猶大營開始，猶大、以薩迦同西布倫依次出發。",
+    "reference": "民數記2:3、9、17",
+    "id": "numbers-005",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/2/",
+    "verification": "https://bible.usccb.org/bible/numbers/2"
+  },
+  {
+    "unit": "n1",
+    "difficulty": 1,
+    "question": "利未支派負責服事邊度？",
+    "options": [
+      "會幕",
+      "法老王宮",
+      "約旦河渡口",
+      "以色列軍營外的城牆"
+    ],
+    "answer": 0,
+    "explanation": "利未人受派照料會幕，包括拆卸、搬運同重新安設；其他支派唔可以自行代替呢份工作。",
+    "reference": "民數記1:50–53",
+    "id": "numbers-006",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/1/",
+    "verification": "https://bible.usccb.org/bible/numbers/1"
+  },
+  {
+    "unit": "n1",
+    "difficulty": 1,
+    "question": "亞倫同摩西嘅父親係邊個？",
+    "options": [
+      "暗蘭",
+      "哥轄",
+      "以利亞撒",
+      "烏薛"
+    ],
+    "answer": 0,
+    "explanation": "亞倫同摩西都係暗蘭同約基別的兒子，屬利未支派哥轄宗族。",
+    "reference": "民數記3:1–2；出埃及記6:18、20",
+    "id": "numbers-007",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/3/",
+    "verification": "https://bible.usccb.org/bible/numbers/3"
+  },
+  {
+    "unit": "n1",
+    "difficulty": 1,
+    "question": "亞倫嘅兩個兒子拿答同亞比戶後來發生咩事？",
+    "options": [
+      "因獻上不合規定的火而死亡",
+      "被揀選接替摩西帶領百姓",
+      "帶領以色列人過約旦河",
+      "成為米甸的祭司"
+    ],
+    "answer": 0,
+    "explanation": "民數記重提拿答同亞比戶，佢哋因向上帝獻上不合規定的火而死亡。",
+    "reference": "民數記3:2–4；利未記10:1–2",
+    "id": "numbers-008",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/3/",
+    "verification": "https://bible.usccb.org/bible/numbers/3"
+  },
+  {
+    "unit": "n1",
+    "difficulty": 1,
+    "question": "利未人代替以色列人中邊一類人，歸上帝作服事會幕的人？",
+    "options": [
+      "頭生的男子",
+      "二十歲以上的戰士",
+      "所有長老",
+      "每家的長子和長女"
+    ],
+    "answer": 0,
+    "explanation": "上帝揀選利未人代替以色列人中所有頭生的男子，專責會幕服事。",
+    "reference": "民數記3:11–13",
+    "id": "numbers-009",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/3/",
+    "verification": "https://bible.usccb.org/bible/numbers/3"
+  },
+  {
+    "unit": "n1",
+    "difficulty": 1,
+    "question": "利未人搬運會幕時，邊一族負責扛約櫃等至聖所器具？",
+    "options": [
+      "哥轄族",
+      "革順族",
+      "米拉利族",
+      "以法蓮族"
+    ],
+    "answer": 0,
+    "explanation": "哥轄人負責搬運約櫃、桌子、燈台、祭壇等聖所器具；亞倫的兒子會先包好器具，避免哥轄人直接看見或觸摸。",
+    "reference": "民數記3:27–31；4:4–15",
+    "id": "numbers-010",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/3/",
+    "verification": "https://bible.usccb.org/bible/numbers/3"
+  },
+  {
+    "unit": "n2",
+    "difficulty": 1,
+    "question": "按民數記4章，革順族主要負責搬運會幕邊部分？",
+    "options": [
+      "幔子、罩棚同幕門等布料",
+      "約櫃同施恩座",
+      "祭壇上的銅器",
+      "祭司的胸牌同以弗得"
+    ],
+    "answer": 0,
+    "explanation": "革順族照料帳幕的布料，包括罩棚、幔子、幕門同院子的帷子。",
+    "reference": "民數記4:24–28",
+    "id": "numbers-011",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/4/",
+    "verification": "https://bible.usccb.org/bible/numbers/4"
+  },
+  {
+    "unit": "n2",
+    "difficulty": 1,
+    "question": "米拉利族搬運嘅主要係會幕邊類部分？",
+    "options": [
+      "板、閂、柱同座等架構",
+      "約櫃裏面的法版",
+      "亞倫的祭司衣袍",
+      "燈台上的燈油"
+    ],
+    "answer": 0,
+    "explanation": "米拉利族負責會幕的板、閂、柱、座同院子的柱等結構。",
+    "reference": "民數記4:29–33",
+    "id": "numbers-012",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/4/",
+    "verification": "https://bible.usccb.org/bible/numbers/4"
+  },
+  {
+    "unit": "n2",
+    "difficulty": 1,
+    "question": "民數記5章吩咐患痲瘋病或有污穢的人暫時去邊度？",
+    "options": [
+      "營外",
+      "會幕內院",
+      "摩西帳幕",
+      "猶大營旁邊"
+    ],
+    "answer": 0,
+    "explanation": "當時的禮儀規定，患痲瘋病、患漏症或接觸死屍而不潔的人要暫時住喺營外，免得污染營地。",
+    "reference": "民數記5:1–4",
+    "id": "numbers-013",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/5/",
+    "verification": "https://bible.usccb.org/bible/numbers/5"
+  },
+  {
+    "unit": "n2",
+    "difficulty": 1,
+    "question": "有人承認得罪另一個人，除咗認錯，仲要點做？",
+    "options": [
+      "賠返損失，並按規定加上賠償",
+      "只要獻一隻羊就可以",
+      "請祭司替對方道歉",
+      "等到安息年先處理"
+    ],
+    "answer": 0,
+    "explanation": "民數記5章要求犯錯的人承認所做的事，賠還損失，並按律例加上額外賠償。",
+    "reference": "民數記5:5–8",
+    "id": "numbers-014",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/5/",
+    "verification": "https://bible.usccb.org/bible/numbers/5"
+  },
+  {
+    "unit": "n2",
+    "difficulty": 1,
+    "question": "拿細耳人分別出來歸上帝期間，唔可以飲食乜嘢？",
+    "options": [
+      "葡萄酒和葡萄製品",
+      "魚和海產",
+      "小麥和大麥",
+      "蜜和橄欖"
+    ],
+    "answer": 0,
+    "explanation": "拿細耳人許願分別出來歸上帝期間，要避開酒、醋、葡萄汁、葡萄同葡萄乾等葡萄製品。",
+    "reference": "民數記6:1–4",
+    "id": "numbers-015",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/6/",
+    "verification": "https://bible.usccb.org/bible/numbers/6"
+  },
+  {
+    "unit": "n2",
+    "difficulty": 1,
+    "question": "拿細耳人許願期間，頭髮有咩規定？",
+    "options": [
+      "不可剃頭",
+      "每日要剃一次",
+      "只可以留到肩膀長",
+      "要由祭司替佢剪短"
+    ],
+    "answer": 0,
+    "explanation": "拿細耳人要讓頭髮自然生長，唔可以用剃刀剃頭，作為分別歸上帝的記號。",
+    "reference": "民數記6:5",
+    "id": "numbers-016",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/6/",
+    "verification": "https://bible.usccb.org/bible/numbers/6"
+  },
+  {
+    "unit": "n2",
+    "difficulty": 1,
+    "question": "民數記6章記載亞倫和他的兒子要用咩祝福以色列人？",
+    "options": [
+      "願耶和華賜福保護你，向你仰臉施恩",
+      "願你在戰場上常常得勝",
+      "願你在埃及得到豐富財物",
+      "願你永遠唔使行曠野"
+    ],
+    "answer": 0,
+    "explanation": "祭司祝福求上帝賜福、保護、施恩、賜平安；並唔係保證百姓唔會再遇到困難。",
+    "reference": "民數記6:22–27",
+    "id": "numbers-017",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/6/",
+    "verification": "https://bible.usccb.org/bible/numbers/6"
+  },
+  {
+    "unit": "n2",
+    "difficulty": 1,
+    "question": "祭司祝福最後求耶和華賜畀以色列人乜嘢？",
+    "options": [
+      "平安",
+      "更多牲畜",
+      "永不打仗",
+      "即刻進入迦南"
+    ],
+    "answer": 0,
+    "explanation": "祝福最後一句係求耶和華向百姓仰臉，賜佢哋平安。",
+    "reference": "民數記6:24–26",
+    "id": "numbers-018",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/6/",
+    "verification": "https://bible.usccb.org/bible/numbers/6"
+  },
+  {
+    "unit": "n2",
+    "difficulty": 1,
+    "question": "利未人服事會幕嘅年齡範圍，民數記4章列出幾多歲到幾多歲？",
+    "options": [
+      "三十歲到五十歲",
+      "二十歲到四十歲",
+      "二十五歲到五十五歲",
+      "四十歲到六十歲"
+    ],
+    "answer": 0,
+    "explanation": "民數記4章點算三十至五十歲、能夠承擔會幕工作的利未男子。",
+    "reference": "民數記4:3、23、30",
+    "id": "numbers-019",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/4/",
+    "verification": "https://bible.usccb.org/bible/numbers/4"
+  },
+  {
+    "unit": "n3",
+    "difficulty": 1,
+    "question": "各支派首領為會幕獻禮物時，十二位首領合共送咗幾多架車同幾多隻牛？",
+    "options": [
+      "六架車、十二隻牛",
+      "十二架車、六隻牛",
+      "十二架車、十二隻牛",
+      "六架車、六隻牛"
+    ],
+    "answer": 0,
+    "explanation": "六架車由兩位首領一同奉獻，每架車配兩隻牛，所以合共六架車同十二隻牛。",
+    "reference": "民數記7:2–9",
+    "id": "numbers-020",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/7/",
+    "verification": "https://bible.usccb.org/bible/numbers/7"
+  },
+  {
+    "unit": "n3",
+    "difficulty": 1,
+    "question": "西布倫支派首領以利押獻禮物係第幾日？",
+    "options": [
+      "第十日",
+      "第一日",
+      "第六日",
+      "第十二日"
+    ],
+    "answer": 0,
+    "explanation": "會幕膏抹之後，每日由一個支派首領獻禮物；西布倫首領以利押排第十日。",
+    "reference": "民數記7:66–71",
+    "id": "numbers-021",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/7/",
+    "verification": "https://bible.usccb.org/bible/numbers/7"
+  },
+  {
+    "unit": "n3",
+    "difficulty": 1,
+    "question": "民數記7章十二位首領獻祭的禮物有咩特點？",
+    "options": [
+      "每位首領所獻的禮物相同",
+      "只有猶大首領獻金器",
+      "利未首領獻牛，其餘獻羊",
+      "每位首領按自己財富獻不同份量"
+    ],
+    "answer": 0,
+    "explanation": "十二位首領每日輪流獻上相同的器皿、供物同祭牲；經文逐日記低，表明各支派一同參與。",
+    "reference": "民數記7:12–83",
+    "id": "numbers-022",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/7/",
+    "verification": "https://bible.usccb.org/bible/numbers/7"
+  },
+  {
+    "unit": "n3",
+    "difficulty": 1,
+    "question": "金燈台上有幾盞燈？",
+    "options": [
+      "七盞",
+      "五盞",
+      "十盞",
+      "十二盞"
+    ],
+    "answer": 0,
+    "explanation": "上帝吩咐亞倫安放七盞燈，使燈光照向燈台前面。",
+    "reference": "民數記8:1–4；出埃及記25:37",
+    "id": "numbers-023",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/8/",
+    "verification": "https://bible.usccb.org/bible/numbers/8"
+  },
+  {
+    "unit": "n3",
+    "difficulty": 1,
+    "question": "利未人開始正式服事會幕之前，要先做咩？",
+    "options": [
+      "潔淨自己並獻上指定祭物",
+      "先帶全家搬入會幕",
+      "由摩西為每人戴上冠冕",
+      "先去迦南地點算土地"
+    ],
+    "answer": 0,
+    "explanation": "利未人要先潔淨、洗衣服、剃身上的毛，並按規定獻祭，之後先被分派服事會幕。",
+    "reference": "民數記8:5–15",
+    "id": "numbers-024",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/8/",
+    "verification": "https://bible.usccb.org/bible/numbers/8"
+  },
+  {
+    "unit": "n3",
+    "difficulty": 1,
+    "question": "利未人幾多歲開始退下會幕搬運工作？",
+    "options": [
+      "五十歲",
+      "四十歲",
+      "六十歲",
+      "七十歲"
+    ],
+    "answer": 0,
+    "explanation": "利未人五十歲退下會幕搬運和勞動工作，但仍可協助同族人處理職務。",
+    "reference": "民數記8:23–26",
+    "id": "numbers-025",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/8/",
+    "verification": "https://bible.usccb.org/bible/numbers/8"
+  },
+  {
+    "unit": "n3",
+    "difficulty": 1,
+    "question": "第二年正月，以色列人喺西奈曠野守咗邊個節期？",
+    "options": [
+      "逾越節",
+      "住棚節",
+      "吹角節",
+      "普珥節"
+    ],
+    "answer": 0,
+    "explanation": "民數記9章記載百姓離開西奈之前，按上帝吩咐守逾越節。",
+    "reference": "民數記9:1–5",
+    "id": "numbers-026",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/9/",
+    "verification": "https://bible.usccb.org/bible/numbers/9"
+  },
+  {
+    "unit": "n3",
+    "difficulty": 1,
+    "question": "雲彩停喺會幕上面時，以色列人應該點做？",
+    "options": [
+      "留喺營地，唔好起行",
+      "每日清早照常出發",
+      "只派利未人前行",
+      "立即拆會幕去找水"
+    ],
+    "answer": 0,
+    "explanation": "百姓按雲彩行程：雲彩停留就安營，雲彩升起就起行，等候時間長短都照樣遵守。",
+    "reference": "民數記9:15–23",
+    "id": "numbers-027",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/9/",
+    "verification": "https://bible.usccb.org/bible/numbers/9"
+  },
+  {
+    "unit": "n4",
+    "difficulty": 1,
+    "question": "上帝吩咐摩西造幾枝銀號角，用來召集會眾同通知起行？",
+    "options": [
+      "兩枝",
+      "一枝",
+      "四枝",
+      "十二枝"
+    ],
+    "answer": 0,
+    "explanation": "民數記10章吩咐用銀子打造兩枝號角；吹號方式不同，召集全會眾或首領。",
+    "reference": "民數記10:1–4",
+    "id": "numbers-028",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/10/",
+    "verification": "https://bible.usccb.org/bible/numbers/10"
+  },
+  {
+    "unit": "n4",
+    "difficulty": 1,
+    "question": "以色列人起行時，會幕上面嘅雲彩代表咩？",
+    "options": [
+      "上帝帶領百姓何時安營、何時起行",
+      "摩西已經完成點算",
+      "祭司宣告戰爭開始",
+      "百姓可以自行選擇方向"
+    ],
+    "answer": 0,
+    "explanation": "雲彩升起時百姓起行，停留時百姓安營；經文用呢個方式記載上帝帶領曠野旅程。",
+    "reference": "民數記9:17–23；10:11–13",
+    "id": "numbers-029",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/9/",
+    "verification": "https://bible.usccb.org/bible/numbers/9"
+  },
+  {
+    "unit": "n4",
+    "difficulty": 1,
+    "question": "摩西請岳父何巴同以色列人同行時，話佢可以做咩？",
+    "options": [
+      "做百姓在曠野的嚮導",
+      "接替亞倫做大祭司",
+      "替十二支派點算人數",
+      "帶領軍隊先行攻打迦南"
+    ],
+    "answer": 0,
+    "explanation": "摩西邀請何巴同行，因為佢熟悉曠野，可以幫助百姓認路。",
+    "reference": "民數記10:29–32",
+    "id": "numbers-030",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/10/",
+    "verification": "https://bible.usccb.org/bible/numbers/10"
+  },
+  {
+    "unit": "n4",
+    "difficulty": 1,
+    "question": "百姓喺曠野埋怨食物單調，上帝先降下咩食物？",
+    "options": [
+      "鵪鶉",
+      "魚",
+      "葡萄",
+      "石榴"
+    ],
+    "answer": 0,
+    "explanation": "百姓想念埃及的魚、瓜、韭菜等；上帝降下鵪鶉作食物，但貪慾和埋怨亦帶來審判。",
+    "reference": "民數記11:4–6、31–34",
+    "id": "numbers-031",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/11/",
+    "verification": "https://bible.usccb.org/bible/numbers/11"
+  },
+  {
+    "unit": "n4",
+    "difficulty": 1,
+    "question": "摩西覺得獨自承擔帶領百姓太重，上帝揀選幾多人分擔工作？",
+    "options": [
+      "七十位長老",
+      "十二位支派首領",
+      "三十位祭司",
+      "二十四位族長"
+    ],
+    "answer": 0,
+    "explanation": "上帝叫摩西招聚七十位長老，分賜靈給佢哋，使佢哋一同承擔百姓的重擔。",
+    "reference": "民數記11:16–17、24–25",
+    "id": "numbers-032",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/11/",
+    "verification": "https://bible.usccb.org/bible/numbers/11"
+  },
+  {
+    "unit": "n4",
+    "difficulty": 1,
+    "question": "以色列人食鵪鶉時，因為貪食而發生咩事？",
+    "options": [
+      "上帝降災擊打百姓",
+      "鵪鶉全部飛走，百姓冇食物",
+      "法老追到曠野搶走食物",
+      "摩西吩咐全營禁食七日"
+    ],
+    "answer": 0,
+    "explanation": "百姓貪戀肉食，未食完口中的肉，上帝就降災擊打他們；嗰度因此叫基博羅哈他瓦，意思同貪慾有關。",
+    "reference": "民數記11:33–34",
+    "id": "numbers-033",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/11/",
+    "verification": "https://bible.usccb.org/bible/numbers/11"
+  },
+  {
+    "unit": "n4",
+    "difficulty": 1,
+    "question": "摩西嘅姐姐米利暗因為批評摩西而患上咩病？",
+    "options": [
+      "皮膚病",
+      "眼疾",
+      "耳聾",
+      "瘟疫"
+    ],
+    "answer": 0,
+    "explanation": "上帝責備米利暗和亞倫，米利暗之後患上皮膚病；摩西為佢祈求，佢被隔離七日後先回營。",
+    "reference": "民數記12:1–15",
+    "id": "numbers-034",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/12/",
+    "verification": "https://bible.usccb.org/bible/numbers/12"
+  },
+  {
+    "unit": "n4",
+    "difficulty": 1,
+    "question": "米利暗患病後，百姓停留咗幾多日先再起行？",
+    "options": [
+      "七日",
+      "三日",
+      "十四日",
+      "四十日"
+    ],
+    "answer": 0,
+    "explanation": "米利暗被隔離七日，百姓等到佢回營之後先離開哈洗錄。",
+    "reference": "民數記12:14–16",
+    "id": "numbers-035",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/12/",
+    "verification": "https://bible.usccb.org/bible/numbers/12"
+  },
+  {
+    "unit": "n4",
+    "difficulty": 1,
+    "question": "摩西差探子去迦南地，十二個探子用咩帶返一串葡萄？",
+    "options": [
+      "兩個人用杠抬",
+      "一個人背在背上",
+      "四個人放在籃子裏",
+      "用駱駝馱返營"
+    ],
+    "answer": 0,
+    "explanation": "探子喺以實各谷砍下一串葡萄，兩個人用杠抬住，亦帶返石榴同無花果。",
+    "reference": "民數記13:23–24",
+    "id": "numbers-036",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/13/",
+    "verification": "https://bible.usccb.org/bible/numbers/13"
+  },
+  {
+    "unit": "n5",
+    "difficulty": 1,
+    "question": "十二個探子之中，邊兩個人鼓勵百姓相信上帝會帶佢哋進入迦南？",
+    "options": [
+      "約書亞同迦勒",
+      "摩西同亞倫",
+      "拿答同亞比戶",
+      "以利亞撒同以他瑪"
+    ],
+    "answer": 0,
+    "explanation": "十個探子令百姓害怕，只有約書亞同迦勒勸百姓信靠上帝、唔好背叛祂。",
+    "reference": "民數記14:6–9",
+    "id": "numbers-037",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/14/",
+    "verification": "https://bible.usccb.org/bible/numbers/14"
+  },
+  {
+    "unit": "n5",
+    "difficulty": 1,
+    "question": "探子在迦南地一共考察咗幾多日？",
+    "options": [
+      "四十日",
+      "十二日",
+      "三十日",
+      "七十日"
+    ],
+    "answer": 0,
+    "explanation": "十二個探子考察迦南四十日；百姓因拒絕進入，後來要在曠野漂流四十年。",
+    "reference": "民數記13:25；14:33–34",
+    "id": "numbers-038",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/13/",
+    "verification": "https://bible.usccb.org/bible/numbers/13"
+  },
+  {
+    "unit": "n5",
+    "difficulty": 1,
+    "question": "百姓聽到探子報告後，除咗約書亞同迦勒，佢哋想做咩？",
+    "options": [
+      "立另一個領袖帶佢哋返埃及",
+      "即刻推舉約書亞做王",
+      "留下來等摩西再去探路",
+      "派祭司先入迦南"
+    ],
+    "answer": 0,
+    "explanation": "百姓因害怕而埋怨摩西，甚至想另立領袖返回埃及，拒絕信靠上帝進入應許之地。",
+    "reference": "民數記14:1–4",
+    "id": "numbers-039",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/14/",
+    "verification": "https://bible.usccb.org/bible/numbers/14"
+  },
+  {
+    "unit": "n5",
+    "difficulty": 1,
+    "question": "因為百姓不信，上帝宣告佢哋要喺曠野漂流幾多年？",
+    "options": [
+      "四十年",
+      "十二年",
+      "七年",
+      "五十年"
+    ],
+    "answer": 0,
+    "explanation": "探子考察四十日，百姓要承擔相應的四十年曠野漂流；嗰代成年人唔會進入應許之地。",
+    "reference": "民數記14:29–35",
+    "id": "numbers-040",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/14/",
+    "verification": "https://bible.usccb.org/bible/numbers/14"
+  },
+  {
+    "unit": "n5",
+    "difficulty": 1,
+    "question": "約書亞同迦勒點解同其他十個探子睇法唔同？",
+    "options": [
+      "佢哋相信上帝會幫助百姓進入迦南",
+      "佢哋認為迦南人其實已經離開",
+      "佢哋帶有更多兵器和糧食",
+      "佢哋只考察咗四日"
+    ],
+    "answer": 0,
+    "explanation": "約書亞同迦勒承認當地居民強大，但相信上帝會同以色列人同在，能夠帶佢哋進入那地。",
+    "reference": "民數記14:6–9",
+    "id": "numbers-041",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/14/",
+    "verification": "https://bible.usccb.org/bible/numbers/14"
+  },
+  {
+    "unit": "n5",
+    "difficulty": 1,
+    "question": "有幾個以色列人擅自上山攻打亞瑪力人和迦南人，結果點樣？",
+    "options": [
+      "被擊敗，只好退回營地",
+      "打贏後即刻佔領迦南",
+      "摩西命令佢哋做祭司",
+      "敵人投降並交出城池"
+    ],
+    "answer": 0,
+    "explanation": "摩西提醒上帝唔會同佢哋同行，但佢哋仍然擅自上山，最後被亞瑪力人和迦南人擊敗。",
+    "reference": "民數記14:39–45",
+    "id": "numbers-042",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/14/",
+    "verification": "https://bible.usccb.org/bible/numbers/14"
+  },
+  {
+    "unit": "n5",
+    "difficulty": 1,
+    "question": "民數記15章提到百姓進入應許之地後，獻祭時要一同獻上咩？",
+    "options": [
+      "素祭和奠祭",
+      "金牛犢和香料",
+      "銀號角和燈油",
+      "嗎哪和無酵餅"
+    ],
+    "answer": 0,
+    "explanation": "民數記15章多次將燔祭同素祭、奠祭一同列明，指向百姓將來進入那地後的敬拜生活。",
+    "reference": "民數記15:1–10",
+    "id": "numbers-043",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/15/",
+    "verification": "https://bible.usccb.org/bible/numbers/15"
+  },
+  {
+    "unit": "n5",
+    "difficulty": 1,
+    "question": "百姓做衣服時，要喺衣服邊緣加上咩，提醒佢哋記住上帝的誡命？",
+    "options": [
+      "藍色繸子",
+      "金色鈴鐺",
+      "紅色腰帶",
+      "銀色扣子"
+    ],
+    "answer": 0,
+    "explanation": "上帝吩咐衣服邊緣做繸子，繸子上加藍色線，提醒百姓記念並遵行上帝的誡命。",
+    "reference": "民數記15:37–41",
+    "id": "numbers-044",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/15/",
+    "verification": "https://bible.usccb.org/bible/numbers/15"
+  },
+  {
+    "unit": "n6",
+    "difficulty": 1,
+    "question": "可拉、大坍同亞比蘭聯同幾多位首領反抗摩西和亞倫？",
+    "options": [
+      "二百五十位",
+      "七十位",
+      "十二位",
+      "一百位"
+    ],
+    "answer": 0,
+    "explanation": "可拉一夥人帶同二百五十位有名望的首領，質疑摩西和亞倫的帶領。",
+    "reference": "民數記16:1–3",
+    "id": "numbers-045",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/16/",
+    "verification": "https://bible.usccb.org/bible/numbers/16"
+  },
+  {
+    "unit": "n6",
+    "difficulty": 1,
+    "question": "可拉一夥人反抗之後，地裂開吞咗邊幾個主要反叛者同佢哋的家人？",
+    "options": [
+      "大坍同亞比蘭",
+      "約書亞同迦勒",
+      "米利暗同亞倫",
+      "拿答同亞比戶"
+    ],
+    "answer": 0,
+    "explanation": "地裂開吞了大坍、亞比蘭同他們的家人；可拉和跟從他的二百五十人亦遭遇審判。",
+    "reference": "民數記16:25–35",
+    "id": "numbers-046",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/16/",
+    "verification": "https://bible.usccb.org/bible/numbers/16"
+  },
+  {
+    "unit": "n6",
+    "difficulty": 1,
+    "question": "亞倫嘅杖放喺會幕裏面一夜之後，出現咩現象？",
+    "options": [
+      "發芽、開花，結出熟杏",
+      "變成金色並發出光",
+      "長出橄欖和石榴",
+      "被雲彩完全遮住"
+    ],
+    "answer": 0,
+    "explanation": "十二支派首領各放一根杖，上帝所揀選的亞倫之杖發芽、開花，並結出熟杏。",
+    "reference": "民數記17:1–8",
+    "id": "numbers-047",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/17/",
+    "verification": "https://bible.usccb.org/bible/numbers/17"
+  },
+  {
+    "unit": "n6",
+    "difficulty": 1,
+    "question": "亞倫嘅杖發芽，係要證明邊件事？",
+    "options": [
+      "上帝揀選亞倫和利未家承擔祭司職分",
+      "摩西要交出領袖位置",
+      "利未支派可以自行點算百姓",
+      "以色列人要立即起行"
+    ],
+    "answer": 0,
+    "explanation": "上帝用亞倫發芽的杖確認祂揀選亞倫家承擔祭司職分，制止百姓埋怨。",
+    "reference": "民數記17:5、8–10",
+    "id": "numbers-048",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/17/",
+    "verification": "https://bible.usccb.org/bible/numbers/17"
+  },
+  {
+    "unit": "n6",
+    "difficulty": 1,
+    "question": "利未人服事會幕時，邊個支派要特別小心唔好擅自靠近祭壇和聖所？",
+    "options": [
+      "其他以色列支派",
+      "只有猶大支派",
+      "只有長子支派",
+      "只有外族人"
+    ],
+    "answer": 0,
+    "explanation": "祭司和利未人負責會幕的職務；其他支派不可擅自接近聖所，免得承擔罪責。",
+    "reference": "民數記18:1–7",
+    "id": "numbers-049",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/18/",
+    "verification": "https://bible.usccb.org/bible/numbers/18"
+  },
+  {
+    "unit": "n6",
+    "difficulty": 1,
+    "question": "紅母牛的灰要用來做咩？",
+    "options": [
+      "調製潔淨用的除污水",
+      "塗在銀號角上",
+      "撒在約櫃裏保存嗎哪",
+      "混入祭司的膏油"
+    ],
+    "answer": 0,
+    "explanation": "民數記19章記載紅母牛的灰用來調製除污水，供接觸死屍而不潔的人潔淨。",
+    "reference": "民數記19:1–10、17–19",
+    "id": "numbers-050",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/19/",
+    "verification": "https://bible.usccb.org/bible/numbers/19"
+  },
+  {
+    "unit": "n7",
+    "difficulty": 1,
+    "question": "摩西在米利巴用杖擊打磐石幾次，令水流出來？",
+    "options": [
+      "兩次",
+      "一次",
+      "三次",
+      "七次"
+    ],
+    "answer": 0,
+    "explanation": "上帝吩咐摩西向磐石說話，但摩西擊打磐石兩次；水仍然流出，百姓同牲畜都可以飲。",
+    "reference": "民數記20:7–11",
+    "id": "numbers-051",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/20/",
+    "verification": "https://bible.usccb.org/bible/numbers/20"
+  },
+  {
+    "unit": "n7",
+    "difficulty": 1,
+    "question": "摩西同亞倫因米利巴事件失去咗咩機會？",
+    "options": [
+      "帶領百姓進入應許之地",
+      "繼續服事會幕",
+      "留在曠野安營",
+      "同以東人和好"
+    ],
+    "answer": 0,
+    "explanation": "上帝指出摩西和亞倫沒有在百姓面前尊祂為聖，因此兩人都唔會帶領會眾進入應許之地。",
+    "reference": "民數記20:12、24",
+    "id": "numbers-052",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/20/",
+    "verification": "https://bible.usccb.org/bible/numbers/20"
+  },
+  {
+    "unit": "n7",
+    "difficulty": 1,
+    "question": "以色列人想穿過以東地前往迦南，以東王點回覆？",
+    "options": [
+      "拒絕讓他們經過，並帶軍隊出來",
+      "答應借路但要求留下牲畜",
+      "派祭司帶他們直達約旦河",
+      "邀請摩西在城內住一晚"
+    ],
+    "answer": 0,
+    "explanation": "以東王拒絕以色列人穿過境內，並帶兵出來阻止；百姓只好改道。",
+    "reference": "民數記20:14–21",
+    "id": "numbers-053",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/20/",
+    "verification": "https://bible.usccb.org/bible/numbers/20"
+  },
+  {
+    "unit": "n7",
+    "difficulty": 1,
+    "question": "亞倫死喺邊座山？",
+    "options": [
+      "何珥山",
+      "西奈山",
+      "尼波山",
+      "迦密山"
+    ],
+    "answer": 0,
+    "explanation": "上帝吩咐摩西帶亞倫和以利亞撒上何珥山，亞倫喺山上離世。",
+    "reference": "民數記20:22–29",
+    "id": "numbers-054",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/20/",
+    "verification": "https://bible.usccb.org/bible/numbers/20"
+  },
+  {
+    "unit": "n7",
+    "difficulty": 1,
+    "question": "亞倫死後，邊個接替佢做大祭司？",
+    "options": [
+      "佢的兒子以利亞撒",
+      "摩西的兒子革舜",
+      "約書亞",
+      "迦勒"
+    ],
+    "answer": 0,
+    "explanation": "摩西照上帝吩咐，將亞倫的祭司衣服穿喺以利亞撒身上，由以利亞撒接任。",
+    "reference": "民數記20:25–28",
+    "id": "numbers-055",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/20/",
+    "verification": "https://bible.usccb.org/bible/numbers/20"
+  },
+  {
+    "unit": "n8",
+    "difficulty": 1,
+    "question": "百姓埋怨上帝同摩西之後，營中出現咩動物咬人？",
+    "options": [
+      "火蛇",
+      "獅子",
+      "蠍子",
+      "野狗"
+    ],
+    "answer": 0,
+    "explanation": "百姓抱怨嗎哪和旅程，上帝使火蛇進入營中咬人；百姓認罪後，摩西為他們祈求。",
+    "reference": "民數記21:4–6",
+    "id": "numbers-056",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/21/",
+    "verification": "https://bible.usccb.org/bible/numbers/21"
+  },
+  {
+    "unit": "n8",
+    "difficulty": 1,
+    "question": "摩西照上帝吩咐做咗咩，令被蛇咬嘅人可以存活？",
+    "options": [
+      "造一條銅蛇掛在杆上",
+      "將嗎哪放入水中",
+      "用杖擊打磐石",
+      "叫百姓望向會幕"
+    ],
+    "answer": 0,
+    "explanation": "摩西造了一條銅蛇掛在杆上，被蛇咬的人望向銅蛇就得存活。",
+    "reference": "民數記21:7–9",
+    "id": "numbers-057",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/21/",
+    "verification": "https://bible.usccb.org/bible/numbers/21"
+  },
+  {
+    "unit": "n8",
+    "difficulty": 1,
+    "question": "摩押王巴勒請邊個先知咒詛以色列人？",
+    "options": [
+      "巴蘭",
+      "以利亞",
+      "撒母耳",
+      "以賽亞"
+    ],
+    "answer": 0,
+    "explanation": "巴勒見以色列人強盛，就請比珥的兒子巴蘭來咒詛他們；上帝卻多次阻止他。",
+    "reference": "民數記22:2–6",
+    "id": "numbers-058",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/22/",
+    "verification": "https://bible.usccb.org/bible/numbers/22"
+  },
+  {
+    "unit": "n8",
+    "difficulty": 1,
+    "question": "巴蘭騎驢去見巴勒時，最先睇見耶和華使者嘅係邊個？",
+    "options": [
+      "驢",
+      "巴蘭",
+      "巴勒",
+      "摩西"
+    ],
+    "answer": 0,
+    "explanation": "驢三次看見耶和華的使者而避開，巴蘭卻看不見，還因驢停下而打牠。",
+    "reference": "民數記22:21–27",
+    "id": "numbers-059",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/22/",
+    "verification": "https://bible.usccb.org/bible/numbers/22"
+  },
+  {
+    "unit": "n8",
+    "difficulty": 1,
+    "question": "巴蘭想咒詛以色列人，最後實際講咗咩？",
+    "options": [
+      "祝福以色列人的話",
+      "宣告以色列人立即返回埃及",
+      "命令以色列人拆掉會幕",
+      "叫巴勒成為以色列的王"
+    ],
+    "answer": 0,
+    "explanation": "上帝使巴蘭講出祝福以色列人的話，巴勒幾次要求咒詛都無法改變結果。",
+    "reference": "民數記23:7–12；24:10",
+    "id": "numbers-060",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/23/",
+    "verification": "https://bible.usccb.org/bible/numbers/23"
+  },
+  {
+    "unit": "n9",
+    "difficulty": 1,
+    "question": "以色列人喺什亭受到摩押婦女引誘，跟住敬拜邊個神？",
+    "options": [
+      "巴力毗珥",
+      "巴力西卜",
+      "大袞",
+      "亞舍拉"
+    ],
+    "answer": 0,
+    "explanation": "以色列人同摩押婦女行淫，並參加向巴力毗珥獻祭，惹上帝發怒。",
+    "reference": "民數記25:1–3",
+    "id": "numbers-061",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/25/",
+    "verification": "https://bible.usccb.org/bible/numbers/25"
+  },
+  {
+    "unit": "n9",
+    "difficulty": 1,
+    "question": "第二次點算以色列百姓時，主要係為咗咩？",
+    "options": [
+      "預備分配迦南地產業",
+      "決定邊個做祭司",
+      "選出新法老",
+      "計算曠野有幾多個營地"
+    ],
+    "answer": 0,
+    "explanation": "第二次點算在約旦河東進行，亦為按支派和家族分配應許之地作準備。",
+    "reference": "民數記26:1–4、52–56",
+    "id": "numbers-062",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/26/",
+    "verification": "https://bible.usccb.org/bible/numbers/26"
+  },
+  {
+    "unit": "n9",
+    "difficulty": 1,
+    "question": "西羅非哈嘅五個女兒向摩西提出咩要求？",
+    "options": [
+      "在父親沒有兒子的情況下，仍分到家族產業",
+      "代替摩西帶領以色列人",
+      "由女子擔任大祭司",
+      "免除全支派的點算"
+    ],
+    "answer": 0,
+    "explanation": "西羅非哈的女兒指出父親沒有兒子，請求分得產業；上帝認為她們的要求合理，並訂下相關承業安排。",
+    "reference": "民數記27:1–8",
+    "id": "numbers-063",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/27/",
+    "verification": "https://bible.usccb.org/bible/numbers/27"
+  },
+  {
+    "unit": "n9",
+    "difficulty": 1,
+    "question": "上帝揀選邊個接替摩西，帶領以色列人？",
+    "options": [
+      "嫩的兒子約書亞",
+      "迦勒",
+      "以利亞撒",
+      "摩西的兒子以利以謝"
+    ],
+    "answer": 0,
+    "explanation": "上帝吩咐摩西按手在約書亞身上，將帶領百姓的職責交給佢。",
+    "reference": "民數記27:15–23",
+    "id": "numbers-064",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/27/",
+    "verification": "https://bible.usccb.org/bible/numbers/27"
+  },
+  {
+    "unit": "n9",
+    "difficulty": 1,
+    "question": "約書亞接任後，祭司以利亞撒要用咩方式求問上帝，作重要決定的指引？",
+    "options": [
+      "烏陵的判斷",
+      "夢境和占卜",
+      "銀號角的聲音",
+      "抽十二根杖"
+    ],
+    "answer": 0,
+    "explanation": "約書亞要站喺祭司以利亞撒面前，以利亞撒按烏陵的判斷在上帝面前求問，指引百姓行動。",
+    "reference": "民數記27:18–21",
+    "id": "numbers-065",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/27/",
+    "verification": "https://bible.usccb.org/bible/numbers/27"
+  },
+  {
+    "unit": "n9",
+    "difficulty": 1,
+    "question": "民數記28章列出的每日常獻祭，早晚各獻幾隻一歲公羊羔？",
+    "options": [
+      "一隻",
+      "兩隻",
+      "三隻",
+      "七隻"
+    ],
+    "answer": 0,
+    "explanation": "每日早晚各獻一隻一歲公羊羔作常獻祭，並按規定配上素祭和奠祭。",
+    "reference": "民數記28:3–8",
+    "id": "numbers-066",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/28/",
+    "verification": "https://bible.usccb.org/bible/numbers/28"
+  },
+  {
+    "unit": "n10",
+    "difficulty": 1,
+    "question": "以色列人每年守住棚節時，要住喺咩地方七日？",
+    "options": [
+      "棚裏",
+      "會幕院子裏",
+      "石造城牆上",
+      "摩西帳幕裏"
+    ],
+    "answer": 0,
+    "explanation": "住棚節期間，百姓要住在棚裏七日，記念上帝帶領他們離開埃及、住在棚裏的日子。",
+    "reference": "民數記29:12–40；利未記23:42–43",
+    "id": "numbers-067",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/29/",
+    "verification": "https://bible.usccb.org/bible/numbers/29"
+  },
+  {
+    "unit": "n10",
+    "difficulty": 1,
+    "question": "流便同迦得支派向摩西提出咩請求？",
+    "options": [
+      "希望喺約旦河東得到適合畜牧的土地",
+      "唔想再跟以色列人一齊起行",
+      "想永久住喺西奈山",
+      "要求由祭司替他們點算"
+    ],
+    "answer": 0,
+    "explanation": "流便和迦得有大量牲畜，見約旦河東適合牧放，請求在那裏分得產業。",
+    "reference": "民數記32:1–5",
+    "id": "numbers-068",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/32/",
+    "verification": "https://bible.usccb.org/bible/numbers/32"
+  },
+  {
+    "unit": "n10",
+    "difficulty": 1,
+    "question": "摩西答應流便同迦得留喺約旦河東之前，要求佢哋先做咩？",
+    "options": [
+      "同其他支派一齊過河作戰，直到大家得地為業",
+      "先把牲畜全部交給祭司",
+      "放棄自己的支派名稱",
+      "帶家人先返埃及等候"
+    ],
+    "answer": 0,
+    "explanation": "摩西要求他們不可讓其他支派獨自作戰；他們要先帶兵過約旦河，直到眾支派都得着產業。",
+    "reference": "民數記32:16–22",
+    "id": "numbers-069",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/32/",
+    "verification": "https://bible.usccb.org/bible/numbers/32"
+  },
+  {
+    "unit": "n10",
+    "difficulty": 1,
+    "question": "民數記33章回顧以色列人離開埃及後，佢哋由邊度起程？",
+    "options": [
+      "蘭塞",
+      "西奈山",
+      "加低斯",
+      "摩押平原"
+    ],
+    "answer": 0,
+    "explanation": "民數記33章逐站記錄曠野旅程，開頭記載百姓由蘭塞起行，離開埃及。",
+    "reference": "民數記33:1–5",
+    "id": "numbers-070",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/33/",
+    "verification": "https://bible.usccb.org/bible/numbers/33"
+  },
+  {
+    "unit": "n10",
+    "difficulty": 1,
+    "question": "約旦河西邊迦南地的南面邊界，經文提到邊個曠野？",
+    "options": [
+      "尋的曠野",
+      "汛的曠野",
+      "巴蘭曠野",
+      "西奈曠野"
+    ],
+    "answer": 0,
+    "explanation": "分地界線由尋的曠野旁邊開始，沿南面延伸；民數記34章逐段描述迦南地四面的邊界。",
+    "reference": "民數記34:1–5",
+    "id": "numbers-071",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/34/",
+    "verification": "https://bible.usccb.org/bible/numbers/34"
+  },
+  {
+    "unit": "n10",
+    "difficulty": 1,
+    "question": "利未人喺各支派產業之中會得到咩？",
+    "options": [
+      "居住的城和四周牧地",
+      "整個約旦河東",
+      "王宮和城牆",
+      "每支派一半土地"
+    ],
+    "answer": 0,
+    "explanation": "利未人沒有一大塊相連的地業；各支派要分出城給他們居住，並提供城外牧地。",
+    "reference": "民數記35:1–8",
+    "id": "numbers-072",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/35/",
+    "verification": "https://bible.usccb.org/bible/numbers/35"
+  },
+  {
+    "unit": "n10",
+    "difficulty": 1,
+    "question": "民數記35章提到幾多座逃城，畀誤殺人的人暫時避難？",
+    "options": [
+      "六座",
+      "三座",
+      "十二座",
+      "四十八座"
+    ],
+    "answer": 0,
+    "explanation": "以色列人要設六座逃城，讓誤殺人的人可以逃到那裏，等候會眾按律例審理。",
+    "reference": "民數記35:9–15",
+    "id": "numbers-073",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/35/",
+    "verification": "https://bible.usccb.org/bible/numbers/35"
+  },
+  {
+    "unit": "n10",
+    "difficulty": 1,
+    "question": "民數記最後一章關於西羅非哈女兒的安排，重點係咩？",
+    "options": [
+      "承受產業的女兒要嫁同宗族支派的人，避免地業轉到別支派",
+      "女兒不可承受任何產業",
+      "產業要交給摩西的家族",
+      "每個支派要把土地交給利未人"
+    ],
+    "answer": 0,
+    "explanation": "西羅非哈的女兒可承受父親產業，但要嫁給自己支派宗族內的人，令產業留喺父親的支派。",
+    "reference": "民數記36:1–12",
+    "id": "numbers-074",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/36/",
+    "verification": "https://bible.usccb.org/bible/numbers/36"
+  },
+  {
+    "unit": "n2",
+    "difficulty": 1,
+    "question": "拿細耳人完成許願後，剃下來的頭髮要點處理？",
+    "options": [
+      "放喺平安祭的火上焚燒",
+      "交畀摩西收藏在約櫃旁",
+      "拋入曠野的井裏",
+      "編成繩子掛在會幕門口"
+    ],
+    "answer": 0,
+    "explanation": "完成拿細耳人許願時，剃下的頭髮要放在平安祭下面的火上焚燒。",
+    "reference": "民數記6:13–21",
+    "id": "numbers-075",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/6/",
+    "verification": "https://bible.usccb.org/bible/numbers/6"
+  },
+  {
+    "unit": "n3",
+    "difficulty": 1,
+    "question": "各支派首領開始獻會幕禮物時，第一日由邊個支派首領獻上？",
+    "options": [
+      "猶大支派的拿順",
+      "流便支派的以利蓿",
+      "以薩迦支派的拿坦業",
+      "西布倫支派的以利押"
+    ],
+    "answer": 0,
+    "explanation": "首領獻禮物的次序由猶大支派的拿順開始，之後每日由另一支派首領接續。",
+    "reference": "民數記7:12–17",
+    "id": "numbers-076",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/7/",
+    "verification": "https://bible.usccb.org/bible/numbers/7"
+  },
+  {
+    "unit": "n3",
+    "difficulty": 1,
+    "question": "民數記8章提到利未人潔淨之後，要由誰帶到會幕前？",
+    "options": [
+      "以色列全會眾",
+      "只有摩西一個人",
+      "猶大支派首領",
+      "米甸祭司的女兒"
+    ],
+    "answer": 0,
+    "explanation": "摩西要把潔淨後的利未人帶到會幕前，讓以色列全會眾聚集見證他們被分別出來服事。",
+    "reference": "民數記8:9–11",
+    "id": "numbers-077",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/8/",
+    "verification": "https://bible.usccb.org/bible/numbers/8"
+  },
+  {
+    "unit": "n4",
+    "difficulty": 1,
+    "question": "如果有人因接觸死屍而不潔，錯過了正月的逾越節，可以喺幾時補守？",
+    "options": [
+      "第二個月十四日",
+      "正月十四日的翌日",
+      "七月第一日",
+      "第二年正月第一日"
+    ],
+    "answer": 0,
+    "explanation": "因不潔或旅途遙遠而錯過正月逾越節的人，可以在第二個月十四日補守。",
+    "reference": "民數記9:9–12",
+    "id": "numbers-078",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/9/",
+    "verification": "https://bible.usccb.org/bible/numbers/9"
+  },
+  {
+    "unit": "n5",
+    "difficulty": 1,
+    "question": "百姓不信任上帝、不肯進迦南後，摩西為佢哋向上帝求咩？",
+    "options": [
+      "求上帝按豐盛慈愛赦免他們",
+      "求上帝即刻帶他們返埃及",
+      "求上帝將迦南交給十個探子",
+      "求上帝讓摩西做以色列王"
+    ],
+    "answer": 0,
+    "explanation": "摩西求上帝按祂的慈愛赦免百姓；上帝赦免他們，但那一代人仍要承受拒絕進入應許地的後果。",
+    "reference": "民數記14:17–23",
+    "id": "numbers-079",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/14/",
+    "verification": "https://bible.usccb.org/bible/numbers/14"
+  },
+  {
+    "unit": "n5",
+    "difficulty": 1,
+    "question": "迦南地的亞衲族人在探子口中被形容為點樣？",
+    "options": [
+      "身材高大、令探子覺得自己好似蚱蜢",
+      "唔識打仗、已經離開城邑",
+      "住在帳幕裏的牧羊人",
+      "願意帶以色列人入城"
+    ],
+    "answer": 0,
+    "explanation": "十個探子形容當地人強壯高大，自己喺佢哋眼中似蚱蜢；呢種恐懼令百姓唔敢進入。",
+    "reference": "民數記13:28、32–33",
+    "id": "numbers-080",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/13/",
+    "verification": "https://bible.usccb.org/bible/numbers/13"
+  },
+  {
+    "unit": "n6",
+    "difficulty": 1,
+    "question": "可拉一夥人拿住香爐獻香之後，會幕周圍發生咩事？",
+    "options": [
+      "火從耶和華而出，燒滅獻香的二百五十人",
+      "雲彩升起，所有人立即起行",
+      "香爐變成水盆",
+      "祭壇裂開並沉入地下"
+    ],
+    "answer": 0,
+    "explanation": "上帝以火審判擅自獻香的二百五十位首領；亞倫的兒子以利亞撒之後把銅香爐收集起來。",
+    "reference": "民數記16:16–18、35–39",
+    "id": "numbers-081",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/16/",
+    "verification": "https://bible.usccb.org/bible/numbers/16"
+  },
+  {
+    "unit": "n6",
+    "difficulty": 1,
+    "question": "以色列人埋怨摩西同亞倫之後，營中瘟疫點樣停止？",
+    "options": [
+      "亞倫拿香爐站在活人和死人中間，為百姓贖罪",
+      "摩西叫百姓即刻拆會幕",
+      "七十位長老吹銀號角",
+      "約書亞帶全營離開西奈山"
+    ],
+    "answer": 0,
+    "explanation": "摩西吩咐亞倫拿香爐為百姓贖罪；亞倫站在活人同死人中間，瘟疫先停止。",
+    "reference": "民數記16:41–50",
+    "id": "numbers-082",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/16/",
+    "verification": "https://bible.usccb.org/bible/numbers/16"
+  },
+  {
+    "unit": "n6",
+    "difficulty": 1,
+    "question": "利未人要將自己收入的十分之一獻畀邊個？",
+    "options": [
+      "祭司",
+      "摩西",
+      "猶大支派",
+      "探子"
+    ],
+    "answer": 0,
+    "explanation": "利未人從百姓所得的十分之一中，再取十分之一獻給祭司亞倫，作為舉祭。",
+    "reference": "民數記18:25–28",
+    "id": "numbers-083",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/18/",
+    "verification": "https://bible.usccb.org/bible/numbers/18"
+  },
+  {
+    "unit": "n6",
+    "difficulty": 1,
+    "question": "祭司同利未人喺以色列各支派中得到咩作生活所需？",
+    "options": [
+      "百姓獻上的祭物和十分之一",
+      "每人一座城作王宮",
+      "只靠自己耕種的田地",
+      "每年一次戰利品"
+    ],
+    "answer": 0,
+    "explanation": "利未人沒有一般支派的土地產業，靠百姓獻上的祭物和十分之一生活；祭司再從利未人的十分之一領取份額。",
+    "reference": "民數記18:8–24",
+    "id": "numbers-084",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/18/",
+    "verification": "https://bible.usccb.org/bible/numbers/18"
+  },
+  {
+    "unit": "n7",
+    "difficulty": 1,
+    "question": "紅母牛除污水主要用嚟潔淨邊類不潔？",
+    "options": [
+      "接觸死屍後的不潔",
+      "在外地旅行後的不潔",
+      "食錯節期食物的不潔",
+      "接觸銅器後的不潔"
+    ],
+    "answer": 0,
+    "explanation": "除污水用於接觸死屍而不潔的人；按當時的禮儀規定，潔淨後要洗衣服並等到晚上。",
+    "reference": "民數記19:11–19",
+    "id": "numbers-085",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/19/",
+    "verification": "https://bible.usccb.org/bible/numbers/19"
+  },
+  {
+    "unit": "n7",
+    "difficulty": 1,
+    "question": "米利暗喺民數記20章死喺邊度？",
+    "options": [
+      "加低斯",
+      "西奈山",
+      "何珥山",
+      "耶利哥"
+    ],
+    "answer": 0,
+    "explanation": "以色列全會眾到加低斯安營，米利暗在那裏去世並埋葬。",
+    "reference": "民數記20:1",
+    "id": "numbers-086",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/20/",
+    "verification": "https://bible.usccb.org/bible/numbers/20"
+  },
+  {
+    "unit": "n7",
+    "difficulty": 1,
+    "question": "以東拒絕以色列人經過之後，百姓改行去邊個方向？",
+    "options": [
+      "離開以東，轉去別的路",
+      "直接穿過以東城鎮",
+      "即刻返回埃及",
+      "搭船去非利士地"
+    ],
+    "answer": 0,
+    "explanation": "以東人不准百姓通過，以色列人便離開，改道前行，避免同以東開戰。",
+    "reference": "民數記20:20–21",
+    "id": "numbers-087",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/20/",
+    "verification": "https://bible.usccb.org/bible/numbers/20"
+  },
+  {
+    "unit": "n7",
+    "difficulty": 1,
+    "question": "以色列人戰勝巴珊王噩之後，佔領咗邊個地方？",
+    "options": [
+      "巴珊全地和他的城邑",
+      "埃及歌珊地",
+      "迦南西岸的耶利哥",
+      "米甸沿海城市"
+    ],
+    "answer": 0,
+    "explanation": "以色列人擊敗巴珊王噩，佔領他的土地和城邑，之後在約旦河東安營。",
+    "reference": "民數記21:33–35",
+    "id": "numbers-088",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/21/",
+    "verification": "https://bible.usccb.org/bible/numbers/21"
+  },
+  {
+    "unit": "n7",
+    "difficulty": 1,
+    "question": "以色列人同西宏和噩交戰前，曾經嘗試用咩方式避免衝突？",
+    "options": [
+      "請求沿大道和平通過，不碰田地和水井",
+      "要求對方交出所有城邑",
+      "派祭司偷走王的冠冕",
+      "要求與他們交換嗎哪"
+    ],
+    "answer": 0,
+    "explanation": "摩西派使者提出和平通過的請求，承諾唔會偏入田地或葡萄園，也唔會取井水；兩王仍然出兵。",
+    "reference": "民數記21:21–23、33",
+    "id": "numbers-089",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/21/",
+    "verification": "https://bible.usccb.org/bible/numbers/21"
+  },
+  {
+    "unit": "n8",
+    "difficulty": 1,
+    "question": "巴勒帶巴蘭去咗幾個地方，想令巴蘭從唔同角度咒詛以色列？",
+    "options": [
+      "三個地方",
+      "一個地方",
+      "兩個地方",
+      "七個地方"
+    ],
+    "answer": 0,
+    "explanation": "巴勒先後帶巴蘭到幾處高地觀察以色列；每次巴蘭都講出上帝要他說的話，而非咒詛。",
+    "reference": "民數記22:41；23:13–14、27–28",
+    "id": "numbers-090",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/22/",
+    "verification": "https://bible.usccb.org/bible/numbers/22"
+  },
+  {
+    "unit": "n8",
+    "difficulty": 1,
+    "question": "巴蘭第二次講祝福時，話上帝唔係人，祂唔會點？",
+    "options": [
+      "說謊或改變心意",
+      "看見以色列的營",
+      "聽見巴勒的請求",
+      "賜福給百姓"
+    ],
+    "answer": 0,
+    "explanation": "巴蘭指出上帝不像人會說謊或後悔；祂所說要賜福的事，不會被巴勒的要求推翻。",
+    "reference": "民數記23:19–20",
+    "id": "numbers-091",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/23/",
+    "verification": "https://bible.usccb.org/bible/numbers/23"
+  },
+  {
+    "unit": "n8",
+    "difficulty": 1,
+    "question": "巴蘭喺第三次祝福前，見到以色列人按支派安營後，點樣改變做法？",
+    "options": [
+      "不再去求兆頭，轉向曠野觀看",
+      "叫巴勒再加倍給酬金",
+      "先獻祭給摩押的神",
+      "拒絕再講任何話"
+    ],
+    "answer": 0,
+    "explanation": "巴蘭見耶和華喜歡賜福以色列，就不再像之前那樣求兆頭，而是面向曠野，看見以色列按支派安營。",
+    "reference": "民數記24:1–2",
+    "id": "numbers-092",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/24/",
+    "verification": "https://bible.usccb.org/bible/numbers/24"
+  },
+  {
+    "unit": "n8",
+    "difficulty": 1,
+    "question": "巴蘭最後一段預言提到將來會有咩從雅各而出？",
+    "options": [
+      "一顆星和一根權杖",
+      "一座金城和一條河",
+      "一個新會幕和銀號角",
+      "一群探子和一串葡萄"
+    ],
+    "answer": 0,
+    "explanation": "巴蘭預言有星要出於雅各，有權杖要興於以色列；這段話指向將來的君王。",
+    "reference": "民數記24:15–19",
+    "id": "numbers-093",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/24/",
+    "verification": "https://bible.usccb.org/bible/numbers/24"
+  },
+  {
+    "unit": "n8",
+    "difficulty": 1,
+    "question": "巴勒多次要求巴蘭咒詛百姓，巴蘭點解做唔到？",
+    "options": [
+      "只能講上帝放在他口中的話",
+      "摩西用銀號角阻止他",
+      "他已經返咗米甸",
+      "他唔識以色列人的名字"
+    ],
+    "answer": 0,
+    "explanation": "巴蘭承認自己只能說上帝放在他口中的話，無法按巴勒的意思咒詛以色列。",
+    "reference": "民數記22:18、38；23:12、26",
+    "id": "numbers-094",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/22/",
+    "verification": "https://bible.usccb.org/bible/numbers/22"
+  },
+  {
+    "unit": "n9",
+    "difficulty": 1,
+    "question": "西羅非哈五個女兒的名字中，邊個係其中之一？",
+    "options": [
+      "瑪拉",
+      "米利暗",
+      "西坡拉",
+      "底波拉"
+    ],
+    "answer": 0,
+    "explanation": "五個女兒係瑪拉、挪阿、曷拉、密迦同得撒；她們為父親的產業提出請求。",
+    "reference": "民數記27:1",
+    "id": "numbers-095",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/27/",
+    "verification": "https://bible.usccb.org/bible/numbers/27"
+  },
+  {
+    "unit": "n9",
+    "difficulty": 1,
+    "question": "第二次點算時，利未人有冇同二十歲以上可出戰的男子一齊計入？",
+    "options": [
+      "冇，利未人另行點算",
+      "有，利未人全部計入猶大支派",
+      "只有祭司計入",
+      "只有五十歲以上利未人計入"
+    ],
+    "answer": 0,
+    "explanation": "第二次軍隊點算同樣排除利未支派；利未人按自己的服事職責另行點算。",
+    "reference": "民數記26:1–4、57–62",
+    "id": "numbers-096",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/26/",
+    "verification": "https://bible.usccb.org/bible/numbers/26"
+  },
+  {
+    "unit": "n9",
+    "difficulty": 1,
+    "question": "第二次點算結果，二十歲或以上可出戰的男子大約有幾多？",
+    "options": [
+      "六十萬一千七百三十人",
+      "六十萬三千五百五十人",
+      "七萬五千人",
+      "四萬五千六百人"
+    ],
+    "answer": 0,
+    "explanation": "民數記26章記錄第二次點算的總數是六十萬一千七百三十人，利未支派另計。",
+    "reference": "民數記26:51",
+    "id": "numbers-097",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/26/",
+    "verification": "https://bible.usccb.org/bible/numbers/26"
+  },
+  {
+    "unit": "n9",
+    "difficulty": 1,
+    "question": "摩西喺民數記27章求上帝為百姓安排咩？",
+    "options": [
+      "一位帶領他們出入、免得會眾像無牧人的羊",
+      "一座新的會幕放在迦南",
+      "十二位新探子代替約書亞",
+      "一個可以穿越以東的通道"
+    ],
+    "answer": 0,
+    "explanation": "摩西求上帝立一位領袖在會眾前後帶領他們，唔好讓百姓像沒有牧人的羊。",
+    "reference": "民數記27:15–17",
+    "id": "numbers-098",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/27/",
+    "verification": "https://bible.usccb.org/bible/numbers/27"
+  },
+  {
+    "unit": "n10",
+    "difficulty": 1,
+    "question": "流便、迦得同瑪拿西半支派最後獲分到邊邊土地？",
+    "options": [
+      "約旦河東",
+      "尼羅河三角洲",
+      "迦南沿海平原",
+      "西奈山南面"
+    ],
+    "answer": 0,
+    "explanation": "流便、迦得同瑪拿西半支派在約旦河東得到土地，但他們的戰士仍要協助其他支派進入迦南。",
+    "reference": "民數記32:33",
+    "id": "numbers-099",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/32/",
+    "verification": "https://bible.usccb.org/bible/numbers/32"
+  },
+  {
+    "unit": "n10",
+    "difficulty": 1,
+    "question": "利未人分散住喺以色列各支派的城裏，合共得到幾多座城？",
+    "options": [
+      "四十八座",
+      "六座",
+      "十二座",
+      "三十座"
+    ],
+    "answer": 0,
+    "explanation": "各支派分出城和周圍牧地給利未人，總共四十八座城，其中六座同時作逃城。",
+    "reference": "民數記35:6–8",
+    "id": "numbers-100",
+    "topic": "numbers",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/NUM/35/",
+    "verification": "https://bible.usccb.org/bible/numbers/35"
+  }
+];

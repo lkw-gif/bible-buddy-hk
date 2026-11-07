@@ -5,6 +5,7 @@ import { CHALLENGE_QUESTIONS } from './challenge-data.mjs?v=20261101-10';
 import { GENESIS_QUESTIONS, GENESIS_HARD_QUESTIONS } from './genesis-course.mjs?v=20261107-2';
 import { BIBLE_QUESTIONS } from './bible-course.mjs?v=20261101-13';
 import { EXODUS_QUESTIONS, EXODUS_HARD_QUESTIONS } from './exodus-course.mjs?v=20261107-3';
+import { NUMBERS_QUESTIONS, NUMBERS_HARD_QUESTIONS } from './numbers-course.mjs?v=20261107-1';
 // Original Cantonese question wording. Each row: difficulty, question, correct answer,
 // three distractors, reference, explanation, optional source URL.
 export const TOPICS = [
@@ -293,4 +294,4 @@ export const QUESTIONS_V2 = legacyQuestions.map(q => {
 });
 export const QUESTION_MAP_V2 = new Map(QUESTIONS_V2.map(q => [q.id, q]));
 export const QUESTIONS = QUESTIONS_V2.map(reviseCopy);
-export const QUESTION_MAP = new Map([...QUESTIONS,...HISTORY_QUESTIONS,...CHALLENGE_QUESTIONS,...BIBLE_QUESTIONS,...GENESIS_QUESTIONS,...GENESIS_HARD_QUESTIONS,...EXODUS_QUESTIONS,...EXODUS_HARD_QUESTIONS].map(q => [q.id, q]));
+export const QUESTION_MAP = new Map([...QUESTIONS,...HISTORY_QUESTIONS,...CHALLENGE_QUESTIONS,...BIBLE_QUESTIONS,...GENESIS_QUESTIONS,...GENESIS_HARD_QUESTIONS,...EXODUS_QUESTIONS,...EXODUS_HARD_QUESTIONS,...NUMBERS_QUESTIONS,...NUMBERS_HARD_QUESTIONS].map(q => [q.id, q]));
