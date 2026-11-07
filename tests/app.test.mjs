@@ -262,7 +262,7 @@ test('Church-history lessons resume, save bookmarks and mistakes, and update pro
   await app.click('.question-meta [data-action="bookmark"]');
   await app.click('[data-action="skip"]');
   assert.equal(app.$('.feedback a'),null);
-  assert.equal(app.$('.feedback .reference'),null);
+  assert.match(app.$('.feedback .reference').textContent,/出處：/);
   const saved=app.w.localStorage.getItem(key);app.dom.window.close();
   app=await boot(saved,'#/quiz');
   assert.equal(app.savedProgress().current.answers.length,1);
