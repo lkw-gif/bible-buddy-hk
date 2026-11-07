@@ -59,9 +59,10 @@ test('A full 40-question General round produces correct score, title, mistake li
   await app.click('[data-mode="general"][data-count="40"]');
   assert.match(app.$('.quiz-label').textContent,/曠野長征/);
   assert(!app.$('.quiz-label').textContent.includes('進階挑戰'));
-  assert.equal(app.savedProgress().current.distribution,'general-v5');
+  assert.equal(app.savedProgress().current.distribution,'general-fixed-v1');
+  assert.equal(app.savedProgress().current.edition,1);
   const selected=app.savedProgress().current.items.map(i=>QUESTION_MAP.get(i.id));
-  assert.deepEqual([1,2,3].map(d=>selected.filter(q=>q.difficulty===d).length),[20,16,4]);
+  assert.deepEqual([1,2,3].map(d=>selected.filter(q=>q.difficulty===d).length),[13,13,14]);
 
   let bookmarked;
   for (let i=0; i<40; i++) {
@@ -69,7 +70,7 @@ test('A full 40-question General round produces correct score, title, mistake li
     const q=QUESTION_MAP.get(r.items[r.index].id);
     if (i===0) { bookmarked=q.id; await app.click('.question-meta [data-action="bookmark"]'); await app.click('[data-action="skip"]'); }
     else await app.click(`[data-action="answer"][data-choice="${i===1?1:q.answer}"]`);
-    if(i===0){const snapshot=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(snapshot,'#/quiz');assert.equal(app.savedProgress().current.distribution,'general-v5');}
+    if(i===0){const snapshot=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(snapshot,'#/quiz');assert.equal(app.savedProgress().current.distribution,'general-fixed-v1');assert.equal(app.savedProgress().current.edition,1);}
     assert.equal(app.w.document.querySelectorAll('.choice:disabled').length,4);
     assert.equal(app.w.document.querySelectorAll('.choice.correct').length,1);
     assert.match(app.$('.feedback').textContent,new RegExp(q.explanation.slice(0,8).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
@@ -129,8 +130,9 @@ test('Previously saved balanced General progress and completed scores survive th
 
 test('The short General round resumes, scores twenty questions, and retries the same version', async () => {
   let app=await boot();
-  assert.match(app.$('.general-versions').textContent,/曠野快閃.*曠野長征/);
-  await app.click('.general-versions [data-count="20"]');
+  assert.match(app.$('.quick-version').textContent,/曠野快閃/);
+  assert.match(app.$('.general-editions').textContent,/曠野一.*曠野二.*曠野三.*曠野四.*曠野五.*曠野六/);
+  await app.click('.quick-version [data-count="20"]');
   await app.click('[data-action="answer"][data-choice="0"]');
   const saved=app.w.localStorage.getItem(key); app.dom.window.close();
   app=await boot(saved,'#/quiz');

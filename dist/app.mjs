@@ -1,5 +1,5 @@
 import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261107-5';
-import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, retreatRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261107-6';
+import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, retreatRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261108-1';
 import { HISTORY_TOPIC, HISTORY_QUESTIONS, HISTORY_QUESTION_MAP, COURSE_UNITS, cleanCourseAnswers, courseStatus } from './history-course.mjs?v=20261101-7';
 import { CHALLENGE_QUESTIONS } from './challenge-data.mjs?v=20261101-10';
 import { GENESIS_TOPIC, GENESIS_UNITS, GENESIS_QUESTION_MAP, cleanGenesisAnswers, genesisStatus } from './genesis-course.mjs?v=20261107-2';
@@ -123,7 +123,7 @@ function roundTitle(r) {
   if (r.mode === 'genesis') return `創世記 · 第${GENESIS_UNITS.findIndex(u=>u.id===r.unit)+1}課`;
   if (r.mode === 'bible') return `聖經知識 · 第${BIBLE_UNITS.findIndex(u=>u.id===r.unit)+1}課 ${BIBLE_UNITS.find(u=>u.id===r.unit)?.name || ''}`;
   if (r.mode === 'church') return `教會歷史篇 · 第${COURSE_UNITS.findIndex(u => u.id === r.unit)+1}課 ${COURSE_UNITS.find(u => u.id === r.unit)?.name || ''}`;
-  return r.mode === 'general' ? (r.items.length === 20 ? '曠野快閃 · 20題' : '曠野長征 · 40題' + (r.distribution === 'challenge-v4' ? ' · 進階挑戰' : '')) : r.mode === 'trial' ? '曠野試探場 · ' + TRIAL_LEVELS[r.difficulty].name : r.mode === 'daily' ? '往日操練（舊紀錄）' : r.mode === 'review' ? '返去溫習' : topicById(r.topic)?.name || '經文操練';
+  return r.mode === 'general' ? (r.items.length === 20 ? '曠野快閃 · 20題' : (r.edition ? `曠野長征 · 曠野${['一','二','三','四','五','六'][r.edition-1]} · 40題` : '曠野長征 · 40題') + (r.distribution === 'challenge-v4' ? ' · 進階挑戰' : '')) : r.mode === 'trial' ? '曠野試探場 · ' + TRIAL_LEVELS[r.difficulty].name : r.mode === 'daily' ? '往日操練（舊紀錄）' : r.mode === 'review' ? '返去溫習' : topicById(r.topic)?.name || '經文操練';
 }
 function render({ focus = true } = {}) {
   const page = route();
@@ -172,16 +172,16 @@ function homeView() {
   return `<section class="hero" aria-labelledby="home-title"><div class="hero-copy"><div class="hero-label"><span>✦</span> 主日學唔好走堂 · 一齊操練</div><h1 id="home-title">返咗咁耐教會，<br><em>聖經有幾熟？</em></h1><p>唔係咩都答「耶穌」就過關。<br>由基本知識慢慢學起，睇吓你本聖經有冇封塵。</p><div class="actions"><button class="button primary" data-action="start" data-mode="general" data-count="20">曠野快閃 · 20題 ${icon('arrow')}</button></div><div class="hero-stats"><div><strong>${QUESTIONS.length + CHALLENGE_QUESTIONS.length}</strong> 條問題</div><div><strong>${TOPICS.length}</strong> 個主題</div><div><strong>冇</strong> 時間限制</div></div></div><div class="hero-art"><img src="assets/hero.png" alt="戴圓眼鏡嘅小羊同白鴿坐喺舊式課桌前讀聖經，後面有淡淡嘅香港舊樓" width="1536" height="1024" fetchpriority="high"><span class="art-note">每日讀啲經文，一齊扎根。</span><div class="art-badge"><span aria-hidden="true">✧</span> 答錯唔緊要，小羊陪你慢慢學。</div></div></section>
     ${storageUnavailable ? '<p class="privacy-notice">呢個瀏覽器暫時儲存唔到進度。仍然可以測驗，完成後可下載成績。</p>' : ''}
     ${current ? `<aside class="resume-banner"><div><strong>上次未答完，今次繼續啦。</strong><p>${escape(roundTitle(current))} · 已答 ${current.answers.length} / ${current.items.length} 題</p></div><a href="#/quiz" class="button primary small">繼續操練 ${icon('arrow')}</a></aside>` : ''}
-    <section class="mode-grid" aria-label="揀一種玩法"><article class="general-card"><div><div class="eyebrow">八個主題，一齊操練</div><h2><span class="general-title">全方位大試煉</span><span class="pill">同小組一齊玩</span></h2><p>想快啲做完可以揀20題，有時間慢慢答就揀40題。兩款都以基礎聖經知識為主。</p><div class="general-versions"><button class="button light" data-action="start" data-mode="general" data-count="20"><strong>曠野快閃 · 20題</strong>${icon('arrow')}</button><button class="button light" data-action="start" data-mode="general" data-count="40"><strong>曠野長征 · 40題</strong>${icon('arrow')}</button></div><p class="general-note">兩款都有九成基礎同中等題，先睇吓自己記得幾多。想再挑戰，就去「曠野試探場」揀高難度。</p></div><div class="general-decoration" aria-hidden="true">${icon('cap')}</div></article>${trialCard()}</section>
+    <section class="mode-grid" aria-label="揀一種玩法"><article class="general-card"><div><div class="eyebrow">八個主題，一齊操練</div><h2><span class="general-title">全方位大試煉</span><span class="pill">同小組一齊玩</span></h2><p>想快啲答可以揀20題；想做足40題，就揀一個固定版本。</p><div class="quick-version"><button class="button light" data-action="start" data-mode="general" data-count="20"><strong>曠野快閃 · 20題</strong>${icon('arrow')}</button></div><div class="fixed-version-heading">曠野長征 · 40題</div><div class="general-editions">${[1,2,3,4,5,6].map((edition)=>`<button class="button light" data-action="start" data-mode="general" data-count="40" data-edition="${edition}"><strong>曠野${['一','二','三','四','五','六'][edition-1]}</strong>${icon('arrow')}</button>`).join('')}</div><p class="general-note">六個版本都係固定題目，八個主題各有五題；六版合起來可以操練晒240條題目。</p></div><div class="general-decoration" aria-hidden="true">${icon('cap')}</div></article>${trialCard()}</section>
     <section class="topics-section" id="topics" aria-label="八個主題"><div class="section-heading"><div><div class="eyebrow">各有恩賜，一齊學習</div><p>揀個主題嚟操練。由基本知識到深入理解，一步一步扎根。</p></div><span class="pill sand">八個主題 · 逐步扎根</span></div><div class="topic-grid">${TOPICS.map(t => `<button class="topic-card" data-action="start" data-mode="topic" data-topic="${t.id}"><span class="topic-top"><span class="topic-icon ${t.color}">${icon(t.icon)}</span><span class="topic-count">${questionPool(t.id).length} 題</span></span><h3>${t.name}</h3><p>${t.description}</p><span class="topic-bottom"><span class="eyebrow">${t.en}</span>${icon('arrow')}</span></button>`).join('')}</div></section>
     `;
 }
 
-function startQuiz(mode, topic = 'overview', ids = [], difficulty = 'all', count, unit) {
+function startQuiz(mode, topic = 'overview', ids = [], difficulty = 'all', count, unit, edition) {
   try {
     progress.tone = 'cheeky';
     const seenIds = mode.startsWith('genesis') ? progress.genesisSeen : mode.startsWith('exodus') ? progress.exodusSeen : mode.startsWith('numbers') ? progress.numbersSeen : mode.startsWith('leviticus') ? progress.leviticusSeen : mode.startsWith('deuteronomy') ? progress.deuteronomySeen : [];
-    progress.current = createRound({ mode, topic, ids, count, difficulty, unit, seenIds, tone:'cheeky' });
+    progress.current = createRound({ mode, topic, ids, count, difficulty, unit, edition, seenIds, tone:'cheeky' });
     persist(); resultFilter = 'wrong'; resultSearch = ''; go('/quiz');
   } catch (error) { toast(error.message); }
 }
@@ -326,7 +326,7 @@ document.addEventListener('input', event => {
 document.addEventListener('click', async event => {
   const button = event.target.closest('[data-action]'); if (!button || button.disabled) return;
   const action = button.dataset.action;
-  if (action === 'start') startQuiz(button.dataset.mode, button.dataset.topic, [], button.dataset.difficulty || 'all', button.dataset.count, button.dataset.unit);
+  if (action === 'start') startQuiz(button.dataset.mode, button.dataset.topic, [], button.dataset.difficulty || 'all', button.dataset.count, button.dataset.unit, button.dataset.edition);
   if (action === 'close-dialog') button.closest('dialog').close();
   if (action === 'answer') handleAnswer(Number(button.dataset.choice));
   if (action === 'skip') handleAnswer(null);
@@ -345,7 +345,7 @@ document.addEventListener('click', async event => {
   if (action === 'review-tab') { reviewTab = button.dataset.tab; reviewSearch = ''; main.innerHTML = reviewView(); $(`[data-tab="${reviewTab}"]`)?.focus({ preventScroll: true }); }
   if (action === 'practice') startQuiz('review', 'overview', progress[reviewTab]);
   if (action === 'result-filter') { resultFilter = button.dataset.filter; const r = progress.history.find(x => x.id === route().id); if (r) { for (const b of document.querySelectorAll('[data-action="result-filter"]')) b.setAttribute('aria-pressed', String(b.dataset.filter === resultFilter)); $('#result-rows').innerHTML = resultRows(r); } }
-  if (action === 'retry') { const r = progress.history.find(x => x.id === button.dataset.id); if (r) startQuiz(r.mode === 'daily' ? 'general' : r.mode, r.topic || 'overview', r.mode === 'review' ? r.items.map(i => i.id) : [], r.difficulty, r.mode === 'daily' ? 20 : r.items.length, r.unit); }
+  if (action === 'retry') { const r = progress.history.find(x => x.id === button.dataset.id); if (r) startQuiz(r.mode === 'daily' ? 'general' : r.mode, r.topic || 'overview', r.mode === 'review' ? r.items.map(i => i.id) : [], r.difficulty, r.mode === 'daily' ? 20 : r.items.length, r.unit, r.edition); }
   if (action === 'share') shareResult(button.dataset.id);
   if (action === 'copy-result') {
     try { await navigator.clipboard.writeText($('#share-text').value); toast('複製好啦，可以貼畀朋友。'); }

@@ -81,19 +81,37 @@ export function questionPool(topic, difficulty = 'all') {
   return QUESTIONS.filter(q => q.topic === topic && (difficulty === 'all' || q.difficulty === Number(difficulty)));
 }
 
-export function createRound({ mode = 'general', topic = 'overview', count, difficulty = 'all', tone = 'cheeky', ids = [], unit, seenIds = [], random = Math.random } = {}) {
+function fixedGeneralEdition(edition) {
+  if (!Number.isInteger(Number(edition)) || Number(edition) < 1 || Number(edition) > 6) throw new Error('揀一個曠野長征版本先入場。');
+  const version = Number(edition);
+  return TOPICS.flatMap((topic, topicIndex) => [1,2,3].flatMap(difficulty => {
+    const omitted = (version - 1 + topicIndex) % 3 === difficulty - 1;
+    const count = omitted ? 1 : 2;
+    const start = Array.from({length:version - 1},(_,i)=>((i + topicIndex) % 3 === difficulty - 1 ? 1 : 2)).reduce((sum,n)=>sum+n,0);
+    const pool = questionPool(topic.id,difficulty).slice().sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0);
+    return pool.slice(start,start+count);
+  }));
+}
+
+export function createRound({ mode = 'general', topic = 'overview', count, edition, difficulty = 'all', tone = 'cheeky', ids = [], unit, seenIds = [], random = Math.random } = {}) {
   let selected;
+  let fixedEdition = null;
   if (mode === 'general') {
     const size = count === undefined ? 40 : Number(count);
     if (![20,40].includes(size)) throw new Error('曠野快閃20題，定曠野長征40題？揀好就入場。');
-    const rotated=shuffle(TOPICS,random);
-    const extra = new Set(rotated.slice(0,4).map(t => t.id));
-    const harder = new Set(rotated.slice(0,size === 40 ? 4 : 2).map(t => t.id));
-    selected = TOPICS.flatMap(t => {
-      const split = size === 40 ? [harder.has(t.id) ? 2 : 3,2,harder.has(t.id) ? 1 : 0] :
-        [extra.has(t.id) && !harder.has(t.id) ? 2 : 1,1,harder.has(t.id) ? 1 : 0];
-      return split.flatMap((n, i) => shuffle(questionPool(t.id, i + 1), random).slice(0, n));
-    });
+    if (size === 40 && edition !== undefined) {
+      fixedEdition = Number(edition);
+      selected = fixedGeneralEdition(fixedEdition);
+    } else {
+      const rotated=shuffle(TOPICS,random);
+      const extra = new Set(rotated.slice(0,4).map(t => t.id));
+      const harder = new Set(rotated.slice(0,size === 40 ? 4 : 2).map(t => t.id));
+      selected = TOPICS.flatMap(t => {
+        const split = size === 40 ? [harder.has(t.id) ? 2 : 3,2,harder.has(t.id) ? 1 : 0] :
+          [extra.has(t.id) && !harder.has(t.id) ? 2 : 1,1,harder.has(t.id) ? 1 : 0];
+        return split.flatMap((n, i) => shuffle(questionPool(t.id, i + 1), random).slice(0, n));
+      });
+    }
   } else if (mode === 'trial') {
     if (!['1','2','3'].includes(String(difficulty))) throw new Error('先揀低、中、高，先知今次試探去到邊。');
     selected = TOPICS.flatMap(t => shuffle(String(difficulty) === '3' ? CHALLENGE_QUESTIONS.filter(q => q.topic === t.id) : questionPool(t.id,difficulty),random).slice(0,2));
@@ -144,8 +162,9 @@ export function createRound({ mode = 'general', topic = 'overview', count, diffi
     selected = shuffle(questionPool(topic, difficulty), random).slice(0, Math.max(1, Math.min(30, Number(count) || 10)));
   } else { throw new Error('未知測驗模式'); }
   if (!selected.length) throw new Error('暫時冇呢類題目，可以揀其他主題。');
-  const items = (['church','bible','genesis','exodus','numbers','leviticus','deuteronomy'].includes(mode) ? selected : shuffle(selected, random)).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], random) }));
-  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 4, distribution: mode === 'general' ? 'general-v5' : mode === 'trial' && String(difficulty) === '3' ? 'trial-advanced-v5' : 'balanced-v3', mode, topic: ['genesis','genesis-test','genesis-level'].includes(mode) ? GENESIS_TOPIC.id : ['exodus','exodus-test','exodus-level'].includes(mode) ? EXODUS_TOPIC.id : ['numbers','numbers-test','numbers-level'].includes(mode) ? NUMBERS_TOPIC.id : ['leviticus','leviticus-test','leviticus-level'].includes(mode) ? LEVITICUS_TOPIC.id : ['deuteronomy','deuteronomy-test','deuteronomy-level'].includes(mode) ? DEUTERONOMY_TOPIC.id : mode === 'bible' ? BIBLE_TOPIC.id : mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:['church','bible','genesis','exodus','numbers','leviticus','deuteronomy'].includes(mode) ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
+  const roundRandom = fixedEdition ? seededRandom(`general-fixed-v1-${fixedEdition}`) : random;
+  const items = (['church','bible','genesis','exodus','numbers','leviticus','deuteronomy'].includes(mode) ? selected : shuffle(selected, roundRandom)).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], roundRandom) }));
+  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 4, distribution: fixedEdition ? 'general-fixed-v1' : mode === 'general' ? 'general-v5' : mode === 'trial' && String(difficulty) === '3' ? 'trial-advanced-v5' : 'balanced-v3', ...(fixedEdition ? {edition:fixedEdition} : {}), mode, topic: ['genesis','genesis-test','genesis-level'].includes(mode) ? GENESIS_TOPIC.id : ['exodus','exodus-test','exodus-level'].includes(mode) ? EXODUS_TOPIC.id : ['numbers','numbers-test','numbers-level'].includes(mode) ? NUMBERS_TOPIC.id : ['leviticus','leviticus-test','leviticus-level'].includes(mode) ? LEVITICUS_TOPIC.id : ['deuteronomy','deuteronomy-test','deuteronomy-level'].includes(mode) ? DEUTERONOMY_TOPIC.id : mode === 'bible' ? BIBLE_TOPIC.id : mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:['church','bible','genesis','exodus','numbers','leviticus','deuteronomy'].includes(mode) ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
 }
 
 export function answerRound(round, selected) {
@@ -192,7 +211,16 @@ export function validRound(round, completed = false) {
   if (!Array.isArray(round.answers) || round.answers.length > round.items.length || !round.answers.every((a, i) => a?.id === round.items[i].id && (a.selected === null || [0, 1, 2, 3].includes(a.selected)))) return false;
   if (!Number.isInteger(round.index) || round.index < 0 || round.index >= round.items.length || round.index > round.answers.length) return false;
   if (round.mode === 'general') {
-    if (round.distribution === 'general-v5') {
+    if (round.distribution === 'general-fixed-v1') {
+      if (round.items.length !== 40 || !Number.isInteger(round.edition) || round.edition < 1 || round.edition > 6) return false;
+      const questions=round.items.map(i=>QUESTION_MAP.get(i.id));
+      if (!questions.every(q=>BASE_QUESTION_IDS.has(q.id))) return false;
+      const expected=new Set(fixedGeneralEdition(round.edition).map(q=>q.id));
+      if (questions.some(q=>!expected.has(q.id)) || expected.size!==questions.length) return false;
+      if (!TOPICS.every(t=>questions.filter(q=>q.topic===t.id).length===5)) return false;
+      const omitted=[0,1,2].map(d=>TOPICS.filter((_,topicIndex)=>(round.edition-1+topicIndex)%3===d).length);
+      if (![1,2,3].every((d,i)=>questions.filter(q=>q.difficulty===d).length===16-omitted[i])) return false;
+    } else if (round.distribution === 'general-v5') {
       const size=round.items.length;
       if (![20,40].includes(size)) return false;
       const questions=round.items.map(i => QUESTION_MAP.get(i.id));
