@@ -1,0 +1,952 @@
+[
+  {
+    "id": "exodus-051",
+    "topic": "exodus",
+    "unit": "x6",
+    "difficulty": 1,
+    "question": "希伯來人若作同族人的奴僕，服事到第幾年可以自由離去？",
+    "options": [
+      "第七年",
+      "第三年",
+      "第五年",
+      "第十年"
+    ],
+    "answer": 0,
+    "explanation": "出埃及記的典章說，希伯來奴僕服事六年，第七年可以自由離去，毋須付贖價。",
+    "reference": "出埃及記 21:2",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/21/",
+    "verification": "https://bible.usccb.org/bible/exodus/21",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-052",
+    "topic": "exodus",
+    "unit": "x6",
+    "difficulty": 1,
+    "question": "若人打死別人的牛，經文要求佢點樣賠償？",
+    "options": [
+      "賠一隻牛",
+      "賠兩隻羊",
+      "賠五隻牛",
+      "只需道歉"
+    ],
+    "answer": 0,
+    "explanation": "若牛主早知牛慣常抵人而冇看守，牛傷死別人的牛，就要以牛賠牛。",
+    "reference": "出埃及記 21:35–36",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/21/",
+    "verification": "https://bible.usccb.org/bible/exodus/21",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-053",
+    "topic": "exodus",
+    "unit": "x6",
+    "difficulty": 1,
+    "question": "人偷咗牛或羊，之後宰咗或賣咗，偷牛要賠幾多隻牛？",
+    "options": [
+      "五隻",
+      "兩隻",
+      "四隻",
+      "七隻"
+    ],
+    "answer": 0,
+    "explanation": "典章按偷走的牲畜種類訂賠償：偷牛賠五隻牛，偷羊賠四隻羊。",
+    "reference": "出埃及記 21:37",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/21/",
+    "verification": "https://bible.usccb.org/bible/exodus/21",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-054",
+    "topic": "exodus",
+    "unit": "x6",
+    "difficulty": 1,
+    "question": "牛若撞死奴僕或婢女，牛主按經文要賠幾多舍客勒？",
+    "options": [
+      "三十舍客勒",
+      "二十舍客勒",
+      "五十舍客勒",
+      "一百舍客勒"
+    ],
+    "answer": 0,
+    "explanation": "經文列明牛主須付三十舍客勒銀子畀奴僕的主人，牛則要用石頭打死。",
+    "reference": "出埃及記 21:32",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/21/",
+    "verification": "https://bible.usccb.org/bible/exodus/21",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-055",
+    "topic": "exodus",
+    "unit": "x6",
+    "difficulty": 1,
+    "question": "牛主知道隻牛慣常抵人，卻冇看守，牛撞死人會點？",
+    "options": [
+      "牛同牛主都要受處置",
+      "只需賠一隻羊",
+      "牛主只需搬走牛隻",
+      "由受害者家人決定"
+    ],
+    "answer": 0,
+    "explanation": "經文分清意外同疏忽：牛主早知牛有危險而不看守，責任就比單次意外重。",
+    "reference": "出埃及記 21:28–29",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/21/",
+    "verification": "https://bible.usccb.org/bible/exodus/21",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-056",
+    "topic": "exodus",
+    "unit": "x6",
+    "difficulty": 1,
+    "question": "若有人偷牲畜，但牲畜仍然活喺佢手上，經文要佢點賠？",
+    "options": [
+      "一隻賠兩隻",
+      "一隻賠四隻",
+      "一隻賠五隻",
+      "歸還就毋須賠"
+    ],
+    "answer": 0,
+    "explanation": "若偷來的牛、驢或羊仍然活着，賊要加倍賠還；宰殺或賣掉則按另一條例賠更多。",
+    "reference": "出埃及記 22:1、4",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/22/",
+    "verification": "https://bible.usccb.org/bible/exodus/22",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-057",
+    "topic": "exodus",
+    "unit": "x6",
+    "difficulty": 1,
+    "question": "有人借咗鄰舍嘅牲畜，牲畜受傷或死咗，主人又唔喺場，借用者要點做？",
+    "options": [
+      "要作出賠償",
+      "只需通知主人",
+      "賠一半價錢",
+      "由祭司判斷"
+    ],
+    "answer": 0,
+    "explanation": "經文說主人不在場時，借用牲畜的人要作出賠償；若主人在場，按不同情況處理。",
+    "reference": "出埃及記 22:14–15",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/22/",
+    "verification": "https://bible.usccb.org/bible/exodus/22",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-058",
+    "topic": "exodus",
+    "unit": "x6",
+    "difficulty": 1,
+    "question": "以色列人要點樣對待寄居喺當地嘅外族人？",
+    "options": [
+      "不可欺負或壓迫佢",
+      "要佢即刻離開",
+      "要佢交雙倍稅",
+      "只准住喺曠野"
+    ],
+    "answer": 0,
+    "explanation": "上帝提醒以色列人記得自己曾在埃及作寄居者，所以不可欺負或壓迫寄居的人。",
+    "reference": "出埃及記 22:21",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/22/",
+    "verification": "https://bible.usccb.org/bible/exodus/22",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-059",
+    "topic": "exodus",
+    "unit": "x6",
+    "difficulty": 1,
+    "question": "安息年時，土地要休耕，地上出產要留畀邊啲人食？",
+    "options": [
+      "窮人食剩嘅畀走獸",
+      "只畀地主收割",
+      "只畀祭司食",
+      "全部儲起來"
+    ],
+    "answer": 0,
+    "explanation": "第七年要讓土地休息，田裡自然長出的收成先畀窮人食，剩下的才畀野獸。",
+    "reference": "出埃及記 23:10–11",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/23/",
+    "verification": "https://bible.usccb.org/bible/exodus/23",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-060",
+    "topic": "exodus",
+    "unit": "x6",
+    "difficulty": 1,
+    "question": "一年三次節期之中，除無酵節同收割節，另一個係乜節？",
+    "options": [
+      "收藏節",
+      "吹角節",
+      "普珥節",
+      "修殿節"
+    ],
+    "answer": 0,
+    "explanation": "一年三次向上帝守節，經文提到無酵節、收割初熟之物的節期，以及收藏節。",
+    "reference": "出埃及記 23:14–17",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/23/",
+    "verification": "https://bible.usccb.org/bible/exodus/23",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-061",
+    "topic": "exodus",
+    "unit": "x7",
+    "difficulty": 1,
+    "question": "上帝叫百姓為聖所奉獻材料時，主要係按乜嘢原則？",
+    "options": [
+      "由甘心樂意的人奉獻",
+      "每人必須交相同金額",
+      "只收黃金",
+      "由摩西指定每家份額"
+    ],
+    "answer": 0,
+    "explanation": "上帝吩咐摩西向甘心樂意的人收取奉獻，用來建造聖所及其中的器具。",
+    "reference": "出埃及記 25:1–8",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/25/",
+    "verification": "https://bible.usccb.org/bible/exodus/25",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-062",
+    "topic": "exodus",
+    "unit": "x7",
+    "difficulty": 1,
+    "question": "約櫃要用乜嘢木材製造？",
+    "options": [
+      "皂莢木",
+      "香柏木",
+      "橄欖木",
+      "松木"
+    ],
+    "answer": 0,
+    "explanation": "約櫃用皂莢木造，內外包上純金，並裝上金環穿杠搬運。",
+    "reference": "出埃及記 25:10–15",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/25/",
+    "verification": "https://bible.usccb.org/bible/exodus/25",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-063",
+    "topic": "exodus",
+    "unit": "x7",
+    "difficulty": 1,
+    "question": "上帝吩咐放喺約櫃入面嘅係乜？",
+    "options": [
+      "法版",
+      "亞倫的杖",
+      "嗎哪一罐",
+      "金香爐"
+    ],
+    "answer": 0,
+    "explanation": "上帝吩咐摩西把祂要賜下的法版放在約櫃裡，櫃上另有施恩座。",
+    "reference": "出埃及記 25:16、21",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/25/",
+    "verification": "https://bible.usccb.org/bible/exodus/25",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-064",
+    "topic": "exodus",
+    "unit": "x7",
+    "difficulty": 1,
+    "question": "約櫃蓋上要造幾個基路伯？",
+    "options": [
+      "兩個",
+      "一個",
+      "四個",
+      "六個"
+    ],
+    "answer": 0,
+    "explanation": "施恩座兩端各造一個金基路伯，兩個基路伯展開翅膀遮蓋施恩座。",
+    "reference": "出埃及記 25:17–20",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/25/",
+    "verification": "https://bible.usccb.org/bible/exodus/25",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-065",
+    "topic": "exodus",
+    "unit": "x7",
+    "difficulty": 1,
+    "question": "陳設餅要放喺邊件聖所器具上？",
+    "options": [
+      "金桌子",
+      "約櫃蓋",
+      "燔祭壇",
+      "洗濯盆"
+    ],
+    "answer": 0,
+    "explanation": "桌子要常常擺放陳設餅在上帝面前，旁邊亦有金盤、杯和酒器。",
+    "reference": "出埃及記 25:23–30",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/25/",
+    "verification": "https://bible.usccb.org/bible/exodus/25",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-066",
+    "topic": "exodus",
+    "unit": "x7",
+    "difficulty": 1,
+    "question": "燈台兩旁各有幾條枝子伸出來？",
+    "options": [
+      "三條",
+      "兩條",
+      "四條",
+      "六條"
+    ],
+    "answer": 0,
+    "explanation": "金燈台的主幹兩旁各伸出三條枝子，合共六條枝子，另有主幹。",
+    "reference": "出埃及記 25:31–36",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/25/",
+    "verification": "https://bible.usccb.org/bible/exodus/25",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-067",
+    "topic": "exodus",
+    "unit": "x7",
+    "difficulty": 1,
+    "question": "燈台上要安裝幾盞燈？",
+    "options": [
+      "七盞",
+      "五盞",
+      "六盞",
+      "十二盞"
+    ],
+    "answer": 0,
+    "explanation": "燈台要造七盞燈，安放時使燈光照向燈台前面。",
+    "reference": "出埃及記 25:37",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/25/",
+    "verification": "https://bible.usccb.org/bible/exodus/25",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-068",
+    "topic": "exodus",
+    "unit": "x7",
+    "difficulty": 1,
+    "question": "帳幕頂層嘅罩棚，其中一層用乜嘢材料？",
+    "options": [
+      "染紅的公羊皮",
+      "純金片",
+      "棕櫚葉",
+      "藍色石板"
+    ],
+    "answer": 0,
+    "explanation": "帳幕的罩棚有不同材料，包括山羊毛織成的幔子，以及染紅的公羊皮作外層。",
+    "reference": "出埃及記 26:7、14",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/26/",
+    "verification": "https://bible.usccb.org/bible/exodus/26",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-069",
+    "topic": "exodus",
+    "unit": "x7",
+    "difficulty": 1,
+    "question": "分隔聖所同至聖所嘅幔子，要用乜幾種顏色嘅線織成？",
+    "options": [
+      "藍色、紫色、朱紅色",
+      "綠色、黃色、黑色",
+      "白色、金色、銀色",
+      "紅色、橙色、綠色"
+    ],
+    "answer": 0,
+    "explanation": "幔子用藍色、紫色、朱紅色線和捻的細麻織成，上面繡上基路伯。",
+    "reference": "出埃及記 26:31–33",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/26/",
+    "verification": "https://bible.usccb.org/bible/exodus/26",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-070",
+    "topic": "exodus",
+    "unit": "x7",
+    "difficulty": 1,
+    "question": "燔祭壇嘅四個角上要造乜嘢？",
+    "options": [
+      "四個壇角",
+      "四個金環",
+      "四盞燈",
+      "四個基路伯"
+    ],
+    "answer": 0,
+    "explanation": "燔祭壇的四角要與壇接成一體，外層包銅，壇旁備有器具。",
+    "reference": "出埃及記 27:1–8",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/27/",
+    "verification": "https://bible.usccb.org/bible/exodus/27",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-071",
+    "topic": "exodus",
+    "unit": "x8",
+    "difficulty": 1,
+    "question": "大祭司嘅以弗得肩帶上，各鑲咗一粒乜嘢？",
+    "options": [
+      "紅瑪瑙",
+      "珍珠",
+      "綠寶石",
+      "紫水晶"
+    ],
+    "answer": 0,
+    "explanation": "以弗得兩條肩帶上各鑲一塊紅瑪瑙，刻上以色列兒子的名字，作紀念石。",
+    "reference": "出埃及記 28:9–12",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/28/",
+    "verification": "https://bible.usccb.org/bible/exodus/28",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-072",
+    "topic": "exodus",
+    "unit": "x8",
+    "difficulty": 1,
+    "question": "大祭司胸牌上總共鑲咗幾塊寶石？",
+    "options": [
+      "十二塊",
+      "十塊",
+      "八塊",
+      "十四塊"
+    ],
+    "answer": 0,
+    "explanation": "決斷胸牌上有四行寶石，每行三塊；每塊刻一個以色列支派的名字。",
+    "reference": "出埃及記 28:15–21",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/28/",
+    "verification": "https://bible.usccb.org/bible/exodus/28",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-073",
+    "topic": "exodus",
+    "unit": "x8",
+    "difficulty": 1,
+    "question": "大祭司袍子嘅下擺，交替掛上乜嘢？",
+    "options": [
+      "金鈴鐺同石榴",
+      "金環同羽毛",
+      "小燈同香爐",
+      "鈴鐺同葡萄枝"
+    ],
+    "answer": 0,
+    "explanation": "袍子下擺交替掛上金鈴鐺和石榴；大祭司進出聖所時會聽到鈴聲。",
+    "reference": "出埃及記 28:31–35",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/28/",
+    "verification": "https://bible.usccb.org/bible/exodus/28",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-074",
+    "topic": "exodus",
+    "unit": "x8",
+    "difficulty": 1,
+    "question": "大祭司額上金牌刻住乜嘢字？",
+    "options": [
+      "歸耶和華為聖",
+      "以色列的王",
+      "上帝的僕人",
+      "永遠平安"
+    ],
+    "answer": 0,
+    "explanation": "金牌要刻上「歸耶和華為聖」，用藍色帶子繫在冠冕前面。",
+    "reference": "出埃及記 28:36–38",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/28/",
+    "verification": "https://bible.usccb.org/bible/exodus/28",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-075",
+    "topic": "exodus",
+    "unit": "x8",
+    "difficulty": 1,
+    "question": "承接聖職嘅公綿羊血，要抹喺亞倫同佢兒子邊度？",
+    "options": [
+      "右耳垂、右手拇指、右腳大拇指",
+      "左耳垂、左手拇指、左腳大拇指",
+      "雙眼、額頭同雙手",
+      "肩膀、膝蓋同腳跟"
+    ],
+    "answer": 0,
+    "explanation": "承接聖職時，公綿羊的血要抹在右耳垂、右手拇指和右腳大拇指。",
+    "reference": "出埃及記 29:19–21",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/29/",
+    "verification": "https://bible.usccb.org/bible/exodus/29",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-076",
+    "topic": "exodus",
+    "unit": "x8",
+    "difficulty": 1,
+    "question": "銅洗濯盆同盆座用乜嘢做？",
+    "options": [
+      "銅",
+      "銀",
+      "皂莢木",
+      "陶土"
+    ],
+    "answer": 0,
+    "explanation": "洗濯盆和盆座用銅製造，放在會幕和祭壇中間，供祭司洗手洗腳。",
+    "reference": "出埃及記 30:17–21",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/30/",
+    "verification": "https://bible.usccb.org/bible/exodus/30",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-077",
+    "topic": "exodus",
+    "unit": "x8",
+    "difficulty": 1,
+    "question": "香壇要放喺邊度？",
+    "options": [
+      "法櫃前面的幔子外",
+      "院子的入口旁",
+      "祭壇下面",
+      "會幕門簾後面"
+    ],
+    "answer": 0,
+    "explanation": "金香壇放在法櫃前、幔子外，亞倫每日早晚在壇上燒香。",
+    "reference": "出埃及記 30:1–8",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/30/",
+    "verification": "https://bible.usccb.org/bible/exodus/30",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-078",
+    "topic": "exodus",
+    "unit": "x8",
+    "difficulty": 1,
+    "question": "百姓被數點時，每人要交幾多作生命贖價？",
+    "options": [
+      "半舍客勒",
+      "一舍客勒",
+      "兩舍客勒",
+      "三分之一舍客勒"
+    ],
+    "answer": 0,
+    "explanation": "被數點的人不論富貧都交半舍客勒作贖價，免得數點百姓時遭災。",
+    "reference": "出埃及記 30:11–16",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/30/",
+    "verification": "https://bible.usccb.org/bible/exodus/30",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-079",
+    "topic": "exodus",
+    "unit": "x8",
+    "difficulty": 1,
+    "question": "上帝揀選比撒列時，特別賜佢邊種能力去做聖所工藝？",
+    "options": [
+      "智慧、聰明和知識",
+      "醫病和說方言",
+      "帶領軍隊作戰",
+      "解夢和預言"
+    ],
+    "answer": 0,
+    "explanation": "上帝以祂的靈充滿比撒列，使他有智慧、聰明、知識，能設計及製作各樣工藝。",
+    "reference": "出埃及記 31:1–5",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/31/",
+    "verification": "https://bible.usccb.org/bible/exodus/31",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-080",
+    "topic": "exodus",
+    "unit": "x8",
+    "difficulty": 1,
+    "question": "上帝賜畀以色列人嘅安息日，係乜嘢嘅記號？",
+    "options": [
+      "上帝使他們成聖",
+      "他們離開埃及",
+      "摩西成為領袖",
+      "會幕建成"
+    ],
+    "answer": 0,
+    "explanation": "安息日是上帝與以色列人之間的記號，使他們知道叫他們成聖的是耶和華。",
+    "reference": "出埃及記 31:12–17",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/31/",
+    "verification": "https://bible.usccb.org/bible/exodus/31",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-081",
+    "topic": "exodus",
+    "unit": "x9",
+    "difficulty": 1,
+    "question": "百姓見摩西遲遲未落山，就叫亞倫為佢哋造乜嘢？",
+    "options": [
+      "金牛犢",
+      "金蛇",
+      "金燈台",
+      "金冠冕"
+    ],
+    "answer": 0,
+    "explanation": "百姓聚集到亞倫面前，要求造一個神像在前面帶路；亞倫最後造了金牛犢。",
+    "reference": "出埃及記 32:1–4",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/32/",
+    "verification": "https://bible.usccb.org/bible/exodus/32",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-082",
+    "topic": "exodus",
+    "unit": "x9",
+    "difficulty": 1,
+    "question": "摩西落山見到金牛犢同跳舞，佢點處理手上嘅法版？",
+    "options": [
+      "摔碎在山下",
+      "放回約櫃",
+      "交給亞倫保管",
+      "埋在帳幕旁"
+    ],
+    "answer": 0,
+    "explanation": "摩西走近營地看見牛犢和跳舞，就把法版摔碎在山下。",
+    "reference": "出埃及記 32:15–19",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/32/",
+    "verification": "https://bible.usccb.org/bible/exodus/32",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-083",
+    "topic": "exodus",
+    "unit": "x9",
+    "difficulty": 1,
+    "question": "摩西問亞倫點解百姓陷入咁大嘅罪，亞倫點樣解釋金牛犢點嚟？",
+    "options": [
+      "佢把金飾丟入火中，牛犢就出來",
+      "工匠帶來現成牛犢",
+      "摩西吩咐佢製造",
+      "百姓喺埃及帶來"
+    ],
+    "answer": 0,
+    "explanation": "亞倫向摩西解釋，自己把金子丟進火裡，出來的就是牛犢；經文也交代他曾用工具鑄造。",
+    "reference": "出埃及記 32:21–24",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/32/",
+    "verification": "https://bible.usccb.org/bible/exodus/32",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-084",
+    "topic": "exodus",
+    "unit": "x9",
+    "difficulty": 1,
+    "question": "摩西求上帝同行，並求上帝畀佢睇見乜嘢？",
+    "options": [
+      "上帝的榮耀",
+      "約書亞的異象",
+      "應許之地的河流",
+      "天使的面貌"
+    ],
+    "answer": 0,
+    "explanation": "摩西求上帝指示祂的道路，並求看見祂的榮耀；上帝應允顯明恩慈。",
+    "reference": "出埃及記 33:12–23",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/33/",
+    "verification": "https://bible.usccb.org/bible/exodus/33",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-085",
+    "topic": "exodus",
+    "unit": "x9",
+    "difficulty": 1,
+    "question": "上帝叫摩西重新鑿出幾塊石版，代替摔碎嘅法版？",
+    "options": [
+      "兩塊",
+      "一塊",
+      "四塊",
+      "十二塊"
+    ],
+    "answer": 0,
+    "explanation": "上帝叫摩西鑿出兩塊石版，帶上西奈山；上帝要把先前石版上的話寫在新石版上。",
+    "reference": "出埃及記 34:1–4",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/34/",
+    "verification": "https://bible.usccb.org/bible/exodus/34",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-086",
+    "topic": "exodus",
+    "unit": "x9",
+    "difficulty": 1,
+    "question": "耶和華喺雲中降臨，向摩西宣告自己係點樣嘅上帝？",
+    "options": [
+      "有憐憫、有恩典、不輕易發怒",
+      "只審判、不施恩",
+      "不聽祈禱的上帝",
+      "只幫助君王的上帝"
+    ],
+    "answer": 0,
+    "explanation": "上帝宣告自己有憐憫、有恩典、不輕易發怒，並有豐盛的慈愛和信實。",
+    "reference": "出埃及記 34:5–7",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/34/",
+    "verification": "https://bible.usccb.org/bible/exodus/34",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-087",
+    "topic": "exodus",
+    "unit": "x9",
+    "difficulty": 1,
+    "question": "摩西第二次喺西奈山留咗幾多日夜，冇食嘢亦冇飲水？",
+    "options": [
+      "四十日夜",
+      "三十日夜",
+      "七日夜",
+      "十二日夜"
+    ],
+    "answer": 0,
+    "explanation": "摩西與耶和華同在山上四十日夜，沒有吃餅也沒有喝水；上帝把約的話寫在版上。",
+    "reference": "出埃及記 34:27–28",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/34/",
+    "verification": "https://bible.usccb.org/bible/exodus/34",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-088",
+    "topic": "exodus",
+    "unit": "x9",
+    "difficulty": 1,
+    "question": "摩西落西奈山時，佢自己有冇察覺面上發光？",
+    "options": [
+      "佢自己唔知道面發光",
+      "一早知道並遮住面",
+      "亞倫先替佢戴面罩",
+      "佢面上冇有改變"
+    ],
+    "answer": 0,
+    "explanation": "摩西因與上帝說話而面皮發光，自己卻不知道；亞倫和百姓看見便害怕。",
+    "reference": "出埃及記 34:29–35",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/34/",
+    "verification": "https://bible.usccb.org/bible/exodus/34",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-089",
+    "topic": "exodus",
+    "unit": "x9",
+    "difficulty": 1,
+    "question": "摩西用面帕遮住面時，幾時先除低面帕？",
+    "options": [
+      "進到耶和華面前說話時",
+      "每日出營之前",
+      "同百姓食飯時",
+      "日落後回帳幕時"
+    ],
+    "answer": 0,
+    "explanation": "摩西每次進到耶和華面前說話就除去面帕，出來後再把耶和華吩咐的傳給百姓。",
+    "reference": "出埃及記 34:33–35",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/34/",
+    "verification": "https://bible.usccb.org/bible/exodus/34",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-090",
+    "topic": "exodus",
+    "unit": "x9",
+    "difficulty": 1,
+    "question": "第七日喺摩西吩咐建造會幕之前，經文再次提醒百姓要守乜？",
+    "options": [
+      "安息日",
+      "無酵節",
+      "割禮",
+      "逾越節"
+    ],
+    "answer": 0,
+    "explanation": "摩西先重申第七日是安息日，不可作工，然後才講到建造會幕所需的奉獻。",
+    "reference": "出埃及記 35:1–3",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/35/",
+    "verification": "https://bible.usccb.org/bible/exodus/35",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-091",
+    "topic": "exodus",
+    "unit": "x10",
+    "difficulty": 1,
+    "question": "百姓拿材料來建造會幕時，送得太多，摩西吩咐佢哋點做？",
+    "options": [
+      "停止再送禮物",
+      "將材料分給各支派",
+      "全部送去祭壇",
+      "留到下一年再用"
+    ],
+    "answer": 0,
+    "explanation": "工匠發現百姓送來的材料超過所需，摩西便傳令全營停止再送。",
+    "reference": "出埃及記 36:4–7",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/36/",
+    "verification": "https://bible.usccb.org/bible/exodus/36",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-092",
+    "topic": "exodus",
+    "unit": "x10",
+    "difficulty": 1,
+    "question": "約櫃兩邊各有幾個金環，用來穿抬櫃嘅杠？",
+    "options": [
+      "兩個",
+      "一個",
+      "三個",
+      "四個"
+    ],
+    "answer": 0,
+    "explanation": "約櫃兩旁各做兩個金環，杠穿過金環抬櫃；杠不可從環中抽出。",
+    "reference": "出埃及記 37:3–5",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/37/",
+    "verification": "https://bible.usccb.org/bible/exodus/37",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-093",
+    "topic": "exodus",
+    "unit": "x10",
+    "difficulty": 1,
+    "question": "做香壇所用嘅皂莢木，壇面包咗乜嘢？",
+    "options": [
+      "純金",
+      "銅",
+      "銀",
+      "藍布"
+    ],
+    "answer": 0,
+    "explanation": "香壇用皂莢木製造，壇面和四角包純金，壇周圍另有金牙邊。",
+    "reference": "出埃及記 37:25–28",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/37/",
+    "verification": "https://bible.usccb.org/bible/exodus/37",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-094",
+    "topic": "exodus",
+    "unit": "x10",
+    "difficulty": 1,
+    "question": "摩西點樣核對建造會幕嘅工作？",
+    "options": [
+      "按耶和華吩咐的逐項查驗",
+      "交畀法老檢查",
+      "只數金子重量",
+      "由亞倫選出部分查看"
+    ],
+    "answer": 0,
+    "explanation": "經文多次記載工匠照耶和華吩咐完成器具；摩西查看全工，見都照吩咐做便為他們祝福。",
+    "reference": "出埃及記 39:32–43",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/39/",
+    "verification": "https://bible.usccb.org/bible/exodus/39",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-095",
+    "topic": "exodus",
+    "unit": "x10",
+    "difficulty": 1,
+    "question": "會幕立起之後，摩西先把約櫃放喺邊度？",
+    "options": [
+      "至聖所內的幔子後面",
+      "會幕入口旁",
+      "祭壇外面",
+      "洗濯盆旁邊"
+    ],
+    "answer": 0,
+    "explanation": "摩西把約櫃安放在帳幕裡，再掛上幔子遮住約櫃，分隔聖所和至聖所。",
+    "reference": "出埃及記 40:1–3、20–21",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/40/",
+    "verification": "https://bible.usccb.org/bible/exodus/40",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-096",
+    "topic": "exodus",
+    "unit": "x10",
+    "difficulty": 1,
+    "question": "摩西將洗濯盆安放喺會幕邊兩樣物件之間？",
+    "options": [
+      "會幕和祭壇",
+      "約櫃和陳設餅桌",
+      "香壇和金燈台",
+      "院門和燔祭壇"
+    ],
+    "answer": 0,
+    "explanation": "洗濯盆放在會幕和祭壇中間，盆裡盛水，供摩西、亞倫及亞倫兒子洗手洗腳。",
+    "reference": "出埃及記 40:6–7、30–32",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/40/",
+    "verification": "https://bible.usccb.org/bible/exodus/40",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-097",
+    "topic": "exodus",
+    "unit": "x10",
+    "difficulty": 1,
+    "question": "會幕同壇都立好後，雲彩遮蓋邊度？",
+    "options": [
+      "會幕",
+      "西奈山頂",
+      "約櫃單獨",
+      "以色列人的帳棚"
+    ],
+    "answer": 0,
+    "explanation": "雲彩遮蓋會幕，耶和華的榮光充滿會幕，摩西當時不能進去。",
+    "reference": "出埃及記 40:34–35",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/40/",
+    "verification": "https://bible.usccb.org/bible/exodus/40",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-098",
+    "topic": "exodus",
+    "unit": "x10",
+    "difficulty": 1,
+    "question": "曠野行程中，百姓喺乜情況下先起程？",
+    "options": [
+      "雲彩由會幕升起時",
+      "每天日出之後",
+      "摩西吹角時",
+      "祭司抬香壇時"
+    ],
+    "answer": 0,
+    "explanation": "若雲彩仍留在會幕上，以色列人就不起程；雲彩升起後，他們才出發。",
+    "reference": "出埃及記 40:36–37",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/40/",
+    "verification": "https://bible.usccb.org/bible/exodus/40",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-099",
+    "topic": "exodus",
+    "unit": "x10",
+    "difficulty": 1,
+    "question": "夜晚喺雲中，百姓可以見到乜嘢？",
+    "options": [
+      "火",
+      "星星形狀嘅光",
+      "一道彩虹",
+      "金燈台的光"
+    ],
+    "answer": 0,
+    "explanation": "白日有耶和華的雲在會幕上，夜間雲中有火，百姓在旅程各階段都看得見。",
+    "reference": "出埃及記 40:38",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/40/",
+    "verification": "https://bible.usccb.org/bible/exodus/40",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "exodus-100",
+    "topic": "exodus",
+    "unit": "x10",
+    "difficulty": 1,
+    "question": "會幕係喺邊個月嘅第一日立起？",
+    "options": [
+      "正月",
+      "七月",
+      "三月",
+      "十二月"
+    ],
+    "answer": 0,
+    "explanation": "第二年正月初一，會幕正式立起；之後雲彩和榮光充滿會幕。",
+    "reference": "出埃及記 40:1–2、17",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/EXO/40/",
+    "verification": "https://bible.usccb.org/bible/exodus/40",
+    "sourceLabel": "查閱資料"
+  }
+]

@@ -368,3 +368,55 @@ test('Genesis levels show chosen difficulty and advanced questions support bookm
  await app.click('[data-action="retry"]');assert.equal(app.savedProgress().current.mode,'genesis-level');assert.equal(app.savedProgress().current.difficulty,'3');
  await app.navigate('/review');assert.match(app.$('.review-card').textContent,/創世記/);await app.click('[data-action="practice"]');await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');assert(!app.savedProgress().mistakes.includes(id));assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
+
+test('Exodus sits beside Genesis and keeps lesson, random-test, difficulty and bookmark progress separate', async () => {
+  let app=await boot();
+  await app.navigate('/old-testament');
+  assert(app.$('.genesis-course-entry'));
+  assert(app.$('.exodus-course-entry'));
+  await app.click('.exodus-course-entry a');
+  assert.equal(app.w.location.hash,'#/exodus');
+  assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);
+  for(const d of ['1','2','3'])assert(app.$(`[data-mode="exodus-level"][data-difficulty="${d}"]`));
+  await app.click('[data-mode="exodus"][data-unit="x1"]');
+  assert.equal(app.savedProgress().current.items.length,10);
+  assert.match(app.$('.quiz-label').textContent,/出埃及記.*第1課/);
+  await app.click('.question-meta [data-action="bookmark"]');
+  await app.click('[data-action="answer"][data-choice="1"]');
+  assert.match(app.$('.feedback .reference').textContent,/出埃及記/);
+  await app.click('[data-action="next"]');await app.click('[data-action="previous"]');
+  const saved=app.w.localStorage.getItem(key);app.dom.window.close();
+  app=await boot(saved,'#/quiz');
+  assert.equal(app.savedProgress().current.index,0);
+  assert.equal(Object.keys(app.savedProgress().exodusAnswers).length,1);
+  await app.navigate('/exodus');await app.click('[data-mode="exodus-test"]');
+  assert.equal(app.savedProgress().current.items.length,10);
+  assert.equal(app.savedProgress().current.mode,'exodus-test');
+  for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+  assert.match(app.$('.score-ring').textContent,/10 \/ 10/);
+  assert.equal(Object.keys(app.savedProgress().exodusAnswers).length,1);
+  assert.equal(app.savedProgress().bookmarks.length,1);
+  await app.click('[data-action="retry"]');
+  assert.equal(app.savedProgress().current.mode,'exodus-test');
+  assert.deepEqual(app.errors,[]);app.dom.window.close();
+});
+
+test('Exodus high trial samples the deep question pool and supports review and retry', async()=>{
+ const app=await boot();await app.navigate('/exodus');
+ await app.click('[data-mode="exodus-level"][data-difficulty="3"]');
+ assert.match(app.$('.question-meta').textContent,/就嚟頂唔住/);
+ assert.match(app.savedProgress().current.items[0].id,/^exodus-hard-/);
+ await app.click('.question-meta [data-action="bookmark"]');
+ await app.click('[data-action="answer"][data-choice="1"]');
+ assert.match(app.$('.feedback .reference').textContent,/出埃及記/);
+ for(let i=0;i<10;i++){
+   if(i>0)await app.click('[data-action="answer"][data-choice="0"]');
+   await app.click('[data-action="next"]');
+ }
+ assert.equal(app.savedProgress().exodusAnswers ? Object.keys(app.savedProgress().exodusAnswers).length : 0,0);
+ assert(app.savedProgress().mistakes.length>=1);
+ await app.click('[data-action="retry"]');
+ assert.equal(app.savedProgress().current.mode,'exodus-level');
+ assert.equal(app.savedProgress().current.difficulty,'3');
+ assert.deepEqual(app.errors,[]);app.dom.window.close();
+});
