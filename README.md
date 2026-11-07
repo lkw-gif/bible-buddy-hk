@@ -6,7 +6,7 @@
 
 另一公開網址：https://bible-buddy-hk.lui-david-1529.chatgpt.site
 
-兩個網址都可以直接開啟。程式碼、240題基礎題庫、40題進階題庫、教會歷史、聖經知識、創世記、出埃及記同民數記課程，以及可愛小羊插圖一併存放喺呢個儲存庫。
+兩個網址都可以直接開啟。程式碼、240題基礎題庫、40題進階題庫、教會歷史、聖經知識、摩西五經課程，以及可愛小羊插圖一併存放喺呢個儲存庫。
 
 ## 八個測驗方向
 
@@ -33,6 +33,8 @@
 - **舊約書卷：創世記**：100道經文題分10課，每課10題，另設從100題隨機抽取的10題測驗。每題附解說，課程進度獨立儲存；題庫原稿及出處見 `research/genesis-a.json` 與 `research/genesis-b.json`，修改後執行 `node scripts/build-genesis.mjs`。
 - **舊約書卷：出埃及記**：100題分10課，每課10題，另有隨機10題及低、中、高分級測驗。隨機及分級測驗先出未做過的題目；每題都有解說和經文出處。
 - **舊約書卷：民數記**：100題分10課，按經文次序涵蓋兩次點算、曠野旅程、探子、可拉事件、巴蘭及分地安排；另有隨機10題和低、中、高分級測驗。低、中級由100題平均分配，高級使用獨立20題深入題庫。答案附解說及經文出處；隨機及分級測驗會先抽未做過的題目。原稿見 `research/numbers.json` 和 `research/numbers-hard.json`，修改後執行 `node scripts/build-numbers.mjs` 及 `node scripts/build-numbers-hard.mjs`。
+- **舊約書卷：利未記**：100題分10課，涵蓋獻祭、祭司、潔淨條例、節期、倫理、安息年同禧年；另有隨機10題、低中各50題，以及獨立20題高程度測驗。每題有解說同經文出處；重做測驗會先抽未做過嘅題目。原稿見 `research/leviticus.json` 同 `research/leviticus-hard.json`，修改後執行 `node scripts/build-leviticus.mjs` 及 `node scripts/build-leviticus-hard.mjs`。
+- **舊約書卷：申命記**：100題分10課，涵蓋摩西回顧曠野路程、重申十誡與律法、祝福咒詛及臨別訓勉；另有隨機10題、低中各50題，以及獨立20題高程度測驗。每題有解說同經文出處；重做測驗會先抽未做過嘅題目。原稿見 `research/deuteronomy.json` 同 `research/deuteronomy-hard.json`，修改後執行 `node scripts/build-deuteronomy.mjs` 及 `node scripts/build-deuteronomy-hard.mjs`。
 - **錯題與收藏**：完成後自動收集錯題及跳過題；再次答對會移出錯題集。可獨立收藏題目。
 - **聖經知識（100題操練）**：入口喺教會歷史旁邊，分10課，每課10題。涵蓋新舊約卷數、律法書、歷史書、詩歌智慧書、大小先知、四福音與使徒行傳、保羅書信、其他書信與啟示錄，以及基本人物和讀經方法。按新教常用66卷目錄及分類編排，每題有粵語解說；支援上一題、續玩、下一課、收藏及錯題重溫。逐題進度與教會歷史分開儲存，100題不混入General或試探場題庫。
 - **成長紀錄**：本機保留最近60局，支援續玩、分項成績、建議閱讀及成績TXT下載。
@@ -89,11 +91,11 @@ npm run check
 
 `.github/workflows/pages.yml` 會在每次推送到 `main` 後安裝開發依賴、執行題庫與功能測試，通過後才將 `dist/` 發佈至 GitHub Pages。也可以從 Actions 手動執行同一個流程。
 
-綜合題庫匯入於 `dist/questions.mjs`，書卷操練題庫分別在 `dist/genesis-data.mjs`、`dist/exodus-data.mjs`、`dist/numbers-data.mjs` 及其課程模組。修改題庫後執行相應的 `scripts/build-*.mjs`，再推送到 `main`；GitHub Pages 會在檢查通過後更新。純靜態網站沒有伺服器密鑰或執行期套件依賴。
+綜合題庫匯入於 `dist/questions.mjs`，書卷操練題庫分別在五卷摩西書的 `dist/*-data.mjs` 及各自課程模組。修改題庫後執行相應的 `scripts/build-*.mjs`，再推送到 `main`；GitHub Pages 會在檢查通過後更新。純靜態網站沒有伺服器密鑰或執行期套件依賴。
 
 驗證包括240題結構及分級完整性、兩款General全部62種可能分數、試探場固定難度與平均分配、20題版加題方向隨機輪換、40題版固定配額、三段試探程度與舊紀錄保留、跳過、防重複提交、錯題移除及已存進度驗證。DOM流程測試執行真實app模組及點擊／輸入事件，覆蓋完整20／40題交卷、稱號、分享／下載入口、主題設定、續玩、試探場分級、重試及成績、收藏及簡化介面。
 
-目前共50項功能測試，另有840題結構、來源及資料一致性檢查。覆蓋General九成基礎及中等題、試探場高難度專用池、上一題往返／重新整理／續玩與分數保持一致，以及舊版40題和試探場紀錄保留。舊約三卷各100題逐課完成、分級測驗、未做題優先、獨立進度及錯題重溫亦有DOM流程覆蓋。教會歷史覆核見 [research/HISTORY-REVIEW.md](research/HISTORY-REVIEW.md)，聖經知識見 [research/BIBLE-REVIEW.md](research/BIBLE-REVIEW.md)。
+目前共50項功能測試，題庫結構、來源及資料一致性檢查涵蓋1080題。功能測試覆蓋General九成基礎及中等題、試探場高難度專用池、上一題往返／重新整理／續玩與分數保持一致，以及舊版40題和試探場紀錄保留。創世記、出埃及記、民數記各100題逐課完成、分級測驗、未做題優先、獨立進度及錯題重溫已有DOM流程覆蓋；利未記和申命記的題數、十課分配及難度比例由題庫檢查核對。教會歷史覆核見 [research/HISTORY-REVIEW.md](research/HISTORY-REVIEW.md)，聖經知識見 [research/BIBLE-REVIEW.md](research/BIBLE-REVIEW.md)。
 
 當次環境的Work設定停用了本機瀏覽器自動操作，互動流程採用DOM整合測試，並另核對平台產生的桌面首頁截圖。jsdom不驗證CSS排版或原生對話框／剪貼簿的真實裝置行為；手機及真實瀏覽器全流程仍須作最後視覺驗收。
 

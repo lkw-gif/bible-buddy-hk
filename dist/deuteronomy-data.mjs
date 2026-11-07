@@ -1,0 +1,1802 @@
+export const DEUTERONOMY_DATA = [
+  {
+    "unit": "d1",
+    "difficulty": 1,
+    "question": "摩西重述律法嘅地點，喺約旦河東邊邊度？",
+    "options": [
+      "摩押地",
+      "埃及",
+      "迦南西岸",
+      "西奈半島南端"
+    ],
+    "answer": 0,
+    "explanation": "申命記開頭交代，摩西喺約旦河東、摩押地向以色列人講述律法。",
+    "reference": "申命記1:1–5",
+    "id": "deuteronomy-001",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/1/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/1"
+  },
+  {
+    "unit": "d1",
+    "difficulty": 1,
+    "question": "由何烈山經西珥山去加低斯巴尼亞，經文話行幾多日？",
+    "options": [
+      "十一日",
+      "三日",
+      "四十日",
+      "七日"
+    ],
+    "answer": 0,
+    "explanation": "經文記錄由何烈山到加低斯巴尼亞，沿西珥山路程係十一日。",
+    "reference": "申命記1:2",
+    "id": "deuteronomy-002",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/1/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/1"
+  },
+  {
+    "unit": "d1",
+    "difficulty": 1,
+    "question": "摩西揀選咩人協助審判百姓？",
+    "options": [
+      "千夫長、百夫長、五十夫長、十夫長",
+      "十二位祭司",
+      "七十位探子",
+      "每支派一位君王"
+    ],
+    "answer": 0,
+    "explanation": "摩西按千、百、五十、十人設立領袖，亦安排官長協助審判。",
+    "reference": "申命記1:9–15",
+    "id": "deuteronomy-003",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/1/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/1"
+  },
+  {
+    "unit": "d1",
+    "difficulty": 1,
+    "question": "摩西叫百姓派探子去邊度？",
+    "options": [
+      "迦南地",
+      "埃及地",
+      "西珥山",
+      "巴珊地"
+    ],
+    "answer": 0,
+    "explanation": "百姓請求先派人去迦南地探路，摩西同意後揀了十二個人。",
+    "reference": "申命記1:19–23",
+    "id": "deuteronomy-004",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/1/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/1"
+  },
+  {
+    "unit": "d1",
+    "difficulty": 1,
+    "question": "十二個探子帶返嚟嘅果子，證明迦南地點樣？",
+    "options": [
+      "土地肥沃，有好果子",
+      "完全冇水源",
+      "只適合放羊",
+      "冇人居住"
+    ],
+    "answer": 0,
+    "explanation": "探子帶返果子，證明上主賜嘅地係美好嘅地。",
+    "reference": "申命記1:24–25",
+    "id": "deuteronomy-005",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/1/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/1"
+  },
+  {
+    "unit": "d1",
+    "difficulty": 2,
+    "question": "百姓聽完探子報告後，主要因為咩而唔肯上去？",
+    "options": [
+      "害怕當地人同堅固城邑",
+      "覺得路程太短",
+      "想留喺埃及種田",
+      "冇收到摩西命令"
+    ],
+    "answer": 0,
+    "explanation": "百姓因害怕當地人和城邑堅固而埋怨，唔信上主會帶領佢哋。",
+    "reference": "申命記1:26–33",
+    "id": "deuteronomy-006",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/1/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/1"
+  },
+  {
+    "unit": "d1",
+    "difficulty": 2,
+    "question": "上主應許將土地賜畀邊兩位族長嘅後代？",
+    "options": [
+      "亞伯拉罕、以撒、雅各",
+      "摩西、亞倫、約書亞",
+      "挪亞、閃、含",
+      "大衛、所羅門、羅波安"
+    ],
+    "answer": 0,
+    "explanation": "上主按向亞伯拉罕、以撒、雅各所起嘅誓，應許將地賜畀佢哋嘅後代。",
+    "reference": "申命記1:8",
+    "id": "deuteronomy-007",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/1/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/1"
+  },
+  {
+    "unit": "d1",
+    "difficulty": 2,
+    "question": "以色列人向東走過西珥地時，上主吩咐佢哋點對待以掃嘅後代？",
+    "options": [
+      "唔好同佢哋爭戰，因為西珥地已賜畀以掃",
+      "將佢哋趕出西珥",
+      "向佢哋徵收十分之一",
+      "要求佢哋搬去埃及"
+    ],
+    "answer": 0,
+    "explanation": "上主提醒以色列人唔好挑起爭戰，西珥山已賜畀以掃作產業。",
+    "reference": "申命記2:4–8",
+    "id": "deuteronomy-008",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/2/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/2"
+  },
+  {
+    "unit": "d1",
+    "difficulty": 2,
+    "question": "摩押地係賜畀邊個家族嘅後代？",
+    "options": [
+      "羅得",
+      "以掃",
+      "以實瑪利",
+      "約瑟"
+    ],
+    "answer": 0,
+    "explanation": "上主將亞珥地賜畀羅得嘅子孫作產業，吩咐以色列人唔好侵佔。",
+    "reference": "申命記2:9",
+    "id": "deuteronomy-009",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/2/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/2"
+  },
+  {
+    "unit": "d1",
+    "difficulty": 2,
+    "question": "摩西求上主容許佢進入迦南，上主最後吩咐佢點做？",
+    "options": [
+      "唔好再提呢件事，並鼓勵約書亞",
+      "即刻帶百姓渡河",
+      "重新點算十二支派",
+      "返去埃及"
+    ],
+    "answer": 0,
+    "explanation": "上主拒絕摩西進入那地，但叫佢上毗斯迦觀看，並鼓勵約書亞帶領百姓。",
+    "reference": "申命記3:23–28",
+    "id": "deuteronomy-010",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/3/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/3"
+  },
+  {
+    "unit": "d2",
+    "difficulty": 1,
+    "question": "申命記5章重提十誡，係上主同百姓喺邊度立約？",
+    "options": [
+      "何烈山",
+      "西珥山",
+      "尼波山",
+      "耶利哥城"
+    ],
+    "answer": 0,
+    "explanation": "摩西提醒百姓，上主喺何烈山同佢哋立約，並重述十誡。",
+    "reference": "申命記5:1–6",
+    "id": "deuteronomy-011",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/5/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/5"
+  },
+  {
+    "unit": "d2",
+    "difficulty": 1,
+    "question": "安息日誡命提醒以色列人記住自己曾經係邊度嘅奴僕？",
+    "options": [
+      "埃及",
+      "巴比倫",
+      "摩押",
+      "亞述"
+    ],
+    "answer": 0,
+    "explanation": "守安息日亦要記念上主帶領以色列人離開埃及為奴之地。",
+    "reference": "申命記5:12–15",
+    "id": "deuteronomy-012",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/5/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/5"
+  },
+  {
+    "unit": "d2",
+    "difficulty": 1,
+    "question": "「以色列啊，你要聽」之後宣告咩？",
+    "options": [
+      "上主係獨一嘅主",
+      "摩西係永遠嘅君王",
+      "耶利哥係聖城",
+      "十二支派不可分開"
+    ],
+    "answer": 0,
+    "explanation": "示瑪宣告上主係以色列嘅上主，並呼召百姓全心愛祂。",
+    "reference": "申命記6:4–5",
+    "id": "deuteronomy-013",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/6/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/6"
+  },
+  {
+    "unit": "d2",
+    "difficulty": 1,
+    "question": "以色列人要用邊幾方面愛上主？",
+    "options": [
+      "全心、全人、全力",
+      "只用口講",
+      "只用財物",
+      "只喺節期敬拜"
+    ],
+    "answer": 0,
+    "explanation": "申命記吩咐以色列人盡心、盡性、盡力愛上主，唔係只停留喺口頭。",
+    "reference": "申命記6:5",
+    "id": "deuteronomy-014",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/6/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/6"
+  },
+  {
+    "unit": "d2",
+    "difficulty": 1,
+    "question": "摩西吩咐父母點樣教導兒女上主嘅說話？",
+    "options": [
+      "喺家中、路上、躺下同起身時都教",
+      "只喺會幕教一次",
+      "只喺孩子成年後教",
+      "只用書面告示"
+    ],
+    "answer": 0,
+    "explanation": "父母要殷勤教導兒女，無論喺屋企、路上、躺下或起身都記念上主嘅話。",
+    "reference": "申命記6:6–9",
+    "id": "deuteronomy-015",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/6/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/6"
+  },
+  {
+    "unit": "d2",
+    "difficulty": 2,
+    "question": "以色列人可以將上主嘅話寫喺邊度？",
+    "options": [
+      "房屋門框同城門",
+      "祭牲嘅角上",
+      "井底",
+      "軍隊盾牌內側"
+    ],
+    "answer": 0,
+    "explanation": "經文吩咐把上主嘅話寫喺房屋門框同城門上，並繫喺手上和額上作記號。",
+    "reference": "申命記6:8–9",
+    "id": "deuteronomy-016",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/6/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/6"
+  },
+  {
+    "unit": "d2",
+    "difficulty": 2,
+    "question": "進入富足嘅土地後，以色列人最要小心唔好做咩？",
+    "options": [
+      "忘記帶佢哋出埃及嘅上主",
+      "建造房屋",
+      "種植葡萄園",
+      "挖井"
+    ],
+    "answer": 0,
+    "explanation": "摩西提醒百姓，住進城市、食飽之後要小心，唔好忘記上主。",
+    "reference": "申命記6:10–12",
+    "id": "deuteronomy-017",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/6/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/6"
+  },
+  {
+    "unit": "d2",
+    "difficulty": 2,
+    "question": "摩西話百姓唔可以喺邊件事上試探上主？",
+    "options": [
+      "好似喺瑪撒嗰次咁",
+      "守安息日",
+      "獻初熟果子",
+      "進入耶利哥"
+    ],
+    "answer": 0,
+    "explanation": "摩西提起瑪撒，提醒百姓唔好試探上主，而要謹守祂嘅誡命。",
+    "reference": "申命記6:16–17",
+    "id": "deuteronomy-018",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/6/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/6"
+  },
+  {
+    "unit": "d2",
+    "difficulty": 2,
+    "question": "上主揀選以色列人，係因為佢哋人口多過其他民族嗎？",
+    "options": [
+      "唔係，佢哋本來係人數較少嘅民族",
+      "係，佢哋人數最多",
+      "只因佢哋有最強軍隊",
+      "只因佢哋住喺迦南"
+    ],
+    "answer": 0,
+    "explanation": "上主愛以色列人並守住對列祖嘅誓，唔係因為佢哋人數多。",
+    "reference": "申命記7:6–8",
+    "id": "deuteronomy-019",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/7/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/7"
+  },
+  {
+    "unit": "d2",
+    "difficulty": 2,
+    "question": "以色列人進入迦南後，摩西吩咐佢哋點處理當地祭壇？",
+    "options": [
+      "拆毀並打碎偶像柱像",
+      "改成以色列嘅祭壇",
+      "交畀外族人保管",
+      "用金銀裝飾"
+    ],
+    "answer": 0,
+    "explanation": "摩西吩咐拆毀異教祭壇、打碎柱像，唔好敬拜別神。",
+    "reference": "申命記7:5",
+    "id": "deuteronomy-020",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/7/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/7"
+  },
+  {
+    "unit": "d3",
+    "difficulty": 1,
+    "question": "上主用咩食物供應以色列人，叫佢哋知道人唔單靠食物生活？",
+    "options": [
+      "嗎哪",
+      "魚同肉餅",
+      "葡萄同蜂蜜",
+      "大麥餅"
+    ],
+    "answer": 0,
+    "explanation": "上主喺曠野降嗎哪，使百姓知道人活着唔單靠食物，也靠上主所說的一切話。",
+    "reference": "申命記8:2–3",
+    "id": "deuteronomy-021",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/8/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/8"
+  },
+  {
+    "unit": "d3",
+    "difficulty": 1,
+    "question": "以色列人行曠野四十年時，衣服同腳有咩情況？",
+    "options": [
+      "衣服冇穿破，腳亦冇腫",
+      "衣服每年更換",
+      "腳受傷不能行",
+      "要每日赤腳行路"
+    ],
+    "answer": 0,
+    "explanation": "摩西提醒百姓，四十年曠野路上衣服冇穿破，腳亦冇腫。",
+    "reference": "申命記8:4",
+    "id": "deuteronomy-022",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/8/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/8"
+  },
+  {
+    "unit": "d3",
+    "difficulty": 1,
+    "question": "喺土地富足、家財增多時，百姓唔應該話係邊個令自己得財？",
+    "options": [
+      "只靠自己力量",
+      "上主賜福",
+      "祖先留下",
+      "鄰國幫助"
+    ],
+    "answer": 0,
+    "explanation": "摩西提醒百姓，得財嘅能力係上主賜嘅，唔好以為全靠自己。",
+    "reference": "申命記8:11–18",
+    "id": "deuteronomy-023",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/8/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/8"
+  },
+  {
+    "unit": "d3",
+    "difficulty": 1,
+    "question": "摩西喺山上領受石版時，禁食幾多日夜？",
+    "options": [
+      "四十日四十夜",
+      "七日七夜",
+      "十二日",
+      "三日三夜"
+    ],
+    "answer": 0,
+    "explanation": "摩西回憶自己上山四十日四十夜，冇吃餅冇喝水，領受約嘅石版。",
+    "reference": "申命記9:9–11",
+    "id": "deuteronomy-024",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/9/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/9"
+  },
+  {
+    "unit": "d3",
+    "difficulty": 1,
+    "question": "金牛犢事件後，摩西點處理嗰兩塊石版？",
+    "options": [
+      "摔碎",
+      "藏喺會幕",
+      "交畀亞倫保管",
+      "帶到埃及"
+    ],
+    "answer": 0,
+    "explanation": "摩西見百姓犯罪後，把石版摔碎在山下，表明百姓破壞了約。",
+    "reference": "申命記9:15–17",
+    "id": "deuteronomy-025",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/9/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/9"
+  },
+  {
+    "unit": "d3",
+    "difficulty": 2,
+    "question": "上主叫摩西另鑿幾塊新石版？",
+    "options": [
+      "兩塊",
+      "一塊",
+      "十二塊",
+      "七塊"
+    ],
+    "answer": 0,
+    "explanation": "摩西要另鑿兩塊石版，上主再把十誡寫在上面。",
+    "reference": "申命記10:1–5",
+    "id": "deuteronomy-026",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/10/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/10"
+  },
+  {
+    "unit": "d3",
+    "difficulty": 2,
+    "question": "摩西問以色列人，上主向佢哋要求咩？",
+    "options": [
+      "敬畏上主、行祂嘅道、愛祂、事奉祂",
+      "建造王宮",
+      "向鄰國收稅",
+      "每年遠行四十日"
+    ],
+    "answer": 0,
+    "explanation": "摩西概括上主嘅要求：敬畏祂、行祂嘅道、愛祂、盡心事奉祂並守誡命。",
+    "reference": "申命記10:12–13",
+    "id": "deuteronomy-027",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/10/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/10"
+  },
+  {
+    "unit": "d3",
+    "difficulty": 2,
+    "question": "上主特別為邊啲人伸冤、供應食物同衣服？",
+    "options": [
+      "孤兒、寡婦同寄居者",
+      "君王同軍長",
+      "只有祭司",
+      "商人同地主"
+    ],
+    "answer": 0,
+    "explanation": "上主為孤兒寡婦伸冤，並愛寄居者，賜佢哋食物和衣服。",
+    "reference": "申命記10:17–19",
+    "id": "deuteronomy-028",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/10/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/10"
+  },
+  {
+    "unit": "d3",
+    "difficulty": 2,
+    "question": "摩西用咩比喻描述上主帶領以色列人？",
+    "options": [
+      "好似人抱住自己個仔咁",
+      "好似牧羊人追趕羊群",
+      "好似船長掌舵",
+      "好似農夫收割"
+    ],
+    "answer": 0,
+    "explanation": "摩西提醒百姓，上主一路帶領佢哋，好似父親抱住兒子。",
+    "reference": "申命記1:29–31",
+    "id": "deuteronomy-029",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/1/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/1"
+  },
+  {
+    "unit": "d3",
+    "difficulty": 2,
+    "question": "上主吩咐以色列人唔好因為自己嘅義而認為可以得地，原因係咩？",
+    "options": [
+      "迦南民族作惡，而上主守住對列祖嘅應許",
+      "以色列軍隊人數最多",
+      "摩西買下土地",
+      "迦南人自願搬走"
+    ],
+    "answer": 0,
+    "explanation": "摩西說明，土地不是因以色列人自以為義而得；上主也要審判當地民族的惡。",
+    "reference": "申命記9:4–6",
+    "id": "deuteronomy-030",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/9/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/9"
+  },
+  {
+    "unit": "d4",
+    "difficulty": 1,
+    "question": "以色列人獻祭敬拜時，應該去邊度？",
+    "options": [
+      "上主選定立祂名嘅地方",
+      "自己屋企任何一角",
+      "最高嘅山頂",
+      "每個支派各自揀地方"
+    ],
+    "answer": 0,
+    "explanation": "摩西吩咐百姓要到上主選定立祂名的地方敬拜和獻祭。",
+    "reference": "申命記12:5–7",
+    "id": "deuteronomy-031",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/12/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/12"
+  },
+  {
+    "unit": "d4",
+    "difficulty": 1,
+    "question": "以色列人可唔可以食祭牲嘅血？",
+    "options": [
+      "唔可以，要倒喺地上如同倒水",
+      "可以，煮熟就得",
+      "只准祭司食",
+      "只准節期食"
+    ],
+    "answer": 0,
+    "explanation": "血代表生命，百姓唔可以食血，要倒在地上。",
+    "reference": "申命記12:16、23–25",
+    "id": "deuteronomy-032",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/12/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/12"
+  },
+  {
+    "unit": "d4",
+    "difficulty": 1,
+    "question": "第三年嘅十分之一要放喺邊度，畀邊啲人食？",
+    "options": [
+      "城內，畀利未人、寄居者、孤兒同寡婦",
+      "會幕外，畀軍隊",
+      "王宮，畀官長",
+      "每家保留"
+    ],
+    "answer": 0,
+    "explanation": "第三年要把十分之一存喺城內，讓利未人和有需要的人可以食飽。",
+    "reference": "申命記14:28–29",
+    "id": "deuteronomy-033",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/14/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/14"
+  },
+  {
+    "unit": "d4",
+    "difficulty": 1,
+    "question": "以色列人每隔幾多年要豁免弟兄所欠嘅債？",
+    "options": [
+      "七年",
+      "三年",
+      "五年",
+      "五十年"
+    ],
+    "answer": 0,
+    "explanation": "每第七年要施行豁免，債主不可催逼以色列弟兄還債。",
+    "reference": "申命記15:1–3",
+    "id": "deuteronomy-034",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/15/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/15"
+  },
+  {
+    "unit": "d4",
+    "difficulty": 1,
+    "question": "希伯來奴僕服事滿幾多年，要獲得釋放？",
+    "options": [
+      "六年服事後，第七年可自由離開",
+      "三年後",
+      "十二年後",
+      "五十年後"
+    ],
+    "answer": 0,
+    "explanation": "希伯來奴僕服事六年，第七年要自由離去；主人亦要慷慨供應。",
+    "reference": "申命記15:12–15",
+    "id": "deuteronomy-035",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/15/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/15"
+  },
+  {
+    "unit": "d4",
+    "difficulty": 2,
+    "question": "以色列人一年要守邊三個朝聖節期？",
+    "options": [
+      "無酵節、七七節、住棚節",
+      "逾越節、贖罪日、安息日",
+      "吹角節、普珥節、獻殿節",
+      "初熟節、禧年、月朔"
+    ],
+    "answer": 0,
+    "explanation": "所有男丁一年三次要在上主選定的地方守無酵節、七七節和住棚節。",
+    "reference": "申命記16:16",
+    "id": "deuteronomy-036",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/16/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/16"
+  },
+  {
+    "unit": "d4",
+    "difficulty": 2,
+    "question": "設立審判官同官長時，摩西要求佢哋點做？",
+    "options": [
+      "按公義審判，唔可偏袒或受賄賂",
+      "只聽富有人嘅話",
+      "由祭司代替審判",
+      "按抽籤決定所有案件"
+    ],
+    "answer": 0,
+    "explanation": "各城要設審判官，按公義審判，唔可偏私或收賄賂。",
+    "reference": "申命記16:18–20",
+    "id": "deuteronomy-037",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/16/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/16"
+  },
+  {
+    "unit": "d4",
+    "difficulty": 2,
+    "question": "逾越節嘅羔羊要喺邊度宰殺？",
+    "options": [
+      "上主選定作祂名居所嘅地方",
+      "每個人自己屋企門口",
+      "約旦河邊",
+      "任何一座山上"
+    ],
+    "answer": 0,
+    "explanation": "百姓要在上主選定的地方宰殺逾越節祭牲，並在晚上吃。",
+    "reference": "申命記16:2–7",
+    "id": "deuteronomy-038",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/16/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/16"
+  },
+  {
+    "unit": "d4",
+    "difficulty": 2,
+    "question": "七七節獻祭時，百姓要按咩比例甘心奉獻？",
+    "options": [
+      "按上主賜福嘅程度",
+      "每人固定一隻羊",
+      "只准獻最少份量",
+      "由君王指定金額"
+    ],
+    "answer": 0,
+    "explanation": "七七節獻甘心祭時，各人按上主所賜嘅福分奉獻。",
+    "reference": "申命記16:9–12",
+    "id": "deuteronomy-039",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/16/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/16"
+  },
+  {
+    "unit": "d4",
+    "difficulty": 2,
+    "question": "住棚節要守幾多日？",
+    "options": [
+      "七日",
+      "一日",
+      "三日",
+      "四十日"
+    ],
+    "answer": 0,
+    "explanation": "住棚節要守七日，並在收聚禾場和酒醡出產後歡樂。",
+    "reference": "申命記16:13–15",
+    "id": "deuteronomy-040",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/16/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/16"
+  },
+  {
+    "unit": "d5",
+    "difficulty": 1,
+    "question": "以色列王要親手抄寫咩？",
+    "options": [
+      "祭司保存嘅律法副本",
+      "埃及王嘅詔書",
+      "十二支派族譜",
+      "所有祭司嘅日記"
+    ],
+    "answer": 0,
+    "explanation": "王要在祭司保存的律法書上為自己抄錄一份，並一生誦讀。",
+    "reference": "申命記17:18–20",
+    "id": "deuteronomy-041",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/17/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/17"
+  },
+  {
+    "unit": "d5",
+    "difficulty": 1,
+    "question": "利未祭司支派喺以色列地業中有咩安排？",
+    "options": [
+      "上主係佢哋嘅產業，唔分一般土地",
+      "每人分到最大嘅田",
+      "只分一座城市",
+      "可以做王但唔做祭司"
+    ],
+    "answer": 0,
+    "explanation": "利未祭司冇同其他支派一樣嘅地業，上主和祂的祭物係佢哋嘅產業。",
+    "reference": "申命記18:1–2",
+    "id": "deuteronomy-042",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/18/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/18"
+  },
+  {
+    "unit": "d5",
+    "difficulty": 1,
+    "question": "摩西預告上主要興起一位好似佢嘅邊種人？",
+    "options": [
+      "先知",
+      "君王",
+      "大祭司",
+      "軍長"
+    ],
+    "answer": 0,
+    "explanation": "上主應許從以色列人中興起一位像摩西的先知，百姓要聽從佢。",
+    "reference": "申命記18:15–18",
+    "id": "deuteronomy-043",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/18/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/18"
+  },
+  {
+    "unit": "d5",
+    "difficulty": 1,
+    "question": "點樣知道一個先知講嘅預言唔係上主所吩咐？",
+    "options": [
+      "佢所講嘅事冇發生",
+      "佢唔係利未人",
+      "佢住喺城外",
+      "佢只講一次"
+    ],
+    "answer": 0,
+    "explanation": "若先知奉上主名講嘅事冇發生，上主就冇吩咐佢講，百姓毋須害怕。",
+    "reference": "申命記18:20–22",
+    "id": "deuteronomy-044",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/18/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/18"
+  },
+  {
+    "unit": "d5",
+    "difficulty": 1,
+    "question": "摩西先吩咐以色列人預備幾座逃城？",
+    "options": [
+      "三座",
+      "一座",
+      "六座",
+      "十二座"
+    ],
+    "answer": 0,
+    "explanation": "先在土地中分出三座逃城，讓誤殺人的人可以逃到那裏。",
+    "reference": "申命記19:1–3",
+    "id": "deuteronomy-045",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/19/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/19"
+  },
+  {
+    "unit": "d5",
+    "difficulty": 2,
+    "question": "定罪一個人，至少要有幾多個見證人？",
+    "options": [
+      "兩三個",
+      "一個",
+      "七個",
+      "十二個"
+    ],
+    "answer": 0,
+    "explanation": "案件要憑兩三個見證人的口作證，唔可以單憑一個人定罪。",
+    "reference": "申命記19:15",
+    "id": "deuteronomy-046",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/19/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/19"
+  },
+  {
+    "unit": "d5",
+    "difficulty": 2,
+    "question": "被派去打仗但新建屋未住、新種葡萄園未收成或新訂婚嘅人，可以點？",
+    "options": [
+      "返屋企，免得戰死後由別人享用",
+      "一定要做前鋒",
+      "只可以留喺營外",
+      "改做祭司"
+    ],
+    "answer": 0,
+    "explanation": "摩西列出幾種可以返屋企嘅情況，避免未能享用新屋、新葡萄園或婚姻。",
+    "reference": "申命記20:5–7",
+    "id": "deuteronomy-047",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/20/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/20"
+  },
+  {
+    "unit": "d5",
+    "difficulty": 2,
+    "question": "圍城時，果樹可唔可以砍來做攻城器具？",
+    "options": [
+      "唔可以，因為樹木可以結果供人食用",
+      "可以全部砍掉",
+      "只可以砍橄欖樹",
+      "只可以砍離城最近嘅樹"
+    ],
+    "answer": 0,
+    "explanation": "摩西吩咐圍城時唔好毀壞可以結果的樹木，因為樹上的果子可供人食用。",
+    "reference": "申命記20:19–20",
+    "id": "deuteronomy-048",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/20/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/20"
+  },
+  {
+    "unit": "d5",
+    "difficulty": 2,
+    "question": "如果有人喺城外被殺，兇手又未查明，附近城嘅長老要做咩？",
+    "options": [
+      "牽來母牛犢，在未耕種嘅山谷行潔淨禮",
+      "即刻捉拿最近嘅居民",
+      "將屍體帶入會幕",
+      "關閉城門七日"
+    ],
+    "answer": 0,
+    "explanation": "最近城的長老要牽一隻未負軛的母牛犢到未耕種的山谷，按規定行禮並表明無辜。",
+    "reference": "申命記21:1–9",
+    "id": "deuteronomy-049",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/21/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/21"
+  },
+  {
+    "unit": "d5",
+    "difficulty": 2,
+    "question": "一個人若有兩個妻子，摩西律法對長子產業有咩原則？",
+    "options": [
+      "唔可以因偏愛另一個妻子而剝奪真正長子嘅份",
+      "產業一定畀最受寵嘅兒子",
+      "長子不能承受產業",
+      "由長老每年抽籤"
+    ],
+    "answer": 0,
+    "explanation": "即使父親偏愛另一位妻子，也要承認真正長子，按長子份額分產業。",
+    "reference": "申命記21:15–17",
+    "id": "deuteronomy-050",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/21/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/21"
+  },
+  {
+    "unit": "d6",
+    "difficulty": 1,
+    "question": "見到鄰舍走失嘅牛或羊，應該點做？",
+    "options": [
+      "帶返畀主人；唔識主人就先照料",
+      "當作自己嘅",
+      "交畀王宮",
+      "留喺原地唔理"
+    ],
+    "answer": 0,
+    "explanation": "見到走失牲畜要帶回主人；若唔知道主人，就先收留照料，直到主人來找。",
+    "reference": "申命記22:1–3",
+    "id": "deuteronomy-051",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/22/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/22"
+  },
+  {
+    "unit": "d6",
+    "difficulty": 1,
+    "question": "屋頂要加咩，避免有人跌下去？",
+    "options": [
+      "欄杆",
+      "祭壇",
+      "梯子",
+      "旗桿"
+    ],
+    "answer": 0,
+    "explanation": "新屋屋頂要設欄杆，免得有人跌下去，令屋主承擔流血罪責。",
+    "reference": "申命記22:8",
+    "id": "deuteronomy-052",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/22/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/22"
+  },
+  {
+    "unit": "d6",
+    "difficulty": 1,
+    "question": "摩西吩咐唔好用牛同驢一齊拉軛，仲有邊啲混合禁例？",
+    "options": [
+      "唔好喺葡萄園混種，亦唔好用羊毛麻布混織衣服",
+      "唔好用兩種石頭築牆",
+      "唔好同時種小麥同大麥",
+      "唔好用兩個水桶打水"
+    ],
+    "answer": 0,
+    "explanation": "申命記列出唔同混合嘅禁例，包括葡萄園混種、牛驢同負一軛，以及羊毛麻布混織。",
+    "reference": "申命記22:9–11",
+    "id": "deuteronomy-053",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/22/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/22"
+  },
+  {
+    "unit": "d6",
+    "difficulty": 1,
+    "question": "以色列人要喺衣服四角加上咩？",
+    "options": [
+      "繸子",
+      "金鈴",
+      "紅色羽毛",
+      "小香囊"
+    ],
+    "answer": 0,
+    "explanation": "百姓要在衣服四角加上繸子，作為遵守上主命令的提醒。",
+    "reference": "申命記22:12",
+    "id": "deuteronomy-054",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/22/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/22"
+  },
+  {
+    "unit": "d6",
+    "difficulty": 1,
+    "question": "借畀窮乏嘅弟兄，邊樣唔可以當作抵押？",
+    "options": [
+      "磨石或上磨石",
+      "外袍",
+      "鞋",
+      "牛軛"
+    ],
+    "answer": 0,
+    "explanation": "磨石係維持生計所需，唔可以拿來抵押，等同拿走對方賴以生活嘅工具。",
+    "reference": "申命記24:6",
+    "id": "deuteronomy-055",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/24/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/24"
+  },
+  {
+    "unit": "d6",
+    "difficulty": 2,
+    "question": "收割完田地，忘記一捆禾，應該點？",
+    "options": [
+      "留畀寄居者、孤兒同寡婦",
+      "即刻返去拿走",
+      "交畀王收稅",
+      "燒掉避免浪費"
+    ],
+    "answer": 0,
+    "explanation": "忘記在田裏的一捆禾、橄欖或葡萄要留下，供寄居者、孤兒和寡婦使用。",
+    "reference": "申命記24:19–22",
+    "id": "deuteronomy-056",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/24/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/24"
+  },
+  {
+    "unit": "d6",
+    "difficulty": 2,
+    "question": "每日僱工嘅工錢最遲幾時要付？",
+    "options": [
+      "當日太陽落山前",
+      "七日後",
+      "下個月",
+      "完成整季工作後"
+    ],
+    "answer": 0,
+    "explanation": "窮乏的僱工要當日領到工錢，唔好留到第二日。",
+    "reference": "申命記24:14–15",
+    "id": "deuteronomy-057",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/24/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/24"
+  },
+  {
+    "unit": "d6",
+    "difficulty": 2,
+    "question": "審判後，鞭打犯人最多可以打幾多下？",
+    "options": [
+      "四十下",
+      "七下",
+      "十二下",
+      "一百下"
+    ],
+    "answer": 0,
+    "explanation": "經文限制鞭打次數最多四十下，免得弟兄在眾人面前受過度羞辱。",
+    "reference": "申命記25:1–3",
+    "id": "deuteronomy-058",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/25/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/25"
+  },
+  {
+    "unit": "d6",
+    "difficulty": 2,
+    "question": "買賣時，摩西要求使用咩？",
+    "options": [
+      "準確嘅法碼同量器",
+      "一大一細兩套秤",
+      "只用手掌估量",
+      "每個城用唔同度量"
+    ],
+    "answer": 0,
+    "explanation": "買賣要用準確、公平的法碼和量器，避免欺騙。",
+    "reference": "申命記25:13–16",
+    "id": "deuteronomy-059",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/25/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/25"
+  },
+  {
+    "unit": "d6",
+    "difficulty": 2,
+    "question": "收割時，唔可以點對待寄居者、孤兒同寡婦？",
+    "options": [
+      "唔可以回頭取盡遺下嘅禾穗",
+      "要佢哋幫手收割",
+      "禁止佢哋進入城",
+      "只畀佢哋食祭肉"
+    ],
+    "answer": 0,
+    "explanation": "田主收割後唔好回頭取盡遺下的禾穗，要留給有需要的人。",
+    "reference": "申命記24:19–22",
+    "id": "deuteronomy-060",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/24/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/24"
+  },
+  {
+    "unit": "d7",
+    "difficulty": 1,
+    "question": "獻初熟果子時，要將果籃交畀邊個？",
+    "options": [
+      "當值嘅祭司",
+      "城門守衛",
+      "軍隊長官",
+      "家中長子"
+    ],
+    "answer": 0,
+    "explanation": "百姓把初熟果子的籃交給祭司，放在上主的壇前。",
+    "reference": "申命記26:1–4",
+    "id": "deuteronomy-061",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/26/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/26"
+  },
+  {
+    "unit": "d7",
+    "difficulty": 1,
+    "question": "獻初熟果子時，以色列人要向上主重述祖先曾經係點？",
+    "options": [
+      "漂流嘅亞蘭人，後來下埃及寄居",
+      "住喺迦南嘅君王",
+      "出身於埃及祭司",
+      "耶利哥城嘅居民"
+    ],
+    "answer": 0,
+    "explanation": "宣認詞從祖先雅各講起，形容佢係漂流的亞蘭人，後來帶家人下埃及。",
+    "reference": "申命記26:5–10",
+    "id": "deuteronomy-062",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/26/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/26"
+  },
+  {
+    "unit": "d7",
+    "difficulty": 1,
+    "question": "摩西吩咐以色列人將律法寫喺邊度嘅石頭上？",
+    "options": [
+      "以巴路山嘅石頭",
+      "西奈山頂",
+      "約旦河底",
+      "耶利哥城門"
+    ],
+    "answer": 0,
+    "explanation": "過約旦河後要立石頭、抹上灰泥，並把律法寫在石上。",
+    "reference": "申命記27:1–4",
+    "id": "deuteronomy-063",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/27/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/27"
+  },
+  {
+    "unit": "d7",
+    "difficulty": 1,
+    "question": "祭壇要用咩石頭建造？",
+    "options": [
+      "未鑿過嘅石頭",
+      "雕刻成偶像形狀嘅石頭",
+      "金銀包裹嘅石頭",
+      "從埃及帶來嘅磚"
+    ],
+    "answer": 0,
+    "explanation": "祭壇要用未動過鐵器的整塊石頭建造，唔可用鑿過的石頭。",
+    "reference": "申命記27:5–8",
+    "id": "deuteronomy-064",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/27/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/27"
+  },
+  {
+    "unit": "d7",
+    "difficulty": 1,
+    "question": "祝福要喺邊座山宣告？",
+    "options": [
+      "基利心山",
+      "以巴路山",
+      "尼波山",
+      "西珥山"
+    ],
+    "answer": 0,
+    "explanation": "西緬、利未、猶大等支派站在基利心山宣告祝福。",
+    "reference": "申命記27:11–13",
+    "id": "deuteronomy-065",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/27/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/27"
+  },
+  {
+    "unit": "d7",
+    "difficulty": 2,
+    "question": "咒詛要喺邊座山宣告？",
+    "options": [
+      "以巴路山",
+      "基利心山",
+      "西奈山",
+      "橄欖山"
+    ],
+    "answer": 0,
+    "explanation": "宣告咒詛的支派站在以巴路山，百姓聽後要回答「阿們」。",
+    "reference": "申命記27:13–26",
+    "id": "deuteronomy-066",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/27/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/27"
+  },
+  {
+    "unit": "d7",
+    "difficulty": 2,
+    "question": "以色列人若聽從上主嘅話，摩西應許咩？",
+    "options": [
+      "福氣會臨到佢哋",
+      "永遠唔使耕種",
+      "其他民族會消失",
+      "每人都做祭司"
+    ],
+    "answer": 0,
+    "explanation": "申命記28章列出聽從上主時臨到百姓的祝福，包括城中、田間和家庭。",
+    "reference": "申命記28:1–14",
+    "id": "deuteronomy-067",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/28/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/28"
+  },
+  {
+    "unit": "d7",
+    "difficulty": 2,
+    "question": "初熟果子祈禱時，百姓要點樣向上主表達感謝？",
+    "options": [
+      "俯伏敬拜，並同利未人和寄居者一同歡樂",
+      "把果子留喺家中",
+      "先賣掉所有果子",
+      "只由祭司獨自食用"
+    ],
+    "answer": 0,
+    "explanation": "百姓獻上初熟果子後要俯伏敬拜，並與利未人和寄居者一同分享喜樂。",
+    "reference": "申命記26:10–11",
+    "id": "deuteronomy-068",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/26/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/26"
+  },
+  {
+    "unit": "d7",
+    "difficulty": 2,
+    "question": "申命記28章警告，若百姓唔聽從上主，會面對咩？",
+    "options": [
+      "咒詛同流亡等後果",
+      "永遠免受敵人攻擊",
+      "額外分到土地",
+      "唔需要再守約"
+    ],
+    "answer": 0,
+    "explanation": "摩西列出不聽從上主時的咒詛，包括疾病、戰亂和被擄等後果。",
+    "reference": "申命記28:15–68",
+    "id": "deuteronomy-069",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/28/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/28"
+  },
+  {
+    "unit": "d7",
+    "difficulty": 2,
+    "question": "上主將百姓帶到摩押地，係要佢哋做咩？",
+    "options": [
+      "重新立約",
+      "建造埃及神像",
+      "揀選新法老",
+      "離開約旦河東"
+    ],
+    "answer": 0,
+    "explanation": "摩西在摩押地召集百姓，提醒佢哋同上主所立的約。",
+    "reference": "申命記29:1",
+    "id": "deuteronomy-070",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/29/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/29"
+  },
+  {
+    "unit": "d8",
+    "difficulty": 1,
+    "question": "摩西話上主嘅命令離百姓有幾遠？",
+    "options": [
+      "唔遠，就喺口中同心裏",
+      "只喺天上",
+      "喺海嘅另一邊",
+      "只有祭司先知道"
+    ],
+    "answer": 0,
+    "explanation": "摩西說命令唔係遙不可及，已經離百姓好近，就在口中和心裏，可以遵行。",
+    "reference": "申命記30:11–14",
+    "id": "deuteronomy-071",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/30/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/30"
+  },
+  {
+    "unit": "d8",
+    "difficulty": 1,
+    "question": "摩西擺喺百姓面前嘅兩條路係咩？",
+    "options": [
+      "生命同死亡、福氣同禍患",
+      "埃及同巴比倫",
+      "海路同山路",
+      "祭司同君王"
+    ],
+    "answer": 0,
+    "explanation": "摩西叫百姓作選擇：愛上主、遵行祂的道就得生命和福氣。",
+    "reference": "申命記30:15–20",
+    "id": "deuteronomy-072",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/30/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/30"
+  },
+  {
+    "unit": "d8",
+    "difficulty": 1,
+    "question": "摩西勸百姓揀選咩？",
+    "options": [
+      "生命",
+      "權力",
+      "財富",
+      "安逸"
+    ],
+    "answer": 0,
+    "explanation": "摩西呼籲百姓揀選生命，使自己和後代可以存活。",
+    "reference": "申命記30:19–20",
+    "id": "deuteronomy-073",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/30/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/30"
+  },
+  {
+    "unit": "d8",
+    "difficulty": 1,
+    "question": "百姓要點樣愛上主，先可以行喺生命嘅路上？",
+    "options": [
+      "聽從祂嘅話、持守同祂嘅關係",
+      "只喺節期獻祭",
+      "只記住摩西嘅名字",
+      "靠軍隊守住土地"
+    ],
+    "answer": 0,
+    "explanation": "摩西叫百姓愛上主、聽從祂的話並緊緊跟隨祂，因為祂係百姓嘅生命。",
+    "reference": "申命記30:19–20",
+    "id": "deuteronomy-074",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/30/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/30"
+  },
+  {
+    "unit": "d8",
+    "difficulty": 1,
+    "question": "摩西講述上主嘅約時，叫邊兩樣一同作見證？",
+    "options": [
+      "天同地",
+      "海同山",
+      "日同月",
+      "祭司同君王"
+    ],
+    "answer": 0,
+    "explanation": "摩西呼天喚地作見證，提醒百姓守約與否會帶來生命或死亡。",
+    "reference": "申命記30:19",
+    "id": "deuteronomy-075",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/30/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/30"
+  },
+  {
+    "unit": "d8",
+    "difficulty": 2,
+    "question": "百姓被分散到列國後，若歸向上主，祂會點做？",
+    "options": [
+      "憐憫佢哋並招聚返來",
+      "唔再理會佢哋",
+      "叫佢哋永久留喺外地",
+      "只收回祭司"
+    ],
+    "answer": 0,
+    "explanation": "摩西預告百姓回轉時，上主會憐憫並從列國招聚他們。",
+    "reference": "申命記30:1–5",
+    "id": "deuteronomy-076",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/30/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/30"
+  },
+  {
+    "unit": "d8",
+    "difficulty": 2,
+    "question": "申命記話，上主嘅說話唔喺天上或海外，而係點樣？",
+    "options": [
+      "已經喺百姓身邊，能夠遵行",
+      "只有先知聽得到",
+      "要等新王出現先知道",
+      "必須由外族翻譯"
+    ],
+    "answer": 0,
+    "explanation": "律法唔在天上或海外，而在口中和心裏，百姓可以遵行。",
+    "reference": "申命記30:11–14",
+    "id": "deuteronomy-077",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/30/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/30"
+  },
+  {
+    "unit": "d8",
+    "difficulty": 2,
+    "question": "若以色列人轉去敬拜別神，摩西提醒會有咩結果？",
+    "options": [
+      "必定滅亡，不能長久住喺地上",
+      "立即得到更多產業",
+      "所有咒詛自動解除",
+      "成為祭司國度"
+    ],
+    "answer": 0,
+    "explanation": "摩西警告，若心轉離上主、敬拜別神，百姓必滅亡，不能長久住在那地。",
+    "reference": "申命記30:17–18",
+    "id": "deuteronomy-078",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/30/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/30"
+  },
+  {
+    "unit": "d8",
+    "difficulty": 2,
+    "question": "申命記點樣分別已啟示嘅事同隱秘嘅事？",
+    "options": [
+      "已啟示嘅事屬於百姓，要遵行；隱秘嘅事屬於上主",
+      "所有事都由百姓自行解釋",
+      "隱秘嘅事要由君王公開",
+      "只要係祭司就會知道一切"
+    ],
+    "answer": 0,
+    "explanation": "摩西指出，隱秘的事屬於上主；已啟示的事屬於百姓和後代，叫他們遵行律法。",
+    "reference": "申命記29:29",
+    "id": "deuteronomy-079",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/29/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/29"
+  },
+  {
+    "unit": "d8",
+    "difficulty": 2,
+    "question": "摩西喺約中叫百姓同邊啲人一同站立？",
+    "options": [
+      "各支派領袖、婦女、孩童同寄居者",
+      "只有軍隊長官",
+      "只有祭司",
+      "只有成年男子"
+    ],
+    "answer": 0,
+    "explanation": "立約時召集全體百姓，包括領袖、婦女、孩童及營中寄居者。",
+    "reference": "申命記29:9–12",
+    "id": "deuteronomy-080",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/29/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/29"
+  },
+  {
+    "unit": "d9",
+    "difficulty": 1,
+    "question": "摩西去世前幾多歲？",
+    "options": [
+      "一百二十歲",
+      "一百歲",
+      "八十歲",
+      "一百三十歲"
+    ],
+    "answer": 0,
+    "explanation": "申命記記載摩西去世時一百二十歲，眼目未昏花，精力未衰敗。",
+    "reference": "申命記34:7",
+    "id": "deuteronomy-081",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/34/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/34"
+  },
+  {
+    "unit": "d9",
+    "difficulty": 1,
+    "question": "摩西將帶領百姓進入迦南嘅工作交畀邊個？",
+    "options": [
+      "約書亞",
+      "亞倫",
+      "迦勒",
+      "以利亞撒"
+    ],
+    "answer": 0,
+    "explanation": "摩西按手在約書亞身上，百姓聽從約書亞，因他被智慧的靈充滿。",
+    "reference": "申命記31:7–8",
+    "id": "deuteronomy-082",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/31/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/31"
+  },
+  {
+    "unit": "d9",
+    "difficulty": 1,
+    "question": "律法書要喺幾多年一次嘅住棚節公開宣讀？",
+    "options": [
+      "每七年一次",
+      "每年一次",
+      "每三年一次",
+      "每五十年一次"
+    ],
+    "answer": 0,
+    "explanation": "豁免債務的第七年住棚節，要在全體百姓面前宣讀律法。",
+    "reference": "申命記31:10–13",
+    "id": "deuteronomy-083",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/31/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/31"
+  },
+  {
+    "unit": "d9",
+    "difficulty": 1,
+    "question": "摩西寫下律法後，交畀邊啲人保管？",
+    "options": [
+      "抬上主約櫃嘅利未祭司",
+      "以色列王",
+      "十二個探子",
+      "摩押長老"
+    ],
+    "answer": 0,
+    "explanation": "摩西把律法交給抬上主約櫃的利未祭司和以色列長老。",
+    "reference": "申命記31:24–26",
+    "id": "deuteronomy-084",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/31/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/31"
+  },
+  {
+    "unit": "d9",
+    "difficulty": 1,
+    "question": "摩西作咩比喻形容自己嘅教訓降落？",
+    "options": [
+      "好似雨水同露水",
+      "好似火同雷",
+      "好似石頭同沙",
+      "好似刀劍同盾牌"
+    ],
+    "answer": 0,
+    "explanation": "摩西的歌以雨水、露水、甘霖等比喻形容教訓滋養百姓。",
+    "reference": "申命記32:1–2",
+    "id": "deuteronomy-085",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/32/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/32"
+  },
+  {
+    "unit": "d9",
+    "difficulty": 2,
+    "question": "摩西嘅歌用邊個形象稱呼上主？",
+    "options": [
+      "磐石",
+      "烈火中的荊棘",
+      "雲柱",
+      "銅蛇"
+    ],
+    "answer": 0,
+    "explanation": "摩西宣告上主係磐石，祂的作為完全、公平，信實無偽。",
+    "reference": "申命記32:3–4",
+    "id": "deuteronomy-086",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/32/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/32"
+  },
+  {
+    "unit": "d9",
+    "difficulty": 2,
+    "question": "摩西嘅歌形容上主點樣保護以色列人？",
+    "options": [
+      "好似保護眼中嘅瞳人",
+      "好似築一座石牆",
+      "好似將佢哋藏入海底",
+      "好似派兵看守每個家庭"
+    ],
+    "answer": 0,
+    "explanation": "經文形容上主保護以色列人，好似保護眼中的瞳人。",
+    "reference": "申命記32:9–12",
+    "id": "deuteronomy-087",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/32/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/32"
+  },
+  {
+    "unit": "d9",
+    "difficulty": 2,
+    "question": "摩西寫歌後，吩咐百姓點樣保存歌嘅內容？",
+    "options": [
+      "教畀兒女，使佢哋謹守律法",
+      "只唱畀祭司聽",
+      "刻喺武器上",
+      "留畀君王收藏"
+    ],
+    "answer": 0,
+    "explanation": "摩西吩咐百姓將律法的話放在心上，教導兒女謹守遵行。",
+    "reference": "申命記32:44–47",
+    "id": "deuteronomy-088",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/32/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/32"
+  },
+  {
+    "unit": "d9",
+    "difficulty": 2,
+    "question": "摩西臨終前上邊座山觀看應許之地？",
+    "options": [
+      "尼波山",
+      "西奈山",
+      "基利心山",
+      "迦密山"
+    ],
+    "answer": 0,
+    "explanation": "上主叫摩西上摩押地的尼波山，從那裏觀看迦南地。",
+    "reference": "申命記32:48–50",
+    "id": "deuteronomy-089",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/32/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/32"
+  },
+  {
+    "unit": "d9",
+    "difficulty": 2,
+    "question": "摩西點解唔可以進入應許之地？",
+    "options": [
+      "因為喺米利巴水事件中冇尊上主為聖",
+      "因為佢係利未支派",
+      "因為佢唔識過約旦河",
+      "因為佢拒絕帶領百姓"
+    ],
+    "answer": 0,
+    "explanation": "上主說摩西和亞倫在米利巴水事件中沒有在百姓面前尊祂為聖。",
+    "reference": "申命記32:51–52",
+    "id": "deuteronomy-090",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/32/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/32"
+  },
+  {
+    "unit": "d10",
+    "difficulty": 1,
+    "question": "摩西祝福以色列人時，形容上主嘅手喺邊度？",
+    "options": [
+      "永恆嘅膀臂托住佢哋",
+      "藏喺尼波山底",
+      "只喺會幕之內",
+      "遠離以色列人"
+    ],
+    "answer": 0,
+    "explanation": "摩西祝福百姓時稱上主為避難所，並以永恆的膀臂托住他們。",
+    "reference": "申命記33:26–27",
+    "id": "deuteronomy-091",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/33/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/33"
+  },
+  {
+    "unit": "d10",
+    "difficulty": 1,
+    "question": "摩西死前喺邊座山觀看迦南地？",
+    "options": [
+      "尼波山嘅毗斯迦山頂",
+      "西奈山頂",
+      "耶利哥城牆",
+      "約旦河谷底"
+    ],
+    "answer": 0,
+    "explanation": "上主讓摩西從尼波山的毗斯迦山頂觀看整片應許之地。",
+    "reference": "申命記34:1–4",
+    "id": "deuteronomy-092",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/34/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/34"
+  },
+  {
+    "unit": "d10",
+    "difficulty": 1,
+    "question": "摩西最後喺邊度去世？",
+    "options": [
+      "摩押地",
+      "埃及地",
+      "耶利哥城",
+      "迦南地西岸"
+    ],
+    "answer": 0,
+    "explanation": "上主的僕人摩西在摩押地去世，百姓其後為他哀哭三十日。",
+    "reference": "申命記34:5",
+    "id": "deuteronomy-093",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/34/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/34"
+  },
+  {
+    "unit": "d10",
+    "difficulty": 1,
+    "question": "摩西埋葬地點有咩特別？",
+    "options": [
+      "冇人知道佢嘅墳墓喺邊",
+      "由十二支派輪流看守",
+      "安葬喺會幕下面",
+      "立咗一座大石碑標記"
+    ],
+    "answer": 0,
+    "explanation": "經文說摩西埋在摩押地的山谷，直到今日冇人知道他的墳墓。",
+    "reference": "申命記34:6",
+    "id": "deuteronomy-094",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/34/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/34"
+  },
+  {
+    "unit": "d10",
+    "difficulty": 1,
+    "question": "以色列人為摩西哀哭咗幾多日？",
+    "options": [
+      "三十日",
+      "七日",
+      "四十日",
+      "十二日"
+    ],
+    "answer": 0,
+    "explanation": "以色列人在摩押平原為摩西哀哭三十日，直到哀悼期完結。",
+    "reference": "申命記34:8",
+    "id": "deuteronomy-095",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/34/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/34"
+  },
+  {
+    "unit": "d10",
+    "difficulty": 2,
+    "question": "摩西按手之後，約書亞有咩改變？",
+    "options": [
+      "充滿智慧嘅靈",
+      "成為大祭司",
+      "即時做王",
+      "搬到埃及"
+    ],
+    "answer": 0,
+    "explanation": "約書亞因摩西按手而充滿智慧的靈，以色列人就聽從他。",
+    "reference": "申命記34:9",
+    "id": "deuteronomy-096",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/34/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/34"
+  },
+  {
+    "unit": "d10",
+    "difficulty": 2,
+    "question": "申命記最後點樣形容摩西？",
+    "options": [
+      "上主面對面認識嘅先知",
+      "以色列第一位君王",
+      "唯一嘅大祭司",
+      "迦南地嘅地主"
+    ],
+    "answer": 0,
+    "explanation": "經文說以色列中再沒有興起像摩西一樣、上主面對面認識的先知。",
+    "reference": "申命記34:10",
+    "id": "deuteronomy-097",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/34/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/34"
+  },
+  {
+    "unit": "d10",
+    "difficulty": 2,
+    "question": "摩西做過嘅事有咩特別？",
+    "options": [
+      "喺埃及行過上主差派嘅神蹟奇事",
+      "建成耶路撒冷聖殿",
+      "帶領百姓攻陷巴比倫",
+      "立大衛作君王"
+    ],
+    "answer": 0,
+    "explanation": "申命記結尾回顧摩西在埃及向法老及全地所行的神蹟奇事。",
+    "reference": "申命記34:11–12",
+    "id": "deuteronomy-098",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/34/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/34"
+  },
+  {
+    "unit": "d10",
+    "difficulty": 2,
+    "question": "摩西祝福但支派時，用咩形容佢？",
+    "options": [
+      "小獅子從巴珊跳出",
+      "住喺海島嘅漁夫",
+      "曠野中嘅牧羊人",
+      "城門口嘅守衛"
+    ],
+    "answer": 0,
+    "explanation": "摩西祝福但支派時，形容他像從巴珊跳出的獅子。",
+    "reference": "申命記33:22",
+    "id": "deuteronomy-099",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/33/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/33"
+  },
+  {
+    "unit": "d10",
+    "difficulty": 2,
+    "question": "摩西祝福拿弗他利支派時，提到佢哋得咩？",
+    "options": [
+      "上主嘅恩惠同福氣",
+      "最大嘅軍隊",
+      "耶路撒冷王位",
+      "永久免稅"
+    ],
+    "answer": 0,
+    "explanation": "摩西祝福拿弗他利支派，提到他們滿得上主的恩惠和福氣。",
+    "reference": "申命記33:23",
+    "id": "deuteronomy-100",
+    "topic": "deuteronomy",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/DEU/33/",
+    "verification": "https://bible.usccb.org/bible/deuteronomy/33"
+  }
+];
