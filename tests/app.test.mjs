@@ -252,7 +252,8 @@ test('Previous-question controls survive reload and preserve chosen answers, ski
 
 test('Church-history lessons resume, save bookmarks and mistakes, and update progress through revision', async () => {
   let app=await boot();
-  await app.click('.church-course-entry a');
+  assert.equal(app.$('.church-course-entry'),null);
+  await app.click('[data-nav="church"]');
   assert.equal(app.w.location.hash,'#/church');
   assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);
   assert.equal(app.$('[data-nav="church"]').getAttribute('aria-current'),'page');
@@ -308,8 +309,8 @@ test('All one hundred history questions are reachable through ten lessons and co
 test('Bible knowledge sits beside history and retains answers, previous navigation, bookmarks and review progress', async () => {
   let app=await boot();
   const nav=[...app.w.document.querySelectorAll('[data-nav]')].map(a=>a.dataset.nav);assert.equal(nav[nav.indexOf('church')+1],'bible');
-  assert(app.$('.church-course-entry'));assert(app.$('.bible-course-entry'));
-  await app.click('.bible-course-entry a');assert.equal(app.w.location.hash,'#/bible');
+  assert.equal(app.$('.church-course-entry'),null);assert.equal(app.$('.bible-course-entry'),null);
+  await app.click('[data-nav="bible"]');assert.equal(app.w.location.hash,'#/bible');
   assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);assert.match(app.$('.page-head').textContent,/66卷/);
   await app.click('[data-mode="bible"][data-unit="overview"]');
   assert.equal(app.savedProgress().current.mode,'bible');assert.match(app.$('.quiz-label').textContent,/聖經知識.*第1課/);
@@ -349,8 +350,8 @@ test('Genesis course and random quiz preserve their own progress and navigation'
  await app.navigate('/genesis');await app.click('[data-mode="genesis-test"]');assert.equal(app.savedProgress().current.items.length,10);for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}assert.match(app.$('.score-ring').textContent,/10 \/ 10/);assert.equal(Object.keys(app.savedProgress().genesisAnswers).length,1);assert.equal(app.savedProgress().bookmarks.length,1);assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
 
-test('Next question scrolls to the new question card and Old Testament is reachable in the hero', async () => {
- const app=await boot();assert(app.$('.hero a[href="#/old-testament"]'));
+test('Next question scrolls to the new question card and Old Testament is omitted from the hero', async () => {
+ const app=await boot();assert.equal(app.$('.hero a[href="#/old-testament"]'),null);
  await app.click('[data-mode="general"][data-count="20"]');await app.click('[data-action="answer"][data-choice="0"]');
  let scroll;app.w.scrollTo=options=>{scroll=options};app.w.HTMLElement.prototype.getBoundingClientRect=function(){return {top:300}};
  await app.click('[data-action="next"]');assert.equal(scroll.top,228);assert.equal(app.w.document.activeElement.id,'question-title');assert.equal(app.savedProgress().current.index,1);app.dom.window.close();
