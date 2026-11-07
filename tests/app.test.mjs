@@ -355,3 +355,16 @@ test('Next question scrolls to the new question card and Old Testament is reacha
  let scroll;app.w.scrollTo=options=>{scroll=options};app.w.HTMLElement.prototype.getBoundingClientRect=function(){return {top:300}};
  await app.click('[data-action="next"]');assert.equal(scroll.top,228);assert.equal(app.w.document.activeElement.id,'question-title');assert.equal(app.savedProgress().current.index,1);app.dom.window.close();
 });
+
+test('Genesis levels show chosen difficulty and advanced questions support bookmarks, mistakes and retry', async()=>{
+ const app=await boot();await app.navigate('/genesis');
+ for(const d of ['1','2','3'])assert(app.$(`[data-mode="genesis-level"][data-difficulty="${d}"]`));
+ await app.click('[data-mode="genesis-level"][data-difficulty="3"]');
+ assert.match(app.$('.question-meta').textContent,/就嚟頂唔住/);assert.match(app.$('.quiz-label').textContent,/就嚟頂唔住/);
+ const id=app.savedProgress().current.items[0].id;assert.match(id,/^genesis-hard-/);await app.click('.question-meta [data-action="bookmark"]');
+ await app.click('[data-action="answer"][data-choice="1"]');assert.match(app.$('.feedback .reference').textContent,/創世記/);await app.click('[data-action="next"]');
+ for(let i=1;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+ assert.match(app.$('.score-ring').textContent,/9 \/ 10/);assert(app.savedProgress().mistakes.includes(id));assert(app.savedProgress().bookmarks.includes(id));assert.deepEqual(app.savedProgress().genesisAnswers,{});
+ await app.click('[data-action="retry"]');assert.equal(app.savedProgress().current.mode,'genesis-level');assert.equal(app.savedProgress().current.difficulty,'3');
+ await app.navigate('/review');assert.match(app.$('.review-card').textContent,/創世記/);await app.click('[data-action="practice"]');await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');assert(!app.savedProgress().mistakes.includes(id));assert.deepEqual(app.errors,[]);app.dom.window.close();
+});

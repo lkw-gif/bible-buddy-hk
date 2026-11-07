@@ -14,3 +14,20 @@ test('Earlier Genesis rounds keep their original wording and choices after the r
  const newer=createRound({mode:'genesis',unit:'g1'});const id=newer.items[0].id;const legacy={...newer,bankRevision:3};
  assert.deepEqual(questionForRound(legacy,id).options,old.find(q=>q.id===id).options);assert.equal(newer.bankRevision,4);assert.equal(questionForRound(newer,id).question,GENESIS_QUESTIONS.find(q=>q.id===id).question);
 });
+
+
+test('Genesis level tests sample the intended pools and preserve retryable saved rounds',async()=>{
+ const {GENESIS_LEVEL_POOLS,GENESIS_HARD_QUESTIONS}=await import('../dist/genesis-course.mjs');
+ const {questionForRound}=await import('../dist/engine.mjs');
+ for(const level of [1,2,3]){
+  const r=createRound({mode:'genesis-level',difficulty:String(level),random:seededRandom('level'+level)});
+  assert.equal(r.items.length,10); assert(validRound(r)); assert.equal(new Set(r.items.map(x=>x.id)).size,10);
+  assert(r.items.every(i=>GENESIS_LEVEL_POOLS[level].some(q=>q.id===i.id)));
+  assert(r.items.every(i=>questionForRound(r,i.id)?.reference));
+  let completed=r; while(!completed.finishedAt)completed=advanceRound(answerRound(completed,0));
+  assert(validRound(completed,true));assert.equal(summarizeRound(completed).correct,10);
+ }
+ assert(GENESIS_HARD_QUESTIONS.length>=20);assert(GENESIS_HARD_QUESTIONS.every(q=>q.difficulty===3));
+ const wrong=createRound({mode:'genesis-level',difficulty:'3'});wrong.difficulty='2';assert(!validRound(wrong));
+ const a=createRound({mode:'genesis-level',difficulty:'3',random:seededRandom('a')});const b=createRound({mode:'genesis-level',difficulty:'3',random:seededRandom('b')});assert.notDeepEqual(a.items.map(i=>i.id),b.items.map(i=>i.id));
+});

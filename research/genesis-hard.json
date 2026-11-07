@@ -1,0 +1,362 @@
+[
+  {
+    "id": "genesis-hard-001",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "亞伯蘭按上帝吩咐預備立約祭牲時，邊兩種動物冇劈開？",
+    "options": [
+      "斑鳩同雛鴿",
+      "母牛同母山羊",
+      "公綿羊同斑鳩",
+      "母山羊同雛鴿"
+    ],
+    "answer": 0,
+    "explanation": "亞伯蘭將走獸劈開，雀鳥卻冇劈開；其後佢趕走落喺肉上嘅鷙鳥。",
+    "reference": "創世記15:9–11",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/15/",
+    "verification": "https://bible.usccb.org/bible/genesis/15",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-002",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "日落天黑後，亞伯蘭看見乜嘢喺祭牲肉塊中間經過？",
+    "options": [
+      "冒煙嘅爐同燒着嘅火把",
+      "火柱同雲柱",
+      "閃電同雷聲",
+      "香爐同燈台"
+    ],
+    "answer": 0,
+    "explanation": "經文講到冒煙嘅爐同燒着嘅火把從肉塊中經過，緊接着記載上帝與亞伯蘭立約。",
+    "reference": "創世記15:17",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/15/",
+    "verification": "https://bible.usccb.org/bible/genesis/15",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-003",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "亞伯拉罕為所多瑪求情時，最後問如果城內有幾多義人，上帝會唔會毀滅全城？",
+    "options": [
+      "十個",
+      "二十個",
+      "三十個",
+      "四十五個"
+    ],
+    "answer": 0,
+    "explanation": "亞伯拉罕由五十逐步求問，最後問到十個；上帝回答為十個義人的緣故也不毀滅。",
+    "reference": "創世記18:27–32",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/18/",
+    "verification": "https://bible.usccb.org/bible/genesis/18",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-004",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "亞伯拉罕遠遠望見獻祭嘅地方時，吩咐兩個僕人同乜嘢一齊留低？",
+    "options": [
+      "驢",
+      "羊",
+      "駱駝",
+      "祭壇"
+    ],
+    "answer": 0,
+    "explanation": "亞伯拉罕叫僕人同驢留低，佢同以撒繼續上前；以撒揹柴，亞伯拉罕拿火同刀。",
+    "reference": "創世記22:3–6",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/22/",
+    "verification": "https://bible.usccb.org/bible/genesis/22",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-005",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "亞伯拉罕帶以撒去上帝指示嘅地方，出發後第幾日遠遠望見目的地？",
+    "options": [
+      "第三日",
+      "第二日",
+      "第四日",
+      "第七日"
+    ],
+    "answer": 0,
+    "explanation": "創世記記載，到了第三日，亞伯拉罕遠遠望見那地方，之後才與僕人分開。",
+    "reference": "創世記22:4",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/22/",
+    "verification": "https://bible.usccb.org/bible/genesis/22",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-006",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "利百加畀駱駝飲完水，僕人送畀佢嘅金環同手鐲分別有幾重？",
+    "options": [
+      "金環半舍客勒，兩隻手鐲共十舍客勒",
+      "金環一舍客勒，兩隻手鐲共十舍客勒",
+      "金環半舍客勒，兩隻手鐲共五舍客勒",
+      "金環十舍客勒，兩隻手鐲共半舍客勒"
+    ],
+    "answer": 0,
+    "explanation": "僕人見駱駝飲完水，就拿一個重半舍客勒嘅金環，同兩隻共重十舍客勒嘅金手鐲畀利百加。",
+    "reference": "創世記24:22",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/24/",
+    "verification": "https://bible.usccb.org/bible/genesis/24",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-007",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "利百加家人請佢多留一段時間，僕人要求即時出發，最後家人點處理？",
+    "options": [
+      "叫利百加來親自問佢意願",
+      "由拉班獨自決定出發",
+      "等以撒親自到訪再決定",
+      "先叫僕人留下七日"
+    ],
+    "answer": 0,
+    "explanation": "家人叫利百加來問她願不願意同行；她回答願意，於是跟僕人出發。",
+    "reference": "創世記24:54–58",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/24/",
+    "verification": "https://bible.usccb.org/bible/genesis/24",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-008",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "以掃賣長子名分畀雅各嗰次，佢食嘅餅同湯係乜嘢湯？",
+    "options": [
+      "紅豆湯",
+      "小麥粥",
+      "小麥湯",
+      "羊肉湯"
+    ],
+    "answer": 0,
+    "explanation": "雅各將餅同紅豆湯給以掃；經文特別提到以掃吃喝後起來走了，輕看長子名分。",
+    "reference": "創世記25:29–34",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/25/",
+    "verification": "https://bible.usccb.org/bible/genesis/25",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-009",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "利百加幫雅各準備見以撒時，用乜嘢遮住雅各雙手同頸上光滑嘅地方？",
+    "options": [
+      "山羊羔皮",
+      "綿羊毛",
+      "以掃外衣",
+      "駱駝毛布"
+    ],
+    "answer": 0,
+    "explanation": "利百加用山羊羔皮包在雅各手上同頸項光滑嘅地方，又叫他穿上以掃的上好衣服。",
+    "reference": "創世記27:15–17",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/27/",
+    "verification": "https://bible.usccb.org/bible/genesis/27",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-010",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "雅各醒後將枕過嘅石頭立作柱子，並喺上面做咗乜？",
+    "options": [
+      "澆油",
+      "灑水",
+      "燒香",
+      "獻羊"
+    ],
+    "answer": 0,
+    "explanation": "雅各清早把石頭立作柱子並澆油，將那地方命名為伯特利，原名是路斯。",
+    "reference": "創世記28:18–19",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/28/",
+    "verification": "https://bible.usccb.org/bible/genesis/28",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-011",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "雅各發現先娶咗利亞後，拉班提出完成乜嘢，再將拉結畀佢？",
+    "options": [
+      "利亞嘅七日婚期，並再服事七年",
+      "再服事七日，並再等七年成婚",
+      "先工作三年，再付七隻羊",
+      "等利亞生子，再服事七年"
+    ],
+    "answer": 0,
+    "explanation": "拉班要求雅各完成利亞的七日婚期，然後也把拉結給他，條件是再服事七年。",
+    "reference": "創世記29:25–28",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/29/",
+    "verification": "https://bible.usccb.org/bible/genesis/29",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-012",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "拉班搜家中偶像時，拉結將偶像藏喺邊度？",
+    "options": [
+      "駱駝嘅馱簍裏，並坐喺上面",
+      "帳幕門口嘅地底",
+      "羊群旁邊嘅石堆",
+      "雅各牀下嘅行囊"
+    ],
+    "answer": 0,
+    "explanation": "拉結將家中的神像藏在駱駝的馱簍裏，坐在上面；拉班搜查帳幕卻找不到。",
+    "reference": "創世記31:34–35",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/31/",
+    "verification": "https://bible.usccb.org/bible/genesis/31",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-013",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "雅各聽見以掃帶四百人來迎接後，點樣安排身邊嘅人同牲畜？",
+    "options": [
+      "分成兩隊，盼望一隊受襲時另一隊可逃走",
+      "分成三隊，每隊由一個兒子帶領",
+      "將牲畜留低，帶家人連夜離開",
+      "將所有人集中，等候以掃先出手"
+    ],
+    "answer": 0,
+    "explanation": "雅各十分害怕，將人同羊群牛群駱駝分成兩隊，因為他想若一隊被擊殺，另一隊可逃走。",
+    "reference": "創世記32:7–8",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/32/",
+    "verification": "https://bible.usccb.org/bible/genesis/32",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-014",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "雅各見以掃走近時，將家人排成邊個次序？",
+    "options": [
+      "使女同孩子在前，利亞同孩子居中，拉結同約瑟在後",
+      "拉結同約瑟在前，使女同孩子居中，利亞在後",
+      "利亞同孩子在前，拉結居中，使女在後",
+      "雅各留在最後，家人按年齡排前面"
+    ],
+    "answer": 0,
+    "explanation": "經文講到使女和孩子排最前，利亞和孩子其次，拉結與約瑟最後；雅各自己行喺前面迎接。",
+    "reference": "創世記33:1–3",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/33/",
+    "verification": "https://bible.usccb.org/bible/genesis/33",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-015",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "猶大提議將約瑟賣畀邊一群人，而唔好親手害佢？",
+    "options": [
+      "以實瑪利人",
+      "埃及祭司",
+      "非利士商人",
+      "所多瑪王嘅僕人"
+    ],
+    "answer": 0,
+    "explanation": "猶大提議把約瑟賣給以實瑪利人；經文亦講到米甸商人經過，把約瑟帶到埃及。",
+    "reference": "創世記37:26–28",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/37/",
+    "verification": "https://bible.usccb.org/bible/genesis/37",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-016",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "約瑟解釋酒政夢入面三根葡萄枝，代表乜嘢？",
+    "options": [
+      "三日內法老會使佢復職",
+      "三年後埃及會有豐收",
+      "三日內佢會被處死",
+      "三年後佢會離開埃及"
+    ],
+    "answer": 0,
+    "explanation": "約瑟解釋三根枝子就是三天，三日內法老會畀酒政復職，再遞杯畀法老。",
+    "reference": "創世記40:12–13",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/40/",
+    "verification": "https://bible.usccb.org/bible/genesis/40",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-017",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "約瑟解釋法老兩個夢重複出現，係表示乜嘢？",
+    "options": [
+      "事情已由上帝定下，而且快要成就",
+      "埃及會經歷兩次不同饑荒",
+      "兩位術士會分別解釋夢境",
+      "豐收會延長至十四年"
+    ],
+    "answer": 0,
+    "explanation": "約瑟說法老兩次做夢，是因為事情出於上帝，並且上帝會令事情好快成就。",
+    "reference": "創世記41:32",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/41/",
+    "verification": "https://bible.usccb.org/bible/genesis/41",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-018",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "約瑟第三日叫哥哥們返去帶糧時，要求佢哋留下一人同時帶誰回來證實說話？",
+    "options": [
+      "小兄弟",
+      "父親雅各",
+      "長兄流便嘅兒子",
+      "賣糧嘅僕人"
+    ],
+    "answer": 0,
+    "explanation": "約瑟說留一人在監裏，其餘人帶糧回家，然後將小兄弟帶來，證明佢哋講嘅係真。",
+    "reference": "創世記42:18–20",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/42/",
+    "verification": "https://bible.usccb.org/bible/genesis/42",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-019",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "約瑟吩咐管家將銀杯放喺邊個嘅糧袋？",
+    "options": [
+      "便雅憫",
+      "猶大",
+      "流便",
+      "西緬"
+    ],
+    "answer": 0,
+    "explanation": "約瑟吩咐管家把銀杯連同買糧的銀子放在最小兄弟的口袋中，以此試驗哥哥哋。",
+    "reference": "創世記44:1–2",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/44/",
+    "verification": "https://bible.usccb.org/bible/genesis/44",
+    "sourceLabel": "查閱資料"
+  },
+  {
+    "id": "genesis-hard-020",
+    "topic": "genesis",
+    "difficulty": 3,
+    "question": "約瑟臨終前叫以色列人起誓：當上帝眷顧並帶領佢哋離開埃及，要帶走乜嘢？",
+    "options": [
+      "約瑟嘅骸骨",
+      "雅各嘅衣服",
+      "約瑟嘅銀杯",
+      "法老嘅印戒"
+    ],
+    "answer": 0,
+    "explanation": "約瑟相信上帝會領他的家族到應許之地，叫他們起誓，到時將佢嘅骸骨從埃及帶走。",
+    "reference": "創世記50:24–25",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/GEN/50/",
+    "verification": "https://bible.usccb.org/bible/genesis/50",
+    "sourceLabel": "查閱資料"
+  }
+]
