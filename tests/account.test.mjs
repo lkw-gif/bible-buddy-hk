@@ -23,3 +23,23 @@ test('Private reading changes merge per lesson, including undo, independently of
  const b={updatedAt:200,history:[],learningReads:{'church:early':{done:false,at:95}},learningPositions:{kingdoms:{lesson:'saul',at:180}}};
  const merged=mergeProgress(a,b);assert.equal(merged.learningReads['church:early'].done,false);assert.equal(merged.learningReads['kingdoms:saul'].done,true);assert.equal(merged.learningPositions.church.lesson,'early');assert.equal(merged.learningPositions.kingdoms.lesson,'saul');assert(!Object.hasOwn(publicMember(merged),'learningReads'));
 });
+
+
+test('Review merging preserves guest entries and respects later mastery and bookmark removals',()=>{
+ const guest={mistakes:['old'],bookmarks:['saved'],history:[]};
+ const account={updatedAt:999,mistakes:[],bookmarks:[],history:[]};
+ const imported=mergeProgress(guest,account);
+ assert.deepEqual(imported.mistakes,['old']);assert.deepEqual(imported.bookmarks,['saved']);
+ const mastered={...account,reviewChanges:{mistakes:{old:{active:false,at:100}},bookmarks:{saved:{active:false,at:100}}}};
+ assert.deepEqual(mergeProgress(imported,mastered).mistakes,[]);
+ assert.deepEqual(mergeProgress(mastered,guest).bookmarks,[]);
+});
+
+test('One-time recovery rebuilds latest mistakes without restoring mastered questions again',async()=>{
+ const {recoverReview}=await import('../dist/account-data.mjs');
+ const profile={mistakes:[],bookmarks:[],history:[{finishedAt:'2026-11-01',rows:[{question:{id:'a'},correct:false},{question:{id:'b'},correct:false}]},{finishedAt:'2026-11-02',rows:[{question:{id:'a'},correct:true}]}]};
+ const recovered=recoverReview(profile,r=>r);
+ assert.deepEqual(recovered.mistakes,['b']);assert.deepEqual(profile.mistakes,[]);
+ recovered.mistakes=[];recovered.reviewChanges.mistakes.b={active:false,at:Date.now()};
+ assert.deepEqual(recoverReview(recovered,r=>r).mistakes,[]);
+});

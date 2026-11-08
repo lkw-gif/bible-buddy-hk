@@ -1,5 +1,5 @@
 import {firebaseConfig} from './firebase-config.mjs';
-import {mergeProgress, publicMember} from './account-data.mjs';
+import {mergeProgress, publicMember} from './account-data.mjs?v=20261109-review1';
 export const cloudConfigured=Boolean(firebaseConfig?.apiKey&&firebaseConfig?.authDomain&&firebaseConfig?.projectId&&firebaseConfig?.appId);
 export function accountError(error) {
   const code=error?.code||'';

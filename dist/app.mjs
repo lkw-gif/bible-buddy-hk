@@ -1,8 +1,8 @@
 import {CHURCH_LESSONS,KINGDOM_DATA} from './learning-data.mjs?v=20261108-aligned2';
 import {KINGDOM_TOPIC,KINGDOM_UNITS,KINGDOM_MAP,cleanKingdomAnswers,kingdomStatus} from './kingdom-course.mjs?v=20261108-aligned2';
 import {learningView,lessonView} from './learning-view.mjs?v=20261108-aligned2';
-import {cleanName, mergeProgress, accountStorageKey} from './account-data.mjs';
-import {cloudConfigured, createCloudAccount, accountError} from './cloud-account.mjs';
+import {cleanName, mergeProgress, accountStorageKey, recoverReview} from './account-data.mjs?v=20261109-review1';
+import {cloudConfigured, createCloudAccount, accountError} from './cloud-account.mjs?v=20261109-review1';
 import { XP_LEVELS, prepareXp, awardXp, xpStatus, mergeXp } from './experience.mjs';
 import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261108-aligned2';
 import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, retreatRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261108-aligned2';
@@ -70,7 +70,7 @@ function readProgress() {
     const markAnswers = cleanMarkAnswers(saved.markAnswers);
     const lukeAnswers = cleanLukeAnswers(saved.lukeAnswers);
     const johnAnswers = cleanJohnAnswers(saved.johnAnswers);
-    return { ...blank, xp:saved.xp, learningReads:saved.learningReads||{}, learningPositions:saved.learningPositions||{}, kingdomAnswers:cleanKingdomAnswers(saved.kingdomAnswers), updatedAt:saved.updatedAt||0, answerTimes:saved.answerTimes||{}, displayName:cleanName(saved.displayName), profileUpdatedAt:saved.profileUpdatedAt||0, tone: 'cheeky', current: validRound(saved.current) ? { ...saved.current, tone:'cheeky' } : null,
+    return { ...blank, reviewChanges:saved.reviewChanges||{},reviewRecovered:saved.reviewRecovered||false, xp:saved.xp, learningReads:saved.learningReads||{}, learningPositions:saved.learningPositions||{}, kingdomAnswers:cleanKingdomAnswers(saved.kingdomAnswers), updatedAt:saved.updatedAt||0, answerTimes:saved.answerTimes||{}, displayName:cleanName(saved.displayName), profileUpdatedAt:saved.profileUpdatedAt||0, tone: 'cheeky', current: validRound(saved.current) ? { ...saved.current, tone:'cheeky' } : null,
       history, bookmarks: cleanIds(saved.bookmarks), mistakes: cleanIds(saved.mistakes), courseAnswers:cleanCourseAnswers(saved.courseAnswers), bibleAnswers:cleanBibleAnswers(saved.bibleAnswers), genesisAnswers, exodusAnswers, numbersAnswers, leviticusAnswers, deuteronomyAnswers, matthewAnswers, markAnswers, lukeAnswers, johnAnswers,
       genesisSeen: cleanSeenIds(saved.genesisSeen, genesisAnswers, history, 'genesis'),
       exodusSeen: cleanSeenIds(saved.exodusSeen, exodusAnswers, history, 'exodus'),
@@ -300,7 +300,7 @@ function handleNext() {
   if (!progress.current) return;
   const r = advanceRound(progress.current);
   if (r === progress.current) return;
-  if (r.finishedAt) { progress = integrateResult(progress, r); persist(); resultFilter = 'wrong'; resultSearch = ''; go('/result/' + r.id); }
+  if (r.finishedAt) { progress = integrateResult(progress, r); progress.reviewChanges ||= {};progress.reviewChanges.mistakes ||= {};for(const row of summarizeRound(r).rows)progress.reviewChanges.mistakes[row.question.id]={active:!row.correct,at:Date.now()}; persist(); resultFilter = 'wrong'; resultSearch = ''; go('/result/' + r.id); }
   else { progress.current = r; persist(); main.innerHTML = quizView(); $('#question-title')?.focus({ preventScroll: true }); const card = $('.quiz-card'); if (card) window.scrollTo({ top: Math.max(0, window.scrollY + card.getBoundingClientRect().top - 72), behavior: 'instant' }); }
 }
 
@@ -340,7 +340,7 @@ function questionCard(q, row = null) {
 }
 
 function reviewView() {
-  return `<div class="page-head"><div class="eyebrow">溫故知新，一齊扎根</div><h1>上次中伏，今次識分辨。</h1><p>答錯嗰幾題同溫習書籤都喺度。溫習完再答啱，就會移出錯題簿。</p></div><div class="review-toolbar"><div class="tabs" aria-label="選擇溫習題目"><button data-action="review-tab" data-tab="mistakes" aria-pressed="${reviewTab === 'mistakes'}">錯題簿 ${progress.mistakes.length}</button><button data-action="review-tab" data-tab="bookmarks" aria-pressed="${reviewTab === 'bookmarks'}">溫習書籤 ${progress.bookmarks.length}</button></div><button class="button primary small practice-button" data-action="practice" ${!progress[reviewTab].length ? 'disabled' : ''}>${icon('repeat')} 再操練一次</button></div><label class="search-wrap" style="max-width:500px;margin-bottom:22px">${icon('search')}<span class="sr-only">搵返要補嘅經</span><input id="review-search" type="search" placeholder="搵人物、書卷或者歷史事件…" value="${escape(reviewSearch)}"></label><div id="review-rows">${reviewRows()}</div><p class="note" style="margin-top:20px">未完成嗰局嘅錯題，會喺交卷後一齊加入。紀錄只存在呢個瀏覽器，唔會同步到其他裝置。</p>`;
+  return `<div class="page-head"><div class="eyebrow">溫故知新，一齊扎根</div><h1>上次中伏，今次識分辨。</h1><p>答錯嗰幾題同溫習書籤都喺度。溫習完再答啱，就會移出錯題簿。</p></div><div class="review-toolbar"><div class="tabs" aria-label="選擇溫習題目"><button data-action="review-tab" data-tab="mistakes" aria-pressed="${reviewTab === 'mistakes'}">錯題簿 ${progress.mistakes.length}</button><button data-action="review-tab" data-tab="bookmarks" aria-pressed="${reviewTab === 'bookmarks'}">溫習書籤 ${progress.bookmarks.length}</button></div><button class="button primary small practice-button" data-action="practice" ${!progress[reviewTab].length ? 'disabled' : ''}>${icon('repeat')} 再操練一次</button></div><label class="search-wrap" style="max-width:500px;margin-bottom:22px">${icon('search')}<span class="sr-only">搵返要補嘅經</span><input id="review-search" type="search" placeholder="搵人物、書卷或者歷史事件…" value="${escape(reviewSearch)}"></label><div id="review-rows">${reviewRows()}</div><p class="note" style="margin-top:20px">未完成嗰局嘅錯題，會喺交卷後一齊加入。${cloudUser ? '錯題簿同書籤會同步到你嘅帳戶。' : '未登入嘅紀錄只存在呢個瀏覽器。'}</p>`;
 }
 function reviewRows() {
   const questions = progress[reviewTab].map(id => QUESTION_MAP.get(id)).filter(q => includesSearch(q, reviewSearch));
@@ -415,6 +415,7 @@ document.addEventListener('click', async event => {
     const id = button.dataset.id;
     if (!QUESTION_MAP.has(id)) return;
     const on = progress.bookmarks.includes(id);
+    progress.reviewChanges ||= {};progress.reviewChanges.bookmarks ||= {};progress.reviewChanges.bookmarks[id]={active:!on,at:Date.now()};
     progress.bookmarks = on ? progress.bookmarks.filter(x => x !== id) : [...progress.bookmarks, id];
     persist();
     for (const b of document.querySelectorAll(`[data-action="bookmark"][data-id="${id}"]`)) { b.setAttribute('aria-pressed', String(!on)); b.setAttribute('aria-label', `${on ? '收藏呢題' : '取消書籤'}：${QUESTION_MAP.get(id).question}`); b.innerHTML = icon('bookmark') + `<span>${on ? '溫習書籤' : '已收低'}</span>`; }
@@ -495,10 +496,13 @@ async function runSync(){
   if(cloudUser?.uid!==uid||activeStorageKey!==key)return;
   const activeRound=route().name==='quiz'?progress.current:undefined;
   progress=mergeProgress(merged,progress);
+  const needsRecovery=!progress.reviewRecovered;
+  if(needsRecovery)localStorage.setItem(key+':before-review-recovery',JSON.stringify(progress));
+  progress=recoverReview(progress,summarizeRound);
   if(activeRound!==undefined)progress.current=activeRound;
   localStorage.setItem(key,JSON.stringify(progress));progress=readProgress();progress.xp=prepareXp(progress,QUESTION_MAP,questionForRound);
   cloudState='已同步到你嘅帳戶。';
-  if(revision!==rev)queueSync();
+  if(needsRecovery||revision!==rev)queueSync();
  }catch(error){if(cloudUser?.uid===uid)cloudState=accountError(error);}
  finally{syncBusy=false;refreshAccount();}
 }
@@ -521,7 +525,7 @@ function confirmGuestImport(){
   if(!guest){toast('未有遊客紀錄可以匯入。');return;}
   guest.xp=prepareXp(guest,QUESTION_MAP,questionForRound);
   progress=mergeProgress(guest,progress);persist();
-  if(!storageUnavailable)localStorage.removeItem(STORAGE_KEY);
+  if(!storageUnavailable){localStorage.setItem(STORAGE_KEY+':import-backup',JSON.stringify(guest));localStorage.removeItem(STORAGE_KEY);}
   shareDialog.close();render({focus:false});toast('遊客進度已加入你嘅帳戶。');
  }catch{toast('未能讀取遊客紀錄，原有資料會保留。');}
 }

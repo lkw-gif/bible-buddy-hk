@@ -25,5 +25,38 @@ export function mergeProgress(a,b) {
   }
   const named=(a.profileUpdatedAt||0)>(b.profileUpdatedAt||0)?a:b;
   result.displayName=cleanName(named.displayName);result.profileUpdatedAt=named.profileUpdatedAt||0;
-  return result;
+  return mergeReview(result,a,b);
+}
+
+// Per-item timestamps preserve both additions and removals across device syncs.
+function reviewEntries(p,key){
+ const entries={};
+ for(const id of p?.[key]||[])entries[id]={active:true,at:1};
+ return {...entries,...p?.reviewChanges?.[key]};
+}
+export function mergeReview(result,a,b){
+ result.reviewChanges={};
+ for(const key of ['mistakes','bookmarks']){
+  const entries=reviewEntries(a,key);
+  for(const [id,e] of Object.entries(reviewEntries(b,key)))if(!entries[id]||e.at>=entries[id].at)entries[id]=e;
+  result.reviewChanges[key]=entries;
+  result[key]=Object.keys(entries).filter(id=>entries[id].active);
+ }
+ return result;
+}
+export function recoverReview(progress,summarize){
+ if(progress.reviewRecovered)return progress;
+ const result=mergeReview(structuredClone(progress),progress,{});
+ const entries=result.reviewChanges.mistakes;
+ for(const [key,answers] of Object.entries(progress))if(key.endsWith('Answers'))for(const [id,correct] of Object.entries(answers||{})){
+  const at=progress.answerTimes?.[key]?.[id]||1;
+  if(!entries[id]||at>entries[id].at)entries[id]={active:correct!==true,at};
+ }
+ for(const round of [...(progress.history||[])].sort((a,b)=>Date.parse(a.finishedAt)-Date.parse(b.finishedAt))){
+  const at=Date.parse(round.finishedAt)||1;
+  for(const row of summarize(round).rows)if(!entries[row.question.id]||at>=entries[row.question.id].at)entries[row.question.id]={active:!row.correct,at};
+ }
+ result.mistakes=Object.keys(entries).filter(id=>entries[id].active);
+ result.reviewRecovered=true;
+ return result;
 }
