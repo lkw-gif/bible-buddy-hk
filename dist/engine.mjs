@@ -1,3 +1,4 @@
+import {KINGDOM_QUESTIONS,KINGDOM_MAP,KINGDOM_TOPIC,KINGDOM_UNITS} from './kingdom-course.mjs';
 import { GENESIS_DATA as GENESIS_LEGACY_DATA } from './genesis-legacy-data.mjs?v=20261107-2';
 import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261108-9';
 import { HISTORY_QUESTIONS, HISTORY_QUESTION_MAP, HISTORY_TOPIC, COURSE_UNITS } from './history-course.mjs?v=20261101-7';
@@ -108,7 +109,8 @@ function fixedGeneralEdition(edition) {
 export function createRound({ mode = 'general', topic = 'overview', count, edition, difficulty = 'all', tone = 'cheeky', ids = [], unit, seenIds = [], random = Math.random } = {}) {
   let selected;
   let fixedEdition = null;
-  if (mode === 'general') {
+  if(mode==='kingdoms'){if(!KINGDOM_UNITS.some(u=>u.id===unit))throw Error('請揀一課');selected=KINGDOM_QUESTIONS.filter(q=>q.unit===unit);
+  } else if (mode === 'general') {
     const size = count === undefined ? 40 : Number(count);
     if (![20,40].includes(size)) throw new Error('曠野快閃20題，定曠野長征40題？揀好就入場。');
     if (size === 40 && edition !== undefined) {
@@ -203,8 +205,8 @@ export function createRound({ mode = 'general', topic = 'overview', count, editi
   } else { throw new Error('未知測驗模式'); }
   if (!selected.length) throw new Error('暫時冇呢類題目，可以揀其他主題。');
   const roundRandom = fixedEdition ? seededRandom(`general-fixed-v1-${fixedEdition}`) : random;
-  const items = (['church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke'].includes(mode) ? selected : shuffle(selected, roundRandom)).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], roundRandom) }));
-  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 4, distribution: fixedEdition ? 'general-fixed-v1' : mode === 'general' ? 'general-v5' : mode === 'trial' && String(difficulty) === '3' ? 'trial-advanced-v5' : 'balanced-v3', ...(fixedEdition ? {edition:fixedEdition} : {}), mode, topic: ['john','john-level'].includes(mode) ? JOHN_TOPIC.id : ['luke','luke-level'].includes(mode) ? LUKE_TOPIC.id : ['mark','mark-level'].includes(mode) ? MARK_TOPIC.id : ['matthew','matthew-level'].includes(mode) ? MATTHEW_TOPIC.id : ['genesis','genesis-test','genesis-level'].includes(mode) ? GENESIS_TOPIC.id : ['exodus','exodus-test','exodus-level'].includes(mode) ? EXODUS_TOPIC.id : ['numbers','numbers-test','numbers-level'].includes(mode) ? NUMBERS_TOPIC.id : ['leviticus','leviticus-test','leviticus-level'].includes(mode) ? LEVITICUS_TOPIC.id : ['deuteronomy','deuteronomy-test','deuteronomy-level'].includes(mode) ? DEUTERONOMY_TOPIC.id : mode === 'bible' ? BIBLE_TOPIC.id : mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:['church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke','john'].includes(mode) ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
+  const items = (['kingdoms','church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke'].includes(mode) ? selected : shuffle(selected, roundRandom)).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], roundRandom) }));
+  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 4, distribution: fixedEdition ? 'general-fixed-v1' : mode === 'general' ? 'general-v5' : mode === 'trial' && String(difficulty) === '3' ? 'trial-advanced-v5' : 'balanced-v3', ...(fixedEdition ? {edition:fixedEdition} : {}), mode, topic: ['john','john-level'].includes(mode) ? JOHN_TOPIC.id : ['luke','luke-level'].includes(mode) ? LUKE_TOPIC.id : ['mark','mark-level'].includes(mode) ? MARK_TOPIC.id : ['matthew','matthew-level'].includes(mode) ? MATTHEW_TOPIC.id : ['genesis','genesis-test','genesis-level'].includes(mode) ? GENESIS_TOPIC.id : ['exodus','exodus-test','exodus-level'].includes(mode) ? EXODUS_TOPIC.id : ['numbers','numbers-test','numbers-level'].includes(mode) ? NUMBERS_TOPIC.id : ['leviticus','leviticus-test','leviticus-level'].includes(mode) ? LEVITICUS_TOPIC.id : ['deuteronomy','deuteronomy-test','deuteronomy-level'].includes(mode) ? DEUTERONOMY_TOPIC.id : mode === 'kingdoms' ? KINGDOM_TOPIC.id : mode === 'bible' ? BIBLE_TOPIC.id : mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:['kingdoms','church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke','john'].includes(mode) ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
 }
 
 export function answerRound(round, selected) {
@@ -236,7 +238,7 @@ export function summarizeRound(round) {
   const correct = rows.filter(r => r.correct).length;
   const skipped = rows.filter(r => r.answered && r.selected === null).length;
   const percent = correct * 100 / rows.length;
-  const breakdown = [...TOPICS,...(rows.some(r => r.question.topic === HISTORY_TOPIC.id) ? [HISTORY_TOPIC] : []),...(rows.some(r=>r.question.topic===BIBLE_TOPIC.id) ? [BIBLE_TOPIC] : []),...(rows.some(r=>r.question.topic===GENESIS_TOPIC.id) ? [GENESIS_TOPIC] : []),...(rows.some(r=>r.question.topic===EXODUS_TOPIC.id) ? [EXODUS_TOPIC] : []),...(rows.some(r=>r.question.topic===NUMBERS_TOPIC.id) ? [NUMBERS_TOPIC] : []),...(rows.some(r=>r.question.topic===LEVITICUS_TOPIC.id) ? [LEVITICUS_TOPIC] : []),...(rows.some(r=>r.question.topic===DEUTERONOMY_TOPIC.id) ? [DEUTERONOMY_TOPIC] : []),...(rows.some(r=>r.question.topic===MATTHEW_TOPIC.id) ? [MATTHEW_TOPIC] : []),...(rows.some(r=>r.question.topic===MARK_TOPIC.id) ? [MARK_TOPIC] : []),...(rows.some(r=>r.question.topic===LUKE_TOPIC.id) ? [LUKE_TOPIC] : []),...(rows.some(r=>r.question.topic===JOHN_TOPIC.id) ? [JOHN_TOPIC] : [])].map(t => {
+  const breakdown = [...TOPICS,...(rows.some(r=>r.question.topic==='kingdoms')?[KINGDOM_TOPIC]:[]),...(rows.some(r => r.question.topic === HISTORY_TOPIC.id) ? [HISTORY_TOPIC] : []),...(rows.some(r=>r.question.topic===BIBLE_TOPIC.id) ? [BIBLE_TOPIC] : []),...(rows.some(r=>r.question.topic===GENESIS_TOPIC.id) ? [GENESIS_TOPIC] : []),...(rows.some(r=>r.question.topic===EXODUS_TOPIC.id) ? [EXODUS_TOPIC] : []),...(rows.some(r=>r.question.topic===NUMBERS_TOPIC.id) ? [NUMBERS_TOPIC] : []),...(rows.some(r=>r.question.topic===LEVITICUS_TOPIC.id) ? [LEVITICUS_TOPIC] : []),...(rows.some(r=>r.question.topic===DEUTERONOMY_TOPIC.id) ? [DEUTERONOMY_TOPIC] : []),...(rows.some(r=>r.question.topic===MATTHEW_TOPIC.id) ? [MATTHEW_TOPIC] : []),...(rows.some(r=>r.question.topic===MARK_TOPIC.id) ? [MARK_TOPIC] : []),...(rows.some(r=>r.question.topic===LUKE_TOPIC.id) ? [LUKE_TOPIC] : []),...(rows.some(r=>r.question.topic===JOHN_TOPIC.id) ? [JOHN_TOPIC] : [])].map(t => {
     const entries = rows.filter(r => r.question.topic === t.id);
     return { ...t, total: entries.length, correct: entries.filter(r => r.correct).length, percent: entries.length ? entries.filter(r => r.correct).length / entries.length * 100 : null };
   });
@@ -244,7 +246,7 @@ export function summarizeRound(round) {
 }
 
 export function validRound(round, completed = false) {
-  if (!round || !['general', 'topic', 'trial', 'church', 'bible', 'genesis', 'genesis-test', 'genesis-level', 'exodus', 'exodus-test', 'exodus-level', 'numbers', 'numbers-test', 'numbers-level', 'leviticus', 'leviticus-test', 'leviticus-level', 'deuteronomy', 'deuteronomy-test', 'deuteronomy-level', 'matthew', 'matthew-level', 'mark', 'mark-level', 'luke', 'luke-level', 'john', 'john-level', 'review', ...(completed ? ['daily'] : [])].includes(round.mode) || typeof round.id !== 'string' || !/^\d+-\d+$/.test(round.id)) return false;
+  if (!round || !['general', 'topic', 'trial', 'kingdoms', 'church', 'bible', 'genesis', 'genesis-test', 'genesis-level', 'exodus', 'exodus-test', 'exodus-level', 'numbers', 'numbers-test', 'numbers-level', 'leviticus', 'leviticus-test', 'leviticus-level', 'deuteronomy', 'deuteronomy-test', 'deuteronomy-level', 'matthew', 'matthew-level', 'mark', 'mark-level', 'luke', 'luke-level', 'john', 'john-level', 'review', ...(completed ? ['daily'] : [])].includes(round.mode) || typeof round.id !== 'string' || !/^\d+-\d+$/.test(round.id)) return false;
   if (!['cheeky', 'gentle'].includes(round.tone) || !Number.isFinite(Date.parse(round.startedAt))) return false;
   if (!Array.isArray(round.items) || !round.items.length || round.items.length > 40 || new Set(round.items.map(i => i?.id)).size !== round.items.length) return false;
   if (!round.items.every(i => QUESTION_MAP.has(i?.id) && Array.isArray(i.order) && [...i.order].sort().join('') === '0123')) return false;
@@ -295,6 +297,7 @@ export function validRound(round, completed = false) {
     }
   }
   if (round.mode === 'topic' && (!TOPICS.some(t => t.id === round.topic) || !round.items.every(i => QUESTION_MAP.get(i.id).topic === round.topic))) return false;
+  if(round.mode==='kingdoms'&&(round.items.length!==10||round.topic!=='kingdoms'||!KINGDOM_UNITS.some(u=>u.id===round.unit)||!round.items.every(i=>KINGDOM_MAP.get(i.id)?.unit===round.unit)))return false;
   if (round.mode === 'church' && (round.items.length !== 10 || round.topic !== HISTORY_TOPIC.id ||
     !COURSE_UNITS.some(u => u.id === round.unit) || !round.items.every(i => HISTORY_QUESTION_MAP.get(i.id)?.unit === round.unit))) return false;
   if (round.mode === 'bible' && (round.items.length !== 10 || round.topic !== BIBLE_TOPIC.id ||

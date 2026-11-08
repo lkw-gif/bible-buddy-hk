@@ -533,3 +533,25 @@ test('Home keeps XP compact beside menu and full XP details live in Practice His
  assert.equal(app.$('#header-xp').getAttribute('aria-current'),'page');
  app.dom.window.close();
 });
+
+
+test('Learning centre saves private read state without XP and all kingdom lessons complete with references',async()=>{
+ let app=await boot(null,'#/learning');
+ assert.match(app.$('h1').textContent,/歷史學習中心/);
+ await app.navigate('/learn/church/early');assert.match(app.$('h1').textContent,/初期教會/);
+ await app.click('[data-action="mark-read"]');assert.equal(app.savedProgress().learningReads['church:early'].done,true);
+ assert.equal(Object.keys(app.savedProgress().xp.first).length,0);
+ let saved=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(saved,'#/learning/church');assert.match(app.$('.page-head').textContent,/已讀 1／10/);
+ const {KINGDOM_UNITS,KINGDOM_MAP}=await import('../dist/kingdom-course.mjs');
+ for(const unit of KINGDOM_UNITS){
+  await app.navigate('/learn/kingdoms/'+unit.id);await app.click('[data-action="start"][data-mode="kingdoms"]');
+  for(let i=0;i<10;i++){const r=app.savedProgress().current,q=KINGDOM_MAP.get(r.items[r.index].id);await app.click(`[data-action="answer"][data-choice="${q.answer}"]`);assert.match(app.$('.feedback .reference').textContent,/[0-9]+/);await app.click('[data-action="next"]');}
+  assert.match(app.$('.score-ring').textContent,/10 \/ 10/);
+ }
+ assert.equal(Object.keys(app.savedProgress().kingdomAnswers).length,100);
+ await app.navigate('/learning/kingdoms');assert.match(app.$('.page-head').textContent,/已操練 100／100/);
+ assert.equal(app.w.document.querySelectorAll('.lane-row').length,10);
+ await app.navigate('/history');await app.click('[data-action="clear-dialog"]');await app.click('[data-action="clear-confirm"]');
+ assert.deepEqual(app.savedProgress().learningReads,{});assert.deepEqual(app.savedProgress().kingdomAnswers,{});
+ assert.deepEqual(app.errors,[]);app.dom.window.close();
+});

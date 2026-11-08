@@ -1,0 +1,472 @@
+[
+  {
+    "id": "early",
+    "title": "初期教會的起步",
+    "order": 30,
+    "period": "使徒時代至第二世紀",
+    "summary": "教會由猶太背景走向多個民族，信徒學習點樣一齊生活。",
+    "paragraphs": [
+      "耶路撒冷教會同聖殿、猶太節期有密切關係。使徒行傳記載，福音亦傳到安提阿；呢度嘅群體有不同背景，成為向外宣教嘅基地。初期教會嘅擴展涉及語言、交通、家庭同城市網絡，唔係只靠一位人物。",
+      "外邦信徒要唔要先成為猶太人？耶路撒冷會議處理割禮同律法嘅爭論，顯示文化習慣同福音要求需要分辨。保羅書信亦反映聚會、照顧窮人同群體相處嘅實際難題。",
+      "第二世紀教會已分布不同地方。閱讀殉道敘事要留意作品成書背景，亦要分清羅馬城嘅個別事件同全帝國政策。尼祿時期嘅羅馬迫害，唔等於所有地方同時受同樣打壓。"
+    ],
+    "deeper": [
+      "從使徒行傳11、15章同《十二使徒遺訓》可以比較：一份係敘事，一份係群體教導。兩者可以互相補充，但唔代表每個城市都完全一樣。閱讀早期資料，先問作者係邊個、寫畀邊個、想處理咩問題。"
+    ],
+    "events": [
+      {
+        "year": 49,
+        "date": "約一世紀中葉",
+        "text": "耶路撒冷會議處理外邦信徒問題"
+      },
+      {
+        "year": 64,
+        "date": "公元64年",
+        "text": "羅馬大火後，尼祿懲罰羅馬城基督徒"
+      },
+      {
+        "year": 110,
+        "date": "約一至二世紀",
+        "text": "教會生活及領袖制度逐步發展"
+      }
+    ],
+    "sources": [
+      "https://bible.usccb.org/bible/acts/11",
+      "https://www.biblegateway.com/verse/en/Acts_11%3A26",
+      "https://bible.usccb.org/bible/acts/15",
+      "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils",
+      "https://penelope.uchicago.edu/Thayer/e/roman/texts/tacitus/annals/15b%2A.html",
+      "https://www.cuhk.edu.hk/crs/tobias/primary_docs_ch02.html",
+      "https://sourcebooks.web.fordham.edu/ancient/pliny-trajan1.asp",
+      "https://www.newadvent.org/fathers/0102.htm"
+    ]
+  },
+  {
+    "id": "creeds",
+    "title": "信經與初期教會",
+    "order": 313,
+    "period": "第四至第五世紀",
+    "summary": "宗教政策改變，教會亦用會議同信經釐清信仰。",
+    "paragraphs": [
+      "四世紀初，基督徒處境有明顯改變。313年米蘭協議關乎宗教自由同財產歸還，唔等於嗰年基督教即刻成為國教。皇帝支持教會，帶來資源同公共地位，亦令政治同信仰爭論更加交織。",
+      "尼西亞會議處理聖子同父嘅關係；之後嘅討論並冇即刻停止。381年君士坦丁堡會議係另一重要節點。今日常用嘅尼西亞信經，歷史上要連埋呢段發展去理解。",
+      "451年迦克墩會議用一位格、兩性嘅表述解釋基督。唔同教會對用語同會議接受程度有不同歷史，唔可以將所有未接受會議嘅傳統講成同一類。"
+    ],
+    "deeper": [
+      "信經係群體面對問題時嘅認信文件。閱讀時可以比較爭論中各方點用聖經、用咩詞語，同埋會議之後教會實際點接納；開完一次會議唔代表各地立即一致。"
+    ],
+    "events": [
+      {
+        "year": 313,
+        "date": "313年",
+        "text": "米蘭協議：宗教自由與財產問題"
+      },
+      {
+        "year": 325,
+        "date": "325年",
+        "text": "尼西亞會議"
+      },
+      {
+        "year": 381,
+        "date": "381年",
+        "text": "君士坦丁堡會議"
+      },
+      {
+        "year": 451,
+        "date": "451年",
+        "text": "迦克墩會議"
+      }
+    ],
+    "sources": [
+      "https://sourcebooks.web.fordham.edu/source/edict-milan.asp",
+      "https://www.newadvent.org/fathers/250110.htm",
+      "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fourth-century/the-first-ecumenical-council",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf#page=399",
+      "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/sources-of-christian-doctrine/the-councils",
+      "https://www.oca.org/orthodoxy/the-orthodox-faith/doctrine-scripture/the-symbol-of-faith/incarnation",
+      "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/fifth-century/the-fourth-ecumenical-council",
+      "https://www.newadvent.org/fathers/2806039.htm"
+    ]
+  },
+  {
+    "id": "medieval",
+    "title": "中世紀的教會",
+    "order": 529,
+    "period": "第六至第十五世紀",
+    "summary": "修道、宣教、學校同制度並行，東西方亦逐漸疏遠。",
+    "paragraphs": [
+      "中世紀跨越約一千年，地方差異好大。修道群體以禱告、勞動同共同生活為中心，部分修院保存抄本、提供教育與照顧。修道傳統有多種形式，唔係每間修院都做同樣工作。",
+      "東西方教會嘅語言、政治處境、禮儀同權威觀念逐漸不同。1054年常被用作分裂標記，但疏遠係漫長過程，唔係某一日全世界所有信徒突然分開。",
+      "十字軍、教宗權力、大學興起同經院神學都屬呢段歷史。認識教會既有文化貢獻，亦要面對暴力及權力問題；唔應只揀光彩故事，亦唔好用一個事件概括整個時代。"
+    ],
+    "deeper": [
+      "閱讀中世紀文獻，留意作者所屬群體同政治對象。西方教會記述同東方記述可能重視不同事件。比較多方材料，有助理解後來教會對分裂、改革同和解嘅不同記憶。"
+    ],
+    "events": [
+      {
+        "year": 529,
+        "date": "約六世紀",
+        "text": "本篤修道傳統逐步形成"
+      },
+      {
+        "year": 1054,
+        "date": "1054年",
+        "text": "東西方分裂嘅常用歷史標記"
+      },
+      {
+        "year": 1095,
+        "date": "1095年",
+        "text": "首次十字軍遠征嘅號召"
+      },
+      {
+        "year": 1200,
+        "date": "十二至十三世紀",
+        "text": "大學及經院研究發展"
+      }
+    ],
+    "sources": [
+      "https://www.solesmes.com/sites/default/files/upload/pdf/rule_of_st_benedict.pdf",
+      "https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080409.html",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.english-heritage.org.uk/visit/places/st-augustines-abbey/history-and-stories/who-was-st-augustine/",
+      "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/ninth-century/saints-cyril-and-methodiusevangelizers-of-the-slavs-and-equal-to-the-apostl",
+      "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_19850602_slavorum-apostoli.html",
+      "https://www.cluny-abbaye.fr/en/discover/history-of-the-abbey-of-cluny",
+      "https://www.vatican.va/content/benedict-xvi/en/audiences/2009/documents/hf_ben-xvi_aud_20091111.html"
+    ]
+  },
+  {
+    "id": "reformation",
+    "title": "宗教改革的開始",
+    "order": 1517,
+    "period": "十六世紀",
+    "summary": "改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "paragraphs": [
+      "1517年路德提出《九十五條》，重點係贖罪券、悔改同相關濫用。唔好將佢當成當時已寫齊後來所有新教立場嘅宣言。印刷、學術辯論同地方政治，令爭論迅速擴展。",
+      "1521年沃爾姆斯會議要求路德撤回著作，佢拒絕。改革喺不同城市走出不同道路：慈運理同加爾文所處嘅瑞士城市，制度同處境亦有分別。",
+      "天主教內部亦有改革與回應，天特會議係重要節點。宗教改革帶來經文翻譯、教理教育同制度變化，同時亦出現衝突、迫害及戰爭；要將神學主張同政治行動分開分析。"
+    ],
+    "deeper": [
+      "比較改革者時，可先睇佢哋點理解聖經權威、恩典、聖禮同教會治理。避免將一位人物寫成所有新教嘅唯一代表，亦避免用今天宗派分類直接套返十六世紀每一個人。"
+    ],
+    "events": [
+      {
+        "year": 1517,
+        "date": "1517年",
+        "text": "《九十五條》引發廣泛爭論"
+      },
+      {
+        "year": 1521,
+        "date": "1521年",
+        "text": "沃爾姆斯會議"
+      },
+      {
+        "year": 1536,
+        "date": "1536年",
+        "text": "加爾文《基督教要義》初版"
+      },
+      {
+        "year": 1545,
+        "date": "1545至1563年",
+        "text": "天特會議"
+      }
+    ],
+    "sources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
+  },
+  {
+    "id": "traditions",
+    "title": "改革後的教會",
+    "order": 1534,
+    "period": "十六至十七世紀",
+    "summary": "教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "paragraphs": [
+      "英格蘭教會同羅馬關係改變，牽涉王權同宗教政策。之後禮儀、信條同領導制度亦不斷發展。《公禱書》係共同崇拜嘅禮文，唔係另一本聖經。",
+      "路德宗、改革宗、信洗派及其他群體有相近關注，亦對洗禮、聖餐同教會與政府關係有分歧。宗派名稱係歷史形成嘅，今日同一名稱內亦可以有多元實踐。",
+      "浸信會等群體嘅發展，要放返十七世紀英格蘭同歐陸背景理解。良心自由同宗教寬容嘅討論逐步發展，但唔代表當時社會已普遍接納現代宗教自由。"
+    ],
+    "deeper": [
+      "讀宗派歷史時，可比較正式信仰文件、教會制度同地方實踐。三者未必完全一致。尊重不同傳統，唔等於忽略真實分歧；清楚講出差異，先有條件互相理解。"
+    ],
+    "events": [
+      {
+        "year": 1534,
+        "date": "1534年",
+        "text": "英格蘭《至尊法案》"
+      },
+      {
+        "year": 1549,
+        "date": "1549年",
+        "text": "首版英語《公禱書》"
+      },
+      {
+        "year": 1609,
+        "date": "約1609年",
+        "text": "早期英語浸信會群體"
+      },
+      {
+        "year": 1648,
+        "date": "1648年",
+        "text": "威斯特伐利亞和約"
+      }
+    ],
+    "sources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
+  },
+  {
+    "id": "mission",
+    "title": "復興與普世宣教",
+    "order": 1738,
+    "period": "十七至十九世紀",
+    "summary": "個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "paragraphs": [
+      "敬虔主義及復興運動重視個人信仰、聖經閱讀、小組同生活實踐。十八世紀衛斯理同其他傳道人嘅工作，逐步帶動循道運動發展，唔係單靠某一次聚會就形成所有制度。",
+      "近代宣教透過差會、教育、醫療、翻譯同本地信徒網絡擴展。宣教士有不同背景，本地傳道人、婦女及教師亦扮演重要角色，唔應喺故事中消失。",
+      "十九世紀宣教同殖民擴張有時交織，有時亦出現張力。研究要留意各方權力及本地回應；既唔能夠將所有宣教簡化成殖民工具，亦唔能夠忽略不平等處境。"
+    ],
+    "deeper": [
+      "閱讀復興報告，問清楚人數點計、見證點收集、報告寫畀邊個。不同運動對情感表達、聖靈工作同社會參與有不同理解，要按自身文件核對。"
+    ],
+    "events": [
+      {
+        "year": 1738,
+        "date": "1738年",
+        "text": "衛斯理奧德斯門街經歷"
+      },
+      {
+        "year": 1792,
+        "date": "1792年",
+        "text": "英國浸信差會成立"
+      },
+      {
+        "year": 1865,
+        "date": "1865年",
+        "text": "內地會及後來救世軍前身嘅事工起步"
+      },
+      {
+        "year": 1878,
+        "date": "1878年",
+        "text": "救世軍名稱確立"
+      }
+    ],
+    "sources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
+  },
+  {
+    "id": "china",
+    "title": "福音來到中國",
+    "order": 635,
+    "period": "唐代至近代",
+    "summary": "來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "paragraphs": [
+      "基督宗教來華唔係由十九世紀先開始。景教碑記述阿羅本喺635年到長安，並保存漢文及敘利亞文資料。碑文係重要史料，亦有自身表述目的，唔能夠單靠一塊碑還原所有日常生活。",
+      "明清天主教傳教涉及語言、學術交流同禮儀爭議。利瑪竇等人以文化接觸展開工作，但唔同傳教者對中國禮儀嘅判斷並不一致；朝廷、教廷同中國信徒亦各有角色。",
+      "十九世紀新教來華，譯經、出版、教育同醫療事工逐步發展。馬禮遜唔係第一位來華基督宗教傳教者；佢嘅歷史位置要明確放喺近代新教來華。華人同工亦參與翻譯及教會建立。"
+    ],
+    "deeper": [
+      "研究中國教會要同時閱讀中文、外文及本地材料。差會報告可能重視可量化成果，本地教會文件則可能保存另一種經驗。遇到殖民及不平等條約背景，要交代其影響。"
+    ],
+    "events": [
+      {
+        "year": 635,
+        "date": "635年",
+        "text": "景教傳入唐代長安"
+      },
+      {
+        "year": 781,
+        "date": "781年",
+        "text": "景教碑立碑"
+      },
+      {
+        "year": 1583,
+        "date": "1583年",
+        "text": "利瑪竇等喺肇慶開展工作"
+      },
+      {
+        "year": 1807,
+        "date": "1807年",
+        "text": "馬禮遜抵達中國"
+      },
+      {
+        "year": 1919,
+        "date": "1919年",
+        "text": "《官話和合本》出版"
+      }
+    ],
+    "sources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
+  },
+  {
+    "id": "hongkong",
+    "title": "香港教會的足跡",
+    "order": 1841,
+    "period": "十九至二十世紀",
+    "summary": "教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "paragraphs": [
+      "十九世紀香港成為不同差會及教會活動嘅地方，本地華人信徒亦逐漸建立群體。理解教會發展，需要睇人口流動、語言、住屋、教育及政治處境。",
+      "學校、醫院同社會服務係重要線索，但機構成立、前身工作、註冊及搬遷可以有不同年份。遇到創堂年份唔一致，先查各個日期其實指咩事件，唔好即刻判斷有人記錯。",
+      "香港教會並非單一宗派嘅故事。戰爭、戰後移民、城市發展同社會轉變影響教會；本地同工、婦女、平信徒及跨宗派合作都值得留意。"
+    ],
+    "deeper": [
+      "可以由附近教會或學校開始，閱讀年報、會議記錄、舊照片同口述訪問。口述記憶好重要，但亦要交叉核對時間、人物及文件。學習歷史可以由自己社區開始。"
+    ],
+    "events": [
+      {
+        "year": 1841,
+        "date": "十九世紀中葉起",
+        "text": "不同教會及差會喺香港開展工作"
+      },
+      {
+        "year": 1915,
+        "date": "1915年",
+        "text": "香港華人基督教聯會成立"
+      },
+      {
+        "year": 1954,
+        "date": "1954年",
+        "text": "香港基督教協進會成立"
+      },
+      {
+        "year": 1966,
+        "date": "1966年",
+        "text": "香港聖經公會成立"
+      }
+    ],
+    "sources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
+  },
+  {
+    "id": "modern",
+    "title": "二十世紀與普世教會",
+    "order": 1910,
+    "period": "二十世紀",
+    "summary": "世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "paragraphs": [
+      "二十世紀教會生活受到兩次世界大戰、殖民秩序轉變同社會運動影響。亞洲、非洲及拉丁美洲教會嘅成長，提醒我哋普世教會唔只係歐洲或北美嘅故事。",
+      "1910年愛丁堡宣教會議係近代普世合一運動嘅重要節點，但唔代表所有基督宗教傳統都同等參與。1948年普世教會協會成立，亦唔等於所有教會合併成一個宗派。",
+      "五旬節及靈恩運動、天主教梵二會議、福音派宣教合作，係不同方向嘅更新。彼此有交集亦有差異，唔可以當成同一場運動。"
+    ],
+    "deeper": [
+      "比較會議宣言同地方教會生活，留意領袖聲明點被實踐。用多個地區嘅史料，可以避免將某一地方嘅經驗講成全球同步發生。"
+    ],
+    "events": [
+      {
+        "year": 1906,
+        "date": "1906年",
+        "text": "阿蘇撒街復興"
+      },
+      {
+        "year": 1910,
+        "date": "1910年",
+        "text": "愛丁堡宣教會議"
+      },
+      {
+        "year": 1948,
+        "date": "1948年",
+        "text": "普世教會協會成立"
+      },
+      {
+        "year": 1962,
+        "date": "1962至1965年",
+        "text": "梵蒂岡第二屆大公會議"
+      },
+      {
+        "year": 1974,
+        "date": "1974年",
+        "text": "洛桑世界福音會議"
+      }
+    ],
+    "sources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
+  },
+  {
+    "id": "reading",
+    "title": "點樣讀教會歷史",
+    "order": 2000,
+    "period": "閱讀方法",
+    "summary": "先分清史料、敘述同解讀，再比較不同證據。",
+    "paragraphs": [
+      "史料可以係書信、會議記錄、碑文、照片、報刊及訪談。原始史料唔等於完全中立；作者一樣有目的、立場同資料限制。後來研究亦需要交代點樣使用證據。",
+      "三個網站講同一句說話，可能只係抄同一份資料，唔等於有三份獨立證據。核對時要追返最早來源、作者、出版日期及引用位置。",
+      "年份、統計同名稱亦需要定義。首次聚會、正式成立同註冊未必同年；出席人次亦唔等於不同參與者人數。先問清楚計法，先有條件比較。"
+    ],
+    "deeper": [
+      "讀到動人故事，可以問：邊份材料最早記低？有冇其他當事人記述？細節係已確認、合理推測，定後來傳說？承認未知，有時比補一個精彩結局更負責任。"
+    ],
+    "events": [
+      {
+        "year": 1,
+        "date": "第一步",
+        "text": "確定作者、日期、文體及對象"
+      },
+      {
+        "year": 2,
+        "date": "第二步",
+        "text": "追查引用來源及獨立證據"
+      },
+      {
+        "year": 3,
+        "date": "第三步",
+        "text": "分清確認事實、推測同傳說"
+      }
+    ],
+    "sources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
+  }
+]
