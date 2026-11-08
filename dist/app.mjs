@@ -1,5 +1,5 @@
-import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261108-7';
-import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, retreatRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261108-7';
+import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261108-8';
+import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, retreatRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261108-8';
 import { HISTORY_TOPIC, HISTORY_QUESTIONS, HISTORY_QUESTION_MAP, COURSE_UNITS, cleanCourseAnswers, courseStatus } from './history-course.mjs?v=20261101-7';
 import { CHALLENGE_QUESTIONS } from './challenge-data.mjs?v=20261101-10';
 import { GENESIS_TOPIC, GENESIS_UNITS, GENESIS_LEVEL_POOLS, GENESIS_QUESTION_MAP, cleanGenesisAnswers, genesisStatus } from './genesis-course.mjs?v=20261107-2';
@@ -10,11 +10,12 @@ import { LEVITICUS_TOPIC, LEVITICUS_UNITS, LEVITICUS_LEVEL_POOLS, LEVITICUS_QUES
 import { DEUTERONOMY_TOPIC, DEUTERONOMY_UNITS, DEUTERONOMY_LEVEL_POOLS, DEUTERONOMY_QUESTION_MAP, cleanDeuteronomyAnswers, deuteronomyStatus } from './deuteronomy-course.mjs?v=20261107-1';
 import { MATTHEW_TOPIC, MATTHEW_UNITS, MATTHEW_LEVEL_POOLS, MATTHEW_QUESTION_MAP, cleanMatthewAnswers, matthewStatus } from './matthew-course.mjs?v=20261108-1';
 import { MARK_TOPIC, MARK_UNITS, MARK_LEVEL_POOLS, MARK_QUESTION_MAP, cleanMarkAnswers, markStatus } from './mark-course.mjs?v=20261108-1';
+import { LUKE_TOPIC, LUKE_UNITS, LUKE_LEVEL_POOLS, LUKE_QUESTION_MAP, cleanLukeAnswers, lukeStatus } from './luke-course.mjs?v=20261108-2';
 
 const $ = (s, root = document) => root.querySelector(s);
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const number = n => new Intl.NumberFormat('zh-HK', { maximumFractionDigits: 1 }).format(n);
-const topicById = id => id === MARK_TOPIC.id ? MARK_TOPIC : id === MATTHEW_TOPIC.id ? MATTHEW_TOPIC : id === GENESIS_TOPIC.id ? GENESIS_TOPIC : id === EXODUS_TOPIC.id ? EXODUS_TOPIC : id === NUMBERS_TOPIC.id ? NUMBERS_TOPIC : id === LEVITICUS_TOPIC.id ? LEVITICUS_TOPIC : id === DEUTERONOMY_TOPIC.id ? DEUTERONOMY_TOPIC : id === BIBLE_TOPIC.id ? BIBLE_TOPIC : id === HISTORY_TOPIC.id ? HISTORY_TOPIC : TOPICS.find(t => t.id === id);
+const topicById = id => id === LUKE_TOPIC.id ? LUKE_TOPIC : id === MARK_TOPIC.id ? MARK_TOPIC : id === MATTHEW_TOPIC.id ? MATTHEW_TOPIC : id === GENESIS_TOPIC.id ? GENESIS_TOPIC : id === EXODUS_TOPIC.id ? EXODUS_TOPIC : id === NUMBERS_TOPIC.id ? NUMBERS_TOPIC : id === LEVITICUS_TOPIC.id ? LEVITICUS_TOPIC : id === DEUTERONOMY_TOPIC.id ? DEUTERONOMY_TOPIC : id === BIBLE_TOPIC.id ? BIBLE_TOPIC : id === HISTORY_TOPIC.id ? HISTORY_TOPIC : TOPICS.find(t => t.id === id);
 const external = (url, text, cls = 'link') => `<a class="${cls}" href="${escape(url)}" target="_blank" rel="noopener noreferrer">${text}${icon('external')}</a>`;
 const scriptureUrl = ref => `https://www.biblegateway.com/passage/?search=${encodeURIComponent(ref.replaceAll('；', ';'))}&version=CUV`;
 const shapes = {
@@ -45,7 +46,7 @@ const STORAGE_KEY = 'bible-buddy-hk:v1';
 let storageUnavailable = false;
 let storageNoticeShown = false;
 function readProgress() {
-  const blank = { schema: 1, tone: 'cheeky', current: null, history: [], bookmarks: [], mistakes: [], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, numbersAnswers:{}, leviticusAnswers:{}, deuteronomyAnswers:{}, matthewAnswers:{}, markAnswers:{}, genesisSeen:[], exodusSeen:[], numbersSeen:[], leviticusSeen:[], deuteronomySeen:[], matthewSeen:[], markSeen:[] };
+  const blank = { schema: 1, tone: 'cheeky', current: null, history: [], bookmarks: [], mistakes: [], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, numbersAnswers:{}, leviticusAnswers:{}, deuteronomyAnswers:{}, matthewAnswers:{}, markAnswers:{}, lukeAnswers:{}, genesisSeen:[], exodusSeen:[], numbersSeen:[], leviticusSeen:[], deuteronomySeen:[], matthewSeen:[], markSeen:[], lukeSeen:[] };
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
     if (!saved || saved.schema !== 1) return blank;
@@ -57,15 +58,17 @@ function readProgress() {
     const deuteronomyAnswers = cleanDeuteronomyAnswers(saved.deuteronomyAnswers);
     const matthewAnswers = cleanMatthewAnswers(saved.matthewAnswers);
     const markAnswers = cleanMarkAnswers(saved.markAnswers);
+    const lukeAnswers = cleanLukeAnswers(saved.lukeAnswers);
     return { ...blank, tone: 'cheeky', current: validRound(saved.current) ? { ...saved.current, tone:'cheeky' } : null,
-      history, bookmarks: cleanIds(saved.bookmarks), mistakes: cleanIds(saved.mistakes), courseAnswers:cleanCourseAnswers(saved.courseAnswers), bibleAnswers:cleanBibleAnswers(saved.bibleAnswers), genesisAnswers, exodusAnswers, numbersAnswers, leviticusAnswers, deuteronomyAnswers, matthewAnswers, markAnswers,
+      history, bookmarks: cleanIds(saved.bookmarks), mistakes: cleanIds(saved.mistakes), courseAnswers:cleanCourseAnswers(saved.courseAnswers), bibleAnswers:cleanBibleAnswers(saved.bibleAnswers), genesisAnswers, exodusAnswers, numbersAnswers, leviticusAnswers, deuteronomyAnswers, matthewAnswers, markAnswers, lukeAnswers,
       genesisSeen: cleanSeenIds(saved.genesisSeen, genesisAnswers, history, 'genesis'),
       exodusSeen: cleanSeenIds(saved.exodusSeen, exodusAnswers, history, 'exodus'),
       numbersSeen: cleanSeenIds(saved.numbersSeen, numbersAnswers, history, 'numbers'),
       leviticusSeen: cleanSeenIds(saved.leviticusSeen, leviticusAnswers, history, 'leviticus'),
       deuteronomySeen: cleanSeenIds(saved.deuteronomySeen, deuteronomyAnswers, history, 'deuteronomy'),
       matthewSeen: cleanSeenIds(saved.matthewSeen, matthewAnswers, history, 'matthew'),
-      markSeen: cleanSeenIds(saved.markSeen, markAnswers, history, 'mark') };
+      markSeen: cleanSeenIds(saved.markSeen, markAnswers, history, 'mark'),
+      lukeSeen: cleanSeenIds(saved.lukeSeen, lukeAnswers, history, 'luke') };
   } catch { storageUnavailable = true; return blank; }
 }
 function cleanIds(value) { return Array.isArray(value) ? [...new Set(value.filter(id => QUESTION_MAP.has(id)))] : []; }
@@ -100,18 +103,20 @@ function toast(message) {
 function announce(message) { $('#announcer').textContent = message; }
 function route() {
   const parts = location.hash.replace(/^#\/?/, '').split('/');
-  return { name: ['review', 'history', 'church', 'bible', 'old-testament', 'new-testament', 'matthew', 'mark', 'genesis', 'exodus', 'numbers', 'leviticus', 'deuteronomy', 'quiz', 'result'].includes(parts[0]) ? parts[0] : 'home', id: parts[1] || null };
+  return { name: ['review', 'history', 'church', 'bible', 'old-testament', 'new-testament', 'matthew', 'mark', 'luke', 'genesis', 'exodus', 'numbers', 'leviticus', 'deuteronomy', 'quiz', 'result'].includes(parts[0]) ? parts[0] : 'home', id: parts[1] || null };
 }
 function go(path) { if (location.hash === '#' + path) render(); else location.hash = path; }
 function updateNavigation() {
   const current = route().name;
   for (const a of document.querySelectorAll('[data-nav]')) {
-    if (a.dataset.nav === current || (a.dataset.nav === 'new-testament' && ['matthew','mark'].includes(current)) || (a.dataset.nav === 'home' && ['quiz', 'result'].includes(current))) a.setAttribute('aria-current', 'page');
+    if (a.dataset.nav === current || (a.dataset.nav === 'new-testament' && ['matthew','mark','luke'].includes(current)) || (a.dataset.nav === 'home' && ['quiz', 'result'].includes(current))) a.setAttribute('aria-current', 'page');
     else a.removeAttribute('aria-current');
   }
   const badge = $('#review-count'); badge.hidden = !progress.mistakes.length; badge.textContent = progress.mistakes.length;
 }
 function roundTitle(r) {
+  if (r.mode === 'luke-level') return '路加福音 · ' + TRIAL_LEVELS[r.difficulty].name + ' · 10題';
+  if (r.mode === 'luke') return `路加福音 · 第${LUKE_UNITS.findIndex(u=>u.id===r.unit)+1}課`;
   if (r.mode === 'matthew-level') return '馬太福音 · ' + TRIAL_LEVELS[r.difficulty].name + ' · 10題';
   if (r.mode === 'mark-level') return '馬可福音 · ' + TRIAL_LEVELS[r.difficulty].name + ' · 10題';
   if (r.mode === 'mark') return '馬可福音 · 第' + (MARK_UNITS.findIndex(u=>u.id===r.unit)+1) + '課';
@@ -137,10 +142,10 @@ function roundTitle(r) {
 }
 function render({ focus = true } = {}) {
   const page = route();
-  main.innerHTML = page.name === 'home' ? homeView() : page.name === 'old-testament' ? oldTestamentView() : page.name === 'new-testament' ? newTestamentView() : ['church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark'].includes(page.name) ? churchView(page.name) : page.name === 'quiz' ? quizView() : page.name === 'review' ? reviewView() : page.name === 'history' ? historyView() : resultView(page.id);
+  main.innerHTML = page.name === 'home' ? homeView() : page.name === 'old-testament' ? oldTestamentView() : page.name === 'new-testament' ? newTestamentView() : ['church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke'].includes(page.name) ? churchView(page.name) : page.name === 'quiz' ? quizView() : page.name === 'review' ? reviewView() : page.name === 'history' ? historyView() : resultView(page.id);
   updateNavigation();
   if (focus) { window.scrollTo({ top: 0, behavior: 'instant' }); main.focus({ preventScroll: true }); }
-  document.title = `${({ home: '聖經有幾熟？', church:'教會歷史篇 · 100題操練', bible:'聖經知識 · 100題操練', 'old-testament':'舊約書卷', 'new-testament':'新約書卷', matthew:'馬太福音 · 100題操練', mark:'馬可福音 · 100題操練', genesis:'創世記 · 100題操練', exodus:'出埃及記 · 100題操練', numbers:'民數記 · 100題操練', leviticus:'利未記 · 100題操練', deuteronomy:'申命記 · 100題操練', quiz: '試探嚟到，慢慢分辨', review: '溫習角落', history: '操練紀錄', result: '今次學到幾多？' })[page.name]}｜Bible Buddy`;
+  document.title = `${({ home: '聖經有幾熟？', church:'教會歷史篇 · 100題操練', bible:'聖經知識 · 100題操練', 'old-testament':'舊約書卷', 'new-testament':'新約書卷', matthew:'馬太福音 · 100題操練', mark:'馬可福音 · 100題操練', luke:'路加福音 · 100題操練', genesis:'創世記 · 100題操練', exodus:'出埃及記 · 100題操練', numbers:'民數記 · 100題操練', leviticus:'利未記 · 100題操練', deuteronomy:'申命記 · 100題操練', quiz: '試探嚟到，慢慢分辨', review: '溫習角落', history: '操練紀錄', result: '今次學到幾多？' })[page.name]}｜Bible Buddy`;
 }
 
 function trialCard() {
@@ -148,6 +153,7 @@ function trialCard() {
 }
 
 function courseSettings(mode='church') {
+  if (mode==='luke') return {mode,topic:LUKE_TOPIC,units:LUKE_UNITS,answers:progress.lukeAnswers,status:lukeStatus,eyebrow:'新約書卷操練',subject:'路加福音',teaser:'100題，分10課，認識路加記載嘅耶穌生平、教導同復活。',intro:'100題，分10課，每課答完都有解說同經文出處。另有高中低三種試探程度；重做測驗會先抽未做過嘅題目。'};
   if (mode==='mark') return {mode,topic:MARK_TOPIC,units:MARK_UNITS,answers:progress.markAnswers,status:markStatus,eyebrow:'新約書卷操練',subject:'馬可福音',teaser:'100題，分10課，跟住耶穌由加利利去到耶路撒冷，認識佢嘅教導、受苦同復活。',intro:'100題，分10課，每課答完都有解說同經文出處。另有高中低三種試探程度；重做測驗會先抽未做過嘅題目。'};
   if (mode==='matthew') return {mode,topic:MATTHEW_TOPIC,units:MATTHEW_UNITS,answers:progress.matthewAnswers,status:matthewStatus,eyebrow:'新約書卷操練',subject:'馬太福音',teaser:'100題，分10課，由耶穌降生到復活，一齊認識馬太福音。',intro:'100題，分10課，每題答完都有解說同經文出處。另有高中低三種試探程度；重做測驗會先抽未做過嘅題目。'};
   if (mode==='genesis') return {mode,topic:GENESIS_TOPIC,units:GENESIS_UNITS,answers:progress.genesisAnswers,status:genesisStatus,eyebrow:'舊約書卷操練',subject:'創世記',teaser:'100題，分10課，由創造到約瑟逐步重溫。',intro:'100題，分10課，每題答完都有解說。另有高中低三種試探程度；重做測驗會先抽未做過嘅題目。'};
@@ -168,7 +174,7 @@ function courseHomeCard(mode='church') {
 function churchView(mode='church') {
   const c=courseSettings(mode),s=c.status(c.answers);
   const current=progress.current?.mode===mode ? progress.current : null;
-  return `<div class="page-head"><div class="eyebrow">${c.eyebrow}</div><h1>${c.topic.name}</h1><p>${c.intro}</p></div><section class="course-progress" aria-label="${c.topic.name}學習進度"><div><strong>已操練 ${s.answered}／${s.total} 題</strong><span>最近答啱 ${s.correct} 題 · 答過嘅題目隨時可以再做</span></div><div class="progress-track" role="progressbar" aria-label="已操練題數" aria-valuemin="0" aria-valuemax="${s.total}" aria-valuenow="${s.answered}"><span style="width:${s.total ? s.answered/s.total*100 : 0}%"></span></div><p>進度儲存喺呢個瀏覽器。跳過嘅題目會計入「已操練」，方便你之後再溫習。</p></section>${current ? `<aside class="resume-banner"><div><strong>上次嗰課未做完，可以繼續做。</strong><p>${escape(roundTitle(current))} · 已答 ${current.answers.length}／10題</p></div><a class="button primary small" href="#/quiz">繼續呢課 ${icon('arrow')}</a></aside>` : ''}${['genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark'].includes(mode) ? `<section class="trial-card" style="margin-bottom:24px" aria-label="${c.topic.name}分級測驗"><div class="eyebrow">${c.topic.name}分級測驗</div><h2>揀個試探程度</h2><p>每場隨機10題。高程度會考深入經文細節同前後文。</p><div class="trial-levels">${Object.entries(TRIAL_LEVELS).map(([level,t])=>{const pools={genesis:GENESIS_LEVEL_POOLS,exodus:EXODUS_LEVEL_POOLS,numbers:NUMBERS_LEVEL_POOLS,leviticus:LEVITICUS_LEVEL_POOLS,deuteronomy:DEUTERONOMY_LEVEL_POOLS,matthew:MATTHEW_LEVEL_POOLS,mark:MARK_LEVEL_POOLS};const pool=pools[mode][level];const seen=new Set(progress[`${mode}Seen`]);const hardDone=pool.length>0&&pool.every(q=>seen.has(q.id));return `<button class="trial-level level-${level}${hardDone?' is-complete':''}" data-action="start" data-mode="${mode}-level" data-difficulty="${level}"${hardDone?` aria-label="${t.name}，已經完成"`:''}><span class="trial-degree">試探程度：${t.degree}</span><strong>${t.name}</strong>${icon('arrow')}<small>${hardDone?'已經完成，可以再玩一次。':level==='1'?`重溫${c.subject}基本內容。`:level==='2'?'留意人物、事件同經文細節。':'深入經文，留意前後文同細節。'}</small></button>`;}).join('')}</div></section>` : ''}<section class="course-grid" aria-label="${c.topic.name}十課">${c.units.map((u,i)=>{
+  return `<div class="page-head"><div class="eyebrow">${c.eyebrow}</div><h1>${c.topic.name}</h1><p>${c.intro}</p></div><section class="course-progress" aria-label="${c.topic.name}學習進度"><div><strong>已操練 ${s.answered}／${s.total} 題</strong><span>最近答啱 ${s.correct} 題 · 答過嘅題目隨時可以再做</span></div><div class="progress-track" role="progressbar" aria-label="已操練題數" aria-valuemin="0" aria-valuemax="${s.total}" aria-valuenow="${s.answered}"><span style="width:${s.total ? s.answered/s.total*100 : 0}%"></span></div><p>進度儲存喺呢個瀏覽器。跳過嘅題目會計入「已操練」，方便你之後再溫習。</p></section>${current ? `<aside class="resume-banner"><div><strong>上次嗰課未做完，可以繼續做。</strong><p>${escape(roundTitle(current))} · 已答 ${current.answers.length}／10題</p></div><a class="button primary small" href="#/quiz">繼續呢課 ${icon('arrow')}</a></aside>` : ''}${['genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke'].includes(mode) ? `<section class="trial-card" style="margin-bottom:24px" aria-label="${c.topic.name}分級測驗"><div class="eyebrow">${c.topic.name}分級測驗</div><h2>揀個試探程度</h2><p>每場隨機10題。高程度會考深入經文細節同前後文。</p><div class="trial-levels">${Object.entries(TRIAL_LEVELS).map(([level,t])=>{const pools={genesis:GENESIS_LEVEL_POOLS,exodus:EXODUS_LEVEL_POOLS,numbers:NUMBERS_LEVEL_POOLS,leviticus:LEVITICUS_LEVEL_POOLS,deuteronomy:DEUTERONOMY_LEVEL_POOLS,matthew:MATTHEW_LEVEL_POOLS,mark:MARK_LEVEL_POOLS,luke:LUKE_LEVEL_POOLS};const pool=pools[mode][level];const seen=new Set(progress[`${mode}Seen`]);const hardDone=pool.length>0&&pool.every(q=>seen.has(q.id));return `<button class="trial-level level-${level}${hardDone?' is-complete':''}" data-action="start" data-mode="${mode}-level" data-difficulty="${level}"${hardDone?` aria-label="${t.name}，已經完成"`:''}><span class="trial-degree">試探程度：${t.degree}</span><strong>${t.name}</strong>${icon('arrow')}<small>${hardDone?'已經完成，可以再玩一次。':level==='1'?`重溫${c.subject}基本內容。`:level==='2'?'留意人物、事件同經文細節。':'深入經文，留意前後文同細節。'}</small></button>`;}).join('')}</div></section>` : ''}<section class="course-grid" aria-label="${c.topic.name}十課">${c.units.map((u,i)=>{
     const status=c.status(c.answers,u.id);
     return `<article class="course-unit"><div class="course-unit-top"><span class="course-number">${String(i+1).padStart(2,'0')}</span><span class="pill ${status.answered===10 ? 'sage' : 'sand'}">${status.answered===10 ? '已完成操練' : status.answered ? `已操練 ${status.answered}／10` : '未開始'}</span></div><p class="course-period">${u.period}</p><h2>${u.name}</h2><p>${u.description}</p><div class="course-unit-bottom"><small>10題${status.answered ? ` · 最近答啱 ${status.correct}題` : ' · 每題有解說'}</small><button class="button secondary small" data-action="start" data-mode="${mode}" data-unit="${u.id}">${status.answered ? '再做呢課' : '開始呢課'} ${icon('arrow')}</button></div></article>`;
   }).join('')}</section>`;
@@ -178,7 +184,7 @@ function courseResultPanel(round) {
   return `<div class="panel growth-note"><div class="tip-symbol" aria-hidden="true">📚</div><h2>一步一步，認識${c.subject}。</h2><p>已操練 ${status.answered}／100題。睇返今課解說，試吓將學過嘅內容連埋一齊。</p>${next ? `<button class="button primary" data-action="start" data-mode="${c.mode}" data-unit="${next.id}">下一課：${next.name} ${icon('arrow')}</button>` : '<p>呢課已經係最後一課。可以返去揀課，完成未做過或者未熟嘅部分。</p>'}<a class="text-button" href="#/${c.mode}">返去揀課程 ${icon('arrow')}</a></div>`;
 }
 
-function newTestamentView() { return `<div class="page-head"><div class="eyebrow">逐卷讀，逐卷學</div><h1>新約書卷</h1><p>由四福音開始，逐卷認識新約。</p></div><div class="course-features">${courseHomeCard('matthew')}${courseHomeCard('mark')}</div>`; }
+function newTestamentView() { return `<div class="page-head"><div class="eyebrow">逐卷讀，逐卷學</div><h1>新約書卷</h1><p>由四福音開始，逐卷認識新約。</p></div><div class="course-features">${courseHomeCard('matthew')}${courseHomeCard('mark')}${courseHomeCard('luke')}</div>`; }
 function oldTestamentView() { return `<div class="page-head"><div class="eyebrow">逐卷讀，逐卷學</div><h1>舊約書卷</h1><p>由創世記、出埃及記、利未記、民數記同申命記開始，按經文次序逐卷認識。</p></div><div class="course-features old-testament-courses">${courseHomeCard('genesis')}${courseHomeCard('exodus')}${courseHomeCard('leviticus')}${courseHomeCard('numbers')}${courseHomeCard('deuteronomy')}</div>`; }
 function homeView() {
   const current = progress.current;
@@ -193,7 +199,7 @@ function homeView() {
 function startQuiz(mode, topic = 'overview', ids = [], difficulty = 'all', count, unit, edition) {
   try {
     progress.tone = 'cheeky';
-    const seenIds = mode.startsWith('matthew') ? progress.matthewSeen : mode.startsWith('genesis') ? progress.genesisSeen : mode.startsWith('exodus') ? progress.exodusSeen : mode.startsWith('numbers') ? progress.numbersSeen : mode.startsWith('leviticus') ? progress.leviticusSeen : mode.startsWith('deuteronomy') ? progress.deuteronomySeen : mode.startsWith('mark') ? progress.markSeen : [];
+    const seenIds = mode.startsWith('matthew') ? progress.matthewSeen : mode.startsWith('genesis') ? progress.genesisSeen : mode.startsWith('exodus') ? progress.exodusSeen : mode.startsWith('numbers') ? progress.numbersSeen : mode.startsWith('leviticus') ? progress.leviticusSeen : mode.startsWith('deuteronomy') ? progress.deuteronomySeen : mode.startsWith('mark') ? progress.markSeen : mode.startsWith('luke') ? progress.lukeSeen : [];
     progress.current = createRound({ mode, topic, ids, count, difficulty, unit, edition, seenIds, tone:'cheeky' });
     persist(); resultFilter = 'wrong'; resultSearch = ''; go('/quiz');
   } catch (error) { toast(error.message); }
@@ -209,10 +215,10 @@ function quizView() {
   const t = topicById(q.topic);
   const completed = r.answers.length;
   const feedback = !answered ? '' : `<section class="feedback ${correct ? '' : 'wrong'}" aria-labelledby="feedback-title"><h3 id="feedback-title" tabindex="-1">${correct ? (r.tone === 'gentle' ? '答啱啦，繼續保持！' : '有根有基，呢題企得穩！') : response.selected === null ? '呢題先溫習，下次就唔易中伏。' : r.tone === 'gentle' ? '呢題失手，下次就識。' : '中伏喇！睇埋解說，再操練。'}</h3>${!correct ? `<p><strong>對返答案：${escape(q.options[q.answer])}</strong></p>` : ''}<p>${escape(q.explanation)}</p>${q.reference ? `<p class="reference">出處：${escape(q.reference)}</p>` : ''}</section>`;
-  const courseModes=['genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark'];
+  const courseModes=['genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke'];
   const courseMode=courseModes.some(mode=>r.mode.startsWith(`${mode}-`)) ? r.mode.split('-')[0] : r.mode;
   const isCourse=['church','bible',...courseModes].includes(courseMode);
-  const unitPool=q.topic===MATTHEW_TOPIC.id ? MATTHEW_UNITS : q.topic===GENESIS_TOPIC.id ? GENESIS_UNITS : q.topic===EXODUS_TOPIC.id ? EXODUS_UNITS : q.topic===NUMBERS_TOPIC.id ? NUMBERS_UNITS : q.topic===LEVITICUS_TOPIC.id ? LEVITICUS_UNITS : q.topic===DEUTERONOMY_TOPIC.id ? DEUTERONOMY_UNITS : q.topic===MARK_TOPIC.id ? MARK_UNITS : q.topic===BIBLE_TOPIC.id ? BIBLE_UNITS : COURSE_UNITS;
+  const unitPool=q.topic===LUKE_TOPIC.id ? LUKE_UNITS : q.topic===MATTHEW_TOPIC.id ? MATTHEW_UNITS : q.topic===GENESIS_TOPIC.id ? GENESIS_UNITS : q.topic===EXODUS_TOPIC.id ? EXODUS_UNITS : q.topic===NUMBERS_TOPIC.id ? NUMBERS_UNITS : q.topic===LEVITICUS_TOPIC.id ? LEVITICUS_UNITS : q.topic===DEUTERONOMY_TOPIC.id ? DEUTERONOMY_UNITS : q.topic===MARK_TOPIC.id ? MARK_UNITS : q.topic===BIBLE_TOPIC.id ? BIBLE_UNITS : COURSE_UNITS;
   return `<div class="quiz-shell"><div class="quiz-top"><a href="${isCourse ? '#/'+courseMode : '#/'}" class="text-button">${icon('back')} ${isCourse ? '返去課程' : '返營先'}（保留進度）</a><div class="quiz-label">${escape(roundTitle(r))}<span class="pill sand">${['church','bible',...courseModes].includes(r.mode) ? '每課10題' : r.mode === 'general' ? '全方位操練' : '扎根操練'}</span></div></div><div class="quiz-layout"><div><div class="quiz-progress"><div class="progress-copy"><strong>第 ${r.index + 1} <span class="muted">/ ${r.items.length} 題</span></strong><span>已答 ${completed} 題 · 唔好心急</span></div><div class="progress-track" role="progressbar" aria-label="答題進度" aria-valuenow="${completed}" aria-valuemin="0" aria-valuemax="${r.items.length}"><span style="width:${completed / r.items.length * 100}%"></span></div></div><article class="quiz-card"><div class="question-meta"><span class="pill ${t.color}">${q.unit ? unitPool.find(u=>u.id===q.unit)?.name : t.name}</span><span class="pill sand">${DIFFICULTIES[[...courseModes].some(mode=>r.mode===`${mode}-level`) ? r.difficulty : q.difficulty]}</span>${bookmarkButton(q.id)}</div><h1 class="question-title" id="question-title" tabindex="-1">${escape(q.question)}</h1><div class="choices" role="group" aria-label="揀一個答案">${r.items[r.index].order.map((sourceIndex, position) => {
     const state = !answered ? '' : sourceIndex === q.answer ? ' correct' : sourceIndex === response.selected ? ' wrong' : ' dim';
     return `<button class="choice${state}" data-action="answer" data-choice="${sourceIndex}" ${answered ? 'disabled' : ''}><span class="choice-key" aria-hidden="true">${String.fromCharCode(65 + position)}</span><span>${escape(q.options[sourceIndex])}</span>${answered && sourceIndex === q.answer ? icon('check','status-icon') : answered && sourceIndex === response.selected ? icon('close','status-icon') : ''}<span class="sr-only">${answered && sourceIndex === q.answer ? '正確答案' : answered && sourceIndex === response.selected ? '你揀咗呢個答案，未答啱' : ''}</span></button>`;
@@ -233,6 +239,7 @@ function handleAnswer(selected) {
   if (BIBLE_QUESTION_MAP.has(q.id)) progress.bibleAnswers[q.id] = selected === q.answer;
   if (q.topic === MATTHEW_TOPIC.id) progress.matthewSeen = [...new Set([...progress.matthewSeen, q.id])];
   if (q.topic === MARK_TOPIC.id) progress.markSeen = [...new Set([...progress.markSeen, q.id])];
+  if (q.topic === LUKE_TOPIC.id) progress.lukeSeen = [...new Set([...progress.lukeSeen, q.id])];
   if (q.topic === GENESIS_TOPIC.id) progress.genesisSeen = [...new Set([...progress.genesisSeen, q.id])];
   if (q.topic === EXODUS_TOPIC.id) progress.exodusSeen = [...new Set([...progress.exodusSeen, q.id])];
   if (q.topic === NUMBERS_TOPIC.id) progress.numbersSeen = [...new Set([...progress.numbersSeen, q.id])];
@@ -240,6 +247,7 @@ function handleAnswer(selected) {
   if (q.topic === DEUTERONOMY_TOPIC.id) progress.deuteronomySeen = [...new Set([...progress.deuteronomySeen, q.id])];
   if (MATTHEW_QUESTION_MAP.has(q.id) && updated.mode !== 'matthew-level') progress.matthewAnswers[q.id] = selected === q.answer;
   if (MARK_QUESTION_MAP.has(q.id) && updated.mode !== 'mark-level') progress.markAnswers[q.id] = selected === q.answer;
+  if (LUKE_QUESTION_MAP.has(q.id) && updated.mode !== 'luke-level') progress.lukeAnswers[q.id] = selected === q.answer;
   if (GENESIS_QUESTION_MAP.has(q.id) && !['genesis-test','genesis-level'].includes(updated.mode)) progress.genesisAnswers[q.id] = selected === q.answer;
   if (EXODUS_QUESTION_MAP.has(q.id) && !['exodus-test','exodus-level'].includes(updated.mode)) progress.exodusAnswers[q.id] = selected === q.answer;
   if (NUMBERS_QUESTION_MAP.has(q.id) && !['numbers-test','numbers-level'].includes(updated.mode)) progress.numbersAnswers[q.id] = selected === q.answer;
@@ -277,8 +285,8 @@ function resultView(id) {
   const trial = r.mode === 'trial' ? TRIAL_LEVELS[r.difficulty] : null;
   const title = s.level ? `${s.level.symbol} ${s.level.name}` : trial ? s.percent >= 80 ? '呢場試探，企得幾穩喎！' : s.percent >= 50 ? '有啲搖，但仲企得住。' : '呢場有啲難，睇返解說再試。' : s.percent >= 80 ? '有根有基，繼續操練！' : '操練完，記得返去溫習。';
   const remark = trial ? `今次試探程度：${trial.degree}。${s.percent >= 80 ? '冇乜畀啲似是而非嘅答案帶走，繼續用經文扎根。' : '啲答案個個扮熟客，唔係個個都可信。睇埋解說，下次識分辨。'}` : s.level ? s.level.cheeky : s.percent >= 80 ? '今次學到唔少喎！讀埋解說，返到小組就唔使靠估。' : '呢個主題仲未熟，溫返解說，下次就唔容易答錯。';
-  return `<div class="page-head"><div class="eyebrow">操練完，睇吓學到幾多</div><p class="stored-result">${escape(roundTitle(r))} · ${formatDate(r.finishedAt)}${r.mode === 'topic' ? ' · ' + (DIFFICULTIES[r.difficulty] || '各種程度都有') : ''}</p></div><section class="result-hero" aria-labelledby="result-title"><div><div class="result-topline">${icon('check')} 今場操練完 · 答啱 ${s.correct} 題${s.skipped ? ` · ${s.skipped} 題先睇解說` : ''}</div><div class="eyebrow">${s.level ? '今次操練，去到邊個境界' : '一齊操練，一齊扎根'}</div><h1 id="result-title">${title}</h1><p>${remark}</p><div class="actions"><button class="button primary" data-action="retry" data-id="${r.id}">${icon('repeat')} 再入場操練</button>${["genesis-level","exodus-level","leviticus-level","numbers-level","deuteronomy-level","matthew-level","mark-level"].includes(r.mode) ? `<a class="button secondary" href="#/${r.mode.split("-")[0]}">返回選擇程度 ${icon("arrow")}</a>` : ""}<button class="button secondary" data-action="share" data-id="${r.id}">同小組分享收穫</button></div></div><div><div class="score-ring" style="--value:${s.percent}" role="img" aria-label="${number(s.percent)}分，答啱${s.correct}題，共${s.total}題"><div><strong>${number(s.percent)}<small style="font-size:19px">分</small></strong><span>${s.correct} / ${s.total} 題答啱</span></div></div><p class="score-note">${s.total} 題等分 · 答錯／跳過不扣額外分</p></div></section>
-    <section class="result-grid" aria-label="分項表現與溫習方向"><div class="panel"><h2>睇吓邊個主題仲要溫習</h2>${s.breakdown.filter(t => t.total).map(t => `<div class="breakdown-row"><span class="label">${t.name}</span><span class="bar" aria-hidden="true"><span style="width:${t.percent}%"></span></span><span class="value">${t.correct}/${t.total}</span></div>`).join('')}<p class="note" style="margin-top:17px">睇返邊個主題未熟，下次可以重點溫習。</p></div>${['church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark'].includes(r.mode) ? courseResultPanel(r) : `<div class="panel growth-note"><div class="tip-symbol" aria-hidden="true">🌱</div><h2>溫返經文，繼續扎根。</h2><h3>${s.correct === s.total ? '基本功企得穩，可以再學深入啲。' : `${recommendation.name}仲有扎根空間。`}</h3><p>${recommendation.tip}</p><span class="reading">今次溫習：${recommendation.reading}</span>${recommendation.id === HISTORY_TOPIC.id ? '<a class="text-button" href="#/church">返去教會歷史篇</a>' : external(scriptureUrl(recommendation.reading),'打開聖經溫習','text-button')}<p class="note">靈糧要日日食，唔好等主日先開餐。</p></div>`}</section>
+  return `<div class="page-head"><div class="eyebrow">操練完，睇吓學到幾多</div><p class="stored-result">${escape(roundTitle(r))} · ${formatDate(r.finishedAt)}${r.mode === 'topic' ? ' · ' + (DIFFICULTIES[r.difficulty] || '各種程度都有') : ''}</p></div><section class="result-hero" aria-labelledby="result-title"><div><div class="result-topline">${icon('check')} 今場操練完 · 答啱 ${s.correct} 題${s.skipped ? ` · ${s.skipped} 題先睇解說` : ''}</div><div class="eyebrow">${s.level ? '今次操練，去到邊個境界' : '一齊操練，一齊扎根'}</div><h1 id="result-title">${title}</h1><p>${remark}</p><div class="actions"><button class="button primary" data-action="retry" data-id="${r.id}">${icon('repeat')} 再入場操練</button>${["genesis-level","exodus-level","leviticus-level","numbers-level","deuteronomy-level","matthew-level","mark-level","luke-level"].includes(r.mode) ? `<a class="button secondary" href="#/${r.mode.split("-")[0]}">返回選擇程度 ${icon("arrow")}</a>` : ""}<button class="button secondary" data-action="share" data-id="${r.id}">同小組分享收穫</button></div></div><div><div class="score-ring" style="--value:${s.percent}" role="img" aria-label="${number(s.percent)}分，答啱${s.correct}題，共${s.total}題"><div><strong>${number(s.percent)}<small style="font-size:19px">分</small></strong><span>${s.correct} / ${s.total} 題答啱</span></div></div><p class="score-note">${s.total} 題等分 · 答錯／跳過不扣額外分</p></div></section>
+    <section class="result-grid" aria-label="分項表現與溫習方向"><div class="panel"><h2>睇吓邊個主題仲要溫習</h2>${s.breakdown.filter(t => t.total).map(t => `<div class="breakdown-row"><span class="label">${t.name}</span><span class="bar" aria-hidden="true"><span style="width:${t.percent}%"></span></span><span class="value">${t.correct}/${t.total}</span></div>`).join('')}<p class="note" style="margin-top:17px">睇返邊個主題未熟，下次可以重點溫習。</p></div>${['church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke'].includes(r.mode) ? courseResultPanel(r) : `<div class="panel growth-note"><div class="tip-symbol" aria-hidden="true">🌱</div><h2>溫返經文，繼續扎根。</h2><h3>${s.correct === s.total ? '基本功企得穩，可以再學深入啲。' : `${recommendation.name}仲有扎根空間。`}</h3><p>${recommendation.tip}</p><span class="reading">今次溫習：${recommendation.reading}</span>${recommendation.id === HISTORY_TOPIC.id ? '<a class="text-button" href="#/church">返去教會歷史篇</a>' : external(scriptureUrl(recommendation.reading),'打開聖經溫習','text-button')}<p class="note">靈糧要日日食，唔好等主日先開餐。</p></div>`}</section>
     <section aria-labelledby="result-review-title"><div class="section-heading"><div><h2 class="section-title" id="result-review-title">睇返解說，慢慢溫習。</h2><p>答錯題目已經自動加入「溫習角落」。答啱重溫題，會移出錯題簿。</p></div></div><div class="review-toolbar"><div class="tabs" aria-label="篩選今局題目"><button data-action="result-filter" data-filter="wrong" aria-pressed="${resultFilter === 'wrong'}">答錯／跳過 ${s.total-s.correct}</button><button data-action="result-filter" data-filter="all" aria-pressed="${resultFilter === 'all'}">全部 ${s.total}</button></div><label class="search-wrap">${icon('search')}<span class="sr-only">搜尋今局題目</span><input id="result-search" type="search" placeholder="搵返某一題…" value="${escape(resultSearch)}"></label></div><div id="result-rows">${resultRows(r)}</div></section>`;
 }
 function formatDate(date) { return new Intl.DateTimeFormat('zh-HK', { timeZone: 'Asia/Hong_Kong', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }).format(new Date(date)); }
@@ -373,7 +381,7 @@ document.addEventListener('click', async event => {
   if (action === 'clear-dialog') {
     shareDialog.innerHTML = `<div class="dialog-top"><div><div class="eyebrow">重新起步，都要睇清楚</div><h2 id="share-title">重新起步：清除紀錄？</h2></div><button class="close-button" data-action="close-dialog" aria-label="取消清除">${icon('close')}</button></div><p style="font-size:14px;margin-bottom:24px">會清除呢個瀏覽器嘅未完成操練、成績、錯題、溫習書籤，以及各個課程同書卷嘅操練進度。清除後無法還原；你可以先取消，下載成績紀錄留底。</p><div class="actions"><button class="button secondary" data-action="close-dialog">保留紀錄</button><button class="button primary" data-action="clear-confirm">確定清除</button></div>`; shareDialog.showModal();
   }
-  if (action === 'clear-confirm') { progress = { schema:1, tone:'cheeky', current:null, history:[], bookmarks:[], mistakes:[], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, numbersAnswers:{}, leviticusAnswers:{}, deuteronomyAnswers:{}, matthewAnswers:{}, markAnswers:{}, genesisSeen:[], exodusSeen:[], numbersSeen:[], leviticusSeen:[], deuteronomySeen:[], matthewSeen:[], markSeen:[] }; persist(); shareDialog.close(); render(); toast('紀錄已清除，新一輪操練由你起步。'); }
+  if (action === 'clear-confirm') { progress = { schema:1, tone:'cheeky', current:null, history:[], bookmarks:[], mistakes:[], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, numbersAnswers:{}, leviticusAnswers:{}, deuteronomyAnswers:{}, matthewAnswers:{}, markAnswers:{}, lukeAnswers:{}, genesisSeen:[], exodusSeen:[], numbersSeen:[], leviticusSeen:[], deuteronomySeen:[], matthewSeen:[], markSeen:[], lukeSeen:[] }; persist(); shareDialog.close(); render(); toast('紀錄已清除，新一輪操練由你起步。'); }
 });
 document.addEventListener('keydown', event => {
   if (route().name !== 'quiz' || shareDialog.open || event.ctrlKey || event.altKey || event.metaKey || event.repeat || ['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName)) return;
