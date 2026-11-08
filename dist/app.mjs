@@ -94,7 +94,7 @@ function toast(message) {
 function announce(message) { $('#announcer').textContent = message; }
 function route() {
   const parts = location.hash.replace(/^#\/?/, '').split('/');
-  return { name: ['review', 'history', 'church', 'bible', 'old-testament', 'genesis', 'exodus', 'numbers', 'leviticus', 'deuteronomy', 'quiz', 'result'].includes(parts[0]) ? parts[0] : 'home', id: parts[1] || null };
+  return { name: ['review', 'history', 'church', 'bible', 'old-testament', 'new-testament', 'genesis', 'exodus', 'numbers', 'leviticus', 'deuteronomy', 'quiz', 'result'].includes(parts[0]) ? parts[0] : 'home', id: parts[1] || null };
 }
 function go(path) { if (location.hash === '#' + path) render(); else location.hash = path; }
 function updateNavigation() {
@@ -127,10 +127,10 @@ function roundTitle(r) {
 }
 function render({ focus = true } = {}) {
   const page = route();
-  main.innerHTML = page.name === 'home' ? homeView() : page.name === 'old-testament' ? oldTestamentView() : ['church','bible','genesis','exodus','numbers','leviticus','deuteronomy'].includes(page.name) ? churchView(page.name) : page.name === 'quiz' ? quizView() : page.name === 'review' ? reviewView() : page.name === 'history' ? historyView() : resultView(page.id);
+  main.innerHTML = page.name === 'home' ? homeView() : page.name === 'old-testament' ? oldTestamentView() : page.name === 'new-testament' ? newTestamentView() : ['church','bible','genesis','exodus','numbers','leviticus','deuteronomy'].includes(page.name) ? churchView(page.name) : page.name === 'quiz' ? quizView() : page.name === 'review' ? reviewView() : page.name === 'history' ? historyView() : resultView(page.id);
   updateNavigation();
   if (focus) { window.scrollTo({ top: 0, behavior: 'instant' }); main.focus({ preventScroll: true }); }
-  document.title = `${({ home: '聖經有幾熟？', church:'教會歷史篇 · 100題操練', bible:'聖經知識 · 100題操練', 'old-testament':'舊約書卷', genesis:'創世記 · 100題操練', exodus:'出埃及記 · 100題操練', numbers:'民數記 · 100題操練', leviticus:'利未記 · 100題操練', deuteronomy:'申命記 · 100題操練', quiz: '試探嚟到，慢慢分辨', review: '溫習角落', history: '操練紀錄', result: '今次學到幾多？' })[page.name]}｜Bible Buddy`;
+  document.title = `${({ home: '聖經有幾熟？', church:'教會歷史篇 · 100題操練', bible:'聖經知識 · 100題操練', 'old-testament':'舊約書卷', 'new-testament':'新約書卷', genesis:'創世記 · 100題操練', exodus:'出埃及記 · 100題操練', numbers:'民數記 · 100題操練', leviticus:'利未記 · 100題操練', deuteronomy:'申命記 · 100題操練', quiz: '試探嚟到，慢慢分辨', review: '溫習角落', history: '操練紀錄', result: '今次學到幾多？' })[page.name]}｜Bible Buddy`;
 }
 
 function trialCard() {
@@ -166,6 +166,7 @@ function courseResultPanel(round) {
   return `<div class="panel growth-note"><div class="tip-symbol" aria-hidden="true">📚</div><h2>一步一步，認識${c.subject}。</h2><p>已操練 ${status.answered}／100題。睇返今課解說，試吓將學過嘅內容連埋一齊。</p>${next ? `<button class="button primary" data-action="start" data-mode="${c.mode}" data-unit="${next.id}">下一課：${next.name} ${icon('arrow')}</button>` : '<p>呢課已經係最後一課。可以返去揀課，完成未做過或者未熟嘅部分。</p>'}<a class="text-button" href="#/${c.mode}">返去揀課程 ${icon('arrow')}</a></div>`;
 }
 
+function newTestamentView() { return `<div class="page-head"><div class="eyebrow">逐卷讀，逐卷學</div><h1>新約書卷</h1><p>由馬太福音開始，逐卷認識新約。</p></div><section class="course-feature"><div><div class="eyebrow">題目準備中</div><h2>馬太福音</h2><p>分課題目、解說同經文出處正在準備。</p></div></section>`; }
 function oldTestamentView() { return `<div class="page-head"><div class="eyebrow">逐卷讀，逐卷學</div><h1>舊約書卷</h1><p>由創世記、出埃及記、利未記、民數記同申命記開始，按經文次序逐卷認識。</p></div><div class="course-features old-testament-courses">${courseHomeCard('genesis')}${courseHomeCard('exodus')}${courseHomeCard('leviticus')}${courseHomeCard('numbers')}${courseHomeCard('deuteronomy')}</div>`; }
 function homeView() {
   const current = progress.current;
