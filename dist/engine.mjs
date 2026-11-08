@@ -1,7 +1,11 @@
-import {KINGDOM_QUESTIONS,KINGDOM_MAP,KINGDOM_TOPIC,KINGDOM_UNITS} from './kingdom-course.mjs';
+import {HISTORY_LEGACY_DATA} from './history-legacy.mjs';
+import {KINGDOM_LEGACY_DATA} from './kingdom-legacy.mjs';
+const HISTORY_LEGACY_MAP=new Map(HISTORY_LEGACY_DATA.map(q=>[q.id,{...q,topic:'church-history'}]));
+const KINGDOM_LEGACY_MAP=new Map(KINGDOM_LEGACY_DATA.map(q=>[q.id,q]));
+import {KINGDOM_QUESTIONS,KINGDOM_MAP,KINGDOM_TOPIC,KINGDOM_UNITS} from './kingdom-course.mjs?v=20261108-aligned2';
 import { GENESIS_DATA as GENESIS_LEGACY_DATA } from './genesis-legacy-data.mjs?v=20261107-2';
-import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261108-learning1';
-import { HISTORY_QUESTIONS, HISTORY_QUESTION_MAP, HISTORY_TOPIC, COURSE_UNITS } from './history-course.mjs?v=20261101-7';
+import { QUESTIONS, QUESTION_MAP, QUESTION_MAP_V2, LEGACY_QUESTION_MAP, TOPICS } from './questions.mjs?v=20261108-aligned2';
+import { HISTORY_QUESTIONS, HISTORY_QUESTION_MAP, HISTORY_TOPIC, COURSE_UNITS } from './history-course.mjs?v=20261108-aligned2';
 import { CHALLENGE_QUESTIONS } from './challenge-data.mjs?v=20261101-10';
 import { GENESIS_QUESTIONS, GENESIS_QUESTION_MAP, GENESIS_TOPIC, GENESIS_UNITS, GENESIS_LEVEL_POOLS, GENESIS_HARD_MAP } from './genesis-course.mjs?v=20261107-2';
 import { BIBLE_QUESTIONS, BIBLE_QUESTION_MAP, BIBLE_TOPIC, BIBLE_UNITS } from './bible-course.mjs?v=20261107-2';
@@ -26,6 +30,7 @@ export const DIFFICULTIES = Object.fromEntries(Object.entries(TRIAL_LEVELS).map(
 export const GENERAL_QUOTAS = Object.fromEntries(TOPICS.map(t => [t.id, 5]));
 const LEGACY_GENERAL_QUOTAS = { overview: 6, old: 6, new: 6, people: 6, context: 6, theology: 4, history: 3, language: 3 };
 export function questionForRound(round, id) {
+  if(KINGDOM_MAP.has(id))return round.lessonRevision===2?KINGDOM_MAP.get(id):KINGDOM_LEGACY_MAP.get(id);
   if (JOHN_HARD_MAP.has(id)) return JOHN_HARD_MAP.get(id);
   if (JOHN_QUESTION_MAP.has(id)) return JOHN_QUESTION_MAP.get(id);
   if (LUKE_HARD_MAP.has(id)) return LUKE_HARD_MAP.get(id);
@@ -46,7 +51,7 @@ export function questionForRound(round, id) {
   if (GENESIS_QUESTION_MAP.has(id)) return round.bankRevision === 4 ? GENESIS_QUESTION_MAP.get(id) : GENESIS_LEGACY_MAP.get(id);
   if (BIBLE_QUESTION_MAP.has(id)) return BIBLE_QUESTION_MAP.get(id);
   if (CHALLENGE_MAP.has(id)) return CHALLENGE_MAP.get(id);
-  if (HISTORY_QUESTION_MAP.has(id)) return HISTORY_QUESTION_MAP.get(id);
+  if (HISTORY_QUESTION_MAP.has(id)) return round.lessonRevision===2?HISTORY_QUESTION_MAP.get(id):HISTORY_LEGACY_MAP.get(id);
   return (round.bankRevision >= 3 ? QUESTION_MAP : round.bankRevision === 2 ? QUESTION_MAP_V2 : LEGACY_QUESTION_MAP).get(id);
 }
 export const LEVELS = [
@@ -206,7 +211,7 @@ export function createRound({ mode = 'general', topic = 'overview', count, editi
   if (!selected.length) throw new Error('暫時冇呢類題目，可以揀其他主題。');
   const roundRandom = fixedEdition ? seededRandom(`general-fixed-v1-${fixedEdition}`) : random;
   const items = (['kingdoms','church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke'].includes(mode) ? selected : shuffle(selected, roundRandom)).map(q => ({ id: q.id, order: shuffle([0, 1, 2, 3], roundRandom) }));
-  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 4, distribution: fixedEdition ? 'general-fixed-v1' : mode === 'general' ? 'general-v5' : mode === 'trial' && String(difficulty) === '3' ? 'trial-advanced-v5' : 'balanced-v3', ...(fixedEdition ? {edition:fixedEdition} : {}), mode, topic: ['john','john-level'].includes(mode) ? JOHN_TOPIC.id : ['luke','luke-level'].includes(mode) ? LUKE_TOPIC.id : ['mark','mark-level'].includes(mode) ? MARK_TOPIC.id : ['matthew','matthew-level'].includes(mode) ? MATTHEW_TOPIC.id : ['genesis','genesis-test','genesis-level'].includes(mode) ? GENESIS_TOPIC.id : ['exodus','exodus-test','exodus-level'].includes(mode) ? EXODUS_TOPIC.id : ['numbers','numbers-test','numbers-level'].includes(mode) ? NUMBERS_TOPIC.id : ['leviticus','leviticus-test','leviticus-level'].includes(mode) ? LEVITICUS_TOPIC.id : ['deuteronomy','deuteronomy-test','deuteronomy-level'].includes(mode) ? DEUTERONOMY_TOPIC.id : mode === 'kingdoms' ? KINGDOM_TOPIC.id : mode === 'bible' ? BIBLE_TOPIC.id : mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:['kingdoms','church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke','john'].includes(mode) ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
+  return { id: `${Date.now()}-${Math.floor(Math.random() * 1e9)}`, bankRevision: 4, lessonRevision:2, distribution: fixedEdition ? 'general-fixed-v1' : mode === 'general' ? 'general-v5' : mode === 'trial' && String(difficulty) === '3' ? 'trial-advanced-v5' : 'balanced-v3', ...(fixedEdition ? {edition:fixedEdition} : {}), mode, topic: ['john','john-level'].includes(mode) ? JOHN_TOPIC.id : ['luke','luke-level'].includes(mode) ? LUKE_TOPIC.id : ['mark','mark-level'].includes(mode) ? MARK_TOPIC.id : ['matthew','matthew-level'].includes(mode) ? MATTHEW_TOPIC.id : ['genesis','genesis-test','genesis-level'].includes(mode) ? GENESIS_TOPIC.id : ['exodus','exodus-test','exodus-level'].includes(mode) ? EXODUS_TOPIC.id : ['numbers','numbers-test','numbers-level'].includes(mode) ? NUMBERS_TOPIC.id : ['leviticus','leviticus-test','leviticus-level'].includes(mode) ? LEVITICUS_TOPIC.id : ['deuteronomy','deuteronomy-test','deuteronomy-level'].includes(mode) ? DEUTERONOMY_TOPIC.id : mode === 'kingdoms' ? KINGDOM_TOPIC.id : mode === 'bible' ? BIBLE_TOPIC.id : mode === 'church' ? HISTORY_TOPIC.id : mode === 'topic' ? topic : null, unit:['kingdoms','church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke','john'].includes(mode) ? unit : null, difficulty: String(difficulty), tone: tone === 'gentle' ? 'gentle' : 'cheeky', day: null, items, answers: [], index: 0, startedAt: new Date().toISOString(), finishedAt: null };
 }
 
 export function answerRound(round, selected) {

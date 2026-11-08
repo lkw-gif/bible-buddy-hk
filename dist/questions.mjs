@@ -1,7 +1,7 @@
-import {KINGDOM_QUESTIONS} from './kingdom-course.mjs';
+import {KINGDOM_QUESTIONS} from './kingdom-course.mjs?v=20261108-aligned2';
 import { CHOICES, STEMS } from './choices.mjs?v=20261101-7';
 import { reviseCopy } from './copy-edits.mjs?v=20261101-7';
-import { HISTORY_QUESTIONS } from './history-course.mjs?v=20261101-7';
+import { HISTORY_QUESTIONS } from './history-course.mjs?v=20261108-aligned2';
 import { CHALLENGE_QUESTIONS } from './challenge-data.mjs?v=20261101-10';
 import { GENESIS_QUESTIONS, GENESIS_HARD_QUESTIONS } from './genesis-course.mjs?v=20261107-2';
 import { BIBLE_QUESTIONS } from './bible-course.mjs?v=20261101-13';

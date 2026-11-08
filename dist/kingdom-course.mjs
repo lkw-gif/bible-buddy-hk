@@ -1,4 +1,4 @@
-import {KINGDOM_DATA} from './learning-data.mjs';
+import {KINGDOM_DATA} from './learning-data.mjs?v=20261108-aligned2';
 export const KINGDOM_TOPIC={id:'kingdoms',name:'王國與先知',icon:'book',color:'sage',tip:'先分清南北國，再對照君王同先知。',reading:'列王紀上12章'};
 export const KINGDOM_UNITS=KINGDOM_DATA.lessons.map(l=>({...l,name:l.title,description:l.summary}));
 export const KINGDOM_QUESTIONS=KINGDOM_DATA.questions;

@@ -3,720 +3,1249 @@
     "id": "church-061",
     "unit": "china",
     "difficulty": 1,
-    "question": "阿羅本一行喺635年到達長安，當時中國係邊個朝代？",
+    "question": "635年來到長安嘅人物係邊位？",
     "options": [
-      "唐朝",
-      "宋朝",
-      "元朝",
-      "明朝"
+      "阿羅本",
+      "馬禮遜",
+      "利瑪竇",
+      "衛斯理"
     ],
     "answer": 0,
-    "explanation": "景教喺唐代已經傳到中國，唔係到明清先開始有人接觸基督信仰。認識呢段歷史，可以避免將中國教會嘅起點只放喺近代西方宣教士身上。",
-    "reference": "《大秦景教流行中國碑》所記635年來華；北京石刻藝術博物館研究",
-    "source": "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
-    "verification": "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：基督宗教來華唔係由十九世紀先開始。景教碑記述阿羅本喺635年到長安，並保存漢文及敘利亞文資料。碑文係重要史料，亦有自身表述目的，唔能夠單靠一塊碑還原所有日常生活。。來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "reference": "唐代至近代",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
   },
   {
     "id": "church-062",
     "unit": "china",
     "difficulty": 2,
-    "question": "以下邊份史料最直接記錄唐代基督宗教喺中國嘅活動？",
+    "question": "635年來華事件屬邊個朝代？",
     "options": [
-      "781年立嘅《大秦景教流行中國碑》",
-      "1832年出版嘅《勸世良言》",
-      "1602年印製嘅《坤輿萬國全圖》",
-      "1919年出版嘅《官話和合本》"
+      "唐代",
+      "宋代",
+      "明代",
+      "清代"
     ],
     "answer": 0,
-    "explanation": "景教碑記錄景教來華同發展，亦保存漢文及敘利亞文資料。其餘幾份都係重要文獻，但年代相差好多，唔可以當成唐代教會留下嘅直接記錄。",
-    "reference": "澳洲國立大學圖書館：Christianity & Christian texts；781年景教碑",
-    "source": "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
-    "verification": "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：基督宗教來華唔係由十九世紀先開始。景教碑記述阿羅本喺635年到長安，並保存漢文及敘利亞文資料。碑文係重要史料，亦有自身表述目的，唔能夠單靠一塊碑還原所有日常生活。。來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "reference": "唐代至近代",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
   },
   {
     "id": "church-063",
     "unit": "china",
     "difficulty": 1,
-    "question": "明代來華嘅利瑪竇，屬於邊個天主教修會？",
+    "question": "景教碑保存咩語文？",
     "options": [
-      "耶穌會",
-      "方濟各會",
-      "道明會",
-      "本篤會"
+      "漢文同敘利亞文",
+      "只有近代英語",
+      "只有德文及拉丁文",
+      "只有法文及葡萄牙文"
     ],
     "answer": 0,
-    "explanation": "利瑪竇係耶穌會士，喺明代學中文、接觸中國士人，亦參與地圖等知識交流。中國基督宗教歷史包含天主教、新教同東方教會，唔好將佢哋當成同一個時期來華。",
-    "reference": "美國國會圖書館：The Many Facets of Matteo Ricci",
-    "source": "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
-    "verification": "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：基督宗教來華唔係由十九世紀先開始。景教碑記述阿羅本喺635年到長安，並保存漢文及敘利亞文資料。碑文係重要史料，亦有自身表述目的，唔能夠單靠一塊碑還原所有日常生活。。來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "reference": "唐代至近代",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
   },
   {
     "id": "church-064",
     "unit": "china",
     "difficulty": 2,
-    "question": "利瑪竇同李之藻喺1602年合作出版嘅作品，主要係咩內容？",
+    "question": "利瑪竇等1583年喺邊度工作？",
     "options": [
-      "用中文標示嘅世界地圖",
-      "古希臘幾何學前六卷嘅中文翻譯",
-      "用西方算法編成嘅中國年曆",
-      "中西醫學對照嘅中文圖解"
+      "肇慶",
+      "香港",
+      "安提阿",
+      "尼西亞"
     ],
     "answer": 0,
-    "explanation": "《坤輿萬國全圖》用中文呈現世界地理知識，反映宣教同中西知識交流有密切關係。利瑪竇亦參與其他學術工作，要分清不同作品、合作者同出版年份。",
-    "reference": "哈佛大學：Jesuit Transmission / Ricci, Mappa mundi；美國國會圖書館1602年地圖",
-    "source": "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
-    "verification": "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1583年 利瑪竇等喺肇慶開展工作。來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "reference": "唐代至近代",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e2"
+    ],
+    "teachingSources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
   },
   {
     "id": "church-065",
     "unit": "china",
     "difficulty": 1,
-    "question": "馬禮遜喺1807年來華，係由邊個差會派出？",
+    "question": "馬禮遜嘅歷史位置應點講？",
     "options": [
-      "倫敦傳道會",
-      "中國內地會",
-      "英國浸信會差會",
-      "教會傳道會（CMS）"
+      "近代新教來華，唔係所有基督宗教來華起點",
+      "唐代景教領袖",
+      "瑞士改革者",
+      "普世教會協會創辦人"
     ],
     "answer": 0,
-    "explanation": "倫敦傳道會差派馬禮遜來華，佢嘅重要工作包括中文聖經翻譯同字典編寫。中國內地會要到1865年先成立，兩者都重要，但唔係同一個差會。",
-    "reference": "澳洲國家圖書館：London Missionary Society Collection；哈佛神學院圖書館中文聖經展覽",
-    "source": "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
-    "verification": "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：十九世紀新教來華，譯經、出版、教育同醫療事工逐步發展。馬禮遜唔係第一位來華基督宗教傳教者；佢嘅歷史位置要明確放喺近代新教來華。華人同工亦參與翻譯及教會建立。。來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "reference": "唐代至近代",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p2"
+    ],
+    "teachingSources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
   },
   {
     "id": "church-066",
     "unit": "china",
     "difficulty": 2,
-    "question": "馬禮遜早期嘅譯經同文字工作，邊位宣教士同佢有緊密合作？",
+    "question": "1919年出版嘅係乜？",
     "options": [
-      "米憐",
-      "戴德生",
-      "李提摩太",
-      "慕拉第"
+      "《官話和合本》",
+      "《公禱書》首版",
+      "《基督教要義》初版",
+      "《九十五條》"
     ],
     "answer": 0,
-    "explanation": "米憐同馬禮遜合作譯經及出版，當中亦有華人同工參與。早期中文聖經嘅發展係團隊努力，唔應該只記住一個著名人物，就將其他人嘅貢獻抹走。",
-    "reference": "聖母大學出版社：Protestant Missionaries in China；倫敦傳道會歷史文獻",
-    "source": "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
-    "verification": "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1919年 《官話和合本》出版。來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "reference": "唐代至近代",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e4"
+    ],
+    "teachingSources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
   },
   {
     "id": "church-067",
     "unit": "china",
     "difficulty": 2,
-    "question": "英華書院喺1818年創立時，最初設喺邊度？",
+    "question": "時間線中，「景教傳入唐代長安」發生喺幾時？",
     "options": [
-      "馬六甲",
-      "香港",
-      "廣州",
-      "上海"
+      "635年",
+      "781年",
+      "1583年",
+      "1807年"
     ],
     "answer": 0,
-    "explanation": "英華書院最初喺馬六甲建立，後來先遷到香港。早期對華宣教亦喺中國以外嘅華人聚居地辦學、翻譯同印書，所以唔可以只睇今日校舍所在地去推斷校史。",
-    "reference": "英華書院及英華小學官方校史：1818年馬六甲創校",
-    "source": "https://www.yingwaps.edu.hk/tc/content.php?wid=77",
-    "verification": "https://yingwa.edu.hk/listingscontent/1668cf4d55a1b6f268342dcc62e0bffa.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：635年 景教傳入唐代長安。來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "reference": "唐代至近代",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0"
+    ],
+    "teachingSources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
   },
   {
     "id": "church-068",
     "unit": "china",
     "difficulty": 3,
-    "question": "1832年出版嘅《勸世良言》，係邊位華人傳道人嘅著作？",
+    "question": "時間線中，「景教碑立碑」發生喺幾時？",
     "options": [
-      "梁發",
-      "王韜",
-      "容閎",
-      "孫中山"
+      "781年",
+      "635年",
+      "1583年",
+      "1807年"
     ],
     "answer": 0,
-    "explanation": "梁發係早期華人新教傳道人，透過中文書刊介紹基督信仰。《勸世良言》顯示華人信徒唔只係接受宣教，亦主動寫作、出版同傳福音，參與建立本地教會。",
-    "reference": "澳門基金會《澳門記憶》：梁發；哈佛圖書館藏《勸世良言》1832年版",
-    "source": "https://www.macaumemory.mo/entries_3008fddf60b64d51bde8a71792f718f1?fsType=d&lgType=zh-cn",
-    "verification": "https://iiif.lib.harvard.edu/manifests/view/drs:428686056",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：781年 景教碑立碑。來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "reference": "唐代至近代",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e1"
+    ],
+    "teachingSources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
   },
   {
     "id": "church-069",
     "unit": "china",
     "difficulty": 1,
-    "question": "戴德生喺1865年創立嘅差會，特別想將福音帶到邊度？",
+    "question": "「福音來到中國」時間線，以下先後次序邊個啱？",
     "options": [
-      "中國較少宣教士到達嘅內陸省份",
-      "主要服侍歐洲各地嘅中國留學生",
-      "集中中國已開放通商嘅沿海港口",
-      "集中香港同澳門已經建立嘅堂會"
+      "景教傳入唐代長安 → 景教碑立碑 → 利瑪竇等喺肇慶開展工作",
+      "景教碑立碑 → 景教傳入唐代長安 → 利瑪竇等喺肇慶開展工作",
+      "利瑪竇等喺肇慶開展工作 → 景教碑立碑 → 景教傳入唐代長安",
+      "景教傳入唐代長安 → 利瑪竇等喺肇慶開展工作 → 景教碑立碑"
     ],
     "answer": 0,
-    "explanation": "戴德生創立中國內地會，關注未有足夠宣教工作嘅內陸省份。呢段歷史反映近代宣教由沿海基地逐步擴展到內陸，盼望更多人有機會聽到福音。",
-    "reference": "OMF官方歷史：1865年中國內地會；波士頓大學宣教史人物資料",
-    "source": "https://omf.org/about-us/our-story/",
-    "verification": "https://www.bu.edu/missiology/missionary-biography/t-u-v/taylor-j-hudson-1832-1905/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：635年 景教傳入唐代長安 781年 景教碑立碑 1583年 利瑪竇等喺肇慶開展工作。來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "reference": "唐代至近代",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0",
+      "e1",
+      "e2"
+    ],
+    "teachingSources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
   },
   {
     "id": "church-070",
     "unit": "china",
     "difficulty": 3,
-    "question": "華人新教教會廣泛使用嘅《官話和合本》全本聖經，喺邊年出版？",
+    "question": "「福音來到中國」時間線最後列出邊個事件？",
     "options": [
-      "1919年",
-      "1819年",
-      "1854年",
-      "1968年"
+      "《官話和合本》出版",
+      "景教傳入唐代長安",
+      "景教碑立碑",
+      "利瑪竇等喺肇慶開展工作"
     ],
     "answer": 0,
-    "explanation": "《官話和合本》全本喺1919年出版，由不同背景嘅譯者合作完成，對華人教會影響深遠。要分清楚早期譯本、和合本同後來修訂版，唔好將幾個出版年份混埋。",
-    "reference": "香港聖經公會：Milestones of Chinese Bible；香港教育大學基督教信仰教材",
-    "source": "https://www.hkbs.org.hk/en-us/8",
-    "verification": "https://www.eduhk.hk/include_n/getrichfile.php?filename=christianfaith%2FChristian_Faith_Q_A%2Fworkshop1028_1111%2F221104_Christianfaith_workshop02.pdf&key=f97a928e3365481fe05957816f22dbed&secid=54567",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1919年 《官話和合本》出版。來華歷史有多次傳入、文化接觸及本地教會成長。",
+    "reference": "唐代至近代",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/china",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e4"
+    ],
+    "teachingSources": [
+      "https://wwj.beijing.gov.cn/bjww/resource/cms/article/bjww_362762/10831095/2020072009014170956.pdf",
+      "https://library-admin.anu.edu.au/collections/xu-dishan-collection/christianity.html",
+      "https://www.loc.gov/loc/lcib/1005/detail/map4.html",
+      "https://soundingchina.fas.harvard.edu/jesuitsobj6.html",
+      "https://www.library.gov.au/research/guides-and-resources/guides-selected-collections/london-missionary-society-collection",
+      "https://library.hds.harvard.edu/exhibits/incomparable-treasure/translations/chinese",
+      "https://undpress.nd.edu/9780268208042/protestant-missionaries-in-china/",
+      "https://www.yingwaps.edu.hk/tc/content.php?wid=77"
+    ]
   },
   {
     "id": "church-071",
     "unit": "hongkong",
     "difficulty": 1,
-    "question": "1849年開始舉行崇拜嘅香港聖約翰座堂，屬於邊個教會傳統？",
+    "question": "理解香港教會發展要留意咩？",
     "options": [
-      "聖公會",
-      "浸信會",
-      "循道衛理會",
-      "中華基督教會"
+      "人口流動、語言、教育及政治處境",
+      "只睇一座建築面積",
+      "只睇王室名單",
+      "只比較學校制服"
     ],
     "answer": 0,
-    "explanation": "聖約翰座堂係香港聖公會重要嘅歷史教堂，喺1849年開始舉行崇拜。認識建築所屬嘅教會傳統，可以幫我哋分清香港不同宗派嘅來歷，唔只記得個地標。",
-    "reference": "聖約翰座堂官方歷史導覽；香港聖公會簡介",
-    "source": "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
-    "verification": "https://www.hkskh.org/content.aspx?id=10&lang=2",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：十九世紀香港成為不同差會及教會活動嘅地方，本地華人信徒亦逐漸建立群體。理解教會發展，需要睇人口流動、語言、住屋、教育及政治處境。。教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "reference": "十九至二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
   },
   {
     "id": "church-072",
     "unit": "hongkong",
     "difficulty": 2,
-    "question": "1915年成立嘅香港華人基督教聯會，最初係點樣組成？",
+    "question": "教會學校、醫療及服務係咩線索？",
     "options": [
-      "由多個宗派合作成立嘅華人教會聯合組織",
-      "由一間堂會分出幾個聚會點後改名",
-      "由英國政府將所有教會合併成立",
-      "由單一差會統一管理全港華人教會"
+      "教會參與社區嘅歷史線索",
+      "所有機構同年成立嘅證明",
+      "可以取代所有文件",
+      "只反映建築設計"
     ],
     "answer": 0,
-    "explanation": "聯會由七個宗派合作成立，反映本地華人教會早已有跨宗派合作。聯合組織唔等於所有堂會合併成一個宗派，亦唔代表各教會嘅信仰體制完全一樣。",
-    "reference": "香港華人基督教聯會110周年資料；浸大華人基督宗教文獻保存計劃",
-    "source": "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
-    "verification": "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：學校、醫院同社會服務係重要線索，但機構成立、前身工作、註冊及搬遷可以有不同年份。遇到創堂年份唔一致，先查各個日期其實指咩事件，唔好即刻判斷有人記錯。。教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "reference": "十九至二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
   },
   {
     "id": "church-073",
     "unit": "hongkong",
     "difficulty": 1,
-    "question": "香港基督教協進會喺1954年成立，主要反映邊種教會合作方向？",
+    "question": "機構有兩個成立年份，首先應做乜？",
     "options": [
-      "不同教會一齊合作同見證信仰",
-      "協助各宗派逐步合併成一個新宗派",
-      "為全港各堂會決定同一套崇拜禮儀",
-      "只代表一個差會管理佢喺香港嘅堂會"
+      "分清首次聚會、註冊同搬遷等事件",
+      "任揀較早年份",
+      "任揀較大數字",
+      "直接判斷有人造假"
     ],
     "answer": 0,
-    "explanation": "協進會係香港教會嘅聯合組織，推動教會合作。認識合一運動，要分清楚共同見證同組織合併：教會可以彼此配搭，同時仍保留各自嘅歷史同傳統。",
-    "reference": "香港基督教協進會官方簡介；聖神研究中心《鼎》1985年第25期",
-    "source": "https://www.hkcc.org.hk/",
-    "verification": "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：學校、醫院同社會服務係重要線索，但機構成立、前身工作、註冊及搬遷可以有不同年份。遇到創堂年份唔一致，先查各個日期其實指咩事件，唔好即刻判斷有人記錯。。教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "reference": "十九至二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
   },
   {
     "id": "church-074",
     "unit": "hongkong",
     "difficulty": 2,
-    "question": "中華基督教會早期推動教會合一，同以下邊個方向有密切關係？",
+    "question": "香港教會史唔應忽略邊啲人？",
     "options": [
-      "由中國信徒承擔教會責任，建立本地教會",
-      "將參與堂會改由一個外國差會統一管理",
-      "只推動華人教會採用英文崇拜同教材",
-      "以同一種洗禮做法作所有教會合作嘅先決條件"
+      "本地同工、婦女、平信徒及跨宗派合作",
+      "只記海外領袖",
+      "只記政府官員",
+      "只記建築工程師"
     ],
     "answer": 0,
-    "explanation": "中華基督教會嘅發展同教會合一、本地信徒承擔責任有關。當時教會重視自養、自治、自傳，意思係本地教會能夠承擔經濟、帶領同傳福音嘅責任。",
-    "reference": "中華基督教會香港區會：歷史沿革中嘅合一與本色化",
-    "source": "https://www.hkcccc.org/aboutus/",
-    "verification": "https://www.hkcccc.org/eng/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：香港教會並非單一宗派嘅故事。戰爭、戰後移民、城市發展同社會轉變影響教會；本地同工、婦女、平信徒及跨宗派合作都值得留意。。教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "reference": "十九至二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p2"
+    ],
+    "teachingSources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
   },
   {
     "id": "church-075",
     "unit": "hongkong",
     "difficulty": 2,
-    "question": "1887年創辦嘅雅麗氏利濟醫院，同香港早期邊項發展直接有關？",
+    "question": "用一個事件概括香港所有教會會忽略咩？",
     "options": [
-      "為華人提供西醫服務，並支援醫學教育",
-      "主要為外國海員而設嘅海軍醫療服務",
-      "只訓練海外醫生，未有本地學生參與",
-      "以傳統中醫教育為主，暫時未引入西醫"
+      "不同群體及處境嘅差異",
+      "所有堂會同年成立",
+      "香港從未有人口流動",
+      "所有教會只用同一語言"
     ],
     "answer": 0,
-    "explanation": "雅麗氏利濟醫院為本地華人提供西醫服務，亦成為香港華人西醫書院嘅教學醫院。呢段歷史提醒我哋，香港教會同宣教工作亦透過醫療、教育關心社會。",
-    "reference": "雅麗氏何妙齡那打素慈善基金會：1887年歷史里程碑",
-    "source": "https://www.nethersole.org.hk/milestone-achievements/",
-    "verification": "https://www.nethersole.org.hk/wp-content/uploads/2023/03/Mar-2023-Issue.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：十九世紀香港成為不同差會及教會活動嘅地方，本地華人信徒亦逐漸建立群體。理解教會發展，需要睇人口流動、語言、住屋、教育及政治處境。 香港教會並非單一宗派嘅故事。戰爭、戰後移民、城市發展同社會轉變影響教會；本地同工、婦女、平信徒及跨宗派合作都值得留意。。教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "reference": "十九至二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0",
+      "p2"
+    ],
+    "teachingSources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
   },
   {
     "id": "church-076",
     "unit": "hongkong",
     "difficulty": 1,
-    "question": "香港浸會大學前身香港浸會書院，喺1956年由邊個團體創辦？",
+    "question": "研究社區教會可以用咩材料？",
     "options": [
-      "香港浸信會聯會",
-      "香港聖公會維多利亞教區",
-      "香港基督教協進會",
-      "中華基督教會香港區會"
+      "年報、舊照片、會議記錄及口述訪問",
+      "只憑轉載次數",
+      "只睇最新廣告",
+      "只按建築高度推算"
     ],
     "answer": 0,
-    "explanation": "香港浸信會聯會喺1956年創辦浸會書院，後來發展成今日嘅香港浸會大學。教會參與高等教育，係戰後香港教育發展其中一部分，唔只係堂會內部嘅活動。",
-    "reference": "香港浸會大學70周年：1956年里程碑；浸大圖書館校史",
-    "source": "https://70.hkbu.edu.hk/zh_hk/milestones.html",
-    "verification": "https://library.hkbu.edu.hk/happenings/news/hkbu-timescape-launch/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：可以由附近教會或學校開始，閱讀年報、會議記錄、舊照片同口述訪問。口述記憶好重要，但亦要交叉核對時間、人物及文件。學習歷史可以由自己社區開始。。教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "reference": "十九至二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p3"
+    ],
+    "teachingSources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
   },
   {
     "id": "church-077",
     "unit": "hongkong",
     "difficulty": 3,
-    "question": "道風山基督教叢林由艾香德喺1930年創立，佢特別關注邊方面嘅工作？",
+    "question": "時間線中，「不同教會及差會喺香港開展工作」發生喺幾時？",
     "options": [
-      "接觸佛教徒，探索基督信仰同中國宗教文化嘅對話",
-      "培訓本地華人西醫，建立醫學教學醫院",
-      "聯合香港教會，創辦中文高等教育學院",
-      "設立工廠區青年中心，提供職業訓練"
+      "十九世紀中葉起",
+      "1915年",
+      "1954年",
+      "1966年"
     ],
     "answer": 0,
-    "explanation": "艾香德對中國宗教有濃厚興趣，道風山早期特別接觸佛教徒，建築亦採用中國風格。呢個例子幫我哋認識，香港宣教史有不同接觸文化同傳講信仰嘅嘗試。",
-    "reference": "道風山基督教叢林官方創辦人介紹；香港政府十八區景點資料",
-    "source": "https://www.tfscc.org/",
-    "verification": "https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=Tao+Fung+Shan+Christian+Centre",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：十九世紀中葉起 不同教會及差會喺香港開展工作。教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "reference": "十九至二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0"
+    ],
+    "teachingSources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
   },
   {
     "id": "church-078",
     "unit": "hongkong",
     "difficulty": 2,
-    "question": "英華書院喺1843年由馬六甲遷港時，帶領書院嘅係邊位宣教士？",
+    "question": "時間線中，「香港華人基督教聯會成立」發生喺幾時？",
     "options": [
-      "理雅各",
-      "馬禮遜",
-      "戴德生",
-      "李提摩太"
+      "1915年",
+      "十九世紀中葉起",
+      "1954年",
+      "1966年"
     ],
     "answer": 0,
-    "explanation": "理雅各喺1843年帶領英華書院由馬六甲遷到香港，延續教育、翻譯同出版工作。校祖馬禮遜早喺1834年離世，要分清楚創辦者同後來帶領搬遷嘅人。",
-    "reference": "英華書院官方校史；澳門文化局〈英華書院遷港後的出版活動探究〉",
-    "source": "https://yingwa.edu.hk/listingscontent/1668cf4d55a1b6f268342dcc62e0bffa.pdf",
-    "verification": "https://www.icm.gov.mo/rc/viewer/10101/2360",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1915年 香港華人基督教聯會成立。教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "reference": "十九至二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e1"
+    ],
+    "teachingSources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
   },
   {
     "id": "church-079",
     "unit": "hongkong",
     "difficulty": 3,
-    "question": "1944年，香港主教何明華按立邊位香港出生嘅女性，成為聖公宗首位女牧師？",
+    "question": "「香港教會的足跡」時間線，以下先後次序邊個啱？",
     "options": [
-      "李添嬡",
-      "黃羨雲",
-      "班佐時",
-      "羅雪貞"
+      "不同教會及差會喺香港開展工作 → 香港華人基督教聯會成立 → 香港基督教協進會成立",
+      "香港華人基督教聯會成立 → 不同教會及差會喺香港開展工作 → 香港基督教協進會成立",
+      "香港基督教協進會成立 → 香港華人基督教聯會成立 → 不同教會及差會喺香港開展工作",
+      "不同教會及差會喺香港開展工作 → 香港基督教協進會成立 → 香港華人基督教聯會成立"
     ],
     "answer": 0,
-    "explanation": "李添嬡喺戰時牧養澳門信徒，1944年由何明華喺肇慶按立。呢次按立後來引起爭論，唔代表當時所有聖公會已經同意按立女性；要分清個別歷史突破同各地後續發展。",
-    "reference": "香港聖公會檔案館：1944年1月25日；美國聖公會《A Great Cloud of Witnesses》紀念資料",
-    "source": "https://archives.hkskh.org/HistoryDetails.aspx?id=11&lang=1",
-    "verification": "https://www.episcopalchurch.org/wp-content/uploads/2021/01/lm_great_cloud_of_witnesses.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：十九世紀中葉起 不同教會及差會喺香港開展工作 1915年 香港華人基督教聯會成立 1954年 香港基督教協進會成立。教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "reference": "十九至二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0",
+      "e1",
+      "e2"
+    ],
+    "teachingSources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
   },
   {
     "id": "church-080",
     "unit": "hongkong",
     "difficulty": 1,
-    "question": "1951年創辦嘅崇基學院，創辦背景同邊類團體最有關？",
+    "question": "「香港教會的足跡」時間線最後列出邊個事件？",
     "options": [
-      "香港不同基督教教會嘅代表",
-      "只有香港浸信會聯會，並無其他宗派參與",
-      "只有香港聖公會，並無其他宗派參與",
-      "只有一個外國醫療差會，並無本地教會參與"
+      "香港聖經公會成立",
+      "不同教會及差會喺香港開展工作",
+      "香港華人基督教聯會成立",
+      "香港基督教協進會成立"
     ],
     "answer": 0,
-    "explanation": "崇基學院由香港基督教教會代表創辦，回應當時中文高等教育嘅需要。唔同教會合作辦學，顯示教會合一可以透過具體教育服務，幫助社會培育人才。",
-    "reference": "香港中文大學崇基學院官方手冊：學院簡史",
-    "source": "https://www.ccc.cuhk.edu.hk/attachment/upload/files/publication/Handbook%20website_0911.pdf",
-    "verification": "https://www.cuhk.edu.hk/theology/ccs/eng/bg.html",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1966年 香港聖經公會成立。教會、學校、醫療及社會服務構成身邊可查嘅歷史。",
+    "reference": "十九至二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/hongkong",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e3"
+    ],
+    "teachingSources": [
+      "https://stjohnscathedral.org.hk/Page.aspx?id=294&lang=1",
+      "https://www.hkskh.org/content.aspx?id=10&lang=2",
+      "https://www.hkcccu.org.hk/upload/union_info/55/doc_zh-hant/67d3e5cdb6ae6.pdf",
+      "https://sys02.lib.hkbu.edu.hk/libsca/pdcc/org/bhk02_cw.html",
+      "https://www.hkcc.org.hk/",
+      "https://hsstudyc.org.hk/wp-content/uploads/2022/01/T025_13.pdf",
+      "https://www.hkcccc.org/aboutus/",
+      "https://www.hkcccc.org/eng/"
+    ]
   },
   {
     "id": "church-081",
     "unit": "modern",
     "difficulty": 1,
-    "question": "1910年嘅世界宣教大會，喺邊個城市舉行？",
+    "question": "二十世紀教會版圖有咩轉變？",
     "options": [
-      "愛丁堡",
-      "阿姆斯特丹",
-      "洛桑",
-      "羅馬"
+      "亞洲、非洲及拉丁美洲教會成長",
+      "只剩歐洲有教會",
+      "所有宗派合併成一個",
+      "各地同步停止宣教"
     ],
     "answer": 0,
-    "explanation": "1910年愛丁堡大會匯聚不同宣教團體，商討宣教工作嘅共同問題，亦影響後來嘅教會合作。大會唔等於所有宗派正式合併，更唔係普世教會協會成立嘅年份。",
-    "reference": "哥倫比亞大學伯克神學圖書館：World Missionary Conference, Edinburgh 1910檔案",
-    "source": "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
-    "verification": "https://www.religion-online.org/article/the-world-missionary-conference/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：二十世紀教會生活受到兩次世界大戰、殖民秩序轉變同社會運動影響。亞洲、非洲及拉丁美洲教會嘅成長，提醒我哋普世教會唔只係歐洲或北美嘅故事。。世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "reference": "二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
   },
   {
     "id": "church-082",
     "unit": "modern",
     "difficulty": 2,
-    "question": "普世教會協會（WCC）喺1948年正式成立，當屆大會喺邊度舉行？",
+    "question": "愛丁堡宣教會議有咩重要性？",
     "options": [
-      "阿姆斯特丹",
-      "愛丁堡",
-      "洛桑",
-      "日內瓦"
+      "近代合一運動嘅重要節點",
+      "所有教會正式合併",
+      "只係地方堂會註冊",
+      "初期基督論會議"
     ],
     "answer": 0,
-    "explanation": "普世教會協會喺1948年阿姆斯特丹大會正式成立。愛丁堡同洛桑亦同現代教會運動有關，日內瓦則同協會辦公地點有關，要分清大會地點同機構所在地。",
-    "reference": "普世教會協會官方：第一次大會，Amsterdam 1948",
-    "source": "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
-    "verification": "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1910年愛丁堡宣教會議係近代普世合一運動嘅重要節點，但唔代表所有基督宗教傳統都同等參與。1948年普世教會協會成立，亦唔等於所有教會合併成一個宗派。。世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "reference": "二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
   },
   {
     "id": "church-083",
     "unit": "modern",
     "difficulty": 2,
-    "question": "按普世教會協會自己嘅說明，佢同各成員教會係咩關係？",
+    "question": "愛丁堡會議參與範圍要留意咩？",
     "options": [
-      "幫助教會合作嘅團契，唔係管轄各宗派嘅超級教會",
-      "取代各宗派領袖，直接任命所有堂會牧師",
-      "要求所有成員教會採用同一種洗禮方式",
-      "成立之後，各成員教會就唔再有自己嘅教會身份"
+      "唔代表所有傳統都同等參與",
+      "每個傳統比重必定相同",
+      "只有香港堂會參加",
+      "只准景教代表參加"
     ],
     "answer": 0,
-    "explanation": "協會講明自己唔係超級教會，唔會替所有成員教會立法。認識教會合一運動，要分清共同合作、神學對話同組織合併，唔好將幾種事情混為一談。",
-    "reference": "普世教會協會：Self-understanding and vision；Origins and present basis",
-    "source": "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
-    "verification": "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1910年愛丁堡宣教會議係近代普世合一運動嘅重要節點，但唔代表所有基督宗教傳統都同等參與。1948年普世教會協會成立，亦唔等於所有教會合併成一個宗派。。世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "reference": "二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
   },
   {
     "id": "church-084",
     "unit": "modern",
     "difficulty": 1,
-    "question": "《洛桑信約》喺1974年邊個聚會中產生？",
+    "question": "普世教會協會成立唔等於咩？",
     "options": [
-      "世界福音宣教大會",
-      "第二次梵蒂岡大公會議",
-      "普世教會協會第一次大會",
-      "愛丁堡世界宣教大會"
+      "所有教會合併成一個宗派",
+      "合一運動有組織發展",
+      "各教會仍有自己歷史",
+      "教會可以跨傳統合作"
     ],
     "answer": 0,
-    "explanation": "1974年喺瑞士洛桑舉行嘅世界福音宣教大會產生《洛桑信約》，成為現代福音派重要文件。其他大會亦影響教會歷史，但年份、參與者同文件都唔相同。",
-    "reference": "洛桑運動官方：Lausanne 1974 Documents；The Lausanne Covenant",
-    "source": "https://lausanne.org/content/lausanne-1974-documents",
-    "verification": "https://lausanne.org/statement/lausanne-covenant",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1910年愛丁堡宣教會議係近代普世合一運動嘅重要節點，但唔代表所有基督宗教傳統都同等參與。1948年普世教會協會成立，亦唔等於所有教會合併成一個宗派。。世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "reference": "二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
   },
   {
     "id": "church-085",
     "unit": "modern",
     "difficulty": 3,
-    "question": "《洛桑信約》第5段點樣講傳福音同社會責任？",
+    "question": "五旬節／靈恩、梵二及福音派合作應點理解？",
     "options": [
-      "兩樣都係基督徒責任，但唔應當作完全相同嘅事",
-      "社會關懷會妨礙傳福音，所以教會唔應參與",
-      "只要做好社會服務，就已經等同完整傳講福音",
-      "只要口頭傳福音，就唔需要關心不公義"
+      "不同方向嘅更新，有交集亦有差異",
+      "同一運動嘅三個名稱",
+      "同年同城開始",
+      "只討論外邦人割禮"
     ],
     "answer": 0,
-    "explanation": "信約承認傳福音同社會參與都係基督徒責任，同時分清楚兩者。呢段歷史有助理解現代福音派點樣反思只講信息、忽略鄰舍需要嘅傾向。",
-    "reference": "《洛桑信約》第5段 Christian Social Responsibility；洛桑文件LOP21",
-    "source": "https://lausanne.org/statement/lausanne-covenant",
-    "verification": "https://lausanne.org/occasional-paper/lop-21",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：五旬節及靈恩運動、天主教梵二會議、福音派宣教合作，係不同方向嘅更新。彼此有交集亦有差異，唔可以當成同一場運動。。世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "reference": "二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p2"
+    ],
+    "teachingSources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
   },
   {
     "id": "church-086",
     "unit": "modern",
     "difficulty": 2,
-    "question": "第二次梵蒂岡大公會議嘅《大公主義法令》，特別重視邊件事？",
+    "question": "二十世紀教會受咩背景影響？",
     "options": [
-      "推動不同基督徒之間嘅合一與交流",
-      "宣佈宗教改革各教會已經全部加入羅馬教會",
-      "停止同其他基督教傳統接觸",
-      "將所有基督教信經改為同一份新文件"
+      "世界大戰、殖民秩序轉變同社會運動",
+      "只有中世紀十字軍",
+      "只有尼祿一項政策",
+      "只有唐代朝廷決定"
     ],
     "answer": 0,
-    "explanation": "1964年頒佈嘅法令，將恢復基督徒合一列為會議嘅重要關注。重視對話唔等於差異即刻消失，亦唔代表所有教會已合併，要分清楚方向同實際進程。",
-    "reference": "梵蒂岡第二次大公會議《大公主義法令》序言及第1章",
-    "source": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html",
-    "verification": "https://www.clerus.org/pls/clerus/rn_clerus.r_select_abstract?id=15134&layout=1&lingua=3&vers=1",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：二十世紀教會生活受到兩次世界大戰、殖民秩序轉變同社會運動影響。亞洲、非洲及拉丁美洲教會嘅成長，提醒我哋普世教會唔只係歐洲或北美嘅故事。。世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "reference": "二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
   },
   {
     "id": "church-087",
     "unit": "modern",
     "difficulty": 2,
-    "question": "第二次梵蒂岡大公會議喺邊段時間舉行？",
+    "question": "時間線中，「阿蘇撒街復興」發生喺幾時？",
     "options": [
-      "1962至1965年",
-      "1869至1870年",
-      "1545至1563年",
-      "1910至1911年"
+      "1906年",
+      "1910年",
+      "1948年",
+      "1962至1965年"
     ],
     "answer": 0,
-    "explanation": "梵二會議喺1962至1965年舉行，係二十世紀天主教重要事件。1869至1870年係梵一會議，1545至1563年係天特會議；分清年代，有助連結各次會議面對嘅問題。",
-    "reference": "梵蒂岡新聞：Second Vatican Council 1962–1965；加州大學伯克萊分校會議文獻目錄",
-    "source": "https://www.vaticannews.va/en/vatican-city/news/2019-06/second-vatican-council-women-regina-heyder.html",
-    "verification": "https://lawcat.berkeley.edu/record/349760?ln=en",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1906年 阿蘇撒街復興。世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "reference": "二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0"
+    ],
+    "teachingSources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
   },
   {
     "id": "church-088",
     "unit": "modern",
     "difficulty": 1,
-    "question": "1906年洛杉磯亞蘇撒街復興，特別同邊個近代教會運動有關？",
+    "question": "時間線中，「愛丁堡宣教會議」發生喺幾時？",
     "options": [
-      "五旬節運動",
-      "循道運動",
-      "牛津運動",
-      "敬虔主義運動"
+      "1910年",
+      "1906年",
+      "1948年",
+      "1962至1965年"
     ],
     "answer": 0,
-    "explanation": "由威廉西摩帶領嘅亞蘇撒街聚會，係早期五旬節運動嘅重要中心之一，影響傳到不同地方。稱佢為重要中心，比將整個運動所有起點都歸畀同一場聚會更準確。",
-    "reference": "神召會歷史研究：This Week in AG History—March 11, 1916；亞蘇撒街宣道會歷史",
-    "source": "https://news.ag.org/en/article-repository/news/2021/03/this-week-in-ag-history--march-11-1916",
-    "verification": "https://www.afmazusa.com/history",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1910年 愛丁堡宣教會議。世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "reference": "二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e1"
+    ],
+    "teachingSources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
   },
   {
     "id": "church-089",
     "unit": "modern",
     "difficulty": 3,
-    "question": "1934年《巴門宣言》面對納粹影響教會，強調信仰同生活嘅最高依據係咩？",
+    "question": "「二十世紀與普世教會」時間線，以下先後次序邊個啱？",
     "options": [
-      "聖經所見證嘅耶穌基督",
-      "國家領袖認可嘅宗教政策",
-      "當時最流行嘅民族主義思想",
-      "能帶動教會增長嘅政治聯盟"
+      "阿蘇撒街復興 → 愛丁堡宣教會議 → 普世教會協會成立",
+      "愛丁堡宣教會議 → 阿蘇撒街復興 → 普世教會協會成立",
+      "普世教會協會成立 → 愛丁堡宣教會議 → 阿蘇撒街復興",
+      "阿蘇撒街復興 → 普世教會協會成立 → 愛丁堡宣教會議"
     ],
     "answer": 0,
-    "explanation": "《巴門宣言》強調耶穌基督對教會嘅權柄，反對將國家或政治主張變成教會最高標準。不過，呢份宣言唔代表當時全部德國教會都有同一立場，讀歷史要留意教會內部亦有不同回應。",
-    "reference": "美國長老會：Confessions及《巴門宣言》相關說明",
-    "source": "https://pcusa.org/confessions",
-    "verification": "https://pcusa.org/es/news-storytelling/news/2020/12/2/whos-charge-congregation",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1906年 阿蘇撒街復興 1910年 愛丁堡宣教會議 1948年 普世教會協會成立。世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "reference": "二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0",
+      "e1",
+      "e2"
+    ],
+    "teachingSources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
   },
   {
     "id": "church-090",
     "unit": "modern",
     "difficulty": 1,
-    "question": "聖公會主教圖圖喺1984年獲諾貝爾和平獎，主要因為佢參與咩工作？",
+    "question": "「二十世紀與普世教會」時間線最後列出邊個事件？",
     "options": [
-      "以非暴力方式反對南非種族隔離",
-      "主持南非結束種族隔離後嘅真相與和解委員會",
-      "領導美國蒙哥馬利罷乘巴士嘅民權運動",
-      "透過武裝游擊戰推翻南非種族隔離政府"
+      "洛桑世界福音會議",
+      "阿蘇撒街復興",
+      "愛丁堡宣教會議",
+      "普世教會協會成立"
     ],
     "answer": 0,
-    "explanation": "圖圖因以非暴力方式反對南非種族隔離而喺1984年獲獎。佢後來主持真相與和解委員會，但嗰係獲獎之後嘅工作，要分清楚時間同獲獎原因。",
-    "reference": "諾貝爾獎官方：1984年和平獎；南非真相與和解委員會1995年11月30日任命聲明",
-    "source": "https://www.nobelprize.org/prizes/peace/1984/summary/",
-    "verification": "https://www.justice.gov.za/trc/media/trc-media-pr-1995-2000.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1974年 洛桑世界福音會議。世界教會版圖改變，宣教、合一同更新出現新發展。",
+    "reference": "二十世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/modern",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e4"
+    ],
+    "teachingSources": [
+      "https://www.columbia.edu/cu/lweb/img/assets/6398/MRL12_WMC_FA.pdf",
+      "https://www.religion-online.org/article/the-world-missionary-conference/",
+      "https://www.oikoumene.org/about-the-wcc/organizational-structure/assembly",
+      "https://www.oikoumene.org/sites/default/files/2022-11/Dictionary%20of%20the%20Ecumenical%20Movement_Web.pdf",
+      "https://www.oikoumene.org/about-the-wcc/self-understanding-and-vision",
+      "https://www.oikoumene.org/resources/documents/origins-and-present-basis-of-the-wcc-constantine-b-scouteris",
+      "https://lausanne.org/content/lausanne-1974-documents",
+      "https://lausanne.org/statement/lausanne-covenant"
+    ]
   },
   {
     "id": "church-091",
     "unit": "reading",
     "difficulty": 1,
-    "question": "研究一間堂會1900年嘅聚會情況，以下邊份最直接屬於當時留下嘅一手史料？",
+    "question": "以下邊類係可用史料？",
     "options": [
-      "1900年嘅堂會會議記錄原件",
-      "2020年作者整理嘅教會通史",
-      "今日網友概括嗰段歷史嘅留言",
-      "近年百科全書對該堂會嘅介紹"
+      "書信、照片、會議記錄及訪談",
+      "只有冇作者嘅轉述",
+      "只有測驗分數",
+      "只有網頁標題"
     ],
     "answer": 0,
-    "explanation": "一手史料係同研究事件有直接關係嘅原始材料，例如當時嘅會議記錄、信件同日記。後人整理嘅研究一樣有用，但同事件現場留下嘅材料，角色並唔相同。",
-    "reference": "康奈爾大學圖書館：Primary Sources；美國國會圖書館：What is a primary source?",
-    "source": "https://guides.library.cornell.edu/sources/primary",
-    "verification": "https://ask.loc.gov/faq/303148",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：史料可以係書信、會議記錄、碑文、照片、報刊及訪談。原始史料唔等於完全中立；作者一樣有目的、立場同資料限制。後來研究亦需要交代點樣使用證據。。先分清史料、敘述同解讀，再比較不同證據。",
+    "reference": "閱讀方法",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
   },
   {
     "id": "church-092",
     "unit": "reading",
     "difficulty": 2,
-    "question": "讀一封宣教士寫畀支持者嘅舊信，點樣做最有助理解內容？",
+    "question": "原始史料應點理解？",
     "options": [
-      "留意作者、收信人、寫信目的同當時背景",
-      "只要係親筆信，就當每句都係完整而中立嘅事實",
-      "只根據後人對作者嘅好評，決定信件可唔可信",
-      "只抽出最感動嗰句，唔使理前後內容"
+      "有價值，但作者亦有目的同限制",
+      "必定完全中立",
+      "必定比其他資料完整",
+      "無須睇寫作對象"
     ],
     "answer": 0,
-    "explanation": "親筆信可以提供珍貴見證，但作者仍有自己嘅位置、目的同有限資訊。知道佢寫畀邊個、點解而寫，再同其他資料比較，先較容易分清觀察、解釋同宣傳。",
-    "reference": "美國國會圖書館：Analyzing Primary Sources；美國歷史學會歷史能力框架",
-    "source": "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
-    "verification": "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：史料可以係書信、會議記錄、碑文、照片、報刊及訪談。原始史料唔等於完全中立；作者一樣有目的、立場同資料限制。後來研究亦需要交代點樣使用證據。。先分清史料、敘述同解讀，再比較不同證據。",
+    "reference": "閱讀方法",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
   },
   {
     "id": "church-093",
     "unit": "reading",
     "difficulty": 2,
-    "question": "兩本堂慶特刊寫咗唔同創堂年份，第一步較好點處理？",
+    "question": "三個網站講同一句說話代表咩？",
     "options": [
-      "查清楚各自係計首次聚會、正式立會，定遷入新堂",
-      "直接採用出版年份較新嗰本，唔使再查",
-      "採用較早嘅年份，假設後來嗰次一定係重建",
-      "只憑堂會沿用嘅周年數字，唔需核對原始記錄"
+      "可能抄同一來源，未必係獨立證據",
+      "必定係三個獨立見證",
+      "必定由三位當事人寫成",
+      "無須再追查引用"
     ],
     "answer": 0,
-    "explanation": "吳國傑指出，首次聚會、正式成立、前身開始運作同遷港，可以係幾個不同日期。先查清楚每個年份指邊件事，先知道係記錄有錯，定係計算教會歷史長短嘅方法唔同。",
-    "reference": "吳國傑〈從宗派研究經驗反思：香港教會對史料與統計的處理〉，《浸神院訊》2008年10月，頁11–13",
-    "source": "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
-    "verification": "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：三個網站講同一句說話，可能只係抄同一份資料，唔等於有三份獨立證據。核對時要追返最早來源、作者、出版日期及引用位置。。先分清史料、敘述同解讀，再比較不同證據。",
+    "reference": "閱讀方法",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
   },
   {
     "id": "church-094",
     "unit": "reading",
     "difficulty": 3,
-    "question": "三個網站用同一句說話講某次復興，點樣先知道係咪三份獨立證據？",
+    "question": "核對網上敘述應追查咩？",
     "options": [
-      "追查各自引用邊份原始資料，睇有冇只係互相抄錄",
-      "只要作者名字唔同，就當成三份獨立證據",
-      "採用最多人分享嗰篇，當其餘兩篇已獲證實",
-      "比較三篇嘅上載日期，用較新嗰篇代替追查引用"
+      "最早來源、作者、日期及引用位置",
+      "只比較網址長短",
+      "只比較頁面顏色",
+      "只數廣告數量"
     ],
     "answer": 0,
-    "explanation": "不同網頁可能全部抄自同一本書或同一段文字，所以網址數量唔等於獨立證據數量。比較來源同追查引用，可以避免將同一個錯誤重複出現，誤當成多方證實。",
-    "reference": "Digital Inquiry Group：Reading Like a Historian嘅互相核對方法；美國國會圖書館史料分析",
-    "source": "https://www.inquirygroup.org/history-lessons",
-    "verification": "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：三個網站講同一句說話，可能只係抄同一份資料，唔等於有三份獨立證據。核對時要追返最早來源、作者、出版日期及引用位置。。先分清史料、敘述同解讀，再比較不同證據。",
+    "reference": "閱讀方法",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
   },
   {
     "id": "church-095",
     "unit": "reading",
     "difficulty": 2,
-    "question": "想理解十六世紀信徒點解有某種做法，以下邊個方法較可靠？",
+    "question": "出席人次同不同參與者人數應點比較？",
     "options": [
-      "先了解佢哋當時嘅信念、制度同生活，再作評價",
-      "直接將今日香港教會嘅做法當成當時普遍標準",
-      "只問佢哋同自己宗派有幾多相似，唔使睇背景",
-      "只要後來證明做法有問題，就唔需要了解原因"
+      "先分清計法同定義",
+      "必定係同一數字",
+      "人次必定較少",
+      "唔使知道有幾多場活動"
     ],
     "answer": 0,
-    "explanation": "將人物放返佢所處嘅時代，可以理解佢面對咩選擇同限制。了解原因唔等於認同做法，而係避免只用今日熟悉嘅制度同語言，代替當時人真正面對嘅世界。",
-    "reference": "美國歷史學會：Historical Context與Chronological Reasoning；Digital Inquiry Group歷史閱讀方法",
-    "source": "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
-    "verification": "https://www.inquirygroup.org/history-lessons",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：年份、統計同名稱亦需要定義。首次聚會、正式成立同註冊未必同年；出席人次亦唔等於不同參與者人數。先問清楚計法，先有條件比較。。先分清史料、敘述同解讀，再比較不同證據。",
+    "reference": "閱讀方法",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p2"
+    ],
+    "teachingSources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
   },
   {
     "id": "church-096",
     "unit": "reading",
     "difficulty": 3,
-    "question": "比較兩個宗派嘅人數，最先要核對咩？",
+    "question": "未能確認嘅細節應點處理？",
     "options": [
-      "統計年份同定義，例如會籍人數定每週出席人數",
-      "只揀兩份最新年報，即使人數定義不同亦直接比較",
-      "把一方會友名冊人數，同另一方平均出席人數直接比較",
-      "只要都叫會友人數，就唔需要查有冇包括海外分堂"
+      "承認未知並繼續核對",
+      "補成精確日期",
+      "只保留最精彩版本",
+      "用轉載次數決定真假"
     ],
     "answer": 0,
-    "explanation": "會友名冊人數同實際聚會人數並唔相同，有啲數字亦可能包括海外分堂。吳國傑提醒讀者留意統計方法；要先用相同年份同定義，先能作有意義嘅比較。",
-    "reference": "吳國傑〈從宗派研究經驗反思：香港教會對史料與統計的處理〉，《浸神院訊》2008年10月，頁12–13",
-    "source": "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12",
-    "verification": "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：讀到動人故事，可以問：邊份材料最早記低？有冇其他當事人記述？細節係已確認、合理推測，定後來傳說？承認未知，有時比補一個精彩結局更負責任。。先分清史料、敘述同解讀，再比較不同證據。",
+    "reference": "閱讀方法",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p3"
+    ],
+    "teachingSources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
   },
   {
     "id": "church-097",
     "unit": "reading",
     "difficulty": 1,
-    "question": "見到一張舊教會合照，以下邊句係直接觀察，而唔係未有證據嘅推測？",
+    "question": "按閱讀步驟，確定作者、日期、文體及對象係邊一步？",
     "options": [
-      "相入面前排有十個人坐低",
-      "每一個人都係嗰間教會嘅正式會友",
-      "相中所有人當日都對講道非常滿意",
-      "前排坐低嗰十個人一定全部係牧師"
+      "第一步",
+      "第二步",
+      "第三步",
+      "約十七世紀"
     ],
     "answer": 0,
-    "explanation": "可以數到嘅人數同姿勢屬於觀察，會籍、身份同心情就要另外搵資料。讀照片時分清『睇到』同『估到』，可以避免將自己嘅想像寫成教會歷史。",
-    "reference": "美國國會圖書館：Primary Source Analysis Tool及觀察與推論教學",
-    "source": "https://blogs.loc.gov/teachers/2012/03/primary-source-analysis-tool-using-the-%E2%80%9Creflect%E2%80%9D-column-to-develop-critical-thinking/",
-    "verification": "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：第一步 確定作者、日期、文體及對象。先分清史料、敘述同解讀，再比較不同證據。",
+    "reference": "閱讀方法",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0"
+    ],
+    "teachingSources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
   },
   {
     "id": "church-098",
     "unit": "reading",
     "difficulty": 1,
-    "question": "一本近代教會史書引用好多古代信件，嗰本書主要提供邊種幫助？",
+    "question": "按閱讀步驟，追查引用來源及獨立證據係邊一步？",
     "options": [
-      "整理同解釋史料，幫讀者理解事件之間嘅關係",
-      "只要引用古代信件，全本就等同古代人嘅直接見證",
-      "只要參考書目夠長，就唔需要再檢查作者嘅分析",
-      "有作者解說就一定冇研究價值，只能讀原始文件"
+      "第二步",
+      "第一步",
+      "第三步",
+      "約十七世紀"
     ],
     "answer": 0,
-    "explanation": "歷史研究書可以整理一手材料、比較不同見證，再提出解釋，呢類二手研究好有價值。一本書亦可能收錄原始文件，閱讀時要分清作者分析同引用嘅文件本身。",
-    "reference": "康奈爾大學圖書館：Secondary Sources；紐約大學圖書館史料使用指引",
-    "source": "https://guides.library.cornell.edu/sources/secondary",
-    "verification": "https://guides.nyu.edu/primary-sources/using-primary",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：第二步 追查引用來源及獨立證據。先分清史料、敘述同解讀，再比較不同證據。",
+    "reference": "閱讀方法",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e1"
+    ],
+    "teachingSources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
   },
   {
     "id": "church-099",
     "unit": "reading",
     "difficulty": 2,
-    "question": "聽到一個感人嘅宣教故事，但暫時搵唔到當時記錄，較好點講？",
+    "question": "「點樣讀教會歷史」時間線，以下先後次序邊個啱？",
     "options": [
-      "說明係流傳故事，將已證實同未證實嘅部分分開",
-      "只要幾本靈修書都引用，就當作幾份獨立見證",
-      "先用大概年代補成精確日期，方便讀者記憶",
-      "只要未找到原稿，就斷定人物同事件一定都係虛構"
+      "確定作者、日期、文體及對象 → 追查引用來源及獨立證據 → 分清確認事實、推測同傳說",
+      "追查引用來源及獨立證據 → 確定作者、日期、文體及對象 → 分清確認事實、推測同傳說",
+      "分清確認事實、推測同傳說 → 追查引用來源及獨立證據 → 確定作者、日期、文體及對象",
+      "確定作者、日期、文體及對象 → 分清確認事實、推測同傳說 → 追查引用來源及獨立證據"
     ],
     "answer": 0,
-    "explanation": "歷史結論要同證據配合，資料不足時可以坦白保留判斷。未能證實唔等於一定虛構，但感人亦唔等於已經證實；清楚交代限制，比補作細節更負責任。",
-    "reference": "美國歷史學會：歷史解釋必須有證據支持；美國國會圖書館史料提問方法",
-    "source": "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
-    "verification": "https://blogs.loc.gov/teachers/2012/03/primary-source-analysis-tool-forming-good-questions/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：第一步 確定作者、日期、文體及對象 第二步 追查引用來源及獨立證據 第三步 分清確認事實、推測同傳說。先分清史料、敘述同解讀，再比較不同證據。",
+    "reference": "閱讀方法",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0",
+      "e1",
+      "e2"
+    ],
+    "teachingSources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
   },
   {
     "id": "church-100",
     "unit": "reading",
     "difficulty": 1,
-    "question": "堂會想保存自己嘅歷史，以下邊個做法最有幫助？",
+    "question": "「點樣讀教會歷史」時間線最後列出邊個閱讀步驟？",
     "options": [
-      "保存會議記錄、信件同照片，標明日期同人物，再妥善備份",
-      "只保留掃描圖片，人物同年份日後再靠外觀推算",
-      "只保存已出版堂慶特刊，原始會議記錄可以清走",
-      "用一位長輩嘅口述代替所有書面材料，唔再交叉核對"
+      "分清確認事實、推測同傳說",
+      "確定作者、日期、文體及對象",
+      "追查引用來源及獨立證據",
+      "米蘭協議"
     ],
     "answer": 0,
-    "explanation": "一旦原始資料流失，有啲往事就再難查清。吳國傑呼籲教會保存文獻，亦提到掃描或交神學院圖書館整理；保留日期同背景，先方便後來人認真研究。",
-    "reference": "吳國傑〈從宗派研究經驗反思：香港教會對史料與統計的處理〉，《浸神院訊》2008年10月，頁13；康奈爾大學檔案研究指引",
-    "source": "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=13",
-    "verification": "https://guides.library.cornell.edu/mann-primary-sources/ar-intro",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：第三步 分清確認事實、推測同傳說。先分清史料、敘述同解讀，再比較不同證據。",
+    "reference": "閱讀方法",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reading",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e2"
+    ],
+    "teachingSources": [
+      "https://guides.library.cornell.edu/sources/primary",
+      "https://ask.loc.gov/faq/303148",
+      "https://memory.loc.gov/static/programs/teachers/getting-started-with-primary-sources/documents/Analyzing_Primary_Sources.pdf",
+      "https://www.historians.org/wp-content/uploads/2024/05/History-Framework-SSRC.pdf",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=11",
+      "https://www.inquirygroup.org/history-lessons",
+      "https://www.loc.gov/programs/teachers/getting-started-with-primary-sources/guides/",
+      "https://www.hkbts.edu.hk/wp-content/uploads/2023/03/200810_Newsletter.pdf#page=12"
+    ]
   }
 ]

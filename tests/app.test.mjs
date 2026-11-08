@@ -266,7 +266,7 @@ test('Church-history lessons resume, save bookmarks and mistakes, and update pro
   await app.click('.question-meta [data-action="bookmark"]');
   await app.click('[data-action="skip"]');
   assert.equal(app.$('.feedback a'),null);
-  assert.match(app.$('.feedback .reference').textContent,/出處：/);
+  assert.equal(app.$('.feedback .reference'),null);
   const saved=app.w.localStorage.getItem(key);app.dom.window.close();
   app=await boot(saved,'#/quiz');
   assert.equal(app.savedProgress().current.answers.length,1);
@@ -545,7 +545,7 @@ test('Learning centre saves private read state without XP and all kingdom lesson
  const {KINGDOM_UNITS,KINGDOM_MAP}=await import('../dist/kingdom-course.mjs');
  for(const unit of KINGDOM_UNITS){
   await app.navigate('/learn/kingdoms/'+unit.id);await app.click('[data-action="start"][data-mode="kingdoms"]');
-  for(let i=0;i<10;i++){const r=app.savedProgress().current,q=KINGDOM_MAP.get(r.items[r.index].id);await app.click(`[data-action="answer"][data-choice="${q.answer}"]`);assert.match(app.$('.feedback .reference').textContent,/[0-9]+/);await app.click('[data-action="next"]');}
+  for(let i=0;i<10;i++){const r=app.savedProgress().current,q=KINGDOM_MAP.get(r.items[r.index].id);await app.click(`[data-action="answer"][data-choice="${q.answer}"]`);assert.equal(app.$('.feedback .reference'),null);await app.click('[data-action="next"]');}
   assert.match(app.$('.score-ring').textContent,/10 \/ 10/);
  }
  assert.equal(Object.keys(app.savedProgress().kingdomAnswers).length,100);

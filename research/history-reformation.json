@@ -3,540 +3,936 @@
     "id": "church-031",
     "unit": "reformation",
     "difficulty": 1,
-    "question": "路德喺1517年提出《九十五條》，主要想討論教會邊方面嘅問題？",
+    "question": "《九十五條》主要討論咩？",
     "options": [
-      "贖罪券嘅宣傳、濫用同悔改嘅關係",
-      "教會應唔應該只用德文舉行崇拜",
-      "所有教會應唔應該取消嬰兒洗禮",
-      "教會應唔應該由長老代替所有主教"
+      "贖罪券、悔改同濫用",
+      "英格蘭禮文",
+      "近代差會章程",
+      "香港學校制度"
     ],
     "answer": 0,
-    "explanation": "路德質疑當時贖罪券嘅宣傳同濫用，強調悔改唔係花錢買安心。呢份文件引發咗廣泛討論，但當時仲未係一份已經講齊後來所有新教立場嘅宣言。",
-    "reference": "1517年《九十五條》；德國福音教會聯會刊載原文",
-    "source": "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
-    "verification": "https://sfg.ekd.de/english/95_theses.html",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1517年路德提出《九十五條》，重點係贖罪券、悔改同相關濫用。唔好將佢當成當時已寫齊後來所有新教立場嘅宣言。印刷、學術辯論同地方政治，令爭論迅速擴展。。改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "reference": "十六世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
   },
   {
     "id": "church-032",
     "unit": "reformation",
     "difficulty": 2,
-    "question": "1521年喺沃爾姆斯會議，路德被要求做咩，而佢最終拒絕？",
+    "question": "點解唔應將《九十五條》當成完整新教宣言？",
     "options": [
-      "撤回自己被指有問題嘅著作同教導",
-      "接受日內瓦教會主任牧師嘅職位",
-      "為英王同教宗嘅婚姻爭議作裁決",
-      "簽署各派對主餐已有共識嘅聲明"
+      "後來立場並非當時已全部寫齊",
+      "文件只係一份軍隊名單",
+      "文件到二十世紀先寫成",
+      "所有改革者只接受同一文件"
     ],
     "answer": 0,
-    "explanation": "路德喺沃爾姆斯面對皇帝同帝國代表，被問到係咪願意撤回著作。佢拒絕，之後受到帝國禁令威脅。呢件事顯示改革唔單止係神學辯論，亦牽涉政治權力。",
-    "reference": "1521年沃爾姆斯會議；沃爾姆斯市歷史資料",
-    "source": "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
-    "verification": "https://www.lcms.org/resources/post/a-reformation-timeline",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1517年路德提出《九十五條》，重點係贖罪券、悔改同相關濫用。唔好將佢當成當時已寫齊後來所有新教立場嘅宣言。印刷、學術辯論同地方政治，令爭論迅速擴展。。改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "reference": "十六世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
   },
   {
     "id": "church-033",
     "unit": "reformation",
     "difficulty": 1,
-    "question": "路德避居瓦特堡期間完成嘅重要譯經工作係邊一項？",
+    "question": "咩因素令改革爭論擴展？",
     "options": [
-      "將新約由希臘文譯成德文",
-      "將全本舊約由希伯來文譯成拉丁文",
-      "將全本聖經由拉丁文譯成英文",
-      "將新約由德文譯成法文"
+      "印刷、學術辯論同地方政治",
+      "只有十九世紀移民",
+      "只有海外差會成立",
+      "只有一人私下工作"
     ],
     "answer": 0,
-    "explanation": "路德喺1521至1522年避居瓦特堡時，將新約由希臘文譯成德文，之後再同同工修訂，喺1522年出版。全本德文聖經要到1534年先出版，兩件事要分清楚。",
-    "reference": "路德1522年德文新約；芝加哥路德宗神學院館藏及瓦特堡資料",
-    "source": "https://gruber.lstc.edu/luthers_bible/1522.php",
-    "verification": "https://www.wartburg.de/personen/martin-luther",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1517年路德提出《九十五條》，重點係贖罪券、悔改同相關濫用。唔好將佢當成當時已寫齊後來所有新教立場嘅宣言。印刷、學術辯論同地方政治，令爭論迅速擴展。。改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "reference": "十六世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
   },
   {
     "id": "church-034",
     "unit": "reformation",
     "difficulty": 2,
-    "question": "按路德宗1530年《奧斯堡信條》，人點樣喺神面前被稱為義？",
+    "question": "沃爾姆斯會議要求路德做咩？",
     "options": [
-      "因基督嘅緣故，白白藉信領受恩典",
-      "先累積足夠功德，再由教會確認得救",
-      "藉家族嘅宗教身份，自動承受赦罪",
-      "先完成指定善工，再換取神嘅接納"
+      "撤回著作",
+      "撰寫英語公禱書",
+      "成立普世教會協會",
+      "主持梵二會議"
     ],
     "answer": 0,
-    "explanation": "《奧斯堡信條》第四條強調，人唔能夠靠自己嘅功德換取稱義，而係因基督、藉信領受恩典。呢個講法唔等於善行冇價值，而係分清得救嘅根基同信仰結出嘅果子。",
-    "reference": "《奧斯堡信條》第四條；路德宗信仰文件",
-    "source": "https://thebookofconcord.org/augsburg-confession/article-iv/",
-    "verification": "https://ctsfw.edu/etext/boc/ac/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1521年沃爾姆斯會議要求路德撤回著作，佢拒絕。改革喺不同城市走出不同道路：慈運理同加爾文所處嘅瑞士城市，制度同處境亦有分別。。改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "reference": "十六世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
   },
   {
     "id": "church-035",
     "unit": "reformation",
     "difficulty": 1,
-    "question": "慈運理推動宗教改革，最密切相關嘅瑞士城市係邊個？",
+    "question": "慈運理同加爾文嘅工作反映咩？",
     "options": [
-      "蘇黎世",
-      "日內瓦",
-      "洛桑",
-      "伯恩"
+      "不同城市有不同制度同道路",
+      "所有人喺同城工作",
+      "改革只涉及路德一人",
+      "各教會立即完全一致"
     ],
     "answer": 0,
-    "explanation": "慈運理喺1519年到蘇黎世大教堂任職，藉講道同公開討論推動改革。日內瓦就更常同加爾文連埋一齊講；認清城市同人物，有助分辨瑞士改革唔同嘅發展路線。",
-    "reference": "蘇黎世宗教改革；蘇黎世中央圖書館及市檔案館",
-    "source": "https://www.zb.uzh.ch/en/fokus/beitrag/reformation",
-    "verification": "https://www.stadt-zuerich.ch/de/stadtleben/stadtportraet/zuerichs-geschichte/stadtarchiv/wissensportal/reformation-in-zuerich.html",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1521年沃爾姆斯會議要求路德撤回著作，佢拒絕。改革喺不同城市走出不同道路：慈運理同加爾文所處嘅瑞士城市，制度同處境亦有分別。。改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "reference": "十六世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
   },
   {
     "id": "church-036",
     "unit": "reformation",
     "difficulty": 3,
-    "question": "1529年馬堡會談，路德同慈運理未能完全達成共識嘅核心問題係咩？",
+    "question": "天特會議屬邊方面歷史？",
     "options": [
-      "點理解基督喺主餐中嘅同在",
-      "應唔應該承認嬰兒洗禮",
-      "教牧人員可唔可以結婚",
-      "信徒可唔可以用自己語言讀聖經"
+      "天主教內部改革與回應",
+      "外邦信徒割禮爭論",
+      "唐代景教來華",
+      "香港跨宗派合作"
     ],
     "answer": 0,
-    "explanation": "兩位改革者喺多項教義上同意，但對主餐中基督身體同血嘅同在仍有分歧。《馬堡條文》最後一條直接承認呢個分歧，提醒我哋改革陣營從來唔係每一點都完全一致。",
-    "reference": "1529年《馬堡條文》第十五條",
-    "source": "https://germanhistorydocs.org/en/from-the-reformations-to-the-thirty-years-war-1500-1648/ghdi%3Adocument-4311",
-    "verification": "https://courses.washington.edu/hsteu402/Marburg%20Debate.htm",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：天主教內部亦有改革與回應，天特會議係重要節點。宗教改革帶來經文翻譯、教理教育同制度變化，同時亦出現衝突、迫害及戰爭；要將神學主張同政治行動分開分析。。改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "reference": "十六世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p2"
+    ],
+    "teachingSources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
   },
   {
     "id": "church-037",
     "unit": "reformation",
     "difficulty": 1,
-    "question": "加爾文長期講道、教導同參與教會改革，主要喺邊個城市？",
+    "question": "時間線中，「《九十五條》引發廣泛爭論」發生喺幾時？",
     "options": [
-      "日內瓦",
-      "蘇黎世",
-      "威登堡",
-      "愛丁堡"
+      "1517年",
+      "1521年",
+      "1536年",
+      "1545至1563年"
     ],
     "answer": 0,
-    "explanation": "加爾文同日內瓦改革有密切關係，佢嘅講道、著作同教會安排亦影響其他地方。佢曾經離開過日內瓦，所以唔應該將佢嘅一生簡化成只喺同一個城市事奉。",
-    "reference": "加爾文與日內瓦；新教博物館及日內瓦聖彼得大教堂歷史",
-    "source": "https://museeprotestant.org/en/notice/jean-calvin-1509-1564/",
-    "verification": "https://www.cathedrale-geneve.ch/lepoque-moderne/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1517年 《九十五條》引發廣泛爭論。改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "reference": "十六世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0"
+    ],
+    "teachingSources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
   },
   {
     "id": "church-038",
     "unit": "reformation",
     "difficulty": 2,
-    "question": "加爾文嘅《基督教要義》，主要係一部點樣嘅著作？",
+    "question": "時間線中，「沃爾姆斯會議」發生喺幾時？",
     "options": [
-      "有系統講解基督教信仰嘅教學著作",
-      "按日期逐日記錄改革事件嘅日記",
-      "專門逐字翻譯希臘文新約嘅譯本",
-      "規定英格蘭教會崇拜程序嘅禮文書"
+      "1521年",
+      "1517年",
+      "1536年",
+      "1545至1563年"
     ],
     "answer": 0,
-    "explanation": "《基督教要義》喺1536年先以拉丁文出版，之後多次擴充修訂，幫助讀者掌握信仰教導。佢對改革宗影響深遠，但唔係一本新聖經，亦唔係所有新教教會共同使用嘅禮文。",
-    "reference": "1536年《基督教要義》初版及後續發展；新教博物館",
-    "source": "https://museeprotestant.org/notice/linstitution-de-la-religion-chretienne/",
-    "verification": "https://museeprotestant.org/en/rubriques/significant-dates/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1521年 沃爾姆斯會議。改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "reference": "十六世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e1"
+    ],
+    "teachingSources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
   },
   {
     "id": "church-039",
     "unit": "reformation",
     "difficulty": 2,
-    "question": "同1560年蘇格蘭宗教改革及《蘇格蘭信條》密切相關嘅領袖係邊位？",
+    "question": "「宗教改革的開始」時間線，以下先後次序邊個啱？",
     "options": [
-      "約翰．諾克斯",
-      "湯馬斯．克蘭麥",
-      "慈運理",
-      "威廉．法勒爾"
+      "《九十五條》引發廣泛爭論 → 沃爾姆斯會議 → 加爾文《基督教要義》初版",
+      "沃爾姆斯會議 → 《九十五條》引發廣泛爭論 → 加爾文《基督教要義》初版",
+      "加爾文《基督教要義》初版 → 沃爾姆斯會議 → 《九十五條》引發廣泛爭論",
+      "《九十五條》引發廣泛爭論 → 加爾文《基督教要義》初版 → 沃爾姆斯會議"
     ],
     "answer": 0,
-    "explanation": "諾克斯同另外五位牧者起草《蘇格蘭信條》，喺1560年獲蘇格蘭議會接納。蘇格蘭改革受加爾文思想影響，後來發展出長老治理制度，唔係直接照搬英國聖公會安排。",
-    "reference": "蘇格蘭教會官方歷史；1560年《蘇格蘭信條》",
-    "source": "https://www.churchofscotland.org.uk/about-us/our-faith/history",
-    "verification": "https://ccel.org/ccel/a/anonymous/scotconf/cache/scotconf.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1517年 《九十五條》引發廣泛爭論 1521年 沃爾姆斯會議 1536年 加爾文《基督教要義》初版。改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "reference": "十六世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0",
+      "e1",
+      "e2"
+    ],
+    "teachingSources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
   },
   {
     "id": "church-040",
     "unit": "reformation",
     "difficulty": 3,
-    "question": "1529年出版、用簡短問答教十誡、信經同主禱文嘅《小問答》，作者係邊位？",
+    "question": "「宗教改革的開始」時間線最後列出邊個事件？",
     "options": [
-      "馬丁．路德",
-      "腓力．墨蘭頓",
-      "約翰．加爾文",
-      "海因里希．布靈格"
+      "天特會議",
+      "《九十五條》引發廣泛爭論",
+      "沃爾姆斯會議",
+      "加爾文《基督教要義》初版"
     ],
     "answer": 0,
-    "explanation": "路德寫《小問答》，係想用簡明方式教基本信仰，亦讓家長可以喺屋企教導仔女。宗教改革唔只關乎領袖辯論，亦關乎普通信徒有冇機會明白自己相信啲咩。",
-    "reference": "1529年路德《小問答》；協同神學院及路德宗官方資料",
-    "source": "https://ctsfw.edu/etext/boc/sc/",
-    "verification": "https://wels.net/about-wels/what-we-believe/lutheran-confessions/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1545至1563年 天特會議。改革涉及悔改、權威、救恩及教會生活，亦受政治影響。",
+    "reference": "十六世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/reformation",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e3"
+    ],
+    "teachingSources": [
+      "https://www.elca500.org/wp-content/uploads/2017/02/95theses-high.pdf",
+      "https://sfg.ekd.de/english/95_theses.html",
+      "https://www.worms.de/en/web/luther/Worms_1521/Reichstag/",
+      "https://www.lcms.org/resources/post/a-reformation-timeline",
+      "https://gruber.lstc.edu/luthers_bible/1522.php",
+      "https://www.wartburg.de/personen/martin-luther",
+      "https://thebookofconcord.org/augsburg-confession/article-iv/",
+      "https://ctsfw.edu/etext/boc/ac/"
+    ]
   },
   {
     "id": "church-041",
     "unit": "traditions",
     "difficulty": 1,
-    "question": "16世紀信洗派（又常被稱為重洗派）喺洗禮問題上，主要堅持邊個做法？",
+    "question": "英格蘭同羅馬關係改變牽涉咩？",
     "options": [
-      "由親自承認信仰、決定跟隨耶穌嘅人受洗",
-      "由父母同教會代嬰兒承認信仰，為嬰兒施洗",
-      "只要住喺某個城市，就可以由政府代為承認信仰",
-      "只限已經獲委任為牧者嘅人先可以受洗"
+      "王權同宗教政策",
+      "亞述帝國戰爭",
+      "唐代翻譯政策",
+      "只有十九世紀移民"
     ],
     "answer": 0,
-    "explanation": "信洗派強調先親自承認信仰、決定跟隨耶穌，再接受洗禮，重點唔係單純成年先受洗。當時反對者稱佢哋為「重洗派」，但佢哋唔承認自己嬰兒時接受嘅洗禮係有效信仰回應。",
-    "reference": "信洗派起源與信徒洗禮；世界門諾會議會",
-    "source": "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
-    "verification": "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：英格蘭教會同羅馬關係改變，牽涉王權同宗教政策。之後禮儀、信條同領導制度亦不斷發展。《公禱書》係共同崇拜嘅禮文，唔係另一本聖經。。教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "reference": "十六至十七世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
   },
   {
     "id": "church-042",
     "unit": "traditions",
     "difficulty": 2,
-    "question": "原本係天主教神父，後來帶領荷蘭及北德信洗派信徒嘅領袖係邊位？",
+    "question": "《公禱書》主要用途係咩？",
     "options": [
-      "門諾．西門（Menno Simons）",
-      "雅各．胡特（Jacob Hutter）",
-      "慈運理（Huldrych Zwingli）",
-      "布靈格（Heinrich Bullinger）"
+      "共同崇拜嘅禮文",
+      "代替聖經嘅正典",
+      "帝國軍隊戰報",
+      "堂會財務帳簿"
     ],
     "answer": 0,
-    "explanation": "門諾．西門後來成為荷蘭同北德信洗派嘅重要領袖，門諾會嘅名稱亦由佢而來。信洗派內部有唔同群體，唔好將所有人嘅做法同經歷都當成完全一樣。",
-    "reference": "門諾會與Menno Simons；世界門諾會議會及瑞士門諾歷史協會",
-    "source": "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
-    "verification": "https://swissmennonite.org/history/anabaptist-origins/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：英格蘭教會同羅馬關係改變，牽涉王權同宗教政策。之後禮儀、信條同領導制度亦不斷發展。《公禱書》係共同崇拜嘅禮文，唔係另一本聖經。。教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "reference": "十六至十七世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
   },
   {
     "id": "church-043",
     "unit": "traditions",
     "difficulty": 1,
-    "question": "英格蘭1534年《至尊法案》帶嚟嘅重要轉變係咩？",
+    "question": "改革後群體嘅差異涉及咩？",
     "options": [
-      "確認英王取代教宗，成為英格蘭教會嘅最高領袖",
-      "將英格蘭教會直接交由日內瓦長老會管理",
-      "宣告所有英格蘭教會採用信洗派嘅洗禮觀",
-      "將英格蘭教會同羅馬嘅關係完全恢復如前"
+      "洗禮、聖餐及教會與政府關係",
+      "只係地址不同",
+      "只係學校制服",
+      "只係建築顏色"
     ],
     "answer": 0,
-    "explanation": "亨利八世時期嘅《至尊法案》改變咗英格蘭教會同羅馬教宗嘅權力關係。不過，脫離教宗權威唔等於所有新教教義同崇拜改革已經一次過完成，之後仲有幾次重要轉變。",
-    "reference": "1534年《至尊法案》；英國國會及英格蘭教會官方歷史",
-    "source": "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
-    "verification": "https://www.churchofengland.org/about/history-church-england",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：路德宗、改革宗、信洗派及其他群體有相近關注，亦對洗禮、聖餐同教會與政府關係有分歧。宗派名稱係歷史形成嘅，今日同一名稱內亦可以有多元實踐。。教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "reference": "十六至十七世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
   },
   {
     "id": "church-044",
     "unit": "traditions",
     "difficulty": 1,
-    "question": "1549年英格蘭《公禱書》首次使用，主要用途係咩？",
+    "question": "今日同一宗派名稱之內要留意咩？",
     "options": [
-      "提供教會共同使用嘅禱文同崇拜程序",
-      "為各國新教教會訂立同一套地方政府法律",
-      "將每卷聖經嘅希伯來文逐字譯成英文",
-      "記錄歷代教宗同英王嘅私人通信"
+      "可能有多元實踐",
+      "每個做法必定相同",
+      "所有堂會同年成立",
+      "所有領袖由同城直接任命"
     ],
     "answer": 0,
-    "explanation": "《公禱書》將禱告同聖禮等崇拜內容整理成共同使用嘅禮文，成為聖公會傳統重要部分。佢唔係另一本聖經，亦有唔同年代嘅修訂版本，唔可以將所有版本混埋一齊。",
-    "reference": "1549年《公禱書》及《統一法案》；英國國會與聖公宗歷史資料",
-    "source": "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
-    "verification": "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：路德宗、改革宗、信洗派及其他群體有相近關注，亦對洗禮、聖餐同教會與政府關係有分歧。宗派名稱係歷史形成嘅，今日同一名稱內亦可以有多元實踐。。教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "reference": "十六至十七世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
   },
   {
     "id": "church-045",
     "unit": "traditions",
     "difficulty": 2,
-    "question": "1545年開始嘅特倫多會議，喺教會歷史上主要做咗咩？",
+    "question": "良心自由討論發展唔等於咩？",
     "options": [
-      "澄清天主教教義，並推動教會內部改革",
-      "將路德同慈運理所有主餐分歧正式消除",
-      "由英國議會確立英王對教會嘅權力",
-      "替所有信洗派群體訂立共同洗禮安排"
+      "當時已普遍有現代宗教自由",
+      "各地處境不同",
+      "宗派逐步形成",
+      "教會與政府關係值得研究"
     ],
     "answer": 0,
-    "explanation": "特倫多會議分幾段舉行，到1563年結束，一方面回應宗教改革帶出嘅教義爭議，另一方面整頓天主教內部生活。認識呢段歷史，唔應該只將天主教改革看成一句「反對新教」。",
-    "reference": "1545至1563年特倫多會議；會議開幕文件及天主教歷史資料",
-    "source": "https://www.papalencyclicals.net/councils/trent/firstsession.htm",
-    "verification": "https://www.newadvent.org/cathen/15030c.htm",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：浸信會等群體嘅發展，要放返十七世紀英格蘭同歐陸背景理解。良心自由同宗教寬容嘅討論逐步發展，但唔代表當時社會已普遍接納現代宗教自由。。教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "reference": "十六至十七世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p2"
+    ],
+    "teachingSources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
   },
   {
     "id": "church-046",
     "unit": "traditions",
     "difficulty": 2,
-    "question": "耶穌會喺1540年獲正式承認，同邊位創辦領袖最有關？",
+    "question": "早期英語浸信會群體出現喺邊個時期？",
     "options": [
-      "依納爵．羅耀拉（Ignatius of Loyola）",
-      "亞西西嘅方濟（Francis of Assisi）",
-      "道明（Dominic）",
-      "亞維拉嘅德蘭（Teresa of Ávila）"
+      "十七世紀初",
+      "第一世紀初",
+      "第六世紀末",
+      "二十世紀末"
     ],
     "answer": 0,
-    "explanation": "依納爵同同伴創立耶穌會，喺1540年獲教宗正式承認。耶穌會屬天主教，後來參與教育、靈修同跨文化宣教；識得分辨修會同新教宗派，有助讀懂改革時代。",
-    "reference": "耶穌會官方歷史；1540年修會獲承認",
-    "source": "https://www.jesuits.global/about-us/our-history/",
-    "verification": "https://www.jesuits.org/about-us/ignatius-of-loyola/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：約1609年 早期英語浸信會群體。教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "reference": "十六至十七世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e2"
+    ],
+    "teachingSources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
   },
   {
     "id": "church-047",
     "unit": "traditions",
     "difficulty": 3,
-    "question": "現代浸信會運動早期，約翰．史密夫喺1609年帶領英國流亡信徒建立群體，當時身處邊個城市？",
+    "question": "時間線中，「英格蘭《至尊法案》」發生喺幾時？",
     "options": [
-      "阿姆斯特丹",
-      "倫敦",
-      "蘇黎世",
-      "日內瓦"
+      "1534年",
+      "1549年",
+      "約1609年",
+      "1648年"
     ],
     "answer": 0,
-    "explanation": "史密夫同一批英國流亡信徒喺阿姆斯特丹，開始實行信徒洗禮，成為現代浸信會運動嘅重要起點。之後希爾威斯帶部分信徒返英國，兩段歷史相關，但唔係同一地點同一件事。",
-    "reference": "1609年浸信會起源；歐洲浸信會聯會及浸信會歷史研究",
-    "source": "https://www.ebf.org/history",
-    "verification": "https://www.tandfonline.com/doi/full/10.1080/0005576X.2021.1947651",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1534年 英格蘭《至尊法案》。教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "reference": "十六至十七世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0"
+    ],
+    "teachingSources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
   },
   {
     "id": "church-048",
     "unit": "traditions",
     "difficulty": 3,
-    "question": "早期浸信會領袖湯馬斯．希爾威斯提出宗教自由，佢嘅主張包括邊一項？",
+    "question": "時間線中，「首版英語《公禱書》」發生喺幾時？",
     "options": [
-      "唔同信仰嘅人都唔應因信仰而受政府懲罰",
-      "只有浸信會信徒可以自由選擇宗教",
-      "只容許國王接納嘅新教宗派享有自由",
-      "教會可以自由要求政府懲罰其他信仰者"
+      "1549年",
+      "1534年",
+      "約1609年",
+      "1648年"
     ],
     "answer": 0,
-    "explanation": "希爾威斯提出嘅信仰自由唔只保障自己一派，亦包括同佢信仰唔同嘅人。呢個主張喺當時要付代價，亦幫助我哋分清傳福音同運用政府權力強迫人相信係兩回事。",
-    "reference": "希爾威斯1612年宗教自由主張；歐洲浸信會聯會及世界浸信會聯盟",
-    "source": "https://www.ebf.org/history",
-    "verification": "https://baptistworld.org/wp-content/uploads/2015/12/Justice-at-a-Time-of-Costly-Witness-Handout2.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1549年 首版英語《公禱書》。教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "reference": "十六至十七世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e1"
+    ],
+    "teachingSources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
   },
   {
     "id": "church-049",
     "unit": "traditions",
     "difficulty": 2,
-    "question": "《西敏信條》後來特別成為邊類教會重要嘅信仰文件？",
+    "question": "「改革後的教會」時間線，以下先後次序邊個啱？",
     "options": [
-      "長老會及改革宗教會",
-      "路德宗教會",
-      "循道衛理宗教會",
-      "門諾及其他信洗派教會"
+      "英格蘭《至尊法案》 → 首版英語《公禱書》 → 早期英語浸信會群體",
+      "首版英語《公禱書》 → 英格蘭《至尊法案》 → 早期英語浸信會群體",
+      "早期英語浸信會群體 → 首版英語《公禱書》 → 英格蘭《至尊法案》",
+      "英格蘭《至尊法案》 → 早期英語浸信會群體 → 首版英語《公禱書》"
     ],
     "answer": 0,
-    "explanation": "《西敏信條》喺17世紀由西敏會議擬定，後來深深影響長老會同改革宗教會。呢啲教會將信條視為對聖經教導嘅整理，唔係另一本同聖經一樣地位嘅啟示。",
-    "reference": "西敏會議信仰文件；長老會及西敏會議研究計劃",
-    "source": "https://www.pcaac.org/bco/westminster-confession/",
-    "verification": "https://westminsterassembly.org/principal-documents-of-the-assembly-facsimile-editions/principal-documents-westminster-confession-of-faith/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1534年 英格蘭《至尊法案》 1549年 首版英語《公禱書》 約1609年 早期英語浸信會群體。教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "reference": "十六至十七世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0",
+      "e1",
+      "e2"
+    ],
+    "teachingSources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
   },
   {
     "id": "church-050",
     "unit": "traditions",
     "difficulty": 1,
-    "question": "17世紀英國貴格會運動，同邊位早期領袖最密切相關？",
+    "question": "「改革後的教會」時間線最後列出邊個事件？",
     "options": [
-      "喬治．霍士（George Fox）",
-      "約翰．衛斯理（John Wesley）",
-      "克里威廉（William Carey）",
-      "菲利普．施本爾（Philipp Jakob Spener）"
+      "威斯特伐利亞和約",
+      "英格蘭《至尊法案》",
+      "首版英語《公禱書》",
+      "早期英語浸信會群體"
     ],
     "answer": 0,
-    "explanation": "喬治．霍士係貴格會起步時嘅關鍵人物，亦有瑪嘉烈．費爾等同工一齊建立群體。貴格會特別重視聖靈引導、和平同誠實，認識一個傳統要兼顧佢嘅信念同實際生活。",
-    "reference": "貴格會17世紀起源；英國貴格會及George Fox University",
-    "source": "https://quaker.org.uk/faith/our-history/the-beginnings-of-quakerism",
-    "verification": "https://www.georgefox.edu/about/history/quakers.html",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1648年 威斯特伐利亞和約。教會傳統逐步成形，同時思考禮儀、治理同良心自由。",
+    "reference": "十六至十七世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/traditions",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e3"
+    ],
+    "teachingSources": [
+      "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+      "https://amnetwork.uk/anniversary/anabaptism-a-brief-history/",
+      "https://swissmennonite.org/history/anabaptist-origins/",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/overview/reformation/",
+      "https://www.churchofengland.org/about/history-church-england",
+      "https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/religion/collections/common-prayer/act-of-uniformity-1559/",
+      "https://www.episcopalchurch.org/wp-content/uploads/2025/03/lesser_feasts_and_fasts_-_2024__final_.pdf",
+      "https://www.papalencyclicals.net/councils/trent/firstsession.htm"
+    ]
   },
   {
     "id": "church-051",
     "unit": "mission",
     "difficulty": 2,
-    "question": "施本爾喺《敬虔願望》中提出嘅教會更新方向，最接近邊個講法？",
+    "question": "敬虔主義及復興運動重視咩？",
     "options": [
-      "鼓勵信徒讀經、彼此分享，將信仰活喺日常生活",
-      "主要靠增加學術辯論，代替信徒之間嘅查經分享",
-      "主要靠政府統一宗教，代替個人回應信仰",
-      "主要靠恢復拉丁文禮儀，減少普通人參與教導"
+      "個人信仰、讀經、小組及生活實踐",
+      "只有軍隊人數",
+      "只有王位繼承",
+      "只有修院土地"
     ],
     "answer": 0,
-    "explanation": "施本爾喺1675年出版《敬虔願望》，提出更新教會嘅建議，強調讀經同真實信仰生活，成為德國敬虔派嘅重要文獻。佢唔係主張信徒唔使思考，而係唔好停留喺口頭知識。",
-    "reference": "施本爾1675年《敬虔願望》；Bridwell圖書館及Tabor神學高等院校",
-    "source": "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
-    "verification": "https://www.eh-tabor.de/neupietismus-barockpietismus",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：敬虔主義及復興運動重視個人信仰、聖經閱讀、小組同生活實踐。十八世紀衛斯理同其他傳道人嘅工作，逐步帶動循道運動發展，唔係單靠某一次聚會就形成所有制度。。個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "reference": "十七至十九世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
   },
   {
     "id": "church-052",
     "unit": "mission",
     "difficulty": 2,
-    "question": "18世紀，一批逃避迫害嘅摩拉維亞信徒喺德國建立新群體，邊位領袖提供地方同支持？",
+    "question": "循道運動點樣形成？",
     "options": [
-      "親岑多夫（Count Zinzendorf）",
-      "法蘭克（August Hermann Francke）",
-      "約翰．衛斯理（John Wesley）",
-      "愛德華滋（Jonathan Edwards）"
+      "傳道工作同制度逐步發展",
+      "一次聚會完成全部制度",
+      "唐代景教改名而成",
+      "只係一份英格蘭法律"
     ],
     "answer": 0,
-    "explanation": "摩拉維亞信徒逃避宗教迫害，喺親岑多夫領地建立欣嫩護（Herrnhut）群體。呢個群體喺1722年起步，後來經歷更新，喺1732年開始差派宣教士，流亡信徒亦成為祝福別人嘅群體。",
-    "reference": "1722年欣嫩護及莫拉維亞教會更新；莫拉維亞檔案館及官方歷史",
-    "source": "https://moravianarchives.org/history/",
-    "verification": "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：敬虔主義及復興運動重視個人信仰、聖經閱讀、小組同生活實踐。十八世紀衛斯理同其他傳道人嘅工作，逐步帶動循道運動發展，唔係單靠某一次聚會就形成所有制度。。個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "reference": "十七至十九世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p0"
+    ],
+    "teachingSources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
   },
   {
     "id": "church-053",
     "unit": "mission",
     "difficulty": 1,
-    "question": "約翰．衛斯理1738年喺倫敦亞德斯門聚會嘅經歷，佢喺日記中特別提到咩？",
+    "question": "近代宣教透過咩擴展？",
     "options": [
-      "心裏得到信靠基督、罪得赦免嘅確據",
-      "正式成為英格蘭教會以外新宗派嘅主教",
-      "完成將全本聖經譯成英文嘅工作",
-      "獲國會批准向北美差派首批宣教士"
+      "教育、醫療、翻譯及本地網絡",
+      "只有一次帝國命令",
+      "只靠單一人物",
+      "只有軍事堡壘"
     ],
     "answer": 0,
-    "explanation": "衛斯理記述，聽人讀路德《羅馬書》序言時，佢對信靠基督同赦罪有更深確據，形容自己心裏感到溫暖。呢係佢信仰歷程嘅重要轉變，唔係當晚就正式建立咗一個新宗派。",
-    "reference": "衛斯理日記1738年5月24日；亞德斯門經歷",
-    "source": "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
-    "verification": "https://www.newroombristol.org.uk/aldersgate-day-resources/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：近代宣教透過差會、教育、醫療、翻譯同本地信徒網絡擴展。宣教士有不同背景，本地傳道人、婦女及教師亦扮演重要角色，唔應喺故事中消失。。個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "reference": "十七至十九世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
   },
   {
     "id": "church-054",
     "unit": "mission",
     "difficulty": 1,
-    "question": "早期循道衛理運動嘅「班會」（Class Meeting），主要想幫助信徒做咩？",
+    "question": "宣教史唔應忽略邊啲人？",
     "options": [
-      "分享信仰生活，彼此關心、提醒同鼓勵",
-      "主要訓練信徒考取大學神學學位",
-      "主要安排信徒輪流代替主日崇拜",
-      "主要辯論聖經各卷嘅成書年份"
+      "本地傳道人、婦女及教師",
+      "只記海外差會領袖",
+      "只記帝國官員",
+      "只記印刷機供應商"
     ],
     "answer": 0,
-    "explanation": "班會通常係一小組人定期見面，認真分享自己同神嘅關係，彼此扶持。循道運動唔單止靠大型講道聚會，亦透過呢種日常同行，幫信徒將所信嘅活出嚟。",
-    "reference": "衛斯理班會及信徒生活操練；聯合循道會歷史及門訓資料",
-    "source": "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
-    "verification": "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：近代宣教透過差會、教育、醫療、翻譯同本地信徒網絡擴展。宣教士有不同背景，本地傳道人、婦女及教師亦扮演重要角色，唔應喺故事中消失。。個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "reference": "十七至十九世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p1"
+    ],
+    "teachingSources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
   },
   {
     "id": "church-055",
     "unit": "mission",
     "difficulty": 2,
-    "question": "18世紀多次往返英國同北美、以戶外佈道聞名嘅傳道人係邊位？",
+    "question": "1865年列出邊兩項事工起步？",
     "options": [
-      "懷特腓（George Whitefield）",
-      "約翰．衛斯理（John Wesley）",
-      "愛德華滋（Jonathan Edwards）",
-      "施本爾（Philipp Jakob Spener）"
+      "內地會同後來救世軍前身",
+      "香港協進會同普世教會協會",
+      "景教同耶路撒冷教會",
+      "尼西亞同迦克墩會議"
     ],
     "answer": 0,
-    "explanation": "懷特腓以戶外講道同巡迴佈道著名，係英國復興同北美大覺醒嘅重要人物。當部分教堂唔再歡迎佢時，佢走到人群當中；呢段歷史顯示佈道方式可以突破教堂建築嘅限制。",
-    "reference": "懷特腓戶外講道與大覺醒；美國國會圖書館及Emory大學Pitts圖書館",
-    "source": "https://wwws.loc.gov/exhibits/religion/rel02.html",
-    "verification": "https://digital.pitts.emory.edu/files/exfiles/gallery/2019-EvangelicalismCatalog.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1865年 內地會及後來救世軍前身嘅事工起步。個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "reference": "十七至十九世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e2"
+    ],
+    "teachingSources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
   },
   {
     "id": "church-056",
     "unit": "mission",
     "difficulty": 1,
-    "question": "18世紀循道運動中，以創作大量聖詩幫信徒認識信仰而聞名嘅領袖係邊位？",
+    "question": "理解宣教與殖民關係應點做？",
     "options": [
-      "查理．衛斯理（Charles Wesley）",
-      "約翰．衛斯理（John Wesley）",
-      "懷特腓（George Whitefield）",
-      "以撒．華滋（Isaac Watts）"
+      "交代權力、本地回應同不同處境",
+      "將每次事件當成相同",
+      "只讀海外領袖成功故事",
+      "完全忽略本地信徒"
     ],
     "answer": 0,
-    "explanation": "查理．衛斯理係循道運動重要嘅聖詩作者，佢嘅歌詞幫信徒唱出恩典、悔改同跟隨基督嘅信仰。教會歷史唔只係會議同年份，亦包括普通信徒點樣透過詩歌學習同敬拜。",
-    "reference": "查理．衛斯理與循道聖詩；英國循道會歷史資料",
-    "source": "https://www.methodistheritage.org.uk/methodist-history/hymnody/",
-    "verification": "https://www.methodist.org.uk/for-churches/resources/seasons-and-themes/special-sundays/aldersgate-sunday/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：十九世紀宣教同殖民擴張有時交織，有時亦出現張力。研究要留意各方權力及本地回應；既唔能夠將所有宣教簡化成殖民工具，亦唔能夠忽略不平等處境。。個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "reference": "十七至十九世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "p2"
+    ],
+    "teachingSources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
   },
   {
     "id": "church-057",
     "unit": "mission",
     "difficulty": 3,
-    "question": "1792年推動成立浸信會差會、翌年到印度宣教嘅重要人物係邊位？",
+    "question": "時間線中，「衛斯理奧德斯門街經歷」發生喺幾時？",
     "options": [
-      "克里威廉（William Carey）",
-      "馬禮遜（Robert Morrison）",
-      "戴德生（Hudson Taylor）",
-      "李文斯頓（David Livingstone）"
+      "1738年",
+      "1792年",
+      "1865年",
+      "1878年"
     ],
     "answer": 0,
-    "explanation": "克里威廉同傅勒等同工推動成立浸信會差會，1793年到印度，之後參與譯經、教育同宣教。佢對近代新教宣教影響深遠，但教會喺佢之前已經有長久嘅跨文化宣教歷史。",
-    "reference": "1792年浸信會差會及1793年赴印度；BMS及世界浸信會聯盟",
-    "source": "https://bmsworldmission.org/origins",
-    "verification": "https://baptistworld.org/bwa-resolutions/bms-bicentenary/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1738年 衛斯理奧德斯門街經歷。個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "reference": "十七至十九世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0"
+    ],
+    "teachingSources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
   },
   {
     "id": "church-058",
     "unit": "mission",
     "difficulty": 3,
-    "question": "1795年成立、後來稱為倫敦傳道會嘅差會，起步時有邊個重要特色？",
+    "question": "時間線中，「英國浸信差會成立」發生喺幾時？",
     "options": [
-      "跨宗派合作宣教，唔要求新教會一律採用同一種管治方式",
-      "只差派獲英格蘭國教主教按立嘅牧者",
-      "規定所有新成立教會採用英國公理宗制度",
-      "由英國政府決定海外教會用咩信經"
+      "1792年",
+      "1738年",
+      "1865年",
+      "1878年"
     ],
     "answer": 0,
-    "explanation": "倫敦傳道會起初叫傳道會，喺1795年成立，重視跨宗派合作，1818年先正式改用倫敦傳道會名稱。雖然公理宗背景影響好大，但唔應該當佢一開始只係單一宗派嘅海外分堂制度。",
-    "reference": "倫敦傳道會1795年成立及1818年名稱；世界傳道會與SOAS檔案館",
-    "source": "https://www.cwmission.org/about/history/",
-    "verification": "https://www.soas.ac.uk/missionary-collections",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1792年 英國浸信差會成立。個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "reference": "十七至十九世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e1"
+    ],
+    "teachingSources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
   },
   {
     "id": "church-059",
     "unit": "mission",
     "difficulty": 2,
-    "question": "1804年成立嘅大英及海外聖經公會，主要想回應咩需要？",
+    "question": "「復興與普世宣教」時間線，以下先後次序邊個啱？",
     "options": [
-      "讓更多人以明白嘅語言、負擔得起嘅價錢得到聖經",
-      "只出版英文聖經，要求海外信徒先學英文",
-      "翻譯聖經時加入同一宗派嘅教義註解",
-      "集中收藏古代手抄本，暫停向民眾供書"
+      "衛斯理奧德斯門街經歷 → 英國浸信差會成立 → 內地會及後來救世軍前身嘅事工起步",
+      "英國浸信差會成立 → 衛斯理奧德斯門街經歷 → 內地會及後來救世軍前身嘅事工起步",
+      "內地會及後來救世軍前身嘅事工起步 → 英國浸信差會成立 → 衛斯理奧德斯門街經歷",
+      "衛斯理奧德斯門街經歷 → 內地會及後來救世軍前身嘅事工起步 → 英國浸信差會成立"
     ],
     "answer": 0,
-    "explanation": "聖經公會希望更多人能夠用自己明白嘅語言讀聖經，亦關心印製同供應嘅費用。呢類跨教會合作，令譯經同普及聖經成為近代宣教嘅重要工作，唔只係收藏珍本。",
-    "reference": "1804年大英及海外聖經公會宗旨；劍橋大學圖書館及聖經公會",
-    "source": "https://www.lib.cam.ac.uk/collections/departments/bible-societys-library",
-    "verification": "https://www.biblesociety.org.uk/content/get_involved/word_in_action/files/2024/Word_in_action_summer24.pdf",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1738年 衛斯理奧德斯門街經歷 1792年 英國浸信差會成立 1865年 內地會及後來救世軍前身嘅事工起步。個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "reference": "十七至十九世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e0",
+      "e1",
+      "e2"
+    ],
+    "teachingSources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
   },
   {
     "id": "church-060",
     "unit": "mission",
     "difficulty": 1,
-    "question": "救世軍嘅前身喺1865年倫敦東區起步，創辦同工係邊一對夫婦？",
+    "question": "「復興與普世宣教」時間線最後列出邊個事件？",
     "options": [
-      "卜維廉同卜凱賽琳（William and Catherine Booth）",
-      "約翰同莫莉．衛斯理（John and Molly Wesley）",
-      "克里威廉同多羅茜（William and Dorothy Carey）",
-      "戴德生同瑪利亞（Hudson and Maria Taylor）"
+      "救世軍名稱確立",
+      "衛斯理奧德斯門街經歷",
+      "英國浸信差會成立",
+      "內地會及後來救世軍前身嘅事工起步"
     ],
     "answer": 0,
-    "explanation": "卜維廉同妻子卜凱賽琳喺倫敦東區向貧窮居民傳道，亦回應衣食住行嘅需要。事工喺1865年以基督教差會起步，到1878年先改名救世軍，傳福音同實際關顧一直緊扣。",
-    "reference": "1865年基督教差會及1878年救世軍命名；救世軍國際總部及港澳官方歷史",
-    "source": "https://www.salvationarmy.org/history",
-    "verification": "https://salvationarmy.org.hk/about-us/our-history/",
-    "sourceLabel": "查閱歷史資料"
+    "explanation": "今課重點：1878年 救世軍名稱確立。個人信仰更新、社會行動同跨文化宣教互相影響。",
+    "reference": "十七至十九世紀",
+    "source": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "verification": "https://lkw-gif.github.io/bible-buddy-hk/#/learn/church/mission",
+    "sourceLabel": "閱讀材料（內部對照）",
+    "learningEvidence": [
+      "e3"
+    ],
+    "teachingSources": [
+      "https://bridwell.omeka.net/exhibits/show/pietists/churchlypietists/spener",
+      "https://www.eh-tabor.de/neupietismus-barockpietismus",
+      "https://moravianarchives.org/history/",
+      "https://www.moravian.org/2018/06/the-moravian-church-our-faith-our-history-and-our-ministry/",
+      "https://www.umc.org/en/content/holy-spirit-moments-learning-from-wesley-at-aldersgate",
+      "https://www.newroombristol.org.uk/aldersgate-day-resources/",
+      "https://www.umc.org/en/content/hows-your-spiritual-life-the-class-meeting-for-today",
+      "https://www.umcdiscipleship.org/blog/small-groups-are-in-our-wesleyan-dna"
+    ]
   }
 ]

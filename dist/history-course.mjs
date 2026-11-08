@@ -1,9 +1,9 @@
-import { HISTORY_DATA } from './history-data.mjs?v=20261101-7';
+import { HISTORY_DATA } from './history-data.mjs?v=20261108-aligned2';
 
 export const HISTORY_TOPIC = {
   id:'church-history', name:'教會歷史篇', icon:'church', color:'sand',
-  tip:'先記住人物、地方同事件點樣連埋，再慢慢記年份。睇埋每題嘅歷史資料，認識唔同傳統點樣走過嚟。',
-  reading:'每題附有歷史資料連結'
+  tip:'先記住人物、地方同事件點樣連埋，再慢慢記年份。讀完短文同時間線，再用題目重溫歷史重點。',
+  reading:'每課短文及時間線'
 };
 export const COURSE_UNITS = [
   {id:'early',name:'初期教會的起步',period:'使徒時代至第二世紀',description:'福音點樣傳開？早期信徒點樣生活，同面對壓力？'},

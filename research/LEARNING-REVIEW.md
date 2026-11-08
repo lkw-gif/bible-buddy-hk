@@ -11,3 +11,8 @@
 閱讀及閱讀位置為私人進度，不增加XP。Google/Firebase仍未設定；本次歷史功能可直接本機保存，帳戶接通後需將learningReads及learningPositions以各項at時間合併，唔列入公開摘要。
 
 課堂資料來源檔：church-learning.json、kingdom-learning.json；重建：node scripts/build-learning.mjs。
+
+
+## 閱讀與練習對齊修訂
+
+教會歷史100題已重編為每課6題正文重點、4題時間線／閱讀步驟。每題 learningEvidence 指向可見 paragraphs 或 events，唔依賴 deeper／sources。王國與先知十課亦將所需人物與事件細節補入正文，原100題維持。歷史學習頁及兩條線嘅答題回饋隱藏資料出處、延伸閱讀及額外背景區；內部保留核對來源。舊測驗採用不可變歷史題庫，已開局及已存成績唔會因題目修訂而改答案。
