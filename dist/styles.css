@@ -2,6 +2,18 @@
 @layer reset {
   *,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,ul,ol{margin:0}button,input,select,textarea{font:inherit}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}button{cursor:pointer}img,svg{display:block;max-width:100%}a{color:inherit}button:disabled{cursor:default}html{scroll-behavior:smooth}body{min-height:100vh}button{color:inherit}dialog{margin:auto}button,a{touch-action:manipulation}
 }
+
+.site-header{position:relative;z-index:20}
+.header-inner{flex-wrap:wrap;gap:10px 22px;min-height:0;padding:16px 0}
+.header-menu{position:relative;order:2;flex:0 0 100%;display:flex;justify-content:flex-start}
+.nav-toggle{display:inline-flex;align-items:center;gap:9px;min-height:42px;padding:8px 13px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--green);font:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:background .18s,border-color .18s,box-shadow .18s}
+.nav-toggle:hover{background:var(--sage);border-color:#c9d4c2}
+.nav-toggle:focus-visible{outline:3px solid #92aa84;outline-offset:3px}
+.nav-toggle svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.header-inner nav[hidden]{display:none!important}
+.header-inner nav:not([hidden]){position:absolute;top:calc(100% + 8px);left:0;z-index:25;display:grid;width:min(420px,calc(100vw - 40px));grid-template-columns:1fr;gap:3px;margin:0;padding:9px;border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:0 18px 42px rgba(33,48,39,.16)}
+.header-inner nav:not([hidden]) a{justify-content:flex-start;min-height:44px;padding:10px 14px;font-size:14px;white-space:normal}
+@media(max-width:600px){.header-inner{gap:9px 0;padding:14px 0 12px}.header-menu{margin-top:2px}.header-inner nav:not([hidden]){width:min(420px,calc(100vw - 40px))}}
 @layer base {
   img{height:auto}
   :root{--paper:#faf8ef;--white:#fffef9;--ink:#273e33;--green:#315d4c;--green-dark:#254c3d;--sage:#e5eddf;--line:#dedfd3;--muted:#677064;--sand:#f4e8c8;--peach:#f7e3d7;--blue:#e2eced;--lavender:#eae6f1;--coral:#a84a3b;--shadow:0 8px 24px #273e3309;font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.7}

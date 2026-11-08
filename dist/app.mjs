@@ -359,6 +359,14 @@ document.addEventListener('input', event => {
 document.addEventListener('click', async event => {
   const button = event.target.closest('[data-action]'); if (!button || button.disabled) return;
   const action = button.dataset.action;
+  if (action === 'toggle-nav') {
+    const nav = $('#primary-nav');
+    const opening = nav.hidden;
+    nav.hidden = !opening;
+    button.setAttribute('aria-expanded', String(opening));
+    button.setAttribute('aria-label', opening ? '收起導覽選單' : '開啟導覽選單');
+    $('#nav-toggle-label').textContent = opening ? '收起選單' : '選單';
+  }
   if (action === 'start') startQuiz(button.dataset.mode, button.dataset.topic, [], button.dataset.difficulty || 'all', button.dataset.count, button.dataset.unit, button.dataset.edition);
   if (action === 'close-dialog') button.closest('dialog').close();
   if (action === 'answer') handleAnswer(Number(button.dataset.choice));
@@ -391,7 +399,18 @@ document.addEventListener('click', async event => {
   }
   if (action === 'clear-confirm') { progress = { schema:1, tone:'cheeky', current:null, history:[], bookmarks:[], mistakes:[], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, numbersAnswers:{}, leviticusAnswers:{}, deuteronomyAnswers:{}, matthewAnswers:{}, markAnswers:{}, lukeAnswers:{}, johnAnswers:{}, genesisSeen:[], exodusSeen:[], numbersSeen:[], leviticusSeen:[], deuteronomySeen:[], matthewSeen:[], markSeen:[], lukeSeen:[], johnSeen:[] }; persist(); shareDialog.close(); render(); toast('紀錄已清除，新一輪操練由你起步。'); }
 });
+function closePrimaryNav() {
+  const nav=$('#primary-nav'),button=$('[data-action="toggle-nav"]');
+  if(!nav||nav.hidden)return;
+  nav.hidden=true;button?.setAttribute('aria-expanded','false');button?.setAttribute('aria-label','開啟導覽選單');
+  const label=$('#nav-toggle-label');if(label)label.textContent='選單';
+}
+document.addEventListener('click',event=>{
+  if(event.target.closest('#primary-nav a'))closePrimaryNav();
+  else if(!event.target.closest('.header-menu'))closePrimaryNav();
+});
 document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && !$('#primary-nav').hidden && !shareDialog.open) { closePrimaryNav(); $('[data-action="toggle-nav"]')?.focus(); return; }
   if (route().name !== 'quiz' || shareDialog.open || event.ctrlKey || event.altKey || event.metaKey || event.repeat || ['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName)) return;
   const index = ['1','2','3','4'].includes(event.key) ? Number(event.key)-1 : ['a','b','c','d'].indexOf(event.key.toLowerCase());
   if (index >= 0) { const choice = document.querySelectorAll('.choice')[index]; if (choice && !choice.disabled) { event.preventDefault(); choice.click(); } }
