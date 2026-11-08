@@ -548,6 +548,6 @@ async function loadMembers(){
  if(!cloud||membersBusy)return;
  membersBusy=true;membersError='';if(route().name==='community')render({focus:false});
  try{const page=await cloud.members(membersCursor);membersRows=[...new Map([...membersRows,...page.rows].map(r=>[r.id,r])).values()];membersCursor=page.cursor;membersMore=page.more;membersLoaded=true;}
- catch(error){membersError=accountError(error);membersLoaded=true;}
+ catch(error){console.warn('Members query failed',error?.code);membersError=accountError(error);membersLoaded=true;}
  finally{membersBusy=false;if(route().name==='community')render({focus:false});}
 }

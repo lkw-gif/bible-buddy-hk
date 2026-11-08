@@ -22,7 +22,7 @@ export async function createCloudAccount(onUser) {
     login:()=>{const provider=new authSdk.GoogleAuthProvider();provider.setCustomParameters({prompt:'select_account'});return authSdk.signInWithPopup(auth,provider);},
     logout:()=>authSdk.signOut(auth),
     async members(cursor=null) {
-      const constraints=[dbSdk.orderBy('xp','desc'),dbSdk.orderBy(dbSdk.documentId())];
+      const constraints=[dbSdk.orderBy('xp','desc'),dbSdk.orderBy(dbSdk.documentId(),'desc')];
       if(cursor)constraints.push(dbSdk.startAfter(cursor));
       const snapshot=await dbSdk.getDocs(dbSdk.query(dbSdk.collection(db,'members'),...constraints,dbSdk.limit(50)));
       return {rows:snapshot.docs.map(d=>({id:d.id,...d.data()})),cursor:snapshot.docs.at(-1)||null,more:snapshot.docs.length===50};
