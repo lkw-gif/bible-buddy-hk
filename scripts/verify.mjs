@@ -9,7 +9,14 @@ import { EXODUS_QUESTIONS, EXODUS_UNITS, EXODUS_HARD_QUESTIONS, EXODUS_LEVEL_POO
 import { NUMBERS_QUESTIONS, NUMBERS_UNITS, NUMBERS_HARD_QUESTIONS, NUMBERS_LEVEL_POOLS } from '../dist/numbers-course.mjs';
 import { LEVITICUS_QUESTIONS, LEVITICUS_UNITS, LEVITICUS_HARD_QUESTIONS, LEVITICUS_LEVEL_POOLS } from '../dist/leviticus-course.mjs';
 import { DEUTERONOMY_QUESTIONS, DEUTERONOMY_UNITS, DEUTERONOMY_HARD_QUESTIONS, DEUTERONOMY_LEVEL_POOLS } from '../dist/deuteronomy-course.mjs';
+import { MATTHEW_QUESTIONS, MATTHEW_UNITS, MATTHEW_HARD_QUESTIONS, MATTHEW_LEVEL_POOLS } from '../dist/matthew-course.mjs';
 const ids = new Set(), prompts = new Set();
+const matthewResearch = JSON.parse(await readFile(new URL('../research/matthew-prepared-draft.json', import.meta.url), 'utf8'));
+assert.deepEqual(MATTHEW_QUESTIONS,matthewResearch.lessons,'Rebuild Matthew data after editing the reviewed questions');
+assert.deepEqual(MATTHEW_HARD_QUESTIONS,matthewResearch.hard,'Rebuild Matthew advanced data after editing the reviewed questions');
+assert.equal(MATTHEW_QUESTIONS.length,100); assert.equal(MATTHEW_UNITS.length,10); assert.equal(MATTHEW_HARD_QUESTIONS.length,20);
+for (const u of MATTHEW_UNITS) assert.equal(MATTHEW_QUESTIONS.filter(q=>q.unit===u.id).length,10,u.id);
+assert.deepEqual([1,2,3].map(d=>MATTHEW_LEVEL_POOLS[d].length),[50,50,20]);
 assert.equal(QUESTIONS.length, 240);
 assert.equal(HISTORY_QUESTIONS.length,100);
 assert.equal(COURSE_UNITS.length,10);
@@ -80,8 +87,8 @@ for (const q of [...QUESTIONS,...HISTORY_QUESTIONS,...CHALLENGE_QUESTIONS,...BIB
     assert([1,2,3].includes(q.difficulty),q.id+' difficulty');
   }
 }
-for (const f of ['index.html', 'app.mjs', 'styles.css', 'engine.mjs', 'choices.mjs', 'copy-edits.mjs', 'history-course.mjs', 'history-data.mjs', 'challenge-data.mjs', 'bible-course.mjs', 'bible-data.mjs', 'genesis-course.mjs', 'genesis-data.mjs', 'genesis-hard-data.mjs', 'exodus-course.mjs', 'exodus-data.mjs', 'exodus-hard-data.mjs', 'numbers-course.mjs', 'numbers-data.mjs', 'numbers-hard-data.mjs', 'leviticus-course.mjs', 'leviticus-data.mjs', 'leviticus-hard-data.mjs', 'deuteronomy-course.mjs', 'deuteronomy-data.mjs', 'deuteronomy-hard-data.mjs', 'assets/hero.png', 'assets/favicon.svg']) await access(new URL('../dist/' + f, import.meta.url));
+for (const f of ['index.html', 'app.mjs', 'styles.css', 'engine.mjs', 'choices.mjs', 'copy-edits.mjs', 'history-course.mjs', 'history-data.mjs', 'challenge-data.mjs', 'bible-course.mjs', 'bible-data.mjs', 'genesis-course.mjs', 'genesis-data.mjs', 'genesis-hard-data.mjs', 'exodus-course.mjs', 'exodus-data.mjs', 'exodus-hard-data.mjs', 'numbers-course.mjs', 'numbers-data.mjs', 'numbers-hard-data.mjs', 'leviticus-course.mjs', 'leviticus-data.mjs', 'leviticus-hard-data.mjs', 'deuteronomy-course.mjs', 'deuteronomy-data.mjs', 'deuteronomy-hard-data.mjs', 'matthew-course.mjs', 'matthew-data.mjs', 'assets/hero.png', 'assets/favicon.svg']) await access(new URL('../dist/' + f, import.meta.url));
 const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
 assert(html.includes('lang="zh-HK"'));
 assert(!html.includes('codex-preview'));
-console.log(`Question bank verified: ${QUESTIONS.length} base, ${CHALLENGE_QUESTIONS.length} advanced, ${HISTORY_QUESTIONS.length} church-history, ${BIBLE_QUESTIONS.length} Bible-knowledge and five Old Testament books; assets and sources present.`);
+console.log(`Question bank verified: ${QUESTIONS.length} base, ${CHALLENGE_QUESTIONS.length} advanced, ${HISTORY_QUESTIONS.length} church-history, ${BIBLE_QUESTIONS.length} Bible-knowledge five Old Testament books and Matthew; assets and sources present.`);

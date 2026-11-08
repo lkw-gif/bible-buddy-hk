@@ -1,0 +1,2145 @@
+export const MATTHEW_DATA = [
+  {
+    "unit": "m1",
+    "difficulty": 1,
+    "question": "馬太福音開首特別指出耶穌係邊兩個人物嘅後裔？",
+    "options": [
+      "大衛同亞伯拉罕",
+      "摩西同亞倫",
+      "挪亞同以撒",
+      "撒母耳同所羅門"
+    ],
+    "answer": 0,
+    "explanation": "馬太福音一開始稱耶穌基督為大衛的子孫、亞伯拉罕的子孫，然後列出家譜。",
+    "reference": "馬太福音1:1",
+    "id": "matthew-001",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/1/",
+    "verification": "https://bible.usccb.org/bible/matthew/1"
+  },
+  {
+    "unit": "m1",
+    "difficulty": 1,
+    "question": "天使話畀約瑟知，瑪利亞所懷嘅孩子要起咩名？",
+    "options": [
+      "耶穌",
+      "施洗約翰",
+      "撒迦利亞",
+      "西面"
+    ],
+    "answer": 0,
+    "explanation": "天使吩咐約瑟給孩子起名叫耶穌，因為他要將自己的百姓從罪惡裏救出來。",
+    "reference": "馬太福音1:20–21",
+    "id": "matthew-002",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/1/",
+    "verification": "https://bible.usccb.org/bible/matthew/1"
+  },
+  {
+    "unit": "m1",
+    "difficulty": 1,
+    "question": "馬太解釋「以馬內利」係咩意思？",
+    "options": [
+      "上帝與我們同在",
+      "上帝垂聽我們",
+      "上帝賜我們平安",
+      "上帝是我們的牧者"
+    ],
+    "answer": 0,
+    "explanation": "馬太引用先知的話，並解釋以馬內利的意思是「上帝與我們同在」。",
+    "reference": "馬太福音1:22–23",
+    "id": "matthew-003",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/1/",
+    "verification": "https://bible.usccb.org/bible/matthew/1"
+  },
+  {
+    "unit": "m1",
+    "difficulty": 1,
+    "question": "根據馬太福音，耶穌喺猶太嘅邊個地方出世？",
+    "options": [
+      "伯利恆",
+      "耶路撒冷",
+      "拿撒勒",
+      "迦百農"
+    ],
+    "answer": 0,
+    "explanation": "耶穌生在猶太的伯利恆；當時希律作王，有博士從東方來到耶路撒冷。",
+    "reference": "馬太福音2:1",
+    "id": "matthew-004",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/2/",
+    "verification": "https://bible.usccb.org/bible/matthew/2"
+  },
+  {
+    "unit": "m1",
+    "difficulty": 1,
+    "question": "博士見到小孩子同馬利亞之後，獻上邊三樣禮物？",
+    "options": [
+      "黃金、乳香同沒藥",
+      "黃金、白銀同乳香",
+      "白銀、乳香同沒藥",
+      "黃金、香膏同細麻布"
+    ],
+    "answer": 0,
+    "explanation": "博士俯伏拜那孩子，打開寶盒，獻上黃金、乳香和沒藥。",
+    "reference": "馬太福音2:11",
+    "id": "matthew-005",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/2/",
+    "verification": "https://bible.usccb.org/bible/matthew/2"
+  },
+  {
+    "unit": "m1",
+    "difficulty": 2,
+    "question": "天使警告約瑟希律要尋找小孩子後，約瑟帶一家去咗邊度？",
+    "options": [
+      "埃及",
+      "加利利",
+      "撒馬利亞",
+      "推羅"
+    ],
+    "answer": 0,
+    "explanation": "主的使者在夢中吩咐約瑟帶着孩子和母親逃往埃及，留在那裏直到得到新的指示。",
+    "reference": "馬太福音2:13–15",
+    "id": "matthew-006",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/2/",
+    "verification": "https://bible.usccb.org/bible/matthew/2"
+  },
+  {
+    "unit": "m1",
+    "difficulty": 2,
+    "question": "施洗約翰喺曠野傳道時，身上穿嘅係咩衣服？",
+    "options": [
+      "駱駝毛衣服",
+      "細麻布衣服",
+      "羊毛長袍",
+      "祭司嘅禮服"
+    ],
+    "answer": 0,
+    "explanation": "馬太記載約翰穿駱駝毛的衣服，腰束皮帶，吃蝗蟲和野蜜。",
+    "reference": "馬太福音3:4",
+    "id": "matthew-007",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/3/",
+    "verification": "https://bible.usccb.org/bible/matthew/3"
+  },
+  {
+    "unit": "m1",
+    "difficulty": 2,
+    "question": "施洗約翰話，喺佢以後來嗰位會用咩為人施洗？",
+    "options": [
+      "聖靈同火",
+      "水同油",
+      "水同火",
+      "聖靈同水"
+    ],
+    "answer": 0,
+    "explanation": "約翰以水施洗叫人悔改；他說後來那位比他更有能力，要用聖靈和火施洗。",
+    "reference": "馬太福音3:11",
+    "id": "matthew-008",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/3/",
+    "verification": "https://bible.usccb.org/bible/matthew/3"
+  },
+  {
+    "unit": "m1",
+    "difficulty": 2,
+    "question": "魔鬼叫飢餓嘅耶穌將石頭變餅時，耶穌引用經文話人活着靠甚麼？",
+    "options": [
+      "上帝口裏所出嘅每一句話",
+      "只靠從天上降落嘅糧食",
+      "只靠遵守安息日",
+      "上帝每日賜下嘅金錢"
+    ],
+    "answer": 0,
+    "explanation": "耶穌引用申命記，說人活着不是單靠食物，也靠上帝口裏所出的一切話。",
+    "reference": "馬太福音4:3–4",
+    "id": "matthew-009",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/4/",
+    "verification": "https://bible.usccb.org/bible/matthew/4"
+  },
+  {
+    "unit": "m1",
+    "difficulty": 2,
+    "question": "耶穌喺加利利海邊，先呼召邊兩位正在撒網嘅兄弟？",
+    "options": [
+      "西門彼得同安得烈",
+      "雅各同約翰",
+      "腓力同拿但業",
+      "雅各同猶大"
+    ],
+    "answer": 0,
+    "explanation": "耶穌先看見彼得和他的兄弟安得烈在海裏撒網，呼召他們跟從他。",
+    "reference": "馬太福音4:18–20",
+    "id": "matthew-010",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/4/",
+    "verification": "https://bible.usccb.org/bible/matthew/4"
+  },
+  {
+    "unit": "m2",
+    "difficulty": 1,
+    "question": "登山寶訓話，虛心嘅人有福，因為甚麼係佢哋嘅？",
+    "options": [
+      "天國",
+      "地上所有財富",
+      "耶路撒冷城",
+      "會堂裏嘅首位"
+    ],
+    "answer": 0,
+    "explanation": "八福的第一句說，虛心的人有福了，因為天國是他們的。",
+    "reference": "馬太福音5:3",
+    "id": "matthew-011",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/5/",
+    "verification": "https://bible.usccb.org/bible/matthew/5"
+  },
+  {
+    "unit": "m2",
+    "difficulty": 1,
+    "question": "耶穌話使人和睦嘅人有福，因為佢哋會被稱為甚麼？",
+    "options": [
+      "上帝嘅兒子",
+      "天國嘅僕人",
+      "世上嘅教師",
+      "聖殿嘅祭司"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說使人和睦的人有福了，因為他們必稱為上帝的兒子。",
+    "reference": "馬太福音5:9",
+    "id": "matthew-012",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/5/",
+    "verification": "https://bible.usccb.org/bible/matthew/5"
+  },
+  {
+    "unit": "m2",
+    "difficulty": 1,
+    "question": "耶穌用邊樣調味料形容門徒對世界嘅作用？",
+    "options": [
+      "鹽",
+      "糖",
+      "蜜",
+      "油"
+    ],
+    "answer": 0,
+    "explanation": "耶穌稱門徒為世上的鹽，又提醒他們留意鹽若失去味道的比喻。",
+    "reference": "馬太福音5:13",
+    "id": "matthew-013",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/5/",
+    "verification": "https://bible.usccb.org/bible/matthew/5"
+  },
+  {
+    "unit": "m2",
+    "difficulty": 1,
+    "question": "耶穌講到門徒係世上嘅光時，話建喺邊度嘅城係唔能夠隱藏？",
+    "options": [
+      "山上",
+      "海邊",
+      "曠野",
+      "河谷"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說門徒是世上的光，城造在山上不能隱藏；他們的好行為要叫人歸榮耀給天父。",
+    "reference": "馬太福音5:14–16",
+    "id": "matthew-014",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/5/",
+    "verification": "https://bible.usccb.org/bible/matthew/5"
+  },
+  {
+    "unit": "m2",
+    "difficulty": 1,
+    "question": "耶穌教門徒祈禱時，首先點樣稱呼上帝？",
+    "options": [
+      "我們在天上的父",
+      "住在山上的主",
+      "以色列的大祭司",
+      "世上眾王之王"
+    ],
+    "answer": 0,
+    "explanation": "主禱文以「我們在天上的父」開始，先求父的名被尊為聖、國降臨、旨意成就。",
+    "reference": "馬太福音6:9–10",
+    "id": "matthew-015",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/6/",
+    "verification": "https://bible.usccb.org/bible/matthew/6"
+  },
+  {
+    "unit": "m2",
+    "difficulty": 2,
+    "question": "耶穌話，如果獻祭時諗起弟兄對自己有怨，應先做咩？",
+    "options": [
+      "先去同弟兄和好",
+      "先完成獻祭再離開",
+      "叫祭司代為解決",
+      "等弟兄主動來道歉"
+    ],
+    "answer": 0,
+    "explanation": "耶穌教人先把禮物留在壇前，去跟弟兄和好，然後才回來獻禮物。",
+    "reference": "馬太福音5:23–24",
+    "id": "matthew-016",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/5/",
+    "verification": "https://bible.usccb.org/bible/matthew/5"
+  },
+  {
+    "unit": "m2",
+    "difficulty": 2,
+    "question": "耶穌教導門徒點樣對待仇敵同迫害自己嘅人？",
+    "options": [
+      "愛仇敵，為迫害自己嘅人禱告",
+      "愛朋友，但避開仇敵",
+      "只為肯道歉嘅人禱告",
+      "以同樣方法報復迫害自己嘅人"
+    ],
+    "answer": 0,
+    "explanation": "耶穌教導門徒愛仇敵，並為迫害他們的人禱告，好作天父的兒子。",
+    "reference": "馬太福音5:43–45",
+    "id": "matthew-017",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/5/",
+    "verification": "https://bible.usccb.org/bible/matthew/5"
+  },
+  {
+    "unit": "m2",
+    "difficulty": 2,
+    "question": "耶穌教人施捨時，要避免以咩目的去做？",
+    "options": [
+      "為咗得到別人稱讚",
+      "因為看見有人有需要",
+      "出於對窮人的憐憫",
+      "喺無人注意時幫助人"
+    ],
+    "answer": 0,
+    "explanation": "耶穌提醒人不要像假冒為善的人張揚施捨、求人的稱讚；天父看見暗中的事。",
+    "reference": "馬太福音6:1–4",
+    "id": "matthew-018",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/6/",
+    "verification": "https://bible.usccb.org/bible/matthew/6"
+  },
+  {
+    "unit": "m2",
+    "difficulty": 2,
+    "question": "耶穌話人不能同時事奉上帝同邊一樣？",
+    "options": [
+      "瑪門（錢財）",
+      "工作",
+      "家庭",
+      "鄰舍"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說一個人不能事奉兩個主，並指出不能又事奉上帝又事奉瑪門。",
+    "reference": "馬太福音6:24",
+    "id": "matthew-019",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/6/",
+    "verification": "https://bible.usccb.org/bible/matthew/6"
+  },
+  {
+    "unit": "m2",
+    "difficulty": 2,
+    "question": "聽見耶穌嘅話並且遵行嘅人，好似聰明人將屋建喺邊度？",
+    "options": [
+      "磐石上",
+      "沙土上",
+      "樹林裏",
+      "河水旁"
+    ],
+    "answer": 0,
+    "explanation": "耶穌將聽見並遵行他話的人比作把房子蓋在磐石上的聰明人，風吹雨打也沒有倒塌。",
+    "reference": "馬太福音7:24–25",
+    "id": "matthew-020",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/7/",
+    "verification": "https://bible.usccb.org/bible/matthew/7"
+  },
+  {
+    "unit": "m3",
+    "difficulty": 1,
+    "question": "長大痲瘋嘅人求耶穌潔淨佢時，耶穌點回應？",
+    "options": [
+      "伸手摸佢，話願意潔淨佢",
+      "叫佢先返屋企等消息",
+      "叫門徒帶佢去見醫生",
+      "叫佢先到聖殿獻祭"
+    ],
+    "answer": 0,
+    "explanation": "那人表示耶穌若肯，必能叫他潔淨；耶穌伸手摸他，說願意，他的痲瘋立即潔淨了。",
+    "reference": "馬太福音8:1–3",
+    "id": "matthew-021",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/8/",
+    "verification": "https://bible.usccb.org/bible/matthew/8"
+  },
+  {
+    "unit": "m3",
+    "difficulty": 1,
+    "question": "迦百農嘅百夫長向耶穌求助，係因為邊個受病痛折磨？",
+    "options": [
+      "佢嘅僕人",
+      "佢嘅兒子",
+      "佢嘅妻子",
+      "佢嘅父親"
+    ],
+    "answer": 0,
+    "explanation": "百夫長說他的僕人癱瘓在家，十分痛苦，便向耶穌求助。",
+    "reference": "馬太福音8:5–6",
+    "id": "matthew-022",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/8/",
+    "verification": "https://bible.usccb.org/bible/matthew/8"
+  },
+  {
+    "unit": "m3",
+    "difficulty": 1,
+    "question": "耶穌入彼得屋企時，邊個因發燒躺喺床上？",
+    "options": [
+      "彼得嘅岳母",
+      "彼得嘅母親",
+      "彼得嘅妻子",
+      "彼得嘅姊妹"
+    ],
+    "answer": 0,
+    "explanation": "耶穌看見彼得的岳母發燒，摸她的手後，熱就退了；她起來服事耶穌。",
+    "reference": "馬太福音8:14–15",
+    "id": "matthew-023",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/8/",
+    "verification": "https://bible.usccb.org/bible/matthew/8"
+  },
+  {
+    "unit": "m3",
+    "difficulty": 1,
+    "question": "耶穌喺船上斥責風同海之後，發生咩事？",
+    "options": [
+      "風浪平靜落嚟",
+      "船立即到達岸邊",
+      "海水變成乾地",
+      "門徒全部走落海"
+    ],
+    "answer": 0,
+    "explanation": "耶穌斥責風和海，風浪就大大平靜；眾人驚奇風和海也聽從他。",
+    "reference": "馬太福音8:23–27",
+    "id": "matthew-024",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/8/",
+    "verification": "https://bible.usccb.org/bible/matthew/8"
+  },
+  {
+    "unit": "m3",
+    "difficulty": 1,
+    "question": "耶穌呼召馬太時，馬太正坐喺邊度？",
+    "options": [
+      "稅關",
+      "會堂",
+      "漁船",
+      "聖殿門口"
+    ],
+    "answer": 0,
+    "explanation": "耶穌看見馬太坐在稅關，對他說「跟從我」，馬太就起來跟從。",
+    "reference": "馬太福音9:9",
+    "id": "matthew-025",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/9/",
+    "verification": "https://bible.usccb.org/bible/matthew/9"
+  },
+  {
+    "unit": "m3",
+    "difficulty": 2,
+    "question": "百夫長點解話耶穌唔使親自去佢屋企？",
+    "options": [
+      "佢相信耶穌只要講一句話，僕人就會好返",
+      "佢已經搵到醫生醫好僕人",
+      "佢嘅僕人已經出門去搵耶穌",
+      "佢想先安排家人迎接耶穌"
+    ],
+    "answer": 0,
+    "explanation": "百夫長說自己不配耶穌進入他的家，只求耶穌說一句話，他的僕人就會痊癒；耶穌稱讚他的信心。",
+    "reference": "馬太福音8:8–10",
+    "id": "matthew-026",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/8/",
+    "verification": "https://bible.usccb.org/bible/matthew/8"
+  },
+  {
+    "unit": "m3",
+    "difficulty": 2,
+    "question": "人帶癱子來見耶穌時，耶穌首先對癱子講咗咩？",
+    "options": [
+      "放心，你嘅罪赦了",
+      "起來，拿你嘅床回家",
+      "你願意痊癒嗎",
+      "你嘅信救咗你，平安去啦"
+    ],
+    "answer": 0,
+    "explanation": "耶穌看見他們的信心，先對癱子說他的罪赦了；後來才吩咐他起來拿床回家。",
+    "reference": "馬太福音9:2–7",
+    "id": "matthew-027",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/9/",
+    "verification": "https://bible.usccb.org/bible/matthew/9"
+  },
+  {
+    "unit": "m3",
+    "difficulty": 2,
+    "question": "患血漏十二年嘅女人走近耶穌，從後面摸咗甚麼？",
+    "options": [
+      "佢嘅衣裳邊",
+      "佢嘅手",
+      "佢嘅鞋帶",
+      "佢嘅外袍袖子"
+    ],
+    "answer": 0,
+    "explanation": "那女人心想只要摸耶穌的衣裳就會好，便從後面摸他的衣裳邊；耶穌回應她的信心。",
+    "reference": "馬太福音9:20–22",
+    "id": "matthew-028",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/9/",
+    "verification": "https://bible.usccb.org/bible/matthew/9"
+  },
+  {
+    "unit": "m3",
+    "difficulty": 2,
+    "question": "耶穌見到群眾困苦流離，形容佢哋好似甚麼？",
+    "options": [
+      "冇牧人嘅羊",
+      "冇水嘅魚",
+      "冇主人嘅葡萄園",
+      "迷失喺山上嘅小鳥"
+    ],
+    "answer": 0,
+    "explanation": "耶穌見群眾困苦流離，如同羊沒有牧人，就憐憫他們。",
+    "reference": "馬太福音9:35–36",
+    "id": "matthew-029",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/9/",
+    "verification": "https://bible.usccb.org/bible/matthew/9"
+  },
+  {
+    "unit": "m3",
+    "difficulty": 2,
+    "question": "耶穌話莊稼多、做工嘅人少，吩咐門徒求邊個差派工人？",
+    "options": [
+      "莊稼嘅主",
+      "會堂嘅管事",
+      "當地嘅長老",
+      "聖殿嘅祭司"
+    ],
+    "answer": 0,
+    "explanation": "耶穌吩咐門徒求莊稼的主打發工人出去收他的莊稼。",
+    "reference": "馬太福音9:37–38",
+    "id": "matthew-030",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/9/",
+    "verification": "https://bible.usccb.org/bible/matthew/9"
+  },
+  {
+    "unit": "m4",
+    "difficulty": 1,
+    "question": "施洗約翰喺監裏打發門徒去問耶穌甚麼？",
+    "options": [
+      "你係將要來嘅那位，定係我哋要等另一位？",
+      "你幾時會去耶路撒冷作王？",
+      "你會唔會親自來監裏探我？",
+      "你嘅門徒點解唔喺約旦河施洗？"
+    ],
+    "answer": 0,
+    "explanation": "約翰在監中聽見基督所做的事，便派門徒問耶穌是否那將要來的一位。",
+    "reference": "馬太福音11:2–3",
+    "id": "matthew-031",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/11/",
+    "verification": "https://bible.usccb.org/bible/matthew/11"
+  },
+  {
+    "unit": "m4",
+    "difficulty": 1,
+    "question": "耶穌邀請勞苦擔重擔嘅人到佢面前，應許畀佢哋甚麼？",
+    "options": [
+      "安息",
+      "地上財富",
+      "不會遇到困難",
+      "別人嘅稱讚"
+    ],
+    "answer": 0,
+    "explanation": "耶穌邀請勞苦擔重擔的人到他那裏去，應許使他們得安息。",
+    "reference": "馬太福音11:28–30",
+    "id": "matthew-032",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/11/",
+    "verification": "https://bible.usccb.org/bible/matthew/11"
+  },
+  {
+    "unit": "m4",
+    "difficulty": 1,
+    "question": "耶穌用邊個舊約人物喺大魚肚裏嘅經歷作為記號？",
+    "options": [
+      "約拿",
+      "以利亞",
+      "但以理",
+      "耶利米"
+    ],
+    "answer": 0,
+    "explanation": "耶穌以約拿在大魚腹中三日三夜的經歷，說明人子將在地裏三日三夜。",
+    "reference": "馬太福音12:39–40",
+    "id": "matthew-033",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/12/",
+    "verification": "https://bible.usccb.org/bible/matthew/12"
+  },
+  {
+    "unit": "m4",
+    "difficulty": 1,
+    "question": "撒種嘅比喻裏，落喺好土嘅種子有咩結果？",
+    "options": [
+      "結實，有一百倍、六十倍同三十倍",
+      "全部只結十倍",
+      "一長出來就被太陽曬乾",
+      "被荊棘擠住，冇辦法結實"
+    ],
+    "answer": 0,
+    "explanation": "比喻中有些種子落在好土，結果有一百倍、六十倍、三十倍。",
+    "reference": "馬太福音13:8",
+    "id": "matthew-034",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/13/",
+    "verification": "https://bible.usccb.org/bible/matthew/13"
+  },
+  {
+    "unit": "m4",
+    "difficulty": 1,
+    "question": "芥菜種嘅比喻，用細小嘅種子長大後成為植物來形容甚麼？",
+    "options": [
+      "天國",
+      "聖殿嘅建造",
+      "以色列軍隊",
+      "耶路撒冷城牆"
+    ],
+    "answer": 0,
+    "explanation": "耶穌把天國比作芥菜種；它雖然細小，長大後飛鳥可以來棲在枝上。",
+    "reference": "馬太福音13:31–32",
+    "id": "matthew-035",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/13/",
+    "verification": "https://bible.usccb.org/bible/matthew/13"
+  },
+  {
+    "unit": "m4",
+    "difficulty": 2,
+    "question": "安息日經過麥地時，門徒做咗咩事令法利賽人提出質疑？",
+    "options": [
+      "因為肚餓掐麥穗來食",
+      "喺田裏收割整捆麥",
+      "將麥子帶去市場賣",
+      "喺麥地生火煮食"
+    ],
+    "answer": 0,
+    "explanation": "門徒肚餓，就掐麥穗吃；法利賽人質疑他們在安息日做不合規矩的事。",
+    "reference": "馬太福音12:1–2",
+    "id": "matthew-036",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/12/",
+    "verification": "https://bible.usccb.org/bible/matthew/12"
+  },
+  {
+    "unit": "m4",
+    "difficulty": 2,
+    "question": "耶穌喺會堂醫好嗰個人之前，嗰人身體邊一部分枯乾？",
+    "options": [
+      "一隻手",
+      "一隻腳",
+      "兩隻眼",
+      "兩隻耳"
+    ],
+    "answer": 0,
+    "explanation": "會堂裏有一個人枯乾了一隻手；耶穌叫他伸出手，手就復原。",
+    "reference": "馬太福音12:9–13",
+    "id": "matthew-037",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/12/",
+    "verification": "https://bible.usccb.org/bible/matthew/12"
+  },
+  {
+    "unit": "m4",
+    "difficulty": 2,
+    "question": "耶穌解釋撒種比喻時，話落喺荊棘裏嘅種子受到咩阻礙？",
+    "options": [
+      "世上嘅憂慮同錢財嘅迷惑",
+      "缺乏泥土，冇辦法扎根",
+      "天上嘅飛鳥把種子吃掉",
+      "沒有陽光令禾苗停止生長"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說聽了道的人若被世上的憂慮和錢財的迷惑擠住，就不能結實。",
+    "reference": "馬太福音13:22",
+    "id": "matthew-038",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/13/",
+    "verification": "https://bible.usccb.org/bible/matthew/13"
+  },
+  {
+    "unit": "m4",
+    "difficulty": 2,
+    "question": "稗子嘅比喻中，主人叫僕人等到幾時先分開麥子同稗子？",
+    "options": [
+      "收割嘅時候",
+      "幼苗剛發芽嘅時候",
+      "敵人被抓住嘅時候",
+      "下一次撒種之前"
+    ],
+    "answer": 0,
+    "explanation": "主人怕拔稗子時連麥子一起拔出，叫兩者一同長到收割，再先收稗子捆起來。",
+    "reference": "馬太福音13:28–30",
+    "id": "matthew-039",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/13/",
+    "verification": "https://bible.usccb.org/bible/matthew/13"
+  },
+  {
+    "unit": "m4",
+    "difficulty": 2,
+    "question": "麵酵嘅比喻中，婦人將麵酵藏喺麵裏，直到發生甚麼？",
+    "options": [
+      "全團麵都發起來",
+      "麵團即刻變成餅",
+      "所有麵酵浮到面上",
+      "麵團被分成十二份"
+    ],
+    "answer": 0,
+    "explanation": "耶穌把天國比作婦人放在三斗麵裏的麵酵，直到全團都發起來。",
+    "reference": "馬太福音13:33",
+    "id": "matthew-040",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/13/",
+    "verification": "https://bible.usccb.org/bible/matthew/13"
+  },
+  {
+    "unit": "m5",
+    "difficulty": 1,
+    "question": "耶穌使五千人吃飽之前，門徒話手上有多少食物？",
+    "options": [
+      "五個餅同兩條魚",
+      "七個餅同幾條小魚",
+      "五個餅同七條魚",
+      "兩個餅同五條魚"
+    ],
+    "answer": 0,
+    "explanation": "門徒說只有五個餅和兩條魚；耶穌祝謝、擘開餅交給門徒，再分給群眾。",
+    "reference": "馬太福音14:17–19",
+    "id": "matthew-041",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/14/",
+    "verification": "https://bible.usccb.org/bible/matthew/14"
+  },
+  {
+    "unit": "m5",
+    "difficulty": 1,
+    "question": "五千人吃飽之後，門徒收起剩低嘅零碎，裝滿幾多籃？",
+    "options": [
+      "十二籃",
+      "七籃",
+      "五籃",
+      "四籃"
+    ],
+    "answer": 0,
+    "explanation": "眾人都吃飽後，門徒收拾剩餘的零碎，裝滿十二籃。",
+    "reference": "馬太福音14:20–21",
+    "id": "matthew-042",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/14/",
+    "verification": "https://bible.usccb.org/bible/matthew/14"
+  },
+  {
+    "unit": "m5",
+    "difficulty": 1,
+    "question": "耶穌喺海面行走時，邊位門徒從船上下來行向佢？",
+    "options": [
+      "彼得",
+      "安得烈",
+      "雅各",
+      "腓力"
+    ],
+    "answer": 0,
+    "explanation": "彼得求耶穌叫他從水面走過去；耶穌說「你來吧」，彼得便從船上下來。",
+    "reference": "馬太福音14:28–29",
+    "id": "matthew-043",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/14/",
+    "verification": "https://bible.usccb.org/bible/matthew/14"
+  },
+  {
+    "unit": "m5",
+    "difficulty": 1,
+    "question": "耶穌問門徒「你哋話我是誰」時，西門彼得點回答？",
+    "options": [
+      "你是基督，是永生上帝的兒子",
+      "你是從死裏復活的施洗約翰",
+      "你是將要再來的以利亞",
+      "你是眾先知中的耶利米"
+    ],
+    "answer": 0,
+    "explanation": "彼得認耶穌為基督、永生上帝的兒子；耶穌回應這是天父啟示給他的。",
+    "reference": "馬太福音16:15–17",
+    "id": "matthew-044",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/16/",
+    "verification": "https://bible.usccb.org/bible/matthew/16"
+  },
+  {
+    "unit": "m5",
+    "difficulty": 1,
+    "question": "耶穌解釋「酵」嘅提醒時，叫門徒防備邊啲人嘅教訓？",
+    "options": [
+      "法利賽人同撒都該人",
+      "稅吏同漁夫",
+      "羅馬兵丁同百夫長",
+      "撒瑪利亞人同外邦商人"
+    ],
+    "answer": 0,
+    "explanation": "門徒起初以為耶穌講餅，後來明白他是叫他們防備法利賽人和撒都該人的教訓。",
+    "reference": "馬太福音16:5–12",
+    "id": "matthew-045",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/16/",
+    "verification": "https://bible.usccb.org/bible/matthew/16"
+  },
+  {
+    "unit": "m5",
+    "difficulty": 2,
+    "question": "希羅底嘅女兒喺希律生日宴上跳舞後，受母親指使求甚麼？",
+    "options": [
+      "把施洗約翰嘅頭放喺盤上給她",
+      "釋放監裏嘅施洗約翰",
+      "給她一半希律嘅王國",
+      "把約翰趕出加利利"
+    ],
+    "answer": 0,
+    "explanation": "希律因誓言和同席的人，命人按希羅底女兒的請求，把約翰的頭放在盤上給她。",
+    "reference": "馬太福音14:6–11",
+    "id": "matthew-046",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/14/",
+    "verification": "https://bible.usccb.org/bible/matthew/14"
+  },
+  {
+    "unit": "m5",
+    "difficulty": 2,
+    "question": "迦南婦人懇求耶穌幫助時，佢話自己邊位家人被鬼折磨？",
+    "options": [
+      "女兒",
+      "兒子",
+      "丈夫",
+      "母親"
+    ],
+    "answer": 0,
+    "explanation": "婦人懇求主憐憫，因她的女兒被鬼折磨；耶穌稱讚她的信心，女兒隨即得醫治。",
+    "reference": "馬太福音15:21–28",
+    "id": "matthew-047",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/15/",
+    "verification": "https://bible.usccb.org/bible/matthew/15"
+  },
+  {
+    "unit": "m5",
+    "difficulty": 2,
+    "question": "四千人吃飽嘅記載裏，門徒收起剩餘零碎裝滿幾多筐？",
+    "options": [
+      "七筐",
+      "十二籃",
+      "五筐",
+      "四筐"
+    ],
+    "answer": 0,
+    "explanation": "在七個餅和幾條小魚使群眾吃飽之後，門徒收拾剩下的零碎，裝滿七筐。",
+    "reference": "馬太福音15:34–38",
+    "id": "matthew-048",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/15/",
+    "verification": "https://bible.usccb.org/bible/matthew/15"
+  },
+  {
+    "unit": "m5",
+    "difficulty": 2,
+    "question": "法利賽人同撒都該人要求天上嘅神蹟時，耶穌話除咗邊個記號以外，不會再給他們別的？",
+    "options": [
+      "約拿嘅記號",
+      "摩西嘅記號",
+      "以利亞嘅記號",
+      "以賽亞嘅記號"
+    ],
+    "answer": 0,
+    "explanation": "耶穌回應求神蹟的人，說除了約拿的記號以外，不再有別的記號給他們。",
+    "reference": "馬太福音16:1–4",
+    "id": "matthew-049",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/16/",
+    "verification": "https://bible.usccb.org/bible/matthew/16"
+  },
+  {
+    "unit": "m5",
+    "difficulty": 2,
+    "question": "彼得認耶穌係基督之後，耶穌話要把甚麼給彼得？",
+    "options": [
+      "天國嘅鑰匙",
+      "聖殿嘅鑰匙",
+      "十二支派嘅權杖",
+      "耶路撒冷城嘅王冠"
+    ],
+    "answer": 0,
+    "explanation": "耶穌對彼得說要把天國的鑰匙給他，並接着談及捆綁和釋放。",
+    "reference": "馬太福音16:18–19",
+    "id": "matthew-050",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/16/",
+    "verification": "https://bible.usccb.org/bible/matthew/16"
+  },
+  {
+    "unit": "m6",
+    "difficulty": 1,
+    "question": "耶穌上高山改變形象時，帶咗邊三個門徒？",
+    "options": [
+      "彼得、雅各同約翰",
+      "彼得、安得烈同腓力",
+      "雅各、馬太同多馬",
+      "約翰、巴多羅買同安得烈"
+    ],
+    "answer": 0,
+    "explanation": "馬太記載，耶穌帶彼得、雅各和雅各的兄弟約翰暗暗上高山。",
+    "reference": "馬太福音17:1–2",
+    "id": "matthew-051",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/17/",
+    "verification": "https://bible.usccb.org/bible/matthew/17"
+  },
+  {
+    "unit": "m6",
+    "difficulty": 1,
+    "question": "耶穌喺山上改變形象時，門徒見到邊兩位同佢談話？",
+    "options": [
+      "摩西同以利亞",
+      "亞伯拉罕同大衛",
+      "以賽亞同耶利米",
+      "挪亞同以利沙"
+    ],
+    "answer": 0,
+    "explanation": "摩西和以利亞向門徒顯現，並與改變形象的耶穌談話。",
+    "reference": "馬太福音17:2–3",
+    "id": "matthew-052",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/17/",
+    "verification": "https://bible.usccb.org/bible/matthew/17"
+  },
+  {
+    "unit": "m6",
+    "difficulty": 1,
+    "question": "門徒問天國裏邊個最大，耶穌叫邊個企喺佢哋中間作例子？",
+    "options": [
+      "一個小孩子",
+      "一位祭司",
+      "一位老人家",
+      "一位稅吏"
+    ],
+    "answer": 0,
+    "explanation": "耶穌叫一個小孩子站在門徒中間，教導他們回轉，並謙卑像小孩子。",
+    "reference": "馬太福音18:1–4",
+    "id": "matthew-053",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/18/",
+    "verification": "https://bible.usccb.org/bible/matthew/18"
+  },
+  {
+    "unit": "m6",
+    "difficulty": 1,
+    "question": "失羊嘅比喻中，一百隻羊走失一隻，主人會點做？",
+    "options": [
+      "留下九十九隻，去尋找迷路嗰隻",
+      "留下迷路嗰隻，只照顧其餘羊",
+      "立即賣掉九十九隻",
+      "叫鄰舍買一隻羊補數"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說若一百隻羊走失一隻，主人會撇下九十九隻去找迷路的羊。",
+    "reference": "馬太福音18:12–14",
+    "id": "matthew-054",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/18/",
+    "verification": "https://bible.usccb.org/bible/matthew/18"
+  },
+  {
+    "unit": "m6",
+    "difficulty": 1,
+    "question": "有人帶小孩子來求耶穌按手禱告，門徒阻止時，耶穌點講？",
+    "options": [
+      "讓小孩子到我這裏來，不要禁止他們",
+      "等小孩子長大後先來",
+      "叫佢哋先完成潔淨禮",
+      "叫家長帶佢哋去搵祭司"
+    ],
+    "answer": 0,
+    "explanation": "耶穌吩咐門徒讓小孩子到他那裏去，因為天國正是屬於這樣的人。",
+    "reference": "馬太福音19:13–15",
+    "id": "matthew-055",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/19/",
+    "verification": "https://bible.usccb.org/bible/matthew/19"
+  },
+  {
+    "unit": "m6",
+    "difficulty": 2,
+    "question": "收丁稅嘅人詢問之後，耶穌叫彼得喺邊度搵到交稅嘅錢？",
+    "options": [
+      "第一條釣上來嘅魚口裏",
+      "船上嘅漁網底",
+      "聖殿嘅銀庫",
+      "彼得家中嘅錢袋"
+    ],
+    "answer": 0,
+    "explanation": "耶穌叫彼得到海邊釣魚，打開第一條釣上來的魚口，取出一塊銀錢為二人交稅。",
+    "reference": "馬太福音17:24–27",
+    "id": "matthew-056",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/17/",
+    "verification": "https://bible.usccb.org/bible/matthew/17"
+  },
+  {
+    "unit": "m6",
+    "difficulty": 2,
+    "question": "處理弟兄得罪自己嘅事時，如果私下勸佢唔聽，耶穌話下一步可以點做？",
+    "options": [
+      "再帶一兩個人同去",
+      "立即向全城公開",
+      "立刻停止任何溝通",
+      "直接向羅馬官員報案"
+    ],
+    "answer": 0,
+    "explanation": "耶穌教導先私下指出過錯；若對方不聽，就再帶一兩個人同去，憑兩三個見證人的口作準。",
+    "reference": "馬太福音18:15–16",
+    "id": "matthew-057",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/18/",
+    "verification": "https://bible.usccb.org/bible/matthew/18"
+  },
+  {
+    "unit": "m6",
+    "difficulty": 2,
+    "question": "彼得問應該饒恕弟兄幾多次，耶穌點回答？",
+    "options": [
+      "不是七次，而是七十個七次",
+      "只需要七次",
+      "每一天最多七次",
+      "三次之後不必再饒恕"
+    ],
+    "answer": 0,
+    "explanation": "彼得問饒恕七次是否足夠；耶穌回答不是七次，而是七十個七次，強調持續饒恕。",
+    "reference": "馬太福音18:21–22",
+    "id": "matthew-058",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/18/",
+    "verification": "https://bible.usccb.org/bible/matthew/18"
+  },
+  {
+    "unit": "m6",
+    "difficulty": 2,
+    "question": "不肯饒恕人嘅僕人喺比喻中，本來欠主人幾多？",
+    "options": [
+      "一萬他連得",
+      "一百銀幣",
+      "七十個銀幣",
+      "五千個銀幣"
+    ],
+    "answer": 0,
+    "explanation": "主人免了僕人一萬他連得的債；那僕人卻不肯寬容欠他一百銀幣的同伴。",
+    "reference": "馬太福音18:23–30",
+    "id": "matthew-059",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/18/",
+    "verification": "https://bible.usccb.org/bible/matthew/18"
+  },
+  {
+    "unit": "m6",
+    "difficulty": 2,
+    "question": "耶穌形容財主進天國困難時，提到邊種動物穿過針眼？",
+    "options": [
+      "駱駝",
+      "驢",
+      "馬",
+      "綿羊"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說駱駝穿過針眼比財主進上帝的國還容易；他又指出在人不能、在上帝凡事都能。",
+    "reference": "馬太福音19:23–26",
+    "id": "matthew-060",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/19/",
+    "verification": "https://bible.usccb.org/bible/matthew/19"
+  },
+  {
+    "unit": "m7",
+    "difficulty": 1,
+    "question": "葡萄園工人嘅比喻中，園主同一早受僱嘅工人講好，每日工錢係幾多？",
+    "options": [
+      "一個銀幣",
+      "兩個銀幣",
+      "五個銀幣",
+      "十個銀幣"
+    ],
+    "answer": 0,
+    "explanation": "園主一早出去僱工，與工人講定一天一個銀幣，就打發他們進葡萄園。",
+    "reference": "馬太福音20:1–2",
+    "id": "matthew-061",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/20/",
+    "verification": "https://bible.usccb.org/bible/matthew/20"
+  },
+  {
+    "unit": "m7",
+    "difficulty": 1,
+    "question": "耶穌講到真正為大時，話邊個願意喺門徒中間為大，就要做甚麼？",
+    "options": [
+      "作眾人嘅用人",
+      "坐喺最前面",
+      "管轄其他人",
+      "先得到眾人稱讚"
+    ],
+    "answer": 0,
+    "explanation": "耶穌教導門徒不要像外邦掌權者轄制人；願意為大的，要作眾人的用人。",
+    "reference": "馬太福音20:25–27",
+    "id": "matthew-062",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/20/",
+    "verification": "https://bible.usccb.org/bible/matthew/20"
+  },
+  {
+    "unit": "m7",
+    "difficulty": 1,
+    "question": "耶穌進入耶路撒冷時，群眾一邊鋪衣服同樹枝，一邊喊甚麼？",
+    "options": [
+      "和散那歸於大衛的子孫",
+      "願羅馬皇帝萬歲",
+      "聖殿已經重新建成",
+      "以色列不再需要君王"
+    ],
+    "answer": 0,
+    "explanation": "前後的群眾呼喊「和散那歸於大衛的子孫」，並稱頌奉主名而來的。",
+    "reference": "馬太福音21:8–9",
+    "id": "matthew-063",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/21/",
+    "verification": "https://bible.usccb.org/bible/matthew/21"
+  },
+  {
+    "unit": "m7",
+    "difficulty": 1,
+    "question": "有人問律法上最大嘅誡命係甚麼，耶穌首先提到要盡心、盡性、盡意做甚麼？",
+    "options": [
+      "愛主你的上帝",
+      "愛鄰舍如同自己",
+      "尊敬父母",
+      "守住所有節期"
+    ],
+    "answer": 0,
+    "explanation": "耶穌回答要盡心、盡性、盡意愛主你的上帝；第二條相似，就是愛人如己。",
+    "reference": "馬太福音22:36–39",
+    "id": "matthew-064",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/22/",
+    "verification": "https://bible.usccb.org/bible/matthew/22"
+  },
+  {
+    "unit": "m7",
+    "difficulty": 1,
+    "question": "耶穌進入聖殿，見到做買賣嘅人，做咗咩？",
+    "options": [
+      "趕走買賣嘅人，推倒兌換銀錢之人的桌子",
+      "叫買賣嘅人加價賣祭物",
+      "喺聖殿設立稅關",
+      "叫門徒買晒所有鴿子"
+    ],
+    "answer": 0,
+    "explanation": "耶穌趕出聖殿裏一切買賣的人，推倒兌換銀錢之人的桌子，說殿應稱為禱告的殿。",
+    "reference": "馬太福音21:12–13",
+    "id": "matthew-065",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/21/",
+    "verification": "https://bible.usccb.org/bible/matthew/21"
+  },
+  {
+    "unit": "m7",
+    "difficulty": 2,
+    "question": "葡萄園工人嘅比喻中，點解一早受僱嘅工人向園主發怨言？",
+    "options": [
+      "最後來的人同佢哋一樣得到一個銀幣",
+      "園主完全冇支付佢哋工錢",
+      "佢哋只做咗一小時就要離開",
+      "其他工人得到葡萄園作產業"
+    ],
+    "answer": 0,
+    "explanation": "後來僱用的人也得到一個銀幣；一早僱用的人以為會得更多，但同樣得到一個銀幣，便向園主發怨言。",
+    "reference": "馬太福音20:8–12",
+    "id": "matthew-066",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/20/",
+    "verification": "https://bible.usccb.org/bible/matthew/20"
+  },
+  {
+    "unit": "m7",
+    "difficulty": 2,
+    "question": "耶穌喺耶利哥附近遇到幾多個呼求憐憫嘅瞎子？",
+    "options": [
+      "兩個",
+      "一個",
+      "三個",
+      "十二個"
+    ],
+    "answer": 0,
+    "explanation": "馬太記載有兩個瞎子坐在路旁，呼求大衛的子孫憐憫；耶穌摸他們的眼睛，他們便看見。",
+    "reference": "馬太福音20:29–34",
+    "id": "matthew-067",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/20/",
+    "verification": "https://bible.usccb.org/bible/matthew/20"
+  },
+  {
+    "unit": "m7",
+    "difficulty": 2,
+    "question": "有人用納稅問題試探耶穌；耶穌睇過錢幣上嘅像同名號後，叫人點做？",
+    "options": [
+      "凱撒的物當歸給凱撒，上帝的物當歸給上帝",
+      "將所有錢幣都捐給聖殿",
+      "停止向任何掌權者納稅",
+      "只向聖殿交稅，其他稅一律拒絕"
+    ],
+    "answer": 0,
+    "explanation": "耶穌請他們看納稅用的錢幣，指出上面是凱撒的像和名號，並說凱撒的物歸凱撒，上帝的物歸上帝。",
+    "reference": "馬太福音22:17–21",
+    "id": "matthew-068",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/22/",
+    "verification": "https://bible.usccb.org/bible/matthew/22"
+  },
+  {
+    "unit": "m7",
+    "difficulty": 2,
+    "question": "兩個兒子嘅比喻中，邊一個最終遵行父親嘅意思？",
+    "options": [
+      "起初話不去，後來改變主意去工作嗰個",
+      "口頭答應去，結果冇去嗰個",
+      "兩個都冇去工作",
+      "兩個都去咗工作"
+    ],
+    "answer": 0,
+    "explanation": "第一個兒子起初拒絕，但後來懊悔去了；第二個答應，卻沒有去。耶穌問聽眾誰遵行父親的意思。",
+    "reference": "馬太福音21:28–31",
+    "id": "matthew-069",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/21/",
+    "verification": "https://bible.usccb.org/bible/matthew/21"
+  },
+  {
+    "unit": "m7",
+    "difficulty": 2,
+    "question": "兇惡園戶嘅比喻中，主人最後派邊個到園戶嗰度？",
+    "options": [
+      "自己嘅兒子",
+      "另一位園主",
+      "一隊羅馬兵",
+      "自己的管家"
+    ],
+    "answer": 0,
+    "explanation": "園戶先後傷害主人派去收果子的僕人；主人最後派自己的兒子去，盼望園戶尊重他。",
+    "reference": "馬太福音21:33–39",
+    "id": "matthew-070",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/21/",
+    "verification": "https://bible.usccb.org/bible/matthew/21"
+  },
+  {
+    "unit": "m8",
+    "difficulty": 1,
+    "question": "耶穌責備文士同法利賽人外表好看，內裏卻不潔，用咩作比喻？",
+    "options": [
+      "粉飾嘅墳墓",
+      "冇根嘅麥子",
+      "冇油嘅燈",
+      "荒廢嘅葡萄園"
+    ],
+    "answer": 0,
+    "explanation": "耶穌把他們比作粉飾的墳墓：外面好看，裏面卻裝滿死人的骨頭和污穢。",
+    "reference": "馬太福音23:27–28",
+    "id": "matthew-071",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/23/",
+    "verification": "https://bible.usccb.org/bible/matthew/23"
+  },
+  {
+    "unit": "m8",
+    "difficulty": 1,
+    "question": "十個童女嘅比喻中，有幾多個係聰明嘅？",
+    "options": [
+      "五個",
+      "兩個",
+      "七個",
+      "十個"
+    ],
+    "answer": 0,
+    "explanation": "十個童女拿着燈出去迎接新郎；其中五個愚拙，五個聰明。",
+    "reference": "馬太福音25:1–2",
+    "id": "matthew-072",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/25/",
+    "verification": "https://bible.usccb.org/bible/matthew/25"
+  },
+  {
+    "unit": "m8",
+    "difficulty": 1,
+    "question": "按才幹受託嘅比喻中，主人出門前將財物交給邊啲人？",
+    "options": [
+      "佢自己嘅僕人",
+      "城裏所有商人",
+      "路上遇見嘅旅客",
+      "聖殿裏嘅祭司"
+    ],
+    "answer": 0,
+    "explanation": "主人要往外國去，叫了自己的僕人來，按各人的才幹把財物交給他們。",
+    "reference": "馬太福音25:14–15",
+    "id": "matthew-073",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/25/",
+    "verification": "https://bible.usccb.org/bible/matthew/25"
+  },
+  {
+    "unit": "m8",
+    "difficulty": 1,
+    "question": "人子喺榮耀裏審判萬民時，耶穌用邊兩種動物形容分開眾人？",
+    "options": [
+      "綿羊同山羊",
+      "綿羊同狼",
+      "鴿子同烏鴉",
+      "牛同驢"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說人子要分別萬民，好像牧羊人把綿羊和山羊分開一樣。",
+    "reference": "馬太福音25:31–33",
+    "id": "matthew-074",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/25/",
+    "verification": "https://bible.usccb.org/bible/matthew/25"
+  },
+  {
+    "unit": "m8",
+    "difficulty": 1,
+    "question": "耶穌教導門徒，面對冇人知道嘅日子同時辰，應該點樣生活？",
+    "options": [
+      "保持警醒",
+      "推算出確實日期",
+      "只關心地上財物",
+      "停止照顧身邊嘅人"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說那日子和時辰沒有人知道，並勸門徒警醒、準備。",
+    "reference": "馬太福音24:36–44",
+    "id": "matthew-075",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/24/",
+    "verification": "https://bible.usccb.org/bible/matthew/24"
+  },
+  {
+    "unit": "m8",
+    "difficulty": 2,
+    "question": "十個童女嘅比喻中，聰明嘅童女除咗燈，仲預備咗甚麼？",
+    "options": [
+      "器皿裏嘅油",
+      "後備嘅婚宴衣服",
+      "畀新郎嘅銀幣",
+      "第二盞已點着嘅燈"
+    ],
+    "answer": 0,
+    "explanation": "愚拙的童女拿着燈卻不帶油；聰明的童女拿燈，又預備器皿裝油。",
+    "reference": "馬太福音25:3–4",
+    "id": "matthew-076",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/25/",
+    "verification": "https://bible.usccb.org/bible/matthew/25"
+  },
+  {
+    "unit": "m8",
+    "difficulty": 2,
+    "question": "按和合本嘅寫法，主人把銀子交畀三個僕人時，分別交畀佢哋幾多？",
+    "options": [
+      "五千、二千、一千",
+      "五千、三千、一千",
+      "一萬、五千、一千",
+      "每人三千"
+    ],
+    "answer": 0,
+    "explanation": "主人按各人的才幹，一個給五千銀子，一個給二千，一個給一千；原文分別是五、二、一他連得。",
+    "reference": "馬太福音25:14–15",
+    "id": "matthew-077",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/25/",
+    "verification": "https://bible.usccb.org/bible/matthew/25"
+  },
+  {
+    "unit": "m8",
+    "difficulty": 2,
+    "question": "比喻中，領一千銀子嘅僕人點樣處理主人交畀佢嘅錢？",
+    "options": [
+      "掘地將錢藏起來",
+      "用錢買田耕種",
+      "交畀另一個僕人投資",
+      "將錢分畀貧窮人"
+    ],
+    "answer": 0,
+    "explanation": "領五千和二千銀子的僕人拿去做買賣；領一千的卻掘地藏起主人的錢。",
+    "reference": "馬太福音25:16–18",
+    "id": "matthew-078",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/25/",
+    "verification": "https://bible.usccb.org/bible/matthew/25"
+  },
+  {
+    "unit": "m8",
+    "difficulty": 2,
+    "question": "綿羊與山羊嘅講論中，王提到義人曾經點樣對待飢餓嘅人？",
+    "options": [
+      "給他們食物",
+      "叫他們自行買食物",
+      "只為他們預備衣服",
+      "要求他們先工作才可以進城"
+    ],
+    "answer": 0,
+    "explanation": "王提到他餓了時義人給他吃、渴了時給他喝；他們對最小的弟兄所做的，就是對他做的。",
+    "reference": "馬太福音25:34–40",
+    "id": "matthew-079",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/25/",
+    "verification": "https://bible.usccb.org/bible/matthew/25"
+  },
+  {
+    "unit": "m8",
+    "difficulty": 2,
+    "question": "耶穌責備一些宗教領袖重視奉獻香草的十分之一，卻忽略律法更重要嘅甚麼？",
+    "options": [
+      "公義、憐憫同信實",
+      "禁食、洗手同穿禮服",
+      "造聖殿、守城牆同交稅",
+      "學識、財富同家族聲望"
+    ],
+    "answer": 0,
+    "explanation": "耶穌責備他們謹慎奉獻香草的十分之一，卻忽略律法上更重要的公義、憐憫和信實。",
+    "reference": "馬太福音23:23",
+    "id": "matthew-080",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/23/",
+    "verification": "https://bible.usccb.org/bible/matthew/23"
+  },
+  {
+    "unit": "m9",
+    "difficulty": 1,
+    "question": "猶大去見祭司長，答應將耶穌交畀佢哋，得到幾多銀錢？",
+    "options": [
+      "三十塊銀錢",
+      "二十塊銀錢",
+      "五十塊銀錢",
+      "一百塊銀錢"
+    ],
+    "answer": 0,
+    "explanation": "祭司長給猶大三十塊銀錢；從那時起，他尋找機會把耶穌交給他們。",
+    "reference": "馬太福音26:14–16",
+    "id": "matthew-081",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/26/",
+    "verification": "https://bible.usccb.org/bible/matthew/26"
+  },
+  {
+    "unit": "m9",
+    "difficulty": 1,
+    "question": "逾越節晚餐時，耶穌拿餅、祝福並擘開後，稱餅為甚麼？",
+    "options": [
+      "佢嘅身體",
+      "門徒嘅信心",
+      "聖殿嘅根基",
+      "以色列嘅產業"
+    ],
+    "answer": 0,
+    "explanation": "耶穌拿餅祝福，擘開遞給門徒，對他們說拿着吃，並稱這餅為他的身體。",
+    "reference": "馬太福音26:26",
+    "id": "matthew-082",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/26/",
+    "verification": "https://bible.usccb.org/bible/matthew/26"
+  },
+  {
+    "unit": "m9",
+    "difficulty": 1,
+    "question": "耶穌預先話彼得喺雞叫以前會幾多次不認佢？",
+    "options": [
+      "三次",
+      "一次",
+      "兩次",
+      "七次"
+    ],
+    "answer": 0,
+    "explanation": "耶穌告訴彼得，當夜雞叫以先，他會三次不認耶穌。",
+    "reference": "馬太福音26:33–34",
+    "id": "matthew-083",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/26/",
+    "verification": "https://bible.usccb.org/bible/matthew/26"
+  },
+  {
+    "unit": "m9",
+    "difficulty": 1,
+    "question": "耶穌被捉拿前，去邊個地方禱告？",
+    "options": [
+      "客西馬尼",
+      "伯大尼",
+      "伯利恆",
+      "該撒利亞腓立比"
+    ],
+    "answer": 0,
+    "explanation": "耶穌和門徒來到一個地方，名叫客西馬尼；他叫門徒坐下，自己往前禱告。",
+    "reference": "馬太福音26:36",
+    "id": "matthew-084",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/26/",
+    "verification": "https://bible.usccb.org/bible/matthew/26"
+  },
+  {
+    "unit": "m9",
+    "difficulty": 1,
+    "question": "猶大用甚麼暗號，讓跟住佢嘅人認出耶穌？",
+    "options": [
+      "親吻耶穌",
+      "給耶穌遞上一個餅",
+      "向耶穌鞠躬三次",
+      "把外衣放喺耶穌腳前"
+    ],
+    "answer": 0,
+    "explanation": "猶大事先給捉拿耶穌的人一個暗號：他與誰親吻，誰就是他們要捉拿的。",
+    "reference": "馬太福音26:47–50",
+    "id": "matthew-085",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/26/",
+    "verification": "https://bible.usccb.org/bible/matthew/26"
+  },
+  {
+    "unit": "m9",
+    "difficulty": 2,
+    "question": "有女人喺伯大尼用貴重香膏澆耶穌嘅頭，耶穌點樣解釋佢做嘅事？",
+    "options": [
+      "佢為耶穌安葬預先作準備",
+      "佢要為耶穌設立地上王位",
+      "佢要代替門徒預備逾越節晚餐",
+      "佢係為咗向群眾展示財富"
+    ],
+    "answer": 0,
+    "explanation": "有人認為這樣浪費，耶穌卻說女人在他身上做了美事，將香膏澆在他身上是為安葬作準備。",
+    "reference": "馬太福音26:6–12",
+    "id": "matthew-086",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/26/",
+    "verification": "https://bible.usccb.org/bible/matthew/26"
+  },
+  {
+    "unit": "m9",
+    "difficulty": 2,
+    "question": "耶穌喺晚餐拿起杯時，話佢嘅血為多人流出來，使甚麼得赦？",
+    "options": [
+      "罪",
+      "債務",
+      "疾病",
+      "羅馬嘅稅款"
+    ],
+    "answer": 0,
+    "explanation": "耶穌拿起杯，說這是他立約的血，為多人流出來，使罪得赦。",
+    "reference": "馬太福音26:27–28",
+    "id": "matthew-087",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/26/",
+    "verification": "https://bible.usccb.org/bible/matthew/26"
+  },
+  {
+    "unit": "m9",
+    "difficulty": 2,
+    "question": "耶穌喺客西馬尼禱告，求父若可行叫那杯離開，接着點講？",
+    "options": [
+      "然而不要照我的意思，只要照你的意思",
+      "願我的門徒立即建立國度",
+      "請讓我從此不用再禱告",
+      "求你先讓群眾明白所有事情"
+    ],
+    "answer": 0,
+    "explanation": "耶穌向父禱告，表明自己的懇求，又順服父的旨意。",
+    "reference": "馬太福音26:39",
+    "id": "matthew-088",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/26/",
+    "verification": "https://bible.usccb.org/bible/matthew/26"
+  },
+  {
+    "unit": "m9",
+    "difficulty": 2,
+    "question": "耶穌喺客西馬尼見門徒睡着，提醒佢哋要做甚麼，免得入了迷惑？",
+    "options": [
+      "警醒禱告",
+      "立即返回加利利",
+      "先去預備晚餐",
+      "離開花園，到城裏等候"
+    ],
+    "answer": 0,
+    "explanation": "耶穌提醒門徒警醒禱告，免得入了迷惑；又指出心靈願意，肉體卻軟弱。",
+    "reference": "馬太福音26:40–41",
+    "id": "matthew-089",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/26/",
+    "verification": "https://bible.usccb.org/bible/matthew/26"
+  },
+  {
+    "unit": "m9",
+    "difficulty": 2,
+    "question": "大祭司問耶穌是否上帝的兒子基督後，聽見耶穌回答，大祭司做咗咩？",
+    "options": [
+      "撕開自己嘅衣服",
+      "立即釋放耶穌",
+      "將審訊帶到加利利",
+      "交畀門徒決定結果"
+    ],
+    "answer": 0,
+    "explanation": "大祭司聽見耶穌的回答後撕開衣服，指控他說了褻瀆的話。",
+    "reference": "馬太福音26:63–65",
+    "id": "matthew-090",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/26/",
+    "verification": "https://bible.usccb.org/bible/matthew/26"
+  },
+  {
+    "unit": "m10",
+    "difficulty": 1,
+    "question": "巡撫彼拉多問群眾要釋放邊個囚犯，群眾揀咗邊個？",
+    "options": [
+      "巴拉巴",
+      "西門古利奈人",
+      "亞利馬太人約瑟",
+      "施洗約翰"
+    ],
+    "answer": 0,
+    "explanation": "按照節期釋放一名囚犯的慣例，彼拉多問群眾要巴拉巴還是耶穌；他們要求釋放巴拉巴。",
+    "reference": "馬太福音27:15–21",
+    "id": "matthew-091",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/27/",
+    "verification": "https://bible.usccb.org/bible/matthew/27"
+  },
+  {
+    "unit": "m10",
+    "difficulty": 1,
+    "question": "兵丁戲弄耶穌時，用甚麼編成冠冕戴喺佢頭上？",
+    "options": [
+      "荊棘",
+      "橄欖枝",
+      "金線",
+      "葡萄藤"
+    ],
+    "answer": 0,
+    "explanation": "兵丁給耶穌穿上朱紅色袍子，用荊棘編成冠冕戴在他頭上，並戲弄他。",
+    "reference": "馬太福音27:27–29",
+    "id": "matthew-092",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/27/",
+    "verification": "https://bible.usccb.org/bible/matthew/27"
+  },
+  {
+    "unit": "m10",
+    "difficulty": 1,
+    "question": "兵丁帶耶穌出去時，強迫邊個幫佢背十字架？",
+    "options": [
+      "古利奈人西門",
+      "亞利馬太人約瑟",
+      "彼得",
+      "百夫長"
+    ],
+    "answer": 0,
+    "explanation": "他們出來時遇到一個古利奈人名叫西門，就勉強他背耶穌的十字架。",
+    "reference": "馬太福音27:32",
+    "id": "matthew-093",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/27/",
+    "verification": "https://bible.usccb.org/bible/matthew/27"
+  },
+  {
+    "unit": "m10",
+    "difficulty": 1,
+    "question": "耶穌被釘十字架嘅地方叫各各他，意思係甚麼？",
+    "options": [
+      "髑髏地",
+      "橄欖山",
+      "和平之城",
+      "葡萄園"
+    ],
+    "answer": 0,
+    "explanation": "馬太解釋，各各他這地方的意思是「髑髏地」。",
+    "reference": "馬太福音27:33",
+    "id": "matthew-094",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/27/",
+    "verification": "https://bible.usccb.org/bible/matthew/27"
+  },
+  {
+    "unit": "m10",
+    "difficulty": 1,
+    "question": "天使喺墳墓旁對婦女講，耶穌點解唔喺墳墓裏？",
+    "options": [
+      "佢已經復活",
+      "門徒夜裏把佢帶走",
+      "祭司長將佢移到聖殿",
+      "守衛把佢帶到彼拉多面前"
+    ],
+    "answer": 0,
+    "explanation": "天使對婦女說，耶穌不在那裏，因為他照自己所說的已經復活了。",
+    "reference": "馬太福音28:5–6",
+    "id": "matthew-095",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/28/",
+    "verification": "https://bible.usccb.org/bible/matthew/28"
+  },
+  {
+    "unit": "m10",
+    "difficulty": 2,
+    "question": "耶穌死後，邊位亞利馬太人向彼拉多求取耶穌嘅身體？",
+    "options": [
+      "約瑟",
+      "尼哥底母",
+      "西門",
+      "巴拿巴"
+    ],
+    "answer": 0,
+    "explanation": "馬太記載，一位名叫約瑟的亞利馬太富人也是耶穌的門徒，他向彼拉多求耶穌的身體。",
+    "reference": "馬太福音27:57–59",
+    "id": "matthew-096",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/27/",
+    "verification": "https://bible.usccb.org/bible/matthew/27"
+  },
+  {
+    "unit": "m10",
+    "difficulty": 2,
+    "question": "安息日後，係邊兩位婦女去睇墳墓？",
+    "options": [
+      "抹大拉的馬利亞同另一個馬利亞",
+      "馬大同抹大拉的馬利亞",
+      "撒羅米同以利沙伯",
+      "馬大同耶穌的母親馬利亞"
+    ],
+    "answer": 0,
+    "explanation": "馬太說安息日將盡、七日的第一日天快亮時，抹大拉的馬利亞和另一個馬利亞去看墳墓。",
+    "reference": "馬太福音28:1",
+    "id": "matthew-097",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/28/",
+    "verification": "https://bible.usccb.org/bible/matthew/28"
+  },
+  {
+    "unit": "m10",
+    "difficulty": 2,
+    "question": "天使叫婦女快快告訴門徒，復活嘅耶穌會喺佢哋以先去邊度？",
+    "options": [
+      "加利利",
+      "伯利恆",
+      "埃及",
+      "撒瑪利亞"
+    ],
+    "answer": 0,
+    "explanation": "天使吩咐婦女告訴門徒，耶穌已從死裏復活，並且在他們以先往加利利去。",
+    "reference": "馬太福音28:7",
+    "id": "matthew-098",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/28/",
+    "verification": "https://bible.usccb.org/bible/matthew/28"
+  },
+  {
+    "unit": "m10",
+    "difficulty": 2,
+    "question": "復活嘅耶穌差遣門徒時，吩咐佢哋使邊啲人成為門徒？",
+    "options": [
+      "萬民",
+      "只有耶路撒冷嘅居民",
+      "只有已經認識門徒嘅人",
+      "只有加利利嘅漁夫"
+    ],
+    "answer": 0,
+    "explanation": "耶穌吩咐門徒去使萬民作他的門徒，奉父、子、聖靈的名給他們施洗，並教導他們遵守他的吩咐。",
+    "reference": "馬太福音28:18–20",
+    "id": "matthew-099",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/28/",
+    "verification": "https://bible.usccb.org/bible/matthew/28"
+  },
+  {
+    "unit": "m10",
+    "difficulty": 2,
+    "question": "馬太福音結尾，復活嘅耶穌應許門徒甚麼？",
+    "options": [
+      "常與他們同在，直到世界的末了",
+      "他們從此再不會遇到困難",
+      "他們都會成為地上的君王",
+      "他們永遠不用離開加利利"
+    ],
+    "answer": 0,
+    "explanation": "耶穌差遣門徒後，應許他常與他們同在，直到世界的末了。",
+    "reference": "馬太福音28:20",
+    "id": "matthew-100",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/28/",
+    "verification": "https://bible.usccb.org/bible/matthew/28"
+  }
+];
+
+export const MATTHEW_HARD_DATA = [
+  {
+    "difficulty": 3,
+    "question": "約瑟從埃及回來，聽見邊個接替父親治理猶太，就怕去猶太？",
+    "options": [
+      "亞基老",
+      "希律安提帕",
+      "彼拉多",
+      "腓力"
+    ],
+    "answer": 0,
+    "explanation": "約瑟聽見亞基老接替父親希律作猶太王，便怕往那裏去；他在夢中得指示後往加利利境內去。",
+    "reference": "馬太福音2:19–23",
+    "id": "matthew-hard-001",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/2/",
+    "verification": "https://bible.usccb.org/bible/matthew/2"
+  },
+  {
+    "difficulty": 3,
+    "question": "施洗約翰警告法利賽人同撒都該人時，話斧頭已經放喺邊度？",
+    "options": [
+      "樹根",
+      "樹枝",
+      "莊稼嘅根",
+      "葡萄樹嘅果子"
+    ],
+    "answer": 0,
+    "explanation": "約翰說斧頭已放在樹根，不結好果子的樹要被砍下來丟在火裏；這是催促人結出與悔改相稱的果子。",
+    "reference": "馬太福音3:7–10",
+    "id": "matthew-hard-002",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/3/",
+    "verification": "https://bible.usccb.org/bible/matthew/3"
+  },
+  {
+    "difficulty": 3,
+    "question": "魔鬼帶耶穌到聖殿頂上，引用經文提到天使會點樣保護佢？",
+    "options": [
+      "用手托住他，免得腳碰在石頭上",
+      "保護他雙手，免得手碰在石頭上",
+      "把他帶到聖殿門口，免受群眾傷害",
+      "把石頭變成餅，解決他嘅飢餓"
+    ],
+    "answer": 0,
+    "explanation": "魔鬼引用經文，說上帝會吩咐天使用手托住耶穌，免得他的腳碰在石頭上；耶穌回答不可試探主你的上帝。",
+    "reference": "馬太福音4:5–7",
+    "id": "matthew-hard-003",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/4/",
+    "verification": "https://bible.usccb.org/bible/matthew/4"
+  },
+  {
+    "difficulty": 3,
+    "question": "耶穌教導門徒禁食時，叫佢哋點做，以免刻意畀人睇出自己禁食？",
+    "options": [
+      "梳頭、洗臉",
+      "在臉上弄出愁容",
+      "站在街角宣告禁食",
+      "以灰塵遮住頭和臉"
+    ],
+    "answer": 0,
+    "explanation": "耶穌教導禁食時要梳頭洗臉，不像假冒為善的人故意顯出愁容，叫人看出他們禁食。",
+    "reference": "馬太福音6:16–18",
+    "id": "matthew-hard-004",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/6/",
+    "verification": "https://bible.usccb.org/bible/matthew/6"
+  },
+  {
+    "difficulty": 3,
+    "question": "耶穌話，進天國嘅人不單係稱呼佢「主啊，主啊」，更要做甚麼？",
+    "options": [
+      "遵行天父嘅旨意",
+      "奉主名說過預言就足夠",
+      "奉主名行過異能就足夠",
+      "曾經聽過耶穌嘅教導就足夠"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說不是每個稱呼他「主啊，主啊」的人都能進天國，惟獨遵行天父旨意的人才能進去。",
+    "reference": "馬太福音7:21–23",
+    "id": "matthew-hard-005",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/7/",
+    "verification": "https://bible.usccb.org/bible/matthew/7"
+  },
+  {
+    "difficulty": 3,
+    "question": "百夫長點樣用自己同部下嘅關係，說明佢相信耶穌嘅權柄？",
+    "options": [
+      "他自己受權柄管轄，也有士兵聽從他的命令",
+      "他不受任何人管轄，卻有士兵聽從命令",
+      "他受權柄管轄，但手下沒有士兵",
+      "他只聽從患病僕人的吩咐"
+    ],
+    "answer": 0,
+    "explanation": "百夫長以自己受權柄管轄、也有兵在手下為例，說吩咐人去就去、來就來，表示相信耶穌只需說話就能醫治。",
+    "reference": "馬太福音8:8–10",
+    "id": "matthew-hard-006",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/8/",
+    "verification": "https://bible.usccb.org/bible/matthew/8"
+  },
+  {
+    "difficulty": 3,
+    "question": "耶穌話新酒應該裝入新皮袋，因為如果裝入舊皮袋會有咩後果？",
+    "options": [
+      "皮袋裂開，酒漏出，皮袋也壞了",
+      "皮袋裂開，但酒仍然保存",
+      "酒漏出，但皮袋可以繼續使用",
+      "酒和皮袋都會保存完好"
+    ],
+    "answer": 0,
+    "explanation": "耶穌指出新酒裝在舊皮袋會使袋裂開、酒漏出，皮袋也壞了；新酒要裝在新皮袋裏。",
+    "reference": "馬太福音9:17",
+    "id": "matthew-hard-007",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/9/",
+    "verification": "https://bible.usccb.org/bible/matthew/9"
+  },
+  {
+    "difficulty": 3,
+    "question": "耶穌差派門徒時，話佢哋好似羊進入狼群，要具備邊兩種特質？",
+    "options": [
+      "像蛇一樣靈巧，像鴿子一樣馴良",
+      "像蛇一樣馴良，像鴿子一樣靈巧",
+      "像羊一樣靈巧，像狼一樣馴良",
+      "像狼一樣靈巧，像羊一樣馴良"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說他差門徒出去如同羊進入狼群，因此要像蛇靈巧、像鴿子馴良。",
+    "reference": "馬太福音10:16",
+    "id": "matthew-hard-008",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/10/",
+    "verification": "https://bible.usccb.org/bible/matthew/10"
+  },
+  {
+    "difficulty": 3,
+    "question": "約翰派人問耶穌是否那將要來的一位，耶穌叫他們回報所聽見、看見的事；以下邊組全在耶穌的回答之內？",
+    "options": [
+      "瞎子看見、聾子聽見、窮人聽見福音",
+      "瞎子看見、聾子聽見、約翰已經出獄",
+      "瞎子看見、死人復活、聖殿已被拆毀",
+      "瘸子行走、窮人聽見福音、希律已經悔改"
+    ],
+    "answer": 0,
+    "explanation": "耶穌叫使者把所聽見、看見的告訴約翰，包括瞎子看見、瘸子行走、痲瘋得潔淨和窮人聽見福音。",
+    "reference": "馬太福音11:2–5",
+    "id": "matthew-hard-009",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/11/",
+    "verification": "https://bible.usccb.org/bible/matthew/11"
+  },
+  {
+    "difficulty": 3,
+    "question": "耶穌說污鬼離開人後返回，另帶幾多個比自己更惡的靈進去？",
+    "options": [
+      "七個",
+      "六個",
+      "八個",
+      "十二個"
+    ],
+    "answer": 0,
+    "explanation": "耶穌說污鬼回到空閒、打掃乾淨的屋子，又帶七個比自己更惡的鬼進去，那人後來的景況比先前更不好。",
+    "reference": "馬太福音12:43–45",
+    "id": "matthew-hard-010",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/12/",
+    "verification": "https://bible.usccb.org/bible/matthew/12"
+  },
+  {
+    "difficulty": 3,
+    "question": "耶穌解釋稗子比喻時，話田地代表甚麼？",
+    "options": [
+      "世界",
+      "天國",
+      "教會",
+      "耶路撒冷"
+    ],
+    "answer": 0,
+    "explanation": "耶穌解釋，撒好種的是人子，田地是世界，好種是天國之子，稗子是那惡者之子。",
+    "reference": "馬太福音13:36–38",
+    "id": "matthew-hard-011",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/13/",
+    "verification": "https://bible.usccb.org/bible/matthew/13"
+  },
+  {
+    "difficulty": 3,
+    "question": "彼得喺水面行向耶穌時，見到甚麼就害怕，開始沉下去？",
+    "options": [
+      "見到風甚大",
+      "見到耶穌仍然坐在船上",
+      "見到門徒將船划回岸邊",
+      "見到自己已經走到對岸"
+    ],
+    "answer": 0,
+    "explanation": "彼得從船上下來行向耶穌；但看見風甚大，就害怕，開始沉下去，呼求主救他。",
+    "reference": "馬太福音14:28–31",
+    "id": "matthew-hard-012",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/14/",
+    "verification": "https://bible.usccb.org/bible/matthew/14"
+  },
+  {
+    "difficulty": 3,
+    "question": "迦南婦人回應耶穌關於兒女同小狗嘅話時，提到小狗也吃甚麼？",
+    "options": [
+      "主人桌上掉下來嘅碎屑",
+      "兒女直接交到牠口中嘅整個餅",
+      "門徒遞給群眾嘅兩條魚",
+      "主人的僕人從田裏帶來嘅麥穗"
+    ],
+    "answer": 0,
+    "explanation": "婦人回答說，小狗也吃主人桌上掉下來的碎渣；耶穌稱讚她的信心，她女兒從那時候就好了。",
+    "reference": "馬太福音15:25–28",
+    "id": "matthew-hard-013",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/15/",
+    "verification": "https://bible.usccb.org/bible/matthew/15"
+  },
+  {
+    "difficulty": 3,
+    "question": "彼得認耶穌係基督後，耶穌話這件事係邊個啟示給彼得？",
+    "options": [
+      "在天上的父",
+      "彼得的兄弟安得烈",
+      "施洗約翰",
+      "耶穌的其他門徒"
+    ],
+    "answer": 0,
+    "explanation": "耶穌對西門說，這不是屬血肉的人指示他的，而是在天上的父指示的。",
+    "reference": "馬太福音16:16–17",
+    "id": "matthew-hard-014",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/16/",
+    "verification": "https://bible.usccb.org/bible/matthew/16"
+  },
+  {
+    "difficulty": 3,
+    "question": "耶穌叫彼得從魚口取出的銀錢，要為邊啲人交丁稅？",
+    "options": [
+      "耶穌同彼得",
+      "彼得同安得烈",
+      "彼得自己",
+      "耶穌同所有十二位門徒"
+    ],
+    "answer": 0,
+    "explanation": "耶穌叫彼得取魚口中的一塊銀錢，拿去給收稅的人，為耶穌和彼得交稅。",
+    "reference": "馬太福音17:24–27",
+    "id": "matthew-hard-015",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/17/",
+    "verification": "https://bible.usccb.org/bible/matthew/17"
+  },
+  {
+    "difficulty": 3,
+    "question": "不肯饒恕人嘅僕人被主人免除大筆債後，佢嘅同伴欠佢幾多？",
+    "options": [
+      "一百銀幣",
+      "一萬他連得",
+      "三十塊銀錢",
+      "五千個銀幣"
+    ],
+    "answer": 0,
+    "explanation": "那僕人的同伴欠他一百銀幣；他不願寬容，反而把同伴下在監裏，直到還清。",
+    "reference": "馬太福音18:28–30",
+    "id": "matthew-hard-016",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/18/",
+    "verification": "https://bible.usccb.org/bible/matthew/18"
+  },
+  {
+    "difficulty": 3,
+    "question": "葡萄園工人嘅比喻中，發工錢時，園主吩咐管事由邊一批開始？",
+    "options": [
+      "最後受僱嘅工人",
+      "最早受僱嘅工人",
+      "按年齡由大至小",
+      "按抽籤次序，不分先後"
+    ],
+    "answer": 0,
+    "explanation": "到了晚上，園主叫管事發工錢，從最後受僱的起，到最早受僱的為止。",
+    "reference": "馬太福音20:8",
+    "id": "matthew-hard-017",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/20/",
+    "verification": "https://bible.usccb.org/bible/matthew/20"
+  },
+  {
+    "difficulty": 3,
+    "question": "婚宴比喻中，王見到有一位客人欠缺甚麼？",
+    "options": [
+      "婚宴嘅禮服",
+      "進入葡萄園的工作證",
+      "奉獻給聖殿的銀錢",
+      "主人的兒子送出的戒指"
+    ],
+    "answer": 0,
+    "explanation": "王進來觀看賓客，見到一人沒有穿婚宴禮服，便問他怎樣進來。",
+    "reference": "馬太福音22:11–12",
+    "id": "matthew-hard-018",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/22/",
+    "verification": "https://bible.usccb.org/bible/matthew/22"
+  },
+  {
+    "difficulty": 3,
+    "question": "耶穌責備文士同法利賽人，好像洗淨杯盤外面，裏面卻盛滿甚麼？",
+    "options": [
+      "貪婪和放蕩",
+      "驕傲和妒忌",
+      "恐懼和懷疑",
+      "憂慮和憤怒"
+    ],
+    "answer": 0,
+    "explanation": "耶穌指出他們洗淨杯盤的外面，裏面卻滿了貪婪和放蕩；他教導先潔淨裏面。",
+    "reference": "馬太福音23:25–26",
+    "id": "matthew-hard-019",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/23/",
+    "verification": "https://bible.usccb.org/bible/matthew/23"
+  },
+  {
+    "difficulty": 3,
+    "question": "馬太記載耶穌斷氣後，聖殿嘅幔子點樣裂開？",
+    "options": [
+      "從上到下裂為兩半",
+      "從下到上裂為兩半",
+      "只喺中央裂開一小處",
+      "被門徒從柱上解開"
+    ],
+    "answer": 0,
+    "explanation": "耶穌大聲喊叫後斷氣；馬太記載殿裏的幔子從上到下裂為兩半，地也震動。",
+    "reference": "馬太福音27:50–51",
+    "id": "matthew-hard-020",
+    "topic": "matthew",
+    "source": "https://rcuv.hkbs.org.hk/RCUV2/MAT/27/",
+    "verification": "https://bible.usccb.org/bible/matthew/27"
+  }
+];

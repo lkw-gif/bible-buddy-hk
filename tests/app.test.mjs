@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { JSDOM, VirtualConsole } from 'jsdom';
 import { QUESTION_MAP, QUESTIONS, TOPICS } from '../dist/questions.mjs';
 import { createRound } from '../dist/engine.mjs';
+import { MATTHEW_LEVEL_POOLS } from '../dist/matthew-course.mjs';
 
 // DOM integration tests exercise the actual application module and user events.
 // jsdom does not provide visual layout; dialogs/scroll/clipboard are emulated here.
@@ -437,5 +438,50 @@ test('Numbers course adds ten lessons, high-level practice, and omits random qui
  await app.navigate('/numbers');await app.click('[data-mode="numbers-level"][data-difficulty="3"]');
  assert(app.savedProgress().current.items.every(item=>item.id.startsWith('numbers-hard-')));
  assert.match(app.$('.question-meta').textContent,/就嚟頂唔住/);
+ assert.deepEqual(app.errors,[]);app.dom.window.close();
+});
+
+test('Matthew navigation, lessons, feedback, persistence and level completion work together', async()=>{
+ let app=await boot();await app.click('[data-nav="new-testament"]');
+ assert(app.$('.matthew-course-entry a'));await app.click('.matthew-course-entry a');
+ assert.equal(app.w.location.hash,'#/matthew');assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);
+ for(const d of ['1','2','3'])assert(app.$(`[data-mode="matthew-level"][data-difficulty="${d}"]`));
+ await app.click('[data-mode="matthew"][data-unit="m1"]');
+ let round=app.savedProgress().current;const first=round.items[0].id;const correct=QUESTION_MAP.get(first).answer;
+ await app.click('[data-action="bookmark"]');await app.click(`[data-action="answer"][data-choice="${correct}"]`);
+ assert.match(app.$('.feedback .reference').textContent,/馬太福音/);await app.click('[data-action="next"]');
+ const saved=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(saved,'#/quiz');
+ assert.equal(app.savedProgress().current.index,1);assert.equal(Object.keys(app.savedProgress().matthewAnswers).length,1);
+ assert(app.savedProgress().matthewSeen.includes(first));assert(app.savedProgress().bookmarks.includes(first));
+ await app.navigate('/matthew');await app.click('[data-mode="matthew-level"][data-difficulty="3"]');
+ const highFirst=app.savedProgress().current.items.map(i=>i.id);
+ for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+ await app.click('[data-action="retry"]');assert(app.savedProgress().current.items.every(i=>!highFirst.includes(i.id)));
+ for(let i=0;i<10;i++){await app.click('[data-action="answer"][data-choice="0"]');await app.click('[data-action="next"]');}
+ await app.navigate('/matthew');assert(app.$('[data-mode="matthew-level"][data-difficulty="3"]').classList.contains('is-complete'));
+ assert.match(app.$('[data-mode="matthew-level"][data-difficulty="3"]').textContent,/已經完成/);
+ let state=app.savedProgress();state.matthewSeen=[...new Set([...state.matthewSeen,...MATTHEW_LEVEL_POOLS[1].map(q=>q.id),...MATTHEW_LEVEL_POOLS[2].map(q=>q.id)])];
+ const completed=JSON.stringify(state);app.dom.window.close();app=await boot(completed,'#/matthew');
+ for(const d of ['1','2','3']){const b=app.$(`[data-mode="matthew-level"][data-difficulty="${d}"]`);assert(b.classList.contains('is-complete'));assert.match(b.textContent,/已經完成/);}
+ assert.deepEqual(app.errors,[]);app.dom.window.close();
+});
+
+test('All ten Matthew lessons play through and mark low and medium pools complete', async()=>{
+ const app=await boot(null,'#/matthew');await app.click('[data-mode="matthew"][data-unit="m1"]');
+ const ids=new Set();
+ for(let lesson=0;lesson<10;lesson++){
+  for(let i=0;i<10;i++){
+   const round=app.savedProgress().current;ids.add(round.items[round.index].id);
+   await app.click('[data-action="answer"][data-choice="0"]');
+   assert.match(app.$('.feedback .reference').textContent,/馬太福音\d+:\d+/);
+   await app.click('[data-action="next"]');
+  }
+  assert.match(app.$('.score-ring').textContent,/10 \/ 10/);
+  if(lesson<9)await app.click('.growth-note [data-mode="matthew"]');
+ }
+ assert.equal(ids.size,100);assert.equal(Object.keys(app.savedProgress().matthewAnswers).length,100);
+ await app.navigate('/matthew');assert.match(app.$('.course-progress').textContent,/已操練 100／100 題/);
+ for(const d of ['1','2'])assert(app.$(`[data-mode="matthew-level"][data-difficulty="${d}"]`).classList.contains('is-complete'));
+ assert(!app.$('[data-mode="matthew-level"][data-difficulty="3"]').classList.contains('is-complete'));
  assert.deepEqual(app.errors,[]);app.dom.window.close();
 });
