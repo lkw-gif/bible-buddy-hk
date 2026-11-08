@@ -93,7 +93,7 @@ for (const t of TOPICS) {
 }
 for (const q of [...QUESTIONS,...HISTORY_QUESTIONS,...CHALLENGE_QUESTIONS,...BIBLE_QUESTIONS,...GENESIS_QUESTIONS,...GENESIS_HARD_QUESTIONS,...EXODUS_QUESTIONS,...EXODUS_HARD_QUESTIONS,...NUMBERS_QUESTIONS,...NUMBERS_HARD_QUESTIONS,...LEVITICUS_QUESTIONS,...LEVITICUS_HARD_QUESTIONS,...DEUTERONOMY_QUESTIONS,...DEUTERONOMY_HARD_QUESTIONS,...MARK_QUESTIONS,...MARK_HARD_QUESTIONS,...LUKE_QUESTIONS,...LUKE_HARD_QUESTIONS,...JOHN_QUESTIONS,...JOHN_HARD_QUESTIONS]) {
   assert(!ids.has(q.id), `Duplicate id ${q.id}`); ids.add(q.id);
-  assert(!prompts.has(q.question), `Duplicate question ${q.id}`); prompts.add(q.question);
+  assert(!prompts.has(q.topic+':'+q.question), `Duplicate question ${q.id}`); prompts.add(q.topic+':'+q.question);
   assert(q.question && q.explanation.length > 10 && q.reference, q.id);
   assert.equal(q.options.length, 4, q.id);
   assert.equal(new Set(q.options).size, 4, q.id);

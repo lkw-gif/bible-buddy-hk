@@ -1,3 +1,4 @@
+import { XP_LEVELS, prepareXp, awardXp, xpStatus, mergeXp } from './experience.mjs';
 import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261108-9';
 import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, retreatRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261108-9';
 import { HISTORY_TOPIC, HISTORY_QUESTIONS, HISTORY_QUESTION_MAP, COURSE_UNITS, cleanCourseAnswers, courseStatus } from './history-course.mjs?v=20261101-7';
@@ -61,7 +62,7 @@ function readProgress() {
     const markAnswers = cleanMarkAnswers(saved.markAnswers);
     const lukeAnswers = cleanLukeAnswers(saved.lukeAnswers);
     const johnAnswers = cleanJohnAnswers(saved.johnAnswers);
-    return { ...blank, tone: 'cheeky', current: validRound(saved.current) ? { ...saved.current, tone:'cheeky' } : null,
+    return { ...blank, xp:saved.xp, tone: 'cheeky', current: validRound(saved.current) ? { ...saved.current, tone:'cheeky' } : null,
       history, bookmarks: cleanIds(saved.bookmarks), mistakes: cleanIds(saved.mistakes), courseAnswers:cleanCourseAnswers(saved.courseAnswers), bibleAnswers:cleanBibleAnswers(saved.bibleAnswers), genesisAnswers, exodusAnswers, numbersAnswers, leviticusAnswers, deuteronomyAnswers, matthewAnswers, markAnswers, lukeAnswers, johnAnswers,
       genesisSeen: cleanSeenIds(saved.genesisSeen, genesisAnswers, history, 'genesis'),
       exodusSeen: cleanSeenIds(saved.exodusSeen, exodusAnswers, history, 'exodus'),
@@ -85,6 +86,7 @@ function cleanSeenIds(value, answers, history, topic) {
   return [...ids].filter(id => QUESTION_MAP.get(id)?.topic === topic);
 }
 let progress = readProgress();
+progress.xp = prepareXp(progress, QUESTION_MAP, questionForRound);
 let reviewTab = 'mistakes';
 let reviewSearch = '';
 let resultFilter = 'wrong';
@@ -93,7 +95,9 @@ let toastTimeout;
 const main = $('#main');
 const shareDialog = $('#share-dialog');
 
-function persist() {
+function savedXp() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null')?.xp; } catch { return null; } }
+function persist({resetXp=false}={}) {
+  if(!resetXp)progress.xp=mergeXp(progress.xp,savedXp());
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(progress)); storageUnavailable = false; }
   catch { storageUnavailable = true; if (!storageNoticeShown) { toast('呢個瀏覽器暫時儲存唔到進度。今局仍然玩得，可以下載成績留底。'); storageNoticeShown = true; } }
   updateNavigation();
@@ -194,7 +198,7 @@ function newTestamentView() { return `<div class="page-head"><div class="eyebrow
 function oldTestamentView() { return `<div class="page-head"><div class="eyebrow">逐卷讀，逐卷學</div><h1>舊約書卷</h1><p>由創世記、出埃及記、利未記、民數記同申命記開始，按經文次序逐卷認識。</p></div><div class="course-features old-testament-courses">${courseHomeCard('genesis')}${courseHomeCard('exodus')}${courseHomeCard('leviticus')}${courseHomeCard('numbers')}${courseHomeCard('deuteronomy')}</div>`; }
 function homeView() {
   const current = progress.current;
-  return `<section class="hero" aria-labelledby="home-title"><div class="hero-copy"><div class="hero-label"><span>✦</span> 主日學唔好走堂 · 一齊操練</div><h1 id="home-title">返咗咁耐教會，<br><em>聖經有幾熟？</em></h1><p>唔係咩都答「耶穌」就過關。<br>由基本知識慢慢學起，睇吓你本聖經有冇封塵。</p><div class="actions"><button class="button primary" data-action="start" data-mode="general" data-count="20">曠野快閃 · 20題 ${icon('arrow')}</button></div><div class="hero-stats"><div><strong>${QUESTIONS.length + CHALLENGE_QUESTIONS.length}</strong> 條問題</div><div><strong>${TOPICS.length}</strong> 個主題</div><div><strong>冇</strong> 時間限制</div></div></div><div class="hero-art"><img src="assets/hero.png" alt="戴圓眼鏡嘅小羊同白鴿坐喺舊式課桌前讀聖經，後面有淡淡嘅香港舊樓" width="1536" height="1024" fetchpriority="high"><span class="art-note">每日讀啲經文，一齊扎根。</span><div class="art-badge"><span aria-hidden="true">✧</span> 答錯唔緊要，小羊陪你慢慢學。</div></div></section>
+  return `${experienceView()}<section class="hero" aria-labelledby="home-title"><div class="hero-copy"><div class="hero-label"><span>✦</span> 主日學唔好走堂 · 一齊操練</div><h1 id="home-title">返咗咁耐教會，<br><em>聖經有幾熟？</em></h1><p>唔係咩都答「耶穌」就過關。<br>由基本知識慢慢學起，睇吓你本聖經有冇封塵。</p><div class="actions"><button class="button primary" data-action="start" data-mode="general" data-count="20">曠野快閃 · 20題 ${icon('arrow')}</button></div><div class="hero-stats"><div><strong>${QUESTIONS.length + CHALLENGE_QUESTIONS.length}</strong> 條問題</div><div><strong>${TOPICS.length}</strong> 個主題</div><div><strong>冇</strong> 時間限制</div></div></div><div class="hero-art"><img src="assets/hero.png" alt="戴圓眼鏡嘅小羊同白鴿坐喺舊式課桌前讀聖經，後面有淡淡嘅香港舊樓" width="1536" height="1024" fetchpriority="high"><span class="art-note">每日讀啲經文，一齊扎根。</span><div class="art-badge"><span aria-hidden="true">✧</span> 答錯唔緊要，小羊陪你慢慢學。</div></div></section>
     ${storageUnavailable ? '<p class="privacy-notice">呢個瀏覽器暫時儲存唔到進度。仍然可以測驗，完成後可下載成績。</p>' : ''}
     ${current ? `<aside class="resume-banner"><div><strong>上次未答完，今次繼續啦。</strong><p>${escape(roundTitle(current))} · 已答 ${current.answers.length} / ${current.items.length} 題</p></div><a href="#/quiz" class="button primary small">繼續操練 ${icon('arrow')}</a></aside>` : ''}
     <section class="mode-grid" aria-label="揀一種玩法"><article class="general-card"><div><div class="eyebrow">八個主題，一齊操練</div><h2><span class="general-title">全方位大試煉</span><span class="pill">同小組一齊玩</span></h2><p>想快啲答可以揀20題；想做足40題，就揀一個固定版本。</p><div class="quick-version"><button class="button light" data-action="start" data-mode="general" data-count="20"><strong>曠野快閃 · 20題</strong>${icon('arrow')}</button></div><div class="fixed-version-heading">曠野長征 · 40題</div><div class="general-editions">${[1,2,3,4,5,6].map((edition)=>`<button class="button light" data-action="start" data-mode="general" data-count="40" data-edition="${edition}"><strong>曠野${['一','二','三','四','五','六'][edition-1]}</strong>${icon('arrow')}</button>`).join('')}</div><p class="general-note">六個版本都係固定題目，八個主題各有五題；六版合起來可以操練晒240條題目。</p></div><div class="general-decoration" aria-hidden="true">${icon('cap')}</div></article>${trialCard()}</section>
@@ -220,7 +224,7 @@ function quizView() {
   const correct = answered && response.selected === q.answer;
   const t = topicById(q.topic);
   const completed = r.answers.length;
-  const feedback = !answered ? '' : `<section class="feedback ${correct ? '' : 'wrong'}" aria-labelledby="feedback-title"><h3 id="feedback-title" tabindex="-1">${correct ? (r.tone === 'gentle' ? '答啱啦，繼續保持！' : '有根有基，呢題企得穩！') : response.selected === null ? '呢題先溫習，下次就唔易中伏。' : r.tone === 'gentle' ? '呢題失手，下次就識。' : '中伏喇！睇埋解說，再操練。'}</h3>${!correct ? `<p><strong>對返答案：${escape(q.options[q.answer])}</strong></p>` : ''}<p>${escape(q.explanation)}</p>${q.reference ? `<p class="reference">出處：${escape(q.reference)}</p>` : ''}</section>`;
+  const feedback = !answered ? '' : `<section class="feedback ${correct ? '' : 'wrong'}" aria-labelledby="feedback-title"><h3 id="feedback-title" tabindex="-1">${correct ? (r.tone === 'gentle' ? '答啱啦，繼續保持！' : '有根有基，呢題企得穩！') : response.selected === null ? '呢題先溫習，下次就唔易中伏。' : r.tone === 'gentle' ? '呢題失手，下次就識。' : '中伏喇！睇埋解說，再操練。'}</h3>${!correct ? `<p><strong>對返答案：${escape(q.options[q.answer])}</strong></p>` : ''}<p>${escape(q.explanation)}</p>${correct && Number.isFinite(response.xpGained) ? `<p class="xp-earned">${response.xpGained ? `+${response.xpGained} XP · 繼續操練！` : '答啱啦！今日嘅重做獎勵已計好。'}</p>` : ''}${q.reference ? `<p class="reference">出處：${escape(q.reference)}</p>` : ''}</section>`;
   const courseModes=['genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke','john'];
   const courseMode=courseModes.some(mode=>r.mode.startsWith(`${mode}-`)) ? r.mode.split('-')[0] : r.mode;
   const isCourse=['church','bible',...courseModes].includes(courseMode);
@@ -261,7 +265,11 @@ function handleAnswer(selected) {
   if (NUMBERS_QUESTION_MAP.has(q.id) && !['numbers-test','numbers-level'].includes(updated.mode)) progress.numbersAnswers[q.id] = selected === q.answer;
   if (LEVITICUS_QUESTION_MAP.has(q.id) && !['leviticus-test','leviticus-level'].includes(updated.mode)) progress.leviticusAnswers[q.id] = selected === q.answer;
   if (DEUTERONOMY_QUESTION_MAP.has(q.id) && !['deuteronomy-test','deuteronomy-level'].includes(updated.mode)) progress.deuteronomyAnswers[q.id] = selected === q.answer;
+  const reward = awardXp(mergeXp(progress.xp,savedXp()), q, {attempt:updated.id+':'+updated.index,correct:selected===q.answer});
+  progress.xp = reward.profile;
+  updated.answers[updated.index].xpGained = reward.gained;
   persist(); main.innerHTML = quizView();
+  if(reward.levelUp)toast('升到 Level '+reward.level+'！解鎖稱號「'+reward.title+'」。');
   announce(`${selected === q.answer ? '答啱啦。' : '正確答案係' + q.options[q.answer] + '。'} ${q.explanation}`);
   $('#feedback-title')?.focus({ preventScroll: true });
   const pager = $('.quiz-pager');
@@ -332,7 +340,7 @@ function historyView() {
   const total = summaries.reduce((a,s) => a+s.total,0);
   const correct = summaries.reduce((a,s) => a+s.correct,0);
   const best = summaries.filter(s => s.level).sort((a,b) => b.percent-a.percent)[0];
-  return `<div class="page-head"><div class="eyebrow">每日扎根少少，唔使急住開花</div><h1>一路操練，一路扎根。</h1><p>唔使同隔籬嗰位鬥屬靈。睇返自己行過嘅路，睇吓下一步溫習邊個主題。</p></div><div class="stats-grid"><div class="stat-card"><strong>${summaries.length}</strong><p class="stat-title">完成操練</p><p class="stat-sub">保留最近 60 局</p></div><div class="stat-card"><strong>${total ? number(correct / total * 100) + '%' : '—'}</strong><p class="stat-title">答題命中率</p><p class="stat-sub">${correct} / ${total} 題答啱</p></div><div class="stat-card"><strong>${best ? number(best.percent) : '—'}</strong><p class="stat-title">大試煉最佳戰績</p><p class="stat-sub">${best ? best.level.name : '大試煉等緊你入場'}</p></div><div class="stat-card"><strong>${streakDays()} <small style="font-size:15px">日</small></strong><p class="stat-title">連續操練咗幾日</p><p class="stat-sub">以香港日期計算</p></div></div>${best ? `<p class="privacy-notice">${best.level.symbol} 最佳綜合稱號：${best.level.name} · ${number(best.percent)} 分。呢個係操練成績，唔好拎嚟同弟兄姊妹鬥屬靈。</p>` : ''}<div class="section-heading"><div><h2 class="section-title">你嘅操練紀錄</h2><p>每場操練都會記低，隨時返去溫習。</p></div>${summaries.length ? '<button class="text-button" data-action="download-history" style="font-size:12px">下載操練紀錄</button>' : ''}</div>${summaries.length ? `<div class="history-list">${summaries.map(s => `<article class="history-row"><span class="topic-icon ${topicById(s.round.topic)?.color || 'sage'}">${icon(s.round.mode === 'general' ? 'cap' : s.round.mode === 'trial' ? 'spark' : s.round.mode === 'daily' ? 'clock' : s.round.mode === 'review' ? 'repeat' : topicById(s.round.topic)?.icon)}</span><div class="history-info"><h3>${escape(roundTitle(s.round))}</h3><p>${formatDate(s.round.finishedAt)} · ${s.correct}/${s.total} 題${s.level ? ' · '+s.level.name : ''}</p></div><span class="history-score">${number(s.percent)}<small style="font-size:12px">分</small></span><a class="text-button" href="#/result/${s.round.id}">睇返今場成績 ${icon('arrow')}</a></article>`).join('')}</div><p class="history-note">同一份題庫嘅重做分數，會受記憶影響。返去再做識答，記住都要明白答案背後嘅原因。</p>` : emptyView('第一步操練，等緊你行。','完成一局，呢度就會記低你嘅成績同溫習方向。','入場操練')}<div class="danger-zone"><p>進度只儲存喺呢個瀏覽器。換裝置或者清除網站資料，唔會保留。</p><button class="text-button" data-action="clear-dialog">清除呢個瀏覽器嘅學習紀錄</button></div>`;
+  return `${experienceView(true)}<div class="page-head"><div class="eyebrow">每日扎根少少，唔使急住開花</div><h1>一路操練，一路扎根。</h1><p>唔使同隔籬嗰位鬥屬靈。睇返自己行過嘅路，睇吓下一步溫習邊個主題。</p></div><div class="stats-grid"><div class="stat-card"><strong>${summaries.length}</strong><p class="stat-title">完成操練</p><p class="stat-sub">保留最近 60 局</p></div><div class="stat-card"><strong>${total ? number(correct / total * 100) + '%' : '—'}</strong><p class="stat-title">答題命中率</p><p class="stat-sub">${correct} / ${total} 題答啱</p></div><div class="stat-card"><strong>${best ? number(best.percent) : '—'}</strong><p class="stat-title">大試煉最佳戰績</p><p class="stat-sub">${best ? best.level.name : '大試煉等緊你入場'}</p></div><div class="stat-card"><strong>${streakDays()} <small style="font-size:15px">日</small></strong><p class="stat-title">連續操練咗幾日</p><p class="stat-sub">以香港日期計算</p></div></div>${best ? `<p class="privacy-notice">${best.level.symbol} 最佳綜合稱號：${best.level.name} · ${number(best.percent)} 分。呢個係操練成績，唔好拎嚟同弟兄姊妹鬥屬靈。</p>` : ''}<div class="section-heading"><div><h2 class="section-title">你嘅操練紀錄</h2><p>每場操練都會記低，隨時返去溫習。</p></div>${summaries.length ? '<button class="text-button" data-action="download-history" style="font-size:12px">下載操練紀錄</button>' : ''}</div>${summaries.length ? `<div class="history-list">${summaries.map(s => `<article class="history-row"><span class="topic-icon ${topicById(s.round.topic)?.color || 'sage'}">${icon(s.round.mode === 'general' ? 'cap' : s.round.mode === 'trial' ? 'spark' : s.round.mode === 'daily' ? 'clock' : s.round.mode === 'review' ? 'repeat' : topicById(s.round.topic)?.icon)}</span><div class="history-info"><h3>${escape(roundTitle(s.round))}</h3><p>${formatDate(s.round.finishedAt)} · ${s.correct}/${s.total} 題${s.level ? ' · '+s.level.name : ''}</p></div><span class="history-score">${number(s.percent)}<small style="font-size:12px">分</small></span><a class="text-button" href="#/result/${s.round.id}">睇返今場成績 ${icon('arrow')}</a></article>`).join('')}</div><p class="history-note">同一份題庫嘅重做分數，會受記憶影響。返去再做識答，記住都要明白答案背後嘅原因。</p>` : emptyView('第一步操練，等緊你行。','完成一局，呢度就會記低你嘅成績同溫習方向。','入場操練')}<div class="danger-zone"><p>進度只儲存喺呢個瀏覽器。換裝置或者清除網站資料，唔會保留。</p><button class="text-button" data-action="clear-dialog">清除呢個瀏覽器嘅學習紀錄</button></div>`;
 }
 
 function emptyView(title, body, cta) { return `<div class="empty-state"><img src="assets/hero.png" width="1536" height="1024" alt="小羊同白鴿喺度等你"><h2>${title}</h2><p>${body}</p><a class="button primary" href="#/">${cta} ${icon('arrow')}</a></div>`; }
@@ -395,9 +403,9 @@ document.addEventListener('click', async event => {
   if (action === 'download-result') { const r = progress.history.find(x => x.id === button.dataset.id); if (r) download(`BibleBuddy-成績-${hongKongDay(new Date(r.finishedAt))}.txt`, resultText(r)); }
   if (action === 'download-history') download('BibleBuddy-學習紀錄.json', JSON.stringify({ exportedAt:new Date().toISOString(), history:progress.history.map(r => ({ date:r.finishedAt, mode:roundTitle(r), correct:summarizeRound(r).correct, total:r.items.length, score:summarizeRound(r).percent, title:summarizeRound(r).level?.name || null })) },null,2),'application/json;charset=utf-8');
   if (action === 'clear-dialog') {
-    shareDialog.innerHTML = `<div class="dialog-top"><div><div class="eyebrow">重新起步，都要睇清楚</div><h2 id="share-title">重新起步：清除紀錄？</h2></div><button class="close-button" data-action="close-dialog" aria-label="取消清除">${icon('close')}</button></div><p style="font-size:14px;margin-bottom:24px">會清除呢個瀏覽器嘅未完成操練、成績、錯題、溫習書籤，以及各個課程同書卷嘅操練進度。清除後無法還原；你可以先取消，下載成績紀錄留底。</p><div class="actions"><button class="button secondary" data-action="close-dialog">保留紀錄</button><button class="button primary" data-action="clear-confirm">確定清除</button></div>`; shareDialog.showModal();
+    shareDialog.innerHTML = `<div class="dialog-top"><div><div class="eyebrow">重新起步，都要睇清楚</div><h2 id="share-title">重新起步：清除紀錄？</h2></div><button class="close-button" data-action="close-dialog" aria-label="取消清除">${icon('close')}</button></div><p style="font-size:14px;margin-bottom:24px">會清除呢個瀏覽器嘅未完成操練、成績、錯題、溫習書籤，以及各個課程同書卷嘅操練進度。經驗值同累積稱號亦會清除。清除後無法還原；你可以先取消，下載成績紀錄留底。</p><div class="actions"><button class="button secondary" data-action="close-dialog">保留紀錄</button><button class="button primary" data-action="clear-confirm">確定清除</button></div>`; shareDialog.showModal();
   }
-  if (action === 'clear-confirm') { progress = { schema:1, tone:'cheeky', current:null, history:[], bookmarks:[], mistakes:[], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, numbersAnswers:{}, leviticusAnswers:{}, deuteronomyAnswers:{}, matthewAnswers:{}, markAnswers:{}, lukeAnswers:{}, johnAnswers:{}, genesisSeen:[], exodusSeen:[], numbersSeen:[], leviticusSeen:[], deuteronomySeen:[], matthewSeen:[], markSeen:[], lukeSeen:[], johnSeen:[] }; persist(); shareDialog.close(); render(); toast('紀錄已清除，新一輪操練由你起步。'); }
+  if (action === 'clear-confirm') { progress = { schema:1, tone:'cheeky', current:null, history:[], bookmarks:[], mistakes:[], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, numbersAnswers:{}, leviticusAnswers:{}, deuteronomyAnswers:{}, matthewAnswers:{}, markAnswers:{}, lukeAnswers:{}, johnAnswers:{}, genesisSeen:[], exodusSeen:[], numbersSeen:[], leviticusSeen:[], deuteronomySeen:[], matthewSeen:[], markSeen:[], lukeSeen:[], johnSeen:[] }; progress.xp=prepareXp(progress,QUESTION_MAP,questionForRound); persist({resetXp:true}); shareDialog.close(); render(); toast('紀錄已清除，新一輪操練由你起步。'); }
 });
 function closePrimaryNav() {
   const nav=$('#primary-nav'),button=$('[data-action="toggle-nav"]');
@@ -418,3 +426,9 @@ document.addEventListener('keydown', event => {
 for (const dialog of [shareDialog]) dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
 window.addEventListener('hashchange', () => render());
 render({ focus:false });
+persist();
+
+function experienceView(detailed=false) {
+  const x=xpStatus(progress.xp);
+  return `<section class="experience-card" aria-label="累積操練經驗"><div class="experience-heading"><div><span class="eyebrow">一路操練，一路累積</span><h2>Level ${x.level} · ${escape(x.title)}</h2></div><strong class="xp-total">${number(x.total)} XP</strong></div><div class="progress-track" role="progressbar" aria-label="經驗值升級進度" aria-valuenow="${Math.round(x.percent)}" aria-valuemin="0" aria-valuemax="100"><span style="width:${x.percent}%"></span></div><p>${x.next ? `仲差 ${number(x.next.xp-x.total)} XP，就解鎖「${escape(x.next.title)}」。` : '全部累積稱號已解鎖，繼續溫故知新！'} · 已答啱 ${x.correct} 道不同題目</p><p class="note">進度儲存喺呢個瀏覽器；換裝置或清除網站資料，就唔會保留。</p>${detailed ? `<details class="xp-rules"><summary>點樣賺 XP 同解鎖稱號？</summary><p>首次答啱每題 10 XP；中、高難度分別再加 2、4 XP。答錯同跳過唔加分。答啱過嘅題目再次答啱，每題每日最多 2 XP；每日重做獎勵上限 20 XP，以香港日期計。</p><div class="title-gallery">${XP_LEVELS.map(l=>`<div class="title-item ${x.total>=l.xp?'unlocked':''}"><strong>Level ${l.level} · ${escape(l.title)}</strong><span>${number(l.xp)} XP · ${x.total>=l.xp?'已解鎖':'未解鎖'}</span></div>`).join('')}</div><p class="note">稱號反映網站操練進度，唔代表信仰程度或事奉資格。舊進度只按仍保存嘅答啱紀錄回填一次。</p></details>` : '<a class="text-button" href="#/history">睇經驗值同稱號 →</a>'}</section>`;
+}

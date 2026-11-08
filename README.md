@@ -106,3 +106,14 @@ npm run check
 `dist/bible-course.mjs`管理聖經知識課程，三份 `research/bible-{basics,ot,nt}.json` 保存100題原稿與逐題核對來源；修改後執行 `node scripts/build-bible.mjs` 產生 `dist/bible-data.mjs`。卷數明確按新教常用目錄，普通書信七卷不含希伯來書；這些資料保留於原稿，介面只顯示解說。
 
 `dist/challenge-data.mjs`由兩份 `research/challenge-*.json` 經 `node scripts/build-challenge.mjs` 產生，專供獨立試探場高難度使用。`dist/history-course.mjs`管理課程及進度，三份 `research/history-*.json` 管理100題歷史原稿；修改後執行 `node scripts/build-history.mjs`。`dist/questions.mjs`管理綜合題庫，`dist/choices.mjs`管理相關干擾選項，`dist/copy-edits.mjs`管理口語及防漏答案修訂，`dist/engine.mjs`處理抽題與評分，`dist/app.mjs`處理介面及本機進度。加入新題時同步更新數量規格及測試，並保留可查證出處。
+
+
+## 累積經驗值（XP）
+
+首頁與操練紀錄頁顯示終身累積 XP、Level、下一級進度與八個可解鎖稱號。所有模式共用，以題目 ID 去重；首次答啱低／中／高題目分別加 10／12／14 XP，未標示難度則為 10 XP。答錯、跳過唔加分。曾答啱嘅題目再次答啱，每題每日最多加 2 XP；每日重做獎勵最多 20 XP，以香港日期計。返回上一題或重新整理唔會重複計分。
+
+XP 獨立保存於現有 localStorage 資料嘅 `xp` 欄位，唔受最近 60 局紀錄限制。首次升級時，按仍保存嘅逐題答案及歷史紀錄回填已答啱題目；同一題只計首次獎勵一次，無法確認嘅舊重做次數唔估算。無登入或雲端同步；清除學習紀錄會同時清除 XP。
+
+門檻：0 經文新手、100 開卷有益、300 經文熟客、700 書卷行家、1,300 讀經達人、2,200 經卷老友、3,500 聖經老手、5,200 Bible Buddy 行家。累積稱號與 General 單場成績稱號獨立。
+
+XP 更新一併修正馬可福音課程編號（題庫使用 m1–m10），並將重複題幹檢查限定同一主題，容許不同福音書分別練習共同記載嘅事件。

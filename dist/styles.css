@@ -74,3 +74,7 @@
   @media(max-width:600px){.general-card h2{font-size:clamp(22px,6.5vw,25px)}}
   @media(max-width:600px){.course-features{grid-template-columns:1fr;gap:16px}.header-inner nav{gap:0;flex-wrap:nowrap}.header-inner nav a{flex:1 1 auto;min-width:0;padding:6px 2px;gap:3px;font-size:clamp(10px,2.8vw,12px);white-space:nowrap}}
 }
+
+/* Lifetime experience and account controls */
+.experience-card{padding:24px;margin:8px 0 32px;background:#edf1e6;border:1px solid #d2dac9;border-radius:24px}
+.experience-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.experience-heading h2{font-size:clamp(20px,3vw,28px);margin:8px 0 18px}.xp-total{color:#315d4c;font-size:24px;white-space:nowrap}.experience-card p{font-size:14px;line-height:1.8;margin:12px 0}.xp-rules{margin-top:16px}.xp-rules summary{cursor:pointer;font-weight:700}.title-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}.title-item{padding:14px;border:1px solid #d2dac9;border-radius:12px;background:#fafaf4;color:#68756a}.title-item span{display:block;margin-top:6px;font-size:13px}.title-item.unlocked{background:#e0ecf7;border-color:#779cbe;color:#244f79}.xp-earned{color:#315d4c;font-weight:700}.experience-card button:disabled{opacity:.65;cursor:default}@media(max-width:600px){.experience-card{padding:20px}}
