@@ -12,6 +12,7 @@ import { DEUTERONOMY_QUESTIONS, DEUTERONOMY_UNITS, DEUTERONOMY_HARD_QUESTIONS, D
 import { MATTHEW_QUESTIONS, MATTHEW_UNITS, MATTHEW_HARD_QUESTIONS, MATTHEW_LEVEL_POOLS } from '../dist/matthew-course.mjs';
 import { MARK_QUESTIONS, MARK_UNITS, MARK_HARD_QUESTIONS, MARK_LEVEL_POOLS } from '../dist/mark-course.mjs';
 import { LUKE_QUESTIONS, LUKE_UNITS, LUKE_HARD_QUESTIONS, LUKE_LEVEL_POOLS } from '../dist/luke-course.mjs';
+import { JOHN_QUESTIONS, JOHN_UNITS, JOHN_HARD_QUESTIONS, JOHN_LEVEL_POOLS } from '../dist/john-course.mjs';
 const ids = new Set(), prompts = new Set();
 const matthewResearch = JSON.parse(await readFile(new URL('../research/matthew-prepared-draft.json', import.meta.url), 'utf8'));
 assert.deepEqual(MATTHEW_QUESTIONS,matthewResearch.lessons,'Rebuild Matthew data after editing the reviewed questions');
@@ -31,6 +32,12 @@ assert.deepEqual(LUKE_HARD_QUESTIONS,lukeResearch.hard,'Rebuild Luke advanced da
 assert.equal(LUKE_QUESTIONS.length,100);assert.equal(LUKE_UNITS.length,10);assert.equal(LUKE_HARD_QUESTIONS.length,20);
 for(const unit of LUKE_UNITS){const qs=LUKE_QUESTIONS.filter(q=>q.unit===unit.id);assert.equal(qs.length,10,unit.id);assert.equal(qs.filter(q=>q.difficulty===1).length,5,unit.id+' low');assert.equal(qs.filter(q=>q.difficulty===2).length,5,unit.id+' medium');}
 assert.deepEqual([1,2,3].map(d=>LUKE_LEVEL_POOLS[d].length),[50,50,20]);
+const johnResearch=JSON.parse(await readFile(new URL('../research/john-reviewed.json',import.meta.url),'utf8'));
+assert.deepEqual(JOHN_QUESTIONS,johnResearch.lessons,'Rebuild John data after editing reviewed questions');
+assert.deepEqual(JOHN_HARD_QUESTIONS,johnResearch.hard,'Rebuild John advanced data after editing reviewed questions');
+assert.equal(JOHN_QUESTIONS.length,100);assert.equal(JOHN_UNITS.length,10);assert.equal(JOHN_HARD_QUESTIONS.length,20);
+for(const unit of JOHN_UNITS){const qs=JOHN_QUESTIONS.filter(q=>q.unit===unit.id);assert.equal(qs.length,10,unit.id);assert.equal(qs.filter(q=>q.difficulty===1).length,5,unit.id+' low');assert.equal(qs.filter(q=>q.difficulty===2).length,5,unit.id+' medium');}
+assert.deepEqual([1,2,3].map(d=>JOHN_LEVEL_POOLS[d].length),[50,50,20]);
 assert.equal(QUESTIONS.length, 240);
 assert.equal(HISTORY_QUESTIONS.length,100);
 assert.equal(COURSE_UNITS.length,10);
@@ -84,7 +91,7 @@ for (const t of TOPICS) {
   assert.equal(CHALLENGE_QUESTIONS.filter(q=>q.topic===t.id&&q.difficulty===3).length,5,t.id+' advanced');
   for (const d of [1, 2, 3]) assert.equal(items.filter(q => q.difficulty === d).length, 10, `${t.id} difficulty ${d}`);
 }
-for (const q of [...QUESTIONS,...HISTORY_QUESTIONS,...CHALLENGE_QUESTIONS,...BIBLE_QUESTIONS,...GENESIS_QUESTIONS,...GENESIS_HARD_QUESTIONS,...EXODUS_QUESTIONS,...EXODUS_HARD_QUESTIONS,...NUMBERS_QUESTIONS,...NUMBERS_HARD_QUESTIONS,...LEVITICUS_QUESTIONS,...LEVITICUS_HARD_QUESTIONS,...DEUTERONOMY_QUESTIONS,...DEUTERONOMY_HARD_QUESTIONS,...MARK_QUESTIONS,...MARK_HARD_QUESTIONS,...LUKE_QUESTIONS,...LUKE_HARD_QUESTIONS]) {
+for (const q of [...QUESTIONS,...HISTORY_QUESTIONS,...CHALLENGE_QUESTIONS,...BIBLE_QUESTIONS,...GENESIS_QUESTIONS,...GENESIS_HARD_QUESTIONS,...EXODUS_QUESTIONS,...EXODUS_HARD_QUESTIONS,...NUMBERS_QUESTIONS,...NUMBERS_HARD_QUESTIONS,...LEVITICUS_QUESTIONS,...LEVITICUS_HARD_QUESTIONS,...DEUTERONOMY_QUESTIONS,...DEUTERONOMY_HARD_QUESTIONS,...MARK_QUESTIONS,...MARK_HARD_QUESTIONS,...LUKE_QUESTIONS,...LUKE_HARD_QUESTIONS,...JOHN_QUESTIONS,...JOHN_HARD_QUESTIONS]) {
   assert(!ids.has(q.id), `Duplicate id ${q.id}`); ids.add(q.id);
   assert(!prompts.has(q.question), `Duplicate question ${q.id}`); prompts.add(q.question);
   assert(q.question && q.explanation.length > 10 && q.reference, q.id);
@@ -96,13 +103,13 @@ for (const q of [...QUESTIONS,...HISTORY_QUESTIONS,...CHALLENGE_QUESTIONS,...BIB
   if (q.id.startsWith('challenge-')) assert.equal(new URL(q.verification).protocol,'https:',q.id+' verification');
   if (q.unit) {
     assert.equal(new URL(q.verification).protocol,'https:',q.id+' verification');
-    assert(q.explanation.length >= (q.id.startsWith('genesis-') || q.id.startsWith('exodus-') || q.id.startsWith('numbers-') || q.id.startsWith('leviticus-') || q.id.startsWith('deuteronomy-') || q.id.startsWith('mark-') || q.id.startsWith('luke-') ? 15 : 35),q.id+' learning explanation');
-    assert((q.id.startsWith('genesis-') ? GENESIS_UNITS : q.id.startsWith('exodus-') ? EXODUS_UNITS : q.id.startsWith('numbers-') ? NUMBERS_UNITS : q.id.startsWith('leviticus-') ? LEVITICUS_UNITS : q.id.startsWith('deuteronomy-') ? DEUTERONOMY_UNITS : q.id.startsWith('mark-') ? MARK_UNITS : q.id.startsWith('luke-') ? LUKE_UNITS : q.id.startsWith('bible-') ? BIBLE_UNITS : COURSE_UNITS).some(u => u.id === q.unit),q.id+' unit');
+    assert(q.explanation.length >= (q.id.startsWith('genesis-') || q.id.startsWith('exodus-') || q.id.startsWith('numbers-') || q.id.startsWith('leviticus-') || q.id.startsWith('deuteronomy-') || q.id.startsWith('mark-') || q.id.startsWith('luke-') || q.id.startsWith('john-') ? 15 : 35),q.id+' learning explanation');
+    assert((q.id.startsWith('genesis-') ? GENESIS_UNITS : q.id.startsWith('exodus-') ? EXODUS_UNITS : q.id.startsWith('numbers-') ? NUMBERS_UNITS : q.id.startsWith('leviticus-') ? LEVITICUS_UNITS : q.id.startsWith('deuteronomy-') ? DEUTERONOMY_UNITS : q.id.startsWith('mark-') ? MARK_UNITS : q.id.startsWith('luke-') ? LUKE_UNITS : q.id.startsWith('john-') ? JOHN_UNITS : q.id.startsWith('bible-') ? BIBLE_UNITS : COURSE_UNITS).some(u => u.id === q.unit),q.id+' unit');
     assert([1,2,3].includes(q.difficulty),q.id+' difficulty');
   }
 }
-for (const f of ['index.html', 'app.mjs', 'styles.css', 'engine.mjs', 'choices.mjs', 'copy-edits.mjs', 'history-course.mjs', 'history-data.mjs', 'challenge-data.mjs', 'bible-course.mjs', 'bible-data.mjs', 'genesis-course.mjs', 'genesis-data.mjs', 'genesis-hard-data.mjs', 'exodus-course.mjs', 'exodus-data.mjs', 'exodus-hard-data.mjs', 'numbers-course.mjs', 'numbers-data.mjs', 'numbers-hard-data.mjs', 'leviticus-course.mjs', 'leviticus-data.mjs', 'leviticus-hard-data.mjs', 'deuteronomy-course.mjs', 'deuteronomy-data.mjs', 'deuteronomy-hard-data.mjs', 'matthew-course.mjs', 'matthew-data.mjs', 'mark-course.mjs', 'mark-data.mjs', 'luke-course.mjs', 'luke-data.mjs', 'assets/hero.png', 'assets/favicon.svg']) await access(new URL('../dist/' + f, import.meta.url));
+for (const f of ['index.html', 'app.mjs', 'styles.css', 'engine.mjs', 'choices.mjs', 'copy-edits.mjs', 'history-course.mjs', 'history-data.mjs', 'challenge-data.mjs', 'bible-course.mjs', 'bible-data.mjs', 'genesis-course.mjs', 'genesis-data.mjs', 'genesis-hard-data.mjs', 'exodus-course.mjs', 'exodus-data.mjs', 'exodus-hard-data.mjs', 'numbers-course.mjs', 'numbers-data.mjs', 'numbers-hard-data.mjs', 'leviticus-course.mjs', 'leviticus-data.mjs', 'leviticus-hard-data.mjs', 'deuteronomy-course.mjs', 'deuteronomy-data.mjs', 'deuteronomy-hard-data.mjs', 'matthew-course.mjs', 'matthew-data.mjs', 'mark-course.mjs', 'mark-data.mjs', 'luke-course.mjs', 'luke-data.mjs', 'john-course.mjs', 'john-data.mjs', 'assets/hero.png', 'assets/favicon.svg']) await access(new URL('../dist/' + f, import.meta.url));
 const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
 assert(html.includes('lang="zh-HK"'));
 assert(!html.includes('codex-preview'));
-console.log(`Question bank verified: ${QUESTIONS.length} base, ${CHALLENGE_QUESTIONS.length} advanced, ${HISTORY_QUESTIONS.length} church-history, ${BIBLE_QUESTIONS.length} Bible-knowledge, five Old Testament books, Matthew, Mark and Luke; assets and sources present.`);
+console.log(`Question bank verified: ${QUESTIONS.length} base, ${CHALLENGE_QUESTIONS.length} advanced, ${HISTORY_QUESTIONS.length} church-history, ${BIBLE_QUESTIONS.length} Bible-knowledge, five Old Testament books, Matthew, Mark, Luke and John; assets and sources present.`);
