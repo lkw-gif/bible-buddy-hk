@@ -1,6 +1,8 @@
 import {CHURCH_LESSONS,KINGDOM_DATA} from './learning-data.mjs?v=20261108-aligned2';
 import {KINGDOM_TOPIC,KINGDOM_UNITS,KINGDOM_MAP,cleanKingdomAnswers,kingdomStatus} from './kingdom-course.mjs?v=20261108-aligned2';
 import {learningView,lessonView} from './learning-view.mjs?v=20261108-aligned2';
+import {cleanName, mergeProgress, accountStorageKey} from './account-data.mjs';
+import {cloudConfigured, createCloudAccount, accountError} from './cloud-account.mjs';
 import { XP_LEVELS, prepareXp, awardXp, xpStatus, mergeXp } from './experience.mjs';
 import { TOPICS, QUESTIONS, QUESTION_MAP } from './questions.mjs?v=20261108-aligned2';
 import { questionForRound, TRIAL_LEVELS, DIFFICULTIES, createRound, answerRound, advanceRound, retreatRound, summarizeRound, validRound, integrateResult, questionPool, hongKongDay } from './engine.mjs?v=20261108-aligned2';
@@ -48,12 +50,15 @@ const shapes = {
 function icon(name, cls = '') { return `<svg class="icon ${cls}" viewBox="0 0 24 24" aria-hidden="true">${shapes[name] || shapes.book}</svg>`; }
 
 const STORAGE_KEY = 'bible-buddy-hk:v1';
+let activeStorageKey=STORAGE_KEY, cloud=null, cloudUser=null, syncTimer, syncBusy=false, revision=0;
+let membersRows=[],membersCursor=null,membersMore=false,membersBusy=false,membersLoaded=false,membersError='';
+let cloudState=cloudConfigured?'正在連接帳戶…':'Google 登入尚未啟用；目前進度只存在呢個瀏覽器。';
 let storageUnavailable = false;
 let storageNoticeShown = false;
 function readProgress() {
-  const blank = { schema: 1, tone: 'cheeky', current: null, history: [], bookmarks: [], mistakes: [], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, numbersAnswers:{}, leviticusAnswers:{}, deuteronomyAnswers:{}, matthewAnswers:{}, markAnswers:{}, lukeAnswers:{}, johnAnswers:{}, genesisSeen:[], exodusSeen:[], numbersSeen:[], leviticusSeen:[], deuteronomySeen:[], matthewSeen:[], markSeen:[], lukeSeen:[], johnSeen:[] };
+  const blank = { kingdomAnswers:{},learningReads:{},learningPositions:{},schema: 1, tone: 'cheeky', current: null, history: [], bookmarks: [], mistakes: [], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, numbersAnswers:{}, leviticusAnswers:{}, deuteronomyAnswers:{}, matthewAnswers:{}, markAnswers:{}, lukeAnswers:{}, johnAnswers:{}, genesisSeen:[], exodusSeen:[], numbersSeen:[], leviticusSeen:[], deuteronomySeen:[], matthewSeen:[], markSeen:[], lukeSeen:[], johnSeen:[] };
   try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+    const saved = JSON.parse(localStorage.getItem(activeStorageKey) || 'null');
     if (!saved || saved.schema !== 1) return blank;
     const history = Array.isArray(saved.history) ? saved.history.filter(r => validRound(r, true)).map(r => ({ ...r, tone:'cheeky' })).slice(0, 60) : [];
     const genesisAnswers = cleanGenesisAnswers(saved.genesisAnswers);
@@ -65,7 +70,7 @@ function readProgress() {
     const markAnswers = cleanMarkAnswers(saved.markAnswers);
     const lukeAnswers = cleanLukeAnswers(saved.lukeAnswers);
     const johnAnswers = cleanJohnAnswers(saved.johnAnswers);
-    return { ...blank, xp:saved.xp, learningReads:saved.learningReads||{}, learningPositions:saved.learningPositions||{}, kingdomAnswers:cleanKingdomAnswers(saved.kingdomAnswers), tone: 'cheeky', current: validRound(saved.current) ? { ...saved.current, tone:'cheeky' } : null,
+    return { ...blank, xp:saved.xp, learningReads:saved.learningReads||{}, learningPositions:saved.learningPositions||{}, kingdomAnswers:cleanKingdomAnswers(saved.kingdomAnswers), updatedAt:saved.updatedAt||0, answerTimes:saved.answerTimes||{}, displayName:cleanName(saved.displayName), profileUpdatedAt:saved.profileUpdatedAt||0, tone: 'cheeky', current: validRound(saved.current) ? { ...saved.current, tone:'cheeky' } : null,
       history, bookmarks: cleanIds(saved.bookmarks), mistakes: cleanIds(saved.mistakes), courseAnswers:cleanCourseAnswers(saved.courseAnswers), bibleAnswers:cleanBibleAnswers(saved.bibleAnswers), genesisAnswers, exodusAnswers, numbersAnswers, leviticusAnswers, deuteronomyAnswers, matthewAnswers, markAnswers, lukeAnswers, johnAnswers,
       genesisSeen: cleanSeenIds(saved.genesisSeen, genesisAnswers, history, 'genesis'),
       exodusSeen: cleanSeenIds(saved.exodusSeen, exodusAnswers, history, 'exodus'),
@@ -99,12 +104,13 @@ let toastTimeout;
 const main = $('#main');
 const shareDialog = $('#share-dialog');
 
-function savedXp() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null')?.xp; } catch { return null; } }
+function savedXp() { try { return JSON.parse(localStorage.getItem(activeStorageKey) || 'null')?.xp; } catch { return null; } }
 function persist({resetXp=false}={}) {
+  progress.updatedAt=Date.now();revision++;
   if(!resetXp)progress.xp=mergeXp(progress.xp,savedXp());
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(progress)); storageUnavailable = false; }
+  try { localStorage.setItem(activeStorageKey, JSON.stringify(progress)); storageUnavailable = false; }
   catch { storageUnavailable = true; if (!storageNoticeShown) { toast('呢個瀏覽器暫時儲存唔到進度。今局仍然玩得，可以下載成績留底。'); storageNoticeShown = true; } }
-  updateNavigation();
+  updateNavigation();queueSync();
 }
 function toast(message) {
   clearTimeout(toastTimeout);
@@ -114,7 +120,7 @@ function toast(message) {
 function announce(message) { $('#announcer').textContent = message; }
 function route() {
   const parts = location.hash.replace(/^#\/?/, '').split('/');
-  return { name: ['learning','learn','kingdoms','review', 'history', 'church', 'bible', 'old-testament', 'new-testament', 'matthew', 'mark', 'luke', 'john', 'genesis', 'exodus', 'numbers', 'leviticus', 'deuteronomy', 'quiz', 'result'].includes(parts[0]) ? parts[0] : 'home', id: parts[1] || null,lesson:parts[2]||null };
+  return { name: ['community','learning','learn','kingdoms','review', 'history', 'church', 'bible', 'old-testament', 'new-testament', 'matthew', 'mark', 'luke', 'john', 'genesis', 'exodus', 'numbers', 'leviticus', 'deuteronomy', 'quiz', 'result'].includes(parts[0]) ? parts[0] : 'home', id: parts[1] || null,lesson:parts[2]||null };
 }
 function go(path) { if (location.hash === '#' + path) render(); else location.hash = path; }
 function updateNavigation() {
@@ -124,6 +130,7 @@ function updateNavigation() {
     else a.removeAttribute('aria-current');
   }
   const badge = $('#review-count'); badge.hidden = !progress.mistakes.length; badge.textContent = progress.mistakes.length;
+  updateAccountHeader();
   const xp=xpStatus(progress.xp),xpLink=$('#header-xp');
   if(xpLink){xpLink.innerHTML=`Level ${xp.level} · ${escape(xp.title)} <strong>${number(xp.total)} XP</strong>`;xpLink.title=`仲差 ${xp.next?number(xp.next.xp-xp.total):0} XP 升級；按此睇詳細資料`}
 }
@@ -159,10 +166,11 @@ function roundTitle(r) {
 function render({ focus = true } = {}) {
   const page = route();
   if(page.name==='learn'&&page.lesson){progress.learningPositions ||= {};progress.learningPositions[page.id]={lesson:page.lesson,at:Date.now()};persist();}
-  main.innerHTML = page.name==='learning'?learningView(page.id,progress,escape):page.name==='learn'?lessonView(page.id,page.lesson,progress,escape):page.name === 'home' ? homeView() : page.name === 'old-testament' ? oldTestamentView() : page.name === 'new-testament' ? newTestamentView() : ['kingdoms','church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke','john'].includes(page.name) ? churchView(page.name) : page.name === 'quiz' ? quizView() : page.name === 'review' ? reviewView() : page.name === 'history' ? historyView() : resultView(page.id);
+  main.innerHTML = page.name==='community'?communityView():page.name==='learning'?learningView(page.id,progress,escape):page.name==='learn'?lessonView(page.id,page.lesson,progress,escape):page.name === 'home' ? homeView() : page.name === 'old-testament' ? oldTestamentView() : page.name === 'new-testament' ? newTestamentView() : ['kingdoms','church','bible','genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke','john'].includes(page.name) ? churchView(page.name) : page.name === 'quiz' ? quizView() : page.name === 'review' ? reviewView() : page.name === 'history' ? historyView() : resultView(page.id);
   updateNavigation();
+  if(page.name==='community'&&!membersLoaded&&!membersBusy&&cloud)loadMembers();
   if (focus) { window.scrollTo({ top: 0, behavior: 'instant' }); main.focus({ preventScroll: true }); }
-  document.title = `${({ learning:'歷史學習中心',learn:'歷史課堂',kingdoms:'王國與先知',home: '聖經有幾熟？', church:'教會歷史篇 · 100題操練', bible:'聖經知識 · 100題操練', 'old-testament':'舊約書卷', 'new-testament':'新約書卷', matthew:'馬太福音 · 100題操練', mark:'馬可福音 · 100題操練', luke:'路加福音 · 100題操練', john:'約翰福音 · 100題操練', genesis:'創世記 · 100題操練', exodus:'出埃及記 · 100題操練', numbers:'民數記 · 100題操練', leviticus:'利未記 · 100題操練', deuteronomy:'申命記 · 100題操練', quiz: '試探嚟到，慢慢分辨', review: '溫習角落', history: '操練紀錄', result: '今次學到幾多？' })[page.name]}｜Bible Buddy`;
+  document.title = `${({ community:'同行進度',learning:'歷史學習中心',learn:'歷史課堂',kingdoms:'王國與先知',home: '聖經有幾熟？', church:'教會歷史篇 · 100題操練', bible:'聖經知識 · 100題操練', 'old-testament':'舊約書卷', 'new-testament':'新約書卷', matthew:'馬太福音 · 100題操練', mark:'馬可福音 · 100題操練', luke:'路加福音 · 100題操練', john:'約翰福音 · 100題操練', genesis:'創世記 · 100題操練', exodus:'出埃及記 · 100題操練', numbers:'民數記 · 100題操練', leviticus:'利未記 · 100題操練', deuteronomy:'申命記 · 100題操練', quiz: '試探嚟到，慢慢分辨', review: '溫習角落', history: '操練紀錄', result: '今次學到幾多？' })[page.name]}｜Bible Buddy`;
 }
 
 function trialCard() {
@@ -193,7 +201,7 @@ function courseHomeCard(mode='church') {
 function churchView(mode='church') {
   const c=courseSettings(mode),s=c.status(c.answers);
   const current=progress.current?.mode===mode ? progress.current : null;
-  return `${['church','kingdoms'].includes(mode)?`<a class="text-button" href="#/learning/${mode}">← 返去閱讀同時間線</a>`:''}<div class="page-head"><div class="eyebrow">${c.eyebrow}</div><h1>${c.topic.name}</h1><p>${c.intro}</p></div><section class="course-progress" aria-label="${c.topic.name}學習進度"><div><strong>已操練 ${s.answered}／${s.total} 題</strong><span>最近答啱 ${s.correct} 題 · 答過嘅題目隨時可以再做</span></div><div class="progress-track" role="progressbar" aria-label="已操練題數" aria-valuemin="0" aria-valuemax="${s.total}" aria-valuenow="${s.answered}"><span style="width:${s.total ? s.answered/s.total*100 : 0}%"></span></div><p>進度儲存喺呢個瀏覽器。跳過嘅題目會計入「已操練」，方便你之後再溫習。</p></section>${current ? `<aside class="resume-banner"><div><strong>上次嗰課未做完，可以繼續做。</strong><p>${escape(roundTitle(current))} · 已答 ${current.answers.length}／10題</p></div><a class="button primary small" href="#/quiz">繼續呢課 ${icon('arrow')}</a></aside>` : ''}${['genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke','john'].includes(mode) ? `<section class="trial-card" style="margin-bottom:24px" aria-label="${c.topic.name}分級測驗"><div class="eyebrow">${c.topic.name}分級測驗</div><h2>揀個試探程度</h2><p>每場隨機10題。高程度會考深入經文細節同前後文。</p><div class="trial-levels">${Object.entries(TRIAL_LEVELS).map(([level,t])=>{const pools={genesis:GENESIS_LEVEL_POOLS,exodus:EXODUS_LEVEL_POOLS,numbers:NUMBERS_LEVEL_POOLS,leviticus:LEVITICUS_LEVEL_POOLS,deuteronomy:DEUTERONOMY_LEVEL_POOLS,matthew:MATTHEW_LEVEL_POOLS,mark:MARK_LEVEL_POOLS,luke:LUKE_LEVEL_POOLS,john:JOHN_LEVEL_POOLS};const pool=pools[mode][level];const seen=new Set(progress[`${mode}Seen`]);const hardDone=pool.length>0&&pool.every(q=>seen.has(q.id));return `<button class="trial-level level-${level}${hardDone?' is-complete':''}" data-action="start" data-mode="${mode}-level" data-difficulty="${level}"${hardDone?` aria-label="${t.name}，已經完成"`:''}><span class="trial-degree">試探程度：${t.degree}</span><strong>${t.name}</strong>${icon('arrow')}<small>${hardDone?'已經完成，可以再玩一次。':level==='1'?`重溫${c.subject}基本內容。`:level==='2'?'留意人物、事件同經文細節。':'深入經文，留意前後文同細節。'}</small></button>`;}).join('')}</div></section>` : ''}<section class="course-grid" aria-label="${c.topic.name}十課">${c.units.map((u,i)=>{
+  return `${['church','kingdoms'].includes(mode)?`<a class="text-button" href="#/learning/${mode}">← 返去閱讀同時間線</a>`:''}<div class="page-head"><div class="eyebrow">${c.eyebrow}</div><h1>${c.topic.name}</h1><p>${c.intro}</p></div><section class="course-progress" aria-label="${c.topic.name}學習進度"><div><strong>已操練 ${s.answered}／${s.total} 題</strong><span>最近答啱 ${s.correct} 題 · 答過嘅題目隨時可以再做</span></div><div class="progress-track" role="progressbar" aria-label="已操練題數" aria-valuemin="0" aria-valuemax="${s.total}" aria-valuenow="${s.answered}"><span style="width:${s.total ? s.answered/s.total*100 : 0}%"></span></div><p>${cloudUser ? '登入後進度會同步到你嘅帳戶。' : '進度儲存喺呢個瀏覽器。'}跳過嘅題目會計入「已操練」，方便你之後再溫習。</p></section>${current ? `<aside class="resume-banner"><div><strong>上次嗰課未做完，可以繼續做。</strong><p>${escape(roundTitle(current))} · 已答 ${current.answers.length}／10題</p></div><a class="button primary small" href="#/quiz">繼續呢課 ${icon('arrow')}</a></aside>` : ''}${['genesis','exodus','numbers','leviticus','deuteronomy','matthew','mark','luke','john'].includes(mode) ? `<section class="trial-card" style="margin-bottom:24px" aria-label="${c.topic.name}分級測驗"><div class="eyebrow">${c.topic.name}分級測驗</div><h2>揀個試探程度</h2><p>每場隨機10題。高程度會考深入經文細節同前後文。</p><div class="trial-levels">${Object.entries(TRIAL_LEVELS).map(([level,t])=>{const pools={genesis:GENESIS_LEVEL_POOLS,exodus:EXODUS_LEVEL_POOLS,numbers:NUMBERS_LEVEL_POOLS,leviticus:LEVITICUS_LEVEL_POOLS,deuteronomy:DEUTERONOMY_LEVEL_POOLS,matthew:MATTHEW_LEVEL_POOLS,mark:MARK_LEVEL_POOLS,luke:LUKE_LEVEL_POOLS,john:JOHN_LEVEL_POOLS};const pool=pools[mode][level];const seen=new Set(progress[`${mode}Seen`]);const hardDone=pool.length>0&&pool.every(q=>seen.has(q.id));return `<button class="trial-level level-${level}${hardDone?' is-complete':''}" data-action="start" data-mode="${mode}-level" data-difficulty="${level}"${hardDone?` aria-label="${t.name}，已經完成"`:''}><span class="trial-degree">試探程度：${t.degree}</span><strong>${t.name}</strong>${icon('arrow')}<small>${hardDone?'已經完成，可以再玩一次。':level==='1'?`重溫${c.subject}基本內容。`:level==='2'?'留意人物、事件同經文細節。':'深入經文，留意前後文同細節。'}</small></button>`;}).join('')}</div></section>` : ''}<section class="course-grid" aria-label="${c.topic.name}十課">${c.units.map((u,i)=>{
     const status=c.status(c.answers,u.id);
     return `<article class="course-unit"><div class="course-unit-top"><span class="course-number">${String(i+1).padStart(2,'0')}</span><span class="pill ${status.answered===10 ? 'sage' : 'sand'}">${status.answered===10 ? '已完成操練' : status.answered ? `已操練 ${status.answered}／10` : '未開始'}</span></div><p class="course-period">${u.period}</p><h2>${u.name}</h2><p>${u.description}</p><div class="course-unit-bottom"><small>10題${status.answered ? ` · 最近答啱 ${status.correct}題` : ' · 每題有解說'}</small>${['church','kingdoms'].includes(mode)?`<a class="text-button" href="#/learn/${mode}/${u.id}">閱讀今課</a>`:''}<button class="button secondary small" data-action="start" data-mode="${mode}" data-unit="${u.id}">${status.answered ? '再做呢課' : '開始呢課'} ${icon('arrow')}</button></div></article>`;
   }).join('')}</section>`;
@@ -250,6 +258,7 @@ function bookmarkButton(id) {
 }
 function handleAnswer(selected) {
   if (!progress.current) return;
+  const oldMaps=Object.fromEntries(Object.entries(progress).filter(([key])=>key.endsWith('Answers')).map(([key,value])=>[key,{...value}]));
   const updated = answerRound(progress.current, selected);
   if (updated === progress.current) return;
   progress.current = updated;
@@ -275,6 +284,8 @@ function handleAnswer(selected) {
   if (NUMBERS_QUESTION_MAP.has(q.id) && !['numbers-test','numbers-level'].includes(updated.mode)) progress.numbersAnswers[q.id] = selected === q.answer;
   if (LEVITICUS_QUESTION_MAP.has(q.id) && !['leviticus-test','leviticus-level'].includes(updated.mode)) progress.leviticusAnswers[q.id] = selected === q.answer;
   if (DEUTERONOMY_QUESTION_MAP.has(q.id) && !['deuteronomy-test','deuteronomy-level'].includes(updated.mode)) progress.deuteronomyAnswers[q.id] = selected === q.answer;
+  progress.answerTimes ||= {};
+  for(const [key,before] of Object.entries(oldMaps))if(progress[key]?.[q.id]!==before[q.id]){progress.answerTimes[key] ||= {};progress.answerTimes[key][q.id]=Date.now();}
   const reward = awardXp(mergeXp(progress.xp,savedXp()), q, {attempt:updated.id+':'+updated.index,correct:selected===q.answer});
   progress.xp = reward.profile;
   updated.answers[updated.index].xpGained = reward.gained;
@@ -350,7 +361,7 @@ function historyView() {
   const total = summaries.reduce((a,s) => a+s.total,0);
   const correct = summaries.reduce((a,s) => a+s.correct,0);
   const best = summaries.filter(s => s.level).sort((a,b) => b.percent-a.percent)[0];
-  return `${experienceView(true)}<div class="page-head"><div class="eyebrow">每日扎根少少，唔使急住開花</div><h1>一路操練，一路扎根。</h1><p>唔使同隔籬嗰位鬥屬靈。睇返自己行過嘅路，睇吓下一步溫習邊個主題。</p></div><div class="stats-grid"><div class="stat-card"><strong>${summaries.length}</strong><p class="stat-title">完成操練</p><p class="stat-sub">保留最近 60 局</p></div><div class="stat-card"><strong>${total ? number(correct / total * 100) + '%' : '—'}</strong><p class="stat-title">答題命中率</p><p class="stat-sub">${correct} / ${total} 題答啱</p></div><div class="stat-card"><strong>${best ? number(best.percent) : '—'}</strong><p class="stat-title">大試煉最佳戰績</p><p class="stat-sub">${best ? best.level.name : '大試煉等緊你入場'}</p></div><div class="stat-card"><strong>${streakDays()} <small style="font-size:15px">日</small></strong><p class="stat-title">連續操練咗幾日</p><p class="stat-sub">以香港日期計算</p></div></div>${best ? `<p class="privacy-notice">${best.level.symbol} 最佳綜合稱號：${best.level.name} · ${number(best.percent)} 分。呢個係操練成績，唔好拎嚟同弟兄姊妹鬥屬靈。</p>` : ''}<div class="section-heading"><div><h2 class="section-title">你嘅操練紀錄</h2><p>每場操練都會記低，隨時返去溫習。</p></div>${summaries.length ? '<button class="text-button" data-action="download-history" style="font-size:12px">下載操練紀錄</button>' : ''}</div>${summaries.length ? `<div class="history-list">${summaries.map(s => `<article class="history-row"><span class="topic-icon ${topicById(s.round.topic)?.color || 'sage'}">${icon(s.round.mode === 'general' ? 'cap' : s.round.mode === 'trial' ? 'spark' : s.round.mode === 'daily' ? 'clock' : s.round.mode === 'review' ? 'repeat' : topicById(s.round.topic)?.icon)}</span><div class="history-info"><h3>${escape(roundTitle(s.round))}</h3><p>${formatDate(s.round.finishedAt)} · ${s.correct}/${s.total} 題${s.level ? ' · '+s.level.name : ''}</p></div><span class="history-score">${number(s.percent)}<small style="font-size:12px">分</small></span><a class="text-button" href="#/result/${s.round.id}">睇返今場成績 ${icon('arrow')}</a></article>`).join('')}</div><p class="history-note">同一份題庫嘅重做分數，會受記憶影響。返去再做識答，記住都要明白答案背後嘅原因。</p>` : emptyView('第一步操練，等緊你行。','完成一局，呢度就會記低你嘅成績同溫習方向。','入場操練')}<div class="danger-zone"><p>進度只儲存喺呢個瀏覽器。換裝置或者清除網站資料，唔會保留。</p><button class="text-button" data-action="clear-dialog">清除呢個瀏覽器嘅學習紀錄</button></div>`;
+  return `${accountView()}${experienceView(true)}<div class="page-head"><div class="eyebrow">每日扎根少少，唔使急住開花</div><h1>一路操練，一路扎根。</h1><p>唔使同隔籬嗰位鬥屬靈。睇返自己行過嘅路，睇吓下一步溫習邊個主題。</p></div><div class="stats-grid"><div class="stat-card"><strong>${summaries.length}</strong><p class="stat-title">完成操練</p><p class="stat-sub">保留最近 60 局</p></div><div class="stat-card"><strong>${total ? number(correct / total * 100) + '%' : '—'}</strong><p class="stat-title">答題命中率</p><p class="stat-sub">${correct} / ${total} 題答啱</p></div><div class="stat-card"><strong>${best ? number(best.percent) : '—'}</strong><p class="stat-title">大試煉最佳戰績</p><p class="stat-sub">${best ? best.level.name : '大試煉等緊你入場'}</p></div><div class="stat-card"><strong>${streakDays()} <small style="font-size:15px">日</small></strong><p class="stat-title">連續操練咗幾日</p><p class="stat-sub">以香港日期計算</p></div></div>${best ? `<p class="privacy-notice">${best.level.symbol} 最佳綜合稱號：${best.level.name} · ${number(best.percent)} 分。呢個係操練成績，唔好拎嚟同弟兄姊妹鬥屬靈。</p>` : ''}<div class="section-heading"><div><h2 class="section-title">你嘅操練紀錄</h2><p>每場操練都會記低，隨時返去溫習。</p></div>${summaries.length ? '<button class="text-button" data-action="download-history" style="font-size:12px">下載操練紀錄</button>' : ''}</div>${summaries.length ? `<div class="history-list">${summaries.map(s => `<article class="history-row"><span class="topic-icon ${topicById(s.round.topic)?.color || 'sage'}">${icon(s.round.mode === 'general' ? 'cap' : s.round.mode === 'trial' ? 'spark' : s.round.mode === 'daily' ? 'clock' : s.round.mode === 'review' ? 'repeat' : topicById(s.round.topic)?.icon)}</span><div class="history-info"><h3>${escape(roundTitle(s.round))}</h3><p>${formatDate(s.round.finishedAt)} · ${s.correct}/${s.total} 題${s.level ? ' · '+s.level.name : ''}</p></div><span class="history-score">${number(s.percent)}<small style="font-size:12px">分</small></span><a class="text-button" href="#/result/${s.round.id}">睇返今場成績 ${icon('arrow')}</a></article>`).join('')}</div><p class="history-note">同一份題庫嘅重做分數，會受記憶影響。返去再做識答，記住都要明白答案背後嘅原因。</p>` : emptyView('第一步操練，等緊你行。','完成一局，呢度就會記低你嘅成績同溫習方向。','入場操練')}<div class="danger-zone">${cloudUser ? '<p>你而家已登入；帳戶進度會喺雲端保留。</p>' : '<p>未登入嘅進度只儲存喺呢個瀏覽器。換裝置或者清除網站資料，唔會保留。</p><button class="text-button" data-action="clear-dialog">清除呢個瀏覽器嘅學習紀錄</button>'}</div>`;
 }
 
 function emptyView(title, body, cta) { return `<div class="empty-state"><img src="assets/hero.png" width="1536" height="1024" alt="小羊同白鴿喺度等你"><h2>${title}</h2><p>${body}</p><a class="button primary" href="#/">${cta} ${icon('arrow')}</a></div>`; }
@@ -386,6 +397,14 @@ document.addEventListener('click', async event => {
     $('#nav-toggle-label').textContent = opening ? '收起選單' : '選單';
   }
   if(action==='mark-read'){const id=button.dataset.id;const valid=[...CHURCH_LESSONS.map(l=>'church:'+l.id),...KINGDOM_DATA.lessons.map(l=>'kingdoms:'+l.id)];if(valid.includes(id)){progress.learningReads ||= {};progress.learningReads[id]={done:!progress.learningReads[id]?.done,at:Date.now()};persist();render({focus:false});}return;}
+  if (action === 'members-more') {await loadMembers();return;}
+  if (action === 'members-refresh') {membersRows=[];membersCursor=null;membersLoaded=false;await loadMembers();return;}
+  if(action==='google-login'){if(!cloud){toast(cloudState);return;}shareDialog.innerHTML=`<div class="dialog-top"><h2 id="share-title">用 Google 保存進度</h2><button class="close-button" data-action="close-dialog" aria-label="取消">${icon('close')}</button></div><p>登入後會建立你嘅個人進度。其他人可以喺「同行進度」睇到你嘅公開名稱、Level 同 XP；電郵同逐題答案唔會公開。</p><p>首次公開名稱會用「讀經老友」，登入後可以喺操練紀錄修改。</p><button class="button primary" data-action="confirm-google-login">用 Google 登入</button>`;shareDialog.showModal();return;}
+  if(action==='confirm-google-login'){shareDialog.close();try{await cloud.login();}catch(error){cloudState='Google 登入未完成：'+accountError(error);console.warn('Google sign-in failed',error?.code);refreshAccount();toast(cloudState);}return;}
+  if (action === 'google-logout') {if(syncBusy){toast('正在同步，稍等一陣再登出。');return;}await runSync();try{await cloud.logout();}catch(error){toast(accountError(error));}return;}
+  if (action === 'sync-now') {await runSync();return;}
+  if (action === 'import-guest') {importGuestDialog();return;}
+  if (action === 'confirm-import') {confirmGuestImport();return;}
   if (action === 'start') startQuiz(button.dataset.mode, button.dataset.topic, [], button.dataset.difficulty || 'all', button.dataset.count, button.dataset.unit, button.dataset.edition);
   if (action === 'close-dialog') button.closest('dialog').close();
   if (action === 'answer') handleAnswer(Number(button.dataset.choice));
@@ -414,6 +433,7 @@ document.addEventListener('click', async event => {
   if (action === 'download-result') { const r = progress.history.find(x => x.id === button.dataset.id); if (r) download(`BibleBuddy-成績-${hongKongDay(new Date(r.finishedAt))}.txt`, resultText(r)); }
   if (action === 'download-history') download('BibleBuddy-學習紀錄.json', JSON.stringify({ exportedAt:new Date().toISOString(), history:progress.history.map(r => ({ date:r.finishedAt, mode:roundTitle(r), correct:summarizeRound(r).correct, total:r.items.length, score:summarizeRound(r).percent, title:summarizeRound(r).level?.name || null })) },null,2),'application/json;charset=utf-8');
   if (action === 'clear-dialog') {
+    if(cloudUser){toast('帳戶進度會繼續保留。登出後可以清除遊客嘅本機紀錄。');return;}
     shareDialog.innerHTML = `<div class="dialog-top"><div><div class="eyebrow">重新起步，都要睇清楚</div><h2 id="share-title">重新起步：清除紀錄？</h2></div><button class="close-button" data-action="close-dialog" aria-label="取消清除">${icon('close')}</button></div><p style="font-size:14px;margin-bottom:24px">會清除呢個瀏覽器嘅未完成操練、成績、錯題、溫習書籤，以及各個課程同書卷嘅操練進度。經驗值同累積稱號亦會清除。清除後無法還原；你可以先取消，下載成績紀錄留底。</p><div class="actions"><button class="button secondary" data-action="close-dialog">保留紀錄</button><button class="button primary" data-action="clear-confirm">確定清除</button></div>`; shareDialog.showModal();
   }
   if (action === 'clear-confirm') { progress = { schema:1, tone:'cheeky', current:null, history:[], bookmarks:[], mistakes:[], courseAnswers:{}, bibleAnswers:{}, genesisAnswers:{}, exodusAnswers:{}, numbersAnswers:{}, leviticusAnswers:{}, deuteronomyAnswers:{}, matthewAnswers:{}, markAnswers:{}, lukeAnswers:{}, johnAnswers:{}, genesisSeen:[], exodusSeen:[], numbersSeen:[], leviticusSeen:[], deuteronomySeen:[], matthewSeen:[], markSeen:[], lukeSeen:[], johnSeen:[] }; progress.xp=prepareXp(progress,QUESTION_MAP,questionForRound);progress.kingdomAnswers={};progress.learningReads={};progress.learningPositions={}; persist({resetXp:true}); shareDialog.close(); render(); toast('紀錄已清除，新一輪操練由你起步。'); }
@@ -437,9 +457,97 @@ document.addEventListener('keydown', event => {
 for (const dialog of [shareDialog]) dialog.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
 window.addEventListener('hashchange', () => render());
 render({ focus:false });
-persist();
+// Preserve saved timestamps during boot; opening an old device must not overwrite newer cloud state.
+try { localStorage.setItem(activeStorageKey,JSON.stringify(progress)); } catch {storageUnavailable=true;}
+if(cloudConfigured)createCloudAccount(switchAccount).then(value=>{cloud=value;cloud.observe();updateAccountHeader();if(route().name==='community')loadMembers();}).catch(error=>{cloudState=accountError(error);updateAccountHeader();});
 
 function experienceView(detailed=false) {
   const x=xpStatus(progress.xp);
-  return `<section class="experience-card" aria-label="累積操練經驗"><div class="experience-heading"><div><span class="eyebrow">一路操練，一路累積</span><h2>Level ${x.level} · ${escape(x.title)}</h2></div><strong class="xp-total">${number(x.total)} XP</strong></div><div class="progress-track" role="progressbar" aria-label="經驗值升級進度" aria-valuenow="${Math.round(x.percent)}" aria-valuemin="0" aria-valuemax="100"><span style="width:${x.percent}%"></span></div><p>${x.next ? `仲差 ${number(x.next.xp-x.total)} XP，就解鎖「${escape(x.next.title)}」。` : '全部累積稱號已解鎖，繼續溫故知新！'} · 已答啱 ${x.correct} 道不同題目</p><p class="note">進度儲存喺呢個瀏覽器；換裝置或清除網站資料，就唔會保留。</p>${detailed ? `<details class="xp-rules"><summary>點樣賺 XP 同解鎖稱號？</summary><p>首次答啱每題 10 XP；中、高難度分別再加 2、4 XP。答錯同跳過唔加分。答啱過嘅題目再次答啱，每題每日最多 2 XP；每日重做獎勵上限 20 XP，以香港日期計。</p><div class="title-gallery">${XP_LEVELS.map(l=>`<div class="title-item ${x.total>=l.xp?'unlocked':''}"><strong>Level ${l.level} · ${escape(l.title)}</strong><span>${number(l.xp)} XP · ${x.total>=l.xp?'已解鎖':'未解鎖'}</span></div>`).join('')}</div><p class="note">稱號反映網站操練進度，唔代表信仰程度或事奉資格。舊進度只按仍保存嘅答啱紀錄回填一次。</p></details>` : '<a class="text-button" href="#/history">睇經驗值同稱號 →</a>'}</section>`;
+  return `<section class="experience-card" aria-label="累積操練經驗"><div class="experience-heading"><div><span class="eyebrow">一路操練，一路累積</span><h2>Level ${x.level} · ${escape(x.title)}</h2></div><strong class="xp-total">${number(x.total)} XP</strong></div><div class="progress-track" role="progressbar" aria-label="經驗值升級進度" aria-valuenow="${Math.round(x.percent)}" aria-valuemin="0" aria-valuemax="100"><span style="width:${x.percent}%"></span></div><p>${x.next ? `仲差 ${number(x.next.xp-x.total)} XP，就解鎖「${escape(x.next.title)}」。` : '全部累積稱號已解鎖，繼續溫故知新！'} · 已答啱 ${x.correct} 道不同題目</p><p class="note">${cloudUser ? '帳戶進度儲存喺雲端；離線時會先存在呢部裝置。' : '未登入：進度儲存喺呢個瀏覽器；換裝置就唔會跟住走。'}</p>${detailed ? `<details class="xp-rules"><summary>點樣賺 XP 同解鎖稱號？</summary><p>首次答啱每題 10 XP；中、高難度分別再加 2、4 XP。答錯同跳過唔加分。答啱過嘅題目再次答啱，每題每日最多 2 XP；每日重做獎勵上限 20 XP，以香港日期計。</p><div class="title-gallery">${XP_LEVELS.map(l=>`<div class="title-item ${x.total>=l.xp?'unlocked':''}"><strong>Level ${l.level} · ${escape(l.title)}</strong><span>${number(l.xp)} XP · ${x.total>=l.xp?'已解鎖':'未解鎖'}</span></div>`).join('')}</div><p class="note">稱號反映網站操練進度，唔代表信仰程度或事奉資格。舊進度只按仍保存嘅答啱紀錄回填一次。</p></details>` : '<a class="text-button" href="#/history">睇經驗值同稱號 →</a>'}</section>`;
+}
+
+function updateAccountHeader(){
+ const button=$('#account-button');if(!button)return;
+ button.textContent=cloudUser?(progress.displayName||'我嘅帳戶'):'Google 登入';
+ button.dataset.action=cloudUser?'open-account':'google-login';button.disabled=!cloud&&!cloudUser;
+ button.title=cloudUser?'修改名稱及查看同步狀態':cloudState;
+}
+function accountView(){
+ if(!cloudUser)return `<section class="account-card"><h2>用 Google 登入，保存自己嘅操練進度</h2><p role="status">${escape(cloudState)}</p><p class="note">登入後會公開你嘅顯示名稱、Level 同 XP；詳細答案同操練紀錄只有你自己睇到。</p><button class="button secondary" data-action="google-login" ${cloud?'':'disabled'}>用 Google 登入</button></section>`;
+ return `<section class="account-card"><h2>我嘅帳戶</h2><p role="status">${escape(cloudState)}</p><form id="name-form"><label for="display-name">公開顯示名稱（最多24個字）</label><div class="actions"><input id="display-name" name="displayName" maxlength="48" required value="${escape(progress.displayName||cloudUser.displayName||'')}" autocomplete="nickname"><button class="button primary small" type="submit">儲存名稱</button></div></form><div class="actions"><button class="button secondary small" data-action="sync-now">同步進度</button><button class="text-button" data-action="import-guest">匯入呢部裝置嘅遊客進度</button><button class="text-button" data-action="google-logout">登出</button></div><p class="note">名稱、Level 同 XP 會喺「同行進度」公開。電郵同逐題答案唔會展示。</p></section>`;
+}
+function refreshAccount(){
+ updateAccountHeader();
+ if(route().name==='history'&&!$('#display-name')?.matches(':focus'))render({focus:false});
+}
+function queueSync(){
+ if(!cloudUser)return;
+ cloudState='進度已留喺呢部裝置，等候同步。';
+ clearTimeout(syncTimer);syncTimer=setTimeout(runSync,900);
+}
+async function runSync(){
+ clearTimeout(syncTimer);
+ if(!cloud||!cloudUser||syncBusy)return;
+ const uid=cloudUser.uid,key=activeStorageKey,rev=revision,snapshot=JSON.parse(JSON.stringify(progress));
+ syncBusy=true;cloudState='正在同步進度…';refreshAccount();
+ try{
+  const merged=await cloud.sync(uid,snapshot);
+  if(cloudUser?.uid!==uid||activeStorageKey!==key)return;
+  const activeRound=route().name==='quiz'?progress.current:undefined;
+  progress=mergeProgress(merged,progress);
+  if(activeRound!==undefined)progress.current=activeRound;
+  localStorage.setItem(key,JSON.stringify(progress));progress=readProgress();progress.xp=prepareXp(progress,QUESTION_MAP,questionForRound);
+  cloudState='已同步到你嘅帳戶。';
+  if(revision!==rev)queueSync();
+ }catch(error){if(cloudUser?.uid===uid)cloudState=accountError(error);}
+ finally{syncBusy=false;refreshAccount();}
+}
+async function switchAccount(user){
+ const previousUid=cloudUser?.uid;
+ clearTimeout(syncTimer);cloudUser=user;activeStorageKey=accountStorageKey(user?.uid);
+ progress=readProgress();progress.xp=prepareXp(progress,QUESTION_MAP,questionForRound);revision++;
+ if(user&&!progress.displayName)progress.displayName='讀經老友';
+ cloudState=user?'正在載入你嘅帳戶進度…':'未登入，進度只留喺呢個瀏覽器。';
+ if(user||previousUid)go('/history');render({focus:false});if(user)await runSync();
+}
+function importGuestDialog(){
+ if(!cloudUser)return;
+ shareDialog.innerHTML=`<div class="dialog-top"><h2 id="share-title">匯入未登入時嘅進度？</h2><button class="close-button" data-action="close-dialog" aria-label="取消">${icon('close')}</button></div><p>確認呢部裝置嘅遊客紀錄係你自己嘅，先加入「${escape(progress.displayName||cloudUser.displayName)}」。首次答啱獎勵會按題目去重，匯入後遊客紀錄會移入呢個帳戶。</p><button class="button primary" data-action="confirm-import">確認係我嘅紀錄，匯入</button>`;shareDialog.showModal();
+}
+function confirmGuestImport(){
+ if(!cloudUser)return;
+ try{
+  const guest=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');
+  if(!guest){toast('未有遊客紀錄可以匯入。');return;}
+  guest.xp=prepareXp(guest,QUESTION_MAP,questionForRound);
+  progress=mergeProgress(guest,progress);persist();
+  if(!storageUnavailable)localStorage.removeItem(STORAGE_KEY);
+  shareDialog.close();render({focus:false});toast('遊客進度已加入你嘅帳戶。');
+ }catch{toast('未能讀取遊客紀錄，原有資料會保留。');}
+}
+document.addEventListener('click',event=>{if(event.target.closest('[data-action="open-account"]'))go('/history');});
+document.addEventListener('submit',event=>{
+ if(event.target.id!=='name-form')return;event.preventDefault();if(!cloudUser)return;
+ const name=cleanName(new FormData(event.target).get('displayName'));
+ if(!name){toast('請輸入你想用嘅名稱。');return;}
+ progress.displayName=name;progress.profileUpdatedAt=Date.now();persist();toast('名稱已儲存。');
+});
+window.addEventListener('online',()=>{if(cloudUser)runSync();});
+window.addEventListener('focus',()=>{if(cloudUser)runSync();});
+
+function communityView(){
+ return `<div class="page-head"><div class="eyebrow">一齊操練，一齊進步</div><h1>同行進度</h1><p>睇吓大家累積咗幾多操練經驗。只顯示公開名稱、Level 同 XP。</p></div><div class="actions"><button class="button secondary small" data-action="members-refresh" ${!cloud||membersBusy?'disabled':''}>更新進度</button></div><div id="members-list">${membersMarkup()}</div>`;
+}
+function membersMarkup(){
+ if(!cloudConfigured)return '<p class="privacy-notice">Google 登入同雲端儲存尚未啟用，暫時未有同行進度。</p>';
+ if(membersError)return `<p role="status">${escape(membersError)}</p>`;
+ if(!membersRows.length)return `<p role="status">${membersBusy?'正在載入大家嘅進度…':membersLoaded?'未有同行紀錄，登入後就可以加入。':'正在連接…'}</p>`;
+ return `<div class="members-grid">${membersRows.map(row=>{const level=XP_LEVELS.findLast(l=>Number(row.xp)>=l.xp)||XP_LEVELS[0];return `<article class="member-card"><h2>${escape(cleanName(row.displayName)||'讀經老友')}</h2><p>Level ${level.level} · ${escape(level.title)}</p><strong>${number(Number(row.xp)||0)} XP</strong></article>`}).join('')}</div>${membersMore?`<button class="button secondary" data-action="members-more" ${membersBusy?'disabled':''}>${membersBusy?'載入中…':'睇更多同行'}</button>`:''}`;
+}
+async function loadMembers(){
+ if(!cloud||membersBusy)return;
+ membersBusy=true;membersError='';if(route().name==='community')render({focus:false});
+ try{const page=await cloud.members(membersCursor);membersRows=[...new Map([...membersRows,...page.rows].map(r=>[r.id,r])).values()];membersCursor=page.cursor;membersMore=page.more;membersLoaded=true;}
+ catch(error){membersError=accountError(error);membersLoaded=true;}
+ finally{membersBusy=false;if(route().name==='community')render({focus:false});}
 }

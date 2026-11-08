@@ -257,7 +257,8 @@ test('Church-history lessons resume, save bookmarks and mistakes, and update pro
   let app=await boot();
   assert.equal(app.$('.church-course-entry'),null);
   assert.equal(app.$('[data-nav="church"]'),null);
-  app.w.location.hash='#/church';
+  await app.navigate('#/church');
+  assert.equal(app.w.location.hash,'#/church');
   assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);
   await app.click('[data-mode="church"][data-unit="early"]');
   assert.equal(app.savedProgress().current.items.length,10);
@@ -310,7 +311,7 @@ test('All one hundred history questions are reachable through ten lessons and co
 
 test('Bible knowledge sits beside history and retains answers, previous navigation, bookmarks and review progress', async () => {
   let app=await boot();
-  const nav=[...app.w.document.querySelectorAll('[data-nav]')].map(a=>a.dataset.nav);assert.equal(nav[nav.indexOf('church')+1],'bible');
+  const nav=[...app.w.document.querySelectorAll('[data-nav]')].map(a=>a.dataset.nav);assert.equal(nav[nav.indexOf('learning')+1],'bible');
   assert.equal(app.$('.church-course-entry'),null);assert.equal(app.$('.bible-course-entry'),null);
   await app.click('[data-nav="bible"]');assert.equal(app.w.location.hash,'#/bible');
   assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);assert.match(app.$('.page-head').textContent,/66卷/);
@@ -490,7 +491,7 @@ test('Lifetime XP survives answering, revisiting, reload and clearing; no login 
  let app=await boot();
  assert.match(app.$('#header-xp').textContent,/Level 1.*經文新手.*0 XP/);
  assert.equal(app.$('.experience-card'),null);
- assert.equal(app.$('[data-action="google-login"]'),null);
+ assert.equal(app.$('[data-action="google-login"]').disabled,true);
  await app.click('[data-action="start"][data-mode="general"]');
  const r=app.savedProgress().current,q=QUESTION_MAP.get(r.items[0].id),expected=10+({2:2,3:4}[q.difficulty]||0);
  await app.click(`[data-action="answer"][data-choice="${q.answer}"]`);

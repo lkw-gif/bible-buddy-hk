@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /members/{uid} {
+      allow read: if true;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['displayName', 'xp', 'updatedAt'])
+        && request.resource.data.displayName is string
+        && request.resource.data.displayName.size() > 0
+        && request.resource.data.displayName.size() <= 96
+        && request.resource.data.xp is int && request.resource.data.xp >= 0
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if false;
+    }
+    match /users/{uid}/state/progress {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['version', 'payload', 'updatedAt'])
+        && request.resource.data.version == 1
+        && request.resource.data.payload is string
+        && request.resource.data.payload.size() < 900000
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if false;
+    }
+  }
+}
