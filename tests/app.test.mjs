@@ -489,8 +489,8 @@ test('All ten Matthew lessons play through and mark low and medium pools complet
 
 test('Lifetime XP survives answering, revisiting, reload and clearing; no login is required', async()=>{
  let app=await boot();
- assert.match(app.$('.experience-card').textContent,/Level 1/);
- assert.equal(app.$('.xp-total').textContent,'0 XP');
+ assert.match(app.$('#header-xp').textContent,/Level 1.*經文新手.*0 XP/);
+ assert.equal(app.$('.experience-card'),null);
  assert.equal(app.$('[data-action="google-login"]'),null);
  await app.click('[data-action="start"][data-mode="general"]');
  const r=app.savedProgress().current,q=QUESTION_MAP.get(r.items[0].id),expected=10+({2:2,3:4}[q.difficulty]||0);
@@ -500,24 +500,36 @@ test('Lifetime XP survives answering, revisiting, reload and clearing; no login 
  await app.click('[data-action="next"]');await app.click('[data-action="previous"]');
  assert.equal(Object.keys(app.savedProgress().xp.first).length,1);
  const saved=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(saved,'#/history');
+ assert.match(app.$('#header-xp').textContent,new RegExp(expected+' XP'));
  assert.equal(app.$('.xp-total').textContent,expected+' XP');
  assert.equal(app.w.document.querySelectorAll('.title-item').length,8);
  await app.click('[data-action="clear-dialog"]');await app.click('[data-action="clear-confirm"]');
- assert.equal(app.$('.xp-total').textContent,'0 XP');
+ assert.equal(app.$('#header-xp').textContent.includes('0 XP'),true);
  const cleared=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(cleared);
- assert.equal(app.$('.xp-total').textContent,'0 XP');app.dom.window.close();
+ assert.match(app.$('#header-xp').textContent,/0 XP/);app.dom.window.close();
 });
 
 test('Legacy XP is backfilled once and level unlocks remain after the recent history is gone', async()=>{
  const first=QUESTIONS.slice(0,12);
  const xp={version:1,first:Object.fromEntries(first.map(q=>[q.id,{difficulty:1,at:0,attempt:'old:'+q.id}])),repeats:{}};
  let app=await boot(JSON.stringify({schema:1,xp,history:[]}));
- assert.equal(app.$('.xp-total').textContent,'120 XP');assert.match(app.$('.experience-heading h2').textContent,/Level 2.*開卷有益/);
+ assert.match(app.$('#header-xp').textContent,/Level 2.*開卷有益.*120 XP/);await app.navigate('/history');assert.match(app.$('.experience-heading h2').textContent,/Level 2.*開卷有益/);
  const saved=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(saved);
- assert.equal(app.$('.xp-total').textContent,'120 XP');app.dom.window.close();
+ assert.match(app.$('#header-xp').textContent,/120 XP/);app.dom.window.close();
  const {MATTHEW_QUESTIONS}=await import('../dist/matthew-course.mjs');
  const q=MATTHEW_QUESTIONS[0];app=await boot(JSON.stringify({schema:1,matthewAnswers:{[q.id]:true}}));
- const expected=10+({2:2,3:4}[q.difficulty]||0);assert.equal(app.$('.xp-total').textContent,expected+' XP');
+ const expected=10+({2:2,3:4}[q.difficulty]||0);assert.match(app.$('#header-xp').textContent,new RegExp(expected+' XP'));
  const migrated=app.w.localStorage.getItem(key);app.dom.window.close();app=await boot(migrated);
- assert.equal(app.$('.xp-total').textContent,expected+' XP');app.dom.window.close();
+ assert.match(app.$('#header-xp').textContent,new RegExp(expected+' XP'));app.dom.window.close();
+});
+
+
+test('Home keeps XP compact beside menu and full XP details live in Practice History',async()=>{
+ const app=await boot();
+ assert(app.$('#header-xp'));assert.match(app.$('#header-xp').textContent,/Level 1.*0 XP/);
+ assert.equal(app.$('.experience-card'),null);assert.equal(app.$('.title-gallery'),null);
+ await app.click('#header-xp');assert.equal(app.w.location.hash,'#/history');
+ assert(app.$('.experience-card'));assert.equal(app.w.document.querySelectorAll('.title-item').length,8);
+ assert.equal(app.$('#header-xp').getAttribute('aria-current'),'page');
+ app.dom.window.close();
 });

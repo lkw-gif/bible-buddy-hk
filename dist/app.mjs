@@ -120,6 +120,8 @@ function updateNavigation() {
     else a.removeAttribute('aria-current');
   }
   const badge = $('#review-count'); badge.hidden = !progress.mistakes.length; badge.textContent = progress.mistakes.length;
+  const xp=xpStatus(progress.xp),xpLink=$('#header-xp');
+  if(xpLink){xpLink.innerHTML=`Level ${xp.level} · ${escape(xp.title)} <strong>${number(xp.total)} XP</strong>`;xpLink.title=`仲差 ${xp.next?number(xp.next.xp-xp.total):0} XP 升級；按此睇詳細資料`}
 }
 function roundTitle(r) {
   if (r.mode === 'john-level') return '約翰福音 · ' + TRIAL_LEVELS[r.difficulty].name + ' · 10題';
@@ -198,7 +200,7 @@ function newTestamentView() { return `<div class="page-head"><div class="eyebrow
 function oldTestamentView() { return `<div class="page-head"><div class="eyebrow">逐卷讀，逐卷學</div><h1>舊約書卷</h1><p>由創世記、出埃及記、利未記、民數記同申命記開始，按經文次序逐卷認識。</p></div><div class="course-features old-testament-courses">${courseHomeCard('genesis')}${courseHomeCard('exodus')}${courseHomeCard('leviticus')}${courseHomeCard('numbers')}${courseHomeCard('deuteronomy')}</div>`; }
 function homeView() {
   const current = progress.current;
-  return `${experienceView()}<section class="hero" aria-labelledby="home-title"><div class="hero-copy"><div class="hero-label"><span>✦</span> 主日學唔好走堂 · 一齊操練</div><h1 id="home-title">返咗咁耐教會，<br><em>聖經有幾熟？</em></h1><p>唔係咩都答「耶穌」就過關。<br>由基本知識慢慢學起，睇吓你本聖經有冇封塵。</p><div class="actions"><button class="button primary" data-action="start" data-mode="general" data-count="20">曠野快閃 · 20題 ${icon('arrow')}</button></div><div class="hero-stats"><div><strong>${QUESTIONS.length + CHALLENGE_QUESTIONS.length}</strong> 條問題</div><div><strong>${TOPICS.length}</strong> 個主題</div><div><strong>冇</strong> 時間限制</div></div></div><div class="hero-art"><img src="assets/hero.png" alt="戴圓眼鏡嘅小羊同白鴿坐喺舊式課桌前讀聖經，後面有淡淡嘅香港舊樓" width="1536" height="1024" fetchpriority="high"><span class="art-note">每日讀啲經文，一齊扎根。</span><div class="art-badge"><span aria-hidden="true">✧</span> 答錯唔緊要，小羊陪你慢慢學。</div></div></section>
+  return `<section class="hero" aria-labelledby="home-title"><div class="hero-copy"><div class="hero-label"><span>✦</span> 主日學唔好走堂 · 一齊操練</div><h1 id="home-title">返咗咁耐教會，<br><em>聖經有幾熟？</em></h1><p>唔係咩都答「耶穌」就過關。<br>由基本知識慢慢學起，睇吓你本聖經有冇封塵。</p><div class="actions"><button class="button primary" data-action="start" data-mode="general" data-count="20">曠野快閃 · 20題 ${icon('arrow')}</button></div><div class="hero-stats"><div><strong>${QUESTIONS.length + CHALLENGE_QUESTIONS.length}</strong> 條問題</div><div><strong>${TOPICS.length}</strong> 個主題</div><div><strong>冇</strong> 時間限制</div></div></div><div class="hero-art"><img src="assets/hero.png" alt="戴圓眼鏡嘅小羊同白鴿坐喺舊式課桌前讀聖經，後面有淡淡嘅香港舊樓" width="1536" height="1024" fetchpriority="high"><span class="art-note">每日讀啲經文，一齊扎根。</span><div class="art-badge"><span aria-hidden="true">✧</span> 答錯唔緊要，小羊陪你慢慢學。</div></div></section>
     ${storageUnavailable ? '<p class="privacy-notice">呢個瀏覽器暫時儲存唔到進度。仍然可以測驗，完成後可下載成績。</p>' : ''}
     ${current ? `<aside class="resume-banner"><div><strong>上次未答完，今次繼續啦。</strong><p>${escape(roundTitle(current))} · 已答 ${current.answers.length} / ${current.items.length} 題</p></div><a href="#/quiz" class="button primary small">繼續操練 ${icon('arrow')}</a></aside>` : ''}
     <section class="mode-grid" aria-label="揀一種玩法"><article class="general-card"><div><div class="eyebrow">八個主題，一齊操練</div><h2><span class="general-title">全方位大試煉</span><span class="pill">同小組一齊玩</span></h2><p>想快啲答可以揀20題；想做足40題，就揀一個固定版本。</p><div class="quick-version"><button class="button light" data-action="start" data-mode="general" data-count="20"><strong>曠野快閃 · 20題</strong>${icon('arrow')}</button></div><div class="fixed-version-heading">曠野長征 · 40題</div><div class="general-editions">${[1,2,3,4,5,6].map((edition)=>`<button class="button light" data-action="start" data-mode="general" data-count="40" data-edition="${edition}"><strong>曠野${['一','二','三','四','五','六'][edition-1]}</strong>${icon('arrow')}</button>`).join('')}</div><p class="general-note">六個版本都係固定題目，八個主題各有五題；六版合起來可以操練晒240條題目。</p></div><div class="general-decoration" aria-hidden="true">${icon('cap')}</div></article>${trialCard()}</section>
@@ -414,7 +416,7 @@ function closePrimaryNav() {
   const label=$('#nav-toggle-label');if(label)label.textContent='選單';
 }
 document.addEventListener('click',event=>{
-  if(event.target.closest('#primary-nav a'))closePrimaryNav();
+  if(event.target.closest('#primary-nav a, #header-xp'))closePrimaryNav();
   else if(!event.target.closest('.header-menu'))closePrimaryNav();
 });
 document.addEventListener('keydown', event => {
