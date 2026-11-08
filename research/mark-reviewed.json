@@ -1,0 +1,2167 @@
+{
+  "status": "reviewed-against-scripture",
+  "lessons": [
+    {
+      "unit": "m1",
+      "difficulty": 1,
+      "question": "施洗約翰喺邊度幫人施洗？",
+      "options": [
+        "約旦河",
+        "加利利海",
+        "尼羅河",
+        "西羅亞池"
+      ],
+      "answer": 0,
+      "explanation": "馬可記載，約翰喺約旦河為人施洗；人亦喺度承認自己嘅罪。",
+      "reference": "馬可福音1:4–5",
+      "id": "mark-001",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": "m1",
+      "difficulty": 1,
+      "question": "耶穌受約翰嘅洗之後，聖靈好似咩咁降喺佢身上？",
+      "options": [
+        "鴿子",
+        "火焰",
+        "雲彩",
+        "星光"
+      ],
+      "answer": 0,
+      "explanation": "耶穌從水裏上嚟時，聖靈彷彿鴿子降喺佢身上。",
+      "reference": "馬可福音1:9–10",
+      "id": "mark-002",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": "m1",
+      "difficulty": 1,
+      "question": "耶穌喺曠野受撒但試探幾多日？",
+      "options": [
+        "四十日",
+        "七日",
+        "十二日",
+        "三日"
+      ],
+      "answer": 0,
+      "explanation": "馬可記載耶穌喺曠野四十日，受撒但試探；天使亦伺候佢。",
+      "reference": "馬可福音1:12–13",
+      "id": "mark-003",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": "m1",
+      "difficulty": 1,
+      "question": "耶穌喺加利利海邊呼召西門同安得烈時，佢哋正做緊咩？",
+      "options": [
+        "撒網捕魚",
+        "修補屋頂",
+        "收稅點算銀錢",
+        "整理會堂書卷"
+      ],
+      "answer": 0,
+      "explanation": "西門同安得烈本來係漁夫，耶穌見到佢哋喺海邊撒網，就呼召佢哋跟從。",
+      "reference": "馬可福音1:16–18",
+      "id": "mark-004",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": "m1",
+      "difficulty": 1,
+      "question": "耶穌喺迦百農會堂趕走污靈之後，眾人最驚訝佢邊方面？",
+      "options": [
+        "佢教導人有權柄，連污靈都聽命",
+        "佢熟識羅馬法律",
+        "佢即刻叫門徒離開加利利",
+        "佢公開講自己係祭司"
+      ],
+      "answer": 0,
+      "explanation": "眾人留意到耶穌教導有權柄，連污靈都聽從佢嘅命令。",
+      "reference": "馬可福音1:21–28",
+      "id": "mark-005",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": "m1",
+      "difficulty": 2,
+      "question": "約翰用咩形容喺佢之後嚟嗰一位同自己嘅分別？",
+      "options": [
+        "嗰位能力比佢大，佢連彎腰解鞋帶都唔配",
+        "嗰位年紀比佢大，所以要先受洗",
+        "嗰位會住喺聖殿，佢就留喺曠野",
+        "嗰位係漁夫，佢就係先知"
+      ],
+      "answer": 0,
+      "explanation": "約翰指出，自己同將要來嗰位差距好大，連替對方解鞋帶都唔配；佢又比較水洗同聖靈的洗。",
+      "reference": "馬可福音1:7–8",
+      "id": "mark-006",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": "m1",
+      "difficulty": 2,
+      "question": "耶穌醫好西門嘅岳母之後，佢做咗咩？",
+      "options": [
+        "起身服事耶穌同同行嘅人",
+        "即刻返去會堂教書",
+        "帶耶穌去見祭司長",
+        "離開迦百農去耶路撒冷"
+      ],
+      "answer": 0,
+      "explanation": "西門嘅岳母退燒後起身服事佢哋。",
+      "reference": "馬可福音1:29–31",
+      "id": "mark-007",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": "m1",
+      "difficulty": 2,
+      "question": "耶穌喺天未光時去到曠野地方，主要做咩？",
+      "options": [
+        "禱告",
+        "同門徒食早餐",
+        "等人帶病者嚟",
+        "預備去耶路撒冷"
+      ],
+      "answer": 0,
+      "explanation": "耶穌喺清早去到曠野地方禱告；西門同同伴之後出去搵佢。",
+      "reference": "馬可福音1:35–37",
+      "id": "mark-008",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": "m1",
+      "difficulty": 2,
+      "question": "耶穌點解話要去附近嘅鄉村？",
+      "options": [
+        "佢亦要喺嗰度傳道，因為佢為呢件事而嚟",
+        "佢要避開所有跟從佢嘅人",
+        "佢要去搵施洗約翰",
+        "佢要喺嗰度建立會堂"
+      ],
+      "answer": 0,
+      "explanation": "耶穌話自己要去鄰近鄉村傳道，並指出呢個係佢出來要做嘅事。",
+      "reference": "馬可福音1:38–39",
+      "id": "mark-009",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": "m1",
+      "difficulty": 2,
+      "question": "耶穌吩咐得潔淨嘅痲瘋病人，除咗唔好周圍講之外，仲要做咩？",
+      "options": [
+        "去畀祭司檢查，並按摩西吩咐獻祭",
+        "返去做漁夫，證明病好返",
+        "留喺曠野等耶穌再見佢",
+        "去迦百農會堂教人"
+      ],
+      "answer": 0,
+      "explanation": "耶穌叫佢去畀祭司檢查，並獻上摩西所吩咐嘅祭物，作為證據。",
+      "reference": "馬可福音1:40–44",
+      "id": "mark-010",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": "m2",
+      "difficulty": 1,
+      "question": "癱子係點樣去到耶穌面前？",
+      "options": [
+        "朋友拆開屋頂，將佢連褥子縋落去",
+        "家人抬佢穿過聖殿",
+        "佢自己由船上跳落岸",
+        "士兵用擔架送佢入會堂"
+      ],
+      "answer": 0,
+      "explanation": "因為人太多，抬癱子嘅人拆開耶穌所在之處嘅屋頂，再將佢連褥子縋落去。",
+      "reference": "馬可福音2:1–4",
+      "id": "mark-011",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/2/",
+      "verification": "https://bible.usccb.org/bible/mark/2"
+    },
+    {
+      "unit": "m2",
+      "difficulty": 1,
+      "question": "耶穌見到癱子同朋友嘅信心之後，首先對癱子講咩？",
+      "options": [
+        "你嘅罪赦了",
+        "起身去洗禮",
+        "你要做我門徒",
+        "你嘅朋友得救了"
+      ],
+      "answer": 0,
+      "explanation": "耶穌先對癱子宣告罪得赦免，之後再吩咐佢起身、攞起褥子行。",
+      "reference": "馬可福音2:5–12",
+      "id": "mark-012",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/2/",
+      "verification": "https://bible.usccb.org/bible/mark/2"
+    },
+    {
+      "unit": "m2",
+      "difficulty": 1,
+      "question": "耶穌喺稅關見到利未時，對佢講咩？",
+      "options": [
+        "跟從我",
+        "去耶路撒冷",
+        "放低所有銀錢",
+        "替我預備住處"
+      ],
+      "answer": 0,
+      "explanation": "耶穌見到亞勒腓個仔利未坐喺稅關，就叫佢跟從自己。",
+      "reference": "馬可福音2:13–14",
+      "id": "mark-013",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/2/",
+      "verification": "https://bible.usccb.org/bible/mark/2"
+    },
+    {
+      "unit": "m2",
+      "difficulty": 1,
+      "question": "有人問耶穌點解門徒冇禁食，耶穌用咩比喻回答？",
+      "options": [
+        "新郎同陪伴新郎嘅人",
+        "牧羊人同羊群",
+        "農夫同葡萄園",
+        "君王同士兵"
+      ],
+      "answer": 0,
+      "explanation": "耶穌用新郎同陪伴新郎嘅人作比喻，講明新郎同在時，陪伴者唔會禁食。",
+      "reference": "馬可福音2:18–20",
+      "id": "mark-014",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/2/",
+      "verification": "https://bible.usccb.org/bible/mark/2"
+    },
+    {
+      "unit": "m2",
+      "difficulty": 1,
+      "question": "耶穌醫治枯乾一隻手嘅人時，係邊一日？",
+      "options": [
+        "安息日",
+        "逾越節第一日",
+        "住棚節最後一日",
+        "每週第一日"
+      ],
+      "answer": 0,
+      "explanation": "耶穌喺安息日會堂醫治枯乾一隻手嘅人，並問人安息日行善定作惡、救命定害命係咪合宜。",
+      "reference": "馬可福音3:1–5",
+      "id": "mark-015",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/3/",
+      "verification": "https://bible.usccb.org/bible/mark/3"
+    },
+    {
+      "unit": "m2",
+      "difficulty": 2,
+      "question": "文士見耶穌宣告癱子嘅罪得赦，心裏質疑嘅焦點係咩？",
+      "options": [
+        "佢認為只有上帝能赦罪",
+        "佢認為癱子其實已經行得",
+        "佢認為朋友唔應該抬人入屋",
+        "佢認為當日唔係安息日"
+      ],
+      "answer": 0,
+      "explanation": "文士心裏認為耶穌講了僭妄的話，因為佢哋認定只有上帝能赦罪；耶穌就醫好癱子，顯明人子有赦罪的權柄。",
+      "reference": "馬可福音2:6–12",
+      "id": "mark-016",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/2/",
+      "verification": "https://bible.usccb.org/bible/mark/2"
+    },
+    {
+      "unit": "m2",
+      "difficulty": 2,
+      "question": "耶穌用新布同新酒回應禁食爭論，想指出咩？",
+      "options": [
+        "新郎同門徒一齊嘅時候，唔適合照平常方式禁食",
+        "門徒要先禁食，先可以加入耶穌團隊",
+        "每逢節期都要把舊皮袋換成新皮袋",
+        "禁食只係為咗清理衣服同酒器"
+      ],
+      "answer": 0,
+      "explanation": "新郎同在時，陪伴新郎的人唔會禁食；新布同新酒嘅比喻亦提醒人，唔好將耶穌帶來嘅新情況硬套入舊框架。",
+      "reference": "馬可福音2:18–22",
+      "id": "mark-017",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/2/",
+      "verification": "https://bible.usccb.org/bible/mark/2"
+    },
+    {
+      "unit": "m2",
+      "difficulty": 2,
+      "question": "安息日，法利賽人見門徒掐麥穗，耶穌提起大衛做過咩？",
+      "options": [
+        "大衛同同伴肚餓時食咗陳設餅",
+        "大衛喺安息日帶兵攻城",
+        "大衛叫祭司停止獻祭",
+        "大衛用麥穗為百姓祈禱"
+      ],
+      "answer": 0,
+      "explanation": "耶穌引用大衛同同伴肚餓時食陳設餅嘅事，回應人對安息日嘅指控。",
+      "reference": "馬可福音2:23–26",
+      "id": "mark-018",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/2/",
+      "verification": "https://bible.usccb.org/bible/mark/2"
+    },
+    {
+      "unit": "m2",
+      "difficulty": 2,
+      "question": "耶穌揀十二使徒時，除咗差佢哋出去傳道，仲賜佢哋咩權柄？",
+      "options": [
+        "趕鬼",
+        "管理羅馬稅關",
+        "任命祭司",
+        "統領加利利軍隊"
+      ],
+      "answer": 0,
+      "explanation": "耶穌設立十二人，叫佢哋跟自己、出去傳道，並賜佢哋趕鬼的權柄。",
+      "reference": "馬可福音3:13–15",
+      "id": "mark-019",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/3/",
+      "verification": "https://bible.usccb.org/bible/mark/3"
+    },
+    {
+      "unit": "m2",
+      "difficulty": 2,
+      "question": "耶穌點樣形容遵行上帝旨意嘅人同自己嘅關係？",
+      "options": [
+        "係佢嘅弟兄、姊妹同母親",
+        "係佢嘅僕人同雇工",
+        "係佢嘅老師同學生",
+        "係佢嘅鄰舍同客人"
+      ],
+      "answer": 0,
+      "explanation": "耶穌望住坐喺周圍嘅人，話凡遵行上帝旨意嘅人就係佢嘅弟兄、姊妹同母親。",
+      "reference": "馬可福音3:31–35",
+      "id": "mark-020",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/3/",
+      "verification": "https://bible.usccb.org/bible/mark/3"
+    },
+    {
+      "unit": "m3",
+      "difficulty": 1,
+      "question": "撒種比喻裏，落喺好土嘅種子帶來咩結果？",
+      "options": [
+        "生長結實，有三十、六十、一百倍",
+        "即刻枯乾，冇結任何果子",
+        "被飛鳥全部食晒",
+        "結出葡萄同無花果"
+      ],
+      "answer": 0,
+      "explanation": "落喺好土嘅種子生長結實，有三十、六十、一百倍。",
+      "reference": "馬可福音4:8",
+      "id": "mark-021",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/4/",
+      "verification": "https://bible.usccb.org/bible/mark/4"
+    },
+    {
+      "unit": "m3",
+      "difficulty": 1,
+      "question": "耶穌同門徒過海時，風浪大作，耶穌當時喺邊度？",
+      "options": [
+        "船尾枕住枕頭瞓覺",
+        "船頭掌舵",
+        "岸邊等門徒返嚟",
+        "船底整理魚網"
+      ],
+      "answer": 0,
+      "explanation": "風浪起時，耶穌喺船尾枕住枕頭瞓覺；門徒叫醒佢，佢就斥責風浪。",
+      "reference": "馬可福音4:35–39",
+      "id": "mark-022",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/4/",
+      "verification": "https://bible.usccb.org/bible/mark/4"
+    },
+    {
+      "unit": "m3",
+      "difficulty": 1,
+      "question": "被污靈附身嘅人自稱「群」，耶穌後來容許污靈入咗咩動物群？",
+      "options": [
+        "豬群",
+        "羊群",
+        "牛群",
+        "駱駝群"
+      ],
+      "answer": 0,
+      "explanation": "污靈求耶穌准佢哋入豬群，豬群就衝落海裏。",
+      "reference": "馬可福音5:1–13",
+      "id": "mark-023",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/5/",
+      "verification": "https://bible.usccb.org/bible/mark/5"
+    },
+    {
+      "unit": "m3",
+      "difficulty": 1,
+      "question": "患血漏嘅女人病咗幾多年？",
+      "options": [
+        "十二年",
+        "七年",
+        "三年",
+        "十八年"
+      ],
+      "answer": 0,
+      "explanation": "馬可記載呢個女人患血漏十二年，摸耶穌衣裳之後病就好返。",
+      "reference": "馬可福音5:25–29",
+      "id": "mark-024",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/5/",
+      "verification": "https://bible.usccb.org/bible/mark/5"
+    },
+    {
+      "unit": "m3",
+      "difficulty": 1,
+      "question": "耶穌用幾多個餅同幾多條魚餵飽五千人？",
+      "options": [
+        "五個餅、兩條魚",
+        "七個餅、兩條魚",
+        "五個餅、七條魚",
+        "三個餅、兩條魚"
+      ],
+      "answer": 0,
+      "explanation": "門徒報告只有五個餅同兩條魚；耶穌祝謝後分給眾人，五千人都食飽。",
+      "reference": "馬可福音6:34–44",
+      "id": "mark-025",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/6/",
+      "verification": "https://bible.usccb.org/bible/mark/6"
+    },
+    {
+      "unit": "m3",
+      "difficulty": 2,
+      "question": "耶穌解釋撒種比喻時，落喺荊棘裏嘅種子代表咩情況？",
+      "options": [
+        "人聽道後，被世上憂慮、財富迷惑同各樣慾望擠住，結唔到果子",
+        "人一聽道就即刻忘記，完全冇反應",
+        "人歡喜接受，但一遇迫害就放棄",
+        "人聽道後立刻傳畀其他城市"
+      ],
+      "answer": 0,
+      "explanation": "荊棘地嘅種子代表聽道後，世上憂慮、財富迷惑同各種慾望進入，擠住道，令佢結唔到果子。",
+      "reference": "馬可福音4:18–19",
+      "id": "mark-026",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/4/",
+      "verification": "https://bible.usccb.org/bible/mark/4"
+    },
+    {
+      "unit": "m3",
+      "difficulty": 2,
+      "question": "耶穌問格拉森被污靈附身嘅人叫咩名，對方點答？",
+      "options": [
+        "群，因為我哋多",
+        "羅馬，因為我哋係軍團",
+        "約旦，因為我哋住近河",
+        "迦百農，因為我哋來自城裏"
+      ],
+      "answer": 0,
+      "explanation": "污靈回答自己叫「群」，因為附喺嗰個人身上嘅污靈有好多。",
+      "reference": "馬可福音5:8–9",
+      "id": "mark-027",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/5/",
+      "verification": "https://bible.usccb.org/bible/mark/5"
+    },
+    {
+      "unit": "m3",
+      "difficulty": 2,
+      "question": "耶穌同患血漏嘅女人講緊時，有人帶來咩消息？",
+      "options": [
+        "會堂主管個女已經死咗",
+        "門徒已經搵到船",
+        "施洗約翰出咗監",
+        "群眾已經散晒"
+      ],
+      "answer": 0,
+      "explanation": "耶穌仲同女人講緊時，有人由會堂主管屋企嚟報信，話個女死咗，叫佢唔使再麻煩老師。",
+      "reference": "馬可福音5:35–36",
+      "id": "mark-028",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/5/",
+      "verification": "https://bible.usccb.org/bible/mark/5"
+    },
+    {
+      "unit": "m3",
+      "difficulty": 2,
+      "question": "耶穌差十二門徒出去時，吩咐佢哋每人可以帶幾多支杖？",
+      "options": [
+        "一支",
+        "兩支",
+        "三支",
+        "唔准帶任何杖"
+      ],
+      "answer": 0,
+      "explanation": "耶穌吩咐門徒除咗一支杖之外，唔好帶食物、袋、腰袋裏嘅錢，並穿鞋、唔好帶兩件衣服。",
+      "reference": "馬可福音6:7–9",
+      "id": "mark-029",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/6/",
+      "verification": "https://bible.usccb.org/bible/mark/6"
+    },
+    {
+      "unit": "m3",
+      "difficulty": 2,
+      "question": "希律聽見耶穌嘅名聲之後，點樣理解耶穌係邊個？",
+      "options": [
+        "佢以為係施洗約翰復活咗",
+        "佢認為係摩西返嚟",
+        "佢認為係自己嘅兒子",
+        "佢認為係羅馬新任總督"
+      ],
+      "answer": 0,
+      "explanation": "有人對耶穌身份有唔同猜測；希律就以為自己斬咗頭嘅施洗約翰復活咗。",
+      "reference": "馬可福音6:14–16",
+      "id": "mark-030",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/6/",
+      "verification": "https://bible.usccb.org/bible/mark/6"
+    },
+    {
+      "unit": "m4",
+      "difficulty": 1,
+      "question": "法利賽人同文士質問門徒食飯前冇洗手，耶穌回應時指出污穢主要由邊度嚟？",
+      "options": [
+        "由人心裏面發出",
+        "由外面食物本身帶入去",
+        "由冇洗過嘅器皿傳染",
+        "由接觸外族人帶嚟"
+      ],
+      "answer": 0,
+      "explanation": "耶穌教導，污穢人嘅唔係食物由外面入去，而係人心裏發出嘅惡念同惡行。",
+      "reference": "馬可福音7:1–23",
+      "id": "mark-031",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/7/",
+      "verification": "https://bible.usccb.org/bible/mark/7"
+    },
+    {
+      "unit": "m4",
+      "difficulty": 1,
+      "question": "敘利腓尼基婦人求耶穌醫治邊個？",
+      "options": [
+        "佢個女",
+        "佢丈夫",
+        "佢個仔",
+        "佢妹妹"
+      ],
+      "answer": 0,
+      "explanation": "呢個婦人求耶穌趕走附喺佢女兒身上嘅污靈。",
+      "reference": "馬可福音7:24–30",
+      "id": "mark-032",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/7/",
+      "verification": "https://bible.usccb.org/bible/mark/7"
+    },
+    {
+      "unit": "m4",
+      "difficulty": 1,
+      "question": "耶穌醫治耳聾兼講嘢困難嘅人時，講咗邊句話？",
+      "options": [
+        "以法大",
+        "和散那",
+        "以便以謝",
+        "拉波尼"
+      ],
+      "answer": 0,
+      "explanation": "耶穌望天嘆息，對嗰個人講「以法大」，意思係「開了吧」。",
+      "reference": "馬可福音7:31–35",
+      "id": "mark-033",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/7/",
+      "verification": "https://bible.usccb.org/bible/mark/7"
+    },
+    {
+      "unit": "m4",
+      "difficulty": 1,
+      "question": "耶穌用幾多個餅餵飽四千人？",
+      "options": [
+        "七個餅",
+        "五個餅",
+        "三個餅",
+        "十二個餅"
+      ],
+      "answer": 0,
+      "explanation": "門徒話有七個餅同幾條小魚；耶穌祝謝後分給眾人，四千人食飽。",
+      "reference": "馬可福音8:1–9",
+      "id": "mark-034",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/8/",
+      "verification": "https://bible.usccb.org/bible/mark/8"
+    },
+    {
+      "unit": "m4",
+      "difficulty": 1,
+      "question": "伯賽大嘅盲人第一次畀耶穌按手之後，點樣形容自己見到嘅景象？",
+      "options": [
+        "見到人，好似樹木行緊",
+        "只見到光，睇唔到人",
+        "見到人好似隔住水",
+        "只認到耶穌，認唔到其他人"
+      ],
+      "answer": 0,
+      "explanation": "耶穌分兩次按手醫治盲人。第一次後，佢睇到人好似樹木行緊；第二次先完全看清楚。",
+      "reference": "馬可福音8:22–26",
+      "id": "mark-035",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/8/",
+      "verification": "https://bible.usccb.org/bible/mark/8"
+    },
+    {
+      "unit": "m4",
+      "difficulty": 2,
+      "question": "門徒見耶穌用七個餅餵飽四千人後，收拾剩低嘅碎屑有幾個籃？",
+      "options": [
+        "七個",
+        "十二個",
+        "五個",
+        "兩個"
+      ],
+      "answer": 0,
+      "explanation": "四千人食飽後，門徒收拾剩低嘅碎屑有七個籃；之前五餅二魚嘅神蹟則收拾咗十二籃。",
+      "reference": "馬可福音8:1–9",
+      "id": "mark-036",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/8/",
+      "verification": "https://bible.usccb.org/bible/mark/8"
+    },
+    {
+      "unit": "m4",
+      "difficulty": 2,
+      "question": "法利賽人問耶穌要天上嘅神蹟，耶穌點回應？",
+      "options": [
+        "嘆息，並話呢一代唔會得到神蹟作證據",
+        "即刻喺天上顯出一個記號",
+        "叫門徒帶佢哋去伯賽大",
+        "吩咐佢哋先禁食七日"
+      ],
+      "answer": 0,
+      "explanation": "耶穌深深嘆息，拒絕用神蹟回應呢個要求，並指出呢一代求神蹟。",
+      "reference": "馬可福音8:11–13",
+      "id": "mark-037",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/8/",
+      "verification": "https://bible.usccb.org/bible/mark/8"
+    },
+    {
+      "unit": "m4",
+      "difficulty": 2,
+      "question": "耶穌提醒門徒提防法利賽人同希律嘅酵，門徒最初誤會咗咩？",
+      "options": [
+        "以為耶穌係講佢哋冇帶餅",
+        "以為耶穌唔准佢哋再食魚",
+        "以為耶穌叫佢哋離開加利利",
+        "以為耶穌要佢哋去買酵"
+      ],
+      "answer": 0,
+      "explanation": "門徒因為只帶咗一個餅，就以為耶穌講「酵」係責怪佢哋冇帶足夠食物；耶穌提醒佢哋諗返兩次餵飽群眾嘅事。",
+      "reference": "馬可福音8:14–21",
+      "id": "mark-038",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/8/",
+      "verification": "https://bible.usccb.org/bible/mark/8"
+    },
+    {
+      "unit": "m4",
+      "difficulty": 2,
+      "question": "彼得認耶穌係基督之後，耶穌開始清楚教門徒咩？",
+      "options": [
+        "人子必須受苦、被殺，過三日復活",
+        "門徒要即刻去羅馬作王",
+        "耶路撒冷聖殿永遠唔會被拆",
+        "彼得要接替耶穌做大祭司"
+      ],
+      "answer": 0,
+      "explanation": "彼得認耶穌係基督之後，耶穌就教導人子必須受苦、被殺，過三日復活。",
+      "reference": "馬可福音8:27–31",
+      "id": "mark-039",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/8/",
+      "verification": "https://bible.usccb.org/bible/mark/8"
+    },
+    {
+      "unit": "m4",
+      "difficulty": 2,
+      "question": "彼得試圖阻止耶穌講自己將要受苦時，耶穌叫佢退到邊度？",
+      "options": [
+        "退到耶穌後邊",
+        "退返迦百農",
+        "退到聖殿外面",
+        "退去約旦河另一邊"
+      ],
+      "answer": 0,
+      "explanation": "彼得拉住耶穌勸佢，耶穌轉過來看着門徒，責備彼得，叫佢退到自己後邊，因為佢諗緊人嘅事，唔係上帝嘅事。",
+      "reference": "馬可福音8:32–33",
+      "id": "mark-040",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/8/",
+      "verification": "https://bible.usccb.org/bible/mark/8"
+    },
+    {
+      "unit": "m5",
+      "difficulty": 1,
+      "question": "登山變像時，同耶穌一齊上山嘅三個門徒係邊幾個？",
+      "options": [
+        "彼得、雅各、約翰",
+        "彼得、安得烈、腓力",
+        "雅各、約翰、馬太",
+        "彼得、多馬、猶大"
+      ],
+      "answer": 0,
+      "explanation": "耶穌帶彼得、雅各同約翰上咗一座高山，喺佢哋面前變了形像。",
+      "reference": "馬可福音9:2",
+      "id": "mark-041",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/9/",
+      "verification": "https://bible.usccb.org/bible/mark/9"
+    },
+    {
+      "unit": "m5",
+      "difficulty": 1,
+      "question": "變像時，有邊兩個人物同耶穌談話？",
+      "options": [
+        "摩西同以利亞",
+        "亞伯拉罕同以撒",
+        "大衛同所羅門",
+        "以賽亞同耶利米"
+      ],
+      "answer": 0,
+      "explanation": "門徒見到摩西同以利亞向耶穌顯現，並且同佢談話。",
+      "reference": "馬可福音9:4",
+      "id": "mark-042",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/9/",
+      "verification": "https://bible.usccb.org/bible/mark/9"
+    },
+    {
+      "unit": "m5",
+      "difficulty": 1,
+      "question": "門徒趕唔走污靈之後，耶穌話呢一類污靈靠咩先可以出去？",
+      "options": [
+        "禱告",
+        "禁食同施捨",
+        "獻祭同守節",
+        "抹油同唱詩"
+      ],
+      "answer": 0,
+      "explanation": "門徒私下問耶穌點解趕唔走污靈，耶穌回答呢一類只能靠禱告出去。",
+      "reference": "馬可福音9:28–29",
+      "id": "mark-043",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/9/",
+      "verification": "https://bible.usccb.org/bible/mark/9"
+    },
+    {
+      "unit": "m5",
+      "difficulty": 1,
+      "question": "耶穌教門徒邊個想做第一，就要成為點樣嘅人？",
+      "options": [
+        "眾人中最末後，並作眾人嘅僕人",
+        "眾人中最有名望嘅領袖",
+        "最早到達耶路撒冷嘅人",
+        "擁有最多財物嘅人"
+      ],
+      "answer": 0,
+      "explanation": "門徒喺路上爭論邊個最大；耶穌教導，想做第一就要作眾人中最末後、服事眾人嘅人。",
+      "reference": "馬可福音9:33–35",
+      "id": "mark-044",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/9/",
+      "verification": "https://bible.usccb.org/bible/mark/9"
+    },
+    {
+      "unit": "m5",
+      "difficulty": 1,
+      "question": "耶穌教導門徒，若有人使小子中信佢嘅一個跌倒，咩會比較好？",
+      "options": [
+        "用大磨石拴喺頸上，沉落海裏",
+        "被關喺監裏三日",
+        "交出所有財物",
+        "離開加利利"
+      ],
+      "answer": 0,
+      "explanation": "耶穌用磨石沉海作嚴肅提醒，指出唔好使信佢嘅小子跌倒。",
+      "reference": "馬可福音9:42",
+      "id": "mark-045",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/9/",
+      "verification": "https://bible.usccb.org/bible/mark/9"
+    },
+    {
+      "unit": "m5",
+      "difficulty": 2,
+      "question": "變像時雲彩裏嘅聲音吩咐門徒點做？",
+      "options": [
+        "要聽從耶穌",
+        "要跟從摩西返埃及",
+        "要為以利亞預備住處",
+        "要即刻下山去耶路撒冷"
+      ],
+      "answer": 0,
+      "explanation": "雲彩裏有聲音稱耶穌為愛子，並吩咐門徒要聽從佢。",
+      "reference": "馬可福音9:7",
+      "id": "mark-046",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/9/",
+      "verification": "https://bible.usccb.org/bible/mark/9"
+    },
+    {
+      "unit": "m5",
+      "difficulty": 2,
+      "question": "耶穌話自己復活之前，門徒唔明白「人子從死人中復活」係咩意思，佢哋當時做咩？",
+      "options": [
+        "彼此討論「從死人中復活」係咩意思",
+        "即刻向山下群眾宣講",
+        "要求耶穌再變像一次",
+        "返去問大祭司"
+      ],
+      "answer": 0,
+      "explanation": "門徒照耶穌吩咐暫時唔將所見講畀人知，但彼此討論「從死人中復活」係咩意思。",
+      "reference": "馬可福音9:9–10",
+      "id": "mark-047",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/9/",
+      "verification": "https://bible.usccb.org/bible/mark/9"
+    },
+    {
+      "unit": "m5",
+      "difficulty": 2,
+      "question": "父親帶被污靈折磨嘅孩子嚟見耶穌時，佢點樣形容自己嘅信心？",
+      "options": [
+        "我信，但我信不足，求你幫助",
+        "我完全明白，唔需要幫助",
+        "我唔信，但想睇神蹟",
+        "我以前信過，而家已經放棄"
+      ],
+      "answer": 0,
+      "explanation": "孩子嘅父親向耶穌呼求：「我信，但我信不足，求你幫助。」",
+      "reference": "馬可福音9:17–24",
+      "id": "mark-048",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/9/",
+      "verification": "https://bible.usccb.org/bible/mark/9"
+    },
+    {
+      "unit": "m5",
+      "difficulty": 2,
+      "question": "耶穌喺屋裏教門徒時，點解叫一個小孩子企喺佢哋中間？",
+      "options": [
+        "教佢哋凡為耶穌名接待一個小孩子，就係接待耶穌同差耶穌來嗰位",
+        "叫小孩子判斷邊個門徒最大",
+        "叫門徒帶小孩子去耶路撒冷",
+        "教小孩子點樣趕走污靈"
+      ],
+      "answer": 0,
+      "explanation": "耶穌用小孩子教導門徒接待人：凡為佢名接待一個小孩子，就係接待佢；接待佢亦係接待差佢來嗰位。",
+      "reference": "馬可福音9:33–37",
+      "id": "mark-049",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/9/",
+      "verification": "https://bible.usccb.org/bible/mark/9"
+    },
+    {
+      "unit": "m5",
+      "difficulty": 2,
+      "question": "耶穌講到手、腳、眼令人犯罪時，佢嘅重點係咩？",
+      "options": [
+        "要認真對付令自己犯罪嘅事，唔好輕看罪嘅後果",
+        "每個人都要真係除去身體一部分",
+        "只要避開安息日就唔會犯罪",
+        "門徒要遠離所有小孩子"
+      ],
+      "answer": 0,
+      "explanation": "耶穌用砍手、砍腳、挖眼嘅強烈圖像，提醒門徒要嚴肅對付使人犯罪嘅事，並留意罪帶來嘅後果。",
+      "reference": "馬可福音9:43–48",
+      "id": "mark-050",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/9/",
+      "verification": "https://bible.usccb.org/bible/mark/9"
+    },
+    {
+      "unit": "m6",
+      "difficulty": 1,
+      "question": "耶穌點樣講人子來到世上嘅目的，作為門徒嘅榜樣？",
+      "options": [
+        "唔係來受人服事，而係來服事人，並為多人捨命",
+        "係要坐最高嘅位置，叫所有人服事佢",
+        "係要離開人群，避免同人來往",
+        "係要做羅馬官長，管理各地百姓"
+      ],
+      "answer": 0,
+      "explanation": "耶穌指出，人子來唔係要受人服事，而係要服事人，並且捨命作多人的贖價。",
+      "reference": "馬可福音10:42–45",
+      "id": "mark-051",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/10/",
+      "verification": "https://bible.usccb.org/bible/mark/10"
+    },
+    {
+      "unit": "m6",
+      "difficulty": 1,
+      "question": "耶穌叫小孩子到佢面前時，門徒起初做咩？",
+      "options": [
+        "責備帶小孩子來嘅人",
+        "叫小孩子坐喺耶穌身邊",
+        "請小孩子替耶穌祈禱",
+        "帶小孩子去搵彼得"
+      ],
+      "answer": 0,
+      "explanation": "有人帶小孩子到耶穌面前，門徒責備佢哋；耶穌就不喜悅，叫小孩子到佢跟前。",
+      "reference": "馬可福音10:13–16",
+      "id": "mark-052",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/10/",
+      "verification": "https://bible.usccb.org/bible/mark/10"
+    },
+    {
+      "unit": "m6",
+      "difficulty": 1,
+      "question": "耶穌用咩比喻形容財主進上帝國嘅難度？",
+      "options": [
+        "駱駝穿過針眼",
+        "大船通過窄橋",
+        "獅子穿過網羅",
+        "細麥粒穿過石門"
+      ],
+      "answer": 0,
+      "explanation": "耶穌話財主進上帝國比駱駝穿過針眼更難；門徒驚訝，耶穌再指出在人不能，在上帝凡事都能。",
+      "reference": "馬可福音10:23–27",
+      "id": "mark-053",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/10/",
+      "verification": "https://bible.usccb.org/bible/mark/10"
+    },
+    {
+      "unit": "m6",
+      "difficulty": 1,
+      "question": "雅各同約翰求耶穌畀佢哋坐喺邊兩個位置？",
+      "options": [
+        "耶穌榮耀裏嘅左右兩邊",
+        "耶路撒冷聖殿嘅兩道門",
+        "加利利海邊嘅兩隻船",
+        "摩西同以利亞中間"
+      ],
+      "answer": 0,
+      "explanation": "雅各同約翰求耶穌畀佢哋喺佢榮耀裏一個坐右邊、一個坐左邊。",
+      "reference": "馬可福音10:35–40",
+      "id": "mark-054",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/10/",
+      "verification": "https://bible.usccb.org/bible/mark/10"
+    },
+    {
+      "unit": "m6",
+      "difficulty": 1,
+      "question": "耶利哥路旁嘅盲人巴底買聽見耶穌經過，點樣稱呼佢？",
+      "options": [
+        "大衛之子耶穌",
+        "加利利嘅先知",
+        "拿撒勒祭司",
+        "以色列嘅君王希律"
+      ],
+      "answer": 0,
+      "explanation": "巴底買聽見係拿撒勒人耶穌，就喊「大衛之子耶穌，可憐我吧！」",
+      "reference": "馬可福音10:46–48",
+      "id": "mark-055",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/10/",
+      "verification": "https://bible.usccb.org/bible/mark/10"
+    },
+    {
+      "unit": "m6",
+      "difficulty": 2,
+      "question": "耶穌回應雅各同約翰想坐左右兩邊時，指出呢啲位置由邊個安排？",
+      "options": [
+        "係為邊個預備好，就賜畀邊個",
+        "由其他十個門徒投票決定",
+        "由羅馬皇帝委任",
+        "由彼得按年資安排"
+      ],
+      "answer": 0,
+      "explanation": "耶穌話坐喺自己左右唔係由佢任意安排，而係為邊個預備好就賜畀邊個。",
+      "reference": "馬可福音10:35–40",
+      "id": "mark-056",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/10/",
+      "verification": "https://bible.usccb.org/bible/mark/10"
+    },
+    {
+      "unit": "m6",
+      "difficulty": 2,
+      "question": "巴底買丟低外衣、跳起身到耶穌面前。耶穌問佢想耶穌為佢做咩，佢點答？",
+      "options": [
+        "拉波尼，我要能看見",
+        "求你叫我做門徒首領",
+        "求你帶我去耶路撒冷",
+        "求你醫好我屋企人"
+      ],
+      "answer": 0,
+      "explanation": "巴底買直接求耶穌叫自己能看見；耶穌醫好佢之後，佢就跟從耶穌上路。",
+      "reference": "馬可福音10:49–52",
+      "id": "mark-057",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/10/",
+      "verification": "https://bible.usccb.org/bible/mark/10"
+    },
+    {
+      "unit": "m6",
+      "difficulty": 2,
+      "question": "耶穌進耶路撒冷前，吩咐門徒喺村裏會見到咩？",
+      "options": [
+        "一匹從來冇人騎過、拴住嘅驢駒",
+        "一匹戰馬同一輛戰車",
+        "一隻走失嘅羔羊",
+        "一艘等候出海嘅船"
+      ],
+      "answer": 0,
+      "explanation": "耶穌叫兩個門徒去村裏解開一匹從來冇人騎過嘅驢駒，帶畀佢。",
+      "reference": "馬可福音11:1–7",
+      "id": "mark-058",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/11/",
+      "verification": "https://bible.usccb.org/bible/mark/11"
+    },
+    {
+      "unit": "m6",
+      "difficulty": 2,
+      "question": "耶穌咒詛無花果樹之後，門徒第二朝見到咩？",
+      "options": [
+        "棵樹連根都枯乾",
+        "棵樹即刻開花結果",
+        "棵樹被人砍走",
+        "棵樹移到海邊"
+      ],
+      "answer": 0,
+      "explanation": "第二朝彼得留意到棵無花果樹連根都枯乾；呢件事接喺耶穌潔淨聖殿前後。",
+      "reference": "馬可福音11:20–21",
+      "id": "mark-059",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/11/",
+      "verification": "https://bible.usccb.org/bible/mark/11"
+    },
+    {
+      "unit": "m6",
+      "difficulty": 2,
+      "question": "耶穌第一次進聖殿察看四周之後，當晚去咗邊度？",
+      "options": [
+        "同十二門徒一齊去伯大尼",
+        "留喺聖殿通宵禱告",
+        "同彼拉多去總督府",
+        "帶群眾返加利利"
+      ],
+      "answer": 0,
+      "explanation": "耶穌進了耶路撒冷嘅聖殿，察看四周；因為天已晚，就同十二門徒出城去伯大尼。",
+      "reference": "馬可福音11:11",
+      "id": "mark-060",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/11/",
+      "verification": "https://bible.usccb.org/bible/mark/11"
+    },
+    {
+      "unit": "m7",
+      "difficulty": 1,
+      "question": "葡萄園比喻裏，園主最後派邊個去見園戶？",
+      "options": [
+        "自己所愛嘅兒子",
+        "大祭司嘅僕人",
+        "彼得同約翰",
+        "羅馬巡撫"
+      ],
+      "answer": 0,
+      "explanation": "園主最後派自己所愛嘅兒子去見園戶，以為佢哋會尊敬佢；園戶反而殺咗個兒子。",
+      "reference": "馬可福音12:1–8",
+      "id": "mark-061",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/12/",
+      "verification": "https://bible.usccb.org/bible/mark/12"
+    },
+    {
+      "unit": "m7",
+      "difficulty": 1,
+      "question": "耶穌叫人拿一個銀錢嚟，問上面嘅像同名號係邊個？",
+      "options": [
+        "凱撒",
+        "希律",
+        "大衛",
+        "亞古士督"
+      ],
+      "answer": 0,
+      "explanation": "銀錢上有凱撒嘅像同名號；耶穌就講「凱撒的物當歸給凱撒，上帝的物當歸給上帝」。",
+      "reference": "馬可福音12:13–17",
+      "id": "mark-062",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/12/",
+      "verification": "https://bible.usccb.org/bible/mark/12"
+    },
+    {
+      "unit": "m7",
+      "difficulty": 1,
+      "question": "耶穌話最重要嘅誡命，第一條係要點樣愛上帝？",
+      "options": [
+        "盡心、盡性、盡意、盡力愛主你的上帝",
+        "只喺安息日到會堂敬拜",
+        "先愛鄰舍，再考慮上帝",
+        "獻上最多祭物"
+      ],
+      "answer": 0,
+      "explanation": "耶穌引用誡命，吩咐人盡心、盡性、盡意、盡力愛主上帝。",
+      "reference": "馬可福音12:28–30",
+      "id": "mark-063",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/12/",
+      "verification": "https://bible.usccb.org/bible/mark/12"
+    },
+    {
+      "unit": "m7",
+      "difficulty": 1,
+      "question": "耶穌指出窮寡婦投入聖殿銀庫嘅係咩？",
+      "options": [
+        "兩個小錢",
+        "一個銀元",
+        "五個銅錢",
+        "兩個金幣"
+      ],
+      "answer": 0,
+      "explanation": "窮寡婦投入兩個小錢；耶穌指出，佢奉獻嘅雖然少，卻係自己全部養生嘅。",
+      "reference": "馬可福音12:41–44",
+      "id": "mark-064",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/12/",
+      "verification": "https://bible.usccb.org/bible/mark/12"
+    },
+    {
+      "unit": "m7",
+      "difficulty": 1,
+      "question": "耶穌預言聖殿會點樣？",
+      "options": [
+        "一塊石頭都唔會留喺另一塊石頭上",
+        "聖殿會搬到加利利",
+        "聖殿會擴建成兩倍",
+        "聖殿會改作羅馬宮殿"
+      ],
+      "answer": 0,
+      "explanation": "耶穌預言聖殿將被拆毀，甚至一塊石頭都唔會留喺另一塊石頭上。",
+      "reference": "馬可福音13:1–2",
+      "id": "mark-065",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/13/",
+      "verification": "https://bible.usccb.org/bible/mark/13"
+    },
+    {
+      "unit": "m7",
+      "difficulty": 2,
+      "question": "撒都該人用七兄弟先後娶同一個女人嘅例子問復活，耶穌指出佢哋錯喺邊度？",
+      "options": [
+        "唔明白聖經，也唔認識上帝嘅能力",
+        "唔知道摩西有七個兄弟",
+        "唔記得女人住喺邊個城",
+        "誤以為安息日可以結婚"
+      ],
+      "answer": 0,
+      "explanation": "耶穌指出撒都該人嘅問題係唔明白聖經，也唔認識上帝的能力；復活時，人唔會好似今世咁娶嫁。",
+      "reference": "馬可福音12:18–27",
+      "id": "mark-066",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/12/",
+      "verification": "https://bible.usccb.org/bible/mark/12"
+    },
+    {
+      "unit": "m7",
+      "difficulty": 2,
+      "question": "耶穌講完愛上帝同愛鄰舍係最重要嘅誡命後，文士有咩回應？",
+      "options": [
+        "話呢兩條比一切燔祭同祭物更重要",
+        "話耶穌引用錯咗誡命",
+        "要求耶穌即刻停止教導",
+        "話只要愛上帝，唔使愛鄰舍"
+      ],
+      "answer": 0,
+      "explanation": "文士認同耶穌，並指出愛上帝、愛鄰舍比一切燔祭同祭物更重要；耶穌話佢離上帝的國唔遠。",
+      "reference": "馬可福音12:28–34",
+      "id": "mark-067",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/12/",
+      "verification": "https://bible.usccb.org/bible/mark/12"
+    },
+    {
+      "unit": "m7",
+      "difficulty": 2,
+      "question": "耶穌點解話窮寡婦比其他投錢入銀庫嘅人擺得更多？",
+      "options": [
+        "其他人係有餘先捐，佢就將自己所有嘅都擺上",
+        "佢捐嘅銀錢面額最大",
+        "佢一次過投咗七個錢袋",
+        "佢係第一個到聖殿嘅人"
+      ],
+      "answer": 0,
+      "explanation": "耶穌比較奉獻背後嘅份量：有錢人由有餘中拿出，寡婦就由缺乏中拿出自己全部養生嘅。",
+      "reference": "馬可福音12:41–44",
+      "id": "mark-068",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/12/",
+      "verification": "https://bible.usccb.org/bible/mark/12"
+    },
+    {
+      "unit": "m7",
+      "difficulty": 2,
+      "question": "耶穌講到無花果樹發嫩長葉時，叫門徒學識觀察咩？",
+      "options": [
+        "見到呢啲事，就知道夏天近了",
+        "見到呢啲事，就知道收割已經完了",
+        "見到呢啲事，就知道要離開耶路撒冷",
+        "見到呢啲事，就知道聖殿已經重建"
+      ],
+      "answer": 0,
+      "explanation": "耶穌用無花果樹發嫩長葉比喻，人見到佢講嘅事發生，就知道時候近了。",
+      "reference": "馬可福音13:28–29",
+      "id": "mark-069",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/13/",
+      "verification": "https://bible.usccb.org/bible/mark/13"
+    },
+    {
+      "unit": "m7",
+      "difficulty": 2,
+      "question": "耶穌講到嗰日嗰時幾時到，邊啲都唔知道？",
+      "options": [
+        "天使同子都唔知道，只有父知道",
+        "只有彼得同雅各唔知道",
+        "羅馬皇帝同祭司長都知道",
+        "所有人只要計算節期就知道"
+      ],
+      "answer": 0,
+      "explanation": "耶穌指出，嗰日嗰時冇人知道，天使唔知道，子也不知道，只有父知道；所以門徒要警醒。",
+      "reference": "馬可福音13:32–37",
+      "id": "mark-070",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/13/",
+      "verification": "https://bible.usccb.org/bible/mark/13"
+    },
+    {
+      "unit": "m8",
+      "difficulty": 1,
+      "question": "耶穌喺伯大尼受膏時，個女人用咩膏佢？",
+      "options": [
+        "一玉瓶極貴嘅真哪噠香膏",
+        "橄欖油同乳香",
+        "蜂蜜同沒藥",
+        "玫瑰水同肉桂"
+      ],
+      "answer": 0,
+      "explanation": "一個女人打破一玉瓶極貴嘅真哪噠香膏，倒喺耶穌頭上。",
+      "reference": "馬可福音14:3",
+      "id": "mark-071",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": "m8",
+      "difficulty": 1,
+      "question": "賣耶穌嘅猶大得到咩承諾，先開始搵機會出賣佢？",
+      "options": [
+        "有人答應畀佢錢",
+        "有人答應立佢做祭司",
+        "有人答應送佢返加利利",
+        "有人答應免除佢嘅債"
+      ],
+      "answer": 0,
+      "explanation": "祭司長聽見猶大想出賣耶穌，就歡喜並答應畀佢錢；猶大於是搵機會出賣耶穌。",
+      "reference": "馬可福音14:10–11",
+      "id": "mark-072",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": "m8",
+      "difficulty": 1,
+      "question": "最後晚餐時，耶穌話杯代表咩？",
+      "options": [
+        "佢立約嘅血，為多人流出",
+        "新約嘅桌子，為門徒預備",
+        "葡萄園嘅收成，為群眾祝福",
+        "先知嘅膏油，為君王加冕"
+      ],
+      "answer": 0,
+      "explanation": "耶穌把杯遞畀門徒，話呢個係佢立約嘅血，為多人流出。",
+      "reference": "馬可福音14:22–25",
+      "id": "mark-073",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": "m8",
+      "difficulty": 1,
+      "question": "客西馬尼園裏，耶穌帶邊三個門徒一同前行？",
+      "options": [
+        "彼得、雅各、約翰",
+        "安得烈、腓力、多馬",
+        "馬太、巴多羅買、達太",
+        "西門、馬提亞、猶大"
+      ],
+      "answer": 0,
+      "explanation": "耶穌帶彼得、雅各同約翰一齊往前行，然後開始憂愁難過。",
+      "reference": "馬可福音14:32–34",
+      "id": "mark-074",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": "m8",
+      "difficulty": 1,
+      "question": "彼得三次唔認耶穌之後，聽見咩？",
+      "options": [
+        "雞叫第二遍",
+        "號角響起",
+        "殿裏鐘聲",
+        "門徒叫佢名字"
+      ],
+      "answer": 0,
+      "explanation": "彼得三次唔認耶穌之後，雞就叫了第二遍；佢想起耶穌講過嘅話，就哭起來。",
+      "reference": "馬可福音14:66–72",
+      "id": "mark-075",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": "m8",
+      "difficulty": 2,
+      "question": "伯大尼嗰個女人用香膏膏耶穌，旁邊有人批評佢浪費。耶穌點回應？",
+      "options": [
+        "佢做咗一件美事，係為耶穌安葬預先作準備",
+        "佢應該把香膏賣掉分畀祭司",
+        "佢要等到逾越節之後先膏",
+        "佢膏錯咗地方，要改膏耶穌雙腳"
+      ],
+      "answer": 0,
+      "explanation": "耶穌為女人辯護，指出佢喺自己身上做咗一件美事，並為安葬預先作準備；窮人仍可常常幫助。",
+      "reference": "馬可福音14:3–9",
+      "id": "mark-076",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": "m8",
+      "difficulty": 2,
+      "question": "耶穌同門徒食逾越節晚餐時，講到邊個會出賣佢？",
+      "options": [
+        "同佢一齊蘸餅嘅十二個人之一",
+        "當晚負責守門嘅僕人",
+        "喺城外等候嘅羅馬士兵",
+        "已經離席嘅大祭司"
+      ],
+      "answer": 0,
+      "explanation": "耶穌話十二個門徒中，有一個同佢一齊蘸餅嘅人會出賣佢。",
+      "reference": "馬可福音14:17–21",
+      "id": "mark-077",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": "m8",
+      "difficulty": 2,
+      "question": "客西馬尼園裏，耶穌禱告求父做咩？",
+      "options": [
+        "若可行，求父叫嗰個時刻離開佢；但願父嘅旨意成就",
+        "求父即刻差天使殺晒捉佢嘅人",
+        "求父令門徒都可以離開耶路撒冷",
+        "求父讓佢唔使再教導群眾"
+      ],
+      "answer": 0,
+      "explanation": "耶穌求父若可行就叫呢個時刻離開，但最後順服地禱告，願父的旨意成就。",
+      "reference": "馬可福音14:32–36",
+      "id": "mark-078",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": "m8",
+      "difficulty": 2,
+      "question": "耶穌被捉時，有個跟隨者留下咩之後逃走？",
+      "options": [
+        "麻布衣服",
+        "皮帶同木杖",
+        "鞋同水袋",
+        "斗篷同錢袋"
+      ],
+      "answer": 0,
+      "explanation": "馬可記載，有一個青年人只披住麻布跟從耶穌；人捉佢時，佢丟低麻布就逃走。",
+      "reference": "馬可福音14:51–52",
+      "id": "mark-079",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": "m8",
+      "difficulty": 2,
+      "question": "耶穌受審時，有人作假見證話佢要拆毀聖殿。馬可特別提到呢啲見證點樣？",
+      "options": [
+        "彼此都對不上",
+        "全部人都講得一模一樣",
+        "大祭司拒絕讓人作見證",
+        "只有彼得一個人作見證"
+      ],
+      "answer": 0,
+      "explanation": "有人作假見證指耶穌話要拆毀人手所造嘅殿、另建一座；但呢啲見證彼此對不上。",
+      "reference": "馬可福音14:55–59",
+      "id": "mark-080",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": "m9",
+      "difficulty": 1,
+      "question": "彼拉多審問耶穌時，群眾要求釋放邊個囚犯？",
+      "options": [
+        "巴拉巴",
+        "巴底買",
+        "巴拿巴",
+        "巴勒"
+      ],
+      "answer": 0,
+      "explanation": "彼拉多照群眾要求釋放巴拉巴，將耶穌交去釘十字架。",
+      "reference": "馬可福音15:6–15",
+      "id": "mark-081",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m9",
+      "difficulty": 1,
+      "question": "羅馬兵丁強迫邊個人幫手背耶穌嘅十字架？",
+      "options": [
+        "古利奈人西門",
+        "亞利馬太人約瑟",
+        "迦百農人西門",
+        "西庇太"
+      ],
+      "answer": 0,
+      "explanation": "兵丁從鄉下經過嘅古利奈人西門身上，勉強佢替耶穌背十字架。",
+      "reference": "馬可福音15:21",
+      "id": "mark-082",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m9",
+      "difficulty": 1,
+      "question": "耶穌被釘時，兵丁喺十字架上面放咗咩罪狀？",
+      "options": [
+        "猶太人的王",
+        "拿撒勒的先知",
+        "加利利的祭司",
+        "羅馬的叛徒"
+      ],
+      "answer": 0,
+      "explanation": "兵丁把「猶太人的王」作為罪狀寫喺十字架上面。",
+      "reference": "馬可福音15:26",
+      "id": "mark-083",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m9",
+      "difficulty": 1,
+      "question": "耶穌斷氣時，聖殿裏嘅幔子點樣？",
+      "options": [
+        "由上到下裂為兩半",
+        "由下到上裂為兩半",
+        "變成白色",
+        "完全冇改變"
+      ],
+      "answer": 0,
+      "explanation": "耶穌斷氣時，聖殿嘅幔子由上到下裂為兩半。",
+      "reference": "馬可福音15:37–38",
+      "id": "mark-084",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m9",
+      "difficulty": 1,
+      "question": "安息日過後，邊幾個女人帶住香料去膏耶穌？",
+      "options": [
+        "抹大拉的馬利亞、雅各的母親馬利亞同撒羅米",
+        "馬大、馬利亞同以利沙伯",
+        "約亞拿、蘇撒拿同多加",
+        "彼得嘅妻子、馬利亞同撒拉"
+      ],
+      "answer": 0,
+      "explanation": "安息日過後，抹大拉的馬利亞、雅各的母親馬利亞同撒羅米買了香料，打算去膏耶穌。",
+      "reference": "馬可福音16:1",
+      "id": "mark-085",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/16/",
+      "verification": "https://bible.usccb.org/bible/mark/16"
+    },
+    {
+      "unit": "m9",
+      "difficulty": 2,
+      "question": "古利奈人西門係邊兩個人嘅父親？",
+      "options": [
+        "亞歷山大同魯孚",
+        "雅各同約翰",
+        "腓力同巴多羅買",
+        "西門同安得烈"
+      ],
+      "answer": 0,
+      "explanation": "馬可特別記低，被迫替耶穌背十字架嘅古利奈人西門係亞歷山大同魯孚嘅父親。",
+      "reference": "馬可福音15:21",
+      "id": "mark-086",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m9",
+      "difficulty": 2,
+      "question": "百夫長見耶穌咁樣斷氣之後，講咗咩？",
+      "options": [
+        "呢個人真係上帝的兒子",
+        "呢個人真係猶太人的王",
+        "呢個人係加利利的先知",
+        "呢個人係羅馬的朋友"
+      ],
+      "answer": 0,
+      "explanation": "百夫長站喺耶穌對面，見佢咁樣斷氣，就承認呢個人真係上帝的兒子。",
+      "reference": "馬可福音15:39",
+      "id": "mark-087",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m9",
+      "difficulty": 2,
+      "question": "約瑟求彼拉多領取耶穌嘅身體之前，馬可點樣介紹佢？",
+      "options": [
+        "尊貴議士，自己亦期待上帝的國",
+        "羅馬百夫長，負責守墓",
+        "加利利漁夫，耶穌嘅門徒",
+        "聖殿祭司，負責膏抹遺體"
+      ],
+      "answer": 0,
+      "explanation": "馬可介紹約瑟係尊貴議士，自己亦期待上帝的國；佢放膽去見彼拉多，求領耶穌嘅身體。",
+      "reference": "馬可福音15:42–46",
+      "id": "mark-088",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m9",
+      "difficulty": 2,
+      "question": "幾個婦女喺耶穌受刑時，喺遠處觀看。馬可特別指出佢哋之前做過咩？",
+      "options": [
+        "喺加利利跟從耶穌、服事佢",
+        "曾經同祭司長商議捉拿耶穌",
+        "曾經替彼拉多看守監獄",
+        "曾經同羅馬兵丁一齊出征"
+      ],
+      "answer": 0,
+      "explanation": "馬可提到一群婦女曾喺加利利跟從耶穌、服事佢，亦有其他同耶穌一齊上耶路撒冷嘅婦女。",
+      "reference": "馬可福音15:40–41",
+      "id": "mark-089",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m9",
+      "difficulty": 2,
+      "question": "耶穌咩時候被釘喺十字架上？",
+      "options": [
+        "上午九點",
+        "中午十二點",
+        "下午三點",
+        "日落之後"
+      ],
+      "answer": 0,
+      "explanation": "馬可記載耶穌喺上午九點被釘；中午到下午三點，遍地都黑暗。",
+      "reference": "馬可福音15:25",
+      "id": "mark-090",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m10",
+      "difficulty": 1,
+      "question": "婦女去墳墓路上，最擔心邊樣事？",
+      "options": [
+        "邊個替佢哋滾開墓門口嘅石頭",
+        "祭司會唔會阻止佢哋入城",
+        "香料會唔會喺路上打翻",
+        "門徒會唔會唔認得佢哋"
+      ],
+      "answer": 0,
+      "explanation": "幾個婦女一路去墳墓，一路問邊個可以替佢哋滾開墓門口嗰塊石頭。",
+      "reference": "馬可福音16:1–3",
+      "id": "mark-091",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/16/",
+      "verification": "https://bible.usccb.org/bible/mark/16"
+    },
+    {
+      "unit": "m10",
+      "difficulty": 1,
+      "question": "婦女到墳墓時，見到嗰塊大石點樣？",
+      "options": [
+        "已經滾開了",
+        "仍然封住入口",
+        "被打碎成兩半",
+        "滾到山腳下"
+      ],
+      "answer": 0,
+      "explanation": "婦女抬頭一望，見到原本好大嘅石頭已經滾開。",
+      "reference": "馬可福音16:4",
+      "id": "mark-092",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/16/",
+      "verification": "https://bible.usccb.org/bible/mark/16"
+    },
+    {
+      "unit": "m10",
+      "difficulty": 1,
+      "question": "墳墓裏，婦女見到一個身穿白袍嘅人坐喺邊度？",
+      "options": [
+        "右邊",
+        "左邊",
+        "墓門外",
+        "石頭上面"
+      ],
+      "answer": 0,
+      "explanation": "佢哋入到墳墓，見到一個少年人穿白袍，坐喺右邊，就嚇了一跳。",
+      "reference": "馬可福音16:5",
+      "id": "mark-093",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/16/",
+      "verification": "https://bible.usccb.org/bible/mark/16"
+    },
+    {
+      "unit": "m10",
+      "difficulty": 1,
+      "question": "白袍少年人話耶穌已經點樣？",
+      "options": [
+        "復活了，不在這裏",
+        "被帶去加利利",
+        "由門徒帶走",
+        "仍然喺墳墓裏"
+      ],
+      "answer": 0,
+      "explanation": "少年人話唔好驚，佢哋搵緊嘅耶穌已經復活，唔喺墳墓裏。",
+      "reference": "馬可福音16:6",
+      "id": "mark-094",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/16/",
+      "verification": "https://bible.usccb.org/bible/mark/16"
+    },
+    {
+      "unit": "m10",
+      "difficulty": 1,
+      "question": "馬可記載嗰幾個婦女離開墳墓時，最初有咩反應？",
+      "options": [
+        "又發抖又驚，並且唔敢同人講",
+        "即刻喺耶路撒冷大聲宣講",
+        "返去叫祭司長嚟睇",
+        "即刻搭船返加利利"
+      ],
+      "answer": 0,
+      "explanation": "馬可福音記載婦女又發抖又驚，並因為害怕而冇同人講。呢段係16章8節嘅記載。",
+      "reference": "馬可福音16:8",
+      "id": "mark-095",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/16/",
+      "verification": "https://bible.usccb.org/bible/mark/16"
+    },
+    {
+      "unit": "m10",
+      "difficulty": 2,
+      "question": "白袍少年人除咗話耶穌復活，仲叫婦女去邊度報信？",
+      "options": [
+        "去告訴門徒同彼得，耶穌會先去加利利見佢哋",
+        "去告訴彼拉多，叫佢釋放巴拉巴",
+        "去告訴祭司長，叫佢哋封住墓門",
+        "去告訴群眾，叫佢哋留喺耶路撒冷"
+      ],
+      "answer": 0,
+      "explanation": "少年人吩咐婦女去告訴門徒同彼得，耶穌會先佢哋一步去加利利，佢哋會喺嗰度見到耶穌。",
+      "reference": "馬可福音16:6–7",
+      "id": "mark-096",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/16/",
+      "verification": "https://bible.usccb.org/bible/mark/16"
+    },
+    {
+      "unit": "m10",
+      "difficulty": 2,
+      "question": "亞利馬太人約瑟把耶穌安放喺邊度？",
+      "options": [
+        "鑿喺磐石裏嘅墳墓",
+        "加利利海邊嘅船艙",
+        "聖殿旁邊嘅洞穴",
+        "城門外嘅公墓"
+      ],
+      "answer": 0,
+      "explanation": "約瑟買了細麻布，把耶穌取下來包好，安放喺鑿喺磐石裏嘅墳墓，並滾石頭封住墓門。",
+      "reference": "馬可福音15:42–46",
+      "id": "mark-097",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m10",
+      "difficulty": 2,
+      "question": "約瑟向彼拉多求耶穌嘅身體時，彼拉多點確認耶穌已經死咗？",
+      "options": [
+        "先問百夫長，再聽到確認後把身體交給約瑟",
+        "叫祭司長親自入墳墓檢查",
+        "請西門同約翰為耶穌把脈",
+        "等到安息日完結後先處理"
+      ],
+      "answer": 0,
+      "explanation": "彼拉多聽見耶穌死得咁快就覺得驚訝，先問百夫長確認；確認後，先把耶穌嘅身體交畀約瑟。",
+      "reference": "馬可福音15:42–45",
+      "id": "mark-098",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": "m10",
+      "difficulty": 2,
+      "question": "馬可記載婦女去墳墓時，太陽處於咩時候？",
+      "options": [
+        "七日的第一日清早，日頭已經出來",
+        "安息日中午，太陽正當頭",
+        "七日的第一日深夜，天未光",
+        "逾越節前一晚，日落之後"
+      ],
+      "answer": 0,
+      "explanation": "婦女喺七日嘅第一日清早，太陽已經出來時去到墳墓。",
+      "reference": "馬可福音16:1–2",
+      "id": "mark-099",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/16/",
+      "verification": "https://bible.usccb.org/bible/mark/16"
+    },
+    {
+      "unit": "m10",
+      "difficulty": 2,
+      "question": "馬可特別提到，擋住墓門口嘅石頭有咩特別？",
+      "options": [
+        "塊石頭非常大",
+        "石頭上刻住耶穌嘅名字",
+        "石頭已碎成三塊",
+        "石頭被搬到城門外"
+      ],
+      "answer": 0,
+      "explanation": "馬可特別提到石頭非常大；婦女出發時一路擔心，唔知邊個會幫手將石頭由墓門滾開。",
+      "reference": "馬可福音16:3–4",
+      "id": "mark-100",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/16/",
+      "verification": "https://bible.usccb.org/bible/mark/16"
+    }
+  ],
+  "hard": [
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "馬可記錄耶穌受洗時，天裂開、聖靈降下、天上聲音三件事，先後點樣連起來？",
+      "options": [
+        "耶穌從水裏上來時見天裂開、聖靈如鴿子降下，接着聽見天上的聲音",
+        "約翰先見聖靈降下，之後耶穌先受洗",
+        "耶穌先聽見聲音，離開河水後才見天裂開",
+        "群眾先聽見聲音，耶穌之後先見到聖靈"
+      ],
+      "answer": 0,
+      "explanation": "馬可按呢個次序敘述：耶穌從水裏上來，見天裂開同聖靈彷彿鴿子降下，再聽見天上嘅聲音稱佢為愛子。",
+      "reference": "馬可福音1:9–11",
+      "id": "mark-hard-001",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "污靈喺迦百農會堂喊耶穌係「上帝的聖者」時，耶穌即刻點做？",
+      "options": [
+        "斥責污靈，叫佢唔好作聲並離開那人",
+        "叫污靈向會眾解釋自己點認出耶穌",
+        "准污靈留低，但唔可以再講嘢",
+        "叫那人自己離開會堂"
+      ],
+      "answer": 0,
+      "explanation": "耶穌斥責污靈，吩咐佢唔好作聲、從那人身上出來；重點係耶穌有權柄命令污靈。",
+      "reference": "馬可福音1:23–27",
+      "id": "mark-hard-002",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/1/",
+      "verification": "https://bible.usccb.org/bible/mark/1"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "馬可記載耶穌赦免癱子嘅罪之後，點樣回應文士「只有上帝能赦罪」嘅質疑？",
+      "options": [
+        "醫好癱子，叫佢起身攞褥子行，藉此顯明人子在地上有赦罪權柄",
+        "叫癱子留低，等祭司判斷佢有冇得赦免",
+        "要求文士先承認自己犯過嘅罪",
+        "引用羅馬法律證明自己有赦罪權柄"
+      ],
+      "answer": 0,
+      "explanation": "耶穌先宣告赦罪，再醫好癱子，讓人知道人子在地上有赦罪的權柄；外在醫治印證佢嘅宣告。",
+      "reference": "馬可福音2:5–12",
+      "id": "mark-hard-003",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/2/",
+      "verification": "https://bible.usccb.org/bible/mark/2"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌喺安息日醫治枯乾手嘅人之前，見到周圍人嘅心態，馬可點樣描述耶穌？",
+      "options": [
+        "耶穌怒目周圍看，因佢為人心硬而憂愁",
+        "耶穌即刻離開會堂，避免同人爭論",
+        "耶穌笑住叫門徒代佢醫治",
+        "耶穌先問眾人可唔可以投票"
+      ],
+      "answer": 0,
+      "explanation": "馬可同時記下耶穌嘅怒氣同憂愁，原因係周圍人心硬；耶穌隨即叫那人伸手，手就復原。",
+      "reference": "馬可福音3:1–5",
+      "id": "mark-hard-004",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/3/",
+      "verification": "https://bible.usccb.org/bible/mark/3"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌講燈同量器嘅比喻後，指出人點樣回應自己所聽見嘅道會有咩結果？",
+      "options": [
+        "用咩量器量人，也會用咩量器量返畀人；有嘅還要加給佢",
+        "人聽過一次就唔需要再聽",
+        "只要點燈，就自然明白所有比喻",
+        "聽道嘅多寡同後來所得完全無關"
+      ],
+      "answer": 0,
+      "explanation": "耶穌叫人留心聽，指出人用咩量器量人，也會用咩量器量返畀佢；有嘅還要加給佢。",
+      "reference": "馬可福音4:21–25",
+      "id": "mark-hard-005",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/4/",
+      "verification": "https://bible.usccb.org/bible/mark/4"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "「種子自己發芽生長」嘅比喻，耶穌用咩次序形容莊稼成熟？",
+      "options": [
+        "先發苗，再長穗，後穗上結成飽滿子粒",
+        "先結子粒，再長穗，最後發苗",
+        "先長樹葉，再開花，最後結葡萄",
+        "先長根，再開花，最後結橄欖"
+      ],
+      "answer": 0,
+      "explanation": "耶穌描述種子落地後，地生長出苗，然後長穗，最後穗上結成飽滿子粒；收成時就用鐮刀收割。",
+      "reference": "馬可福音4:26–29",
+      "id": "mark-hard-006",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/4/",
+      "verification": "https://bible.usccb.org/bible/mark/4"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌醫好耳聾兼講話困難嘅人時，馬可特別記下耶穌做咗邊幾個動作？",
+      "options": [
+        "把指頭放進他耳朵，又吐唾沫摸他的舌頭，望天嘆息",
+        "只遠遠說一句話，完全冇接觸那人",
+        "先叫門徒用油膏他的頭，再帶他去會堂",
+        "叫那人浸入水裏，再等一日"
+      ],
+      "answer": 0,
+      "explanation": "馬可細緻記下耶穌把指頭放進那人耳朵、吐唾沫摸他的舌頭、望天嘆息，之後說「以法大」。",
+      "reference": "馬可福音7:31–35",
+      "id": "mark-hard-007",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/7/",
+      "verification": "https://bible.usccb.org/bible/mark/7"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌問門徒「你哋話我是誰？」之前，佢哋先講群眾以為耶穌係邊幾種人物？",
+      "options": [
+        "施洗約翰、以利亞，或者一位先知",
+        "大衛、所羅門，或者一位祭司",
+        "摩西、亞倫，或者一位君王",
+        "彼拉多、希律，或者一位羅馬官員"
+      ],
+      "answer": 0,
+      "explanation": "門徒先報告群眾嘅猜測：有人話係施洗約翰，有人話係以利亞，也有人話係先知中的一位；耶穌再問門徒自己點睇。",
+      "reference": "馬可福音8:27–30",
+      "id": "mark-hard-008",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/8/",
+      "verification": "https://bible.usccb.org/bible/mark/8"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌教導跟從佢嘅人要背起自己嘅十字架時，佢點樣連繫「救生命」同「失去生命」？",
+      "options": [
+        "為耶穌和福音失去生命嘅，反而會救生命；想救自己生命嘅，會失去生命",
+        "只要保住今世生命，就一定得着永遠生命",
+        "失去財物就等於失去生命，兩者無分別",
+        "呢個教導只適用於十二使徒"
+      ],
+      "answer": 0,
+      "explanation": "耶穌將跟從佢同捨己連起來，指出為佢和福音失去生命嘅，反而會救生命；得着全世界卻失去生命並無益處。",
+      "reference": "馬可福音8:34–38",
+      "id": "mark-hard-009",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/8/",
+      "verification": "https://bible.usccb.org/bible/mark/8"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌醫治巴底買時，點樣回應佢「我要能看見」嘅請求？",
+      "options": [
+        "叫佢去，並指出佢嘅信救了佢；巴底買隨即看見並跟從耶穌",
+        "叫佢先去見祭司，幾日後先會看見",
+        "叫佢留喺路旁，門徒會帶佢去加利利",
+        "叫佢洗眼三次，再返耶利哥"
+      ],
+      "answer": 0,
+      "explanation": "耶穌話巴底買嘅信救了佢，佢立即看見，之後喺路上跟從耶穌。",
+      "reference": "馬可福音10:46–52",
+      "id": "mark-hard-010",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/10/",
+      "verification": "https://bible.usccb.org/bible/mark/10"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌潔淨聖殿時引用先知嘅話，點樣講上帝嘅殿同萬國？",
+      "options": [
+        "上帝的殿要稱為萬國禱告的殿，人卻使它成為賊窩",
+        "上帝的殿只為以色列人祈禱，外族不可入內",
+        "上帝的殿要成為君王的宮殿",
+        "上帝的殿要改為市場，方便朝聖者買祭物"
+      ],
+      "answer": 0,
+      "explanation": "耶穌引用經文，稱上帝的殿為萬國禱告的殿，並責備人把它變成賊窩。",
+      "reference": "馬可福音11:15–17",
+      "id": "mark-hard-011",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/11/",
+      "verification": "https://bible.usccb.org/bible/mark/11"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌用葡萄園比喻描述園戶對園主派來嘅僕人做咩，先至派出兒子？",
+      "options": [
+        "園戶打傷、凌辱，甚至殺害僕人",
+        "園戶立即付清租金並釋放僕人",
+        "僕人拒絕入葡萄園，所以園主派兒子",
+        "僕人帶走葡萄，園主先派兒子"
+      ],
+      "answer": 0,
+      "explanation": "園主多次派僕人去收果子，園戶有人打傷、凌辱、甚至殺害僕人；園主最後派自己所愛嘅兒子。",
+      "reference": "馬可福音12:1–8",
+      "id": "mark-hard-012",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/12/",
+      "verification": "https://bible.usccb.org/bible/mark/12"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌用「凱撒的物當歸給凱撒，上帝的物當歸給上帝」回應納稅問題，之前先問人睇銀錢上有咩？",
+      "options": [
+        "凱撒的像同名號",
+        "大祭司的像同名字",
+        "聖殿的圖案同獻祭日期",
+        "彼拉多的印章同軍階"
+      ],
+      "answer": 0,
+      "explanation": "耶穌先問銀錢上嘅像同名號係邊個，對方答係凱撒；耶穌就用此回應納稅問題。",
+      "reference": "馬可福音12:13–17",
+      "id": "mark-hard-013",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/12/",
+      "verification": "https://bible.usccb.org/bible/mark/12"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌引用大衛詩篇時，提出文士點解稱基督係大衛嘅子孫呢個問題？",
+      "options": [
+        "大衛被聖靈感動稱基督為主，耶穌問文士點理解呢點",
+        "大衛從來冇做過君王，所以基督唔可能出自大衛家",
+        "詩篇明明話基督唔可以去耶路撒冷",
+        "文士認為大衛係祭司，所以耶穌要更正佢哋"
+      ],
+      "answer": 0,
+      "explanation": "耶穌引用大衛受聖靈感動所講嘅詩，指出大衛稱基督為主，並問人點解又稱基督為大衛嘅子孫。",
+      "reference": "馬可福音12:35–37",
+      "id": "mark-hard-014",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/12/",
+      "verification": "https://bible.usccb.org/bible/mark/12"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌講到聖殿將被拆毀時，喺橄欖山邊係邊幾個門徒私下問佢？",
+      "options": [
+        "彼得、雅各、約翰同安得烈",
+        "彼得、約翰、多馬同腓力",
+        "雅各、約翰、馬太同達太",
+        "彼得、安得烈、腓力同巴多羅買"
+      ],
+      "answer": 0,
+      "explanation": "喺橄欖山面向聖殿，彼得、雅各、約翰同安得烈私下問耶穌呢啲事幾時發生、又有咩預兆。",
+      "reference": "馬可福音13:1–4",
+      "id": "mark-hard-015",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/13/",
+      "verification": "https://bible.usccb.org/bible/mark/13"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌講末後嘅事時，點解用「看門的人要警醒」作結？",
+      "options": [
+        "因為主人幾時回來唔知道，僕人要保持警醒",
+        "因為守門人最熟悉聖殿預言",
+        "因為門徒只要留喺城門就安全",
+        "因為主人已經講明確實日期"
+      ],
+      "answer": 0,
+      "explanation": "耶穌用主人離家、交代僕人工作並吩咐看門者警醒作比喻，因為僕人唔知道主人幾時回來。",
+      "reference": "馬可福音13:32–37",
+      "id": "mark-hard-016",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/13/",
+      "verification": "https://bible.usccb.org/bible/mark/13"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌喺最後晚餐擘餅時，將餅同咩連埋一齊？",
+      "options": [
+        "他的身體",
+        "摩西的律法",
+        "聖殿的幔子",
+        "門徒的船"
+      ],
+      "answer": 0,
+      "explanation": "耶穌拿起餅祝謝、擘開遞給門徒，話呢個係佢嘅身體；之後又講杯係立約的血。",
+      "reference": "馬可福音14:22–25",
+      "id": "mark-hard-017",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌預先講彼得會唔認佢時，將雞叫幾多次同彼得三次唔認連埋一齊？",
+      "options": [
+        "雞叫兩次之前，彼得會三次不認耶穌",
+        "雞叫一次之前，彼得會兩次不認耶穌",
+        "雞叫三次之後，彼得先會一次不認耶穌",
+        "雞叫之前，彼得會公開否認自己識耶穌一次"
+      ],
+      "answer": 0,
+      "explanation": "耶穌講彼得會喺雞叫兩次之前三次不認佢；彼得堅稱即使要同耶穌一齊死都唔會不認。",
+      "reference": "馬可福音14:27–31",
+      "id": "mark-hard-018",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/14/",
+      "verification": "https://bible.usccb.org/bible/mark/14"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "耶穌斷氣時喊「以羅伊！以羅伊！拉馬撒巴各大尼？」馬可解釋呢句係咩意思？",
+      "options": [
+        "我的上帝，我的上帝，為甚麼離棄我？",
+        "父啊，赦免他們，因為他們所做的他們不曉得",
+        "成了",
+        "我將我的靈魂交在你手裏"
+      ],
+      "answer": 0,
+      "explanation": "馬可把耶穌嘅呼喊翻譯為「我的上帝，我的上帝，為甚麼離棄我？」",
+      "reference": "馬可福音15:33–34",
+      "id": "mark-hard-019",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    },
+    {
+      "unit": null,
+      "difficulty": 3,
+      "question": "約瑟將耶穌安葬時，先後做咗邊幾件事？",
+      "options": [
+        "買細麻布、取下耶穌的身體包好、安放在磐石鑿成的墳墓，再滾石封墓",
+        "叫彼得先把墳墓打掃好，再安排守衛",
+        "把身體留在十字架，等日落後再處理",
+        "先把身體送去聖殿，再由祭司安排安葬"
+      ],
+      "answer": 0,
+      "explanation": "馬可按次序記載約瑟買細麻布、取下耶穌的身體包好、放入磐石鑿成的墳墓，最後滾石頭到墓門口。",
+      "reference": "馬可福音15:42–46",
+      "id": "mark-hard-020",
+      "topic": "mark",
+      "source": "https://rcuv.hkbs.org.hk/RCUV2/MRK/15/",
+      "verification": "https://bible.usccb.org/bible/mark/15"
+    }
+  ]
+}
