@@ -256,10 +256,9 @@ test('Previous-question controls survive reload and preserve chosen answers, ski
 test('Church-history lessons resume, save bookmarks and mistakes, and update progress through revision', async () => {
   let app=await boot();
   assert.equal(app.$('.church-course-entry'),null);
-  await app.click('[data-nav="church"]');
-  assert.equal(app.w.location.hash,'#/church');
+  assert.equal(app.$('[data-nav="church"]'),null);
+  app.w.location.hash='#/church';
   assert.equal(app.w.document.querySelectorAll('.course-unit').length,10);
-  assert.equal(app.$('[data-nav="church"]').getAttribute('aria-current'),'page');
   await app.click('[data-mode="church"][data-unit="early"]');
   assert.equal(app.savedProgress().current.items.length,10);
   assert.match(app.$('.quiz-label').textContent,/教會歷史篇.*第1課/);
